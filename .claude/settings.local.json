@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 scrape_snowcrows.py --limit 3 --delay 1.5 --out /tmp/sc_test.json)",
+      "Bash(python3)",
+      "Bash(python3 -c ' *)",
+      "Bash(python3 scrape_snowcrows.py --prof guardian --delay 1.5)",
+      "Bash(python3 scrape_snowcrows.py --delay 1.2)",
+      "Bash(python3 scrape_snowcrows.py --delay 1.0)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:api.github.com)",
+      "Bash(curl -s https://raw.githubusercontent.com/PieOrCake/alter_ego/main/src/IconManager.cpp)",
+      "Bash(curl -s https://raw.githubusercontent.com/PieOrCake/alter_ego/main/src/WikiImage.cpp)",
+      "Bash(curl -s https://raw.githubusercontent.com/PieOrCake/alter_ego/main/src/dllmain.cpp)",
+      "Bash(curl -s \"https://raw.githubusercontent.com/PieOrCake/alter_ego/main/src/IconManager.cpp\")",
+      "Bash(curl -s \"https://raw.githubusercontent.com/PieOrCake/alter_ego/main/src/WikiImage.cpp\")",
+      "WebSearch",
+      "WebFetch(domain:wiki.guildwars2.com)",
+      "WebFetch(domain:snowcrows.com)",
+      "Bash(python3 -c \"import playwright\")",
+      "Bash(python3 -c \"import selenium\")",
+      "Bash(pip3 show *)",
+      "Bash(bash build.sh)",
+      "Bash(bash build.sh --regen)"
+    ]
+  }
+}

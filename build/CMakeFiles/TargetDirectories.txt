@@ -1,0 +1,3 @@
+/home/todd/gw2-browser/build/CMakeFiles/BuildCoach.dir
+/home/todd/gw2-browser/build/CMakeFiles/edit_cache.dir
+/home/todd/gw2-browser/build/CMakeFiles/rebuild_cache.dir
