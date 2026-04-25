@@ -5,6 +5,7 @@
 #include "../shared.h"
 #include "../api/gw2api.h"
 #include "../api/gw2names.h"
+#include "../api/api_rate_limiter.h"
 #include "../api/snowcrows.h"
 #include "../build/cache.h"
 #include "../arcdps/arcdps.h"
@@ -18,7 +19,7 @@
 
 namespace MainWindow {
 
-static bool s_visible = true;
+static bool s_visible = false;
 static std::vector<GW2::SCBuild>  s_sc_builds;
 static int                        s_selected_idx  = -1;
 static std::atomic<bool>          s_refreshing    = false;
@@ -330,6 +331,9 @@ static void RenderBuildDropdown()
                     g_SCBuild       = *b;
                     g_SCBuildLoaded = true;
                 }
+                /* Regenerate chat code from live GW2 API data so spec/skill IDs
+                 * are always current, regardless of when the JSON was scraped. */
+                GW2API::GenerateBuildChatCodeAsync(*b);
                 /* Prime weapon-type cache so types are ready before player build loads */
                 for (const auto& item : b->gear.items) {
                     using GS = GW2::GearSlot;
@@ -376,7 +380,11 @@ void Render()
     }
 
     /* Toolbar */
-    if (ImGui::Button("Refresh")) RefreshData();
+    bool limited = APIRateLimit::ShouldShowLimitedMessage();
+    if (limited) ImGui::PushStyleVar(ImGuiStyleVar_Alpha, 0.4f);
+    bool clicked = ImGui::Button("Refresh");
+    if (limited) ImGui::PopStyleVar();
+    if (clicked && !limited) RefreshData();
     ImGui::SameLine();
     if (ImGui::Button("Settings")) s_show_settings = !s_show_settings;
     ImGui::SameLine();
@@ -462,6 +470,15 @@ void Render()
             ImGui::EndTabItem();
         }
         ImGui::EndTabBar();
+    }
+
+    /* Rate-limit notice at the bottom of the window */
+    if (APIRateLimit::ShouldShowLimitedMessage()) {
+        float line_h = ImGui::GetTextLineHeightWithSpacing();
+        float pad    = ImGui::GetStyle().WindowPadding.y;
+        ImGui::SetCursorPosY(ImGui::GetWindowSize().y - line_h - pad);
+        ImGui::TextColored(ImVec4(1.0f, 0.75f, 0.0f, 0.7f),
+                           "Limited to reduce API usage to within reasonable bounds.");
     }
 
     ImGui::End();

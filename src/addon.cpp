@@ -50,6 +50,9 @@ static void OnMumbleIdentityUpdated(void* aEventArgs)
     if (id->Name[0] == '\0') return;
     /* Mumble fires before GW2 populates the struct — filter path-like garbage */
     if (strchr(id->Name, '\\') || strchr(id->Name, '/') || strchr(id->Name, ':')) return;
+    /* MapID is 0 on the character-select / login screen; skip until the player
+     * has actually entered the world and a real map is reported. */
+    if (id->MapID == 0) return;
 
     std::lock_guard<std::mutex> lock(g_CharacterMutex);
 
@@ -84,6 +87,7 @@ __declspec(dllexport) void AddonLoad(AddonAPI_t* aApi)
 
     BuildCache::SetCacheDir(g_AddonDir);
     g_LogPath = g_AddonDir + "\\buildcoach.log";
+    GW2Names::Init(BuildCache::LoadGW2Build());
 
     APIDefs->GUI_Register(RT_Render,        OnRender);
     APIDefs->GUI_Register(RT_OptionsRender, OnOptions);

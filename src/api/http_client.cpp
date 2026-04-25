@@ -1,4 +1,5 @@
 #include "http_client.h"
+#include "api_rate_limiter.h"
 #include <windows.h>
 #include <winhttp.h>
 #include <sstream>
@@ -9,6 +10,10 @@ namespace Http {
 static Response DoGet(const std::wstring& host, const std::wstring& path,
                       const std::wstring& extra_headers)
 {
+    APIRateLimit::WaitAndAcquire();   /* respect GW2 API rate limit */
+    APIRateLimit::g_InFlight++;
+    struct InFlightGuard { ~InFlightGuard() { APIRateLimit::g_InFlight--; } } _guard;
+
     Response resp;
 
     HINTERNET hSession = WinHttpOpen(

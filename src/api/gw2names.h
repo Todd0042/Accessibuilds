@@ -27,6 +27,10 @@ const std::string& GetItemIcon (uint32_t id);
  * Triggers an async /v2/items fetch on first call; returns "" until resolved. */
 const std::string& GetItemType (uint32_t item_id);
 
+/* Load resolved names/icons from disk cache (call once at addon load).
+ * gw2_build is used as the cache key — mismatched entries are ignored. */
+void Init(uint64_t gw2_build);
+
 void FlushPending();
 void Shutdown();
 

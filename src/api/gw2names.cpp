@@ -3,6 +3,7 @@
 #include "http_client.h"
 #include "weapon_type_db.h"
 #include "../shared.h"
+#include "../build/cache.h"
 #include <sstream>
 #include <nlohmann/json.hpp>
 #include <map>
@@ -28,6 +29,7 @@ struct TypeCache {
 static std::mutex        s_mutex;
 static TypeCache         s_specs, s_traits, s_skills, s_items, s_itemstats;
 static std::atomic<bool> s_fetching{false};
+static uint64_t          s_cache_build = 0;
 
 /* item_id → stat-set ID, resolved from /v2/items details.infix_upgrade.id
  * 0 = not yet loaded, UINT32_MAX = loading in progress, N = resolved */
@@ -37,6 +39,48 @@ static std::set<uint32_t>           s_item_stat_pending;
 /* item_id → GW2 item sub-type string (e.g. "Greatsword", "LongBow", "Coat")
  * empty = not yet loaded; populated by the same /v2/items batch as stat IDs */
 static std::map<uint32_t, std::string> s_item_detail_type;
+
+/* ── Cache serialization ─────────────────────────────────────────────────── */
+
+static std::string SerializeCache()
+{
+    /* Caller must NOT hold s_mutex — we take it here */
+    std::lock_guard<std::mutex> lk(s_mutex);
+    json j;
+
+    auto tc_to_json = [](const TypeCache& tc) {
+        json o;
+        json names = json::object();
+        json icons = json::object();
+        for (auto& kv : tc.names)
+            names[std::to_string(kv.first)] = kv.second;
+        for (auto& kv : tc.icons)
+            if (!kv.second.empty())
+                icons[std::to_string(kv.first)] = kv.second;
+        o["names"] = names;
+        o["icons"] = icons;
+        return o;
+    };
+
+    j["specs"]     = tc_to_json(s_specs);
+    j["traits"]    = tc_to_json(s_traits);
+    j["skills"]    = tc_to_json(s_skills);
+    j["items"]     = tc_to_json(s_items);
+    j["itemstats"] = tc_to_json(s_itemstats);
+
+    json stat_ids = json::object();
+    for (auto& kv : s_item_stat_id)
+        if (kv.second != UINT32_MAX)
+            stat_ids[std::to_string(kv.first)] = kv.second;
+    j["item_stat_id"] = stat_ids;
+
+    json detail_types = json::object();
+    for (auto& kv : s_item_detail_type)
+        detail_types[std::to_string(kv.first)] = kv.second;
+    j["item_detail_type"] = detail_types;
+
+    return j.dump();
+}
 
 /* ── Internal helpers ────────────────────────────────────────────────────── */
 
@@ -148,6 +192,41 @@ const std::string& GetTraitIcon(uint32_t id) { return LookupIcon(s_traits, id); 
 const std::string& GetSkillIcon(uint32_t id) { return LookupIcon(s_skills, id); }
 const std::string& GetItemIcon (uint32_t id) { return LookupIcon(s_items,  id); }
 
+void Init(uint64_t gw2_build)
+{
+    s_cache_build = gw2_build;
+    std::string json_str;
+    if (!BuildCache::LoadNamesCache(gw2_build, json_str) || json_str.empty()) return;
+
+    try {
+        auto j = json::parse(json_str);
+
+        auto json_to_tc = [](const json& o, TypeCache& tc) {
+            if (o.contains("names"))
+                for (auto it = o["names"].begin(); it != o["names"].end(); ++it)
+                    tc.names[(uint32_t)std::stoul(it.key())] = it.value().get<std::string>();
+            if (o.contains("icons"))
+                for (auto it = o["icons"].begin(); it != o["icons"].end(); ++it)
+                    tc.icons[(uint32_t)std::stoul(it.key())] = it.value().get<std::string>();
+        };
+
+        std::lock_guard<std::mutex> lk(s_mutex);
+        if (j.contains("specs"))     json_to_tc(j["specs"],     s_specs);
+        if (j.contains("traits"))    json_to_tc(j["traits"],    s_traits);
+        if (j.contains("skills"))    json_to_tc(j["skills"],    s_skills);
+        if (j.contains("items"))     json_to_tc(j["items"],     s_items);
+        if (j.contains("itemstats")) json_to_tc(j["itemstats"], s_itemstats);
+
+        if (j.contains("item_stat_id"))
+            for (auto it = j["item_stat_id"].begin(); it != j["item_stat_id"].end(); ++it)
+                s_item_stat_id[(uint32_t)std::stoul(it.key())] = it.value().get<uint32_t>();
+
+        if (j.contains("item_detail_type"))
+            for (auto it = j["item_detail_type"].begin(); it != j["item_detail_type"].end(); ++it)
+                s_item_detail_type[(uint32_t)std::stoul(it.key())] = it.value().get<std::string>();
+    } catch (...) {}
+}
+
 void FlushPending()
 {
     if (s_fetching.exchange(true)) return;
@@ -220,6 +299,10 @@ void FlushPending()
                 } catch (...) {}
             }
         }
+
+        /* Persist resolved data so names show instantly on the next session */
+        if (s_cache_build)
+            BuildCache::SaveNamesCache(s_cache_build, SerializeCache());
 
         s_fetching = false;
     }).detach();

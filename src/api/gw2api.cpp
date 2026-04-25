@@ -1,10 +1,13 @@
 #include "gw2api.h"
 #include "http_client.h"
 #include "../shared.h"
+#include "../build/cache.h"
 #include <nlohmann/json.hpp>
 #include <sstream>
 #include <map>
 #include <set>
+#include <algorithm>
+#include <thread>
 
 using json = nlohmann::json;
 
@@ -426,6 +429,279 @@ std::string SkillName(uint32_t /*skill_id*/)
 {
     /* Full lookup would require caching /v2/skills — stub for now */
     return "Skill";
+}
+
+/* ── Dynamic build template chat code ────────────────────────────────────── */
+
+static std::string Base64Encode(const uint8_t* data, size_t len)
+{
+    static const char* ALPHA =
+        "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+    std::string out;
+    out.reserve(((len + 2) / 3) * 4);
+    for (size_t i = 0; i < len; i += 3) {
+        uint32_t b = (uint32_t)data[i] << 16;
+        if (i + 1 < len) b |= (uint32_t)data[i + 1] << 8;
+        if (i + 2 < len) b |= (uint32_t)data[i + 2];
+        out += ALPHA[(b >> 18) & 63];
+        out += ALPHA[(b >> 12) & 63];
+        out += (i + 1 < len) ? ALPHA[(b >>  6) & 63] : '=';
+        out += (i + 2 < len) ? ALPHA[(b      ) & 63] : '=';
+    }
+    return out;
+}
+
+static const std::map<uint32_t, uint8_t> s_legend_code = {
+    {28134, 1}, {28085, 2}, {28419, 3}, {28494, 4},
+    {41858, 5}, {28195, 6}, {62749, 7}, {76610, 8},
+};
+
+/* In-process cache for public API data (spec major_traits + profession palettes).
+ * Populated lazily and persisted to disk between sessions, keyed by GW2 build. */
+static std::mutex                                    s_pubcache_mutex;
+static uint64_t                                      s_pubcache_build = 0;
+static std::map<uint32_t, std::vector<uint32_t>>     s_pubcache_specs;  /* spec_id → major_traits */
+static std::map<std::string, std::map<uint32_t,uint32_t>> s_pubcache_profs;  /* prof_name → {skill_id→pal} */
+
+static void LoadPublicCache()
+{
+    uint64_t gw2_build = g_GW2BuildNumber.load();
+    if (!gw2_build) return;
+
+    std::string raw;
+    if (!BuildCache::LoadPublicAPIData(gw2_build, raw)) return;
+
+    try {
+        auto j = json::parse(raw);
+        {
+            std::lock_guard<std::mutex> lk(s_pubcache_mutex);
+            s_pubcache_build = gw2_build;
+            s_pubcache_specs.clear();
+            for (auto& [sid_str, arr] : j.value("specs", json::object()).items()) {
+                uint32_t sid = (uint32_t)std::stoul(sid_str);
+                std::vector<uint32_t> major;
+                for (auto& v : arr) major.push_back(v.get<uint32_t>());
+                if ((int)major.size() == 9) s_pubcache_specs[sid] = std::move(major);
+            }
+            s_pubcache_profs.clear();
+            for (auto& [prof, map_j] : j.value("profs", json::object()).items()) {
+                std::map<uint32_t, uint32_t> m;
+                for (auto& [sk_str, pal_j] : map_j.items())
+                    m[(uint32_t)std::stoul(sk_str)] = pal_j.get<uint32_t>();
+                s_pubcache_profs[prof] = std::move(m);
+            }
+        }
+    } catch (...) {}
+}
+
+static void SavePublicCache(uint64_t gw2_build)
+{
+    if (!gw2_build) return;
+    std::lock_guard<std::mutex> lk(s_pubcache_mutex);
+
+    json j;
+    json specs_j = json::object();
+    for (auto& [sid, major] : s_pubcache_specs) {
+        json arr = json::array();
+        for (auto tid : major) arr.push_back(tid);
+        specs_j[std::to_string(sid)] = arr;
+    }
+    j["specs"] = specs_j;
+
+    json profs_j = json::object();
+    for (auto& [prof, m] : s_pubcache_profs) {
+        json pm = json::object();
+        for (auto& [sk, pal] : m) pm[std::to_string(sk)] = pal;
+        profs_j[prof] = pm;
+    }
+    j["profs"] = profs_j;
+
+    BuildCache::SavePublicAPIData(gw2_build, j.dump());
+}
+
+void GenerateBuildChatCodeAsync(const GW2::SCBuild& build)
+{
+    uint8_t     prof_byte = (uint8_t)((uint32_t)build.profession);
+    std::string prof_name = GW2::ProfessionName(build.profession);
+    GW2::Profession prof  = build.profession;
+
+    struct LineData { uint32_t spec_id; uint32_t trait_ids[3]; };
+    LineData lines[3];
+    for (int i = 0; i < 3; i++) {
+        lines[i].spec_id = build.traits.lines[i].spec_id;
+        for (int t = 0; t < 3; t++)
+            lines[i].trait_ids[t] = build.traits.lines[i].traits[t].trait_id;
+    }
+
+    uint32_t skills[5] = {
+        build.skills.heal,
+        build.skills.utilities[0], build.skills.utilities[1], build.skills.utilities[2],
+        build.skills.elite,
+    };
+    uint32_t legends[2] = { build.legends[0], build.legends[1] };
+    uint32_t pets[2]    = { build.pets[0],    build.pets[1]    };
+
+    /* Try loading the disk cache into the in-process cache (one-time on first call) */
+    {
+        std::lock_guard<std::mutex> lk(s_pubcache_mutex);
+        if (s_pubcache_build == 0) {
+            /* Unlock and load — LoadPublicCache re-acquires internally */
+        }
+    }
+    LoadPublicCache();  /* no-op if already loaded for this build */
+
+    std::thread([=]() {
+        uint64_t gw2_build = g_GW2BuildNumber.load();
+
+        /* ── 1. Ensure spec major_traits are in the in-process cache ──── */
+        bool specs_need_fetch = false;
+        {
+            std::lock_guard<std::mutex> lk(s_pubcache_mutex);
+            if (s_pubcache_build != gw2_build) {
+                /* Build number changed — invalidate */
+                s_pubcache_specs.clear();
+                s_pubcache_profs.clear();
+                s_pubcache_build = gw2_build;
+            }
+            for (int i = 0; i < 3; i++) {
+                if (lines[i].spec_id &&
+                    s_pubcache_specs.find(lines[i].spec_id) == s_pubcache_specs.end()) {
+                    specs_need_fetch = true;
+                    break;
+                }
+            }
+        }
+
+        if (specs_need_fetch) {
+            /* Collect which spec IDs are missing */
+            std::string spec_ids;
+            {
+                std::lock_guard<std::mutex> lk(s_pubcache_mutex);
+                for (int i = 0; i < 3; i++) {
+                    uint32_t sid = lines[i].spec_id;
+                    if (sid && s_pubcache_specs.find(sid) == s_pubcache_specs.end()) {
+                        if (!spec_ids.empty()) spec_ids += ",";
+                        spec_ids += std::to_string(sid);
+                    }
+                }
+            }
+            if (!spec_ids.empty()) {
+                std::wstring path = L"/v2/specializations?ids=" +
+                    std::wstring(spec_ids.begin(), spec_ids.end());
+                auto resp = Http::Get(HOST, path);
+                if (!resp.ok()) return;
+                try {
+                    auto arr = json::parse(resp.body);
+                    std::lock_guard<std::mutex> lk(s_pubcache_mutex);
+                    for (auto& s : arr) {
+                        uint32_t sid = s.value("id", 0u);
+                        if (!sid) continue;
+                        std::vector<uint32_t> major;
+                        for (auto& v : s.value("major_traits", json::array()))
+                            major.push_back(v.get<uint32_t>());
+                        if ((int)major.size() == 9)
+                            s_pubcache_specs[sid] = std::move(major);
+                    }
+                } catch (...) { return; }
+            }
+            SavePublicCache(gw2_build);
+        }
+
+        /* ── 2. Encode trait bytes ─────────────────────────────────────── */
+        auto encode_traits = [&](uint32_t spec_id, const uint32_t* tids) -> uint8_t {
+            std::lock_guard<std::mutex> lk(s_pubcache_mutex);
+            auto it = s_pubcache_specs.find(spec_id);
+            if (it == s_pubcache_specs.end()) return 0;
+            const auto& major = it->second;
+            int choices[3] = {0, 0, 0};
+            for (int t = 0; t < 3; t++) {
+                if (!tids[t]) continue;
+                auto pos = std::find(major.begin(), major.end(), tids[t]);
+                if (pos == major.end()) continue;
+                int idx  = (int)(pos - major.begin());
+                int tier = idx / 3;
+                int pick = (idx % 3) + 1;
+                if (tier < 3) choices[tier] = pick;
+            }
+            return (uint8_t)(choices[0] | (choices[1] << 2) | (choices[2] << 4));
+        };
+
+        /* ── 3. Ensure profession palette is in the in-process cache ───── */
+        bool prof_need_fetch = false;
+        {
+            std::lock_guard<std::mutex> lk(s_pubcache_mutex);
+            prof_need_fetch = (s_pubcache_profs.find(prof_name) == s_pubcache_profs.end());
+        }
+
+        if (prof_need_fetch) {
+            std::string ep = "/v2/professions/" + prof_name +
+                             "?v=2019-12-19T00:00:00.000Z";
+            std::wstring path(ep.begin(), ep.end());
+            auto resp = Http::Get(HOST, path);
+            if (resp.ok()) {
+                try {
+                    auto j = json::parse(resp.body);
+                    std::map<uint32_t, uint32_t> m;
+                    for (auto& pair : j.value("skills_by_palette", json::array())) {
+                        if (!pair.is_array() || pair.size() != 2) continue;
+                        uint32_t pal = pair[0].get<uint32_t>();
+                        uint32_t sk  = pair[1].get<uint32_t>();
+                        if (pal && sk) m[sk] = pal;
+                    }
+                    std::lock_guard<std::mutex> lk(s_pubcache_mutex);
+                    s_pubcache_profs[prof_name] = std::move(m);
+                } catch (...) {}
+            }
+            SavePublicCache(gw2_build);
+        }
+
+        /* ── 4. Build the 44-byte chat link ───────────────────────────── */
+        std::map<uint32_t, uint32_t> skill_to_palette;
+        {
+            std::lock_guard<std::mutex> lk(s_pubcache_mutex);
+            auto it = s_pubcache_profs.find(prof_name);
+            if (it != s_pubcache_profs.end()) skill_to_palette = it->second;
+        }
+
+        uint8_t data[44] = {};
+        data[0] = 0x0D;
+        data[1] = prof_byte;
+
+        for (int i = 0; i < 3; i++) {
+            data[2 + i * 2]     = (uint8_t)(lines[i].spec_id & 0xFF);
+            data[2 + i * 2 + 1] = encode_traits(lines[i].spec_id, lines[i].trait_ids);
+        }
+
+        for (int i = 0; i < 5; i++) {
+            uint32_t pid = 0;
+            auto it = skill_to_palette.find(skills[i]);
+            if (it != skill_to_palette.end()) pid = it->second;
+            data[8 + i * 4]     = (uint8_t)(pid & 0xFF);
+            data[8 + i * 4 + 1] = (uint8_t)((pid >> 8) & 0xFF);
+        }
+
+        if (prof == GW2::Profession::Revenant) {
+            for (int i = 0; i < 2; i++) {
+                auto it = s_legend_code.find(legends[i]);
+                data[28 + i] = (it != s_legend_code.end()) ? it->second : 0;
+            }
+        } else if (prof == GW2::Profession::Ranger) {
+            data[28] = (uint8_t)(pets[0] & 0xFF);
+            data[29] = (uint8_t)(pets[1] & 0xFF);
+        }
+
+        std::string chat_code = "[&" + Base64Encode(data, 44) + "]";
+
+        /* ── 5. Write back only if this build is still selected ────────── */
+        {
+            std::lock_guard<std::mutex> lk(g_SCBuildMutex);
+            bool still_same = (g_SCBuild.profession == prof);
+            for (int i = 0; i < 3 && still_same; i++)
+                still_same = (g_SCBuild.traits.lines[i].spec_id == lines[i].spec_id);
+            if (still_same)
+                g_SCBuild.chat_code = chat_code;
+        }
+    }).detach();
 }
 
 } /* namespace GW2API */

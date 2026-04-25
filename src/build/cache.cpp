@@ -4,6 +4,7 @@
 #include "../sc_builds_embedded.h"
 #include <nlohmann/json.hpp>
 #include <fstream>
+#include <mutex>
 #include <set>
 #include <windows.h>
 
@@ -253,6 +254,80 @@ void SaveGW2Build(uint64_t build_number)
     LoadSettings(s);          /* load existing values so we don't wipe them */
     s.last_gw2_build = build_number;
     SaveSettings(s);
+}
+
+/* ── Public API data cache ───────────────────────────────────────────────── */
+static std::mutex s_public_api_mutex;
+
+bool SavePublicAPIData(uint64_t gw2_build, const std::string& json_str)
+{
+    if (s_CacheDir.empty()) return false;
+    std::lock_guard<std::mutex> lk(s_public_api_mutex);
+    std::string path = s_CacheDir + "gw2_api_public.json";
+
+    json wrapper;
+    wrapper["build"] = gw2_build;
+    wrapper["data"]  = json_str;
+
+    std::ofstream f(path);
+    if (!f.is_open()) return false;
+    f << wrapper.dump();
+    return true;
+}
+
+bool LoadPublicAPIData(uint64_t gw2_build, std::string& out_json)
+{
+    if (s_CacheDir.empty()) return false;
+    std::lock_guard<std::mutex> lk(s_public_api_mutex);
+    std::string path = s_CacheDir + "gw2_api_public.json";
+
+    std::ifstream f(path);
+    if (!f.is_open()) return false;
+    try {
+        std::string content((std::istreambuf_iterator<char>(f)),
+                             std::istreambuf_iterator<char>());
+        auto wrapper = json::parse(content);
+        if (wrapper.value("build", uint64_t(0)) != gw2_build) return false;
+        out_json = wrapper.value("data", "");
+        return !out_json.empty();
+    } catch (...) { return false; }
+}
+
+/* ── GW2Names disk cache ─────────────────────────────────────────────────── */
+static std::mutex s_names_mutex;
+
+bool SaveNamesCache(uint64_t gw2_build, const std::string& json_str)
+{
+    if (s_CacheDir.empty()) return false;
+    std::lock_guard<std::mutex> lk(s_names_mutex);
+    std::string path = s_CacheDir + "gw2names_cache.json";
+
+    json wrapper;
+    wrapper["build"] = gw2_build;
+    wrapper["data"]  = json_str;
+
+    std::ofstream f(path);
+    if (!f.is_open()) return false;
+    f << wrapper.dump();
+    return true;
+}
+
+bool LoadNamesCache(uint64_t gw2_build, std::string& out_json)
+{
+    if (s_CacheDir.empty()) return false;
+    std::lock_guard<std::mutex> lk(s_names_mutex);
+    std::string path = s_CacheDir + "gw2names_cache.json";
+
+    std::ifstream f(path);
+    if (!f.is_open()) return false;
+    try {
+        std::string content((std::istreambuf_iterator<char>(f)),
+                             std::istreambuf_iterator<char>());
+        auto wrapper = json::parse(content);
+        if (wrapper.value("build", uint64_t(0)) != gw2_build) return false;
+        out_json = wrapper.value("data", "");
+        return !out_json.empty();
+    } catch (...) { return false; }
 }
 
 } /* namespace BuildCache */

@@ -45,4 +45,9 @@ std::string StatSetName(uint32_t stat_id);
 /* Resolve a skill name from its ID via /v2/skills */
 std::string SkillName(uint32_t skill_id);
 
+/* Fetch live spec and skill data from the GW2 API and regenerate the build
+ * template chat code for the given SC build.  Runs on a background thread;
+ * updates g_SCBuild.chat_code when done (if the same build is still selected). */
+void GenerateBuildChatCodeAsync(const GW2::SCBuild& build);
+
 } /* namespace GW2API */

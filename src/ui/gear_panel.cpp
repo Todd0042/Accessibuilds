@@ -9,6 +9,13 @@
 #include <map>
 
 namespace {
+/* Normalize GW2 API weapon type strings: old aquatic-only types fold into Spear */
+inline std::string NormalizeWeaponType(std::string t)
+{
+    if (t == "Harpoon" || t == "Trident") return "Spear";
+    return t;
+}
+
 /* Resolve a stat set name: hardcoded table first, then async GW2Names lookup.
  * Returns "..." while the async lookup is still in flight. */
 inline std::string StatName(uint32_t id)
@@ -107,8 +114,8 @@ static void RenderSlotRow(const GW2::GearItem* pi, const GW2::GearItem* ri,
     /* Weapon type check: only for weapon slots, only when both items are resolved */
     bool weapon_type_ok = true;
     if (check_type && !is_relic && pi && ri && pi->item_id && ri->item_id) {
-        std::string pt = std::string(GW2Names::GetItemType(pi->item_id));
-        std::string rt = std::string(GW2Names::GetItemType(ri->item_id));
+        std::string pt = NormalizeWeaponType(std::string(GW2Names::GetItemType(pi->item_id)));
+        std::string rt = NormalizeWeaponType(std::string(GW2Names::GetItemType(ri->item_id)));
         while (!pt.empty() && (pt.back()==' '||pt.back()=='\t')) pt.pop_back();
         while (!rt.empty() && (rt.back()==' '||rt.back()=='\t')) rt.pop_back();
         if (!pt.empty() && pt != "..." && !rt.empty() && rt != "...") {
@@ -148,7 +155,7 @@ static void RenderSlotRow(const GW2::GearItem* pi, const GW2::GearItem* ri,
             /* ── Reference (SC) line ── */
             std::string rt, rs;
             if (ri) {
-                rt = std::string(GW2Names::GetItemType(ri->item_id));
+                rt = NormalizeWeaponType(std::string(GW2Names::GetItemType(ri->item_id)));
                 while (!rt.empty() && (rt.back()==' '||rt.back()=='\t')) rt.pop_back();
                 rs = ri->stat_id ? StatName(ri->stat_id) : "";
                 while (!rs.empty() && (rs.back()==' '||rs.back()=='\t'||rs.back()=='\r')) rs.pop_back();
@@ -162,7 +169,7 @@ static void RenderSlotRow(const GW2::GearItem* pi, const GW2::GearItem* ri,
 
             /* ── Player line (only shown when type or stat is wrong) ── */
             if (!slot_ok && (!weapon_type_ok || !stat_ok)) {
-                std::string pt = std::string(GW2Names::GetItemType(pi->item_id));
+                std::string pt = NormalizeWeaponType(std::string(GW2Names::GetItemType(pi->item_id)));
                 while (!pt.empty() && (pt.back()==' '||pt.back()=='\t')) pt.pop_back();
                 uint32_t p_sid = pi->stat_id;
                 if (p_sid == 0 && pi->item_id) p_sid = GW2Names::GetItemStatId(pi->item_id);
@@ -193,7 +200,7 @@ static void RenderSlotRow(const GW2::GearItem* pi, const GW2::GearItem* ri,
         /* Slot is empty — show what they should have */
         if (check_type && ri->item_id) {
             /* "Greatsword (Berserker's)" on one line — fits in fixed row height */
-            std::string itype = std::string(GW2Names::GetItemType(ri->item_id));
+            std::string itype = NormalizeWeaponType(std::string(GW2Names::GetItemType(ri->item_id)));
             while (!itype.empty() && (itype.back()==' '||itype.back()=='\t')) itype.pop_back();
             std::string rstat = ri->stat_id ? StatName(ri->stat_id) : "";
             while (!rstat.empty() && (rstat.back()==' '||rstat.back()=='\t'||rstat.back()=='\r')) rstat.pop_back();

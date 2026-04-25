@@ -270,12 +270,16 @@ def load_api_caches(force: bool = False) -> None:
                     mapping[skill_id] = palette_id
         _skill_to_palette[slug] = mapping
 
-    # Specializations (all specs for trait position lookup)
+    # Specializations — fetch ALL of them so any core spec used in a build works
     if not force and spec_cache.exists():
         specs_data = json.loads(spec_cache.read_text())
     else:
-        print("  Fetching /v2/specializations (trait positions)...")
-        all_spec_ids = list(SPEC_ID_NAME.keys())
+        print("  Fetching /v2/specializations (all, for trait positions)...")
+        # Step 1: get the full list of IDs
+        all_ids_resp = requests.get(f"{GW2_API}/v2/specializations", timeout=30)
+        all_ids_resp.raise_for_status()
+        all_spec_ids = all_ids_resp.json()
+        # Step 2: fetch all specs in one batched request
         ids_param = ",".join(str(i) for i in all_spec_ids)
         resp = requests.get(
             f"{GW2_API}/v2/specializations?ids={ids_param}",

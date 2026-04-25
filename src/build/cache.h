@@ -29,4 +29,16 @@ bool LoadSettings(Settings& out);
 uint64_t LoadGW2Build();
 void     SaveGW2Build(uint64_t build_number);
 
+/* Public GW2 API data cache (spec major_traits + profession skill palettes).
+ * Keyed by GW2 build number — stale entries are ignored automatically.
+ * json_str is a raw JSON string; callers parse/generate as needed. */
+bool SavePublicAPIData(uint64_t gw2_build, const std::string& json_str);
+bool LoadPublicAPIData(uint64_t gw2_build, std::string& out_json);
+
+/* GW2Names name/icon resolution cache.
+ * Persists the async-resolved name + icon data across sessions so names show
+ * immediately on subsequent launches instead of "..." until fetched. */
+bool SaveNamesCache(uint64_t gw2_build, const std::string& json_str);
+bool LoadNamesCache(uint64_t gw2_build, std::string& out_json);
+
 } /* namespace BuildCache */
