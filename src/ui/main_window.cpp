@@ -260,6 +260,7 @@ static std::string BuildDisplayLabel(const std::string& id,
 static void RenderBuildDropdown()
 {
     ImGui::SetNextItemWidth(180);
+    ImGui::SetNextWindowSizeConstraints(ImVec2(0, 0), ImVec2(FLT_MAX, 300));
     if (ImGui::BeginCombo("##prof_filter", PROF_FILTER_NAMES[s_filter_prof])) {
         for (int i = 0; i < 10; i++)
             if (ImGui::Selectable(PROF_FILTER_NAMES[i], s_filter_prof == i))
@@ -277,6 +278,21 @@ static void RenderBuildDropdown()
     ImGui::SameLine();
     ImGui::SetNextItemWidth(180);
     ImGui::InputTextWithHint("##search", "Search...", s_search_buf, sizeof(s_search_buf));
+
+    // Track whether the search box was active this frame
+    bool search_was_active = ImGui::IsItemActive();
+
+    // Prevent search box from capturing input when clicking elsewhere
+    if (search_was_active &&
+        ImGui::IsMouseClicked(ImGuiMouseButton_Left) &&
+        !ImGui::IsAnyItemHovered())
+    {
+        // Old ImGui fallback: disable text input so the field releases focus
+        ImGui::GetIO().WantTextInput = false;
+    }
+
+
+
 
     GW2::Profession fprof = s_filter_prof > 0
                             ? static_cast<GW2::Profession>(s_filter_prof)
@@ -372,12 +388,51 @@ void Render()
     }
 
     if (!s_visible) return;
+    static int active_tab = 0;
 
-    ImGui::SetNextWindowSize(ImVec2(700, 520), ImGuiCond_FirstUseEver);
+    // Auto-resize
+    if (active_tab == 1) {
+        // Gear tab
+        ImGui::SetNextWindowSize(ImVec2(870, 1105));
+    }
+    else if (active_tab == 2) {
+        // DPS tab = 40% of Build height
+        float dps_h = 675.0f * 0.40f;
+        ImGui::SetNextWindowSize(ImVec2(700, dps_h));
+    }
+    else {
+        // Build tab
+        ImGui::SetNextWindowSize(ImVec2(700, 675));
+    }
+
+    // Min constraints
+    if (active_tab == 1) {
+        ImGui::SetNextWindowSizeConstraints(
+            ImVec2(870, 1105),
+            ImVec2(FLT_MAX, FLT_MAX)
+        );
+    }
+    else if (active_tab == 2) {
+        float dps_h = 675.0f * 0.40f;
+        ImGui::SetNextWindowSizeConstraints(
+            ImVec2(700, dps_h),
+            ImVec2(FLT_MAX, FLT_MAX)
+        );
+    }
+    else {
+        ImGui::SetNextWindowSizeConstraints(
+            ImVec2(700, 675),
+            ImVec2(FLT_MAX, FLT_MAX)
+        );
+    }
+
+    // FIRST AND ONLY Begin()
     if (!ImGui::Begin("BuildCoach", &s_visible)) {
         ImGui::End();
         return;
     }
+
+
 
     /* Toolbar */
     bool limited = APIRateLimit::ShouldShowLimitedMessage();
@@ -456,21 +511,30 @@ void Render()
     ImGui::Separator();
 
     /* Tabs */
+
     if (ImGui::BeginTabBar("##tabs")) {
+
         if (ImGui::BeginTabItem("Build")) {
+            active_tab = 0;
             BuildPanel::Render();
             ImGui::EndTabItem();
         }
+
         if (ImGui::BeginTabItem("Gear")) {
+            active_tab = 1;
             GearPanel::Render();
             ImGui::EndTabItem();
         }
+
         if (ImGui::BeginTabItem("DPS")) {
+            active_tab = 2;
             DpsPanel::Render();
             ImGui::EndTabItem();
         }
+
         ImGui::EndTabBar();
     }
+
 
     /* Rate-limit notice at the bottom of the window */
     if (APIRateLimit::ShouldShowLimitedMessage()) {

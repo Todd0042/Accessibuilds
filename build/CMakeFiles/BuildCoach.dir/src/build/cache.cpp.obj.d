@@ -1,7 +1,7 @@
 CMakeFiles/BuildCoach.dir/src/build/cache.cpp.obj: \
- /home/todd/gw2-browser/src/build/cache.cpp \
- /home/todd/gw2-browser/src/build/cache.h \
- /home/todd/gw2-browser/src/build/types.h \
+ /home/todd/gw2-build-coach\ copy/src/build/cache.cpp \
+ /home/todd/gw2-build-coach\ copy/src/build/cache.h \
+ /home/todd/gw2-build-coach\ copy/src/build/types.h \
  /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdint.h \
  /usr/x86_64-w64-mingw32/include/stdint.h \
  /usr/x86_64-w64-mingw32/include/crtdefs.h \
@@ -111,7 +111,7 @@ CMakeFiles/BuildCoach.dir/src/build/cache.cpp.obj: \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/vector.tcc \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/array \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/compare \
- /home/todd/gw2-browser/src/build/../api/snowcrows.h \
+ /home/todd/gw2-build-coach\ copy/src/build/../api/snowcrows.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/functional \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/std_function.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/typeinfo \
@@ -123,8 +123,8 @@ CMakeFiles/BuildCoach.dir/src/build/cache.cpp.obj: \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/enable_special_members.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/node_handle.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/erase_if.h \
- /home/todd/gw2-browser/src/build/../shared.h \
- /home/todd/gw2-browser/src/build/../../external/nexus/Nexus.h \
+ /home/todd/gw2-build-coach\ copy/src/build/../shared.h \
+ /home/todd/gw2-build-coach\ copy/src/build/../../external/nexus/Nexus.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/cstdint \
  /usr/x86_64-w64-mingw32/include/windows.h \
  /usr/x86_64-w64-mingw32/include/sdkddkver.h \
@@ -456,8 +456,8 @@ CMakeFiles/BuildCoach.dir/src/build/cache.cpp.obj: \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++io.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/fstream.tcc \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/chrono \
- /home/todd/gw2-browser/src/build/../sc_builds_embedded.h \
- /home/todd/gw2-browser/external/nlohmann/json.hpp \
+ /home/todd/gw2-build-coach\ copy/src/build/../sc_builds_embedded.h \
+ /home/todd/gw2-build-coach\ copy/external/nlohmann/json.hpp \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/algorithm \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/stl_algo.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/algorithmfwd.h \

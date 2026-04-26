@@ -1,7 +1,7 @@
 CMakeFiles/BuildCoach.dir/src/build/comparator.cpp.obj: \
- /home/todd/gw2-browser/src/build/comparator.cpp \
- /home/todd/gw2-browser/src/build/comparator.h \
- /home/todd/gw2-browser/src/build/types.h \
+ /home/todd/gw2-build-coach\ copy/src/build/comparator.cpp \
+ /home/todd/gw2-build-coach\ copy/src/build/comparator.h \
+ /home/todd/gw2-build-coach\ copy/src/build/types.h \
  /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdint.h \
  /usr/x86_64-w64-mingw32/include/stdint.h \
  /usr/x86_64-w64-mingw32/include/crtdefs.h \
@@ -111,7 +111,7 @@ CMakeFiles/BuildCoach.dir/src/build/comparator.cpp.obj: \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/vector.tcc \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/array \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/compare \
- /home/todd/gw2-browser/src/build/../api/gw2api.h \
+ /home/todd/gw2-build-coach\ copy/src/build/../api/gw2api.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/functional \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/std_function.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/typeinfo \
@@ -123,7 +123,7 @@ CMakeFiles/BuildCoach.dir/src/build/comparator.cpp.obj: \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/enable_special_members.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/node_handle.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/erase_if.h \
- /home/todd/gw2-browser/src/build/../api/gw2names.h \
+ /home/todd/gw2-build-coach\ copy/src/build/../api/gw2names.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/cstdint \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/sstream \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/istream \

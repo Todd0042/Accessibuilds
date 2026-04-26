@@ -1,7 +1,7 @@
 {
 	"InstallScripts" : 
 	[
-		"/home/todd/gw2-browser/build/cmake_install.cmake"
+		"/home/todd/gw2-build-coach copy/build/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

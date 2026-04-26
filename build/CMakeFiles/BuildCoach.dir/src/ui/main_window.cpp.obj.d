@@ -1,7 +1,7 @@
 CMakeFiles/BuildCoach.dir/src/ui/main_window.cpp.obj: \
- /home/todd/gw2-browser/src/ui/main_window.cpp \
- /home/todd/gw2-browser/src/ui/main_window.h \
- /home/todd/gw2-browser/src/ui/../build/types.h \
+ /home/todd/gw2-build-coach\ copy/src/ui/main_window.cpp \
+ /home/todd/gw2-build-coach\ copy/src/ui/main_window.h \
+ /home/todd/gw2-build-coach\ copy/src/ui/../build/types.h \
  /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdint.h \
  /usr/x86_64-w64-mingw32/include/stdint.h \
  /usr/x86_64-w64-mingw32/include/crtdefs.h \
@@ -111,11 +111,11 @@ CMakeFiles/BuildCoach.dir/src/ui/main_window.cpp.obj: \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/vector.tcc \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/array \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/compare \
- /home/todd/gw2-browser/src/ui/build_panel.h \
- /home/todd/gw2-browser/src/ui/gear_panel.h \
- /home/todd/gw2-browser/src/ui/dps_panel.h \
- /home/todd/gw2-browser/src/ui/../shared.h \
- /home/todd/gw2-browser/src/ui/../../external/nexus/Nexus.h \
+ /home/todd/gw2-build-coach\ copy/src/ui/build_panel.h \
+ /home/todd/gw2-build-coach\ copy/src/ui/gear_panel.h \
+ /home/todd/gw2-build-coach\ copy/src/ui/dps_panel.h \
+ /home/todd/gw2-build-coach\ copy/src/ui/../shared.h \
+ /home/todd/gw2-build-coach\ copy/src/ui/../../external/nexus/Nexus.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/cstdint \
  /usr/x86_64-w64-mingw32/include/windows.h \
  /usr/x86_64-w64-mingw32/include/sdkddkver.h \
@@ -448,7 +448,7 @@ CMakeFiles/BuildCoach.dir/src/ui/main_window.cpp.obj: \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++io.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/fstream.tcc \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/chrono \
- /home/todd/gw2-browser/src/ui/../api/gw2api.h \
+ /home/todd/gw2-build-coach\ copy/src/ui/../api/gw2api.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/functional \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/std_function.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/unordered_map \
@@ -459,8 +459,8 @@ CMakeFiles/BuildCoach.dir/src/ui/main_window.cpp.obj: \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/enable_special_members.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/node_handle.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/erase_if.h \
- /home/todd/gw2-browser/src/ui/../api/gw2names.h \
- /home/todd/gw2-browser/src/ui/../api/api_rate_limiter.h \
+ /home/todd/gw2-build-coach\ copy/src/ui/../api/gw2names.h \
+ /home/todd/gw2-build-coach\ copy/src/ui/../api/api_rate_limiter.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/thread \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/std_thread.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/unique_ptr.h \
@@ -473,12 +473,12 @@ CMakeFiles/BuildCoach.dir/src/ui/main_window.cpp.obj: \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/stl_tempbuf.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/pstl/glue_algorithm_defs.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/pstl/execution_defs.h \
- /home/todd/gw2-browser/src/ui/../api/snowcrows.h \
- /home/todd/gw2-browser/src/ui/../build/cache.h \
- /home/todd/gw2-browser/src/ui/../arcdps/arcdps.h \
- /home/todd/gw2-browser/src/ui/../arcdps/arcdps_structs.h \
- /home/todd/gw2-browser/external/imgui/imgui.h \
- /home/todd/gw2-browser/external/imgui/imconfig.h \
+ /home/todd/gw2-build-coach\ copy/src/ui/../api/snowcrows.h \
+ /home/todd/gw2-build-coach\ copy/src/ui/../build/cache.h \
+ /home/todd/gw2-build-coach\ copy/src/ui/../arcdps/arcdps.h \
+ /home/todd/gw2-build-coach\ copy/src/ui/../arcdps/arcdps_structs.h \
+ /home/todd/gw2-build-coach\ copy/external/imgui/imgui.h \
+ /home/todd/gw2-build-coach\ copy/external/imgui/imconfig.h \
  /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/include/float.h \
  /usr/x86_64-w64-mingw32/include/float.h \
  /usr/x86_64-w64-mingw32/include/assert.h \

@@ -1,8 +1,8 @@
 CMakeFiles/BuildCoach.dir/src/ui/icon_cache.cpp.obj: \
- /home/todd/gw2-browser/src/ui/icon_cache.cpp \
- /home/todd/gw2-browser/src/ui/icon_cache.h \
- /home/todd/gw2-browser/src/ui/../shared.h \
- /home/todd/gw2-browser/src/ui/../../external/nexus/Nexus.h \
+ /home/todd/gw2-build-coach\ copy/src/ui/icon_cache.cpp \
+ /home/todd/gw2-build-coach\ copy/src/ui/icon_cache.h \
+ /home/todd/gw2-build-coach\ copy/src/ui/../shared.h \
+ /home/todd/gw2-build-coach\ copy/src/ui/../../external/nexus/Nexus.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/cstdint \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++config.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/x86_64-w64-mingw32/bits/os_defines.h \
@@ -302,7 +302,7 @@ CMakeFiles/BuildCoach.dir/src/ui/icon_cache.cpp.obj: \
  /usr/x86_64-w64-mingw32/include/winsvc.h \
  /usr/x86_64-w64-mingw32/include/mcx.h \
  /usr/x86_64-w64-mingw32/include/imm.h \
- /home/todd/gw2-browser/src/ui/../build/types.h \
+ /home/todd/gw2-build-coach\ copy/src/ui/../build/types.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/string \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/requires_hosted.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/stringfwd.h \
@@ -445,7 +445,7 @@ CMakeFiles/BuildCoach.dir/src/ui/icon_cache.cpp.obj: \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++io.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/fstream.tcc \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/chrono \
- /home/todd/gw2-browser/src/ui/../api/http_client.h \
+ /home/todd/gw2-build-coach\ copy/src/ui/../api/http_client.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/functional \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/std_function.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/unordered_map \

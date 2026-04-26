@@ -1,7 +1,7 @@
 CMakeFiles/BuildCoach.dir/src/api/snowcrows.cpp.obj: \
- /home/todd/gw2-browser/src/api/snowcrows.cpp \
- /home/todd/gw2-browser/src/api/snowcrows.h \
- /home/todd/gw2-browser/src/api/../build/types.h \
+ /home/todd/gw2-build-coach\ copy/src/api/snowcrows.cpp \
+ /home/todd/gw2-build-coach\ copy/src/api/snowcrows.h \
+ /home/todd/gw2-build-coach\ copy/src/api/../build/types.h \
  /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdint.h \
  /usr/x86_64-w64-mingw32/include/stdint.h \
  /usr/x86_64-w64-mingw32/include/crtdefs.h \
@@ -122,9 +122,9 @@ CMakeFiles/BuildCoach.dir/src/api/snowcrows.cpp.obj: \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/enable_special_members.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/node_handle.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/erase_if.h \
- /home/todd/gw2-browser/src/api/http_client.h \
- /home/todd/gw2-browser/src/api/../shared.h \
- /home/todd/gw2-browser/src/api/../../external/nexus/Nexus.h \
+ /home/todd/gw2-build-coach\ copy/src/api/http_client.h \
+ /home/todd/gw2-build-coach\ copy/src/api/../shared.h \
+ /home/todd/gw2-build-coach\ copy/src/api/../../external/nexus/Nexus.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/cstdint \
  /usr/x86_64-w64-mingw32/include/windows.h \
  /usr/x86_64-w64-mingw32/include/sdkddkver.h \
@@ -456,7 +456,7 @@ CMakeFiles/BuildCoach.dir/src/api/snowcrows.cpp.obj: \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++io.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/fstream.tcc \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/chrono \
- /home/todd/gw2-browser/external/nlohmann/json.hpp \
+ /home/todd/gw2-build-coach\ copy/external/nlohmann/json.hpp \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/algorithm \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/stl_algo.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/algorithmfwd.h \

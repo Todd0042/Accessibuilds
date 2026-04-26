@@ -1,9 +1,9 @@
 CMakeFiles/BuildCoach.dir/src/ui/build_panel.cpp.obj: \
- /home/todd/gw2-browser/src/ui/build_panel.cpp \
- /home/todd/gw2-browser/src/ui/build_panel.h \
- /home/todd/gw2-browser/src/ui/icon_renderer.h \
- /home/todd/gw2-browser/src/ui/../shared.h \
- /home/todd/gw2-browser/src/ui/../../external/nexus/Nexus.h \
+ /home/todd/gw2-build-coach\ copy/src/ui/build_panel.cpp \
+ /home/todd/gw2-build-coach\ copy/src/ui/build_panel.h \
+ /home/todd/gw2-build-coach\ copy/src/ui/icon_renderer.h \
+ /home/todd/gw2-build-coach\ copy/src/ui/../shared.h \
+ /home/todd/gw2-build-coach\ copy/src/ui/../../external/nexus/Nexus.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/cstdint \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++config.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/x86_64-w64-mingw32/bits/os_defines.h \
@@ -303,7 +303,7 @@ CMakeFiles/BuildCoach.dir/src/ui/build_panel.cpp.obj: \
  /usr/x86_64-w64-mingw32/include/winsvc.h \
  /usr/x86_64-w64-mingw32/include/mcx.h \
  /usr/x86_64-w64-mingw32/include/imm.h \
- /home/todd/gw2-browser/src/ui/../build/types.h \
+ /home/todd/gw2-build-coach\ copy/src/ui/../build/types.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/string \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/requires_hosted.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/stringfwd.h \
@@ -446,11 +446,11 @@ CMakeFiles/BuildCoach.dir/src/ui/build_panel.cpp.obj: \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++io.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/fstream.tcc \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/chrono \
- /home/todd/gw2-browser/src/ui/../api/gw2names.h \
- /home/todd/gw2-browser/src/ui/icon_cache.h \
- /home/todd/gw2-browser/external/imgui/imgui.h \
- /home/todd/gw2-browser/external/imgui/imconfig.h \
+ /home/todd/gw2-build-coach\ copy/src/ui/../api/gw2names.h \
+ /home/todd/gw2-build-coach\ copy/src/ui/icon_cache.h \
+ /home/todd/gw2-build-coach\ copy/external/imgui/imgui.h \
+ /home/todd/gw2-build-coach\ copy/external/imgui/imconfig.h \
  /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/include/float.h \
  /usr/x86_64-w64-mingw32/include/float.h \
  /usr/x86_64-w64-mingw32/include/assert.h \
- /home/todd/gw2-browser/src/ui/../build/comparator.h
+ /home/todd/gw2-build-coach\ copy/src/ui/../build/comparator.h

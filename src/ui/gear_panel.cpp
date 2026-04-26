@@ -58,8 +58,6 @@ static const GW2::GearSlot WEAPON_SLOTS[] = {
 static void RenderSlotRow(const GW2::GearItem* pi, const GW2::GearItem* ri,
                           bool check_type = false)
 {
-    /* Relic detection: ri has an item_id but no stat/upgrade/infusions.
-     * For relics the item_id itself IS the comparison point. */
     bool is_relic = ri && ri->item_id != 0 && ri->stat_id == 0
                        && ri->upgrade_id == 0 && ri->infusions.empty();
 
@@ -76,7 +74,7 @@ static void RenderSlotRow(const GW2::GearItem* pi, const GW2::GearItem* ri,
                 std::string pn = GW2Names::GetItem(pi->item_id);
                 std::string rn = GW2Names::GetItem(ri->item_id);
                 if (pn == "..." || rn == "...") {
-                    item_id_ok = true; /* still loading — give benefit of doubt */
+                    item_id_ok = true;
                 } else {
                     while (!pn.empty() && (pn.back()==' '||pn.back()=='\t')) pn.pop_back();
                     while (!rn.empty() && (rn.back()==' '||rn.back()=='\t')) rn.pop_back();
@@ -85,13 +83,11 @@ static void RenderSlotRow(const GW2::GearItem* pi, const GW2::GearItem* ri,
             }
         } else {
             if (ri->stat_id) {
-                /* For fixed-stat items (named ascended gear etc.), equipmenttabs
-                 * omits the stats field entirely — fall back to item definition. */
                 uint32_t p_sid = pi->stat_id;
                 if (p_sid == 0 && pi->item_id)
                     p_sid = GW2Names::GetItemStatId(pi->item_id);
 
-                std::string ps = p_sid ? StatName(p_sid) : "..."; /* "..." = loading */
+                std::string ps = p_sid ? StatName(p_sid) : "...";
                 std::string rs = StatName(ri->stat_id);
                 while (!ps.empty() && (ps.back()==' '||ps.back()=='\t'||ps.back()=='\r')) ps.pop_back();
                 while (!rs.empty() && (rs.back()==' '||rs.back()=='\t'||rs.back()=='\r')) rs.pop_back();
@@ -106,38 +102,33 @@ static void RenderSlotRow(const GW2::GearItem* pi, const GW2::GearItem* ri,
                     if (!pn.empty() && pn != "..." && pn == rn) upg_ok = true;
                 }
             }
-            if (ri->infusions.size() > 0)
+            if (!ri->infusions.empty())
                 inf_ok = (pi->infusions.size() >= ri->infusions.size());
         }
     }
 
-    /* Weapon type check: only for weapon slots, only when both items are resolved */
     bool weapon_type_ok = true;
     if (check_type && !is_relic && pi && ri && pi->item_id && ri->item_id) {
         std::string pt = NormalizeWeaponType(std::string(GW2Names::GetItemType(pi->item_id)));
         std::string rt = NormalizeWeaponType(std::string(GW2Names::GetItemType(ri->item_id)));
         while (!pt.empty() && (pt.back()==' '||pt.back()=='\t')) pt.pop_back();
         while (!rt.empty() && (rt.back()==' '||rt.back()=='\t')) rt.pop_back();
-        if (!pt.empty() && pt != "..." && !rt.empty() && rt != "...") {
+        if (!pt.empty() && pt != "..." && !rt.empty() && rt != "...")
             weapon_type_ok = (pt == rt);
-        }
     }
 
     bool slot_ok = stat_ok && upg_ok && inf_ok && item_id_ok && weapon_type_ok;
-    bool missing = (pi == nullptr) || (is_relic && pi && !pi->item_id && ri && ri->item_id);
+    bool missing = (!pi) || (is_relic && pi && !pi->item_id && ri && ri->item_id);
 
-    /* Column 1 — player item icon (or reference icon when slot is empty) */
     ImGui::TableSetColumnIndex(0);
     if (missing && ri && ri->item_id)
         IconRenderer::ItemIconRef(ri->item_id, ICON_SZ);
     else
         IconRenderer::ItemIcon(pi ? pi->item_id : 0, ICON_SZ, slot_ok, missing);
 
-    /* Column 2 — stat name (or reference info when slot is empty) */
     ImGui::TableSetColumnIndex(1);
     if (is_relic) {
         if (missing) {
-            /* Show the relic the player should have */
             if (ri && ri->item_id) {
                 std::string rn = std::string(GW2Names::GetItem(ri->item_id));
                 while (!rn.empty() && (rn.back()==' '||rn.back()=='\t')) rn.pop_back();
@@ -149,10 +140,6 @@ static void RenderSlotRow(const GW2::GearItem* pi, const GW2::GearItem* ri,
         }
     } else if (pi) {
         if (check_type) {
-            /* Weapon slots: SC reference line first, then player's current weapon.
-             * This way "what you should equip" is always visible at the top. */
-
-            /* ── Reference (SC) line ── */
             std::string rt, rs;
             if (ri) {
                 rt = NormalizeWeaponType(std::string(GW2Names::GetItemType(ri->item_id)));
@@ -167,7 +154,6 @@ static void RenderSlotRow(const GW2::GearItem* pi, const GW2::GearItem* ri,
                 rline = !rs.empty() ? rs : "...";
             ImGui::TextColored(slot_ok ? COL_OK : COL_REF, "SC: %s", rline.c_str());
 
-            /* ── Player line (only shown when type or stat is wrong) ── */
             if (!slot_ok && (!weapon_type_ok || !stat_ok)) {
                 std::string pt = NormalizeWeaponType(std::string(GW2Names::GetItemType(pi->item_id)));
                 while (!pt.empty() && (pt.back()==' '||pt.back()=='\t')) pt.pop_back();
@@ -183,7 +169,6 @@ static void RenderSlotRow(const GW2::GearItem* pi, const GW2::GearItem* ri,
                 ImGui::TextColored(COL_ERROR, "Has: %s", pline.c_str());
             }
         } else {
-            /* Non-weapon: show stat only */
             uint32_t display_sid = pi->stat_id;
             if (display_sid == 0 && pi->item_id)
                 display_sid = GW2Names::GetItemStatId(pi->item_id);
@@ -197,9 +182,7 @@ static void RenderSlotRow(const GW2::GearItem* pi, const GW2::GearItem* ri,
             }
         }
     } else if (ri) {
-        /* Slot is empty — show what they should have */
         if (check_type && ri->item_id) {
-            /* "Greatsword (Berserker's)" on one line — fits in fixed row height */
             std::string itype = NormalizeWeaponType(std::string(GW2Names::GetItemType(ri->item_id)));
             while (!itype.empty() && (itype.back()==' '||itype.back()=='\t')) itype.pop_back();
             std::string rstat = ri->stat_id ? StatName(ri->stat_id) : "";
@@ -208,7 +191,7 @@ static void RenderSlotRow(const GW2::GearItem* pi, const GW2::GearItem* ri,
             if (!itype.empty() && itype != "...")
                 line = itype + (!rstat.empty() ? " (" + rstat + ")" : "");
             else if (!rstat.empty())
-                line = rstat; /* show stat while type still loading */
+                line = rstat;
             if (!line.empty())
                 ImGui::TextColored(COL_REF, "Need: %s", line.c_str());
             else
@@ -224,7 +207,6 @@ static void RenderSlotRow(const GW2::GearItem* pi, const GW2::GearItem* ri,
         ImGui::TextColored(COL_ERROR, "---");
     }
 
-    /* Column 3 — rune/sigil for gear; SC reference relic icon if mismatch */
     ImGui::TableSetColumnIndex(2);
     if (is_relic) {
         if (!item_id_ok && ri && ri->item_id) {
@@ -248,7 +230,6 @@ static void RenderSlotRow(const GW2::GearItem* pi, const GW2::GearItem* ri,
         IconRenderer::ItemIconRef(ri->upgrade_id, ICON_SZ_SM);
     }
 
-    /* Column 4 — infusion count (empty for relic) */
     ImGui::TableSetColumnIndex(3);
     if (!is_relic) {
         size_t p_inf = pi ? pi->infusions.size() : 0;
@@ -257,7 +238,6 @@ static void RenderSlotRow(const GW2::GearItem* pi, const GW2::GearItem* ri,
             ImGui::TextColored(inf_ok ? COL_OK : COL_WARN, "%zu/%zu", p_inf, r_inf);
     }
 
-    /* Column 5 — status */
     ImGui::TableSetColumnIndex(4);
     if (missing)
         ImGui::TextColored(COL_ERROR, "MISSING");
@@ -282,17 +262,19 @@ static void RenderGroup(const char* label,
                         const std::map<GW2::GearSlot, const GW2::GearItem*>& rm,
                         bool check_type = false)
 {
-    ImGui::TextColored(ImVec4(0.7f, 0.7f, 0.7f, 1), "%s", label);
-
     if (!ImGui::BeginTable(label, 5,
-            ImGuiTableFlags_Borders | ImGuiTableFlags_RowBg))
+            ImGuiTableFlags_SizingStretchProp |
+            ImGuiTableFlags_Borders |
+            ImGuiTableFlags_RowBg))
         return;
 
-    ImGui::TableSetupColumn("Item",      ImGuiTableColumnFlags_WidthFixed,   50);
-    ImGui::TableSetupColumn("Stats",     ImGuiTableColumnFlags_WidthFixed,  130);
-    ImGui::TableSetupColumn("Rune/Sigil",ImGuiTableColumnFlags_WidthFixed,  140);
-    ImGui::TableSetupColumn("Inf",       ImGuiTableColumnFlags_WidthFixed,   40);
-    ImGui::TableSetupColumn("Status",    ImGuiTableColumnFlags_WidthStretch);
+    // ⭐ FIX: use stretch columns, not fixed widths
+    ImGui::TableSetupColumn("Item",      ImGuiTableColumnFlags_WidthStretch, 0.75f);
+    ImGui::TableSetupColumn("Stats",     ImGuiTableColumnFlags_WidthStretch, 1.75f);
+    ImGui::TableSetupColumn("Rune/Sigil",ImGuiTableColumnFlags_WidthStretch, 1.5f);
+    ImGui::TableSetupColumn("Inf",       ImGuiTableColumnFlags_WidthStretch, 0.5f);
+    ImGui::TableSetupColumn("Status",    ImGuiTableColumnFlags_WidthStretch, 1.0f);
+
     ImGui::TableHeadersRow();
 
     for (int i = 0; i < count; i++) {
@@ -301,18 +283,19 @@ static void RenderGroup(const char* label,
         auto ri_it = rm.find(sl);
         if (pi_it == pm.end() && ri_it == rm.end()) continue;
 
-        ImGui::TableNextRow(0, ICON_SZ + 4);
-
         auto* pi = pi_it != pm.end() ? pi_it->second : nullptr;
         auto* ri = ri_it != rm.end() ? ri_it->second : nullptr;
 
-        /* Slot name floated above icon */
+        /* Title row — slot name */
+        ImGui::TableNextRow();
         ImGui::TableSetColumnIndex(0);
         ImGui::TextDisabled("%s", BuildComparator::SlotName(sl).c_str());
 
+        /* Icon + data row */
         ImGui::TableNextRow(0, ICON_SZ + 4);
         RenderSlotRow(pi, ri, check_type);
-    }
+    }   // ← FIXED: this brace was missing
+
     ImGui::EndTable();
 }
 
@@ -344,7 +327,6 @@ void Render()
         ImGui::Spacing();
     }
 
-    /* Comparison summary */
     auto cmp = BuildComparator::CompareGear(player.gear, sc.gear);
     if (cmp.perfect_match)
         ImGui::TextColored(COL_OK, "Gear matches Snow Crows reference");
@@ -355,15 +337,12 @@ void Render()
     ImGui::Separator();
     ImGui::Spacing();
 
-    /* Build lookup maps */
     std::map<GW2::GearSlot, const GW2::GearItem*> pm, rm;
     for (const auto& i : player.gear.items) pm[i.slot] = &i;
     for (const auto& i : sc.gear.items)     rm[i.slot] = &i;
 
-    /* Two-handed weapon: player stores both sigils in A1.upgrade2_id, but the SC
-     * reference stores the second sigil as a phantom WeaponA2 item.  Synthesize a
-     * player A2/B2 entry so the sigil comparison and display work correctly. */
-    GW2::GearItem synth[4];
+    /* Two-handed weapon synthesis */
+    GW2::GearItem synth[8];
     int synth_n = 0;
     auto synthesize2H = [&](GW2::GearSlot main_sl, GW2::GearSlot off_sl) {
         auto mi = pm.find(main_sl);
@@ -376,8 +355,7 @@ void Render()
     synthesize2H(GW2::GearSlot::WeaponA1, GW2::GearSlot::WeaponA2);
     synthesize2H(GW2::GearSlot::WeaponB1, GW2::GearSlot::WeaponB2);
 
-    /* Relic: synthesize GearItem entries so the Jewelry table can display/compare them.
-     * The item_id IS the comparison point for relics (no stat/upgrade/infusions). */
+    /* Relic synthesis */
     if (sc.gear.relic_id) {
         synth[synth_n].slot    = GW2::GearSlot::Relic;
         synth[synth_n].item_id = sc.gear.relic_id;
@@ -389,12 +367,11 @@ void Render()
         }
     }
 
-    /* For interchangeable slot pairs, swap reference pointers in rm so each
-     * player item is compared against the reference item it best matches. */
-    auto slot_score = [](const GW2::GearItem* p, const GW2::GearItem* r) -> int {
+    /* Slot normalization logic (unchanged) */
+    auto slot_score = [&](const GW2::GearItem* p, const GW2::GearItem* r) -> int {
         if (!p || !r) return 0;
         int s = 0;
-        /* Weapon type match — highest weight so set assignment prioritises type */
+
         if (p->item_id && r->item_id) {
             std::string pt = std::string(GW2Names::GetItemType(p->item_id));
             std::string rt = std::string(GW2Names::GetItemType(r->item_id));
@@ -403,6 +380,7 @@ void Render()
             if (!pt.empty() && pt != "..." && !rt.empty() && rt != "...")
                 s += (pt == rt) ? 4 : 0;
         }
+
         if (r->stat_id) {
             uint32_t p_sid = p->stat_id;
             if (p_sid == 0 && p->item_id)
@@ -420,9 +398,12 @@ void Render()
                     s += 2;
             }
         }
+
         if (r->upgrade_id && p->upgrade_id == r->upgrade_id) s++;
+
         return s;
     };
+
     auto normalize_rm = [&](GW2::GearSlot sl1, GW2::GearSlot sl2) {
         auto ri1 = rm.find(sl1), ri2 = rm.find(sl2);
         if (ri1 == rm.end() || ri2 == rm.end()) return;
@@ -433,8 +414,10 @@ void Render()
             slot_score(p1, ri1->second) + slot_score(p2, ri2->second))
             std::swap(ri1->second, ri2->second);
     };
+
     normalize_rm(GW2::GearSlot::Ring1,      GW2::GearSlot::Ring2);
     normalize_rm(GW2::GearSlot::Accessory1, GW2::GearSlot::Accessory2);
+
     {
         auto rA1 = rm.find(GW2::GearSlot::WeaponA1);
         auto rB1 = rm.find(GW2::GearSlot::WeaponB1);
@@ -453,9 +436,7 @@ void Render()
             }
         }
     }
-    /* Independent A2/B2 off-hand normalization: the SC scraper sometimes stores
-     * the B-set off-hand in A2 (because A2 is empty for 2H main-hands).  Fix by
-     * moving the reference to whichever slot the player's off-hand actually lives in. */
+
     {
         auto rA2 = rm.find(GW2::GearSlot::WeaponA2);
         auto rB2 = rm.find(GW2::GearSlot::WeaponB2);
@@ -463,18 +444,17 @@ void Render()
         auto pB2 = pm.find(GW2::GearSlot::WeaponB2);
         const GW2::GearItem* pa2 = pA2 != pm.end() ? pA2->second : nullptr;
         const GW2::GearItem* pb2 = pB2 != pm.end() ? pB2->second : nullptr;
+
         if (rA2 != rm.end() && rB2 != rm.end()) {
             if (slot_score(pa2, rB2->second) + slot_score(pb2, rA2->second) >
                 slot_score(pa2, rA2->second) + slot_score(pb2, rB2->second))
                 std::swap(rA2->second, rB2->second);
         } else if (rA2 != rm.end() && rB2 == rm.end()) {
-            /* Only A2 in ref: relocate to B2 if player's B2 is a better match */
             if (slot_score(pb2, rA2->second) > slot_score(pa2, rA2->second)) {
                 rm[GW2::GearSlot::WeaponB2] = rA2->second;
                 rm.erase(rA2);
             }
         } else if (rB2 != rm.end() && rA2 == rm.end()) {
-            /* Only B2 in ref: relocate to A2 if player's A2 is a better match */
             if (slot_score(pa2, rB2->second) > slot_score(pb2, rB2->second)) {
                 rm[GW2::GearSlot::WeaponA2] = rB2->second;
                 rm.erase(rB2);
@@ -482,31 +462,59 @@ void Render()
         }
     }
 
-    RenderGroup("Armor",   ARMOR_SLOTS,  6, pm, rm);
-    ImGui::Spacing();
-    RenderGroup("Jewelry", JEWEL_SLOTS,  7, pm, rm);
-    ImGui::Spacing();
-    RenderGroup("Weapons", WEAPON_SLOTS, 4, pm, rm, true);
+    /* ─────────────────────────────────────────────────────────────── */
+    /* MAIN GRID LAYOUT (2 columns)                                    */
+    /* ─────────────────────────────────────────────────────────────── */
 
-    /* ── Consumables (SC recommendation only, no pass/fail) ─────────────── */
-    ImGui::Spacing();
-    ImGui::Separator();
-    ImGui::Text("Consumables (SC Recommended)");
-    ImGui::Separator();
+    if (ImGui::BeginTable("MainGrid", 2,
+        ImGuiTableFlags_SizingStretchProp |
+        ImGuiTableFlags_Resizable |
+        ImGuiTableFlags_NoSavedSettings))
+    {
+        ImGui::TableSetupColumn("Left",  ImGuiTableColumnFlags_WidthStretch, 1.0f);
+        ImGui::TableSetupColumn("Right", ImGuiTableColumnFlags_WidthStretch, 1.0f);
 
-    auto show_rec = [&](const char* label, uint32_t rec) {
-        if (!rec) return;
-        ImGui::Text("%-10s", label);
-        ImGui::SameLine(100);
-        IconRenderer::ItemIconRef(rec, ICON_SZ_SM);
-        ImGui::SameLine(0, 8);
-        const std::string& nm = GW2Names::GetItem(rec);
-        ImGui::TextColored(COL_REF, "%s",
-            (!nm.empty() && nm != "...") ? nm.c_str() : "...");
-    };
 
-    show_rec("Food:",    sc.gear.food_id);
-    show_rec("Utility:", sc.gear.utility_id);
+        /* ──────────────── Row 1: Armor | Jewelry ──────────────── */
+        ImGui::TableNextRow();
+
+        ImGui::TableSetColumnIndex(0);
+        ImGui::TextColored(ImVec4(0.7f,0.7f,0.7f,1), "Armor");
+        RenderGroup("ArmorTable", ARMOR_SLOTS, 6, pm, rm);
+
+        ImGui::TableSetColumnIndex(1);
+        ImGui::TextColored(ImVec4(0.7f,0.7f,0.7f,1), "Jewelry");
+        RenderGroup("JewelryTable", JEWEL_SLOTS, 7, pm, rm);
+
+        /* ──────────────── Row 2: Weapons | Consumables ──────────────── */
+        ImGui::TableNextRow();
+
+        ImGui::TableSetColumnIndex(0);
+        ImGui::TextColored(ImVec4(0.7f,0.7f,0.7f,1), "Weapons");
+        RenderGroup("WeaponsTable", WEAPON_SLOTS, 4, pm, rm, true);
+
+        ImGui::TableSetColumnIndex(1);
+        ImGui::TextColored(ImVec4(0.7f,0.7f,0.7f,1), "Consumables (SC Recommended)");
+        ImGui::Separator();
+
+        auto show_rec = [&](const char* label, uint32_t rec) {
+            if (!rec) return;
+            ImGui::Text("%-10s", label);
+            ImGui::SameLine(100);
+            IconRenderer::ItemIconRef(rec, ICON_SZ_SM);
+            ImGui::SameLine(0, 8);
+            const std::string& nm = GW2Names::GetItem(rec);
+            ImGui::TextColored(COL_REF, "%s",
+                (!nm.empty() && nm != "...") ? nm.c_str() : "...");
+        };
+
+        show_rec("Food:",    sc.gear.food_id);
+        show_rec("Utility:", sc.gear.utility_id);
+
+        ImGui::EndTable();
+
+    } // <-- NOW we close the GearPanel window
+
 }
 
 } /* namespace GearPanel */
