@@ -1,6 +1,16 @@
-<img width="687" height="603" alt="Screenshot_20260425_122653" src="https://github.com/user-attachments/assets/2a49cb26-eafa-4f50-8552-f4935099cff2" />
-<img width="686" height="605" alt="Screenshot_20260425_122148" src="https://github.com/user-attachments/assets/53072233-f106-434d-ac37-18e4a4c90f82" />
-<img width="686" height="590" alt="Screenshot_20260425_121858" src="https://github.com/user-attachments/assets/917dfe8d-9eaf-41bd-b3b4-822e5295852b" />
-A Guild Wars 2 addon for the Nexus addon loader that shows variances between the players equipment and build and that of Snowcrows.
+AI Notice
+
+This addon includes AI-generated content and/or AI-assisted code.
+
+AI may have been used during development for tasks such as code generation, suggestions, documentation, or content creation. While efforts are made to review and validate all AI-generated output, it may not always be fully accurate, optimal, or free of unintended behavior.
+
+Users should be aware that:
+
+    AI-generated components may contain errors or inconsistencies or may be unstable,
+    behavior may change as the addon evolves or is updated,
+    the developer remains responsible for ensuring compliance with the game's Terms of Service.
+
+
+This is a Guild Wars 2 addon for the Nexus addon loader that shows variances between the players equipment and build and that of Snowcrows.
 
 Early testing phase still.
