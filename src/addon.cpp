@@ -135,8 +135,8 @@ __declspec(dllexport) AddonDefinition_t* GetAddonDef()
         AddonLoad,
         AddonUnload,
         AF_None,
-        UP_None,     /* Provider field (official Nexus.h name) */
-        nullptr,
+        UP_GitHub,
+        "https://github.com/Todd0042/gw2-build-coach",
     };
     return &def;
 }

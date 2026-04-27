@@ -14,7 +14,7 @@ inline AddonAPI_t* APIDefs = nullptr;
 
 /* Addon identity */
 constexpr const char*    ADDON_NAME      = "BuildCoach";
-constexpr const char*    ADDON_AUTHOR    = "BuildCoach Authors";
+constexpr const char*    ADDON_AUTHOR    = "Todd0042";
 /* Unique uint32_t — a negative signed int cast to uint32_t (lessons learned §10) */
 constexpr uint32_t       ADDON_SIGNATURE = (uint32_t)(-20250424);
 
