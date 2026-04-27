@@ -353,6 +353,17 @@ bool FetchFullPlayerBuild(const std::string& api_key,
     return ok;
 }
 
+bool FetchAccountName(const std::string& api_key, std::string& out_name)
+{
+    auto resp = Http::GetWithBearer(HOST, L"/v2/account", api_key);
+    if (!resp.ok()) return false;
+    try {
+        auto j = json::parse(resp.body);
+        out_name = j.value("name", "");
+        return !out_name.empty();
+    } catch (...) { return false; }
+}
+
 bool FetchCharacterList(const std::string& api_key,
                         std::vector<std::string>& out_names)
 {

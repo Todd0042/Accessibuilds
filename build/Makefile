@@ -489,6 +489,30 @@ src/ui/build_panel.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/ui/build_panel.cpp.s
 .PHONY : src/ui/build_panel.cpp.s
 
+src/ui/coach_window.obj: src/ui/coach_window.cpp.obj
+.PHONY : src/ui/coach_window.obj
+
+# target to build an object file
+src/ui/coach_window.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/ui/coach_window.cpp.obj
+.PHONY : src/ui/coach_window.cpp.obj
+
+src/ui/coach_window.i: src/ui/coach_window.cpp.i
+.PHONY : src/ui/coach_window.i
+
+# target to preprocess a source file
+src/ui/coach_window.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/ui/coach_window.cpp.i
+.PHONY : src/ui/coach_window.cpp.i
+
+src/ui/coach_window.s: src/ui/coach_window.cpp.s
+.PHONY : src/ui/coach_window.s
+
+# target to generate assembly for a file
+src/ui/coach_window.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/ui/coach_window.cpp.s
+.PHONY : src/ui/coach_window.cpp.s
+
 src/ui/coaching_panel.obj: src/ui/coaching_panel.cpp.obj
 .PHONY : src/ui/coaching_panel.obj
 
@@ -512,6 +536,30 @@ src/ui/coaching_panel.s: src/ui/coaching_panel.cpp.s
 src/ui/coaching_panel.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/ui/coaching_panel.cpp.s
 .PHONY : src/ui/coaching_panel.cpp.s
+
+src/ui/debug_window.obj: src/ui/debug_window.cpp.obj
+.PHONY : src/ui/debug_window.obj
+
+# target to build an object file
+src/ui/debug_window.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/ui/debug_window.cpp.obj
+.PHONY : src/ui/debug_window.cpp.obj
+
+src/ui/debug_window.i: src/ui/debug_window.cpp.i
+.PHONY : src/ui/debug_window.i
+
+# target to preprocess a source file
+src/ui/debug_window.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/ui/debug_window.cpp.i
+.PHONY : src/ui/debug_window.cpp.i
+
+src/ui/debug_window.s: src/ui/debug_window.cpp.s
+.PHONY : src/ui/debug_window.s
+
+# target to generate assembly for a file
+src/ui/debug_window.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/ui/debug_window.cpp.s
+.PHONY : src/ui/debug_window.cpp.s
 
 src/ui/dps_panel.obj: src/ui/dps_panel.cpp.obj
 .PHONY : src/ui/dps_panel.obj
@@ -663,9 +711,15 @@ help:
 	@echo "... src/ui/build_panel.obj"
 	@echo "... src/ui/build_panel.i"
 	@echo "... src/ui/build_panel.s"
+	@echo "... src/ui/coach_window.obj"
+	@echo "... src/ui/coach_window.i"
+	@echo "... src/ui/coach_window.s"
 	@echo "... src/ui/coaching_panel.obj"
 	@echo "... src/ui/coaching_panel.i"
 	@echo "... src/ui/coaching_panel.s"
+	@echo "... src/ui/debug_window.obj"
+	@echo "... src/ui/debug_window.i"
+	@echo "... src/ui/debug_window.s"
 	@echo "... src/ui/dps_panel.obj"
 	@echo "... src/ui/dps_panel.i"
 	@echo "... src/ui/dps_panel.s"

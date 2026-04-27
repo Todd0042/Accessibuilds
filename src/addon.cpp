@@ -10,14 +10,7 @@
 #include <mutex>
 #include <string>
 
-/*
- * Addon icon: embed your PNG as a byte array using gen_icon.py, then
- * include the generated header here.  Uncomment to enable:
- *
- * #include "icon_png.h"
- * static const bool HAS_ICON = true;
- */
-static const bool HAS_ICON = false;
+#include "icon_png.h"
 
 /* ── Render callbacks ────────────────────────────────────────────────────── */
 static void OnRender()
@@ -86,7 +79,6 @@ __declspec(dllexport) void AddonLoad(AddonAPI_t* aApi)
     }
 
     BuildCache::SetCacheDir(g_AddonDir);
-    g_LogPath = g_AddonDir + "\\buildcoach.log";
     GW2Names::Init(BuildCache::LoadGW2Build());
 
     APIDefs->GUI_Register(RT_Render,        OnRender);
@@ -97,17 +89,13 @@ __declspec(dllexport) void AddonLoad(AddonAPI_t* aApi)
 
     APIDefs->InputBinds_RegisterWithString(KB_TOGGLE, OnKeybind, "ALT+B");
 
-    if (HAS_ICON) {
-        /*
-         * APIDefs->Textures_GetOrCreateFromMemory(
-         *     ICON_NORMAL, (void*)icon_png, (uint64_t)icon_png_len);
-         * APIDefs->Textures_GetOrCreateFromMemory(
-         *     ICON_HOVER,  (void*)icon_png, (uint64_t)icon_png_len);
-         * APIDefs->QuickAccess_Add(
-         *     QA_IDENTIFIER, ICON_NORMAL, ICON_HOVER, KB_TOGGLE,
-         *     "BuildCoach — Build Advisor");
-         */
-    }
+    APIDefs->Textures_GetOrCreateFromMemory(
+        ICON_NORMAL, (void*)icon_png, (uint64_t)icon_png_len);
+    APIDefs->Textures_GetOrCreateFromMemory(
+        ICON_HOVER,  (void*)icon_png, (uint64_t)icon_png_len);
+    APIDefs->QuickAccess_Add(
+        QA_IDENTIFIER, ICON_NORMAL, ICON_HOVER, KB_TOGGLE,
+        "BuildCoach — Build Advisor");
 
     ArcDPS::Init();
     Log(LOGL_INFO, "loaded");
@@ -126,8 +114,7 @@ __declspec(dllexport) void AddonUnload()
 
     APIDefs->InputBinds_Deregister(KB_TOGGLE);
 
-    if (HAS_ICON)
-        APIDefs->QuickAccess_Remove(QA_IDENTIFIER);
+    APIDefs->QuickAccess_Remove(QA_IDENTIFIER);
 
     Log(LOGL_INFO, "unloaded");
     APIDefs      = nullptr;
@@ -143,8 +130,8 @@ __declspec(dllexport) AddonDefinition_t* GetAddonDef()
         ADDON_NAME,
         version,
         ADDON_AUTHOR,
-        "Build validator, rotation coach, and benchmark analyser. "
-        "Compares your build against Snow Crows and Wingman top logs.",
+        "Build validator and DPS benchmark tool. "
+        "Compares your build against Snow Crows.",
         AddonLoad,
         AddonUnload,
         AF_None,

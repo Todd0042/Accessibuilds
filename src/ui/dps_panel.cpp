@@ -1,4 +1,5 @@
 #include "dps_panel.h"
+#include "ui_scale.h"
 #include "../shared.h"
 #include "../arcdps/arcdps.h"
 #include <imgui.h>
@@ -40,7 +41,7 @@ void Render()
     }
 
     /* DPS numbers */
-    float col_w = 200.0f;
+    float col_w = S(200.0f);
     ImGui::BeginGroup();
     ImGui::TextColored(COL_PLAYER, "Your DPS (fight avg)");
     ImGui::TextColored(COL_PLAYER, "%.0f", player_dps);

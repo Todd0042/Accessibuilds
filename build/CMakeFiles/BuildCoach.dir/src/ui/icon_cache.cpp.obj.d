@@ -412,13 +412,32 @@ CMakeFiles/BuildCoach.dir/src/ui/icon_cache.cpp.obj: \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/x86_64-w64-mingw32/bits/error_constants.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/ext/atomicity.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/x86_64-w64-mingw32/bits/atomic_word.h \
+ /home/todd/gw2-build-coach\ copy/src/ui/../api/http_client.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/functional \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/std_function.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/typeinfo \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/unordered_map \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/unordered_map.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/hashtable.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/hashtable_policy.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/ext/aligned_buffer.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/enable_special_members.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/node_handle.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/erase_if.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/set \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/stl_tree.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/stl_set.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/stl_multiset.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/thread \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/std_thread.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/unique_ptr.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/this_thread_sleep.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/fstream \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/istream \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/ios \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/exception \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/exception_ptr.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/cxxabi_init_exception.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/typeinfo \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/nested_exception.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/ios_base.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/locale_classes.h \
@@ -443,24 +462,4 @@ CMakeFiles/BuildCoach.dir/src/ui/icon_cache.cpp.obj: \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/codecvt.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/x86_64-w64-mingw32/bits/basic_file.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++io.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/fstream.tcc \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/chrono \
- /home/todd/gw2-build-coach\ copy/src/ui/../api/http_client.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/functional \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/std_function.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/unordered_map \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/unordered_map.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/hashtable.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/hashtable_policy.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/ext/aligned_buffer.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/enable_special_members.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/node_handle.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/erase_if.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/set \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/stl_tree.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/stl_set.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/stl_multiset.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/thread \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/std_thread.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/unique_ptr.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/this_thread_sleep.h
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/fstream.tcc

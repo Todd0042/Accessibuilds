@@ -114,15 +114,25 @@ CMakeFiles/BuildCoach.dir/src/ui/main_window.cpp.obj: \
  /home/todd/gw2-build-coach\ copy/src/ui/build_panel.h \
  /home/todd/gw2-build-coach\ copy/src/ui/gear_panel.h \
  /home/todd/gw2-build-coach\ copy/src/ui/dps_panel.h \
+ /home/todd/gw2-build-coach\ copy/src/ui/coach_window.h \
+ /home/todd/gw2-build-coach\ copy/src/ui/debug_window.h \
+ /home/todd/gw2-build-coach\ copy/src/ui/ui_scale.h \
+ /home/todd/gw2-build-coach\ copy/external/imgui/imgui.h \
+ /home/todd/gw2-build-coach\ copy/external/imgui/imconfig.h \
+ /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/include/float.h \
+ /usr/x86_64-w64-mingw32/include/float.h \
+ /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdarg.h \
+ /usr/x86_64-w64-mingw32/include/stdarg.h \
+ /usr/x86_64-w64-mingw32/include/_mingw_stdarg.h \
+ /usr/x86_64-w64-mingw32/include/string.h \
+ /usr/x86_64-w64-mingw32/include/sec_api/string_s.h \
+ /usr/x86_64-w64-mingw32/include/assert.h \
  /home/todd/gw2-build-coach\ copy/src/ui/../shared.h \
  /home/todd/gw2-build-coach\ copy/src/ui/../../external/nexus/Nexus.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/cstdint \
  /usr/x86_64-w64-mingw32/include/windows.h \
  /usr/x86_64-w64-mingw32/include/sdkddkver.h \
  /usr/x86_64-w64-mingw32/include/excpt.h \
- /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdarg.h \
- /usr/x86_64-w64-mingw32/include/stdarg.h \
- /usr/x86_64-w64-mingw32/include/_mingw_stdarg.h \
  /usr/x86_64-w64-mingw32/include/windef.h \
  /usr/x86_64-w64-mingw32/include/winapifamily.h \
  /usr/x86_64-w64-mingw32/include/minwindef.h \
@@ -136,8 +146,6 @@ CMakeFiles/BuildCoach.dir/src/ui/main_window.cpp.obj: \
  /usr/x86_64-w64-mingw32/include/psdk_inc/intrin-impl.h \
  /usr/x86_64-w64-mingw32/include/basetsd.h \
  /usr/x86_64-w64-mingw32/include/guiddef.h \
- /usr/x86_64-w64-mingw32/include/string.h \
- /usr/x86_64-w64-mingw32/include/sec_api/string_s.h \
  /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/include/x86intrin.h \
  /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/include/x86gprintrin.h \
  /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/include/ia32intrin.h \
@@ -415,13 +423,43 @@ CMakeFiles/BuildCoach.dir/src/ui/main_window.cpp.obj: \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/x86_64-w64-mingw32/bits/error_constants.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/ext/atomicity.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/x86_64-w64-mingw32/bits/atomic_word.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/fstream \
+ /home/todd/gw2-build-coach\ copy/src/ui/../api/gw2api.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/functional \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/std_function.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/typeinfo \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/unordered_map \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/unordered_map.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/hashtable.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/hashtable_policy.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/ext/aligned_buffer.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/enable_special_members.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/node_handle.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/erase_if.h \
+ /home/todd/gw2-build-coach\ copy/src/ui/../api/gw2names.h \
+ /home/todd/gw2-build-coach\ copy/src/ui/../api/api_rate_limiter.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/chrono \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/thread \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/std_thread.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/unique_ptr.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/this_thread_sleep.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/algorithm \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/stl_algo.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/algorithmfwd.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/stl_heap.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/uniform_int_dist.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/stl_tempbuf.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/pstl/glue_algorithm_defs.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/pstl/execution_defs.h \
+ /home/todd/gw2-build-coach\ copy/src/ui/../api/snowcrows.h \
+ /home/todd/gw2-build-coach\ copy/src/ui/../build/cache.h \
+ /home/todd/gw2-build-coach\ copy/src/ui/../arcdps/arcdps.h \
+ /home/todd/gw2-build-coach\ copy/src/ui/../arcdps/arcdps_structs.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/sstream \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/istream \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/ios \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/exception \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/exception_ptr.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/cxxabi_init_exception.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/typeinfo \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/nested_exception.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/ios_base.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/locale_classes.h \
@@ -443,44 +481,4 @@ CMakeFiles/BuildCoach.dir/src/ui/main_window.cpp.obj: \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/ostream.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/ostream.tcc \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/istream.tcc \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/codecvt.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/x86_64-w64-mingw32/bits/basic_file.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++io.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/fstream.tcc \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/chrono \
- /home/todd/gw2-build-coach\ copy/src/ui/../api/gw2api.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/functional \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/std_function.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/unordered_map \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/unordered_map.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/hashtable.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/hashtable_policy.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/ext/aligned_buffer.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/enable_special_members.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/node_handle.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/erase_if.h \
- /home/todd/gw2-build-coach\ copy/src/ui/../api/gw2names.h \
- /home/todd/gw2-build-coach\ copy/src/ui/../api/api_rate_limiter.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/thread \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/std_thread.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/unique_ptr.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/this_thread_sleep.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/algorithm \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/stl_algo.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/algorithmfwd.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/stl_heap.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/uniform_int_dist.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/stl_tempbuf.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/pstl/glue_algorithm_defs.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/pstl/execution_defs.h \
- /home/todd/gw2-build-coach\ copy/src/ui/../api/snowcrows.h \
- /home/todd/gw2-build-coach\ copy/src/ui/../build/cache.h \
- /home/todd/gw2-build-coach\ copy/src/ui/../arcdps/arcdps.h \
- /home/todd/gw2-build-coach\ copy/src/ui/../arcdps/arcdps_structs.h \
- /home/todd/gw2-build-coach\ copy/external/imgui/imgui.h \
- /home/todd/gw2-build-coach\ copy/external/imgui/imconfig.h \
- /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/include/float.h \
- /usr/x86_64-w64-mingw32/include/float.h \
- /usr/x86_64-w64-mingw32/include/assert.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/sstream \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/sstream.tcc

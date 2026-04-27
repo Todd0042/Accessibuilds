@@ -44,6 +44,35 @@ std::vector<const GW2::SCBuild*> FilterBuilds(
 const GW2::SCBuild* FindBestMatch(const std::vector<GW2::SCBuild>& builds,
                                   const GW2::PlayerBuild& player);
 
+/* One line in a rotation section (an <li> or <p> entry from the SC page) */
+struct RotationItem {
+    std::vector<uint32_t> skill_ids; /* skill IDs found in armory embeds, may be empty */
+    std::string           text;      /* plain text content of the item */
+};
+
+/* One collapsible section from the SC rotation page (e.g. "Spear Loop") */
+struct RotationSection {
+    std::string                 title;
+    std::vector<RotationItem>   items;
+};
+
+/* All rotation sections scraped from a single SC build page */
+struct ParsedRotation {
+    std::vector<RotationSection> sections;
+};
+
+/* Fetch and parse ALL rotation sections from a Snow Crows build page.
+ * Uses a browser User-Agent to avoid CDN challenges.
+ * Runs synchronously — always call from a background thread. */
+bool FetchRotationPage(const std::string& url, ParsedRotation& out);
+
+/* Rotation disk cache — files go in cache_dir (must end with path separator).
+ * LoadRotationCache returns false if file is missing or older than max_age_hours. */
+bool SaveRotationCache(const std::string& url, const ParsedRotation& rot,
+                       const std::string& cache_dir);
+bool LoadRotationCache(const std::string& url, ParsedRotation& out,
+                       const std::string& cache_dir, int max_age_hours = 87600);
+
 /*
  * Expected JSON format for an SCBuild entry:
  * {

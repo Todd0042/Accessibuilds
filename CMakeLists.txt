@@ -38,6 +38,8 @@ set(ADDON_SOURCES
     src/ui/gear_panel.cpp
     src/ui/dps_panel.cpp
     src/ui/coaching_panel.cpp
+    src/ui/coach_window.cpp
+    src/ui/debug_window.cpp
     src/ui/icon_cache.cpp
 )
 

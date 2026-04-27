@@ -1,0 +1,5201 @@
+[
+  {
+    "id": "mesmer-condition-boon-chronomancer-staff-scepter-torch",
+    "name": "Condition Boon Chronomancer (Staff/Scepter/Torch)",
+    "profession": "Mesmer",
+    "elite_spec": "Chronomancer",
+    "build_type": "Condi",
+    "patch_version": "",
+    "benchmark_dps": 34701.0,
+    "notes": "Guild Wars 2 Condition Boon Chronomancer - Staff / Scepter & Torch Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/mesmer/condition-boon-chronomancer-staff-scepter-torch",
+    "chat_code": "[&DQctPRg/KAojDwAAgQEAAIMBAABrAQAA7RIAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "traits": {
+      "line1": {
+        "spec_id": 45,
+        "traits": [
+          670,
+          669,
+          1687
+        ]
+      },
+      "line2": {
+        "spec_id": 24,
+        "traits": [
+          691,
+          1690,
+          753
+        ]
+      },
+      "line3": {
+        "spec_id": 40,
+        "traits": [
+          1995,
+          1913,
+          0
+        ]
+      }
+    },
+    "skills": {
+      "heal": 21750,
+      "utilities": [
+        10232,
+        10234,
+        10202
+      ],
+      "elite": 29519
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100432,
+      "food_id": 91878,
+      "utility_id": 48917,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 75770,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 73225,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 71436,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 73852,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 75378,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 74264,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 71387,
+          "stat_id": 1268,
+          "upgrade_id": 24583,
+          "infusions": [
+            48911
+          ]
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 76688,
+          "stat_id": 1268,
+          "upgrade_id": 24583,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 76271,
+          "stat_id": 1268,
+          "upgrade_id": 24560,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mesmer-condition-chronomancer-staff-scepter-torch",
+    "name": "Condition Chronomancer (Staff/Scepter/Torch)",
+    "profession": "Mesmer",
+    "elite_spec": "Chronomancer",
+    "build_type": "Condi",
+    "patch_version": "",
+    "benchmark_dps": 42653.0,
+    "notes": "Guild Wars 2 Condition Chronomancer - Staff / Scepter & Torch Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/mesmer/condition-chronomancer-staff-scepter-torch",
+    "chat_code": "[&DQctPRg/KDojDwAAgQEAAIMBAABrAQAA7RIAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "traits": {
+      "line1": {
+        "spec_id": 45,
+        "traits": [
+          670,
+          669,
+          1687
+        ]
+      },
+      "line2": {
+        "spec_id": 24,
+        "traits": [
+          691,
+          1690,
+          753
+        ]
+      },
+      "line3": {
+        "spec_id": 40,
+        "traits": [
+          1995,
+          1913,
+          1890
+        ]
+      }
+    },
+    "skills": {
+      "heal": 21750,
+      "utilities": [
+        10232,
+        10234,
+        10202
+      ],
+      "elite": 29519
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100432,
+      "food_id": 91878,
+      "utility_id": 48917,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 75770,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 73225,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 71436,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 73852,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 75378,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 74264,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 71387,
+          "stat_id": 1268,
+          "upgrade_id": 24583,
+          "infusions": [
+            48911
+          ]
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 76688,
+          "stat_id": 1268,
+          "upgrade_id": 24583,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 76271,
+          "stat_id": 1268,
+          "upgrade_id": 24560,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mesmer-heal-boon-chronomancer-rifle-scepter-shield",
+    "name": "Heal Boon Chronomancer (Rifle/Scepter/Shield)",
+    "profession": "Mesmer",
+    "elite_spec": "Chronomancer",
+    "build_type": "Heal",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Heal Boon Chronomancer - Rifle / Scepter & Shield Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/mesmer/heal-boon-chronomancer-rifle-scepter-shield",
+    "chat_code": "[&DQctOhcqKAttAQAAzxIAAIcSAACTEgAA7RIAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "traits": {
+      "line1": {
+        "spec_id": 45,
+        "traits": [
+          675,
+          668,
+          1687
+        ]
+      },
+      "line2": {
+        "spec_id": 23,
+        "traits": [
+          738,
+          740,
+          1866
+        ]
+      },
+      "line3": {
+        "spec_id": 40,
+        "traits": [
+          1987,
+          1913,
+          0
+        ]
+      }
+    },
+    "skills": {
+      "heal": 10213,
+      "utilities": [
+        30814,
+        29856,
+        29526
+      ],
+      "elite": 29519
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 101116,
+      "food_id": 91690,
+      "utility_id": 67528,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 85161,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 85089,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 85098,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85004,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 84926,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 85317,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1377,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1430,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1377,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1430,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1430,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1377,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 85348,
+          "stat_id": 1377,
+          "upgrade_id": 74326,
+          "infusions": [
+            24639
+          ]
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 85027,
+          "stat_id": 1377,
+          "upgrade_id": 74326,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 84957,
+          "stat_id": 1377,
+          "upgrade_id": 24639,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mesmer-power-boon-chronomancer-greatsword-dagger-sword",
+    "name": "Power Boon Chronomancer (Greatsword/Dagger/Sword)",
+    "profession": "Mesmer",
+    "elite_spec": "Chronomancer",
+    "build_type": "Power",
+    "patch_version": "",
+    "benchmark_dps": 34824.0,
+    "notes": "Guild Wars 2 Power Boon Chronomancer - Greatsword / Dagger & Sword Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/mesmer/power-boon-chronomancer-greatsword-dagger-sword",
+    "chat_code": "[&DQcBHQoZKAUjDwAABBMAAM8SAABpAQAAsxIAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "traits": {
+      "line1": {
+        "spec_id": 1,
+        "traits": [
+          701,
+          708,
+          692
+        ]
+      },
+      "line2": {
+        "spec_id": 10,
+        "traits": [
+          686,
+          713,
+          681
+        ]
+      },
+      "line3": {
+        "spec_id": 40,
+        "traits": [
+          1838,
+          2009,
+          0
+        ]
+      }
+    },
+    "skills": {
+      "heal": 21750,
+      "utilities": [
+        30525,
+        30814,
+        10211
+      ],
+      "elite": 30359
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 103574,
+      "food_id": 91805,
+      "utility_id": 78305,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48081,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48083,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48079,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48080,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48136,
+          "stat_id": 753,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48078,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46762,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": [
+            24618
+          ]
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 46760,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 46774,
+          "stat_id": 1077,
+          "upgrade_id": 24618,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mesmer-power-boon-chronomancer-greatsword-spear",
+    "name": "Power Boon Chronomancer (Greatsword/Spear)",
+    "profession": "Mesmer",
+    "elite_spec": "Chronomancer",
+    "build_type": "Power",
+    "patch_version": "",
+    "benchmark_dps": 34826.0,
+    "notes": "Guild Wars 2 Power Boon Chronomancer - Greatsword / Spear Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/mesmer/power-boon-chronomancer-greatsword-spear",
+    "chat_code": "[&DQcBHQoZKAUjDwAABBMAAM8SAABpAQAAsxIAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "traits": {
+      "line1": {
+        "spec_id": 1,
+        "traits": [
+          701,
+          708,
+          692
+        ]
+      },
+      "line2": {
+        "spec_id": 10,
+        "traits": [
+          686,
+          713,
+          681
+        ]
+      },
+      "line3": {
+        "spec_id": 40,
+        "traits": [
+          1838,
+          2009,
+          0
+        ]
+      }
+    },
+    "skills": {
+      "heal": 21750,
+      "utilities": [
+        30525,
+        30814,
+        10211
+      ],
+      "elite": 30359
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 103574,
+      "food_id": 91805,
+      "utility_id": 78305,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48081,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48083,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48079,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48080,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48136,
+          "stat_id": 753,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48078,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46762,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": [
+            24618
+          ]
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 46764,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": [
+            24618
+          ]
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mesmer-power-boon-chronomancer-spear-dagger-sword",
+    "name": "Power Boon Chronomancer (Spear/Dagger/Sword)",
+    "profession": "Mesmer",
+    "elite_spec": "Chronomancer",
+    "build_type": "Power",
+    "patch_version": "",
+    "benchmark_dps": 35435.0,
+    "notes": "Guild Wars 2 Power Boon Chronomancer - Spear / Dagger & Sword Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/mesmer/power-boon-chronomancer-spear-dagger-sword",
+    "chat_code": "[&DQcBHQoaKAUjDwAABBMAAM8SAABpAQAAsxIAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "traits": {
+      "line1": {
+        "spec_id": 1,
+        "traits": [
+          701,
+          708,
+          692
+        ]
+      },
+      "line2": {
+        "spec_id": 10,
+        "traits": [
+          682,
+          713,
+          681
+        ]
+      },
+      "line3": {
+        "spec_id": 40,
+        "traits": [
+          1838,
+          2009,
+          0
+        ]
+      }
+    },
+    "skills": {
+      "heal": 21750,
+      "utilities": [
+        30525,
+        30814,
+        10211
+      ],
+      "elite": 30359
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 103574,
+      "food_id": 91805,
+      "utility_id": 78305,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48081,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48083,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48079,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48080,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48136,
+          "stat_id": 753,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48078,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46764,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": [
+            24618
+          ]
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 46760,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 46774,
+          "stat_id": 1077,
+          "upgrade_id": 24618,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mesmer-power-boon-chronomancer-greatsword-dagger-focus",
+    "name": "Power Boon Chronomancer (Greatsword/Dagger/Focus)",
+    "profession": "Mesmer",
+    "elite_spec": "Chronomancer",
+    "build_type": "Power",
+    "patch_version": "",
+    "benchmark_dps": 31888.0,
+    "notes": "Guild Wars 2 Power Boon Chronomancer - Greatsword / Dagger & Focus Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/mesmer/power-boon-chronomancer-greatsword-dagger-focus",
+    "chat_code": "[&DQcBHQoZKAUjDwAABBMAAM8SAABpAQAAsxIAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "traits": {
+      "line1": {
+        "spec_id": 1,
+        "traits": [
+          701,
+          708,
+          692
+        ]
+      },
+      "line2": {
+        "spec_id": 10,
+        "traits": [
+          686,
+          713,
+          681
+        ]
+      },
+      "line3": {
+        "spec_id": 40,
+        "traits": [
+          1838,
+          2009,
+          0
+        ]
+      }
+    },
+    "skills": {
+      "heal": 21750,
+      "utilities": [
+        30525,
+        30814,
+        10211
+      ],
+      "elite": 30359
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 103574,
+      "food_id": 91805,
+      "utility_id": 78305,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48081,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48083,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48079,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48080,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48136,
+          "stat_id": 753,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48078,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46762,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": [
+            24618
+          ]
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 46760,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 46761,
+          "stat_id": 1077,
+          "upgrade_id": 24618,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mesmer-power-chronomancer-greatsword-dagger-sword",
+    "name": "Power Chronomancer (Greatsword/Dagger/Sword)",
+    "profession": "Mesmer",
+    "elite_spec": "Chronomancer",
+    "build_type": "Power",
+    "patch_version": "",
+    "benchmark_dps": 43075.0,
+    "notes": "Guild Wars 2 Power Chronomancer - Greatsword / Dagger & Sword Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/mesmer/power-chronomancer-greatsword-dagger-sword",
+    "chat_code": "[&DQcBHQoZKDUjDwAABBMAAI8BAABpAQAAsxIAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "traits": {
+      "line1": {
+        "spec_id": 1,
+        "traits": [
+          701,
+          708,
+          692
+        ]
+      },
+      "line2": {
+        "spec_id": 10,
+        "traits": [
+          686,
+          713,
+          681
+        ]
+      },
+      "line3": {
+        "spec_id": 40,
+        "traits": [
+          1838,
+          2009,
+          1890
+        ]
+      }
+    },
+    "skills": {
+      "heal": 21750,
+      "utilities": [
+        30525,
+        10267,
+        10211
+      ],
+      "elite": 30359
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 103574,
+      "food_id": 91805,
+      "utility_id": 78305,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48081,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48083,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48079,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48080,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48136,
+          "stat_id": 753,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48078,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46762,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": [
+            24618
+          ]
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 46760,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 46774,
+          "stat_id": 1077,
+          "upgrade_id": 24618,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mesmer-power-chronomancer-spear-dagger-sword",
+    "name": "Power Chronomancer (Spear/Dagger/Sword)",
+    "profession": "Mesmer",
+    "elite_spec": "Chronomancer",
+    "build_type": "Power",
+    "patch_version": "",
+    "benchmark_dps": 43072.0,
+    "notes": "Guild Wars 2 Power Chronomancer - Spear / Dagger & Sword Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/mesmer/power-chronomancer-spear-dagger-sword",
+    "chat_code": "[&DQcBHQoaKDUjDwAABBMAAGkBAACPAQAAsxIAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "traits": {
+      "line1": {
+        "spec_id": 1,
+        "traits": [
+          701,
+          708,
+          692
+        ]
+      },
+      "line2": {
+        "spec_id": 10,
+        "traits": [
+          682,
+          713,
+          681
+        ]
+      },
+      "line3": {
+        "spec_id": 40,
+        "traits": [
+          1838,
+          2009,
+          1890
+        ]
+      }
+    },
+    "skills": {
+      "heal": 21750,
+      "utilities": [
+        30525,
+        10211,
+        10267
+      ],
+      "elite": 30359
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 103574,
+      "food_id": 91805,
+      "utility_id": 78305,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48081,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48083,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48079,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48080,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48136,
+          "stat_id": 753,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48078,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46764,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": [
+            24618
+          ]
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 46760,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 46774,
+          "stat_id": 1077,
+          "upgrade_id": 24618,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mesmer-condition-alacrity-mirage-staff-only",
+    "name": "Condition Alacrity Mirage (Staff/Only)",
+    "profession": "Mesmer",
+    "elite_spec": "Mirage",
+    "build_type": "Condi",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Condition Alacrity Mirage - Staff / Staff Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/mesmer/condition-alacrity-mirage-staff-only",
+    "chat_code": "[&DQctPQElOxvuFQAA4BUAAIEBAACDAQAARhcAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "traits": {
+      "line1": {
+        "spec_id": 45,
+        "traits": [
+          670,
+          669,
+          1687
+        ]
+      },
+      "line2": {
+        "spec_id": 1,
+        "traits": [
+          701,
+          1889,
+          1950
+        ]
+      },
+      "line3": {
+        "spec_id": 59,
+        "traits": [
+          2110,
+          2174,
+          2070
+        ]
+      }
+    },
+    "skills": {
+      "heal": 40200,
+      "utilities": [
+        41065,
+        10232,
+        10234
+      ],
+      "elite": 45449
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100153,
+      "food_id": 91876,
+      "utility_id": 43449,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 75770,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 73225,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 71436,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 73852,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 75378,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 74264,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 71387,
+          "stat_id": 1268,
+          "upgrade_id": 44944,
+          "infusions": [
+            24607
+          ]
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 71387,
+          "stat_id": 1268,
+          "upgrade_id": 44944,
+          "infusions": [
+            24607
+          ]
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mesmer-condition-alacrity-mirage-staff-axe-torch",
+    "name": "Condition Alacrity Mirage (Staff/Axe/Torch)",
+    "profession": "Mesmer",
+    "elite_spec": "Mirage",
+    "build_type": "Condi",
+    "patch_version": "",
+    "benchmark_dps": 38199.0,
+    "notes": "Guild Wars 2 Condition Alacrity Mirage - Staff / Axe & Torch Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/mesmer/condition-alacrity-mirage-staff-axe-torch",
+    "chat_code": "[&DQctPRg/OxnuFQAAgwEAAIEBAADgFQAARhcAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "traits": {
+      "line1": {
+        "spec_id": 45,
+        "traits": [
+          670,
+          669,
+          1687
+        ]
+      },
+      "line2": {
+        "spec_id": 24,
+        "traits": [
+          691,
+          1690,
+          753
+        ]
+      },
+      "line3": {
+        "spec_id": 59,
+        "traits": [
+          2141,
+          2174,
+          2070
+        ]
+      }
+    },
+    "skills": {
+      "heal": 40200,
+      "utilities": [
+        10234,
+        10232,
+        41065
+      ],
+      "elite": 45449
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100153,
+      "food_id": 95942,
+      "utility_id": 48917,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 75770,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 73225,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 71436,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 73852,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 75378,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 74264,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 71387,
+          "stat_id": 1268,
+          "upgrade_id": 48911,
+          "infusions": [
+            24607
+          ]
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 77122,
+          "stat_id": 1268,
+          "upgrade_id": 24560,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 76271,
+          "stat_id": 1268,
+          "upgrade_id": 24607,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mesmer-condition-mirage-ih-ether-staff-axe-torch",
+    "name": "Condition Mirage (Ih/Ether/Staff/Axe/Torch)",
+    "profession": "Mesmer",
+    "elite_spec": "Mirage",
+    "build_type": "Condi",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Condition Mirage - Infinite Horizon + Ether - Staff / Axe & Torch Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/mesmer/condition-mirage-ih-ether-staff-axe-torch",
+    "chat_code": "[&DQctPRg/Ox0jDwAAgwEAAIEBAADgFQAARhcAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "traits": {
+      "line1": {
+        "spec_id": 45,
+        "traits": [
+          670,
+          669,
+          1687
+        ]
+      },
+      "line2": {
+        "spec_id": 24,
+        "traits": [
+          691,
+          1690,
+          753
+        ]
+      },
+      "line3": {
+        "spec_id": 59,
+        "traits": [
+          2141,
+          2098,
+          2070
+        ]
+      }
+    },
+    "skills": {
+      "heal": 21750,
+      "utilities": [
+        10234,
+        10232,
+        41065
+      ],
+      "elite": 45449
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100153,
+      "food_id": 95942,
+      "utility_id": 43449,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 75770,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 73225,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 71436,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 73852,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 75378,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 74264,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 71387,
+          "stat_id": 1268,
+          "upgrade_id": 48911,
+          "infusions": [
+            24607
+          ]
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 77122,
+          "stat_id": 1268,
+          "upgrade_id": 24560,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 76271,
+          "stat_id": 1268,
+          "upgrade_id": 24607,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mesmer-condition-mirage-ih-oasis-staff-axe-torch",
+    "name": "Condition Mirage (Ih/Oasis/Staff/Axe/Torch)",
+    "profession": "Mesmer",
+    "elite_spec": "Mirage",
+    "build_type": "Condi",
+    "patch_version": "",
+    "benchmark_dps": 44170.0,
+    "notes": "Guild Wars 2 Condition Mirage - Infinite Horizon + Oasis - Staff / Axe & Torch Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/mesmer/condition-mirage-ih-oasis-staff-axe-torch",
+    "chat_code": "[&DQctPRg/Ox3uFQAAgwEAAIEBAADgFQAARhcAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "traits": {
+      "line1": {
+        "spec_id": 45,
+        "traits": [
+          670,
+          669,
+          1687
+        ]
+      },
+      "line2": {
+        "spec_id": 24,
+        "traits": [
+          691,
+          1690,
+          753
+        ]
+      },
+      "line3": {
+        "spec_id": 59,
+        "traits": [
+          2141,
+          2098,
+          2070
+        ]
+      }
+    },
+    "skills": {
+      "heal": 40200,
+      "utilities": [
+        10234,
+        10232,
+        41065
+      ],
+      "elite": 45449
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100153,
+      "food_id": 95942,
+      "utility_id": 48917,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 75770,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 73225,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 71436,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 73852,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 75378,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 74264,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 71387,
+          "stat_id": 1268,
+          "upgrade_id": 48911,
+          "infusions": [
+            24607
+          ]
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 77122,
+          "stat_id": 1268,
+          "upgrade_id": 24560,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 76271,
+          "stat_id": 1268,
+          "upgrade_id": 24607,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mesmer-condition-mirage-dune-cloak-staff-axe-torch",
+    "name": "Condition Mirage (Dune/Cloak/Staff/Axe/Torch)",
+    "profession": "Mesmer",
+    "elite_spec": "Mirage",
+    "build_type": "Condi",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Condition Mirage - Dune Cloak - Staff / Axe & Torch Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/mesmer/condition-mirage-dune-cloak-staff-axe-torch",
+    "chat_code": "[&DQctPRg/Oz0jDwAAgwEAAIEBAADgFQAARhcAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "traits": {
+      "line1": {
+        "spec_id": 45,
+        "traits": [
+          670,
+          669,
+          1687
+        ]
+      },
+      "line2": {
+        "spec_id": 24,
+        "traits": [
+          691,
+          1690,
+          753
+        ]
+      },
+      "line3": {
+        "spec_id": 59,
+        "traits": [
+          2141,
+          2098,
+          2169
+        ]
+      }
+    },
+    "skills": {
+      "heal": 21750,
+      "utilities": [
+        10234,
+        10232,
+        41065
+      ],
+      "elite": 45449
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100177,
+      "food_id": 95942,
+      "utility_id": 43449,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 75770,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 73225,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 71436,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 73852,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 75378,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 74264,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 71387,
+          "stat_id": 1268,
+          "upgrade_id": 48911,
+          "infusions": [
+            24607
+          ]
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 77122,
+          "stat_id": 1268,
+          "upgrade_id": 24560,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 76271,
+          "stat_id": 1268,
+          "upgrade_id": 24607,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mesmer-condition-virtuoso-dagger-sword-focus",
+    "name": "Condition Virtuoso (Dagger/Sword/Focus)",
+    "profession": "Mesmer",
+    "elite_spec": "Virtuoso",
+    "build_type": "Condi",
+    "patch_version": "",
+    "benchmark_dps": 39115.0,
+    "notes": "Guild Wars 2 Condition Virtuoso - Dagger & Sword / Focus Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/mesmer/condition-virtuoso-dagger-sword-focus",
+    "chat_code": "[&DQcYHQEdQjsjDwAAggEAAIEBAACDAQAA5RoAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "traits": {
+      "line1": {
+        "spec_id": 24,
+        "traits": [
+          721,
+          1690,
+          733
+        ]
+      },
+      "line2": {
+        "spec_id": 1,
+        "traits": [
+          701,
+          708,
+          692
+        ]
+      },
+      "line3": {
+        "spec_id": 66,
+        "traits": [
+          2202,
+          2205,
+          2223
+        ]
+      }
+    },
+    "skills": {
+      "heal": 21750,
+      "utilities": [
+        10247,
+        10232,
+        10234
+      ],
+      "elite": 24755
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100849,
+      "food_id": 91804,
+      "utility_id": 48917,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48117,
+          "stat_id": 1078,
+          "upgrade_id": 24762,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48119,
+          "stat_id": 1078,
+          "upgrade_id": 24762,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 67453,
+          "stat_id": 1067,
+          "upgrade_id": 24762,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48116,
+          "stat_id": 1078,
+          "upgrade_id": 24762,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 67450,
+          "stat_id": 1067,
+          "upgrade_id": 24762,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 67454,
+          "stat_id": 1067,
+          "upgrade_id": 24762,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1078,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1067,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1067,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1067,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1078,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1078,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 67948,
+          "stat_id": 1067,
+          "upgrade_id": 24612,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 67938,
+          "stat_id": 1067,
+          "upgrade_id": 24560,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 67951,
+          "stat_id": 1067,
+          "upgrade_id": 24560,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mesmer-power-virtuoso-spear-greatsword",
+    "name": "Power Virtuoso (Spear/Greatsword)",
+    "profession": "Mesmer",
+    "elite_spec": "Virtuoso",
+    "build_type": "Power",
+    "patch_version": "",
+    "benchmark_dps": 42218.0,
+    "notes": "Guild Wars 2 Power Virtuoso - Spear / Greatsword Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/mesmer/power-virtuoso-spear-greatsword",
+    "chat_code": "[&DQcKGQEdQiojDwAAjwEAAAAAAABpAQAA5RoAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "traits": {
+      "line1": {
+        "spec_id": 10,
+        "traits": [
+          686,
+          713,
+          681
+        ]
+      },
+      "line2": {
+        "spec_id": 1,
+        "traits": [
+          701,
+          708,
+          692
+        ]
+      },
+      "line3": {
+        "spec_id": 66,
+        "traits": [
+          2208,
+          2205,
+          2206
+        ]
+      }
+    },
+    "skills": {
+      "heal": 21750,
+      "utilities": [
+        10267,
+        62553,
+        10211
+      ],
+      "elite": 24755
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100947,
+      "food_id": 91805,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48081,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48083,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48079,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48080,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48136,
+          "stat_id": 753,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48078,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46764,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": [
+            24618
+          ]
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 46762,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": [
+            24618
+          ]
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mesmer-power-virtuoso-greatsword-dagger-sword",
+    "name": "Power Virtuoso (Greatsword/Dagger/Sword)",
+    "profession": "Mesmer",
+    "elite_spec": "Virtuoso",
+    "build_type": "Power",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Power Virtuoso - Greatsword / Dagger & Sword Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/mesmer/power-virtuoso-greatsword-dagger-sword",
+    "chat_code": "[&DQcKGQEdQiojDwAAjwEAAAAAAABpAQAA5RoAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "traits": {
+      "line1": {
+        "spec_id": 10,
+        "traits": [
+          686,
+          713,
+          681
+        ]
+      },
+      "line2": {
+        "spec_id": 1,
+        "traits": [
+          701,
+          708,
+          692
+        ]
+      },
+      "line3": {
+        "spec_id": 66,
+        "traits": [
+          2208,
+          2205,
+          2206
+        ]
+      }
+    },
+    "skills": {
+      "heal": 21750,
+      "utilities": [
+        10267,
+        62553,
+        10211
+      ],
+      "elite": 24755
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100947,
+      "food_id": 91805,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48081,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48083,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48079,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48080,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48136,
+          "stat_id": 753,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48078,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46762,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": [
+            24618
+          ]
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 46760,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 46774,
+          "stat_id": 1077,
+          "upgrade_id": 24618,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mesmer-power-virtuoso-spear-dagger-sword",
+    "name": "Power Virtuoso (Spear/Dagger/Sword)",
+    "profession": "Mesmer",
+    "elite_spec": "Virtuoso",
+    "build_type": "Power",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Power Virtuoso - Spear / Dagger & Sword Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/mesmer/power-virtuoso-spear-dagger-sword",
+    "chat_code": "[&DQcKGgEdQiojDwAAjwEAAAAAAABpAQAA5RoAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "traits": {
+      "line1": {
+        "spec_id": 10,
+        "traits": [
+          682,
+          713,
+          681
+        ]
+      },
+      "line2": {
+        "spec_id": 1,
+        "traits": [
+          701,
+          708,
+          692
+        ]
+      },
+      "line3": {
+        "spec_id": 66,
+        "traits": [
+          2208,
+          2205,
+          2206
+        ]
+      }
+    },
+    "skills": {
+      "heal": 21750,
+      "utilities": [
+        10267,
+        62553,
+        10211
+      ],
+      "elite": 24755
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100947,
+      "food_id": 91805,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48081,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48083,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48079,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48080,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48136,
+          "stat_id": 753,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48078,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46764,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": [
+            24618
+          ]
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 46760,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 46774,
+          "stat_id": 1077,
+          "upgrade_id": 24618,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mesmer-heal-quickness-troubadour-rifle-only",
+    "name": "Heal Quickness Troubadour (Rifle/Only)",
+    "profession": "Mesmer",
+    "elite_spec": "Troubadour",
+    "build_type": "Heal",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Heal Quickness Troubadour - Rifle Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/mesmer/heal-quickness-troubadour-rifle-only",
+    "chat_code": "[&DQctOhcqSToAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "traits": {
+      "line1": {
+        "spec_id": 45,
+        "traits": [
+          675,
+          668,
+          1687
+        ]
+      },
+      "line2": {
+        "spec_id": 23,
+        "traits": [
+          738,
+          740,
+          1866
+        ]
+      },
+      "line3": {
+        "spec_id": 73,
+        "traits": [
+          2326,
+          2367,
+          2441
+        ]
+      }
+    },
+    "skills": {
+      "heal": 0,
+      "utilities": [
+        0,
+        0,
+        0
+      ],
+      "elite": 0
+    },
+    "legends": [
+      10213,
+      76850
+    ],
+    "gear": {
+      "relic_id": 101116,
+      "food_id": 91690,
+      "utility_id": 67528,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 85161,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 85089,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 85098,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85004,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 84926,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 85317,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1377,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1430,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1377,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1430,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1430,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1377,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 85348,
+          "stat_id": 1377,
+          "upgrade_id": 74326,
+          "infusions": [
+            24639
+          ]
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mesmer-power-quickness-troubadour-spear-dagger-sword",
+    "name": "Power Quickness Troubadour (Spear/Dagger/Sword)",
+    "profession": "Mesmer",
+    "elite_spec": "Troubadour",
+    "build_type": "Power",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Power Quickness Troubadour - Spear / Dagger & Sword Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/mesmer/power-quickness-troubadour-spear-dagger-sword",
+    "chat_code": "[&DQcKGgEdSRttAQAAZh0AAIIBAABTHQAA7RIAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "traits": {
+      "line1": {
+        "spec_id": 10,
+        "traits": [
+          682,
+          713,
+          681
+        ]
+      },
+      "line2": {
+        "spec_id": 1,
+        "traits": [
+          701,
+          708,
+          692
+        ]
+      },
+      "line3": {
+        "spec_id": 73,
+        "traits": [
+          2432,
+          2367,
+          2353
+        ]
+      }
+    },
+    "skills": {
+      "heal": 10213,
+      "utilities": [
+        77066,
+        10247,
+        76850
+      ],
+      "elite": 29519
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 103574,
+      "food_id": 91805,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48081,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48137,
+          "stat_id": 753,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48079,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48080,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48082,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48078,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46764,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": [
+            24618
+          ]
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 46760,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 46774,
+          "stat_id": 1077,
+          "upgrade_id": 24618,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mesmer-power-troubadour-spear-dagger-sword",
+    "name": "Power Troubadour (Spear/Dagger/Sword)",
+    "profession": "Mesmer",
+    "elite_spec": "Troubadour",
+    "build_type": "Power",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Power Troubadour - Spear / Dagger & Sword Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/mesmer/power-troubadour-spear-dagger-sword",
+    "chat_code": "[&DQcKGgEdSRdtAQAAZh0AAIIBAABpAQAA7RIAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "traits": {
+      "line1": {
+        "spec_id": 10,
+        "traits": [
+          682,
+          713,
+          681
+        ]
+      },
+      "line2": {
+        "spec_id": 1,
+        "traits": [
+          701,
+          708,
+          692
+        ]
+      },
+      "line3": {
+        "spec_id": 73,
+        "traits": [
+          2432,
+          2343,
+          2353
+        ]
+      }
+    },
+    "skills": {
+      "heal": 10213,
+      "utilities": [
+        77066,
+        10247,
+        10211
+      ],
+      "elite": 29519
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 103574,
+      "food_id": 91805,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48081,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48137,
+          "stat_id": 753,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48079,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48080,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48082,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48078,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46764,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": [
+            24618
+          ]
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 46760,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 46774,
+          "stat_id": 1077,
+          "upgrade_id": 24618,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mesmer-beginner-power-boon-chronomancer-spear-dagger-sword",
+    "name": "Beginner Power Boon Chronomancer (Spear/Dagger/Sword)",
+    "profession": "Mesmer",
+    "elite_spec": "Chronomancer",
+    "build_type": "Power",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Beginner Power Boon Chronomancer - Spear / Dagger & Sword Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/mesmer/beginner-power-boon-chronomancer-spear-dagger-sword",
+    "chat_code": "[&DQcBHQoaKAUjDwAABBMAAM8SAABpAQAAsxIAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "traits": {
+      "line1": {
+        "spec_id": 1,
+        "traits": [
+          701,
+          708,
+          692
+        ]
+      },
+      "line2": {
+        "spec_id": 10,
+        "traits": [
+          682,
+          713,
+          681
+        ]
+      },
+      "line3": {
+        "spec_id": 40,
+        "traits": [
+          1838,
+          2009,
+          0
+        ]
+      }
+    },
+    "skills": {
+      "heal": 21750,
+      "utilities": [
+        30525,
+        30814,
+        10211
+      ],
+      "elite": 30359
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 103574,
+      "food_id": 91805,
+      "utility_id": 9443,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48081,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48083,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48079,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48080,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48136,
+          "stat_id": 753,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48078,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46764,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": [
+            24618
+          ]
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 46760,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 46774,
+          "stat_id": 1077,
+          "upgrade_id": 24618,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mesmer-beginner-condition-alacrity-mirage-staff-only",
+    "name": "Beginner Condition Alacrity Mirage (Staff/Only)",
+    "profession": "Mesmer",
+    "elite_spec": "Mirage",
+    "build_type": "Condi",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Beginner Condition Alacrity Mirage - Staff / Staff Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/mesmer/beginner-condition-alacrity-mirage-staff-only",
+    "chat_code": "[&DQctPQElOxvuFQAA4BUAAIEBAACDAQAARhcAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "traits": {
+      "line1": {
+        "spec_id": 45,
+        "traits": [
+          670,
+          669,
+          1687
+        ]
+      },
+      "line2": {
+        "spec_id": 1,
+        "traits": [
+          701,
+          1889,
+          1950
+        ]
+      },
+      "line3": {
+        "spec_id": 59,
+        "traits": [
+          2110,
+          2174,
+          2070
+        ]
+      }
+    },
+    "skills": {
+      "heal": 40200,
+      "utilities": [
+        41065,
+        10232,
+        10234
+      ],
+      "elite": 45449
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100153,
+      "food_id": 91876,
+      "utility_id": 43449,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 75770,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 73225,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 71436,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 73852,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 75378,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 74264,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 71387,
+          "stat_id": 1268,
+          "upgrade_id": 44944,
+          "infusions": [
+            24607
+          ]
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 71387,
+          "stat_id": 1268,
+          "upgrade_id": 44944,
+          "infusions": [
+            24607
+          ]
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mesmer-beginner-condition-virtuoso-dagger-sword-focus",
+    "name": "Beginner Condition Virtuoso (Dagger/Sword/Focus)",
+    "profession": "Mesmer",
+    "elite_spec": "Virtuoso",
+    "build_type": "Condi",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Beginner Condition Virtuoso - Dagger & Sword / Focus Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/mesmer/beginner-condition-virtuoso-dagger-sword-focus",
+    "chat_code": "[&DQcYHQEdQjsjDwAAggEAAIEBAACDAQAA5RoAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "traits": {
+      "line1": {
+        "spec_id": 24,
+        "traits": [
+          721,
+          1690,
+          733
+        ]
+      },
+      "line2": {
+        "spec_id": 1,
+        "traits": [
+          701,
+          708,
+          692
+        ]
+      },
+      "line3": {
+        "spec_id": 66,
+        "traits": [
+          2202,
+          2205,
+          2223
+        ]
+      }
+    },
+    "skills": {
+      "heal": 21750,
+      "utilities": [
+        10247,
+        10232,
+        10234
+      ],
+      "elite": 24755
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100849,
+      "food_id": 91804,
+      "utility_id": 48917,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48117,
+          "stat_id": 1078,
+          "upgrade_id": 24762,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48119,
+          "stat_id": 1078,
+          "upgrade_id": 24762,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 67453,
+          "stat_id": 1067,
+          "upgrade_id": 24762,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48116,
+          "stat_id": 1078,
+          "upgrade_id": 24762,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 67450,
+          "stat_id": 1067,
+          "upgrade_id": 24762,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 67454,
+          "stat_id": 1067,
+          "upgrade_id": 24762,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1078,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1067,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1067,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1067,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1078,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1078,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 67948,
+          "stat_id": 1067,
+          "upgrade_id": 24612,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 67938,
+          "stat_id": 1067,
+          "upgrade_id": 24560,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 67951,
+          "stat_id": 1067,
+          "upgrade_id": 24560,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mesmer-power-boon-chronomancer-spear-dagger-focus",
+    "name": "Power Boon Chronomancer (Spear/Dagger/Focus)",
+    "profession": "Mesmer",
+    "elite_spec": "Chronomancer",
+    "build_type": "Power",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Power Boon Chronomancer - Spear / Dagger & Focus Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/mesmer/power-boon-chronomancer-spear-dagger-focus",
+    "chat_code": "[&DQcBHQoaKAUjDwAABBMAAM8SAABpAQAAsxIAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "traits": {
+      "line1": {
+        "spec_id": 1,
+        "traits": [
+          701,
+          708,
+          692
+        ]
+      },
+      "line2": {
+        "spec_id": 10,
+        "traits": [
+          682,
+          713,
+          681
+        ]
+      },
+      "line3": {
+        "spec_id": 40,
+        "traits": [
+          1838,
+          2009,
+          0
+        ]
+      }
+    },
+    "skills": {
+      "heal": 21750,
+      "utilities": [
+        30525,
+        30814,
+        10211
+      ],
+      "elite": 30359
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 103574,
+      "food_id": 91805,
+      "utility_id": 78305,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48081,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48083,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48079,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48080,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48136,
+          "stat_id": 753,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48078,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46764,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": [
+            24618
+          ]
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 46760,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 46761,
+          "stat_id": 1077,
+          "upgrade_id": 24618,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mesmer-condition-alacrity-mirage-dune-cloak-staff-axe-torch",
+    "name": "Condition Alacrity Mirage (Dune Cloak) (Dune/Cloak/Staff/Axe/Torch)",
+    "profession": "Mesmer",
+    "elite_spec": "Mirage",
+    "build_type": "Condi",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Condition Alacrity Mirage (Dune Cloak) - Staff / Axe & Torch Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/mesmer/condition-alacrity-mirage-dune-cloak-staff-axe-torch",
+    "chat_code": "[&DQctPRg/OzkjDwAAgwEAAIEBAADgFQAARhcAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "traits": {
+      "line1": {
+        "spec_id": 45,
+        "traits": [
+          670,
+          669,
+          1687
+        ]
+      },
+      "line2": {
+        "spec_id": 24,
+        "traits": [
+          691,
+          1690,
+          753
+        ]
+      },
+      "line3": {
+        "spec_id": 59,
+        "traits": [
+          2141,
+          2174,
+          2169
+        ]
+      }
+    },
+    "skills": {
+      "heal": 21750,
+      "utilities": [
+        10234,
+        10232,
+        41065
+      ],
+      "elite": 45449
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100177,
+      "food_id": 95942,
+      "utility_id": 43449,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 75770,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 73225,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 71436,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 73852,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 75378,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 74264,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 71387,
+          "stat_id": 1268,
+          "upgrade_id": 48911,
+          "infusions": [
+            24607
+          ]
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 77122,
+          "stat_id": 1268,
+          "upgrade_id": 24560,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 76271,
+          "stat_id": 1268,
+          "upgrade_id": 24607,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mesmer-condition-mirage-ih-oasis-staff-dagger-torch",
+    "name": "Condition Mirage (Ih/Oasis/Staff/Dagger/Torch)",
+    "profession": "Mesmer",
+    "elite_spec": "Mirage",
+    "build_type": "Condi",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Condition Mirage - Infinite Horizon + Oasis - Staff / Dagger & Torch Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/mesmer/condition-mirage-ih-oasis-staff-dagger-torch",
+    "chat_code": "[&DQctPRg/Ox3uFQAAgwEAAIEBAADgFQAARhcAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "traits": {
+      "line1": {
+        "spec_id": 45,
+        "traits": [
+          670,
+          669,
+          1687
+        ]
+      },
+      "line2": {
+        "spec_id": 24,
+        "traits": [
+          691,
+          1690,
+          753
+        ]
+      },
+      "line3": {
+        "spec_id": 59,
+        "traits": [
+          2141,
+          2098,
+          2070
+        ]
+      }
+    },
+    "skills": {
+      "heal": 40200,
+      "utilities": [
+        10234,
+        10232,
+        41065
+      ],
+      "elite": 45449
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100153,
+      "food_id": 95942,
+      "utility_id": 43449,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 75770,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 73225,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 71436,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 73852,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 75378,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 74264,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 71387,
+          "stat_id": 1268,
+          "upgrade_id": 48911,
+          "infusions": [
+            24607
+          ]
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 74179,
+          "stat_id": 1268,
+          "upgrade_id": 24560,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 76271,
+          "stat_id": 1268,
+          "upgrade_id": 24607,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mesmer-condition-mirage-chaos-staff-axe-pistol",
+    "name": "Condition Mirage (Chaos) (Chaos/Staff/Axe/Pistol)",
+    "profession": "Mesmer",
+    "elite_spec": "Mirage",
+    "build_type": "Condi",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Condition Mirage (Chaos) - Staff / Axe & Pistol Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/mesmer/condition-mirage-chaos-staff-axe-pistol",
+    "chat_code": "[&DQctPQEnOx/uFQAAgwEAAIEBAADgFQAARhcAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "traits": {
+      "line1": {
+        "spec_id": 45,
+        "traits": [
+          670,
+          669,
+          1687
+        ]
+      },
+      "line2": {
+        "spec_id": 1,
+        "traits": [
+          700,
+          1889,
+          1950
+        ]
+      },
+      "line3": {
+        "spec_id": 59,
+        "traits": [
+          2110,
+          2098,
+          2070
+        ]
+      }
+    },
+    "skills": {
+      "heal": 40200,
+      "utilities": [
+        10234,
+        10232,
+        41065
+      ],
+      "elite": 45449
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100153,
+      "food_id": 91876,
+      "utility_id": 43449,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 75770,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 73225,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 71436,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 73852,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 75378,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 74264,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 71387,
+          "stat_id": 1268,
+          "upgrade_id": 44944,
+          "infusions": [
+            24607
+          ]
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 77122,
+          "stat_id": 1268,
+          "upgrade_id": 44944,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 72239,
+          "stat_id": 1268,
+          "upgrade_id": 24607,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mesmer-condition-mirage-illusions-axe-torch-pistol",
+    "name": "Condition Mirage (Illusions) (Illusions/Axe/Torch/Pistol)",
+    "profession": "Mesmer",
+    "elite_spec": "Mirage",
+    "build_type": "Condi",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Condition Mirage (Illusions) - Axe & Torch / Pistol Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/mesmer/condition-mirage-illusions-axe-torch-pistol",
+    "chat_code": "[&DQcBJxg/Ox0jDwAAgwEAAIEBAADgFQAARhcAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "traits": {
+      "line1": {
+        "spec_id": 1,
+        "traits": [
+          700,
+          1889,
+          1950
+        ]
+      },
+      "line2": {
+        "spec_id": 24,
+        "traits": [
+          691,
+          1690,
+          753
+        ]
+      },
+      "line3": {
+        "spec_id": 59,
+        "traits": [
+          2141,
+          2098,
+          2070
+        ]
+      }
+    },
+    "skills": {
+      "heal": 21750,
+      "utilities": [
+        10234,
+        10232,
+        41065
+      ],
+      "elite": 45449
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100153,
+      "food_id": 91878,
+      "utility_id": 48917,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 75770,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 73225,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 71436,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 73852,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 75378,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 74264,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 77122,
+          "stat_id": 1268,
+          "upgrade_id": 24583,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 76271,
+          "stat_id": 1268,
+          "upgrade_id": 24607,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 72239,
+          "stat_id": 1268,
+          "upgrade_id": 24607,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mesmer-heal-alacrity-mirage-rifle-scepter-shield",
+    "name": "Heal Alacrity Mirage (Rifle/Scepter/Shield)",
+    "profession": "Mesmer",
+    "elite_spec": "Mirage",
+    "build_type": "Heal",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Heal Alacrity Mirage - Rifle / Scepter & Shield Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/mesmer/heal-alacrity-mirage-rifle-scepter-shield",
+    "chat_code": "[&DQctOhcqOzltAQAAlgsAAJYLAACWCwAA7RIAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "traits": {
+      "line1": {
+        "spec_id": 45,
+        "traits": [
+          675,
+          668,
+          1687
+        ]
+      },
+      "line2": {
+        "spec_id": 23,
+        "traits": [
+          738,
+          740,
+          1866
+        ]
+      },
+      "line3": {
+        "spec_id": 59,
+        "traits": [
+          2141,
+          2174,
+          2169
+        ]
+      }
+    },
+    "skills": {
+      "heal": 10213,
+      "utilities": [
+        10586,
+        10586,
+        10586
+      ],
+      "elite": 29519
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 101116,
+      "food_id": 91690,
+      "utility_id": 67528,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 85161,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 85089,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 85098,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85004,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 84926,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 85317,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1377,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1430,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1377,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1430,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1430,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1377,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 85348,
+          "stat_id": 1377,
+          "upgrade_id": 74326,
+          "infusions": [
+            24639
+          ]
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 85027,
+          "stat_id": 1377,
+          "upgrade_id": 74326,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 84957,
+          "stat_id": 1377,
+          "upgrade_id": 24639,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mesmer-power-mirage-spear-dagger-sword",
+    "name": "Power Mirage (Spear/Dagger/Sword)",
+    "profession": "Mesmer",
+    "elite_spec": "Mirage",
+    "build_type": "Power",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Power Mirage - Spear / Dagger & Sword Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/mesmer/power-mirage-spear-dagger-sword",
+    "chat_code": "[&DQcBHQoaOxnuFQAAihYAAOAVAABpAQAARhcAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "traits": {
+      "line1": {
+        "spec_id": 1,
+        "traits": [
+          701,
+          708,
+          692
+        ]
+      },
+      "line2": {
+        "spec_id": 10,
+        "traits": [
+          682,
+          713,
+          681
+        ]
+      },
+      "line3": {
+        "spec_id": 59,
+        "traits": [
+          2141,
+          2174,
+          2070
+        ]
+      }
+    },
+    "skills": {
+      "heal": 40200,
+      "utilities": [
+        45046,
+        41065,
+        10211
+      ],
+      "elite": 45449
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100177,
+      "food_id": 91805,
+      "utility_id": 67530,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48081,
+          "stat_id": 1077,
+          "upgrade_id": 24703,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48137,
+          "stat_id": 753,
+          "upgrade_id": 24703,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48079,
+          "stat_id": 1077,
+          "upgrade_id": 24703,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48134,
+          "stat_id": 753,
+          "upgrade_id": 24703,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48136,
+          "stat_id": 753,
+          "upgrade_id": 24703,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48132,
+          "stat_id": 753,
+          "upgrade_id": 24703,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 753,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 753,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46764,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": [
+            24618
+          ]
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 46760,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 46774,
+          "stat_id": 1077,
+          "upgrade_id": 24618,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  }
+]

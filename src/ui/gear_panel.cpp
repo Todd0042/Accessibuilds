@@ -1,5 +1,6 @@
 #include "gear_panel.h"
 #include "icon_renderer.h"
+#include "ui_scale.h"
 #include "../shared.h"
 #include "../build/comparator.h"
 #include "../api/gw2api.h"
@@ -36,8 +37,8 @@ static const ImVec4 COL_ERROR = ImVec4(0.86f, 0.24f, 0.24f, 1.0f);
 static const ImVec4 COL_DIM   = ImVec4(0.50f, 0.50f, 0.50f, 1.0f);
 static const ImVec4 COL_REF   = ImVec4(0.40f, 0.65f, 1.00f, 1.0f);
 
-static const float ICON_SZ    = 44.f;
-static const float ICON_SZ_SM = 30.f;
+static float ICON_SZ    = 44.f;
+static float ICON_SZ_SM = 30.f;
 
 /* ── Layout order ───────────────────────────────────────────────────────── */
 static const GW2::GearSlot ARMOR_SLOTS[] = {
@@ -302,6 +303,9 @@ static void RenderGroup(const char* label,
 /* ── Main render ────────────────────────────────────────────────────────── */
 void Render()
 {
+    ICON_SZ    = S(44.f);
+    ICON_SZ_SM = S(30.f);
+
     bool sc_loaded = g_SCBuildLoaded.load();
     bool pb_loaded = g_PlayerBuildLoaded.load();
 
@@ -500,7 +504,7 @@ void Render()
         auto show_rec = [&](const char* label, uint32_t rec) {
             if (!rec) return;
             ImGui::Text("%-10s", label);
-            ImGui::SameLine(100);
+            ImGui::SameLine(S(100));
             IconRenderer::ItemIconRef(rec, ICON_SZ_SM);
             ImGui::SameLine(0, 8);
             const std::string& nm = GW2Names::GetItem(rec);
@@ -509,6 +513,40 @@ void Render()
         };
 
         show_rec("Food:",    sc.gear.food_id);
+
+        /* Alternative food suggestions — shown once the API name has resolved */
+        {
+            const std::string& food_nm = GW2Names::GetItem(sc.gear.food_id);
+            if (!food_nm.empty() && food_nm != "...") {
+                struct AltFood { const char* trigger; uint32_t alt_id; const char* alt_name; };
+                static const AltFood ALTS[] = {
+                    { "Fruit Salad",     87076, "Bowl of Poultry Satay"                         },
+                    { "Sous-Vide Steak", 41569, "Bowl of Sweet and Spicy Butternut Squash Soup" },
+                    { "Flatbread",       86997, "Plate of Beef Rendang"                         },
+                    { "Oyster Soup",     43550, "Dragon's Revelry Starcake"                     },
+                    { "Coq Au Vin",      12467, "Plate of Truffle Steak"                        },
+                };
+                for (const auto& alt : ALTS) {
+                    if (food_nm.find(alt.trigger) == std::string::npos) continue;
+
+                    ImGui::Spacing();
+                    ImGui::TextColored(COL_DIM, "Alternative Food:");
+                    ImGui::Text("%-10s", "");
+                    ImGui::SameLine(S(100));
+                    if (alt.alt_id) {
+                        /* Kick off async icon resolution and display once loaded */
+                        GW2Names::GetItemIcon(alt.alt_id);
+                        IconRenderer::ItemIconRef(alt.alt_id, ICON_SZ_SM);
+                        ImGui::SameLine(0, 8);
+                    }
+                    /* Always use the hardcoded name — never the API-resolved one,
+                     * since a wrong ID would silently show the wrong item name. */
+                    ImGui::TextColored(COL_REF, "%s", alt.alt_name);
+                    break;
+                }
+            }
+        }
+
         show_rec("Utility:", sc.gear.utility_id);
 
         ImGui::EndTable();

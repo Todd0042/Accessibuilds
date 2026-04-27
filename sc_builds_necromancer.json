@@ -1,0 +1,3871 @@
+[
+  {
+    "id": "necromancer-condition-reaper-spear-dagger-sword",
+    "name": "Condition Reaper (Spear/Dagger/Sword)",
+    "profession": "Necromancer",
+    "elite_spec": "Reaper",
+    "build_type": "Condi",
+    "patch_version": "",
+    "benchmark_dps": 43537.0,
+    "notes": "Guild Wars 2 Condition Reaper - Spear / Dagger & Sword Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/necromancer/condition-reaper-spear-dagger-sword",
+    "chat_code": "[&DQgnNzInIibBEgAAQAEAAIAAAACmEgAAkgAAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "traits": {
+      "line1": {
+        "spec_id": 39,
+        "traits": [
+          815,
+          816,
+          801
+        ]
+      },
+      "line2": {
+        "spec_id": 50,
+        "traits": [
+          888,
+          894,
+          893
+        ]
+      },
+      "line3": {
+        "spec_id": 34,
+        "traits": [
+          2020,
+          1969,
+          1919
+        ]
+      }
+    },
+    "skills": {
+      "heal": 30488,
+      "utilities": [
+        10607,
+        10544,
+        30670
+      ],
+      "elite": 10549
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100153,
+      "food_id": 96578,
+      "utility_id": 48917,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 85296,
+          "stat_id": 1379,
+          "upgrade_id": 24762,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 85241,
+          "stat_id": 1379,
+          "upgrade_id": 24762,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 85319,
+          "stat_id": 1379,
+          "upgrade_id": 24762,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85048,
+          "stat_id": 1379,
+          "upgrade_id": 24762,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 85352,
+          "stat_id": 1379,
+          "upgrade_id": 24762,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 85007,
+          "stat_id": 1379,
+          "upgrade_id": 24762,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1379,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1379,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 85254,
+          "stat_id": 1379,
+          "upgrade_id": 44944,
+          "infusions": [
+            24560
+          ]
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 84936,
+          "stat_id": 1379,
+          "upgrade_id": 24605,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 84876,
+          "stat_id": 1379,
+          "upgrade_id": 24597,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "necromancer-power-reaper-greatsword-dagger-sword",
+    "name": "Power Reaper (Greatsword/Dagger/Sword)",
+    "profession": "Necromancer",
+    "elite_spec": "Reaper",
+    "build_type": "Power",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Power Reaper - Greatsword / Dagger & Sword Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/necromancer/power-reaper-greatsword-dagger-sword",
+    "chat_code": "[&DQg1KTIlIjbBEgAAQAEAAAAAAADxEgAAlQAAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "traits": {
+      "line1": {
+        "spec_id": 53,
+        "traits": [
+          914,
+          829,
+          853
+        ]
+      },
+      "line2": {
+        "spec_id": 50,
+        "traits": [
+          875,
+          894,
+          893
+        ]
+      },
+      "line3": {
+        "spec_id": 34,
+        "traits": [
+          2020,
+          1969,
+          2021
+        ]
+      }
+    },
+    "skills": {
+      "heal": 30488,
+      "utilities": [
+        10607,
+        10674,
+        29414
+      ],
+      "elite": 10646
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100947,
+      "food_id": 91805,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48135,
+          "stat_id": 753,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48083,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48079,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48080,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48082,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48078,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46762,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": [
+            24618
+          ]
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 46760,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 46774,
+          "stat_id": 1077,
+          "upgrade_id": 24618,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "necromancer-power-reaper-greatsword-spear",
+    "name": "Power Reaper (Greatsword/Spear)",
+    "profession": "Necromancer",
+    "elite_spec": "Reaper",
+    "build_type": "Power",
+    "patch_version": "",
+    "benchmark_dps": 41533.0,
+    "notes": "Guild Wars 2 Power Reaper - Greatsword / Spear Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/necromancer/power-reaper-greatsword-spear",
+    "chat_code": "[&DQg1KTIlIjbBEgAAQAEAAAAAAADxEgAAlQAAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "traits": {
+      "line1": {
+        "spec_id": 53,
+        "traits": [
+          914,
+          829,
+          853
+        ]
+      },
+      "line2": {
+        "spec_id": 50,
+        "traits": [
+          875,
+          894,
+          893
+        ]
+      },
+      "line3": {
+        "spec_id": 34,
+        "traits": [
+          2020,
+          1969,
+          2021
+        ]
+      }
+    },
+    "skills": {
+      "heal": 30488,
+      "utilities": [
+        10607,
+        10674,
+        29414
+      ],
+      "elite": 10646
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100947,
+      "food_id": 91805,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48135,
+          "stat_id": 753,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48083,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48079,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48080,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48082,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48078,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46762,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": [
+            24618
+          ]
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 46764,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": [
+            24618
+          ]
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "necromancer-power-reaper-greatsword-sword-sword",
+    "name": "Power Reaper (Greatsword/Sword/Sword)",
+    "profession": "Necromancer",
+    "elite_spec": "Reaper",
+    "build_type": "Power",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Power Reaper - Greatsword / Sword & Sword Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/necromancer/power-reaper-greatsword-sword-sword",
+    "chat_code": "[&DQg1KTIlIjbBEgAAQAEAAAAAAADxEgAAlQAAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "traits": {
+      "line1": {
+        "spec_id": 53,
+        "traits": [
+          914,
+          829,
+          853
+        ]
+      },
+      "line2": {
+        "spec_id": 50,
+        "traits": [
+          875,
+          894,
+          893
+        ]
+      },
+      "line3": {
+        "spec_id": 34,
+        "traits": [
+          2020,
+          1969,
+          2021
+        ]
+      }
+    },
+    "skills": {
+      "heal": 30488,
+      "utilities": [
+        10607,
+        10674,
+        29414
+      ],
+      "elite": 10646
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100947,
+      "food_id": 91805,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48135,
+          "stat_id": 753,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48083,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48079,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48080,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48082,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48078,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46762,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": [
+            24618
+          ]
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 46774,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 46774,
+          "stat_id": 1077,
+          "upgrade_id": 24618,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "necromancer-celestial-alacrity-scourge-dagger-torch-pistol-warhorn",
+    "name": "Celestial Alacrity Scourge (Dagger/Torch/Pistol/Warhorn)",
+    "profession": "Necromancer",
+    "elite_spec": "Scourge",
+    "build_type": "Celestial",
+    "patch_version": "",
+    "benchmark_dps": 22321.0,
+    "notes": "Guild Wars 2 Celestial Alacrity Scourge - Dagger & Torch / Pistol & Warhorn Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/necromancer/celestial-alacrity-scourge-dagger-torch-pistol-warhorn",
+    "chat_code": "[&DQgTNic1PD0SAAAAgAAAACQXAACWCwAAkgAAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "traits": {
+      "line1": {
+        "spec_id": 19,
+        "traits": [
+          788,
+          789,
+          778
+        ]
+      },
+      "line2": {
+        "spec_id": 39,
+        "traits": [
+          1883,
+          816,
+          801
+        ]
+      },
+      "line3": {
+        "spec_id": 60,
+        "traits": [
+          2167,
+          2123,
+          2080
+        ]
+      }
+    },
+    "skills": {
+      "heal": 10527,
+      "utilities": [
+        10544,
+        42935,
+        10586
+      ],
+      "elite": 10549
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100153,
+      "food_id": 91748,
+      "utility_id": 43449,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 47937,
+          "stat_id": 559,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 47939,
+          "stat_id": 559,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 47935,
+          "stat_id": 559,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 47936,
+          "stat_id": 559,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 47938,
+          "stat_id": 559,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 47934,
+          "stat_id": 559,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 559,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 559,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 559,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 559,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 559,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 559,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 47007,
+          "stat_id": 559,
+          "upgrade_id": 48911,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 47022,
+          "stat_id": 559,
+          "upgrade_id": 24583,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 47014,
+          "stat_id": 559,
+          "upgrade_id": 48911,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 47024,
+          "stat_id": 559,
+          "upgrade_id": 24583,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "necromancer-condition-alacrity-scourge-scepter-torch-pistol",
+    "name": "Condition Alacrity Scourge (Scepter/Torch/Pistol)",
+    "profession": "Necromancer",
+    "elite_spec": "Scourge",
+    "build_type": "Condi",
+    "patch_version": "",
+    "benchmark_dps": 32404.0,
+    "notes": "Guild Wars 2 Condition Alacrity Scourge - Scepter & Torch / Pistol Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/necromancer/condition-alacrity-scourge-scepter-torch-pistol",
+    "chat_code": "[&DQgnNjI1PD5+FgAAgAAAAJYLAACWCwAAkgAAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "traits": {
+      "line1": {
+        "spec_id": 39,
+        "traits": [
+          2013,
+          816,
+          801
+        ]
+      },
+      "line2": {
+        "spec_id": 50,
+        "traits": [
+          875,
+          894,
+          905
+        ]
+      },
+      "line3": {
+        "spec_id": 60,
+        "traits": [
+          2074,
+          2123,
+          2080
+        ]
+      }
+    },
+    "skills": {
+      "heal": 43148,
+      "utilities": [
+        10544,
+        10586,
+        10586
+      ],
+      "elite": 10549
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100153,
+      "food_id": 95942,
+      "utility_id": 43449,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 96005,
+          "stat_id": 1694,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 97313,
+          "stat_id": 1694,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 96962,
+          "stat_id": 1694,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 96140,
+          "stat_id": 1694,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 97476,
+          "stat_id": 1694,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 96739,
+          "stat_id": 1694,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 76688,
+          "stat_id": 1268,
+          "upgrade_id": 44944,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 76271,
+          "stat_id": 1268,
+          "upgrade_id": 48911,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 72239,
+          "stat_id": 1268,
+          "upgrade_id": 44944,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "necromancer-condition-scourge-scepter-torch-pistol",
+    "name": "Condition Scourge (Scepter/Torch/Pistol)",
+    "profession": "Necromancer",
+    "elite_spec": "Scourge",
+    "build_type": "Condi",
+    "patch_version": "",
+    "benchmark_dps": 40060.0,
+    "notes": "Guild Wars 2 Condition Scourge - Scepter & Torch / Pistol Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/necromancer/condition-scourge-scepter-torch-pistol",
+    "chat_code": "[&DQgnNjI1PCp+FgAAgAAAAJYLAACWCwAAkgAAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "traits": {
+      "line1": {
+        "spec_id": 39,
+        "traits": [
+          2013,
+          816,
+          801
+        ]
+      },
+      "line2": {
+        "spec_id": 50,
+        "traits": [
+          875,
+          894,
+          905
+        ]
+      },
+      "line3": {
+        "spec_id": 60,
+        "traits": [
+          2074,
+          2067,
+          2164
+        ]
+      }
+    },
+    "skills": {
+      "heal": 43148,
+      "utilities": [
+        10544,
+        10586,
+        10586
+      ],
+      "elite": 10549
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100153,
+      "food_id": 95942,
+      "utility_id": 43449,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 75770,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 73225,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 71436,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 73852,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 75378,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 74264,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 76688,
+          "stat_id": 1268,
+          "upgrade_id": 44944,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 76271,
+          "stat_id": 1268,
+          "upgrade_id": 48911,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 72239,
+          "stat_id": 1268,
+          "upgrade_id": 44944,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "necromancer-heal-alacrity-scourge-staff-dagger-warhorn",
+    "name": "Heal Alacrity Scourge (Staff/Dagger/Warhorn)",
+    "profession": "Necromancer",
+    "elite_spec": "Scourge",
+    "build_type": "Heal",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Heal Alacrity Scourge - Staff / Dagger & Warhorn Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/necromancer/heal-alacrity-scourge-staff-dagger-warhorn",
+    "chat_code": "[&DQgTNic2PD0SAAAAJBcAAIAAAACWCwAAlQAAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "traits": {
+      "line1": {
+        "spec_id": 19,
+        "traits": [
+          788,
+          789,
+          778
+        ]
+      },
+      "line2": {
+        "spec_id": 39,
+        "traits": [
+          2013,
+          816,
+          801
+        ]
+      },
+      "line3": {
+        "spec_id": 60,
+        "traits": [
+          2167,
+          2123,
+          2080
+        ]
+      }
+    },
+    "skills": {
+      "heal": 10527,
+      "utilities": [
+        42935,
+        10544,
+        10586
+      ],
+      "elite": 10646
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 101139,
+      "food_id": 91690,
+      "utility_id": 67528,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 85161,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 85089,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 85098,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85004,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 84926,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 85317,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1037,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1430,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1377,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1430,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1430,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1037,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 85112,
+          "stat_id": 1377,
+          "upgrade_id": 72339,
+          "infusions": [
+            74326
+          ]
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 85051,
+          "stat_id": 1377,
+          "upgrade_id": 72339,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 84973,
+          "stat_id": 1377,
+          "upgrade_id": 74326,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "necromancer-heal-alacrity-scourge-dagger-torch-warhorn",
+    "name": "Heal Alacrity Scourge (Dagger/Torch/Warhorn)",
+    "profession": "Necromancer",
+    "elite_spec": "Scourge",
+    "build_type": "Heal",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Heal Alacrity Scourge - Dagger & Torch / Dagger & Warhorn Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/necromancer/heal-alacrity-scourge-dagger-torch-warhorn",
+    "chat_code": "[&DQgTNjIePD0SAAAAJBcAAJYLAACWCwAAlQAAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "traits": {
+      "line1": {
+        "spec_id": 19,
+        "traits": [
+          788,
+          789,
+          778
+        ]
+      },
+      "line2": {
+        "spec_id": 50,
+        "traits": [
+          898,
+          892,
+          889
+        ]
+      },
+      "line3": {
+        "spec_id": 60,
+        "traits": [
+          2167,
+          2123,
+          2080
+        ]
+      }
+    },
+    "skills": {
+      "heal": 10527,
+      "utilities": [
+        42935,
+        10586,
+        10586
+      ],
+      "elite": 10646
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 99965,
+      "food_id": 91690,
+      "utility_id": 67528,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 85161,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 85089,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 85098,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85004,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 84926,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 85317,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1037,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1430,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1377,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1430,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1430,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1037,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 85051,
+          "stat_id": 1377,
+          "upgrade_id": 72339,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 85013,
+          "stat_id": 1377,
+          "upgrade_id": 74326,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 85051,
+          "stat_id": 1377,
+          "upgrade_id": 72339,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 84973,
+          "stat_id": 1377,
+          "upgrade_id": 74326,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "necromancer-heal-alacrity-scourge-staff-dagger-torch",
+    "name": "Heal Alacrity Scourge (Staff/Dagger/Torch)",
+    "profession": "Necromancer",
+    "elite_spec": "Scourge",
+    "build_type": "Heal",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Heal Alacrity Scourge - Staff / Dagger & Torch Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/necromancer/heal-alacrity-scourge-staff-dagger-torch",
+    "chat_code": "[&DQgTNjIePD0SAAAAJBcAAJYLAACWCwAAlQAAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "traits": {
+      "line1": {
+        "spec_id": 19,
+        "traits": [
+          788,
+          789,
+          778
+        ]
+      },
+      "line2": {
+        "spec_id": 50,
+        "traits": [
+          898,
+          892,
+          889
+        ]
+      },
+      "line3": {
+        "spec_id": 60,
+        "traits": [
+          2167,
+          2123,
+          2080
+        ]
+      }
+    },
+    "skills": {
+      "heal": 10527,
+      "utilities": [
+        42935,
+        10586,
+        10586
+      ],
+      "elite": 10646
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 101116,
+      "food_id": 91690,
+      "utility_id": 67528,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 85161,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 85089,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 85098,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85004,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 84926,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 85317,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1037,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1430,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1377,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1430,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1430,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1037,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 85112,
+          "stat_id": 1377,
+          "upgrade_id": 72339,
+          "infusions": [
+            74326
+          ]
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 85051,
+          "stat_id": 1377,
+          "upgrade_id": 72339,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 85013,
+          "stat_id": 1377,
+          "upgrade_id": 74326,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "necromancer-kite-scourge-qadim-the-peerless",
+    "name": "Kite Scourge (Qadim the Peerless) (Qadim/Peerless)",
+    "profession": "Necromancer",
+    "elite_spec": "Scourge",
+    "build_type": "Power",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Kite Scourge (Qadim the Peerless) - Scepter & Torch / Pistol Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/necromancer/kite-scourge-qadim-the-peerless",
+    "chat_code": "[&DQgnPjI1PCqbAAAAgAAAAHgWAABvAQAAlQAAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "traits": {
+      "line1": {
+        "spec_id": 39,
+        "traits": [
+          2013,
+          812,
+          801
+        ]
+      },
+      "line2": {
+        "spec_id": 50,
+        "traits": [
+          875,
+          894,
+          905
+        ]
+      },
+      "line3": {
+        "spec_id": 60,
+        "traits": [
+          2074,
+          2067,
+          2164
+        ]
+      }
+    },
+    "skills": {
+      "heal": 10547,
+      "utilities": [
+        10544,
+        42917,
+        10611
+      ],
+      "elite": 10646
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100153,
+      "food_id": 91848,
+      "utility_id": 43449,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 75770,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 73225,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 71436,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 73852,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 75378,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 74264,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 76688,
+          "stat_id": 1268,
+          "upgrade_id": 48911,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 76271,
+          "stat_id": 1268,
+          "upgrade_id": 44944,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 72239,
+          "stat_id": 1268,
+          "upgrade_id": 48911,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "necromancer-condition-harbinger-pistol-torch-scepter-dagger",
+    "name": "Condition Harbinger (Pistol/Torch/Scepter/Dagger)",
+    "profession": "Necromancer",
+    "elite_spec": "Harbinger",
+    "build_type": "Condi",
+    "patch_version": "",
+    "benchmark_dps": 42276.0,
+    "notes": "Guild Wars 2 Condition Harbinger - Pistol & Torch / Scepter & Dagger Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/necromancer/condition-harbinger-pistol-torch-scepter-dagger",
+    "chat_code": "[&DQgnNTI1QD/nGgAAgAAAAHUBAAD1AAAA6BoAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "traits": {
+      "line1": {
+        "spec_id": 39,
+        "traits": [
+          1883,
+          816,
+          801
+        ]
+      },
+      "line2": {
+        "spec_id": 50,
+        "traits": [
+          875,
+          894,
+          905
+        ]
+      },
+      "line3": {
+        "spec_id": 64,
+        "traits": [
+          2185,
+          2209,
+          2203
+        ]
+      }
+    },
+    "skills": {
+      "heal": 62667,
+      "utilities": [
+        10544,
+        10622,
+        10562
+      ],
+      "elite": 62655
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100153,
+      "food_id": 95942,
+      "utility_id": 48917,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 75770,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 73225,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 71436,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 73852,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 75378,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 74264,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 72239,
+          "stat_id": 1268,
+          "upgrade_id": 48911,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 76271,
+          "stat_id": 1268,
+          "upgrade_id": 44950,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 76688,
+          "stat_id": 1268,
+          "upgrade_id": 24560,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 74179,
+          "stat_id": 1268,
+          "upgrade_id": 44944,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "necromancer-condition-quickness-harbinger-pistol-dagger-scepter-torch",
+    "name": "Condition Quickness Harbinger (Pistol/Dagger/Scepter/Torch)",
+    "profession": "Necromancer",
+    "elite_spec": "Harbinger",
+    "build_type": "Condi",
+    "patch_version": "",
+    "benchmark_dps": 35601.0,
+    "notes": "Guild Wars 2 Condition Quickness Harbinger - Pistol & Dagger / Scepter & Torch Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/necromancer/condition-quickness-harbinger-pistol-dagger-scepter-torch",
+    "chat_code": "[&DQgnNTI1QCvnGgAAgAAAAOwaAAB1AQAA6BoAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "traits": {
+      "line1": {
+        "spec_id": 39,
+        "traits": [
+          1883,
+          816,
+          801
+        ]
+      },
+      "line2": {
+        "spec_id": 50,
+        "traits": [
+          875,
+          894,
+          905
+        ]
+      },
+      "line3": {
+        "spec_id": 64,
+        "traits": [
+          2185,
+          2220,
+          2194
+        ]
+      }
+    },
+    "skills": {
+      "heal": 62667,
+      "utilities": [
+        10544,
+        62662,
+        10622
+      ],
+      "elite": 62655
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100153,
+      "food_id": 91878,
+      "utility_id": 48917,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 75770,
+          "stat_id": 1268,
+          "upgrade_id": 44956,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 73225,
+          "stat_id": 1268,
+          "upgrade_id": 44956,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 71436,
+          "stat_id": 1268,
+          "upgrade_id": 44956,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 73852,
+          "stat_id": 1268,
+          "upgrade_id": 44956,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 75378,
+          "stat_id": 1268,
+          "upgrade_id": 44956,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 74264,
+          "stat_id": 1268,
+          "upgrade_id": 44956,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 72239,
+          "stat_id": 1268,
+          "upgrade_id": 48911,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 74179,
+          "stat_id": 1268,
+          "upgrade_id": 44944,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 76688,
+          "stat_id": 1268,
+          "upgrade_id": 48911,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 76271,
+          "stat_id": 1268,
+          "upgrade_id": 44944,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "necromancer-power-harbinger-greatsword-spear",
+    "name": "Power Harbinger (Greatsword/Spear)",
+    "profession": "Necromancer",
+    "elite_spec": "Harbinger",
+    "build_type": "Power",
+    "patch_version": "",
+    "benchmark_dps": 41692.0,
+    "notes": "Guild Wars 2 Power Harbinger - Greatsword / Spear Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/necromancer/power-harbinger-greatsword-spear",
+    "chat_code": "[&DQg1KTIlQBXnGgAAQAEAAAAAAAB1AQAA6BoAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "traits": {
+      "line1": {
+        "spec_id": 53,
+        "traits": [
+          914,
+          829,
+          853
+        ]
+      },
+      "line2": {
+        "spec_id": 50,
+        "traits": [
+          875,
+          894,
+          893
+        ]
+      },
+      "line3": {
+        "spec_id": 64,
+        "traits": [
+          2188,
+          2192,
+          2218
+        ]
+      }
+    },
+    "skills": {
+      "heal": 62667,
+      "utilities": [
+        10607,
+        10674,
+        10622
+      ],
+      "elite": 62655
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 103574,
+      "food_id": 91805,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48135,
+          "stat_id": 753,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48083,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48079,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48080,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48082,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48078,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46762,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": [
+            24618
+          ]
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 46764,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": [
+            24618
+          ]
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "necromancer-power-harbinger-greatsword-sword-sword",
+    "name": "Power Harbinger (Greatsword/Sword/Sword)",
+    "profession": "Necromancer",
+    "elite_spec": "Harbinger",
+    "build_type": "Power",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Power Harbinger - Greatsword / Sword & Sword Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/necromancer/power-harbinger-greatsword-sword-sword",
+    "chat_code": "[&DQg1KTIlQBXnGgAAQAEAAAAAAAB1AQAA6BoAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "traits": {
+      "line1": {
+        "spec_id": 53,
+        "traits": [
+          914,
+          829,
+          853
+        ]
+      },
+      "line2": {
+        "spec_id": 50,
+        "traits": [
+          875,
+          894,
+          893
+        ]
+      },
+      "line3": {
+        "spec_id": 64,
+        "traits": [
+          2188,
+          2192,
+          2218
+        ]
+      }
+    },
+    "skills": {
+      "heal": 62667,
+      "utilities": [
+        10607,
+        10674,
+        10622
+      ],
+      "elite": 62655
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100947,
+      "food_id": 91805,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48135,
+          "stat_id": 753,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48083,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48079,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48080,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48082,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48078,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46762,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": [
+            24618
+          ]
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 46774,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 46774,
+          "stat_id": 1077,
+          "upgrade_id": 24618,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "necromancer-power-harbinger-greatsword-dagger-sword",
+    "name": "Power Harbinger (Greatsword/Dagger/Sword)",
+    "profession": "Necromancer",
+    "elite_spec": "Harbinger",
+    "build_type": "Power",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Power Harbinger - Greatsword / Dagger & Sword Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/necromancer/power-harbinger-greatsword-dagger-sword",
+    "chat_code": "[&DQg1KTIlQBXnGgAAQAEAAAAAAAB1AQAA6BoAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "traits": {
+      "line1": {
+        "spec_id": 53,
+        "traits": [
+          914,
+          829,
+          853
+        ]
+      },
+      "line2": {
+        "spec_id": 50,
+        "traits": [
+          875,
+          894,
+          893
+        ]
+      },
+      "line3": {
+        "spec_id": 64,
+        "traits": [
+          2188,
+          2192,
+          2218
+        ]
+      }
+    },
+    "skills": {
+      "heal": 62667,
+      "utilities": [
+        10607,
+        10674,
+        10622
+      ],
+      "elite": 62655
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100947,
+      "food_id": 91805,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48135,
+          "stat_id": 753,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48083,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48079,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48080,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48082,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48078,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46762,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": [
+            24618
+          ]
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 46760,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 46774,
+          "stat_id": 1077,
+          "upgrade_id": 24618,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "necromancer-power-quickness-harbinger-greatsword-spear",
+    "name": "Power Quickness Harbinger (Greatsword/Spear)",
+    "profession": "Necromancer",
+    "elite_spec": "Harbinger",
+    "build_type": "Power",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Power Quickness Harbinger - Greatsword / Spear Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/necromancer/power-quickness-harbinger-greatsword-spear",
+    "chat_code": "[&DQg1KTIlQCnnGgAAQAEAAAAAAADsGgAA6BoAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "traits": {
+      "line1": {
+        "spec_id": 53,
+        "traits": [
+          914,
+          829,
+          853
+        ]
+      },
+      "line2": {
+        "spec_id": 50,
+        "traits": [
+          875,
+          894,
+          893
+        ]
+      },
+      "line3": {
+        "spec_id": 64,
+        "traits": [
+          2188,
+          2220,
+          2194
+        ]
+      }
+    },
+    "skills": {
+      "heal": 62667,
+      "utilities": [
+        10607,
+        10674,
+        62662
+      ],
+      "elite": 62655
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100947,
+      "food_id": 91805,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48135,
+          "stat_id": 753,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48083,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48079,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48080,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48082,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48078,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46762,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": [
+            24618
+          ]
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 46764,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": [
+            24618
+          ]
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "necromancer-heal-quickness-ritualist-staff-dagger-warhorn",
+    "name": "Heal Quickness Ritualist (Staff/Dagger/Warhorn)",
+    "profession": "Necromancer",
+    "elite_spec": "Ritualist",
+    "build_type": "Heal",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Heal Quickness Ritualist - Staff / Dagger & Warhorn Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/necromancer/heal-quickness-ritualist-staff-dagger-warhorn",
+    "chat_code": "[&DQgTNjIeTCoSAAAAlgsAAJYLAACWCwAAlQAAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "traits": {
+      "line1": {
+        "spec_id": 19,
+        "traits": [
+          788,
+          789,
+          778
+        ]
+      },
+      "line2": {
+        "spec_id": 50,
+        "traits": [
+          898,
+          892,
+          889
+        ]
+      },
+      "line3": {
+        "spec_id": 76,
+        "traits": [
+          2378,
+          2405,
+          2333
+        ]
+      }
+    },
+    "skills": {
+      "heal": 10527,
+      "utilities": [
+        10586,
+        10586,
+        10586
+      ],
+      "elite": 10646
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 101139,
+      "food_id": 91690,
+      "utility_id": 67528,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 85161,
+          "stat_id": 1377,
+          "upgrade_id": 24839,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 85089,
+          "stat_id": 1377,
+          "upgrade_id": 24839,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 85098,
+          "stat_id": 1377,
+          "upgrade_id": 24839,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85004,
+          "stat_id": 1377,
+          "upgrade_id": 24839,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 84926,
+          "stat_id": 1377,
+          "upgrade_id": 24839,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 85317,
+          "stat_id": 1377,
+          "upgrade_id": 24839,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1430,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1430,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1430,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1377,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1430,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 79710,
+          "stat_id": 1037,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 85112,
+          "stat_id": 1377,
+          "upgrade_id": 24639,
+          "infusions": [
+            74326
+          ]
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 85051,
+          "stat_id": 1377,
+          "upgrade_id": 24639,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 84973,
+          "stat_id": 1377,
+          "upgrade_id": 74326,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "necromancer-power-quickness-ritualist-greatsword-spear",
+    "name": "Power Quickness Ritualist (Greatsword/Spear)",
+    "profession": "Necromancer",
+    "elite_spec": "Ritualist",
+    "build_type": "Power",
+    "patch_version": "",
+    "benchmark_dps": 36217.0,
+    "notes": "Guild Wars 2 Power Quickness Ritualist - Greatsword / Spear Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/necromancer/power-quickness-ritualist-greatsword-spear",
+    "chat_code": "[&DQg1KTIlTCuHHQAAdQEAAI4dAABVHQAAlQAAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "traits": {
+      "line1": {
+        "spec_id": 53,
+        "traits": [
+          914,
+          829,
+          853
+        ]
+      },
+      "line2": {
+        "spec_id": 50,
+        "traits": [
+          875,
+          894,
+          893
+        ]
+      },
+      "line3": {
+        "spec_id": 76,
+        "traits": [
+          2339,
+          2405,
+          2333
+        ]
+      }
+    },
+    "skills": {
+      "heal": 77259,
+      "utilities": [
+        10622,
+        76739,
+        76975
+      ],
+      "elite": 10646
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 103574,
+      "food_id": 91805,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48135,
+          "stat_id": 753,
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48083,
+          "stat_id": 1077,
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48079,
+          "stat_id": 1077,
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48080,
+          "stat_id": 1077,
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48082,
+          "stat_id": 1077,
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48078,
+          "stat_id": 1077,
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46762,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": [
+            24618
+          ]
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 46764,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": [
+            24618
+          ]
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "necromancer-power-ritualist-greatsword-spear",
+    "name": "Power Ritualist (Greatsword/Spear)",
+    "profession": "Necromancer",
+    "elite_spec": "Ritualist",
+    "build_type": "Power",
+    "patch_version": "",
+    "benchmark_dps": 42712.0,
+    "notes": "Guild Wars 2 Power Ritualist - Greatsword / Spear Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/necromancer/power-ritualist-greatsword-spear",
+    "chat_code": "[&DQg1KTIlTC+HHQAAdQEAAI4dAABVHQAAlQAAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "traits": {
+      "line1": {
+        "spec_id": 53,
+        "traits": [
+          914,
+          829,
+          853
+        ]
+      },
+      "line2": {
+        "spec_id": 50,
+        "traits": [
+          875,
+          894,
+          893
+        ]
+      },
+      "line3": {
+        "spec_id": 76,
+        "traits": [
+          2339,
+          2421,
+          2333
+        ]
+      }
+    },
+    "skills": {
+      "heal": 77259,
+      "utilities": [
+        10622,
+        76739,
+        76975
+      ],
+      "elite": 10646
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 103574,
+      "food_id": 91805,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48135,
+          "stat_id": 753,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48083,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48079,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48080,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48082,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48078,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46762,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": [
+            24618
+          ]
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 46764,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": [
+            24618
+          ]
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "necromancer-beginner-power-reaper-greatsword-dagger-sword",
+    "name": "Beginner Power Reaper (Greatsword/Dagger/Sword)",
+    "profession": "Necromancer",
+    "elite_spec": "Reaper",
+    "build_type": "Power",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Beginner Power Reaper - Greatsword / Dagger & Sword Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/necromancer/beginner-power-reaper-greatsword-dagger-sword",
+    "chat_code": "[&DQg1KTIlIjbBEgAAQAEAAAAAAADxEgAAlQAAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "traits": {
+      "line1": {
+        "spec_id": 53,
+        "traits": [
+          914,
+          829,
+          853
+        ]
+      },
+      "line2": {
+        "spec_id": 50,
+        "traits": [
+          875,
+          894,
+          893
+        ]
+      },
+      "line3": {
+        "spec_id": 34,
+        "traits": [
+          2020,
+          1969,
+          2021
+        ]
+      }
+    },
+    "skills": {
+      "heal": 30488,
+      "utilities": [
+        10607,
+        10674,
+        29414
+      ],
+      "elite": 10646
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100947,
+      "food_id": 91805,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48135,
+          "stat_id": 753,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48083,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48079,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48080,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48082,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48078,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46762,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": [
+            24618
+          ]
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 46760,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 46774,
+          "stat_id": 1077,
+          "upgrade_id": 24618,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "necromancer-beginner-condition-scourge-scepter-torch-pistol",
+    "name": "Beginner Condition Scourge (Scepter/Torch/Pistol)",
+    "profession": "Necromancer",
+    "elite_spec": "Scourge",
+    "build_type": "Condi",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Beginner Condition Scourge - Scepter & Torch / Pistol Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/necromancer/beginner-condition-scourge-scepter-torch-pistol",
+    "chat_code": "[&DQgnNjI1PCp+FgAAgAAAAG8BAACWCwAAkgAAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "traits": {
+      "line1": {
+        "spec_id": 39,
+        "traits": [
+          2013,
+          816,
+          801
+        ]
+      },
+      "line2": {
+        "spec_id": 50,
+        "traits": [
+          875,
+          894,
+          905
+        ]
+      },
+      "line3": {
+        "spec_id": 60,
+        "traits": [
+          2074,
+          2067,
+          2164
+        ]
+      }
+    },
+    "skills": {
+      "heal": 43148,
+      "utilities": [
+        10544,
+        10611,
+        10586
+      ],
+      "elite": 10549
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100153,
+      "food_id": 95942,
+      "utility_id": 43449,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 75770,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 73225,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 71436,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 73852,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 75378,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 74264,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 76688,
+          "stat_id": 1268,
+          "upgrade_id": 44944,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 76271,
+          "stat_id": 1268,
+          "upgrade_id": 48911,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 72239,
+          "stat_id": 1268,
+          "upgrade_id": 44944,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "necromancer-condition-reaper-greatsword-spear",
+    "name": "Condition Reaper (Greatsword/Spear)",
+    "profession": "Necromancer",
+    "elite_spec": "Reaper",
+    "build_type": "Condi",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Condition Reaper - Greatsword / Spear Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/necromancer/condition-reaper-greatsword-spear",
+    "chat_code": "[&DQgnNzInIibBEgAAQAEAAIAAAACmEgAAkgAAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "traits": {
+      "line1": {
+        "spec_id": 39,
+        "traits": [
+          815,
+          816,
+          801
+        ]
+      },
+      "line2": {
+        "spec_id": 50,
+        "traits": [
+          888,
+          894,
+          893
+        ]
+      },
+      "line3": {
+        "spec_id": 34,
+        "traits": [
+          2020,
+          1969,
+          1919
+        ]
+      }
+    },
+    "skills": {
+      "heal": 30488,
+      "utilities": [
+        10607,
+        10544,
+        30670
+      ],
+      "elite": 10549
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100153,
+      "food_id": 96578,
+      "utility_id": 48917,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 85296,
+          "stat_id": 1379,
+          "upgrade_id": 24762,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 85241,
+          "stat_id": 1379,
+          "upgrade_id": 24762,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 85319,
+          "stat_id": 1379,
+          "upgrade_id": 24762,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85048,
+          "stat_id": 1379,
+          "upgrade_id": 24762,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 85352,
+          "stat_id": 1379,
+          "upgrade_id": 24762,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 85007,
+          "stat_id": 1379,
+          "upgrade_id": 24762,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1379,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1379,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 85019,
+          "stat_id": 1379,
+          "upgrade_id": 44944,
+          "infusions": [
+            24560
+          ]
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 85254,
+          "stat_id": 1379,
+          "upgrade_id": 44944,
+          "infusions": [
+            24560
+          ]
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  }
+]

@@ -23,4 +23,8 @@ Response Get(const std::wstring& host, const std::wstring& path,
 Response GetWithBearer(const std::wstring& host, const std::wstring& path,
                        const std::string& api_key);
 
+/* Blocking GET with a real browser User-Agent — use for non-GW2-API web pages.
+ * Does NOT go through the GW2 API rate limiter. */
+Response GetPage(const std::wstring& host, const std::wstring& path);
+
 } /* namespace Http */

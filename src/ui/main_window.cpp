@@ -2,6 +2,9 @@
 #include "build_panel.h"
 #include "gear_panel.h"
 #include "dps_panel.h"
+#include "coach_window.h"
+#include "debug_window.h"
+#include "ui_scale.h"
 #include "../shared.h"
 #include "../api/gw2api.h"
 #include "../api/gw2names.h"
@@ -40,6 +43,16 @@ static char s_search_buf[128] = {};
 static bool s_show_settings = false;
 static char s_api_key_buf[73] = {};
 static char s_sc_url_buf[512] = {};
+
+/* Account name — fetched once to gate the coach popout */
+static std::atomic<bool> s_account_fetched{false};
+
+/* Active tab index — module-scope so it's readable before the tab bar renders */
+static int s_active_tab = 0;
+
+/* Previous game state — used to detect transitions that should clear focus */
+static uint32_t s_last_map_id    = 0;
+static bool     s_last_in_combat = false;
 
 static const char* PROF_FILTER_NAMES[] = {
     "All", "Guardian","Warrior","Engineer","Ranger","Thief",
@@ -116,6 +129,16 @@ static void DoRefresh()
     if (char_name.empty() && s_manual_char[0])
         char_name = s_manual_char;
 
+    /* Fetch account name once so the coach button can be gated on it */
+    if (!api_key.empty() && !s_account_fetched) {
+        std::string acct;
+        if (GW2API::FetchAccountName(api_key, acct)) {
+            std::lock_guard<std::mutex> lk(g_AccountNameMutex);
+            strncpy(g_AccountName, acct.c_str(), 63);
+            s_account_fetched = true;
+        }
+    }
+
     if (!api_key.empty() && !char_name.empty()) {
         GW2::PlayerBuild build;
         bool full_ok = GW2API::FetchFullPlayerBuild(api_key, char_name, build);
@@ -191,17 +214,17 @@ static void RenderSettings()
     }
 
     ImGui::Text("GW2 API Key (72 chars):");
-    ImGui::SetNextItemWidth(460);
+    ImGui::SetNextItemWidth(S(460));
     if (ImGui::InputText("##apikey", s_api_key_buf, sizeof(s_api_key_buf),
                          ImGuiInputTextFlags_Password)) {
         std::lock_guard<std::mutex> lock(g_APIKeyMutex);
         strncpy(g_APIKey, s_api_key_buf, 72);
     }
 
-    ImGui::Spacing();
-    ImGui::Text("Snow Crows data URL (leave blank to use local sc_builds.json):");
-    ImGui::SetNextItemWidth(460);
-    ImGui::InputText("##scurl", s_sc_url_buf, sizeof(s_sc_url_buf));
+    // ImGui::Spacing();
+    // ImGui::Text("Snow Crows data URL (leave blank to use local sc_builds.json):");
+    // ImGui::SetNextItemWidth(460);
+    // ImGui::InputText("##scurl", s_sc_url_buf, sizeof(s_sc_url_buf));
 
     ImGui::Spacing();
     if (ImGui::Button("Save & Refresh")) {
@@ -259,8 +282,8 @@ static std::string BuildDisplayLabel(const std::string& id,
 
 static void RenderBuildDropdown()
 {
-    ImGui::SetNextItemWidth(180);
-    ImGui::SetNextWindowSizeConstraints(ImVec2(0, 0), ImVec2(FLT_MAX, 300));
+    ImGui::SetNextItemWidth(S(180));
+    ImGui::SetNextWindowSizeConstraints(ImVec2(0, 0), ImVec2(FLT_MAX, S(300)));
     if (ImGui::BeginCombo("##prof_filter", PROF_FILTER_NAMES[s_filter_prof])) {
         for (int i = 0; i < 10; i++)
             if (ImGui::Selectable(PROF_FILTER_NAMES[i], s_filter_prof == i))
@@ -268,7 +291,7 @@ static void RenderBuildDropdown()
         ImGui::EndCombo();
     }
     ImGui::SameLine();
-    ImGui::SetNextItemWidth(140);
+    ImGui::SetNextItemWidth(S(140));
     if (ImGui::BeginCombo("##type_filter", TYPE_FILTER_NAMES[s_filter_type])) {
         for (int i = 0; i < 7; i++)
             if (ImGui::Selectable(TYPE_FILTER_NAMES[i], s_filter_type == i))
@@ -276,7 +299,7 @@ static void RenderBuildDropdown()
         ImGui::EndCombo();
     }
     ImGui::SameLine();
-    ImGui::SetNextItemWidth(180);
+    ImGui::SetNextItemWidth(S(180));
     ImGui::InputTextWithHint("##search", "Search...", s_search_buf, sizeof(s_search_buf));
 
     // Track whether the search box was active this frame
@@ -329,7 +352,7 @@ static void RenderBuildDropdown()
         cur_label = BuildDisplayLabel(sb.id, sb.name,
                                       std::string(GW2::ProfessionName(sb.profession)));
     }
-    ImGui::SetNextItemWidth(460);
+    ImGui::SetNextItemWidth(S(460));
     if (ImGui::BeginCombo("##build_select", cur_label.c_str())) {
         for (auto* b : filtered) {
             bool sel = (b->id == (s_selected_idx >= 0 ? s_sc_builds[s_selected_idx].id : ""));
@@ -387,43 +410,40 @@ void Render()
             RefreshData();
     }
 
+    /* Clear ImGui keyboard focus when the game changes state (map load, combat
+     * enter/exit) so the search box doesn't hijack game keyboard input. */
+    {
+        uint32_t cur_map = 0;
+        { std::lock_guard<std::mutex> lk(g_CharacterMutex); cur_map = g_Character.map_id; }
+        bool cur_combat = ArcDPS::IsInCombat();
+        if (cur_map != s_last_map_id || cur_combat != s_last_in_combat) {
+            ImGui::SetWindowFocus(nullptr);
+            s_last_map_id    = cur_map;
+            s_last_in_combat = cur_combat;
+        }
+    }
+
+    /* Popout windows are independent — render even when the main window is closed */
+    CoachWindow::Render();
+    DebugWindow::Render();
+
     if (!s_visible) return;
-    static int active_tab = 0;
 
-    // Auto-resize
-    if (active_tab == 1) {
-        // Gear tab
-        ImGui::SetNextWindowSize(ImVec2(870, 1105));
+    // Auto-resize — all sizes scale relative to the 2560×1440 reference resolution
+    if (s_active_tab == 1) {
+        ImGui::SetNextWindowSize(ImVec2(S(870), S(1105)));
+        ImGui::SetNextWindowSizeConstraints(
+            ImVec2(S(870), S(1105)), ImVec2(FLT_MAX, FLT_MAX));
     }
-    else if (active_tab == 2) {
-        // DPS tab = 40% of Build height
-        float dps_h = 675.0f * 0.40f;
-        ImGui::SetNextWindowSize(ImVec2(700, dps_h));
+    else if (s_active_tab == 2) {
+        ImGui::SetNextWindowSize(ImVec2(S(700), S(675) * 0.40f));
+        ImGui::SetNextWindowSizeConstraints(
+            ImVec2(S(700), S(675) * 0.40f), ImVec2(FLT_MAX, FLT_MAX));
     }
     else {
-        // Build tab
-        ImGui::SetNextWindowSize(ImVec2(700, 675));
-    }
-
-    // Min constraints
-    if (active_tab == 1) {
+        ImGui::SetNextWindowSize(ImVec2(S(700), S(675)));
         ImGui::SetNextWindowSizeConstraints(
-            ImVec2(870, 1105),
-            ImVec2(FLT_MAX, FLT_MAX)
-        );
-    }
-    else if (active_tab == 2) {
-        float dps_h = 675.0f * 0.40f;
-        ImGui::SetNextWindowSizeConstraints(
-            ImVec2(700, dps_h),
-            ImVec2(FLT_MAX, FLT_MAX)
-        );
-    }
-    else {
-        ImGui::SetNextWindowSizeConstraints(
-            ImVec2(700, 675),
-            ImVec2(FLT_MAX, FLT_MAX)
-        );
+            ImVec2(S(700), S(675)), ImVec2(FLT_MAX, FLT_MAX));
     }
 
     // FIRST AND ONLY Begin()
@@ -441,9 +461,21 @@ void Render()
     if (limited) ImGui::PopStyleVar();
     if (clicked && !limited) RefreshData();
     ImGui::SameLine();
-    if (ImGui::Button("Settings")) s_show_settings = !s_show_settings;
+    if (ImGui::Button("API Key")) s_show_settings = !s_show_settings;
     ImGui::SameLine();
     if (!s_status.empty()) ImGui::TextDisabled("%s", s_status.c_str());
+
+    /* Hidden coach + debug buttons — only rendered for account Todd.5124 */
+    {
+        char acct[64] = {};
+        { std::lock_guard<std::mutex> lk(g_AccountNameMutex); strncpy(acct, g_AccountName, 63); }
+        if (strcmp(acct, "Todd.5124") == 0) {
+            ImGui::SameLine();
+            if (ImGui::SmallButton("▶")) CoachWindow::Toggle();
+            ImGui::SameLine();
+            if (ImGui::SmallButton("DBG")) DebugWindow::Toggle();
+        }
+    }
 
     ImGui::Separator();
 
@@ -482,7 +514,7 @@ void Render()
                 if (s_char_list_fetching && !s_char_list_loaded) {
                     ImGui::TextDisabled("Loading...");
                 } else if (s_char_list_loaded && !s_char_list.empty()) {
-                    ImGui::SetNextItemWidth(240);
+                    ImGui::SetNextItemWidth(S(240));
                     const char* preview = s_manual_char[0] ? s_manual_char : "-- Select Character --";
                     if (ImGui::BeginCombo("##char_pick", preview)) {
                         for (const auto& n : s_char_list) {
@@ -503,31 +535,32 @@ void Render()
         }
     }
 
-    ImGui::Spacing();
-    ImGui::Text("Reference Build:");
-    ImGui::SameLine();
-    RenderBuildDropdown();
-
-    ImGui::Separator();
+    /* Reference Build row — hidden on DPS tab (not relevant there) */
+    if (s_active_tab != 2) {
+        ImGui::Spacing();
+        ImGui::Text("Reference Build:");
+        ImGui::SameLine();
+        RenderBuildDropdown();
+        ImGui::Separator();
+    }
 
     /* Tabs */
-
     if (ImGui::BeginTabBar("##tabs")) {
 
         if (ImGui::BeginTabItem("Build")) {
-            active_tab = 0;
+            s_active_tab = 0;
             BuildPanel::Render();
             ImGui::EndTabItem();
         }
 
         if (ImGui::BeginTabItem("Gear")) {
-            active_tab = 1;
+            s_active_tab = 1;
             GearPanel::Render();
             ImGui::EndTabItem();
         }
 
         if (ImGui::BeginTabItem("DPS")) {
-            active_tab = 2;
+            s_active_tab = 2;
             DpsPanel::Render();
             ImGui::EndTabItem();
         }

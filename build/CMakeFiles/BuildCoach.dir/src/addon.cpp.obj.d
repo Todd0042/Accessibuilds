@@ -412,45 +412,13 @@ CMakeFiles/BuildCoach.dir/src/addon.cpp.obj: \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/x86_64-w64-mingw32/bits/error_constants.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/ext/atomicity.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/x86_64-w64-mingw32/bits/atomic_word.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/fstream \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/istream \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/ios \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/exception \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/exception_ptr.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/cxxabi_init_exception.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/typeinfo \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/nested_exception.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/ios_base.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/locale_classes.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/locale_classes.tcc \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/system_error \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/stdexcept \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/streambuf \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/streambuf.tcc \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/basic_ios.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/locale_facets.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/cwctype \
- /usr/x86_64-w64-mingw32/include/wctype.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/x86_64-w64-mingw32/bits/ctype_base.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/streambuf_iterator.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/x86_64-w64-mingw32/bits/ctype_inline.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/locale_facets.tcc \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/basic_ios.tcc \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/ostream \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/ostream.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/ostream.tcc \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/istream.tcc \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/codecvt.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/x86_64-w64-mingw32/bits/basic_file.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++io.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/fstream.tcc \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/chrono \
  /home/todd/gw2-build-coach\ copy/src/ui/main_window.h \
  /home/todd/gw2-build-coach\ copy/src/ui/icon_cache.h \
  /home/todd/gw2-build-coach\ copy/src/arcdps/arcdps.h \
  /home/todd/gw2-build-coach\ copy/src/arcdps/arcdps_structs.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/functional \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/std_function.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/typeinfo \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/unordered_map \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/unordered_map.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/hashtable.h \
@@ -465,4 +433,5 @@ CMakeFiles/BuildCoach.dir/src/addon.cpp.obj: \
  /home/todd/gw2-build-coach\ copy/external/imgui/imconfig.h \
  /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/include/float.h \
  /usr/x86_64-w64-mingw32/include/float.h \
- /usr/x86_64-w64-mingw32/include/assert.h
+ /usr/x86_64-w64-mingw32/include/assert.h \
+ /home/todd/gw2-build-coach\ copy/src/icon_png.h

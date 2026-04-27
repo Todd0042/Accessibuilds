@@ -424,38 +424,6 @@ CMakeFiles/BuildCoach.dir/src/api/snowcrows.cpp.obj: \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/x86_64-w64-mingw32/bits/error_constants.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/ext/atomicity.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/x86_64-w64-mingw32/bits/atomic_word.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/fstream \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/istream \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/ios \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/exception \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/exception_ptr.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/cxxabi_init_exception.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/nested_exception.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/ios_base.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/locale_classes.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/locale_classes.tcc \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/system_error \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/stdexcept \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/streambuf \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/streambuf.tcc \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/basic_ios.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/locale_facets.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/cwctype \
- /usr/x86_64-w64-mingw32/include/wctype.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/x86_64-w64-mingw32/bits/ctype_base.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/streambuf_iterator.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/x86_64-w64-mingw32/bits/ctype_inline.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/locale_facets.tcc \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/basic_ios.tcc \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/ostream \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/ostream.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/ostream.tcc \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/istream.tcc \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/codecvt.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/x86_64-w64-mingw32/bits/basic_file.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++io.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/fstream.tcc \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/chrono \
  /home/todd/gw2-build-coach\ copy/external/nlohmann/json.hpp \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/algorithm \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/stl_algo.h \
@@ -467,6 +435,18 @@ CMakeFiles/BuildCoach.dir/src/api/snowcrows.cpp.obj: \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/pstl/execution_defs.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/iterator \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/stream_iterator.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/streambuf_iterator.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/streambuf \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/ios_base.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/locale_classes.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/locale_classes.tcc \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/system_error \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/stdexcept \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/exception \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/exception_ptr.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/cxxabi_init_exception.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/nested_exception.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/streambuf.tcc \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/memory \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/stl_raw_storage_iter.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/align.h \
@@ -520,14 +500,29 @@ CMakeFiles/BuildCoach.dir/src/api/snowcrows.cpp.obj: \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/fs_fwd.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/fs_path.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/locale \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/locale_facets.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/cwctype \
+ /usr/x86_64-w64-mingw32/include/wctype.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/x86_64-w64-mingw32/bits/ctype_base.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/x86_64-w64-mingw32/bits/ctype_inline.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/locale_facets.tcc \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/locale_facets_nonio.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/x86_64-w64-mingw32/bits/time_members.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/x86_64-w64-mingw32/bits/messages_members.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/codecvt.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/locale_facets_nonio.tcc \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/locale_conv.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/iomanip \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/quoted_string.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/sstream \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/istream \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/ios \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/basic_ios.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/basic_ios.tcc \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/ostream \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/ostream.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/ostream.tcc \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/istream.tcc \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/sstream.tcc \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/codecvt \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/fs_dir.h \
@@ -535,4 +530,8 @@ CMakeFiles/BuildCoach.dir/src/api/snowcrows.cpp.obj: \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/numeric \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/stl_numeric.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/pstl/glue_numeric_defs.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/any
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/any \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/fstream \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/x86_64-w64-mingw32/bits/basic_file.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++io.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/fstream.tcc

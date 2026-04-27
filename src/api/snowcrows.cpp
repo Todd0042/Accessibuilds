@@ -4,6 +4,11 @@
 #include <nlohmann/json.hpp>
 #include <fstream>
 #include <map>
+#include <sstream>
+#include <algorithm>
+#include <cstring>
+#include <ctime>
+#include <filesystem>
 
 using json = nlohmann::json;
 
@@ -71,16 +76,33 @@ static GW2::EliteSpec SpecFromString(const std::string& s)
     return it != tbl.end() ? it->second : GW2::EliteSpec::None;
 }
 
-static GW2::BuildType BuildTypeFromString(const std::string& s)
+static GW2::BuildType BuildTypeFromString(const std::string& s,
+                                          const std::string& name,
+                                          const std::string& notes)
 {
-    if (s == "Power")      return GW2::BuildType::Power;
-    if (s == "Condi")      return GW2::BuildType::Condi;
-    if (s == "Support")    return GW2::BuildType::Support;
-    if (s == "Heal")       return GW2::BuildType::Heal;
-    if (s == "Quickness")  return GW2::BuildType::Quickness;
-    if (s == "Alacrity")   return GW2::BuildType::Alacrity;
+    auto contains = [&](const std::string& hay, const std::string& needle) {
+        std::string h = hay, n = needle;
+        std::transform(h.begin(), h.end(), h.begin(), ::tolower);
+        std::transform(n.begin(), n.end(), n.begin(), ::tolower);
+        return h.find(n) != std::string::npos;
+    };
+
+    // Detect boon roles from name/notes
+    if (contains(name, "quick") || contains(notes, "quick"))
+        return GW2::BuildType::Quickness;
+
+    if (contains(name, "alac") || contains(notes, "alac"))
+        return GW2::BuildType::Alacrity;
+
+    // Fall back to SC's build_type field
+    if (s == "Power")   return GW2::BuildType::Power;
+    if (s == "Condi")   return GW2::BuildType::Condi;
+    if (s == "Heal")    return GW2::BuildType::Heal;
+    if (s == "Support") return GW2::BuildType::Support;
+
     return GW2::BuildType::Unknown;
 }
+
 
 static GW2::GearSlot SlotFromString(const std::string& s)
 {
@@ -107,12 +129,16 @@ bool ParseBuildJSON(const std::string& json_str, GW2::SCBuild& out)
         out.name        = j.value("name", "");
         out.profession  = ProfFromString(j.value("profession", ""));
         out.elite_spec  = SpecFromString(j.value("elite_spec", ""));
-        out.build_type  = BuildTypeFromString(j.value("build_type", ""));
         out.patch_version = j.value("patch_version", "");
         out.benchmark_dps = j.value("benchmark_dps", 0.0);
         out.notes       = j.value("notes", "");
         out.source_url  = j.value("source_url", "");
         out.chat_code   = j.value("chat_code", "");
+        out.build_type = BuildTypeFromString(
+            j.value("build_type", ""),
+            out.name,
+            out.notes
+        );
 
         /* Traits */
         if (j.contains("traits")) {
@@ -279,14 +305,73 @@ std::vector<const GW2::SCBuild*> FilterBuilds(
     GW2::Profession prof, GW2::EliteSpec spec, GW2::BuildType btype)
 {
     std::vector<const GW2::SCBuild*> result;
+
     for (const auto& b : builds) {
-        if (prof  != GW2::Profession::None  && b.profession != prof)  continue;
-        if (spec  != GW2::EliteSpec::None   && b.elite_spec != spec)  continue;
-        if (btype != GW2::BuildType::Unknown && b.build_type != btype) continue;
+
+        // Profession filter
+        if (prof != GW2::Profession::None && b.profession != prof)
+            continue;
+
+        // Elite spec filter
+        if (spec != GW2::EliteSpec::None && b.elite_spec != spec)
+            continue;
+
+        // -----------------------------
+        // ⭐ SUPPORT = Quickness OR Alacrity
+        // -----------------------------
+        if (btype == GW2::BuildType::Support) {
+            if (b.build_type == GW2::BuildType::Quickness ||
+                b.build_type == GW2::BuildType::Alacrity)
+            {
+                result.push_back(&b);
+            }
+            continue;
+        }
+
+        // -----------------------------
+        // ⭐ HEAL = (Quickness OR Alacrity) AND contains "heal"
+        //       OR pure Heal builds
+        // -----------------------------
+        if (btype == GW2::BuildType::Heal) {
+
+            bool isSupport =
+                (b.build_type == GW2::BuildType::Quickness ||
+                 b.build_type == GW2::BuildType::Alacrity);
+
+            bool isHealer =
+                (b.name.find("Heal")  != std::string::npos) ||
+                (b.notes.find("heal") != std::string::npos);
+
+            // Heal Quickness / Heal Alacrity
+            if (isSupport && isHealer) {
+                result.push_back(&b);
+                continue;
+            }
+
+            // Pure Heal builds
+            if (b.build_type == GW2::BuildType::Heal) {
+                result.push_back(&b);
+                continue;
+            }
+
+            continue;
+        }
+
+        // -----------------------------
+        // ⭐ Normal filtering
+        // -----------------------------
+        if (btype != GW2::BuildType::Unknown &&
+            b.build_type != btype)
+            continue;
+
         result.push_back(&b);
     }
+
     return result;
 }
+
+
+
 
 const GW2::SCBuild* FindBestMatch(const std::vector<GW2::SCBuild>& builds,
                                   const GW2::PlayerBuild& player)
@@ -301,6 +386,422 @@ const GW2::SCBuild* FindBestMatch(const std::vector<GW2::SCBuild>& builds,
             return &b;
     }
     return nullptr;
+}
+
+/* ── Rotation page scraping ────────────────────────────────────────────────── */
+
+static std::string SCStripTags(const std::string& s)
+{
+    std::string out;
+    out.reserve(s.size());
+    bool in_tag = false;
+    for (size_t i = 0; i < s.size(); i++) {
+        char c = s[i];
+        if      (c == '<') { in_tag = true;  continue; }
+        else if (c == '>') { in_tag = false; out += ' '; continue; }
+        if (in_tag) continue;
+        if (c == '&') {
+            struct { const char* e; char r; size_t n; } ents[] = {
+                {"&lt;",   '<', 4}, {"&gt;",   '>', 4},
+                {"&amp;",  '&', 5}, {"&nbsp;", ' ', 6},
+                {"&apos;", '\'',6}, {"&quot;", '"', 6},
+            };
+            bool matched = false;
+            for (auto& en : ents) {
+                if (s.compare(i, en.n, en.e) == 0) {
+                    out += en.r; i += en.n - 1; matched = true; break;
+                }
+            }
+            if (!matched) out += c;
+        } else {
+            out += c;
+        }
+    }
+    /* Collapse whitespace */
+    std::string clean; bool ws = true;
+    for (char c : out) {
+        bool sp = (c == ' ' || c == '\t' || c == '\n' || c == '\r');
+        if (sp) { if (!ws) clean += ' '; ws = true; }
+        else    { clean += c; ws = false; }
+    }
+    while (!clean.empty() && clean.back() == ' ') clean.pop_back();
+    return clean;
+}
+
+/* Extract all skill IDs from data-armory-embed="skills" tags in a chunk of HTML */
+static std::vector<uint32_t> ArmorySkillIds(const std::string& html)
+{
+    std::vector<uint32_t> ids;
+    std::string low = html;
+    std::transform(low.begin(), low.end(), low.begin(), ::tolower);
+
+    size_t pos = 0;
+    while (pos < low.size()) {
+        /* Find the start of an HTML tag */
+        size_t tag_s = low.find('<', pos);
+        if (tag_s == std::string::npos) break;
+        size_t tag_e = low.find('>', tag_s);
+        if (tag_e == std::string::npos) break;
+
+        std::string tag_low  = low.substr(tag_s, tag_e - tag_s + 1);
+        std::string tag_orig = html.substr(tag_s, tag_e - tag_s + 1);
+
+        /* Must have data-armory-embed="skills" AND data-armory-ids */
+        if (tag_low.find("data-armory-embed") != std::string::npos &&
+            tag_low.find("\"skills\"")         != std::string::npos &&
+            tag_low.find("data-armory-ids")    != std::string::npos)
+        {
+            /* Extract the value of data-armory-ids */
+            size_t ip = tag_low.find("data-armory-ids");
+            size_t eq = tag_low.find('=', ip);
+            if (eq != std::string::npos) {
+                size_t q1 = tag_low.find('"', eq); if (q1 != std::string::npos) q1++;
+                size_t q2 = (q1 != std::string::npos) ? tag_low.find('"', q1) : std::string::npos;
+                if (q1 != std::string::npos && q2 != std::string::npos) {
+                    std::string val = tag_orig.substr(q1, q2 - q1);
+                    /* Parse comma-separated IDs */
+                    std::istringstream ss(val);
+                    std::string tok;
+                    while (std::getline(ss, tok, ',')) {
+                        auto t = tok.find_first_not_of(" \t");
+                        if (t != std::string::npos) tok = tok.substr(t);
+                        auto e = tok.find_last_not_of(" \t");
+                        if (e != std::string::npos) tok = tok.substr(0, e + 1);
+                        try { if (!tok.empty()) ids.push_back((uint32_t)std::stoul(tok)); }
+                        catch (...) {}
+                    }
+                }
+            }
+        }
+        pos = tag_e + 1;
+    }
+    return ids;
+}
+
+/* Extract RotationItems from <li> and <p> elements within a section.
+ *
+ * Collects elements of both types, sorts by position, and skips any that
+ * are nested inside an already-captured element.  This prevents inner <li>
+ * closing tags from prematurely truncating the outer item's content. */
+static std::vector<RotationItem> ExtractItems(const std::string& html)
+{
+    std::vector<RotationItem> items;
+    std::string low = html;
+    std::transform(low.begin(), low.end(), low.begin(), ::tolower);
+
+    struct Span { size_t pos; size_t content_start; size_t content_end; };
+    std::vector<Span> spans;
+
+    auto collect = [&](const std::string& otag, const std::string& ctag) {
+        size_t p = 0;
+        while ((p = low.find(otag, p)) != std::string::npos) {
+            /* Verify it's really this tag — not <link>, <pre>, <paragraph>, etc. */
+            size_t n = p + otag.size();
+            char nc = (n < low.size()) ? low[n] : '\0';
+            if (nc != ' ' && nc != '>' && nc != '\t' && nc != '\n' && nc != '\r') {
+                p++;
+                continue;
+            }
+            size_t gt = low.find('>', p);
+            if (gt == std::string::npos) break;
+            size_t close_pos = low.find(ctag, gt + 1);
+            size_t chunk_end = (close_pos != std::string::npos) ? close_pos : html.size();
+            spans.push_back({p, gt + 1, chunk_end});
+            p = gt + 1;
+        }
+    };
+
+    collect("<li", "</li>");
+    collect("<p",  "</p>");
+
+    if (spans.empty()) return items;
+
+    std::sort(spans.begin(), spans.end(),
+              [](const Span& a, const Span& b) { return a.pos < b.pos; });
+
+    /* Walk in order; skip any span whose start falls inside the previous one */
+    size_t prev_end = 0;
+    for (const auto& sp : spans) {
+        if (sp.pos < prev_end) continue;  /* nested — already captured by parent */
+        prev_end = sp.content_end;
+
+        std::string chunk = html.substr(sp.content_start,
+                                        sp.content_end - sp.content_start);
+        RotationItem item;
+        item.skill_ids = ArmorySkillIds(chunk);
+        item.text      = SCStripTags(chunk);
+        if (item.text.size() >= 3 || !item.skill_ids.empty())
+            items.push_back(std::move(item));
+    }
+    return items;
+}
+
+bool FetchRotationPage(const std::string& url, ParsedRotation& out)
+{
+    /* Parse host/path from https://... URL */
+    if (url.size() < 9 || url.substr(0, 8) != "https://") {
+        Log(LOGL_WARNING, "SC rotation: URL must start with https://");
+        return false;
+    }
+    std::string stripped = url.substr(8);
+    auto slash = stripped.find('/');
+    if (slash == std::string::npos) return false;
+
+    std::wstring host(stripped.begin(), stripped.begin() + slash);
+    std::wstring path(stripped.begin() + slash, stripped.end());
+
+    auto resp = Http::GetPage(host, path);
+    if (!resp.ok()) {
+        char buf[128];
+        snprintf(buf, sizeof(buf), "SC rotation: HTTP %d — %s",
+                 resp.status_code, resp.error.c_str());
+        Log(LOGL_WARNING, buf);
+        return false;
+    }
+
+    std::string html = resp.body;   /* mutable working copy */
+    std::string low  = html;
+    std::transform(low.begin(), low.end(), low.begin(), ::tolower);
+
+    /* ── Pre-process: remove noise before rotation parsing ───────────────── */
+
+    /* 1. Hard-clamp at "Was this build helpful" — nothing after that is rotation */
+    {
+        /* Only truncate at phrases unique to the SC feedback footer.
+         * Generic words like "comments" match far too early in the page
+         * (HTML comments, JS, meta tags) and cut the rotation content off. */
+        static const char* markers[] = {
+            "was this build helpful",
+            "was this helpful",
+            nullptr
+        };
+        for (const char** m = markers; *m; ++m) {
+            size_t mp = low.find(*m);
+            if (mp != std::string::npos) {
+                /* Step back to the nearest tag boundary so we don't cut mid-tag */
+                while (mp > 0 && html[mp] != '<') --mp;
+                html.resize(mp);
+                low.resize(mp);
+                break;
+            }
+        }
+    }
+
+    /* 2. Erase block elements that contain navigation / sidebar garbage.
+     *    Simple (non-recursive) pass: removes the first-level <aside>, <nav>,
+     *    <header>, <footer> blocks.  Handles multiple instances per tag.      */
+    {
+        static const char* block_tags[] = {
+            "aside", "nav", "header", "footer", nullptr
+        };
+        for (const char** bt = block_tags; *bt; ++bt) {
+            std::string open  = std::string("<")  + *bt;
+            std::string close = std::string("</") + *bt + ">";
+            for (;;) {
+                size_t s = low.find(open);
+                if (s == std::string::npos) break;
+                /* Make sure it's really <aside / <nav (not <asideExtra>) */
+                size_t an = s + open.size();
+                char   nc = (an < low.size()) ? low[an] : '\0';
+                if (nc != ' ' && nc != '>' && nc != '\t' && nc != '\n') {
+                    /* Not this tag — blank the '<' so we don't loop forever */
+                    html[s] = ' '; low[s] = ' ';
+                    continue;
+                }
+                size_t e = low.find(close, s);
+                if (e == std::string::npos) break;  /* unclosed — leave alone */
+                e += close.size();
+                html.erase(s, e - s);
+                low.erase(s, e - s);
+            }
+        }
+    }
+
+    /* ── 1. Find the top-level "Rotation" heading ─────────────────────────── */
+    /* Look for the first h2 whose text contains "rotation" */
+    size_t rot_h2_start = std::string::npos;
+    {
+        size_t p = 0;
+        while ((p = low.find("<h2", p)) != std::string::npos) {
+            size_t gt = low.find('>', p);
+            if (gt == std::string::npos) { p++; continue; }
+            size_t clo = low.find("</h2>", gt);
+            if (clo == std::string::npos) clo = gt + 120;
+            if (low.find("rotation", gt + 1) < clo) {
+                rot_h2_start = gt + 1;
+                break;
+            }
+            p = gt;
+        }
+    }
+    /* Fallback: just find the word "rotation" if no h2 matches */
+    if (rot_h2_start == std::string::npos) {
+        size_t p = low.find("rotation");
+        if (p == std::string::npos) {
+            Log(LOGL_WARNING, "SC rotation: no rotation section found");
+            return false;
+        }
+        rot_h2_start = p;
+    }
+
+    /* Rotation section ends at the next peer <h2 */
+    size_t rot_h2_end = low.find("<h2", rot_h2_start + 10);
+    if (rot_h2_end == std::string::npos) rot_h2_end = html.size();
+
+    std::string rot_html = html.substr(rot_h2_start, rot_h2_end - rot_h2_start);
+    std::string rot_low  = rot_html;
+    std::transform(rot_low.begin(), rot_low.end(), rot_low.begin(), ::tolower);
+
+    /* ── 2. Split rotation section into subsections ───────────────────────── */
+    /* Use ONLY the highest heading level present in the rotation block.
+     * Mixing h3 + h4 interleaved would produce wrong content boundaries
+     * (e.g. an h4 sub-bullet inside "Opener" would split it into two sections). */
+    std::vector<std::pair<size_t, std::string>> subs; /* (pos_after_close_tag, title) */
+    {
+        const char* section_ht = nullptr;
+        for (const char* ht : {"<h3", "<h4", "<h5"}) {
+            size_t scan = 0;
+            while ((scan = rot_low.find(ht, scan)) != std::string::npos) {
+                size_t n = scan + strlen(ht);
+                char nc = (n < rot_low.size()) ? rot_low[n] : '\0';
+                if (nc == ' ' || nc == '>' || nc == '\t' || nc == '\n') {
+                    section_ht = ht;
+                    break;
+                }
+                scan++;
+            }
+            if (section_ht) break;
+        }
+
+        if (section_ht) {
+            std::string open_h  = section_ht;
+            std::string close_h = "</";
+            close_h += section_ht[1]; close_h += section_ht[2]; close_h += ">";
+            size_t p = 0;
+            while ((p = rot_low.find(open_h, p)) != std::string::npos) {
+                size_t n = p + open_h.size();
+                char nc = (n < rot_low.size()) ? rot_low[n] : '\0';
+                if (nc != ' ' && nc != '>' && nc != '\t' && nc != '\n') {
+                    p++;
+                    continue;
+                }
+                size_t gt = rot_low.find('>', p);
+                if (gt == std::string::npos) { p++; continue; }
+                size_t clo = rot_low.find(close_h, gt);
+                if (clo == std::string::npos) clo = gt + 100;
+                std::string title = SCStripTags(rot_html.substr(gt + 1, clo - gt - 1));
+                if (!title.empty())
+                    subs.push_back({clo + close_h.size(), title});
+                p = (clo + close_h.size() < rot_html.size())
+                    ? clo + close_h.size() : rot_html.size();
+            }
+        }
+    }
+
+    if (subs.empty()) {
+        /* No subsections — treat the whole rotation block as a single section */
+        RotationSection sec;
+        sec.title = "Rotation";
+        sec.items = ExtractItems(rot_html);
+        if (!sec.items.empty()) out.sections.push_back(std::move(sec));
+    } else {
+        /* Sort by position (different heading levels may have interleaved) */
+        std::sort(subs.begin(), subs.end(),
+                  [](const auto& a, const auto& b) { return a.first < b.first; });
+
+        for (size_t i = 0; i < subs.size(); i++) {
+            size_t content_start = subs[i].first;
+            size_t content_end   = (i + 1 < subs.size())
+                                   ? subs[i + 1].first : rot_html.size();
+            std::string content = rot_html.substr(content_start,
+                                                  content_end - content_start);
+            RotationSection sec;
+            sec.title = subs[i].second;
+            sec.items = ExtractItems(content);
+            if (!sec.items.empty() || !sec.title.empty())
+                out.sections.push_back(std::move(sec));
+        }
+    }
+
+    bool ok = !out.sections.empty();
+    if (!ok) Log(LOGL_WARNING, "SC rotation: parsed 0 sections");
+    return ok;
+}
+
+/* ── Rotation disk cache ────────────────────────────────────────────────── */
+
+static uint32_t UrlFNV(const std::string& s)
+{
+    uint32_t h = 2166136261u;
+    for (unsigned char c : s) h = (h ^ c) * 16777619u;
+    return h;
+}
+
+static std::string CacheFilePath(const std::string& url, const std::string& cache_dir)
+{
+    char hex[12];
+    snprintf(hex, sizeof(hex), "%08x", UrlFNV(url));
+    return cache_dir + "sc_rot_" + hex + ".json";
+}
+
+bool SaveRotationCache(const std::string& url, const ParsedRotation& rot,
+                       const std::string& cache_dir)
+{
+    try {
+        std::filesystem::create_directories(cache_dir);
+        json j;
+        j["url"]       = url;
+        j["timestamp"] = (int64_t)std::time(nullptr);
+        json jsecs = json::array();
+        for (const auto& sec : rot.sections) {
+            json jsec;
+            jsec["title"] = sec.title;
+            json jitems = json::array();
+            for (const auto& item : sec.items) {
+                json ji;
+                ji["text"] = item.text;
+                json jids = json::array();
+                for (uint32_t id : item.skill_ids) jids.push_back(id);
+                ji["skill_ids"] = jids;
+                jitems.push_back(std::move(ji));
+            }
+            jsec["items"] = std::move(jitems);
+            jsecs.push_back(std::move(jsec));
+        }
+        j["sections"] = std::move(jsecs);
+        std::ofstream f(CacheFilePath(url, cache_dir));
+        if (!f.is_open()) return false;
+        f << j.dump(2);
+        return true;
+    } catch (...) { return false; }
+}
+
+bool LoadRotationCache(const std::string& url, ParsedRotation& out,
+                       const std::string& cache_dir, int max_age_hours)
+{
+    try {
+        std::ifstream f(CacheFilePath(url, cache_dir));
+        if (!f.is_open()) return false;
+        std::string content((std::istreambuf_iterator<char>(f)),
+                             std::istreambuf_iterator<char>());
+        auto j = json::parse(content);
+        if (j.value("url", "") != url) return false;
+        int64_t age = (int64_t)std::time(nullptr) - j.value("timestamp", (int64_t)0);
+        if (age > (int64_t)max_age_hours * 3600) return false;
+        for (const auto& jsec : j["sections"]) {
+            RotationSection sec;
+            sec.title = jsec.value("title", "");
+            for (const auto& ji : jsec["items"]) {
+                RotationItem item;
+                item.text = ji.value("text", "");
+                for (const auto& jid : ji["skill_ids"])
+                    item.skill_ids.push_back((uint32_t)jid);
+                sec.items.push_back(std::move(item));
+            }
+            out.sections.push_back(std::move(sec));
+        }
+        return !out.sections.empty();
+    } catch (...) { return false; }
 }
 
 } /* namespace SnowCrows */

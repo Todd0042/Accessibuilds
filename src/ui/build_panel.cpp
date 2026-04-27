@@ -1,5 +1,6 @@
 #include "build_panel.h"
 #include "icon_renderer.h"
+#include "ui_scale.h"
 #include "../shared.h"
 #include "../build/comparator.h"
 #include "../api/gw2names.h"
@@ -24,7 +25,7 @@ static void RenderSpecLine(const GW2::SpecLine& player,
     bool spec_ok = (ref.spec_id == 0 || player.spec_id == ref.spec_id);
 
     /* Spec icon(s) */
-    float icon_sz = 48.f;
+    float icon_sz = S(48.f);
     IconRenderer::SpecIcon(player.spec_id, icon_sz);
     if (!spec_ok) {
         IconRenderer::Arrow();
@@ -57,13 +58,13 @@ static void RenderSpecLine(const GW2::SpecLine& player,
 
         if (!spec_ok) {
             /* Wrong spec: show what traits to pick once they switch */
-            IconRenderer::TraitIconRef(rt, 38.f);
+            IconRenderer::TraitIconRef(rt, S(38.f));
         } else if (ok) {
-            IconRenderer::TraitIcon(pt, 38.f, true);
+            IconRenderer::TraitIcon(pt, S(38.f), true);
         } else {
-            IconRenderer::TraitIcon(pt, 38.f, false);
+            IconRenderer::TraitIcon(pt, S(38.f), false);
             IconRenderer::Arrow();
-            IconRenderer::TraitIcon(rt, 38.f, true);
+            IconRenderer::TraitIcon(rt, S(38.f), true);
         }
     }
 
@@ -92,8 +93,8 @@ static void RenderSkillBar(const GW2::SkillBar& player,
         bool ok = skillOk(player.heal, ref.heal);
         ImGui::BeginGroup();
         ImGui::TextDisabled("Heal");
-        IconRenderer::SkillIcon(player.heal, 40.f, ok);
-        if (!ok) { ImGui::TextDisabled("-> SC:"); IconRenderer::SkillIconRef(ref.heal, 40.f); }
+        IconRenderer::SkillIcon(player.heal, S(40.f), ok);
+        if (!ok) { ImGui::TextDisabled("-> SC:"); IconRenderer::SkillIconRef(ref.heal, S(40.f)); }
         ImGui::EndGroup();
     }
 
@@ -109,7 +110,7 @@ static void RenderSkillBar(const GW2::SkillBar& player,
         bool ok = utilInRefSet(player.utilities[i]);
         ImGui::BeginGroup();
         ImGui::TextDisabled("Util %d", i + 1);
-        IconRenderer::SkillIcon(player.utilities[i], 40.f, ok);
+        IconRenderer::SkillIcon(player.utilities[i], S(40.f), ok);
         ImGui::EndGroup();
     }
 
@@ -119,7 +120,7 @@ static void RenderSkillBar(const GW2::SkillBar& player,
     ImGui::TextDisabled("SC:");
     for (int j = 0; j < 3; j++) {
         if (j > 0) ImGui::SameLine(0, 4);
-        IconRenderer::SkillIconRef(ref.utilities[j], 32.f);
+        IconRenderer::SkillIconRef(ref.utilities[j], S(32.f));
     }
     ImGui::EndGroup();
 
@@ -129,8 +130,8 @@ static void RenderSkillBar(const GW2::SkillBar& player,
         bool ok = skillOk(player.elite, ref.elite);
         ImGui::BeginGroup();
         ImGui::TextDisabled("Elite");
-        IconRenderer::SkillIcon(player.elite, 40.f, ok);
-        if (!ok) { ImGui::TextDisabled("-> SC:"); IconRenderer::SkillIconRef(ref.elite, 40.f); }
+        IconRenderer::SkillIcon(player.elite, S(40.f), ok);
+        if (!ok) { ImGui::TextDisabled("-> SC:"); IconRenderer::SkillIconRef(ref.elite, S(40.f)); }
         ImGui::EndGroup();
     }
 }
@@ -160,14 +161,14 @@ void Render()
     /* SC benchmark line with optional chat-link copy button */
     ImGui::TextColored(COL_REF, "SC Reference: %s", sc.name.c_str());
     if (sc.benchmark_dps > 0) {
-        ImGui::SameLine(300);
+        ImGui::SameLine(S(300));
         ImGui::TextColored(COL_NEUTRAL, "Benchmark: %.0f DPS", sc.benchmark_dps);
     }
 
     if (!sc.chat_code.empty()) {
         static auto s_copy_time = std::chrono::steady_clock::time_point{};
         ImGui::SameLine();
-        ImGui::SetCursorPosX(ImGui::GetWindowWidth() - 140.f);
+        ImGui::SetCursorPosX(ImGui::GetWindowWidth() - S(140.f));
         if (ImGui::Button("Copy Build Code")) {
             ImGui::SetClipboardText(sc.chat_code.c_str());
             s_copy_time = std::chrono::steady_clock::now();
@@ -251,12 +252,9 @@ void Render()
     if (ImGui::CollapsingHeader("Todd's Notes"))
         ImGui::TextWrapped(
             "This addon is meant to be a tool to assist in fast retreival of meta build "
-            "loadouts based completely on SnowCrows builds. I advise everyone to play the "
-            "build that they like and only use this as a reference of what would normally "
-            "be used. Anyone wishing to donate to this project should first consider "
-            "donating to the great people of snowcrows as all of this information comes "
-            "from their hard work and dedication. This addon is simply an in-game way of "
-            "seeing the information provided by them.");
+            "loadouts from the SnowCrows website. I advise everyone to play the build "
+            "that they enjoy and only use this as a reference. "
+            "Thanks for using my addon, reach out if you notice any issues. ~Todd.5124");
 
 }
 

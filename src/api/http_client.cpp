@@ -113,4 +113,79 @@ Response GetWithBearer(const std::wstring& host, const std::wstring& path,
     return DoGet(host, path, auth_header);
 }
 
+Response GetPage(const std::wstring& host, const std::wstring& path)
+{
+    /* Separate WinHTTP session with a real browser User-Agent so Cloudflare
+     * and similar CDN guards don't challenge or block the request. */
+    Response resp;
+
+    HINTERNET hSession = WinHttpOpen(
+        L"Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        L"AppleWebKit/537.36 (KHTML, like Gecko) "
+        L"Chrome/124.0.0.0 Safari/537.36",
+        WINHTTP_ACCESS_TYPE_DEFAULT_PROXY,
+        WINHTTP_NO_PROXY_NAME,
+        WINHTTP_NO_PROXY_BYPASS, 0);
+    if (!hSession) { resp.error = "WinHttpOpen failed"; return resp; }
+
+    HINTERNET hConnect = WinHttpConnect(hSession, host.c_str(),
+                                        INTERNET_DEFAULT_HTTPS_PORT, 0);
+    if (!hConnect) {
+        WinHttpCloseHandle(hSession);
+        resp.error = "WinHttpConnect failed";
+        return resp;
+    }
+
+    HINTERNET hRequest = WinHttpOpenRequest(
+        hConnect, L"GET", path.c_str(),
+        nullptr, WINHTTP_NO_REFERER,
+        WINHTTP_DEFAULT_ACCEPT_TYPES,
+        WINHTTP_FLAG_SECURE);
+    if (!hRequest) {
+        WinHttpCloseHandle(hConnect);
+        WinHttpCloseHandle(hSession);
+        resp.error = "WinHttpOpenRequest failed";
+        return resp;
+    }
+
+    WinHttpAddRequestHeaders(hRequest,
+        L"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\n"
+        L"Accept-Language: en-US,en;q=0.9\r\n",
+        (DWORD)-1L, WINHTTP_ADDREQ_FLAG_ADD);
+
+    if (!WinHttpSendRequest(hRequest, WINHTTP_NO_ADDITIONAL_HEADERS, 0,
+                            WINHTTP_NO_REQUEST_DATA, 0, 0, 0) ||
+        !WinHttpReceiveResponse(hRequest, nullptr)) {
+        WinHttpCloseHandle(hRequest);
+        WinHttpCloseHandle(hConnect);
+        WinHttpCloseHandle(hSession);
+        resp.error = "WinHttpSendRequest/ReceiveResponse failed";
+        return resp;
+    }
+
+    DWORD status = 0; DWORD ssz = sizeof(status);
+    WinHttpQueryHeaders(hRequest,
+        WINHTTP_QUERY_STATUS_CODE | WINHTTP_QUERY_FLAG_NUMBER,
+        WINHTTP_HEADER_NAME_BY_INDEX, &status, &ssz, WINHTTP_NO_HEADER_INDEX);
+    resp.status_code = (int)status;
+
+    /* Read until WinHttpReadData signals end-of-data with 0 bytes.
+     * WinHttpQueryDataAvailable can return 0 between chunks on large pages
+     * (SC HTML is ~500 KB), so drive the loop off the read result instead. */
+    char read_buf[65536];
+    DWORD bytes_read = 0;
+    do {
+        bytes_read = 0;
+        if (!WinHttpReadData(hRequest, read_buf, sizeof(read_buf), &bytes_read))
+            break;
+        if (bytes_read > 0)
+            resp.body.append(read_buf, bytes_read);
+    } while (bytes_read > 0);
+
+    WinHttpCloseHandle(hRequest);
+    WinHttpCloseHandle(hConnect);
+    WinHttpCloseHandle(hSession);
+    return resp;
+}
+
 } /* namespace Http */

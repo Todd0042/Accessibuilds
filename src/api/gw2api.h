@@ -39,6 +39,9 @@ bool FetchFullPlayerBuild(const std::string& api_key,
 bool FetchCharacterList(const std::string& api_key,
                         std::vector<std::string>& out_names);
 
+/* Fetch the account name (e.g. "Todd.5124") from /v2/account */
+bool FetchAccountName(const std::string& api_key, std::string& out_name);
+
 /* Resolve a stat set name from its ID (e.g. 161 -> "Berserker's") */
 std::string StatSetName(uint32_t stat_id);
 
