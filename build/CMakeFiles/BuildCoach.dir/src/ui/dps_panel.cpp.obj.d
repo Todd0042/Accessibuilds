@@ -430,4 +430,12 @@ CMakeFiles/BuildCoach.dir/src/ui/dps_panel.cpp.obj: \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/ext/aligned_buffer.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/enable_special_members.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/node_handle.h \
- /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/erase_if.h
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/erase_if.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/algorithm \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/stl_algo.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/algorithmfwd.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/stl_heap.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/uniform_int_dist.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/stl_tempbuf.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/pstl/glue_algorithm_defs.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/pstl/execution_defs.h

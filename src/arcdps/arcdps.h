@@ -48,7 +48,21 @@ uint64_t GetLastGW2Build();
 int      GetEventCount();
 int      GetDamageEventCount();
 
+/* Returns a copy of per-second DPS history for the current/last fight.
+ * Index 0 = first second, each value is total damage dealt in that second. */
+std::vector<float> GetDpsHistory();
+
+/* Healing Stats — requires the ArcDPS Healing Stats addon.
+ * IsHealAddonActive() returns true once any event from that addon has been received.
+ * Barrier is also tracked from the standard ArcDPS stream as a fallback. */
+double GetCurrentHPS();
+double GetCurrentBPS();   /* barrier per second */
+double GetPeakHPS();
+std::vector<float> GetHealHistory();
+std::vector<float> GetBarrierHistory();
+
 const std::vector<CastEvent>&  GetCastHistory();
+std::vector<CastEvent>         GetCastHistoryCopy();
 const std::vector<BoonUptime>& GetBoonUptimes();
 
 std::vector<CoachingNote> AnalyseRotation(const GW2::SCBuild& reference);

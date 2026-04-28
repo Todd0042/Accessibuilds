@@ -49,6 +49,8 @@ static std::atomic<bool> s_account_fetched{false};
 
 /* Active tab index — module-scope so it's readable before the tab bar renders */
 static int s_active_tab = 0;
+/* Track which tab we last auto-resized for — only resize on tab change, not every frame */
+static int s_resize_for_tab = -1;
 
 /* Previous game state — used to detect transitions that should clear focus */
 static uint32_t s_last_map_id    = 0;
@@ -429,22 +431,19 @@ void Render()
 
     if (!s_visible) return;
 
-    // Auto-resize — all sizes scale relative to the 2560×1440 reference resolution
-    if (s_active_tab == 1) {
-        ImGui::SetNextWindowSize(ImVec2(S(870), S(1105)));
-        ImGui::SetNextWindowSizeConstraints(
-            ImVec2(S(870), S(1105)), ImVec2(FLT_MAX, FLT_MAX));
+    /* On tab switch, snap window to a sensible starting size for that tab.
+     * After that the player can freely resize — we don't force it every frame. */
+    if (s_active_tab != s_resize_for_tab) {
+        if (s_active_tab == 1)
+            ImGui::SetNextWindowSize(ImVec2(S(870), S(1105)));
+        else if (s_active_tab == 2)
+            ImGui::SetNextWindowSize(ImVec2(S(700), S(480)));
+        else
+            ImGui::SetNextWindowSize(ImVec2(S(700), S(675)));
+        s_resize_for_tab = s_active_tab;
     }
-    else if (s_active_tab == 2) {
-        ImGui::SetNextWindowSize(ImVec2(S(700), S(675) * 0.40f));
-        ImGui::SetNextWindowSizeConstraints(
-            ImVec2(S(700), S(675) * 0.40f), ImVec2(FLT_MAX, FLT_MAX));
-    }
-    else {
-        ImGui::SetNextWindowSize(ImVec2(S(700), S(675)));
-        ImGui::SetNextWindowSizeConstraints(
-            ImVec2(S(700), S(675)), ImVec2(FLT_MAX, FLT_MAX));
-    }
+    /* Minimum size only — never force a max or clamp the player's chosen size */
+    ImGui::SetNextWindowSizeConstraints(ImVec2(S(350), S(200)), ImVec2(FLT_MAX, FLT_MAX));
 
     // FIRST AND ONLY Begin()
     if (!ImGui::Begin("BuildCoach", &s_visible)) {

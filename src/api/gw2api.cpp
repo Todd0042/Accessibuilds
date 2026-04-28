@@ -488,14 +488,16 @@ static void LoadPublicCache()
             std::lock_guard<std::mutex> lk(s_pubcache_mutex);
             s_pubcache_build = gw2_build;
             s_pubcache_specs.clear();
-            for (auto& [sid_str, arr] : j.value("specs", json::object()).items()) {
+            json specs_j = j.value("specs", json::object());
+            for (auto& [sid_str, arr] : specs_j.items()) {
                 uint32_t sid = (uint32_t)std::stoul(sid_str);
                 std::vector<uint32_t> major;
                 for (auto& v : arr) major.push_back(v.get<uint32_t>());
                 if ((int)major.size() == 9) s_pubcache_specs[sid] = std::move(major);
             }
             s_pubcache_profs.clear();
-            for (auto& [prof, map_j] : j.value("profs", json::object()).items()) {
+            json profs_j = j.value("profs", json::object());
+            for (auto& [prof, map_j] : profs_j.items()) {
                 std::map<uint32_t, uint32_t> m;
                 for (auto& [sk_str, pal_j] : map_j.items())
                     m[(uint32_t)std::stoul(sk_str)] = pal_j.get<uint32_t>();

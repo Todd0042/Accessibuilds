@@ -61,6 +61,7 @@ target_compile_options(BuildCoach PRIVATE
     -Wno-unused-parameter
     -Wno-unused-function
     -Wno-stringop-truncation
+    -Wno-maybe-uninitialized
     -O2
     -Wno-unknown-pragmas
 )

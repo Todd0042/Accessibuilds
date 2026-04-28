@@ -148,7 +148,6 @@ struct ag {
  */
 #define EV_ARCDPS_COMBATEVENT_LOCAL_RAW  "EV_ARCDPS_COMBATEVENT_LOCAL_RAW"
 #define EV_ARCDPS_COMBATEVENT_SQUAD_RAW  "EV_ARCDPS_COMBATEVENT_SQUAD_RAW"
-
 /* Payload passed with the above events */
 struct ArcDPSCombatEventArgs {
     cbtevent* ev;   /* may be null (state change only) */

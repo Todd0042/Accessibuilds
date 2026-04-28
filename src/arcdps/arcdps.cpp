@@ -23,6 +23,23 @@ static std::mutex              s_mutex;
 struct DmgSample { uint64_t time_ms; int64_t dmg; };
 static std::deque<DmgSample> s_window10;
 
+/* Per-second DPS history — one float per completed second of fight time */
+static std::vector<float> s_dps_history;
+static uint64_t           s_history_sec  = 0;   /* last completed second index */
+static int64_t            s_sec_damage   = 0;   /* damage in the current second */
+
+/* Heal / barrier tracking (ArcDPS Healing Stats addon + standard barrier stream) */
+static int64_t            s_total_heal    = 0;
+static int64_t            s_total_barrier = 0;
+static double             s_current_hps   = 0.0;
+static double             s_current_bps   = 0.0;
+static double             s_peak_hps      = 0.0;
+static std::vector<float> s_heal_history;
+static std::vector<float> s_barrier_history;
+static uint64_t           s_hs_history_sec = 0;
+static int64_t            s_sec_heal       = 0;
+static int64_t            s_sec_barrier    = 0;
+
 static GW2BuildChangedCb    s_build_changed_cb;
 
 static uint16_t s_player_instid = 0;   /* set from CBTS_ENTERCOMBAT for pet detection */
@@ -86,9 +103,22 @@ void ResetFight()
     s_boon_start_ms.clear();
     s_boon_stacks.clear();
     s_window10.clear();
+    s_dps_history.clear();
+    s_history_sec     = 0;
+    s_sec_damage      = 0;
     s_total_damage    = 0;
     s_current_dps     = 0.0;
     s_peak_dps        = 0.0;
+    s_total_heal      = 0;
+    s_total_barrier   = 0;
+    s_current_hps     = 0.0;
+    s_current_bps     = 0.0;
+    s_peak_hps        = 0.0;
+    s_heal_history.clear();
+    s_barrier_history.clear();
+    s_hs_history_sec  = 0;
+    s_sec_heal        = 0;
+    s_sec_barrier     = 0;
     s_ev_ring_head    = 0;
     s_ev_ring_count   = 0;
     s_combat_enter_ms = Now();
@@ -122,6 +152,34 @@ uint64_t GetFightDurationMs()
 
 const std::vector<CastEvent>&  GetCastHistory()  { return s_casts; }
 const std::vector<BoonUptime>& GetBoonUptimes()  { return s_boons; }
+
+std::vector<CastEvent> GetCastHistoryCopy()
+{
+    std::lock_guard<std::mutex> lk(s_mutex);
+    return s_casts;
+}
+
+std::vector<float> GetDpsHistory()
+{
+    std::lock_guard<std::mutex> lk(s_mutex);
+    return s_dps_history;
+}
+
+double GetCurrentHPS()     { return s_current_hps; }
+double GetCurrentBPS()     { return s_current_bps; }
+double GetPeakHPS()        { return s_peak_hps; }
+
+std::vector<float> GetHealHistory()
+{
+    std::lock_guard<std::mutex> lk(s_mutex);
+    return s_heal_history;
+}
+
+std::vector<float> GetBarrierHistory()
+{
+    std::lock_guard<std::mutex> lk(s_mutex);
+    return s_barrier_history;
+}
 
 /* ── Nexus combat event callback ─────────────────────────────────────────── */
 void OnLocalCombatEvent(void* aEventArgs)
@@ -177,6 +235,19 @@ void OnLocalCombatEvent(void* aEventArgs)
         s_ev_ring_head    = 0;
         s_ev_ring_count   = 0;
         s_window10.clear();
+        s_dps_history.clear();
+        s_history_sec     = 0;
+        s_sec_damage      = 0;
+        s_total_heal      = 0;
+        s_total_barrier   = 0;
+        s_current_hps     = 0.0;
+        s_current_bps     = 0.0;
+        s_peak_hps        = 0.0;
+        s_heal_history.clear();
+        s_barrier_history.clear();
+        s_hs_history_sec  = 0;
+        s_sec_heal        = 0;
+        s_sec_barrier     = 0;
         s_casts.clear();
         s_boon_uptime_ms.clear();
         s_boon_start_ms.clear();
@@ -237,13 +308,19 @@ void OnLocalCombatEvent(void* aEventArgs)
                            ev->is_buffremove == CBTB_NONE && ev->buff_dmg > 0);
         bool condi_b    = (!ev->is_statechange && !ev->is_activation && ev->buff &&
                            ev->is_buffremove == CBTB_NONE && ev->buff_dmg < 0 && ev->iff == IFF_FOE);
-        const char* tag = direct_hit ? "DIRECT" : condi_a ? "CONDI-A" : condi_b ? "CONDI-B" : "skip";
+        bool outgoing_heal    = (!ev->is_statechange && !ev->is_activation && !ev->buff &&
+                                 !ev->is_shields && ev->value > 0 && ev->iff == IFF_FRIEND && src_is_self);
+        bool outgoing_barrier = (!ev->is_statechange && !ev->is_activation && ev->is_shields &&
+                                 ev->iff == IFF_FRIEND && src_is_self &&
+                                 (ev->value > 0 || (ev->buff && ev->buff_dmg > 0)));
+        const char* tag = direct_hit ? "DIRECT" : condi_a ? "CONDI-A" : condi_b ? "CONDI-B"
+                        : outgoing_heal ? "HEAL" : outgoing_barrier ? "BARRIER" : "skip";
         snprintf(s_ev_ring[s_ev_ring_head], 256,
-                 "ArcDPS ev#%02d: sc=%d act=%d buff=%d br=%d val=%d bdmg=%d "
+                 "ArcDPS ev#%02d: sc=%d act=%d buff=%d br=%d shld=%d val=%d bdmg=%d "
                  "iff=%d res=%d skill=%u self=%d pet=%d t_ms=%llu [%s]",
                  s_ev_ring_count,
                  (int)ev->is_statechange, (int)ev->is_activation, (int)ev->buff,
-                 (int)ev->is_buffremove, ev->value, ev->buff_dmg,
+                 (int)ev->is_buffremove, (int)ev->is_shields, ev->value, ev->buff_dmg,
                  (int)ev->iff, (int)ev->result, ev->skillid,
                  src_is_self ? 1 : 0, src_is_pet ? 1 : 0,
                  (unsigned long long)fight_ms, tag);
@@ -273,6 +350,7 @@ void OnLocalCombatEvent(void* aEventArgs)
         ev->value < 0 && (src_is_self || src_is_pet)) {
         int64_t dmg = (int64_t)(-ev->value);
         s_total_damage += dmg;
+        s_sec_damage   += dmg;
         s_window10.push_back({Now(), dmg});
         s_ev_damage++;
     }
@@ -280,6 +358,7 @@ void OnLocalCombatEvent(void* aEventArgs)
     if (!ev->is_statechange && !ev->is_activation && ev->buff &&
         ev->is_buffremove == CBTB_NONE && ev->buff_dmg > 0) {
         s_total_damage += ev->buff_dmg;
+        s_sec_damage   += ev->buff_dmg;
         s_window10.push_back({Now(), ev->buff_dmg});
         s_ev_damage++;
     }
@@ -289,6 +368,7 @@ void OnLocalCombatEvent(void* aEventArgs)
         ev->is_buffremove == CBTB_NONE && ev->buff_dmg < 0 && ev->iff == IFF_FOE) {
         int64_t dmg = (int64_t)(-ev->buff_dmg);
         s_total_damage += dmg;
+        s_sec_damage   += dmg;
         s_window10.push_back({Now(), dmg});
         s_ev_damage++;
     }
@@ -296,6 +376,48 @@ void OnLocalCombatEvent(void* aEventArgs)
     if (s_total_damage > 0 && fight_ms > 0) {
         s_current_dps = (double)s_total_damage / (fight_ms / 1000.0);
         if (s_current_dps > s_peak_dps) s_peak_dps = s_current_dps;
+    }
+
+    /* Outgoing heals — direct (buff=0, non-barrier, positive value to a friendly from local player) */
+    if (!ev->is_statechange && !ev->is_activation && !ev->buff &&
+        !ev->is_shields && ev->value > 0 && ev->iff == IFF_FRIEND && src_is_self) {
+        s_total_heal += ev->value;
+        s_sec_heal   += ev->value;
+    }
+    /* Outgoing barrier — is_shields=1 to a friendly from local player.
+     * Direct form: buff=0, value>0.  Buff-tick form: buff=1, buff_dmg>0, value=0. */
+    if (!ev->is_statechange && !ev->is_activation && ev->is_shields &&
+        ev->iff == IFF_FRIEND && (src_is_self || src_is_pet)) {
+        int32_t amount = ev->value > 0 ? ev->value
+                       : (ev->buff && ev->buff_dmg > 0 ? ev->buff_dmg : 0);
+        if (amount > 0) {
+            s_total_barrier += amount;
+            s_sec_barrier   += amount;
+        }
+    }
+
+    /* Update HPS / BPS */
+    if (fight_ms > 0) {
+        s_current_hps = (double)s_total_heal    / (fight_ms / 1000.0);
+        s_current_bps = (double)s_total_barrier / (fight_ms / 1000.0);
+        if (s_current_hps > s_peak_hps) s_peak_hps = s_current_hps;
+    }
+
+    /* Advance per-second histories — DPS, heal, and barrier */
+    {
+        uint64_t fight_sec = fight_ms / 1000;
+        while (fight_sec > s_history_sec) {
+            s_dps_history.push_back((float)s_sec_damage);
+            s_sec_damage = 0;
+            ++s_history_sec;
+        }
+        while (fight_sec > s_hs_history_sec) {
+            s_heal_history.push_back((float)s_sec_heal);
+            s_barrier_history.push_back((float)s_sec_barrier);
+            s_sec_heal    = 0;
+            s_sec_barrier = 0;
+            ++s_hs_history_sec;
+        }
     }
 
     /* Boon apply */

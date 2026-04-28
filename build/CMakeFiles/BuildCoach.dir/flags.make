@@ -6,5 +6,5 @@ CXX_DEFINES = -DBuildCoach_EXPORTS
 
 CXX_INCLUDES = @CMakeFiles/BuildCoach.dir/includes_CXX.rsp
 
-CXX_FLAGS = -O3 -DNDEBUG -std=gnu++17 -Wall -Wextra -Wno-unused-parameter -Wno-unused-function -Wno-stringop-truncation -O2 -Wno-unknown-pragmas
+CXX_FLAGS = -O3 -DNDEBUG -std=gnu++17 -Wall -Wextra -Wno-unused-parameter -Wno-unused-function -Wno-stringop-truncation -Wno-maybe-uninitialized -O2 -Wno-unknown-pragmas
 
