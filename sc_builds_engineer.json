@@ -143,9 +143,8 @@
           "item_id": 73580,
           "stat_id": 1268,
           "upgrade_id": 44944,
-          "infusions": [
-            24605
-          ]
+          "infusions": [],
+          "upgrade2_id": 24605
         }
       ]
     },
@@ -458,9 +457,8 @@
           "item_id": 86706,
           "stat_id": 1430,
           "upgrade_id": 74326,
-          "infusions": [
-            24639
-          ]
+          "infusions": [],
+          "upgrade2_id": 24639
         }
       ]
     },
@@ -613,9 +611,8 @@
           "item_id": 46763,
           "stat_id": 1077,
           "upgrade_id": 24615,
-          "infusions": [
-            24868
-          ]
+          "infusions": [],
+          "upgrade2_id": 24868
         }
       ]
     },
@@ -768,9 +765,8 @@
           "item_id": 46763,
           "stat_id": 1077,
           "upgrade_id": 24615,
-          "infusions": [
-            24868
-          ]
+          "infusions": [],
+          "upgrade2_id": 24868
         }
       ]
     },
@@ -923,9 +919,8 @@
           "item_id": 73580,
           "stat_id": 1268,
           "upgrade_id": 24560,
-          "infusions": [
-            44944
-          ]
+          "infusions": [],
+          "upgrade2_id": 44944
         }
       ]
     },
@@ -1245,9 +1240,8 @@
           "item_id": 73580,
           "stat_id": 1268,
           "upgrade_id": 24605,
-          "infusions": [
-            44944
-          ]
+          "infusions": [],
+          "upgrade2_id": 44944
         }
       ]
     },
@@ -1400,9 +1394,8 @@
           "item_id": 73580,
           "stat_id": 1268,
           "upgrade_id": 24605,
-          "infusions": [
-            24560
-          ]
+          "infusions": [],
+          "upgrade2_id": 24560
         }
       ]
     },
@@ -1555,9 +1548,8 @@
           "item_id": 73580,
           "stat_id": 1268,
           "upgrade_id": 24560,
-          "infusions": [
-            24605
-          ]
+          "infusions": [],
+          "upgrade2_id": 24605
         }
       ]
     },
@@ -1710,9 +1702,8 @@
           "item_id": 73580,
           "stat_id": 1268,
           "upgrade_id": 44944,
-          "infusions": [
-            24605
-          ]
+          "infusions": [],
+          "upgrade2_id": 24605
         }
       ]
     },
@@ -1865,9 +1856,8 @@
           "item_id": 73580,
           "stat_id": 1268,
           "upgrade_id": 24560,
-          "infusions": [
-            48911
-          ]
+          "infusions": [],
+          "upgrade2_id": 48911
         }
       ]
     },
@@ -2180,9 +2170,8 @@
           "item_id": 86706,
           "stat_id": 1430,
           "upgrade_id": 74326,
-          "infusions": [
-            24639
-          ]
+          "infusions": [],
+          "upgrade2_id": 24639
         }
       ]
     },
@@ -2662,9 +2651,8 @@
           "item_id": 46768,
           "stat_id": 1077,
           "upgrade_id": 24615,
-          "infusions": [
-            24554
-          ]
+          "infusions": [],
+          "upgrade2_id": 24554
         }
       ]
     },
@@ -2984,9 +2972,8 @@
           "item_id": 46768,
           "stat_id": 1077,
           "upgrade_id": 24615,
-          "infusions": [
-            24554
-          ]
+          "infusions": [],
+          "upgrade2_id": 24554
         }
       ]
     },
@@ -3139,9 +3126,8 @@
           "item_id": 73580,
           "stat_id": 1268,
           "upgrade_id": 44944,
-          "infusions": [
-            24560
-          ]
+          "infusions": [],
+          "upgrade2_id": 24560
         }
       ]
     },
@@ -3294,9 +3280,8 @@
           "item_id": 73580,
           "stat_id": 1268,
           "upgrade_id": 44944,
-          "infusions": [
-            24560
-          ]
+          "infusions": [],
+          "upgrade2_id": 24560
         }
       ]
     },
@@ -3449,9 +3434,8 @@
           "item_id": 73580,
           "stat_id": 1268,
           "upgrade_id": 44944,
-          "infusions": [
-            24560
-          ]
+          "infusions": [],
+          "upgrade2_id": 24560
         }
       ]
     },
@@ -3604,9 +3588,8 @@
           "item_id": 73580,
           "stat_id": 1268,
           "upgrade_id": 24605,
-          "infusions": [
-            24609
-          ]
+          "infusions": [],
+          "upgrade2_id": 24609
         }
       ]
     },
@@ -3759,9 +3742,8 @@
           "item_id": 86706,
           "stat_id": 1430,
           "upgrade_id": 74326,
-          "infusions": [
-            24639
-          ]
+          "infusions": [],
+          "upgrade2_id": 24639
         }
       ]
     },
@@ -4074,9 +4056,8 @@
           "item_id": 46763,
           "stat_id": 1077,
           "upgrade_id": 24615,
-          "infusions": [
-            24868
-          ]
+          "infusions": [],
+          "upgrade2_id": 24868
         }
       ]
     },
@@ -4229,9 +4210,8 @@
           "item_id": 46763,
           "stat_id": 1077,
           "upgrade_id": 24615,
-          "infusions": [
-            24868
-          ]
+          "infusions": [],
+          "upgrade2_id": 24868
         }
       ]
     },
@@ -4384,9 +4364,8 @@
           "item_id": 46763,
           "stat_id": 1077,
           "upgrade_id": 24615,
-          "infusions": [
-            24868
-          ]
+          "infusions": [],
+          "upgrade2_id": 24868
         }
       ]
     },
@@ -4539,9 +4518,8 @@
           "item_id": 46763,
           "stat_id": 1077,
           "upgrade_id": 24615,
-          "infusions": [
-            24868
-          ]
+          "infusions": [],
+          "upgrade2_id": 24868
         }
       ]
     },
@@ -4694,9 +4672,8 @@
           "item_id": 73580,
           "stat_id": 1268,
           "upgrade_id": 24560,
-          "infusions": [
-            44944
-          ]
+          "infusions": [],
+          "upgrade2_id": 44944
         }
       ]
     },
@@ -5009,9 +4986,8 @@
           "item_id": 46763,
           "stat_id": 1077,
           "upgrade_id": 24615,
-          "infusions": [
-            24868
-          ]
+          "infusions": [],
+          "upgrade2_id": 24868
         }
       ]
     },
@@ -5491,9 +5467,8 @@
           "item_id": 73580,
           "stat_id": 1268,
           "upgrade_id": 44944,
-          "infusions": [
-            24605
-          ]
+          "infusions": [],
+          "upgrade2_id": 24605
         }
       ]
     },

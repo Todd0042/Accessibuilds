@@ -435,7 +435,7 @@ void Render()
      * After that the player can freely resize — we don't force it every frame. */
     if (s_active_tab != s_resize_for_tab) {
         if (s_active_tab == 1)
-            ImGui::SetNextWindowSize(ImVec2(S(870), S(1105)));
+            ImGui::SetNextWindowSize(ImVec2(S(1100), S(1105)));
         else if (s_active_tab == 2)
             ImGui::SetNextWindowSize(ImVec2(S(700), S(480)));
         else

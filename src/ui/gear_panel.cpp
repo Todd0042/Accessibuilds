@@ -27,6 +27,15 @@ inline std::string StatName(uint32_t id)
     const std::string& dyn = GW2Names::GetStatSet(id);
     return dyn.empty() ? s : dyn;
 }
+
+inline std::string NormalizeStat(const std::string& s)
+{
+    if (s.find("Harrier")  != std::string::npos ||
+        s.find("Giver")    != std::string::npos ||
+        s.find("Minstrel") != std::string::npos)
+        return "SUPPORT_EQUIV";
+    return s;
+}
 }
 
 namespace GearPanel {
@@ -93,7 +102,7 @@ static void RenderSlotRow(const GW2::GearItem* pi, const GW2::GearItem* ri,
                 while (!ps.empty() && (ps.back()==' '||ps.back()=='\t'||ps.back()=='\r')) ps.pop_back();
                 while (!rs.empty() && (rs.back()==' '||rs.back()=='\t'||rs.back()=='\r')) rs.pop_back();
                 bool unresolved = (ps.rfind("Stat#",0)==0 || rs.rfind("Stat#",0)==0);
-                stat_ok = (ps == rs) || ps == "..." || rs == "..." || unresolved;
+                stat_ok = (NormalizeStat(ps) == NormalizeStat(rs)) || ps == "..." || rs == "..." || unresolved;
             }
             if (ri->upgrade_id) {
                 upg_ok = (pi->upgrade_id == ri->upgrade_id);
@@ -271,10 +280,10 @@ static void RenderGroup(const char* label,
 
     // ⭐ FIX: use stretch columns, not fixed widths
     ImGui::TableSetupColumn("Item",      ImGuiTableColumnFlags_WidthStretch, 0.75f);
-    ImGui::TableSetupColumn("Stats",     ImGuiTableColumnFlags_WidthStretch, 1.75f);
-    ImGui::TableSetupColumn("Rune/Sigil",ImGuiTableColumnFlags_WidthStretch, 1.5f);
+    ImGui::TableSetupColumn("Stats",     ImGuiTableColumnFlags_WidthStretch, 2.25f);
+    ImGui::TableSetupColumn("Rune/Sigil",ImGuiTableColumnFlags_WidthStretch, 1.4f);
     ImGui::TableSetupColumn("Inf",       ImGuiTableColumnFlags_WidthStretch, 0.5f);
-    ImGui::TableSetupColumn("Status",    ImGuiTableColumnFlags_WidthStretch, 1.0f);
+    ImGui::TableSetupColumn("Status",    ImGuiTableColumnFlags_WidthStretch, 1.25f);
 
     ImGui::TableHeadersRow();
 
@@ -346,8 +355,10 @@ void Render()
     for (const auto& i : sc.gear.items)     rm[i.slot] = &i;
 
     /* Two-handed weapon synthesis */
-    GW2::GearItem synth[8];
+    GW2::GearItem synth[12];
     int synth_n = 0;
+
+    /* Player side: pull upgrade2_id from the equipped 2H weapon into the off slot */
     auto synthesize2H = [&](GW2::GearSlot main_sl, GW2::GearSlot off_sl) {
         auto mi = pm.find(main_sl);
         if (mi == pm.end() || pm.count(off_sl)) return;
@@ -398,7 +409,7 @@ void Render()
                 while (!rs.empty() && (rs.back()==' '||rs.back()=='\t')) rs.pop_back();
                 if (!ps.empty() && ps != "..." && !rs.empty() && rs != "..."
                     && ps.rfind("Stat#",0) != 0 && rs.rfind("Stat#",0) != 0
-                    && ps == rs)
+                    && NormalizeStat(ps) == NormalizeStat(rs))
                     s += 2;
             }
         }
@@ -465,6 +476,21 @@ void Render()
             }
         }
     }
+
+    /* Reference side 2H synthesis — runs AFTER weapon set normalization so synthetic
+     * entries do not interfere with the A/B set swap scoring.
+     * When SC specifies a main-hand weapon with no off-slot entry, the weapon is
+     * 2-handed; synthesize an empty placeholder so the second sigil row is visible. */
+    auto synthesize2H_ref = [&](GW2::GearSlot main_sl, GW2::GearSlot off_sl) {
+        auto mi = rm.find(main_sl);
+        if (mi == rm.end() || rm.count(off_sl)) return;
+        if (mi->second->item_id == 0) return;
+        synth[synth_n].slot       = off_sl;
+        synth[synth_n].upgrade_id = mi->second->upgrade2_id;
+        rm[off_sl] = &synth[synth_n++];
+    };
+    synthesize2H_ref(GW2::GearSlot::WeaponA1, GW2::GearSlot::WeaponA2);
+    synthesize2H_ref(GW2::GearSlot::WeaponB1, GW2::GearSlot::WeaponB2);
 
     /* ─────────────────────────────────────────────────────────────── */
     /* MAIN GRID LAYOUT (2 columns)                                    */

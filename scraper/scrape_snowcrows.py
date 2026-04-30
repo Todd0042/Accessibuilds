@@ -510,7 +510,29 @@ def parse_armory_embeds(soup: BeautifulSoup) -> dict:
     legends:    list[int]     = []
     gear = {"relic_id": 0, "food_id": 0, "utility_id": 0, "items": []}
 
-    repeat_counters: dict[str, int] = {k: 0 for k in _REPEATING_SLOTS}
+    # Pre-scan main-hand weapon rows to detect 2H weapons.  A 2H weapon has two
+    # upgrade IDs in its single upgrades attribute and has no off-hand page row.
+    # We build a per-call off-hand slot sequence that skips the slot for any
+    # weapon set whose main-hand is 2H.
+    _mh_2h: list[bool] = []
+    for _el in soup.find_all(attrs={"data-armory-embed": "items"}):
+        if _el.get("data-armory-size") or _el.get("data-armory-inline-text"):
+            continue
+        _ids = (_el.get("data-armory-ids") or "").strip()
+        if not _ids.isdigit():
+            continue
+        if _slot_type_from_tr(_el) != "Main Hand":
+            continue
+        _iid = int(_ids)
+        _upg = _parse_int_list(_el.get("data-armory-%d-upgrades" % _iid) or "")
+        _mh_2h.append(len(_upg) >= 2)
+
+    _off_hand_seq = [s for i, s in enumerate(["WeaponA2", "WeaponB2"])
+                     if i >= len(_mh_2h) or not _mh_2h[i]]
+    repeating_slots = dict(_REPEATING_SLOTS)
+    repeating_slots["Off Hand"] = _off_hand_seq
+
+    repeat_counters: dict[str, int] = {k: 0 for k in repeating_slots}
 
     for el in soup.find_all(attrs={"data-armory-embed": True}):
         etype   = el.get("data-armory-embed", "")
@@ -556,7 +578,8 @@ def parse_armory_embeds(soup: BeautifulSoup) -> dict:
             if stat_s.isdigit():
                 stat_id = int(stat_s)
 
-            upgrade_id = 0
+            upgrade_id  = 0
+            upgrade2_id = 0
             upg_s = (el.get("data-armory-%d-upgrades" % item_id) or "").strip()
             upg_ids = _parse_int_list(upg_s)
             if upg_ids:
@@ -591,8 +614,8 @@ def parse_armory_embeds(soup: BeautifulSoup) -> dict:
             if slot_type == "__skip__":
                 continue
 
-            if slot_type in _REPEATING_SLOTS:
-                options = _REPEATING_SLOTS[slot_type]
+            if slot_type in repeating_slots:
+                options = repeating_slots[slot_type]
                 cnt     = repeat_counters[slot_type]
                 slot    = options[cnt] if cnt < len(options) else options[-1]
                 repeat_counters[slot_type] = cnt + 1
@@ -602,15 +625,26 @@ def parse_armory_embeds(soup: BeautifulSoup) -> dict:
             if slot in ("Unknown", "") or slot.startswith("__"):
                 continue
 
-            infusions = upg_ids[1:] if len(upg_ids) > 1 else []
+            # For 2H main-hand weapons (WeaponA1, WeaponB1) SC puts both sigil IDs
+            # in the single upgrades attribute — second ID is the second sigil, not
+            # an infusion.  Store it as upgrade2_id so the C++ side can display it.
+            _MAINHAND_SLOTS = {"WeaponA1", "WeaponB1"}
+            if slot in _MAINHAND_SLOTS and len(upg_ids) >= 2:
+                upgrade2_id = upg_ids[1]
+                infusions   = upg_ids[2:] if len(upg_ids) > 2 else []
+            else:
+                infusions   = upg_ids[1:] if len(upg_ids) > 1 else []
 
-            gear["items"].append({
+            item_dict: dict = {
                 "slot":       slot,
                 "item_id":    item_id,
                 "stat_id":    stat_id,
                 "upgrade_id": upgrade_id,
                 "infusions":  infusions,
-            })
+            }
+            if upgrade2_id:
+                item_dict["upgrade2_id"] = upgrade2_id
+            gear["items"].append(item_dict)
 
     return {"spec_lines": spec_lines, "skill_bar": skill_bar,
             "legends": legends, "gear": gear}
@@ -788,6 +822,48 @@ def parse_build_page(meta: dict, delay: float) -> Optional[dict]:
 # ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
+def _print_result(result: dict) -> None:
+    spec  = result["elite_spec"] or "?"
+    dps   = ("%.0f" % result["benchmark_dps"]) if result["benchmark_dps"] else "?"
+    nspec = sum(1 for k in ("line1", "line2", "line3") if result["traits"].get(k))
+    nsk   = "yes" if result["skills"]["heal"] else "no"
+    ngear = len(result["gear"]["items"])
+    relic = result["gear"]["relic_id"]
+    chat  = "yes" if result.get("chat_code") else "no"
+    print("OK [%s] DPS=%s specs=%d skills=%s gear=%d relic=%d chat=%s name=%r" %
+          (spec, dps, nspec, nsk, ngear, relic, chat, result["name"]))
+
+
+def _merge_into_prof_file(out_dir: Path, result: dict) -> None:
+    """Upsert a single build into the per-profession JSON file."""
+    prof_slug  = result["profession"].lower()
+    build_id   = result["id"]
+    prof_path  = out_dir / ("sc_builds_" + prof_slug + ".json")
+
+    existing: list[dict] = []
+    if prof_path.exists():
+        try:
+            existing = json.loads(prof_path.read_text(encoding="utf-8"))
+        except Exception:
+            pass
+
+    # Replace matching id in-place, or append if not found
+    replaced = False
+    for i, b in enumerate(existing):
+        if b.get("id") == build_id:
+            existing[i] = result
+            replaced = True
+            break
+    if not replaced:
+        existing.append(result)
+
+    with open(prof_path, "w", encoding="utf-8") as fh:
+        json.dump(existing, fh, indent=2, ensure_ascii=False)
+    action = "updated" if replaced else "added"
+    print("  %s  →  %s  (%s, %d total)" %
+          (build_id, prof_path.name, action, len(existing)))
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(description="Scrape Snow Crows → sc_builds_full.json")
     ap.add_argument("--out",   default=str(DEFAULT_OUT))
@@ -795,9 +871,68 @@ def main() -> None:
     ap.add_argument("--force", action="store_true", help="Clear disk cache and re-fetch everything")
     ap.add_argument("--limit", type=int,   default=0, help="Max builds per prof, 0=all")
     ap.add_argument("--prof",  default="",            help="Only this profession slug")
+    ap.add_argument("--url",   default="",
+                    help="Scrape a single build URL, e.g. "
+                         "https://snowcrows.com/builds/raids/warrior/condition-paragon-longbow-sword-sword")
     args = ap.parse_args()
 
-    # Normalise --prof to lowercase and validate
+    out_dir = Path(args.out).parent.resolve()
+    out_dir.mkdir(parents=True, exist_ok=True)
+
+    # ── Single-build mode ────────────────────────────────────────────────────
+    if args.url:
+        url = args.url.rstrip("/")
+        # Expect path: /builds/raids/<prof>/<slug>
+        m = re.search(r"/builds/raids/([a-z]+)/([a-z0-9-]+)$", url)
+        if not m:
+            print("ERROR: URL does not look like a Snow Crows build page.")
+            print("       Expected: https://snowcrows.com/builds/raids/<prof>/<slug>")
+            sys.exit(1)
+        prof_slug  = m.group(1)
+        build_slug = m.group(2)
+        if prof_slug not in PROFESSION_SLUGS:
+            print("ERROR: Unknown profession %r in URL." % prof_slug)
+            sys.exit(1)
+
+        if args.force:
+            # Evict only the cache entry for this specific URL
+            safe = re.sub(r"[^a-zA-Z0-9_-]", "_", url.replace(BASE_URL, ""))
+            for cp in [CACHE_DIR / (safe[:200] + ".html"),
+                       CACHE_DIR / ("_pw_" + safe[:200] + ".html")]:
+                if cp.exists():
+                    cp.unlink()
+
+        print("=== Snow Crows Scraper (single build) ===")
+        print("URL    : %s" % url)
+        print("Output : %s" % out_dir)
+        print()
+
+        print("Loading GW2 API caches...")
+        try:
+            load_api_caches(force=False)
+        except Exception as exc:
+            print("  WARN: API cache load failed: %s" % exc)
+        print()
+
+        meta   = {"url": url, "profession": prof_slug, "slug": build_slug}
+        print("Scraping %s/%s ... " % (prof_slug, build_slug), end="", flush=True)
+        result = parse_build_page(meta, delay=args.delay)
+        if not result:
+            print("FAILED")
+            sys.exit(1)
+        _print_result(result)
+        print()
+
+        _merge_into_prof_file(out_dir, result)
+        print()
+        print("Done.")
+        print()
+        print("Next steps:")
+        print("  ./build.sh --regen          re-embed updated data into the DLL")
+        print("  cp sc_builds_*.json <GW2>/addons/BuildCoach/cache/")
+        return
+
+    # ── Profession / full-site mode ──────────────────────────────────────────
     if args.prof:
         args.prof = args.prof.lower()
         if args.prof not in PROFESSION_SLUGS:
@@ -844,21 +979,10 @@ def main() -> None:
             result = parse_build_page(meta, delay=args.delay)
             if result:
                 all_builds.append(result)
-                spec  = result["elite_spec"] or "?"
-                dps   = ("%.0f" % result["benchmark_dps"]) if result["benchmark_dps"] else "?"
-                nspec = sum(1 for k in ("line1","line2","line3") if result["traits"].get(k))
-                nsk   = "yes" if result["skills"]["heal"] else "no"
-                ngear = len(result["gear"]["items"])
-                relic = result["gear"]["relic_id"]
-                chat  = "yes" if result.get("chat_code") else "no"
-                print("OK [%s] DPS=%s specs=%d skills=%s gear=%d relic=%d chat=%s name=%r" %
-                      (spec, dps, nspec, nsk, ngear, relic, chat, result["name"]))
+                _print_result(result)
             else:
                 print("SKIP")
         print()
-
-    out_dir = Path(args.out).parent.resolve()
-    out_dir.mkdir(parents=True, exist_ok=True)
 
     # Always write per-profession files (enables individual re-scrapes)
     by_prof: dict[str, list] = {}

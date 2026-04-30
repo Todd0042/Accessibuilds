@@ -143,18 +143,16 @@
           "item_id": 46764,
           "stat_id": 1077,
           "upgrade_id": 24615,
-          "infusions": [
-            24868
-          ]
+          "infusions": [],
+          "upgrade2_id": 24868
         },
         {
           "slot": "WeaponB1",
           "item_id": 46762,
           "stat_id": 1077,
           "upgrade_id": 24615,
-          "infusions": [
-            24868
-          ]
+          "infusions": [],
+          "upgrade2_id": 24868
         }
       ]
     },
@@ -307,18 +305,16 @@
           "item_id": 47050,
           "stat_id": 753,
           "upgrade_id": 24615,
-          "infusions": [
-            24618
-          ]
+          "infusions": [],
+          "upgrade2_id": 24618
         },
         {
           "slot": "WeaponB1",
           "item_id": 47047,
           "stat_id": 753,
           "upgrade_id": 24615,
-          "infusions": [
-            24618
-          ]
+          "infusions": [],
+          "upgrade2_id": 24618
         }
       ]
     },
@@ -471,18 +467,16 @@
           "item_id": 47049,
           "stat_id": 753,
           "upgrade_id": 24615,
-          "infusions": [
-            24618
-          ]
+          "infusions": [],
+          "upgrade2_id": 24618
         },
         {
           "slot": "WeaponB1",
           "item_id": 47047,
           "stat_id": 753,
           "upgrade_id": 24615,
-          "infusions": [
-            24618
-          ]
+          "infusions": [],
+          "upgrade2_id": 24618
         }
       ]
     },
@@ -635,18 +629,16 @@
           "item_id": 46765,
           "stat_id": 1077,
           "upgrade_id": 24615,
-          "infusions": [
-            24868
-          ]
+          "infusions": [],
+          "upgrade2_id": 24868
         },
         {
           "slot": "WeaponB1",
           "item_id": 46762,
           "stat_id": 1077,
           "upgrade_id": 24615,
-          "infusions": [
-            24868
-          ]
+          "infusions": [],
+          "upgrade2_id": 24868
         }
       ]
     },
@@ -799,9 +791,8 @@
           "item_id": 47020,
           "stat_id": 559,
           "upgrade_id": 74326,
-          "infusions": [
-            24551
-          ]
+          "infusions": [],
+          "upgrade2_id": 24551
         },
         {
           "slot": "WeaponB1",
@@ -811,7 +802,7 @@
           "infusions": []
         },
         {
-          "slot": "WeaponA2",
+          "slot": "WeaponB2",
           "item_id": 47022,
           "stat_id": 559,
           "upgrade_id": 48911,
@@ -1483,9 +1474,8 @@
           "item_id": 85112,
           "stat_id": 1377,
           "upgrade_id": 72339,
-          "infusions": [
-            74326
-          ]
+          "infusions": [],
+          "upgrade2_id": 74326
         },
         {
           "slot": "WeaponB1",
@@ -1495,7 +1485,7 @@
           "infusions": []
         },
         {
-          "slot": "WeaponA2",
+          "slot": "WeaponB2",
           "item_id": 84957,
           "stat_id": 1377,
           "upgrade_id": 74326,
@@ -1993,18 +1983,16 @@
           "item_id": 85131,
           "stat_id": 1377,
           "upgrade_id": 72339,
-          "infusions": [
-            74326
-          ]
+          "infusions": [],
+          "upgrade2_id": 74326
         },
         {
           "slot": "WeaponB1",
           "item_id": 85112,
           "stat_id": 1377,
           "upgrade_id": 72339,
-          "infusions": [
-            74326
-          ]
+          "infusions": [],
+          "upgrade2_id": 74326
         }
       ]
     },
@@ -2157,9 +2145,8 @@
           "item_id": 46762,
           "stat_id": 1077,
           "upgrade_id": 24615,
-          "infusions": [
-            24618
-          ]
+          "infusions": [],
+          "upgrade2_id": 24618
         },
         {
           "slot": "WeaponB1",
@@ -2169,7 +2156,7 @@
           "infusions": []
         },
         {
-          "slot": "WeaponA2",
+          "slot": "WeaponB2",
           "item_id": 46761,
           "stat_id": 1077,
           "upgrade_id": 24618,
@@ -2326,18 +2313,16 @@
           "item_id": 46764,
           "stat_id": 1077,
           "upgrade_id": 24615,
-          "infusions": [
-            24618
-          ]
+          "infusions": [],
+          "upgrade2_id": 24618
         },
         {
           "slot": "WeaponB1",
           "item_id": 46762,
           "stat_id": 1077,
           "upgrade_id": 24615,
-          "infusions": [
-            24618
-          ]
+          "infusions": [],
+          "upgrade2_id": 24618
         }
       ]
     },
@@ -2490,18 +2475,16 @@
           "item_id": 46764,
           "stat_id": 1077,
           "upgrade_id": 24615,
-          "infusions": [
-            24618
-          ]
+          "infusions": [],
+          "upgrade2_id": 24618
         },
         {
           "slot": "WeaponB1",
           "item_id": 46762,
           "stat_id": 1077,
           "upgrade_id": 24615,
-          "infusions": [
-            24618
-          ]
+          "infusions": [],
+          "upgrade2_id": 24618
         }
       ]
     },
@@ -2654,9 +2637,8 @@
           "item_id": 47047,
           "stat_id": 753,
           "upgrade_id": 24615,
-          "infusions": [
-            24618
-          ]
+          "infusions": [],
+          "upgrade2_id": 24618
         },
         {
           "slot": "WeaponB1",
@@ -2666,7 +2648,7 @@
           "infusions": []
         },
         {
-          "slot": "WeaponA2",
+          "slot": "WeaponB2",
           "item_id": 47046,
           "stat_id": 753,
           "upgrade_id": 24618,
@@ -2997,18 +2979,16 @@
           "item_id": 85131,
           "stat_id": 1377,
           "upgrade_id": 72339,
-          "infusions": [
-            74326
-          ]
+          "infusions": [],
+          "upgrade2_id": 74326
         },
         {
           "slot": "WeaponB1",
           "item_id": 85112,
           "stat_id": 1377,
           "upgrade_id": 72339,
-          "infusions": [
-            74326
-          ]
+          "infusions": [],
+          "upgrade2_id": 74326
         }
       ]
     },
@@ -3161,18 +3141,16 @@
           "item_id": 89610,
           "stat_id": 1566,
           "upgrade_id": 24615,
-          "infusions": [
-            72339
-          ]
+          "infusions": [],
+          "upgrade2_id": 72339
         },
         {
           "slot": "WeaponB1",
           "item_id": 97260,
           "stat_id": 1697,
           "upgrade_id": 24615,
-          "infusions": [
-            24868
-          ]
+          "infusions": [],
+          "upgrade2_id": 24868
         }
       ]
     },
@@ -3325,18 +3303,16 @@
           "item_id": 89681,
           "stat_id": 1566,
           "upgrade_id": 24615,
-          "infusions": [
-            72339
-          ]
+          "infusions": [],
+          "upgrade2_id": 72339
         },
         {
           "slot": "WeaponB1",
           "item_id": 97260,
           "stat_id": 1697,
           "upgrade_id": 24615,
-          "infusions": [
-            24868
-          ]
+          "infusions": [],
+          "upgrade2_id": 24868
         }
       ]
     },
@@ -3489,18 +3465,16 @@
           "item_id": 46764,
           "stat_id": 1077,
           "upgrade_id": 24615,
-          "infusions": [
-            24597
-          ]
+          "infusions": [],
+          "upgrade2_id": 24597
         },
         {
           "slot": "WeaponB1",
           "item_id": 46762,
           "stat_id": 1077,
           "upgrade_id": 24615,
-          "infusions": [
-            24868
-          ]
+          "infusions": [],
+          "upgrade2_id": 24868
         }
       ]
     },
@@ -3653,18 +3627,16 @@
           "item_id": 46765,
           "stat_id": 1077,
           "upgrade_id": 24615,
-          "infusions": [
-            24597
-          ]
+          "infusions": [],
+          "upgrade2_id": 24597
         },
         {
           "slot": "WeaponB1",
           "item_id": 46762,
           "stat_id": 1077,
           "upgrade_id": 24615,
-          "infusions": [
-            24868
-          ]
+          "infusions": [],
+          "upgrade2_id": 24868
         }
       ]
     },
@@ -3817,18 +3789,16 @@
           "item_id": 46764,
           "stat_id": 1077,
           "upgrade_id": 24615,
-          "infusions": [
-            24868
-          ]
+          "infusions": [],
+          "upgrade2_id": 24868
         },
         {
           "slot": "WeaponB1",
           "item_id": 46762,
           "stat_id": 1077,
           "upgrade_id": 24615,
-          "infusions": [
-            24868
-          ]
+          "infusions": [],
+          "upgrade2_id": 24868
         }
       ]
     },
@@ -3981,18 +3951,16 @@
           "item_id": 47049,
           "stat_id": 753,
           "upgrade_id": 24615,
-          "infusions": [
-            24618
-          ]
+          "infusions": [],
+          "upgrade2_id": 24618
         },
         {
           "slot": "WeaponB1",
           "item_id": 46762,
           "stat_id": 1077,
           "upgrade_id": 24615,
-          "infusions": [
-            24618
-          ]
+          "infusions": [],
+          "upgrade2_id": 24618
         }
       ]
     },
@@ -4479,9 +4447,8 @@
           "item_id": 46762,
           "stat_id": 1077,
           "upgrade_id": 24615,
-          "infusions": [
-            24868
-          ]
+          "infusions": [],
+          "upgrade2_id": 24868
         },
         {
           "slot": "WeaponB1",
@@ -4491,7 +4458,7 @@
           "infusions": []
         },
         {
-          "slot": "WeaponA2",
+          "slot": "WeaponB2",
           "item_id": 46761,
           "stat_id": 1077,
           "upgrade_id": 24868,
@@ -4815,9 +4782,8 @@
           "item_id": 46762,
           "stat_id": 1077,
           "upgrade_id": 24615,
-          "infusions": [
-            24618
-          ]
+          "infusions": [],
+          "upgrade2_id": 24618
         },
         {
           "slot": "WeaponB1",
@@ -4827,7 +4793,7 @@
           "infusions": []
         },
         {
-          "slot": "WeaponA2",
+          "slot": "WeaponB2",
           "item_id": 46774,
           "stat_id": 1077,
           "upgrade_id": 24618,
@@ -4984,9 +4950,8 @@
           "item_id": 46762,
           "stat_id": 1077,
           "upgrade_id": 24615,
-          "infusions": [
-            24618
-          ]
+          "infusions": [],
+          "upgrade2_id": 24618
         },
         {
           "slot": "WeaponB1",
@@ -4996,7 +4961,7 @@
           "infusions": []
         },
         {
-          "slot": "WeaponA2",
+          "slot": "WeaponB2",
           "item_id": 46761,
           "stat_id": 1077,
           "upgrade_id": 24618,

@@ -179,10 +179,11 @@ bool ParseBuildJSON(const std::string& json_str, GW2::SCBuild& out)
             if (g.contains("items")) {
                 for (auto& item : g["items"]) {
                     GW2::GearItem gi;
-                    gi.slot       = SlotFromString(item.value("slot", ""));
-                    gi.item_id    = item.value("item_id", 0u);
-                    gi.stat_id    = item.value("stat_id", 0u);
-                    gi.upgrade_id = item.value("upgrade_id", 0u);
+                    gi.slot        = SlotFromString(item.value("slot", ""));
+                    gi.item_id     = item.value("item_id", 0u);
+                    gi.stat_id     = item.value("stat_id", 0u);
+                    gi.upgrade_id  = item.value("upgrade_id", 0u);
+                    gi.upgrade2_id = item.value("upgrade2_id", 0u);
                     if (item.contains("infusions")) {
                         for (auto& inf : item["infusions"]) {
                             GW2::InfusionSlot s2;

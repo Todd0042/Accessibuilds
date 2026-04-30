@@ -153,6 +153,16 @@ ComparisonResult CompareGear(const GW2::GearBuild& player,
         while (!s.empty() && (s.back()==' '||s.back()=='\t'||s.back()=='\r')) s.pop_back();
         return s;
     };
+    /* Treat Harrier's, Giver's, and Minstrel's as interchangeable across all gear slots.
+     * Uses find() on the root word to handle both ASCII (') and Unicode (U+2019) apostrophes
+     * that the GW2 API may return. */
+    auto normalizeStat = [](const std::string& s) -> std::string {
+        if (s.find("Harrier")  != std::string::npos ||
+            s.find("Giver")    != std::string::npos ||
+            s.find("Minstrel") != std::string::npos)
+            return "SUPPORT_EQUIV";
+        return s;
+    };
 
     /* For interchangeable slot pairs (rings, accessories, weapon sets), assign
      * each reference item to the player slot it matches best.  Stat comparison
@@ -172,7 +182,7 @@ ComparisonResult CompareGear(const GW2::GearBuild& player,
                 std::string rs = trimStat(resolveStat(r->stat_id));
                 if (!ps.empty() && ps != "..." && !rs.empty() && rs != "..."
                     && ps.rfind("Stat#",0) != 0 && rs.rfind("Stat#",0) != 0
-                    && ps == rs)
+                    && normalizeStat(ps) == normalizeStat(rs))
                     s += 2;
             }
         }
@@ -231,7 +241,7 @@ ComparisonResult CompareGear(const GW2::GearBuild& player,
             std::string rstat = trimStat(resolveStat(ri.stat_id));
             bool still_loading = (pstat.rfind("Stat#",0)==0 || rstat.rfind("Stat#",0)==0 ||
                                   pstat == "..." || rstat == "...");
-            if (!still_loading && pstat != rstat) {
+            if (!still_loading && normalizeStat(pstat) != normalizeStat(rstat)) {
                 AddDiff(result, Severity::Error, "Gear",
                         "Stat_" + std::to_string((int)pi.slot),
                         pstat, rstat,
@@ -280,10 +290,12 @@ ComparisonResult CompareGear(const GW2::GearBuild& player,
         if (!pi_main || pi_main->upgrade2_id == 0) return;
         for (const auto& item : player.items)
             if (item.slot == off_sl) return; /* has separate offhand, not 2H */
-        auto it = ref_map.find(off_sl);
-        if (it == ref_map.end() || !it->second->upgrade_id) return;
+        /* Reference second sigil is stored in the main slot's upgrade2_id —
+         * the scraper no longer emits a separate off-slot entry for 2H weapons. */
+        auto ri_main = ref_map.find(main_sl);
+        if (ri_main == ref_map.end() || !ri_main->second->upgrade2_id) return;
         uint32_t p2 = pi_main->upgrade2_id;
-        uint32_t r2 = it->second->upgrade_id;
+        uint32_t r2 = ri_main->second->upgrade2_id;
         if (p2 != r2 && !SameByName(GW2Names::GetItem(p2), GW2Names::GetItem(r2)))
             AddDiff(result, Severity::Error, "Gear",
                     "Upgrade2_" + std::to_string((int)main_sl),
