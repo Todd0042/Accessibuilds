@@ -27,6 +27,7 @@ set(ADDON_SOURCES
     src/api/gw2names.cpp
     src/api/snowcrows.cpp
     src/api/wingman.cpp
+    src/api/item_lookup.cpp
 
     src/build/comparator.cpp
     src/build/cache.cpp
@@ -41,6 +42,7 @@ set(ADDON_SOURCES
     src/ui/coach_window.cpp
     src/ui/debug_window.cpp
     src/ui/icon_cache.cpp
+    src/ui/build_editor.cpp
 )
 
 # ── Target ────────────────────────────────────────────────────────────────────

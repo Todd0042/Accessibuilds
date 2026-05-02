@@ -21,4 +21,9 @@ void Init();
 /* Returns nullptr until the icon is downloaded and Nexus has loaded it. */
 Texture_t* GetTexture(const char* key, const char* host, const char* icon_path);
 
+/* Return an embedded gear-slot fallback texture by its key (e.g. "icons/helm.png").
+ * All gear icons are registered at Init() via Textures_GetOrCreateFromMemory,
+ * so this is a fast in-memory Textures_Get lookup — no file I/O. */
+Texture_t* GetAddonTexture(const char* path_in_addon_dir);
+
 } /* namespace IconCache */

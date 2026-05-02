@@ -4,6 +4,7 @@
 #include "ui/icon_cache.h"
 #include "arcdps/arcdps.h"
 #include "api/gw2names.h"
+#include "api/item_lookup.h"
 #include "build/cache.h"
 #include <imgui.h>
 #include <windows.h>
@@ -47,17 +48,27 @@ static void OnMumbleIdentityUpdated(void* aEventArgs)
      * has actually entered the world and a real map is reported. */
     if (id->MapID == 0) return;
 
+    /* Keep existing profession if Mumble reports an out-of-range value — Mumble
+     * can fire before GW2 has populated the struct (valid range is [1,9]). */
+    auto new_prof = (id->Profession >= 1 && id->Profession <= 9)
+        ? static_cast<GW2::Profession>(id->Profession)
+        : g_Character.profession;
+    auto new_spec = static_cast<GW2::EliteSpec>(id->Specialization);
+
     std::lock_guard<std::mutex> lock(g_CharacterMutex);
 
-    if (strncmp(g_Character.name, id->Name, 19) == 0) return;
+    bool name_changed = (strncmp(g_Character.name, id->Name, 19) != 0);
+    bool spec_changed = (g_Character.profession != new_prof ||
+                         g_Character.elite_spec != new_spec);
 
     strncpy(g_Character.name, id->Name, 19);
-    g_Character.profession = static_cast<GW2::Profession>(id->Profession);
-    g_Character.elite_spec = static_cast<GW2::EliteSpec>(id->Specialization);
+    g_Character.profession = new_prof;
+    g_Character.elite_spec = new_spec;
     g_Character.map_id     = id->MapID;
     g_Character.valid      = true;
 
-    g_PlayerBuildDirty = true;
+    if (name_changed || spec_changed)
+        g_PlayerBuildDirty = true;
 }
 
 static void OnKeybind(const char* aIdentifier, bool aIsRelease)
@@ -80,6 +91,7 @@ __declspec(dllexport) void AddonLoad(AddonAPI_t* aApi)
 
     BuildCache::SetCacheDir(g_AddonDir);
     GW2Names::Init(BuildCache::LoadGW2Build());
+    ItemLookup::Init(g_AddonDir);
 
     APIDefs->GUI_Register(RT_Render,        OnRender);
     APIDefs->GUI_Register(RT_OptionsRender, OnOptions);

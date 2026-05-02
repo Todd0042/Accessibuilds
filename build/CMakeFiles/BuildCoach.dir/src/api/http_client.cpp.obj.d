@@ -1,6 +1,6 @@
 CMakeFiles/BuildCoach.dir/src/api/http_client.cpp.obj: \
- /home/todd/gw2-build-coach\ copy/src/api/http_client.cpp \
- /home/todd/gw2-build-coach\ copy/src/api/http_client.h \
+ /home/todd/gw2-build-coach/src/api/http_client.cpp \
+ /home/todd/gw2-build-coach/src/api/http_client.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/string \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/requires_hosted.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++config.h \
@@ -119,7 +119,7 @@ CMakeFiles/BuildCoach.dir/src/api/http_client.cpp.obj: \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/vector.tcc \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/array \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/compare \
- /home/todd/gw2-build-coach\ copy/src/api/api_rate_limiter.h \
+ /home/todd/gw2-build-coach/src/api/api_rate_limiter.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/mutex \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/chrono.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/ratio \

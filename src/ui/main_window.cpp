@@ -4,6 +4,7 @@
 #include "dps_panel.h"
 #include "coach_window.h"
 #include "debug_window.h"
+#include "build_editor.h"
 #include "ui_scale.h"
 #include "../shared.h"
 #include "../api/gw2api.h"
@@ -25,6 +26,7 @@ namespace MainWindow {
 static bool s_visible = false;
 static std::vector<GW2::SCBuild>  s_sc_builds;
 static int                        s_selected_idx  = -1;
+static int                        s_user_build_idx = -1; /* index into BuildEditor::GetBuilds() */
 static std::atomic<bool>          s_refreshing    = false;
 static std::string                s_status;
 
@@ -78,6 +80,8 @@ void Init()
 
     /* Load cached SC builds */
     BuildCache::LoadSCBuilds(s_sc_builds);
+
+    BuildEditor::Init();
 
     /* Find previously selected build */
     if (settings.selected_build[0]) {
@@ -144,6 +148,16 @@ static void DoRefresh()
     if (!api_key.empty() && !char_name.empty()) {
         GW2::PlayerBuild build;
         bool full_ok = GW2API::FetchFullPlayerBuild(api_key, char_name, build);
+
+        /* FetchFullPlayerBuild now reads profession from the API string directly.
+         * Fall back to Mumble only if the API returned None (e.g. parse error). */
+        if (build.profession == GW2::Profession::None) {
+            std::lock_guard<std::mutex> lk(g_CharacterMutex);
+            uint32_t cp = (uint32_t)g_Character.profession;
+            if (cp >= 1 && cp <= 9) build.profession = g_Character.profession;
+            if (build.elite_spec == GW2::EliteSpec::None)
+                build.elite_spec = g_Character.elite_spec;
+        }
 
         /* Capture weapon item IDs before the move for type pre-warming */
         std::vector<uint32_t> wep_ids;
@@ -348,34 +362,36 @@ static void RenderBuildDropdown()
         filtered = std::move(searched);
     }
 
+    const auto& user_builds = BuildEditor::GetBuilds();
+
     std::string cur_label = "-- Select Build --";
-    if (s_selected_idx >= 0 && s_selected_idx < (int)s_sc_builds.size()) {
+    if (s_user_build_idx >= 0 && s_user_build_idx < (int)user_builds.size()) {
+        cur_label = "[Custom] " + user_builds[s_user_build_idx].name;
+    } else if (s_selected_idx >= 0 && s_selected_idx < (int)s_sc_builds.size()) {
         const auto& sb = s_sc_builds[s_selected_idx];
         cur_label = BuildDisplayLabel(sb.id, sb.name,
                                       std::string(GW2::ProfessionName(sb.profession)));
     }
     ImGui::SetNextItemWidth(S(460));
     if (ImGui::BeginCombo("##build_select", cur_label.c_str())) {
+        /* ── Snow Crows builds ───────────────────────────────────────────── */
         for (auto* b : filtered) {
-            bool sel = (b->id == (s_selected_idx >= 0 ? s_sc_builds[s_selected_idx].id : ""));
-            /* Display label includes weapon/variant; ##id ensures unique ImGui widget IDs */
+            bool sel = (s_user_build_idx < 0 &&
+                        b->id == (s_selected_idx >= 0 ? s_sc_builds[s_selected_idx].id : ""));
             std::string display = BuildDisplayLabel(b->id, b->name,
                                       std::string(GW2::ProfessionName(b->profession)));
-            std::string lbl = display + "##" + b->id;
+            std::string lbl = display + "##sc_" + b->id;
             if (ImGui::Selectable(lbl.c_str(), sel)) {
+                s_user_build_idx = -1;
                 for (int i = 0; i < (int)s_sc_builds.size(); i++) {
                     if (s_sc_builds[i].id == b->id) { s_selected_idx = i; break; }
                 }
-                /* Push selected build to shared state */
                 {
                     std::lock_guard<std::mutex> lk(g_SCBuildMutex);
                     g_SCBuild       = *b;
                     g_SCBuildLoaded = true;
                 }
-                /* Regenerate chat code from live GW2 API data so spec/skill IDs
-                 * are always current, regardless of when the JSON was scraped. */
                 GW2API::GenerateBuildChatCodeAsync(*b);
-                /* Prime weapon-type cache so types are ready before player build loads */
                 for (const auto& item : b->gear.items) {
                     using GS = GW2::GearSlot;
                     if ((item.slot == GS::WeaponA1 || item.slot == GS::WeaponA2 ||
@@ -384,10 +400,30 @@ static void RenderBuildDropdown()
                 }
             }
         }
+
+        /* ── Custom builds ───────────────────────────────────────────────── */
+        if (!user_builds.empty()) {
+            ImGui::Separator();
+            ImGui::TextDisabled("Custom Builds");
+            for (int i = 0; i < (int)user_builds.size(); i++) {
+                const auto& ub = user_builds[i];
+                bool sel = (s_user_build_idx == i);
+                std::string lbl = ub.name + "##ub_" + std::to_string(i);
+                if (ImGui::Selectable(lbl.c_str(), sel)) {
+                    s_user_build_idx = i;
+                    s_selected_idx   = -1;
+                    {
+                        std::lock_guard<std::mutex> lk(g_SCBuildMutex);
+                        g_SCBuild       = ub;
+                        g_SCBuildLoaded = true;
+                    }
+                }
+            }
+        }
         ImGui::EndCombo();
     }
     ImGui::SameLine();
-    if (s_selected_idx >= 0 && s_selected_idx < (int)s_sc_builds.size()) {
+    if (s_user_build_idx < 0 && s_selected_idx >= 0 && s_selected_idx < (int)s_sc_builds.size()) {
         const auto& b = s_sc_builds[s_selected_idx];
         if (!b.source_url.empty()) {
             if (ImGui::SmallButton("Open SC Page"))
@@ -428,6 +464,7 @@ void Render()
     /* Popout windows are independent — render even when the main window is closed */
     CoachWindow::Render();
     DebugWindow::Render();
+    BuildEditor::Render();
 
     if (!s_visible) return;
 
@@ -461,6 +498,8 @@ void Render()
     if (clicked && !limited) RefreshData();
     ImGui::SameLine();
     if (ImGui::Button("API Key")) s_show_settings = !s_show_settings;
+    ImGui::SameLine();
+    if (ImGui::Button("Builds")) BuildEditor::Toggle();
     ImGui::SameLine();
     if (!s_status.empty()) ImGui::TextDisabled("%s", s_status.c_str());
 

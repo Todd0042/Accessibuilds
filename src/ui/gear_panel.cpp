@@ -5,6 +5,7 @@
 #include "../build/comparator.h"
 #include "../api/gw2api.h"
 #include "../api/gw2names.h"
+#include "../api/relic_db.h"
 #include <imgui.h>
 #include <string>
 #include <map>
@@ -66,7 +67,7 @@ static const GW2::GearSlot WEAPON_SLOTS[] = {
 
 /* ── Per-slot row ───────────────────────────────────────────────────────── */
 static void RenderSlotRow(const GW2::GearItem* pi, const GW2::GearItem* ri,
-                          bool check_type = false)
+                          GW2::GearSlot sl, bool check_type = false)
 {
     bool is_relic = ri && ri->item_id != 0 && ri->stat_id == 0
                        && ri->upgrade_id == 0 && ri->infusions.empty();
@@ -80,16 +81,8 @@ static void RenderSlotRow(const GW2::GearItem* pi, const GW2::GearItem* ri,
         if (is_relic) {
             if (!pi->item_id) {
                 item_id_ok = false;
-            } else if (pi->item_id != ri->item_id) {
-                std::string pn = GW2Names::GetItem(pi->item_id);
-                std::string rn = GW2Names::GetItem(ri->item_id);
-                if (pn == "..." || rn == "...") {
-                    item_id_ok = true;
-                } else {
-                    while (!pn.empty() && (pn.back()==' '||pn.back()=='\t')) pn.pop_back();
-                    while (!rn.empty() && (rn.back()==' '||rn.back()=='\t')) rn.pop_back();
-                    item_id_ok = !pn.empty() && !rn.empty() && pn == rn;
-                }
+            } else {
+                item_id_ok = (pi->item_id == ri->item_id);
             }
         } else {
             if (ri->stat_id) {
@@ -111,6 +104,26 @@ static void RenderSlotRow(const GW2::GearItem* pi, const GW2::GearItem* ri,
                     const std::string& rn = GW2Names::GetItem(ri->upgrade_id);
                     if (!pn.empty() && pn != "..." && pn == rn) upg_ok = true;
                 }
+            } else if (!ri->upgrade_name.empty()) {
+                /* Reference uses text name (user-authored build) */
+                std::string rn = ri->upgrade_name;
+                while (!rn.empty() && (rn.back()==' '||rn.back()=='\t')) rn.pop_back();
+                if (pi->upgrade_id) {
+                    const std::string& pn_ref = GW2Names::GetItem(pi->upgrade_id);
+                    if (pn_ref.empty() || pn_ref == "...") {
+                        upg_ok = true; /* still loading — don't flag as wrong yet */
+                    } else {
+                        std::string pn = pn_ref;
+                        while (!pn.empty() && (pn.back()==' '||pn.back()=='\t')) pn.pop_back();
+                        upg_ok = (pn == rn);
+                    }
+                } else if (!pi->upgrade_name.empty()) {
+                    std::string pn = pi->upgrade_name;
+                    while (!pn.empty() && (pn.back()==' '||pn.back()=='\t')) pn.pop_back();
+                    upg_ok = (pn == rn);
+                } else {
+                    upg_ok = false;
+                }
             }
             if (!ri->infusions.empty())
                 inf_ok = (pi->infusions.size() >= ri->infusions.size());
@@ -130,11 +143,25 @@ static void RenderSlotRow(const GW2::GearItem* pi, const GW2::GearItem* ri,
     bool slot_ok = stat_ok && upg_ok && inf_ok && item_id_ok && weapon_type_ok;
     bool missing = (!pi) || (is_relic && pi && !pi->item_id && ri && ri->item_id);
 
+    /* Determine slot-specific fallback icons */
+    GW2::WeaponType ref_wt = (ri && ri->weapon_type != GW2::WeaponType::Unknown)
+                              ? ri->weapon_type
+                              : (pi ? pi->weapon_type : GW2::WeaponType::Unknown);
+    const char* slot_fb = IconRenderer::SlotFallbackFile(sl, ref_wt);
+    const char* upg_fb  = IconRenderer::UpgradeFallbackFile(sl);
+
     ImGui::TableSetColumnIndex(0);
-    if (missing && ri && ri->item_id)
-        IconRenderer::ItemIconRef(ri->item_id, ICON_SZ);
-    else
-        IconRenderer::ItemIcon(pi ? pi->item_id : 0, ICON_SZ, slot_ok, missing);
+    if (is_relic) {
+        if (missing && ri && ri->item_id)
+            IconRenderer::RelicItemIcon(ri->item_id, ICON_SZ, false, true);
+        else
+            IconRenderer::RelicItemIcon(pi ? pi->item_id : 0, ICON_SZ, slot_ok, missing);
+    } else {
+        if (missing && ri && ri->item_id)
+            IconRenderer::ItemIconRef(ri->item_id, ICON_SZ, slot_fb);
+        else
+            IconRenderer::ItemIcon(pi ? pi->item_id : 0, ICON_SZ, slot_ok, missing, slot_fb);
+    }
 
     ImGui::TableSetColumnIndex(1);
     if (is_relic) {
@@ -222,22 +249,55 @@ static void RenderSlotRow(const GW2::GearItem* pi, const GW2::GearItem* ri,
         if (!item_id_ok && ri && ri->item_id) {
             ImGui::TextDisabled("->");
             ImGui::SameLine(0, 4);
-            IconRenderer::ItemIconRef(ri->item_id, ICON_SZ_SM);
+            {
+                char key[32]; snprintf(key, sizeof(key), "BC_ITEM_%u", ri->item_id);
+                const std::string& rip = GW2Names::GetItemIcon(ri->item_id);
+                Texture_t* rt = rip.empty()
+                    ? IconCache::GetAddonTexture("icons/relic.png")
+                    : IconCache::GetTexture(key, "render.guildwars2.com", rip.c_str());
+                IconRenderer::DrawBox(ICON_SZ_SM, rt ? rt->Resource : nullptr,
+                    IM_COL32(80, 140, 220, 200), GW2Names::GetItem(ri->item_id).c_str());
+            }
+        }
+    } else if (ri && !ri->upgrade_id && !ri->upgrade_name.empty()) {
+        /* Reference uses text upgrade name (user-authored build) */
+        if (pi && pi->upgrade_id) {
+            IconRenderer::ItemIcon(pi->upgrade_id, ICON_SZ_SM, upg_ok, false, upg_fb);
+            if (!upg_ok) {
+                ImGui::SameLine(0, 4);
+                ImGui::TextDisabled("->");
+                ImGui::SameLine(0, 4);
+                ImGui::TextColored(COL_REF, "%s", ri->upgrade_name.c_str());
+            }
+        } else if (pi && !pi->upgrade_name.empty()) {
+            ImGui::TextColored(upg_ok ? COL_OK : COL_ERROR, "%s", pi->upgrade_name.c_str());
+            if (!upg_ok) {
+                ImGui::SameLine(0, 4);
+                ImGui::TextDisabled("->");
+                ImGui::SameLine(0, 4);
+                ImGui::TextColored(COL_REF, "%s", ri->upgrade_name.c_str());
+            }
+        } else if (pi) {
+            ImGui::TextColored(COL_ERROR, "(none)");
+            ImGui::SameLine(0, 4);
+            ImGui::TextDisabled("->");
+            ImGui::SameLine(0, 4);
+            ImGui::TextColored(COL_REF, "%s", ri->upgrade_name.c_str());
         }
     } else if (pi && pi->upgrade_id) {
-        IconRenderer::ItemIcon(pi->upgrade_id, ICON_SZ_SM, upg_ok, false);
+        IconRenderer::ItemIcon(pi->upgrade_id, ICON_SZ_SM, upg_ok, false, upg_fb);
         if (!upg_ok && ri && ri->upgrade_id) {
             ImGui::SameLine(0, 4);
             ImGui::TextDisabled("->");
             ImGui::SameLine(0, 4);
-            IconRenderer::ItemIconRef(ri->upgrade_id, ICON_SZ_SM);
+            IconRenderer::ItemIconRef(ri->upgrade_id, ICON_SZ_SM, upg_fb);
         }
     } else if (ri && ri->upgrade_id) {
-        IconRenderer::ItemIcon(0, ICON_SZ_SM, false, true);
+        IconRenderer::ItemIcon(0, ICON_SZ_SM, false, true, upg_fb);
         ImGui::SameLine(0, 4);
         ImGui::TextDisabled("needs:");
         ImGui::SameLine(0, 4);
-        IconRenderer::ItemIconRef(ri->upgrade_id, ICON_SZ_SM);
+        IconRenderer::ItemIconRef(ri->upgrade_id, ICON_SZ_SM, upg_fb);
     }
 
     ImGui::TableSetColumnIndex(3);
@@ -303,7 +363,7 @@ static void RenderGroup(const char* label,
 
         /* Icon + data row */
         ImGui::TableNextRow(0, ICON_SZ + 4);
-        RenderSlotRow(pi, ri, check_type);
+        RenderSlotRow(pi, ri, sl, check_type);
     }   // ← FIXED: this brace was missing
 
     ImGui::EndTable();
@@ -333,6 +393,11 @@ void Render()
         std::lock_guard<std::mutex> lk(g_SCBuildMutex);
         sc = g_SCBuild;
     }
+
+    /* If the reference build was saved with a relic name but no ID (pre-relic-db),
+     * resolve it now so the jewelry comparison works instead of falling back to text. */
+    if (!sc.gear.relic_id && !sc.gear.relic_text.empty())
+        sc.gear.relic_id = FindRelicID(sc.gear.relic_text.c_str());
 
     if (!pb_loaded) {
         ImGui::TextColored(COL_WARN,
@@ -527,18 +592,23 @@ void Render()
         ImGui::TextColored(ImVec4(0.7f,0.7f,0.7f,1), "Consumables (SC Recommended)");
         ImGui::Separator();
 
-        auto show_rec = [&](const char* label, uint32_t rec) {
-            if (!rec) return;
+        auto show_rec = [&](const char* label, uint32_t rec, const std::string& txt = "") {
+            if (!rec && txt.empty()) return;
             ImGui::Text("%-10s", label);
             ImGui::SameLine(S(100));
-            IconRenderer::ItemIconRef(rec, ICON_SZ_SM);
-            ImGui::SameLine(0, 8);
-            const std::string& nm = GW2Names::GetItem(rec);
-            ImGui::TextColored(COL_REF, "%s",
-                (!nm.empty() && nm != "...") ? nm.c_str() : "...");
+            if (rec) {
+                IconRenderer::ItemIconRef(rec, ICON_SZ_SM);
+                ImGui::SameLine(0, 8);
+                const std::string& nm = GW2Names::GetItem(rec);
+                ImGui::TextColored(COL_REF, "%s",
+                    (!nm.empty() && nm != "...") ? nm.c_str() : "...");
+            } else {
+                ImGui::TextColored(COL_REF, "%s", txt.c_str());
+            }
         };
 
-        show_rec("Food:",    sc.gear.food_id);
+        /* Relic is compared in the jewelry panel above, not here */
+        show_rec("Food:",    sc.gear.food_id,    sc.gear.food_text);
 
         /* Alternative food suggestions — shown once the API name has resolved */
         {
@@ -573,7 +643,7 @@ void Render()
             }
         }
 
-        show_rec("Utility:", sc.gear.utility_id);
+        show_rec("Utility:", sc.gear.utility_id, sc.gear.utility_text);
 
         ImGui::EndTable();
 

@@ -260,6 +260,29 @@ ComparisonResult CompareGear(const GW2::GearBuild& player,
                         std::to_string(ri.upgrade_id),
                         "Wrong rune/sigil on " + SlotName(pi.slot));
             }
+        } else if (!ri.upgrade_id && !ri.upgrade_name.empty()) {
+            /* Reference uses text name (user-authored build with no item ID) */
+            if (pi.upgrade_id) {
+                std::string pn = GW2Names::GetItem(pi.upgrade_id);
+                if (!pn.empty() && pn != "...") {
+                    if (!SameByName(pn, ri.upgrade_name))
+                        AddDiff(result, Severity::Error, "Gear",
+                                "Upgrade_" + std::to_string((int)pi.slot),
+                                pn, ri.upgrade_name,
+                                "Wrong rune/sigil on " + SlotName(pi.slot));
+                }
+            } else if (!pi.upgrade_name.empty()) {
+                if (!SameByName(pi.upgrade_name, ri.upgrade_name))
+                    AddDiff(result, Severity::Error, "Gear",
+                            "Upgrade_" + std::to_string((int)pi.slot),
+                            pi.upgrade_name, ri.upgrade_name,
+                            "Wrong rune/sigil on " + SlotName(pi.slot));
+            } else {
+                AddDiff(result, Severity::Error, "Gear",
+                        "Upgrade_" + std::to_string((int)pi.slot),
+                        "(none)", ri.upgrade_name,
+                        "Missing rune/sigil on " + SlotName(pi.slot));
+            }
         }
 
         /* Infusions */

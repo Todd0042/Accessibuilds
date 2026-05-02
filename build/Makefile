@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/todd/gw2-build-coach copy"
+CMAKE_SOURCE_DIR = /home/todd/gw2-build-coach
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/todd/gw2-build-coach copy/build"
+CMAKE_BINARY_DIR = /home/todd/gw2-build-coach/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/todd/gw2-build-coach copy/build/CMakeFiles" "/home/todd/gw2-build-coach copy/build//CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/todd/gw2-build-coach/build/CMakeFiles /home/todd/gw2-build-coach/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/todd/gw2-build-coach copy/build/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/todd/gw2-build-coach/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -321,6 +321,30 @@ src/api/http_client.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/api/http_client.cpp.s
 .PHONY : src/api/http_client.cpp.s
 
+src/api/item_lookup.obj: src/api/item_lookup.cpp.obj
+.PHONY : src/api/item_lookup.obj
+
+# target to build an object file
+src/api/item_lookup.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/api/item_lookup.cpp.obj
+.PHONY : src/api/item_lookup.cpp.obj
+
+src/api/item_lookup.i: src/api/item_lookup.cpp.i
+.PHONY : src/api/item_lookup.i
+
+# target to preprocess a source file
+src/api/item_lookup.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/api/item_lookup.cpp.i
+.PHONY : src/api/item_lookup.cpp.i
+
+src/api/item_lookup.s: src/api/item_lookup.cpp.s
+.PHONY : src/api/item_lookup.s
+
+# target to generate assembly for a file
+src/api/item_lookup.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/api/item_lookup.cpp.s
+.PHONY : src/api/item_lookup.cpp.s
+
 src/api/snowcrows.obj: src/api/snowcrows.cpp.obj
 .PHONY : src/api/snowcrows.obj
 
@@ -464,6 +488,30 @@ src/build/types.s: src/build/types.cpp.s
 src/build/types.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/build/types.cpp.s
 .PHONY : src/build/types.cpp.s
+
+src/ui/build_editor.obj: src/ui/build_editor.cpp.obj
+.PHONY : src/ui/build_editor.obj
+
+# target to build an object file
+src/ui/build_editor.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/ui/build_editor.cpp.obj
+.PHONY : src/ui/build_editor.cpp.obj
+
+src/ui/build_editor.i: src/ui/build_editor.cpp.i
+.PHONY : src/ui/build_editor.i
+
+# target to preprocess a source file
+src/ui/build_editor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/ui/build_editor.cpp.i
+.PHONY : src/ui/build_editor.cpp.i
+
+src/ui/build_editor.s: src/ui/build_editor.cpp.s
+.PHONY : src/ui/build_editor.s
+
+# target to generate assembly for a file
+src/ui/build_editor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/ui/build_editor.cpp.s
+.PHONY : src/ui/build_editor.cpp.s
 
 src/ui/build_panel.obj: src/ui/build_panel.cpp.obj
 .PHONY : src/ui/build_panel.obj
@@ -690,6 +738,9 @@ help:
 	@echo "... src/api/http_client.obj"
 	@echo "... src/api/http_client.i"
 	@echo "... src/api/http_client.s"
+	@echo "... src/api/item_lookup.obj"
+	@echo "... src/api/item_lookup.i"
+	@echo "... src/api/item_lookup.s"
 	@echo "... src/api/snowcrows.obj"
 	@echo "... src/api/snowcrows.i"
 	@echo "... src/api/snowcrows.s"
@@ -708,6 +759,9 @@ help:
 	@echo "... src/build/types.obj"
 	@echo "... src/build/types.i"
 	@echo "... src/build/types.s"
+	@echo "... src/ui/build_editor.obj"
+	@echo "... src/ui/build_editor.i"
+	@echo "... src/ui/build_editor.s"
 	@echo "... src/ui/build_panel.obj"
 	@echo "... src/ui/build_panel.i"
 	@echo "... src/ui/build_panel.s"

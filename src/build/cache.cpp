@@ -117,6 +117,103 @@ bool LoadSCBuilds(std::vector<GW2::SCBuild>& out_builds)
     return SnowCrows::LoadBuildsFromFile(s_CacheDir + "sc_builds.json", out_builds) > 0;
 }
 
+bool SaveSCBuildsFull(const std::vector<GW2::SCBuild>& builds)
+{
+    if (s_CacheDir.empty()) return false;
+
+    /* Slot enum → string matching SnowCrows::SlotFromString keys */
+    auto slot_str = [](GW2::GearSlot s) -> const char* {
+        switch (s) {
+        case GW2::GearSlot::Helm:       return "Helm";
+        case GW2::GearSlot::Shoulders:  return "Shoulders";
+        case GW2::GearSlot::Chest:      return "Chest";
+        case GW2::GearSlot::Gloves:     return "Gloves";
+        case GW2::GearSlot::Leggings:   return "Leggings";
+        case GW2::GearSlot::Boots:      return "Boots";
+        case GW2::GearSlot::BackItem:   return "BackItem";
+        case GW2::GearSlot::Accessory1: return "Accessory1";
+        case GW2::GearSlot::Accessory2: return "Accessory2";
+        case GW2::GearSlot::Amulet:     return "Amulet";
+        case GW2::GearSlot::Ring1:      return "Ring1";
+        case GW2::GearSlot::Ring2:      return "Ring2";
+        case GW2::GearSlot::WeaponA1:   return "WeaponA1";
+        case GW2::GearSlot::WeaponA2:   return "WeaponA2";
+        case GW2::GearSlot::WeaponB1:   return "WeaponB1";
+        case GW2::GearSlot::WeaponB2:   return "WeaponB2";
+        default:                         return "Helm";
+        }
+    };
+
+    json arr = json::array();
+    for (const auto& b : builds) {
+        json entry;
+        entry["id"]            = b.id;
+        entry["name"]          = b.name;
+        entry["profession"]    = std::string(GW2::ProfessionName(b.profession));
+        entry["elite_spec"]    = std::string(GW2::EliteSpecName(b.elite_spec));
+        entry["build_type"]    = std::string(GW2::BuildTypeName(b.build_type));
+        entry["patch_version"] = b.patch_version;
+        entry["benchmark_dps"] = b.benchmark_dps;
+        entry["notes"]         = b.notes;
+        entry["source_url"]    = b.source_url;
+        entry["chat_code"]     = b.chat_code;
+
+        /* Traits — "line1"/"line2"/"line3" dict matches ParseBuildJSON's parse_line() */
+        static const char* line_keys[] = {"line1", "line2", "line3"};
+        json traits_j;
+        for (int i = 0; i < 3; i++) {
+            json line_j;
+            line_j["spec_id"] = b.traits.lines[i].spec_id;
+            json tids = json::array();
+            for (int t = 0; t < 3; t++) tids.push_back(b.traits.lines[i].traits[t].trait_id);
+            line_j["traits"] = tids;
+            traits_j[line_keys[i]] = line_j;
+        }
+        entry["traits"] = traits_j;
+
+        json skills_j;
+        skills_j["heal"]  = b.skills.heal;
+        skills_j["elite"] = b.skills.elite;
+        json utils = json::array();
+        for (int i = 0; i < 3; i++) utils.push_back(b.skills.utilities[i]);
+        skills_j["utilities"] = utils;
+        entry["skills"] = skills_j;
+
+        json gear_j;
+        json items_j = json::array();
+        for (const auto& gi : b.gear.items) {
+            json ij;
+            ij["slot"]        = slot_str(gi.slot);
+            ij["item_id"]     = gi.item_id;
+            ij["stat_id"]     = gi.stat_id;
+            ij["upgrade_id"]  = gi.upgrade_id;
+            ij["upgrade2_id"] = gi.upgrade2_id;
+            if (!gi.upgrade_name.empty()) ij["upgrade_name"] = gi.upgrade_name;
+            if (!gi.infusions.empty()) {
+                json infs = json::array();
+                for (const auto& inf : gi.infusions) infs.push_back(inf.item_id);
+                ij["infusions"] = infs;
+            }
+            items_j.push_back(ij);
+        }
+        gear_j["items"]        = items_j;
+        gear_j["relic_id"]     = b.gear.relic_id;
+        gear_j["relic_text"]   = b.gear.relic_text;
+        gear_j["food_id"]      = b.gear.food_id;
+        gear_j["food_text"]    = b.gear.food_text;
+        gear_j["utility_id"]   = b.gear.utility_id;
+        gear_j["utility_text"] = b.gear.utility_text;
+        entry["gear"] = gear_j;
+
+        arr.push_back(entry);
+    }
+
+    std::ofstream f(s_CacheDir + "sc_builds_full.json");
+    if (!f.is_open()) return false;
+    f << arr.dump(2);
+    return true;
+}
+
 /* ── Wingman log ──────────────────────────────────────────────────────────── */
 bool SaveWingmanLog(const GW2::WingmanLog& log)
 {
@@ -327,6 +424,155 @@ bool LoadNamesCache(uint64_t gw2_build, std::string& out_json)
         if (wrapper.value("build", uint64_t(0)) != gw2_build) return false;
         out_json = wrapper.value("data", "");
         return !out_json.empty();
+    } catch (...) { return false; }
+}
+
+/* ── User-authored builds ─────────────────────────────────────────────────── */
+
+static json SerializeGearItem(const GW2::GearItem& gi)
+{
+    json j;
+    j["slot"]         = (int)gi.slot;
+    j["item_id"]      = gi.item_id;
+    j["stat_id"]      = gi.stat_id;
+    j["upgrade_id"]   = gi.upgrade_id;
+    j["upgrade2_id"]  = gi.upgrade2_id;
+    j["weapon_type"]  = (int)gi.weapon_type;
+    if (!gi.upgrade_name.empty())
+        j["upgrade_name"] = gi.upgrade_name;
+    json infs = json::array();
+    for (const auto& inf : gi.infusions) infs.push_back(inf.item_id);
+    j["infusions"] = infs;
+    return j;
+}
+
+static GW2::GearItem DeserializeGearItem(const json& j)
+{
+    GW2::GearItem gi;
+    gi.slot        = (GW2::GearSlot)j.value("slot",        0);
+    gi.item_id     = j.value("item_id",     0u);
+    gi.stat_id     = j.value("stat_id",     0u);
+    gi.upgrade_id  = j.value("upgrade_id",  0u);
+    gi.upgrade2_id = j.value("upgrade2_id", 0u);
+    gi.weapon_type = (GW2::WeaponType)j.value("weapon_type", 0);
+    gi.upgrade_name = j.value("upgrade_name", "");
+    if (j.contains("infusions"))
+        for (auto& v : j["infusions"]) gi.infusions.push_back({v.get<uint32_t>()});
+    return gi;
+}
+
+bool SaveUserBuilds(const std::vector<GW2::SCBuild>& builds)
+{
+    if (s_CacheDir.empty()) return false;
+    json arr = json::array();
+    for (const auto& b : builds) {
+        json entry;
+        entry["id"]            = b.id;
+        entry["name"]          = b.name;
+        entry["profession"]    = (int)b.profession;
+        entry["elite_spec"]    = (int)b.elite_spec;
+        entry["build_type"]    = (int)b.build_type;
+        entry["benchmark_dps"] = b.benchmark_dps;
+        entry["notes"]         = b.notes;
+
+        json traits_j = json::array();
+        for (int i = 0; i < 3; i++) {
+            json line_j;
+            line_j["spec_id"] = b.traits.lines[i].spec_id;
+            json trait_ids = json::array();
+            for (int t = 0; t < 3; t++)
+                trait_ids.push_back(b.traits.lines[i].traits[t].trait_id);
+            line_j["traits"] = trait_ids;
+            traits_j.push_back(line_j);
+        }
+        entry["traits"] = traits_j;
+
+        json skills_j;
+        skills_j["heal"]  = b.skills.heal;
+        skills_j["elite"] = b.skills.elite;
+        json utils = json::array();
+        for (int i = 0; i < 3; i++) utils.push_back(b.skills.utilities[i]);
+        skills_j["utilities"] = utils;
+        entry["skills"] = skills_j;
+
+        json gear_j;
+        json items_j = json::array();
+        for (const auto& gi : b.gear.items) items_j.push_back(SerializeGearItem(gi));
+        gear_j["items"]      = items_j;
+        gear_j["relic_id"]     = b.gear.relic_id;
+        gear_j["food_id"]      = b.gear.food_id;
+        gear_j["utility_id"]   = b.gear.utility_id;
+        gear_j["relic_text"]   = b.gear.relic_text;
+        gear_j["food_text"]    = b.gear.food_text;
+        gear_j["utility_text"] = b.gear.utility_text;
+        entry["gear"]        = gear_j;
+
+        arr.push_back(entry);
+    }
+    std::ofstream f(s_CacheDir + "user_builds.json");
+    if (!f.is_open()) return false;
+    f << arr.dump(2);
+    return true;
+}
+
+bool LoadUserBuilds(std::vector<GW2::SCBuild>& out_builds)
+{
+    if (s_CacheDir.empty()) return false;
+    std::ifstream f(s_CacheDir + "user_builds.json");
+    if (!f.is_open()) return false;
+    try {
+        std::string content((std::istreambuf_iterator<char>(f)),
+                             std::istreambuf_iterator<char>());
+        auto arr = json::parse(content);
+        for (const auto& entry : arr) {
+            GW2::SCBuild b;
+            b.id           = entry.value("id",    "");
+            b.name         = entry.value("name",  "");
+            b.profession   = (GW2::Profession)entry.value("profession",  0);
+            b.elite_spec   = (GW2::EliteSpec) entry.value("elite_spec",  0u);
+            b.build_type   = (GW2::BuildType) entry.value("build_type",  0);
+            b.benchmark_dps = entry.value("benchmark_dps", 0.0);
+            b.notes        = entry.value("notes", "");
+
+            if (entry.contains("traits")) {
+                auto& tl = entry["traits"];
+                for (int i = 0; i < 3 && i < (int)tl.size(); i++) {
+                    b.traits.lines[i].spec_id = tl[i].value("spec_id", 0u);
+                    if (tl[i].contains("traits")) {
+                        auto& tj = tl[i]["traits"];
+                        for (int t = 0; t < 3 && t < (int)tj.size(); t++)
+                            b.traits.lines[i].traits[t].trait_id = tj[t].get<uint32_t>();
+                    }
+                }
+            }
+
+            if (entry.contains("skills")) {
+                auto& sj = entry["skills"];
+                b.skills.heal  = sj.value("heal",  0u);
+                b.skills.elite = sj.value("elite", 0u);
+                if (sj.contains("utilities")) {
+                    auto& uj = sj["utilities"];
+                    for (int i = 0; i < 3 && i < (int)uj.size(); i++)
+                        b.skills.utilities[i] = uj[i].get<uint32_t>();
+                }
+            }
+
+            if (entry.contains("gear")) {
+                auto& gj = entry["gear"];
+                b.gear.relic_id     = gj.value("relic_id",     0u);
+                b.gear.food_id      = gj.value("food_id",      0u);
+                b.gear.utility_id   = gj.value("utility_id",   0u);
+                b.gear.relic_text   = gj.value("relic_text",   "");
+                b.gear.food_text    = gj.value("food_text",    "");
+                b.gear.utility_text = gj.value("utility_text", "");
+                if (gj.contains("items"))
+                    for (const auto& ij : gj["items"])
+                        b.gear.items.push_back(DeserializeGearItem(ij));
+            }
+
+            out_builds.push_back(std::move(b));
+        }
+        return !out_builds.empty();
     } catch (...) { return false; }
 }
 

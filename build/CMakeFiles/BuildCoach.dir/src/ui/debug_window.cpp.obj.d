@@ -1,8 +1,8 @@
 CMakeFiles/BuildCoach.dir/src/ui/debug_window.cpp.obj: \
- /home/todd/gw2-build-coach\ copy/src/ui/debug_window.cpp \
- /home/todd/gw2-build-coach\ copy/src/ui/debug_window.h \
- /home/todd/gw2-build-coach\ copy/external/imgui/imgui.h \
- /home/todd/gw2-build-coach\ copy/external/imgui/imconfig.h \
+ /home/todd/gw2-build-coach/src/ui/debug_window.cpp \
+ /home/todd/gw2-build-coach/src/ui/debug_window.h \
+ /home/todd/gw2-build-coach/external/imgui/imgui.h \
+ /home/todd/gw2-build-coach/external/imgui/imconfig.h \
  /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/include/float.h \
  /usr/x86_64-w64-mingw32/include/float.h \
  /usr/x86_64-w64-mingw32/include/crtdefs.h \

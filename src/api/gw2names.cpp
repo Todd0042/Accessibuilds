@@ -44,17 +44,34 @@ static std::map<uint32_t, std::string> s_item_detail_type;
 
 static std::string SerializeCache()
 {
-    /* Caller must NOT hold s_mutex — we take it here */
-    std::lock_guard<std::mutex> lk(s_mutex);
-    json j;
+    /* Copy all maps under the mutex (brief), then build+dump JSON outside the lock
+     * so the render thread is never blocked for more than a map-copy. */
+    struct Snapshot {
+        std::map<uint32_t, std::string> names, icons;
+    };
+    Snapshot sn_specs, sn_traits, sn_skills, sn_items, sn_itemstats;
+    std::map<uint32_t, uint32_t> snap_stat_id;
+    std::map<uint32_t, std::string> snap_detail_type;
 
-    auto tc_to_json = [](const TypeCache& tc) {
+    {
+        std::lock_guard<std::mutex> lk(s_mutex);
+        sn_specs.names   = s_specs.names;   sn_specs.icons   = s_specs.icons;
+        sn_traits.names  = s_traits.names;  sn_traits.icons  = s_traits.icons;
+        sn_skills.names  = s_skills.names;  sn_skills.icons  = s_skills.icons;
+        sn_items.names   = s_items.names;   sn_items.icons   = s_items.icons;
+        sn_itemstats.names = s_itemstats.names; sn_itemstats.icons = s_itemstats.icons;
+        snap_stat_id     = s_item_stat_id;
+        snap_detail_type = s_item_detail_type;
+    }
+    /* Mutex released — JSON build and dump happen without holding any lock. */
+
+    auto tc_to_json = [](const Snapshot& sn) {
         json o;
         json names = json::object();
         json icons = json::object();
-        for (auto& kv : tc.names)
+        for (auto& kv : sn.names)
             names[std::to_string(kv.first)] = kv.second;
-        for (auto& kv : tc.icons)
+        for (auto& kv : sn.icons)
             if (!kv.second.empty())
                 icons[std::to_string(kv.first)] = kv.second;
         o["names"] = names;
@@ -62,20 +79,21 @@ static std::string SerializeCache()
         return o;
     };
 
-    j["specs"]     = tc_to_json(s_specs);
-    j["traits"]    = tc_to_json(s_traits);
-    j["skills"]    = tc_to_json(s_skills);
-    j["items"]     = tc_to_json(s_items);
-    j["itemstats"] = tc_to_json(s_itemstats);
+    json j;
+    j["specs"]     = tc_to_json(sn_specs);
+    j["traits"]    = tc_to_json(sn_traits);
+    j["skills"]    = tc_to_json(sn_skills);
+    j["items"]     = tc_to_json(sn_items);
+    j["itemstats"] = tc_to_json(sn_itemstats);
 
     json stat_ids = json::object();
-    for (auto& kv : s_item_stat_id)
+    for (auto& kv : snap_stat_id)
         if (kv.second != UINT32_MAX)
             stat_ids[std::to_string(kv.first)] = kv.second;
     j["item_stat_id"] = stat_ids;
 
     json detail_types = json::object();
-    for (auto& kv : s_item_detail_type)
+    for (auto& kv : snap_detail_type)
         detail_types[std::to_string(kv.first)] = kv.second;
     j["item_detail_type"] = detail_types;
 
@@ -125,26 +143,36 @@ static void FetchBatch(const wchar_t* endpoint,
     auto resp = Http::Get(GW2API::HOST, path);
     if (!resp.ok()) return;
 
+    /* Process JSON outside the mutex so the render thread is never blocked
+     * by field access / string allocation during the write loop. */
+    struct Entry { uint32_t id; std::string name; std::string icon_path; };
+    std::vector<Entry> parsed;
     try {
         auto j = json::parse(resp.body);
-        std::lock_guard<std::mutex> lk(s_mutex);
+        parsed.reserve(j.size());
         for (auto& entry : j) {
-            uint32_t    eid  = entry.value("id",   0u);
-            std::string name = entry.value("name", "?");
+            Entry e;
+            e.id = entry.value("id", 0u);
+            if (!e.id) continue;
+            e.name = entry.value("name", "?");
             std::string icon = entry.value("icon", "");
-            if (!eid) continue;
-
-            tc.names[eid] = name;
-
-            /* Extract endpoint from full render URL */
             if (!icon.empty()) {
                 const char* marker = "render.guildwars2.com";
                 auto pos = icon.find(marker);
                 if (pos != std::string::npos)
-                    tc.icons[eid] = icon.substr(pos + 21); /* len("render.guildwars2.com") */
+                    e.icon_path = icon.substr(pos + 21);
             }
+            parsed.push_back(std::move(e));
         }
-    } catch (...) {}
+    } catch (...) { return; }
+
+    /* Mutex held only for the final map writes — no JSON access under lock. */
+    std::lock_guard<std::mutex> lk(s_mutex);
+    for (const auto& e : parsed) {
+        tc.names[e.id] = e.name;
+        if (!e.icon_path.empty())
+            tc.icons[e.id] = e.icon_path;
+    }
 }
 
 /* ── Public API ──────────────────────────────────────────────────────────── */
@@ -154,6 +182,21 @@ const std::string& GetTrait   (uint32_t id) { return LookupName(s_traits,    id)
 const std::string& GetSkill   (uint32_t id) { return LookupName(s_skills,    id); }
 const std::string& GetItem    (uint32_t id) { return LookupName(s_items,     id); }
 const std::string& GetStatSet (uint32_t id) { return LookupName(s_itemstats, id); }
+
+uint32_t FindItemByName(const char* name)
+{
+    if (!name || !name[0]) return 0;
+    std::string target = name;
+    while (!target.empty() && (target.back() == ' ' || target.back() == '\t')) target.pop_back();
+    std::lock_guard<std::mutex> lk(s_mutex);
+    for (const auto& kv : s_items.names) {
+        const std::string& n = kv.second;
+        if (n.size() == target.size() &&
+            _stricmp(n.c_str(), target.c_str()) == 0)
+            return kv.first;
+    }
+    return 0;
+}
 
 uint32_t GetItemStatId(uint32_t item_id)
 {
@@ -278,25 +321,32 @@ void FlushPending()
             }
             auto resp = Http::Get(GW2API::HOST, path);
             if (resp.ok() && !resp.body.empty() && resp.body[0] != '<') {
+                /* Parse and process JSON outside the mutex. */
+                struct StatEntry { uint32_t eid; uint32_t sid; std::string detail_type; };
+                std::vector<StatEntry> stat_results;
                 try {
                     auto j = json::parse(resp.body);
-                    std::lock_guard<std::mutex> lk(s_mutex);
+                    stat_results.reserve(j.size());
                     for (auto& entry : j) {
-                        uint32_t eid = entry.value("id", 0u);
-                        if (!eid) continue;
-                        uint32_t sid = 0;
+                        StatEntry se;
+                        se.eid = entry.value("id", 0u);
+                        if (!se.eid) continue;
+                        se.sid = 0;
                         if (entry.contains("details")) {
                             auto& det = entry["details"];
                             if (det.contains("infix_upgrade"))
-                                sid = det["infix_upgrade"].value("id", 0u);
-                            /* Store weapon/armor subtype, e.g. "Greatsword", "Coat" */
-                            s_item_detail_type[eid] = det.value("type", "");
-                        } else {
-                            s_item_detail_type[eid] = "";
+                                se.sid = det["infix_upgrade"].value("id", 0u);
+                            se.detail_type = det.value("type", "");
                         }
-                        s_item_stat_id[eid] = sid; /* 0 means no fixed stat */
+                        stat_results.push_back(std::move(se));
                     }
                 } catch (...) {}
+                /* Mutex held only for map writes — no JSON access under lock. */
+                std::lock_guard<std::mutex> lk(s_mutex);
+                for (const auto& se : stat_results) {
+                    s_item_detail_type[se.eid] = se.detail_type;
+                    s_item_stat_id[se.eid] = se.sid;
+                }
             }
         }
 

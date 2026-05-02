@@ -10,6 +10,12 @@ void SetCacheDir(const std::string& addon_dir);
 bool SaveSCBuilds(const std::vector<GW2::SCBuild>& builds);
 bool LoadSCBuilds(std::vector<GW2::SCBuild>& out_builds);
 
+/* Save the full SC build list (traits + skills + gear) back to sc_builds_full.json.
+ * Uses the same string-keyed JSON format that ParseBuildJSON reads, so the file
+ * round-trips through LoadSCBuilds without loss.
+ * NOTE: the next SC fetch from Snow Crows will overwrite this file. */
+bool SaveSCBuildsFull(const std::vector<GW2::SCBuild>& builds);
+
 bool SaveWingmanLog(const GW2::WingmanLog& log);
 bool LoadWingmanLog(uint32_t boss_id, GW2::Profession prof,
                     GW2::WingmanLog& out_log);
@@ -40,5 +46,10 @@ bool LoadPublicAPIData(uint64_t gw2_build, std::string& out_json);
  * immediately on subsequent launches instead of "..." until fetched. */
 bool SaveNamesCache(uint64_t gw2_build, const std::string& json_str);
 bool LoadNamesCache(uint64_t gw2_build, std::string& out_json);
+
+/* User-authored builds (created via the Build Editor).
+ * Stored in cache/user_builds.json — separate from SC builds. */
+bool SaveUserBuilds(const std::vector<GW2::SCBuild>& builds);
+bool LoadUserBuilds(std::vector<GW2::SCBuild>& out_builds);
 
 } /* namespace BuildCache */

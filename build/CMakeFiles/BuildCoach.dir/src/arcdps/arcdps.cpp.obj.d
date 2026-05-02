@@ -1,7 +1,7 @@
 CMakeFiles/BuildCoach.dir/src/arcdps/arcdps.cpp.obj: \
- /home/todd/gw2-build-coach\ copy/src/arcdps/arcdps.cpp \
- /home/todd/gw2-build-coach\ copy/src/arcdps/arcdps.h \
- /home/todd/gw2-build-coach\ copy/src/arcdps/arcdps_structs.h \
+ /home/todd/gw2-build-coach/src/arcdps/arcdps.cpp \
+ /home/todd/gw2-build-coach/src/arcdps/arcdps.h \
+ /home/todd/gw2-build-coach/src/arcdps/arcdps_structs.h \
  /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdint.h \
  /usr/x86_64-w64-mingw32/include/stdint.h \
  /usr/x86_64-w64-mingw32/include/crtdefs.h \
@@ -13,7 +13,7 @@ CMakeFiles/BuildCoach.dir/src/arcdps/arcdps.cpp.obj: \
  /usr/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
  /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stddef.h \
  /usr/x86_64-w64-mingw32/include/stddef.h \
- /home/todd/gw2-build-coach\ copy/src/arcdps/../build/types.h \
+ /home/todd/gw2-build-coach/src/arcdps/../build/types.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/string \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/requires_hosted.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++config.h \
@@ -123,8 +123,8 @@ CMakeFiles/BuildCoach.dir/src/arcdps/arcdps.cpp.obj: \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/enable_special_members.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/node_handle.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/erase_if.h \
- /home/todd/gw2-build-coach\ copy/src/arcdps/../shared.h \
- /home/todd/gw2-build-coach\ copy/src/arcdps/../../external/nexus/Nexus.h \
+ /home/todd/gw2-build-coach/src/arcdps/../shared.h \
+ /home/todd/gw2-build-coach/src/arcdps/../../external/nexus/Nexus.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/cstdint \
  /usr/x86_64-w64-mingw32/include/windows.h \
  /usr/x86_64-w64-mingw32/include/sdkddkver.h \
@@ -424,7 +424,7 @@ CMakeFiles/BuildCoach.dir/src/arcdps/arcdps.cpp.obj: \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/x86_64-w64-mingw32/bits/error_constants.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/ext/atomicity.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/x86_64-w64-mingw32/bits/atomic_word.h \
- /home/todd/gw2-build-coach\ copy/src/arcdps/../build/cache.h \
+ /home/todd/gw2-build-coach/src/arcdps/../build/cache.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/chrono \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/algorithm \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/stl_algo.h \

@@ -1,6 +1,6 @@
 CMakeFiles/BuildCoach.dir/src/build/types.cpp.obj: \
- /home/todd/gw2-build-coach\ copy/src/build/types.cpp \
- /home/todd/gw2-build-coach\ copy/src/build/types.h \
+ /home/todd/gw2-build-coach/src/build/types.cpp \
+ /home/todd/gw2-build-coach/src/build/types.h \
  /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdint.h \
  /usr/x86_64-w64-mingw32/include/stdint.h \
  /usr/x86_64-w64-mingw32/include/crtdefs.h \

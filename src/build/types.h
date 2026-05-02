@@ -136,13 +136,17 @@ struct GearItem {
     uint32_t   upgrade2_id = 0;
     std::vector<InfusionSlot> infusions;
     WeaponType weapon_type = WeaponType::Unknown;
+    std::string upgrade_name; /* text name when upgrade_id is 0 (user-authored builds) */
 };
 
 struct GearBuild {
     std::vector<GearItem> items;
     uint32_t relic_id;
-    uint32_t food_id;       /* consumable buff item ID */
-    uint32_t utility_id;    /* utility consumable item ID */
+    uint32_t food_id;
+    uint32_t utility_id;
+    std::string relic_text;    /* fallback text name when relic_id == 0 */
+    std::string food_text;
+    std::string utility_text;
 };
 
 /* ── Full player build snapshot ─────────────────────────────────────────── */

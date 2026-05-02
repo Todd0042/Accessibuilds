@@ -36,6 +36,20 @@ static GW2::Profession ProfFromInt(uint32_t v)
     return GW2::Profession::None;
 }
 
+static GW2::Profession ProfFromString(const std::string& s)
+{
+    if (s == "Guardian")     return GW2::Profession::Guardian;
+    if (s == "Warrior")      return GW2::Profession::Warrior;
+    if (s == "Engineer")     return GW2::Profession::Engineer;
+    if (s == "Ranger")       return GW2::Profession::Ranger;
+    if (s == "Thief")        return GW2::Profession::Thief;
+    if (s == "Elementalist") return GW2::Profession::Elementalist;
+    if (s == "Mesmer")       return GW2::Profession::Mesmer;
+    if (s == "Necromancer")  return GW2::Profession::Necromancer;
+    if (s == "Revenant")     return GW2::Profession::Revenant;
+    return GW2::Profession::None;
+}
+
 static GW2::EliteSpec EliteSpecFromInt(uint32_t v)
 {
     switch (v) {
@@ -348,9 +362,94 @@ bool FetchFullPlayerBuild(const std::string& api_key,
                           const std::string& character_name,
                           GW2::PlayerBuild&  out_build)
 {
-    bool ok = FetchCharacterBuild(api_key, character_name, out_build);
-    ok &= FetchCharacterEquipment(api_key, character_name, out_build);
-    return ok;
+    std::string enc = UrlEncodeName(character_name);
+    /* Single call: /v2/characters/{name} with versioned schema returns profession
+     * (as a string), build_tabs, equipment_tabs, and the top-level equipment[]
+     * which is the only place the Relic slot appears. */
+    std::string ep = "/v2/characters/" + enc + "?v=2024-04-01T00:00:00.000Z";
+    auto resp = Http::GetWithBearer(HOST, BuildPath(ep), api_key);
+    if (!resp.ok()) {
+        char buf[256];
+        snprintf(buf, sizeof(buf), "GW2API: character fetch failed for %s (HTTP %d: %s)",
+                 character_name.c_str(), resp.status_code, resp.error.c_str());
+        Log(LOGL_WARNING, buf);
+        return false;
+    }
+
+    try {
+        auto j = json::parse(resp.body);
+
+        /* Profession from API string — reliable, no Mumble dependency */
+        out_build.profession = ProfFromString(j.value("profession", ""));
+
+        /* Active build tab: specializations + skills */
+        if (j.contains("build_tabs") && j["build_tabs"].is_array()) {
+            for (auto& tab : j["build_tabs"]) {
+                if (!tab.value("is_active", false)) continue;
+                if (!tab.contains("build")) break;
+                auto& build = tab["build"];
+
+                if (build.contains("specializations") && build["specializations"].is_array()) {
+                    auto& specs = build["specializations"];
+                    for (int i = 0; i < 3 && i < (int)specs.size(); i++) {
+                        GW2::SpecLine line;
+                        line.spec_id = specs[i].value("id", 0u);
+                        if (specs[i].contains("traits") && specs[i]["traits"].is_array()) {
+                            auto& traits = specs[i]["traits"];
+                            for (int t = 0; t < 3 && t < (int)traits.size(); t++)
+                                line.traits[t].trait_id = traits[t].is_null() ? 0u : (uint32_t)traits[t];
+                        }
+                        out_build.traits.lines[i] = line;
+                        if (i == 2) out_build.elite_spec = EliteSpecFromInt(line.spec_id);
+                    }
+                }
+
+                if (build.contains("skills") && build["skills"].is_object()) {
+                    auto& s = build["skills"];
+                    auto getSkill = [](const json& sk, const char* k) -> uint32_t {
+                        if (!sk.contains(k) || sk[k].is_null()) return 0u;
+                        return sk[k].get<uint32_t>();
+                    };
+                    out_build.skills.heal = getSkill(s, "heal");
+                    if (s.contains("utilities") && s["utilities"].is_array()) {
+                        auto& utils = s["utilities"];
+                        for (int u = 0; u < 3 && u < (int)utils.size(); u++)
+                            if (!utils[u].is_null())
+                                out_build.skills.utilities[u] = utils[u].get<uint32_t>();
+                    }
+                    out_build.skills.elite = getSkill(s, "elite");
+                }
+                break;
+            }
+        }
+
+        /* Active equipment tab: gear items with stats + upgrades */
+        if (j.contains("equipment_tabs") && j["equipment_tabs"].is_array()) {
+            for (auto& tab : j["equipment_tabs"]) {
+                if (!tab.value("is_active", false)) continue;
+                if (tab.contains("equipment") && tab["equipment"].is_array())
+                    ParseEquipmentArray(tab["equipment"], out_build, false);
+                break;
+            }
+        }
+
+        /* Relic lives only in the top-level equipment[] (no tab association in the API) */
+        if (j.contains("equipment") && j["equipment"].is_array()) {
+            for (auto& item : j["equipment"]) {
+                if (item.value("slot", "") == "Relic") {
+                    out_build.gear.relic_id = item.value("id", 0u);
+                    break;
+                }
+            }
+        }
+
+        out_build.character_name = character_name;
+        Log(LOGL_INFO, ("Player build loaded for " + character_name).c_str());
+        return true;
+    } catch (const std::exception& e) {
+        Log(LOGL_WARNING, (std::string("GW2API: character parse error: ") + e.what()).c_str());
+        return false;
+    }
 }
 
 bool FetchAccountName(const std::string& api_key, std::string& out_name)

@@ -15,6 +15,7 @@ const std::string& GetSpec (uint32_t id);
 const std::string& GetTrait(uint32_t id);
 const std::string& GetSkill(uint32_t id);
 const std::string& GetItem (uint32_t id);
+uint32_t           FindItemByName(const char* name); /* reverse cache: 0 if not yet fetched */
 const std::string& GetStatSet(uint32_t id);   /* resolves via /v2/itemstats */
 uint32_t           GetItemStatId(uint32_t item_id); /* resolves fixed-stat item → stat set ID via /v2/items */
 
