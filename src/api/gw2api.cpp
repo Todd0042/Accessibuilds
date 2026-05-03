@@ -433,7 +433,8 @@ bool FetchFullPlayerBuild(const std::string& api_key,
             }
         }
 
-        /* Relic lives only in the top-level equipment[] (no tab association in the API) */
+        /* Relic is character-level, not tab-specific.
+         * Primary: top-level equipment[] in the versioned schema response. */
         if (j.contains("equipment") && j["equipment"].is_array()) {
             for (auto& item : j["equipment"]) {
                 if (item.value("slot", "") == "Relic") {
@@ -441,6 +442,22 @@ bool FetchFullPlayerBuild(const std::string& api_key,
                     break;
                 }
             }
+        }
+
+        /* Fallback: scan every equipment tab — some API responses include the Relic
+         * inside tab equipment rather than at the top level. */
+        if (!out_build.gear.relic_id && j.contains("equipment_tabs")
+                && j["equipment_tabs"].is_array()) {
+            for (auto& tab : j["equipment_tabs"]) {
+                if (!tab.contains("equipment") || !tab["equipment"].is_array()) continue;
+                for (auto& item : tab["equipment"]) {
+                    if (item.value("slot", "") == "Relic") {
+                        uint32_t rid = item.value("id", 0u);
+                        if (rid) { out_build.gear.relic_id = rid; goto relic_found; }
+                    }
+                }
+            }
+            relic_found:;
         }
 
         out_build.character_name = character_name;

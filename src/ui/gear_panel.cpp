@@ -81,8 +81,23 @@ static void RenderSlotRow(const GW2::GearItem* pi, const GW2::GearItem* ri,
         if (is_relic) {
             if (!pi->item_id) {
                 item_id_ok = false;
+            } else if (pi->item_id == ri->item_id) {
+                item_id_ok = true;
             } else {
-                item_id_ok = (pi->item_id == ri->item_id);
+                /* Different IDs — compare by name via relic DB (instant, no async wait).
+                 * Handles PvE/WvW vs PvP ID variants of the same relic. */
+                const char* pn = FindRelicName(pi->item_id);
+                const char* rn = FindRelicName(ri->item_id);
+                if (pn && rn)
+                    item_id_ok = (strcmp(pn, rn) == 0);
+                else {
+                    /* Fall back to GW2Names — passes if still loading ("...") to
+                     * avoid false positives while names are being fetched. */
+                    const std::string& pa = GW2Names::GetItem(pi->item_id);
+                    const std::string& ra = GW2Names::GetItem(ri->item_id);
+                    item_id_ok = pa == "..." || ra == "..."
+                                 || (!pa.empty() && pa == ra);
+                }
             }
         } else {
             if (ri->stat_id) {

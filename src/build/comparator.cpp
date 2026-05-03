@@ -1,6 +1,7 @@
 #include "comparator.h"
 #include "../api/gw2api.h"
 #include "../api/gw2names.h"
+#include "../api/relic_db.h"
 #include <sstream>
 #include <map>
 
@@ -328,14 +329,21 @@ ComparisonResult CompareGear(const GW2::GearBuild& player,
     check2H(GW2::GearSlot::WeaponA1, GW2::GearSlot::WeaponA2);
     check2H(GW2::GearSlot::WeaponB1, GW2::GearSlot::WeaponB2);
 
-    /* Relic */
+    /* Relic — use static relic DB for instant name lookup (avoids async "..." race).
+     * Only fall back to GW2Names if both IDs are absent from the DB. */
     if (reference.relic_id && player.relic_id != reference.relic_id) {
-        bool relic_ok = SameByName(GW2Names::GetItem(player.relic_id),
-                                   GW2Names::GetItem(reference.relic_id));
+        const char* pn = FindRelicName(player.relic_id);
+        const char* rn = FindRelicName(reference.relic_id);
+        bool relic_ok = false;
+        if (pn && rn)
+            relic_ok = (strcmp(pn, rn) == 0);
+        else
+            relic_ok = SameByName(GW2Names::GetItem(player.relic_id),
+                                  GW2Names::GetItem(reference.relic_id));
         if (!relic_ok) {
             AddDiff(result, Severity::Error, "Gear", "Relic",
-                    std::to_string(player.relic_id),
-                    std::to_string(reference.relic_id),
+                    pn ? pn : std::to_string(player.relic_id),
+                    rn ? rn : std::to_string(reference.relic_id),
                     "Wrong relic");
         }
     }

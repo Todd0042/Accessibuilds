@@ -4826,6 +4826,7 @@ CMakeFiles/BuildCoach.dir/src/build/cache.cpp.obj: /home/todd/gw2-build-coach/sr
 CMakeFiles/BuildCoach.dir/src/build/comparator.cpp.obj: /home/todd/gw2-build-coach/src/build/comparator.cpp \
   /home/todd/gw2-build-coach/src/api/gw2api.h \
   /home/todd/gw2-build-coach/src/api/gw2names.h \
+  /home/todd/gw2-build-coach/src/api/relic_db.h \
   /home/todd/gw2-build-coach/src/build/comparator.h \
   /home/todd/gw2-build-coach/src/build/types.h \
   /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/include/limits.h \
@@ -4922,6 +4923,7 @@ CMakeFiles/BuildCoach.dir/src/build/comparator.cpp.obj: /home/todd/gw2-build-coa
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/cstdint \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/cstdio \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/cstdlib \
+  /usr/x86_64-w64-mingw32/include/c++/15.2.0/cstring \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/cwchar \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/cwctype \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/debug/assertions.h \
@@ -4986,6 +4988,7 @@ CMakeFiles/BuildCoach.dir/src/build/comparator.cpp.obj: /home/todd/gw2-build-coa
   /usr/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
   /usr/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
   /usr/x86_64-w64-mingw32/include/sec_api/stdlib_s.h \
+  /usr/x86_64-w64-mingw32/include/sec_api/string_s.h \
   /usr/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
   /usr/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
   /usr/x86_64-w64-mingw32/include/signal.h \
@@ -4993,6 +4996,7 @@ CMakeFiles/BuildCoach.dir/src/build/comparator.cpp.obj: /home/todd/gw2-build-coa
   /usr/x86_64-w64-mingw32/include/stdint.h \
   /usr/x86_64-w64-mingw32/include/stdio.h \
   /usr/x86_64-w64-mingw32/include/stdlib.h \
+  /usr/x86_64-w64-mingw32/include/string.h \
   /usr/x86_64-w64-mingw32/include/swprintf.inl \
   /usr/x86_64-w64-mingw32/include/sys/timeb.h \
   /usr/x86_64-w64-mingw32/include/sys/types.h \
@@ -5120,6 +5124,7 @@ CMakeFiles/BuildCoach.dir/src/ui/build_editor.cpp.obj: /home/todd/gw2-build-coac
   /home/todd/gw2-build-coach/src/api/gw2names.h \
   /home/todd/gw2-build-coach/src/api/item_lookup.h \
   /home/todd/gw2-build-coach/src/api/relic_db.h \
+  /home/todd/gw2-build-coach/src/api/snowcrows.h \
   /home/todd/gw2-build-coach/src/build/cache.h \
   /home/todd/gw2-build-coach/src/build/comparator.h \
   /home/todd/gw2-build-coach/src/build/types.h \
@@ -5287,6 +5292,8 @@ CMakeFiles/BuildCoach.dir/src/ui/build_editor.cpp.obj: /home/todd/gw2-build-coac
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/cpp_type_traits.h \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/cxxabi_forced.h \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/cxxabi_init_exception.h \
+  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/enable_special_members.h \
+  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/erase_if.h \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/exception.h \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/exception_defines.h \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/exception_ptr.h \
@@ -5294,6 +5301,8 @@ CMakeFiles/BuildCoach.dir/src/ui/build_editor.cpp.obj: /home/todd/gw2-build-coac
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/functexcept.h \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/functional_hash.h \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/hash_bytes.h \
+  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/hashtable.h \
+  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/hashtable_policy.h \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/invoke.h \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/ios_base.h \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/istream.tcc \
@@ -5307,6 +5316,7 @@ CMakeFiles/BuildCoach.dir/src/ui/build_editor.cpp.obj: /home/todd/gw2-build-coac
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/move.h \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/nested_exception.h \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/new_allocator.h \
+  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/node_handle.h \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/ostream.h \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/ostream.tcc \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/ostream_insert.h \
@@ -5317,7 +5327,9 @@ CMakeFiles/BuildCoach.dir/src/ui/build_editor.cpp.obj: /home/todd/gw2-build-coac
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/range_access.h \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/refwrap.h \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/requires_hosted.h \
+  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/sstream.tcc \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/std_abs.h \
+  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/std_function.h \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/std_mutex.h \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/stl_algo.h \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/stl_algobase.h \
@@ -5338,6 +5350,7 @@ CMakeFiles/BuildCoach.dir/src/ui/build_editor.cpp.obj: /home/todd/gw2-build-coac
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/stringfwd.h \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/uniform_int_dist.h \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/unique_lock.h \
+  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/unordered_map.h \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/uses_allocator.h \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/uses_allocator_args.h \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/utility.h \
@@ -5360,12 +5373,14 @@ CMakeFiles/BuildCoach.dir/src/ui/build_editor.cpp.obj: /home/todd/gw2-build-coac
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/debug/assertions.h \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/debug/debug.h \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/exception \
+  /usr/x86_64-w64-mingw32/include/c++/15.2.0/ext/aligned_buffer.h \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/ext/alloc_traits.h \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/ext/atomicity.h \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/ext/numeric_traits.h \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/ext/string_conversions.h \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/ext/type_traits.h \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/fstream \
+  /usr/x86_64-w64-mingw32/include/c++/15.2.0/functional \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/initializer_list \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/ios \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/iosfwd \
@@ -5378,6 +5393,7 @@ CMakeFiles/BuildCoach.dir/src/ui/build_editor.cpp.obj: /home/todd/gw2-build-coac
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/pstl/glue_algorithm_defs.h \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/pstl/pstl_config.h \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/ratio \
+  /usr/x86_64-w64-mingw32/include/c++/15.2.0/sstream \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/stdexcept \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/stdlib.h \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/streambuf \
@@ -5387,6 +5403,7 @@ CMakeFiles/BuildCoach.dir/src/ui/build_editor.cpp.obj: /home/todd/gw2-build-coac
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/tuple \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/type_traits \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/typeinfo \
+  /usr/x86_64-w64-mingw32/include/c++/15.2.0/unordered_map \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/vector \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/x86_64-w64-mingw32/bits/atomic_word.h \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/x86_64-w64-mingw32/bits/basic_file.h \
@@ -8844,13 +8861,13 @@ CMakeFiles/BuildCoach.dir/src/ui/main_window.cpp.obj: /home/todd/gw2-build-coach
 
 /home/todd/gw2-build-coach/src/ui/ui_scale.h:
 
-/home/todd/gw2-build-coach/src/api/relic_db.h:
-
 /home/todd/gw2-build-coach/src/ui/build_editor.cpp:
 
 /home/todd/gw2-build-coach/src/build/types.cpp:
 
 /home/todd/gw2-build-coach/src/build/comparator.h:
+
+/home/todd/gw2-build-coach/src/api/relic_db.h:
 
 /home/todd/gw2-build-coach/src/build/cache.cpp:
 

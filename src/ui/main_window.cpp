@@ -58,6 +58,13 @@ static int s_resize_for_tab = -1;
 static uint32_t s_last_map_id    = 0;
 static bool     s_last_in_combat = false;
 
+/* Auto-fetch throttle: once per map change (T+5s), one retry if first fails (T'+5s) */
+static uint32_t  s_auto_map_id      = 0;
+static int       s_auto_attempt     = 0;    /* 0=pending, 1=first fired, 2=retry fired */
+static std::atomic<bool> s_auto_last_ok{true};
+static bool      s_was_refreshing   = false;
+static std::chrono::steady_clock::time_point s_next_auto_fetch{};
+
 static const char* PROF_FILTER_NAMES[] = {
     "All", "Guardian","Warrior","Engineer","Ranger","Thief",
     "Elementalist","Mesmer","Necromancer","Revenant"
@@ -178,6 +185,7 @@ static void DoRefresh()
 
         /* Prime weapon-type cache for the player's equipped weapons */
         for (uint32_t id : wep_ids) GW2Names::GetItemType(id);
+        s_auto_last_ok = full_ok;
         std::string log_msg = (full_ok ? "Player build loaded for " : "Player build partially loaded for ") + char_name;
         Log(full_ok ? LOGL_INFO : LOGL_WARNING, log_msg.c_str());
     }
@@ -439,13 +447,34 @@ void Render()
     /* Drain pending GW2 name lookups — fires background HTTP batch every call */
     GW2Names::FlushPending();
 
-    /* Auto-fetch player build when a new character is detected */
-    if (g_PlayerBuildDirty && !s_refreshing) {
-        std::string key, name;
-        { std::lock_guard<std::mutex> lk(g_APIKeyMutex);    key  = g_APIKey; }
-        { std::lock_guard<std::mutex> lk(g_CharacterMutex); name = g_Character.name; }
-        if (!key.empty() && !name.empty())
-            RefreshData();
+    /* Auto-fetch: once per map change after 5s, one retry 5s after a failure */
+    {
+        uint32_t cur_map = 0;
+        { std::lock_guard<std::mutex> lk(g_CharacterMutex); cur_map = g_Character.map_id; }
+
+        if (cur_map != 0 && cur_map != s_auto_map_id) {
+            s_auto_map_id     = cur_map;
+            s_auto_attempt    = 0;
+            s_next_auto_fetch = std::chrono::steady_clock::now() + std::chrono::seconds(5);
+        }
+
+        bool cur_refreshing = s_refreshing.load();
+        if (s_was_refreshing && !cur_refreshing && s_auto_attempt == 1 && !s_auto_last_ok.load())
+            s_next_auto_fetch = std::chrono::steady_clock::now() + std::chrono::seconds(5);
+        s_was_refreshing = cur_refreshing;
+
+        if (!cur_refreshing && s_auto_attempt < 2
+                && s_next_auto_fetch != std::chrono::steady_clock::time_point{}
+                && std::chrono::steady_clock::now() >= s_next_auto_fetch) {
+            std::string key, name;
+            { std::lock_guard<std::mutex> lk(g_APIKeyMutex);    key  = g_APIKey; }
+            { std::lock_guard<std::mutex> lk(g_CharacterMutex); name = g_Character.name; }
+            if (!key.empty() && !name.empty()) {
+                s_auto_attempt++;
+                s_next_auto_fetch = {};
+                RefreshData();
+            }
+        }
     }
 
     /* Clear ImGui keyboard focus when the game changes state (map load, combat

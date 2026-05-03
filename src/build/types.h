@@ -141,9 +141,9 @@ struct GearItem {
 
 struct GearBuild {
     std::vector<GearItem> items;
-    uint32_t relic_id;
-    uint32_t food_id;
-    uint32_t utility_id;
+    uint32_t relic_id   = 0;
+    uint32_t food_id    = 0;
+    uint32_t utility_id = 0;
     std::string relic_text;    /* fallback text name when relic_id == 0 */
     std::string food_text;
     std::string utility_text;
