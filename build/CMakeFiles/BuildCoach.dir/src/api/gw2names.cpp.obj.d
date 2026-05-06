@@ -1,6 +1,6 @@
 CMakeFiles/BuildCoach.dir/src/api/gw2names.cpp.obj: \
- /home/todd/gw2-build-coach/src/api/gw2names.cpp \
- /home/todd/gw2-build-coach/src/api/gw2names.h \
+ /home/todd/gw2-build-coaches/gw2-build-coach/src/api/gw2names.cpp \
+ /home/todd/gw2-build-coaches/gw2-build-coach/src/api/gw2names.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/string \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/requires_hosted.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++config.h \
@@ -18,8 +18,12 @@ CMakeFiles/BuildCoach.dir/src/api/gw2names.cpp.obj: \
  /usr/x86_64-w64-mingw32/include/_mingw_mac.h \
  /usr/x86_64-w64-mingw32/include/_mingw_secapi.h \
  /usr/x86_64-w64-mingw32/include/vadefs.h \
- /usr/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
  /usr/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
+ /usr/x86_64-w64-mingw32/include/corecrt_wconio.h \
+ /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stddef.h \
+ /usr/x86_64-w64-mingw32/include/stddef.h \
+ /usr/x86_64-w64-mingw32/include/crtdefs.h \
+ /usr/x86_64-w64-mingw32/include/sec_api/wconio_s.h \
  /usr/x86_64-w64-mingw32/include/corecrt_wstdlib.h \
  /usr/x86_64-w64-mingw32/include/corecrt_wctype.h \
  /usr/x86_64-w64-mingw32/include/_mingw_off_t.h \
@@ -41,7 +45,6 @@ CMakeFiles/BuildCoach.dir/src/api/gw2names.cpp.obj: \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++locale.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/clocale \
  /usr/x86_64-w64-mingw32/include/locale.h \
- /usr/x86_64-w64-mingw32/include/crtdefs.h \
  /usr/x86_64-w64-mingw32/include/stdio.h \
  /usr/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/iosfwd \
@@ -96,16 +99,14 @@ CMakeFiles/BuildCoach.dir/src/api/gw2names.cpp.obj: \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/basic_string.tcc \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/memory_resource.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/cstddef \
- /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stddef.h \
- /usr/x86_64-w64-mingw32/include/stddef.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/uses_allocator.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/uses_allocator_args.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/tuple \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/cstdint \
  /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdint.h \
  /usr/x86_64-w64-mingw32/include/stdint.h \
- /home/todd/gw2-build-coach/src/api/gw2api.h \
- /home/todd/gw2-build-coach/src/api/../build/types.h \
+ /home/todd/gw2-build-coaches/gw2-build-coach/src/api/gw2api.h \
+ /home/todd/gw2-build-coaches/gw2-build-coach/src/api/../build/types.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/vector \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/stl_uninitialized.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/stl_vector.h \
@@ -124,10 +125,10 @@ CMakeFiles/BuildCoach.dir/src/api/gw2names.cpp.obj: \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/enable_special_members.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/node_handle.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/erase_if.h \
- /home/todd/gw2-build-coach/src/api/http_client.h \
- /home/todd/gw2-build-coach/src/api/weapon_type_db.h \
- /home/todd/gw2-build-coach/src/api/../shared.h \
- /home/todd/gw2-build-coach/src/api/../../external/nexus/Nexus.h \
+ /home/todd/gw2-build-coaches/gw2-build-coach/src/api/http_client.h \
+ /home/todd/gw2-build-coaches/gw2-build-coach/src/api/weapon_type_db.h \
+ /home/todd/gw2-build-coaches/gw2-build-coach/src/api/../shared.h \
+ /home/todd/gw2-build-coaches/gw2-build-coach/src/api/../../external/nexus/Nexus.h \
  /usr/x86_64-w64-mingw32/include/windows.h \
  /usr/x86_64-w64-mingw32/include/sdkddkver.h \
  /usr/x86_64-w64-mingw32/include/excpt.h \
@@ -426,7 +427,7 @@ CMakeFiles/BuildCoach.dir/src/api/gw2names.cpp.obj: \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/x86_64-w64-mingw32/bits/error_constants.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/ext/atomicity.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/x86_64-w64-mingw32/bits/atomic_word.h \
- /home/todd/gw2-build-coach/src/api/../build/cache.h \
+ /home/todd/gw2-build-coaches/gw2-build-coach/src/api/../build/cache.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/sstream \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/istream \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/ios \
@@ -455,7 +456,7 @@ CMakeFiles/BuildCoach.dir/src/api/gw2names.cpp.obj: \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/ostream.tcc \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/istream.tcc \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/sstream.tcc \
- /home/todd/gw2-build-coach/external/nlohmann/json.hpp \
+ /home/todd/gw2-build-coaches/gw2-build-coach/external/nlohmann/json.hpp \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/algorithm \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/stl_algo.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/algorithmfwd.h \

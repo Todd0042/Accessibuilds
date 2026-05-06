@@ -408,6 +408,56 @@ def generate_chat_code(profession_slug: str,
 # ---------------------------------------------------------------------------
 # Build-list discovery (Playwright for JS-rendered listing pages)
 # ---------------------------------------------------------------------------
+def _find_legacy_slugs(html: str, prof_slug: str) -> set[str]:
+    """Walk the listing page DOM and return slugs that appear after a Legacy heading.
+
+    SC listing pages have a heading element (h2/h3/div with class or text containing
+    'Legacy') that separates current builds from deprecated ones.  Any build link that
+    appears in the document *after* such a heading (and before a non-legacy top-level
+    heading) is treated as legacy.
+    """
+    try:
+        soup = BeautifulSoup(html, "lxml")
+    except Exception:
+        return set()
+
+    slug_pattern = re.compile(
+        r"/builds/raids/%s/([a-z0-9-]+)" % re.escape(prof_slug.lower())
+    )
+    legacy_slugs: set[str] = set()
+    in_legacy = False
+
+    for el in soup.descendants:
+        if not hasattr(el, "name") or el.name is None:
+            continue
+
+        # Heading elements reset the legacy flag
+        if el.name in ("h1", "h2", "h3", "h4"):
+            text = el.get_text(strip=True).lower()
+            if "legacy" in text:
+                in_legacy = True
+            elif text:  # any non-empty non-legacy heading ends the legacy section
+                in_legacy = False
+            continue
+
+        # Some SC pages use a div/span with class containing "legacy" as a section label
+        if el.name in ("div", "span", "p"):
+            cls = " ".join(el.get("class") or []).lower()
+            text = el.get_text(strip=True).lower()
+            if "legacy" in cls or (text == "legacy" and len(text) < 20):
+                in_legacy = True
+                continue
+
+        # Build links
+        if el.name == "a" and in_legacy:
+            href = el.get("href") or ""
+            m = slug_pattern.search(href)
+            if m:
+                legacy_slugs.add(m.group(1))
+
+    return legacy_slugs
+
+
 def discover_build_urls(prof_slug: str, delay: float, force: bool = False) -> list[dict]:
     slug_lower = prof_slug.lower()
     url = "%s/builds/raids/%s" % (BASE_URL, slug_lower)
@@ -420,6 +470,8 @@ def discover_build_urls(prof_slug: str, delay: float, force: bool = False) -> li
     if not html:
         return []
 
+    legacy_slugs = _find_legacy_slugs(html, slug_lower)
+
     # SC always uses lowercase slugs in href paths regardless of URL case
     pattern = re.compile(r"/builds/raids/%s/([a-z0-9-]+)" % re.escape(slug_lower))
     seen    = set()
@@ -429,8 +481,17 @@ def discover_build_urls(prof_slug: str, delay: float, force: bool = False) -> li
         if slug in seen:
             continue
         seen.add(slug)
-        builds.append({"url": BASE_URL + "/builds/raids/%s/%s" % (slug_lower, slug),
-                       "profession": slug_lower, "slug": slug})
+        builds.append({
+            "url":        BASE_URL + "/builds/raids/%s/%s" % (slug_lower, slug),
+            "profession": slug_lower,
+            "slug":       slug,
+            "is_legacy":  slug in legacy_slugs,
+        })
+
+    legacy_count = sum(1 for b in builds if b["is_legacy"])
+    if legacy_count:
+        print("    (%d legacy)" % legacy_count, end="")
+
     return builds
 
 
@@ -811,6 +872,7 @@ def parse_build_page(meta: dict, delay: float) -> Optional[dict]:
         "notes":         extract_notes(soup),
         "source_url":    url,
         "chat_code":     chat_code,
+        "is_legacy":     meta.get("is_legacy", False),
         "traits":        traits,
         "skills":        skills,
         "legends":       legends if legends else [0, 0],

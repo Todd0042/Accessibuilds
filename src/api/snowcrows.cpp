@@ -134,6 +134,7 @@ bool ParseBuildJSON(const std::string& json_str, GW2::SCBuild& out)
         out.notes       = j.value("notes", "");
         out.source_url  = j.value("source_url", "");
         out.chat_code   = j.value("chat_code", "");
+        out.is_legacy   = j.value("is_legacy", false);
         out.build_type = BuildTypeFromString(
             j.value("build_type", ""),
             out.name,

@@ -1,8 +1,8 @@
 CMakeFiles/BuildCoach.dir/src/ui/debug_window.cpp.obj: \
- /home/todd/gw2-build-coach/src/ui/debug_window.cpp \
- /home/todd/gw2-build-coach/src/ui/debug_window.h \
- /home/todd/gw2-build-coach/external/imgui/imgui.h \
- /home/todd/gw2-build-coach/external/imgui/imconfig.h \
+ /home/todd/gw2-build-coaches/gw2-build-coach/src/ui/debug_window.cpp \
+ /home/todd/gw2-build-coaches/gw2-build-coach/src/ui/debug_window.h \
+ /home/todd/gw2-build-coaches/gw2-build-coach/external/imgui/imgui.h \
+ /home/todd/gw2-build-coaches/gw2-build-coach/external/imgui/imconfig.h \
  /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/include/float.h \
  /usr/x86_64-w64-mingw32/include/float.h \
  /usr/x86_64-w64-mingw32/include/crtdefs.h \
@@ -11,7 +11,6 @@ CMakeFiles/BuildCoach.dir/src/ui/debug_window.cpp.obj: \
  /usr/x86_64-w64-mingw32/include/_mingw_mac.h \
  /usr/x86_64-w64-mingw32/include/_mingw_secapi.h \
  /usr/x86_64-w64-mingw32/include/vadefs.h \
- /usr/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
  /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdarg.h \
  /usr/x86_64-w64-mingw32/include/stdarg.h \
  /usr/x86_64-w64-mingw32/include/_mingw_stdarg.h \
@@ -90,6 +89,8 @@ CMakeFiles/BuildCoach.dir/src/ui/debug_window.cpp.obj: \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/cwchar \
  /usr/x86_64-w64-mingw32/include/wchar.h \
  /usr/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
+ /usr/x86_64-w64-mingw32/include/corecrt_wconio.h \
+ /usr/x86_64-w64-mingw32/include/sec_api/wconio_s.h \
  /usr/x86_64-w64-mingw32/include/corecrt_wctype.h \
  /usr/x86_64-w64-mingw32/include/_mingw_stat64.h \
  /usr/x86_64-w64-mingw32/include/swprintf.inl \

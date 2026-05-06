@@ -27,9 +27,10 @@ static int  s_list_idx = -1;
 
 /* SC builds editing state */
 static std::vector<GW2::SCBuild> s_sc_builds;
-static int  s_sc_list_idx    = -1;
-static int  s_sc_filter_prof = 0;
-static int  s_sc_filter_type = 0;
+static int  s_sc_list_idx      = -1;
+static int  s_sc_filter_prof   = 0;
+static int  s_sc_filter_type   = 0;
+static bool s_sc_show_legacy   = false; /* legacy builds hidden by default */
 static char s_sc_search_buf[128] = {};
 
 /* ── Resolution state for gear fields ── */
@@ -47,6 +48,7 @@ static int    s_spec_idx  = 0;
 static int    s_type_idx  = 0;
 static int    s_prev_spec_idx = 0;
 static double s_benchmark_dps = 0.0;
+static bool   s_is_legacy = false;
 
 /* ── Traits ── */
 static uint32_t s_spec_id_val [3]    = {};
@@ -324,6 +326,7 @@ static void ClearForm()
     memset(s_name_buf,            0, sizeof(s_name_buf));
     memset(s_notes_buf,           0, sizeof(s_notes_buf));
     s_prof_idx = 0; s_spec_idx = 0; s_type_idx = 0; s_prev_spec_idx = 0; s_benchmark_dps = 0.0;
+    s_is_legacy = false;
 
     memset(s_spec_id_val,         0, sizeof(s_spec_id_val));
     memset(s_raw_trait_id,        0, sizeof(s_raw_trait_id));
@@ -520,6 +523,7 @@ static void BuildToForm(const GW2::SCBuild& b)
     s_prev_spec_idx = s_spec_idx;
     s_type_idx = (int)b.build_type;
     s_benchmark_dps = b.benchmark_dps;
+    s_is_legacy = b.is_legacy;
 
     for (int i = 0; i < 3; i++) {
         s_spec_id_val[i] = b.traits.lines[i].spec_id;
@@ -600,6 +604,7 @@ static GW2::SCBuild FormToBuild()
     b.elite_spec = SPECS[s_spec_idx].spec;
     b.build_type = (GW2::BuildType)s_type_idx;
     b.benchmark_dps = s_benchmark_dps;
+    b.is_legacy  = s_is_legacy;
     b.id = b.name;
     for (char& c : b.id) c = (c == ' ') ? '-' : (char)tolower((unsigned char)c);
 
@@ -778,8 +783,11 @@ void Render()
         ImGui::EndCombo();
     }
     ImGui::SameLine();
-    ImGui::SetNextItemWidth(S(140));
+    ImGui::SetNextItemWidth(S(130));
     ImGui::InputTextWithHint("##sc_search", "Search...", s_sc_search_buf, sizeof(s_sc_search_buf));
+    ImGui::SameLine();
+    ImGui::Checkbox("Legacy##sc_legacy_filter", &s_sc_show_legacy);
+    if (ImGui::IsItemHovered()) ImGui::SetTooltip("Show legacy builds");
     ImGui::SameLine();
 
     {
@@ -789,6 +797,22 @@ void Render()
             ? static_cast<GW2::BuildType>(s_sc_filter_type) : GW2::BuildType::Unknown;
         auto sc_filtered = SnowCrows::FilterBuilds(s_sc_builds, sc_fprof,
                                                    GW2::EliteSpec::None, sc_ftype);
+        /* Filter legacy builds unless "Show Legacy" is checked */
+        sc_filtered.erase(std::remove_if(sc_filtered.begin(), sc_filtered.end(),
+            [](const GW2::SCBuild* b) { return b->is_legacy; }),
+            sc_filtered.end());
+
+        std::vector<const GW2::SCBuild*> sc_legacy;
+        if (s_sc_show_legacy) {
+            /* Collect legacy builds matching the same prof/type filters */
+            for (const auto& b : s_sc_builds) {
+                if (!b.is_legacy) continue;
+                if (sc_fprof != GW2::Profession::None && b.profession != sc_fprof) continue;
+                if (sc_ftype != GW2::BuildType::Unknown && b.build_type != sc_ftype) continue;
+                sc_legacy.push_back(&b);
+            }
+        }
+
         if (s_sc_search_buf[0]) {
             auto lc_fn = [](const std::string& s) {
                 std::string r = s;
@@ -796,18 +820,22 @@ void Render()
                 return r;
             };
             std::string q = lc_fn(s_sc_search_buf);
-            sc_filtered.erase(std::remove_if(sc_filtered.begin(), sc_filtered.end(),
-                [&](const GW2::SCBuild* b) {
-                    std::string hay = lc_fn(BuildDisplayLabel(b->id, b->name,
-                                            PROF_NAMES[(int)b->profession]));
-                    return hay.find(q) == std::string::npos;
-                }), sc_filtered.end());
+            auto text_match = [&](const GW2::SCBuild* b) {
+                std::string hay = lc_fn(BuildDisplayLabel(b->id, b->name,
+                                        PROF_NAMES[(int)b->profession]));
+                return hay.find(q) == std::string::npos;
+            };
+            sc_filtered.erase(std::remove_if(sc_filtered.begin(), sc_filtered.end(), text_match),
+                               sc_filtered.end());
+            sc_legacy.erase(std::remove_if(sc_legacy.begin(), sc_legacy.end(), text_match),
+                             sc_legacy.end());
         }
 
         std::string sc_preview = "-- Select SC Build --";
         if (s_sc_list_idx >= 0 && s_sc_list_idx < (int)s_sc_builds.size()) {
             const auto& b = s_sc_builds[s_sc_list_idx];
-            sc_preview = BuildDisplayLabel(b.id, b.name, PROF_NAMES[(int)b.profession]);
+            std::string disp = BuildDisplayLabel(b.id, b.name, PROF_NAMES[(int)b.profession]);
+            sc_preview = b.is_legacy ? "[Legacy] " + disp : disp;
         }
         ImGui::SetNextItemWidth(S(260));
         if (ImGui::BeginCombo("##sc_build_list", sc_preview.c_str())) {
@@ -820,9 +848,22 @@ void Render()
                 std::string disp = BuildDisplayLabel(bp->id, bp->name,
                                                      PROF_NAMES[(int)bp->profession]);
                 if (ImGui::Selectable(disp.c_str(), sel)) {
-                    s_sc_list_idx = idx;
-                    s_list_idx = -1;
+                    s_sc_list_idx = idx; s_list_idx = -1;
                     BuildToForm(s_sc_builds[idx]);
+                }
+            }
+            if (!sc_legacy.empty()) {
+                ImGui::Separator();
+                ImGui::TextDisabled("  Legacy");
+                for (const auto* bp : sc_legacy) {
+                    int idx = (int)(bp - s_sc_builds.data());
+                    bool sel = (s_sc_list_idx == idx);
+                    std::string disp = "[Legacy] " + BuildDisplayLabel(bp->id, bp->name,
+                                                         PROF_NAMES[(int)bp->profession]);
+                    if (ImGui::Selectable(disp.c_str(), sel)) {
+                        s_sc_list_idx = idx; s_list_idx = -1;
+                        BuildToForm(s_sc_builds[idx]);
+                    }
                 }
             }
             ImGui::EndCombo();
@@ -834,7 +875,8 @@ void Render()
             g_SCBuild = s_sc_builds[s_sc_list_idx]; g_SCBuildLoaded = true;
         }
         ImGui::SameLine();
-        ImGui::TextDisabled("(%d builds)", (int)sc_filtered.size());
+        int total_shown = (int)sc_filtered.size() + (int)sc_legacy.size();
+        ImGui::TextDisabled("(%d builds)", total_shown);
     }
     ImGui::Separator();
 
@@ -869,6 +911,9 @@ void Render()
         for (int i = 0; i < 7; i++) if (ImGui::Selectable(TYPE_NAMES[i], s_type_idx == i)) s_type_idx = i;
         ImGui::EndCombo();
     }
+    ImGui::SameLine(0, S(16));
+    ImGui::Checkbox("Legacy##is_legacy", &s_is_legacy);
+    if (ImGui::IsItemHovered()) ImGui::SetTooltip("Mark as a legacy build (deprecated on Snow Crows)");
     ImGui::Text("Notes:"); ImGui::SameLine();
     ImGui::SetNextItemWidth(S(540)); ImGui::InputText("##notes", s_notes_buf, sizeof(s_notes_buf));
     ImGui::SameLine(0, S(16));
@@ -1164,6 +1209,25 @@ void Render()
         s_save_time = std::chrono::steady_clock::now();
     }
     ImGui::SameLine();
+    /* "Add to SC List" — visible when no SC build is loaded in the form, so the user
+     * can save a freshly-authored build directly into the SC database. */
+    if (s_sc_list_idx < 0) {
+        if (name_empty) {
+            ImGui::PushStyleVar(ImGuiStyleVar_Alpha, 0.4f);
+            ImGui::Button("Add to SC List"); ImGui::PopStyleVar();
+            if (ImGui::IsItemHovered()) ImGui::SetTooltip("Fill in a Build Name first");
+        } else if (ImGui::Button("Add to SC List")) {
+            ResolveAll();
+            GW2::SCBuild b = FormToBuild();
+            s_sc_builds.push_back(b);
+            s_sc_list_idx = (int)s_sc_builds.size() - 1;
+            s_list_idx = -1;
+            s_save_ok = BuildCache::SaveSCBuildsFull(s_sc_builds);
+            s_save_time = std::chrono::steady_clock::now();
+        }
+        if (ImGui::IsItemHovered()) ImGui::SetTooltip("Save as a new SC reference build");
+        ImGui::SameLine();
+    }
     if (ImGui::Button("New")) { s_list_idx = -1; s_sc_list_idx = -1; ClearForm(); }
     ImGui::SameLine();
     {

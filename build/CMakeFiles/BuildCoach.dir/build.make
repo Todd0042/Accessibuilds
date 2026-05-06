@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/todd/gw2-build-coach
+CMAKE_SOURCE_DIR = /home/todd/gw2-build-coaches/gw2-build-coach
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/todd/gw2-build-coach/build
+CMAKE_BINARY_DIR = /home/todd/gw2-build-coaches/gw2-build-coach/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/BuildCoach.dir/depend.make
@@ -74,363 +74,363 @@ CMakeFiles/BuildCoach.dir/codegen:
 
 CMakeFiles/BuildCoach.dir/src/addon.cpp.obj: CMakeFiles/BuildCoach.dir/flags.make
 CMakeFiles/BuildCoach.dir/src/addon.cpp.obj: CMakeFiles/BuildCoach.dir/includes_CXX.rsp
-CMakeFiles/BuildCoach.dir/src/addon.cpp.obj: /home/todd/gw2-build-coach/src/addon.cpp
+CMakeFiles/BuildCoach.dir/src/addon.cpp.obj: /home/todd/gw2-build-coaches/gw2-build-coach/src/addon.cpp
 CMakeFiles/BuildCoach.dir/src/addon.cpp.obj: CMakeFiles/BuildCoach.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/todd/gw2-build-coach/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/BuildCoach.dir/src/addon.cpp.obj"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BuildCoach.dir/src/addon.cpp.obj -MF CMakeFiles/BuildCoach.dir/src/addon.cpp.obj.d -o CMakeFiles/BuildCoach.dir/src/addon.cpp.obj -c /home/todd/gw2-build-coach/src/addon.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/todd/gw2-build-coaches/gw2-build-coach/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/BuildCoach.dir/src/addon.cpp.obj"
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BuildCoach.dir/src/addon.cpp.obj -MF CMakeFiles/BuildCoach.dir/src/addon.cpp.obj.d -o CMakeFiles/BuildCoach.dir/src/addon.cpp.obj -c /home/todd/gw2-build-coaches/gw2-build-coach/src/addon.cpp
 
 CMakeFiles/BuildCoach.dir/src/addon.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BuildCoach.dir/src/addon.cpp.i"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/todd/gw2-build-coach/src/addon.cpp > CMakeFiles/BuildCoach.dir/src/addon.cpp.i
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/todd/gw2-build-coaches/gw2-build-coach/src/addon.cpp > CMakeFiles/BuildCoach.dir/src/addon.cpp.i
 
 CMakeFiles/BuildCoach.dir/src/addon.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BuildCoach.dir/src/addon.cpp.s"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/todd/gw2-build-coach/src/addon.cpp -o CMakeFiles/BuildCoach.dir/src/addon.cpp.s
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/todd/gw2-build-coaches/gw2-build-coach/src/addon.cpp -o CMakeFiles/BuildCoach.dir/src/addon.cpp.s
 
 CMakeFiles/BuildCoach.dir/src/build/types.cpp.obj: CMakeFiles/BuildCoach.dir/flags.make
 CMakeFiles/BuildCoach.dir/src/build/types.cpp.obj: CMakeFiles/BuildCoach.dir/includes_CXX.rsp
-CMakeFiles/BuildCoach.dir/src/build/types.cpp.obj: /home/todd/gw2-build-coach/src/build/types.cpp
+CMakeFiles/BuildCoach.dir/src/build/types.cpp.obj: /home/todd/gw2-build-coaches/gw2-build-coach/src/build/types.cpp
 CMakeFiles/BuildCoach.dir/src/build/types.cpp.obj: CMakeFiles/BuildCoach.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/todd/gw2-build-coach/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/BuildCoach.dir/src/build/types.cpp.obj"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BuildCoach.dir/src/build/types.cpp.obj -MF CMakeFiles/BuildCoach.dir/src/build/types.cpp.obj.d -o CMakeFiles/BuildCoach.dir/src/build/types.cpp.obj -c /home/todd/gw2-build-coach/src/build/types.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/todd/gw2-build-coaches/gw2-build-coach/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/BuildCoach.dir/src/build/types.cpp.obj"
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BuildCoach.dir/src/build/types.cpp.obj -MF CMakeFiles/BuildCoach.dir/src/build/types.cpp.obj.d -o CMakeFiles/BuildCoach.dir/src/build/types.cpp.obj -c /home/todd/gw2-build-coaches/gw2-build-coach/src/build/types.cpp
 
 CMakeFiles/BuildCoach.dir/src/build/types.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BuildCoach.dir/src/build/types.cpp.i"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/todd/gw2-build-coach/src/build/types.cpp > CMakeFiles/BuildCoach.dir/src/build/types.cpp.i
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/todd/gw2-build-coaches/gw2-build-coach/src/build/types.cpp > CMakeFiles/BuildCoach.dir/src/build/types.cpp.i
 
 CMakeFiles/BuildCoach.dir/src/build/types.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BuildCoach.dir/src/build/types.cpp.s"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/todd/gw2-build-coach/src/build/types.cpp -o CMakeFiles/BuildCoach.dir/src/build/types.cpp.s
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/todd/gw2-build-coaches/gw2-build-coach/src/build/types.cpp -o CMakeFiles/BuildCoach.dir/src/build/types.cpp.s
 
 CMakeFiles/BuildCoach.dir/src/api/http_client.cpp.obj: CMakeFiles/BuildCoach.dir/flags.make
 CMakeFiles/BuildCoach.dir/src/api/http_client.cpp.obj: CMakeFiles/BuildCoach.dir/includes_CXX.rsp
-CMakeFiles/BuildCoach.dir/src/api/http_client.cpp.obj: /home/todd/gw2-build-coach/src/api/http_client.cpp
+CMakeFiles/BuildCoach.dir/src/api/http_client.cpp.obj: /home/todd/gw2-build-coaches/gw2-build-coach/src/api/http_client.cpp
 CMakeFiles/BuildCoach.dir/src/api/http_client.cpp.obj: CMakeFiles/BuildCoach.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/todd/gw2-build-coach/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/BuildCoach.dir/src/api/http_client.cpp.obj"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BuildCoach.dir/src/api/http_client.cpp.obj -MF CMakeFiles/BuildCoach.dir/src/api/http_client.cpp.obj.d -o CMakeFiles/BuildCoach.dir/src/api/http_client.cpp.obj -c /home/todd/gw2-build-coach/src/api/http_client.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/todd/gw2-build-coaches/gw2-build-coach/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/BuildCoach.dir/src/api/http_client.cpp.obj"
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BuildCoach.dir/src/api/http_client.cpp.obj -MF CMakeFiles/BuildCoach.dir/src/api/http_client.cpp.obj.d -o CMakeFiles/BuildCoach.dir/src/api/http_client.cpp.obj -c /home/todd/gw2-build-coaches/gw2-build-coach/src/api/http_client.cpp
 
 CMakeFiles/BuildCoach.dir/src/api/http_client.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BuildCoach.dir/src/api/http_client.cpp.i"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/todd/gw2-build-coach/src/api/http_client.cpp > CMakeFiles/BuildCoach.dir/src/api/http_client.cpp.i
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/todd/gw2-build-coaches/gw2-build-coach/src/api/http_client.cpp > CMakeFiles/BuildCoach.dir/src/api/http_client.cpp.i
 
 CMakeFiles/BuildCoach.dir/src/api/http_client.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BuildCoach.dir/src/api/http_client.cpp.s"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/todd/gw2-build-coach/src/api/http_client.cpp -o CMakeFiles/BuildCoach.dir/src/api/http_client.cpp.s
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/todd/gw2-build-coaches/gw2-build-coach/src/api/http_client.cpp -o CMakeFiles/BuildCoach.dir/src/api/http_client.cpp.s
 
 CMakeFiles/BuildCoach.dir/src/api/gw2api.cpp.obj: CMakeFiles/BuildCoach.dir/flags.make
 CMakeFiles/BuildCoach.dir/src/api/gw2api.cpp.obj: CMakeFiles/BuildCoach.dir/includes_CXX.rsp
-CMakeFiles/BuildCoach.dir/src/api/gw2api.cpp.obj: /home/todd/gw2-build-coach/src/api/gw2api.cpp
+CMakeFiles/BuildCoach.dir/src/api/gw2api.cpp.obj: /home/todd/gw2-build-coaches/gw2-build-coach/src/api/gw2api.cpp
 CMakeFiles/BuildCoach.dir/src/api/gw2api.cpp.obj: CMakeFiles/BuildCoach.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/todd/gw2-build-coach/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/BuildCoach.dir/src/api/gw2api.cpp.obj"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BuildCoach.dir/src/api/gw2api.cpp.obj -MF CMakeFiles/BuildCoach.dir/src/api/gw2api.cpp.obj.d -o CMakeFiles/BuildCoach.dir/src/api/gw2api.cpp.obj -c /home/todd/gw2-build-coach/src/api/gw2api.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/todd/gw2-build-coaches/gw2-build-coach/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/BuildCoach.dir/src/api/gw2api.cpp.obj"
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BuildCoach.dir/src/api/gw2api.cpp.obj -MF CMakeFiles/BuildCoach.dir/src/api/gw2api.cpp.obj.d -o CMakeFiles/BuildCoach.dir/src/api/gw2api.cpp.obj -c /home/todd/gw2-build-coaches/gw2-build-coach/src/api/gw2api.cpp
 
 CMakeFiles/BuildCoach.dir/src/api/gw2api.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BuildCoach.dir/src/api/gw2api.cpp.i"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/todd/gw2-build-coach/src/api/gw2api.cpp > CMakeFiles/BuildCoach.dir/src/api/gw2api.cpp.i
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/todd/gw2-build-coaches/gw2-build-coach/src/api/gw2api.cpp > CMakeFiles/BuildCoach.dir/src/api/gw2api.cpp.i
 
 CMakeFiles/BuildCoach.dir/src/api/gw2api.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BuildCoach.dir/src/api/gw2api.cpp.s"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/todd/gw2-build-coach/src/api/gw2api.cpp -o CMakeFiles/BuildCoach.dir/src/api/gw2api.cpp.s
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/todd/gw2-build-coaches/gw2-build-coach/src/api/gw2api.cpp -o CMakeFiles/BuildCoach.dir/src/api/gw2api.cpp.s
 
 CMakeFiles/BuildCoach.dir/src/api/gw2names.cpp.obj: CMakeFiles/BuildCoach.dir/flags.make
 CMakeFiles/BuildCoach.dir/src/api/gw2names.cpp.obj: CMakeFiles/BuildCoach.dir/includes_CXX.rsp
-CMakeFiles/BuildCoach.dir/src/api/gw2names.cpp.obj: /home/todd/gw2-build-coach/src/api/gw2names.cpp
+CMakeFiles/BuildCoach.dir/src/api/gw2names.cpp.obj: /home/todd/gw2-build-coaches/gw2-build-coach/src/api/gw2names.cpp
 CMakeFiles/BuildCoach.dir/src/api/gw2names.cpp.obj: CMakeFiles/BuildCoach.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/todd/gw2-build-coach/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/BuildCoach.dir/src/api/gw2names.cpp.obj"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BuildCoach.dir/src/api/gw2names.cpp.obj -MF CMakeFiles/BuildCoach.dir/src/api/gw2names.cpp.obj.d -o CMakeFiles/BuildCoach.dir/src/api/gw2names.cpp.obj -c /home/todd/gw2-build-coach/src/api/gw2names.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/todd/gw2-build-coaches/gw2-build-coach/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/BuildCoach.dir/src/api/gw2names.cpp.obj"
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BuildCoach.dir/src/api/gw2names.cpp.obj -MF CMakeFiles/BuildCoach.dir/src/api/gw2names.cpp.obj.d -o CMakeFiles/BuildCoach.dir/src/api/gw2names.cpp.obj -c /home/todd/gw2-build-coaches/gw2-build-coach/src/api/gw2names.cpp
 
 CMakeFiles/BuildCoach.dir/src/api/gw2names.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BuildCoach.dir/src/api/gw2names.cpp.i"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/todd/gw2-build-coach/src/api/gw2names.cpp > CMakeFiles/BuildCoach.dir/src/api/gw2names.cpp.i
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/todd/gw2-build-coaches/gw2-build-coach/src/api/gw2names.cpp > CMakeFiles/BuildCoach.dir/src/api/gw2names.cpp.i
 
 CMakeFiles/BuildCoach.dir/src/api/gw2names.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BuildCoach.dir/src/api/gw2names.cpp.s"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/todd/gw2-build-coach/src/api/gw2names.cpp -o CMakeFiles/BuildCoach.dir/src/api/gw2names.cpp.s
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/todd/gw2-build-coaches/gw2-build-coach/src/api/gw2names.cpp -o CMakeFiles/BuildCoach.dir/src/api/gw2names.cpp.s
 
 CMakeFiles/BuildCoach.dir/src/api/snowcrows.cpp.obj: CMakeFiles/BuildCoach.dir/flags.make
 CMakeFiles/BuildCoach.dir/src/api/snowcrows.cpp.obj: CMakeFiles/BuildCoach.dir/includes_CXX.rsp
-CMakeFiles/BuildCoach.dir/src/api/snowcrows.cpp.obj: /home/todd/gw2-build-coach/src/api/snowcrows.cpp
+CMakeFiles/BuildCoach.dir/src/api/snowcrows.cpp.obj: /home/todd/gw2-build-coaches/gw2-build-coach/src/api/snowcrows.cpp
 CMakeFiles/BuildCoach.dir/src/api/snowcrows.cpp.obj: CMakeFiles/BuildCoach.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/todd/gw2-build-coach/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/BuildCoach.dir/src/api/snowcrows.cpp.obj"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BuildCoach.dir/src/api/snowcrows.cpp.obj -MF CMakeFiles/BuildCoach.dir/src/api/snowcrows.cpp.obj.d -o CMakeFiles/BuildCoach.dir/src/api/snowcrows.cpp.obj -c /home/todd/gw2-build-coach/src/api/snowcrows.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/todd/gw2-build-coaches/gw2-build-coach/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/BuildCoach.dir/src/api/snowcrows.cpp.obj"
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BuildCoach.dir/src/api/snowcrows.cpp.obj -MF CMakeFiles/BuildCoach.dir/src/api/snowcrows.cpp.obj.d -o CMakeFiles/BuildCoach.dir/src/api/snowcrows.cpp.obj -c /home/todd/gw2-build-coaches/gw2-build-coach/src/api/snowcrows.cpp
 
 CMakeFiles/BuildCoach.dir/src/api/snowcrows.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BuildCoach.dir/src/api/snowcrows.cpp.i"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/todd/gw2-build-coach/src/api/snowcrows.cpp > CMakeFiles/BuildCoach.dir/src/api/snowcrows.cpp.i
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/todd/gw2-build-coaches/gw2-build-coach/src/api/snowcrows.cpp > CMakeFiles/BuildCoach.dir/src/api/snowcrows.cpp.i
 
 CMakeFiles/BuildCoach.dir/src/api/snowcrows.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BuildCoach.dir/src/api/snowcrows.cpp.s"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/todd/gw2-build-coach/src/api/snowcrows.cpp -o CMakeFiles/BuildCoach.dir/src/api/snowcrows.cpp.s
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/todd/gw2-build-coaches/gw2-build-coach/src/api/snowcrows.cpp -o CMakeFiles/BuildCoach.dir/src/api/snowcrows.cpp.s
 
 CMakeFiles/BuildCoach.dir/src/api/wingman.cpp.obj: CMakeFiles/BuildCoach.dir/flags.make
 CMakeFiles/BuildCoach.dir/src/api/wingman.cpp.obj: CMakeFiles/BuildCoach.dir/includes_CXX.rsp
-CMakeFiles/BuildCoach.dir/src/api/wingman.cpp.obj: /home/todd/gw2-build-coach/src/api/wingman.cpp
+CMakeFiles/BuildCoach.dir/src/api/wingman.cpp.obj: /home/todd/gw2-build-coaches/gw2-build-coach/src/api/wingman.cpp
 CMakeFiles/BuildCoach.dir/src/api/wingman.cpp.obj: CMakeFiles/BuildCoach.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/todd/gw2-build-coach/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/BuildCoach.dir/src/api/wingman.cpp.obj"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BuildCoach.dir/src/api/wingman.cpp.obj -MF CMakeFiles/BuildCoach.dir/src/api/wingman.cpp.obj.d -o CMakeFiles/BuildCoach.dir/src/api/wingman.cpp.obj -c /home/todd/gw2-build-coach/src/api/wingman.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/todd/gw2-build-coaches/gw2-build-coach/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/BuildCoach.dir/src/api/wingman.cpp.obj"
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BuildCoach.dir/src/api/wingman.cpp.obj -MF CMakeFiles/BuildCoach.dir/src/api/wingman.cpp.obj.d -o CMakeFiles/BuildCoach.dir/src/api/wingman.cpp.obj -c /home/todd/gw2-build-coaches/gw2-build-coach/src/api/wingman.cpp
 
 CMakeFiles/BuildCoach.dir/src/api/wingman.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BuildCoach.dir/src/api/wingman.cpp.i"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/todd/gw2-build-coach/src/api/wingman.cpp > CMakeFiles/BuildCoach.dir/src/api/wingman.cpp.i
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/todd/gw2-build-coaches/gw2-build-coach/src/api/wingman.cpp > CMakeFiles/BuildCoach.dir/src/api/wingman.cpp.i
 
 CMakeFiles/BuildCoach.dir/src/api/wingman.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BuildCoach.dir/src/api/wingman.cpp.s"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/todd/gw2-build-coach/src/api/wingman.cpp -o CMakeFiles/BuildCoach.dir/src/api/wingman.cpp.s
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/todd/gw2-build-coaches/gw2-build-coach/src/api/wingman.cpp -o CMakeFiles/BuildCoach.dir/src/api/wingman.cpp.s
 
 CMakeFiles/BuildCoach.dir/src/api/item_lookup.cpp.obj: CMakeFiles/BuildCoach.dir/flags.make
 CMakeFiles/BuildCoach.dir/src/api/item_lookup.cpp.obj: CMakeFiles/BuildCoach.dir/includes_CXX.rsp
-CMakeFiles/BuildCoach.dir/src/api/item_lookup.cpp.obj: /home/todd/gw2-build-coach/src/api/item_lookup.cpp
+CMakeFiles/BuildCoach.dir/src/api/item_lookup.cpp.obj: /home/todd/gw2-build-coaches/gw2-build-coach/src/api/item_lookup.cpp
 CMakeFiles/BuildCoach.dir/src/api/item_lookup.cpp.obj: CMakeFiles/BuildCoach.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/todd/gw2-build-coach/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/BuildCoach.dir/src/api/item_lookup.cpp.obj"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BuildCoach.dir/src/api/item_lookup.cpp.obj -MF CMakeFiles/BuildCoach.dir/src/api/item_lookup.cpp.obj.d -o CMakeFiles/BuildCoach.dir/src/api/item_lookup.cpp.obj -c /home/todd/gw2-build-coach/src/api/item_lookup.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/todd/gw2-build-coaches/gw2-build-coach/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/BuildCoach.dir/src/api/item_lookup.cpp.obj"
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BuildCoach.dir/src/api/item_lookup.cpp.obj -MF CMakeFiles/BuildCoach.dir/src/api/item_lookup.cpp.obj.d -o CMakeFiles/BuildCoach.dir/src/api/item_lookup.cpp.obj -c /home/todd/gw2-build-coaches/gw2-build-coach/src/api/item_lookup.cpp
 
 CMakeFiles/BuildCoach.dir/src/api/item_lookup.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BuildCoach.dir/src/api/item_lookup.cpp.i"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/todd/gw2-build-coach/src/api/item_lookup.cpp > CMakeFiles/BuildCoach.dir/src/api/item_lookup.cpp.i
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/todd/gw2-build-coaches/gw2-build-coach/src/api/item_lookup.cpp > CMakeFiles/BuildCoach.dir/src/api/item_lookup.cpp.i
 
 CMakeFiles/BuildCoach.dir/src/api/item_lookup.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BuildCoach.dir/src/api/item_lookup.cpp.s"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/todd/gw2-build-coach/src/api/item_lookup.cpp -o CMakeFiles/BuildCoach.dir/src/api/item_lookup.cpp.s
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/todd/gw2-build-coaches/gw2-build-coach/src/api/item_lookup.cpp -o CMakeFiles/BuildCoach.dir/src/api/item_lookup.cpp.s
 
 CMakeFiles/BuildCoach.dir/src/build/comparator.cpp.obj: CMakeFiles/BuildCoach.dir/flags.make
 CMakeFiles/BuildCoach.dir/src/build/comparator.cpp.obj: CMakeFiles/BuildCoach.dir/includes_CXX.rsp
-CMakeFiles/BuildCoach.dir/src/build/comparator.cpp.obj: /home/todd/gw2-build-coach/src/build/comparator.cpp
+CMakeFiles/BuildCoach.dir/src/build/comparator.cpp.obj: /home/todd/gw2-build-coaches/gw2-build-coach/src/build/comparator.cpp
 CMakeFiles/BuildCoach.dir/src/build/comparator.cpp.obj: CMakeFiles/BuildCoach.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/todd/gw2-build-coach/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/BuildCoach.dir/src/build/comparator.cpp.obj"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BuildCoach.dir/src/build/comparator.cpp.obj -MF CMakeFiles/BuildCoach.dir/src/build/comparator.cpp.obj.d -o CMakeFiles/BuildCoach.dir/src/build/comparator.cpp.obj -c /home/todd/gw2-build-coach/src/build/comparator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/todd/gw2-build-coaches/gw2-build-coach/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/BuildCoach.dir/src/build/comparator.cpp.obj"
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BuildCoach.dir/src/build/comparator.cpp.obj -MF CMakeFiles/BuildCoach.dir/src/build/comparator.cpp.obj.d -o CMakeFiles/BuildCoach.dir/src/build/comparator.cpp.obj -c /home/todd/gw2-build-coaches/gw2-build-coach/src/build/comparator.cpp
 
 CMakeFiles/BuildCoach.dir/src/build/comparator.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BuildCoach.dir/src/build/comparator.cpp.i"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/todd/gw2-build-coach/src/build/comparator.cpp > CMakeFiles/BuildCoach.dir/src/build/comparator.cpp.i
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/todd/gw2-build-coaches/gw2-build-coach/src/build/comparator.cpp > CMakeFiles/BuildCoach.dir/src/build/comparator.cpp.i
 
 CMakeFiles/BuildCoach.dir/src/build/comparator.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BuildCoach.dir/src/build/comparator.cpp.s"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/todd/gw2-build-coach/src/build/comparator.cpp -o CMakeFiles/BuildCoach.dir/src/build/comparator.cpp.s
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/todd/gw2-build-coaches/gw2-build-coach/src/build/comparator.cpp -o CMakeFiles/BuildCoach.dir/src/build/comparator.cpp.s
 
 CMakeFiles/BuildCoach.dir/src/build/cache.cpp.obj: CMakeFiles/BuildCoach.dir/flags.make
 CMakeFiles/BuildCoach.dir/src/build/cache.cpp.obj: CMakeFiles/BuildCoach.dir/includes_CXX.rsp
-CMakeFiles/BuildCoach.dir/src/build/cache.cpp.obj: /home/todd/gw2-build-coach/src/build/cache.cpp
+CMakeFiles/BuildCoach.dir/src/build/cache.cpp.obj: /home/todd/gw2-build-coaches/gw2-build-coach/src/build/cache.cpp
 CMakeFiles/BuildCoach.dir/src/build/cache.cpp.obj: CMakeFiles/BuildCoach.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/todd/gw2-build-coach/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/BuildCoach.dir/src/build/cache.cpp.obj"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BuildCoach.dir/src/build/cache.cpp.obj -MF CMakeFiles/BuildCoach.dir/src/build/cache.cpp.obj.d -o CMakeFiles/BuildCoach.dir/src/build/cache.cpp.obj -c /home/todd/gw2-build-coach/src/build/cache.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/todd/gw2-build-coaches/gw2-build-coach/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/BuildCoach.dir/src/build/cache.cpp.obj"
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BuildCoach.dir/src/build/cache.cpp.obj -MF CMakeFiles/BuildCoach.dir/src/build/cache.cpp.obj.d -o CMakeFiles/BuildCoach.dir/src/build/cache.cpp.obj -c /home/todd/gw2-build-coaches/gw2-build-coach/src/build/cache.cpp
 
 CMakeFiles/BuildCoach.dir/src/build/cache.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BuildCoach.dir/src/build/cache.cpp.i"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/todd/gw2-build-coach/src/build/cache.cpp > CMakeFiles/BuildCoach.dir/src/build/cache.cpp.i
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/todd/gw2-build-coaches/gw2-build-coach/src/build/cache.cpp > CMakeFiles/BuildCoach.dir/src/build/cache.cpp.i
 
 CMakeFiles/BuildCoach.dir/src/build/cache.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BuildCoach.dir/src/build/cache.cpp.s"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/todd/gw2-build-coach/src/build/cache.cpp -o CMakeFiles/BuildCoach.dir/src/build/cache.cpp.s
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/todd/gw2-build-coaches/gw2-build-coach/src/build/cache.cpp -o CMakeFiles/BuildCoach.dir/src/build/cache.cpp.s
 
 CMakeFiles/BuildCoach.dir/src/arcdps/arcdps.cpp.obj: CMakeFiles/BuildCoach.dir/flags.make
 CMakeFiles/BuildCoach.dir/src/arcdps/arcdps.cpp.obj: CMakeFiles/BuildCoach.dir/includes_CXX.rsp
-CMakeFiles/BuildCoach.dir/src/arcdps/arcdps.cpp.obj: /home/todd/gw2-build-coach/src/arcdps/arcdps.cpp
+CMakeFiles/BuildCoach.dir/src/arcdps/arcdps.cpp.obj: /home/todd/gw2-build-coaches/gw2-build-coach/src/arcdps/arcdps.cpp
 CMakeFiles/BuildCoach.dir/src/arcdps/arcdps.cpp.obj: CMakeFiles/BuildCoach.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/todd/gw2-build-coach/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/BuildCoach.dir/src/arcdps/arcdps.cpp.obj"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BuildCoach.dir/src/arcdps/arcdps.cpp.obj -MF CMakeFiles/BuildCoach.dir/src/arcdps/arcdps.cpp.obj.d -o CMakeFiles/BuildCoach.dir/src/arcdps/arcdps.cpp.obj -c /home/todd/gw2-build-coach/src/arcdps/arcdps.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/todd/gw2-build-coaches/gw2-build-coach/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/BuildCoach.dir/src/arcdps/arcdps.cpp.obj"
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BuildCoach.dir/src/arcdps/arcdps.cpp.obj -MF CMakeFiles/BuildCoach.dir/src/arcdps/arcdps.cpp.obj.d -o CMakeFiles/BuildCoach.dir/src/arcdps/arcdps.cpp.obj -c /home/todd/gw2-build-coaches/gw2-build-coach/src/arcdps/arcdps.cpp
 
 CMakeFiles/BuildCoach.dir/src/arcdps/arcdps.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BuildCoach.dir/src/arcdps/arcdps.cpp.i"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/todd/gw2-build-coach/src/arcdps/arcdps.cpp > CMakeFiles/BuildCoach.dir/src/arcdps/arcdps.cpp.i
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/todd/gw2-build-coaches/gw2-build-coach/src/arcdps/arcdps.cpp > CMakeFiles/BuildCoach.dir/src/arcdps/arcdps.cpp.i
 
 CMakeFiles/BuildCoach.dir/src/arcdps/arcdps.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BuildCoach.dir/src/arcdps/arcdps.cpp.s"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/todd/gw2-build-coach/src/arcdps/arcdps.cpp -o CMakeFiles/BuildCoach.dir/src/arcdps/arcdps.cpp.s
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/todd/gw2-build-coaches/gw2-build-coach/src/arcdps/arcdps.cpp -o CMakeFiles/BuildCoach.dir/src/arcdps/arcdps.cpp.s
 
 CMakeFiles/BuildCoach.dir/src/ui/main_window.cpp.obj: CMakeFiles/BuildCoach.dir/flags.make
 CMakeFiles/BuildCoach.dir/src/ui/main_window.cpp.obj: CMakeFiles/BuildCoach.dir/includes_CXX.rsp
-CMakeFiles/BuildCoach.dir/src/ui/main_window.cpp.obj: /home/todd/gw2-build-coach/src/ui/main_window.cpp
+CMakeFiles/BuildCoach.dir/src/ui/main_window.cpp.obj: /home/todd/gw2-build-coaches/gw2-build-coach/src/ui/main_window.cpp
 CMakeFiles/BuildCoach.dir/src/ui/main_window.cpp.obj: CMakeFiles/BuildCoach.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/todd/gw2-build-coach/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/BuildCoach.dir/src/ui/main_window.cpp.obj"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BuildCoach.dir/src/ui/main_window.cpp.obj -MF CMakeFiles/BuildCoach.dir/src/ui/main_window.cpp.obj.d -o CMakeFiles/BuildCoach.dir/src/ui/main_window.cpp.obj -c /home/todd/gw2-build-coach/src/ui/main_window.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/todd/gw2-build-coaches/gw2-build-coach/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/BuildCoach.dir/src/ui/main_window.cpp.obj"
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BuildCoach.dir/src/ui/main_window.cpp.obj -MF CMakeFiles/BuildCoach.dir/src/ui/main_window.cpp.obj.d -o CMakeFiles/BuildCoach.dir/src/ui/main_window.cpp.obj -c /home/todd/gw2-build-coaches/gw2-build-coach/src/ui/main_window.cpp
 
 CMakeFiles/BuildCoach.dir/src/ui/main_window.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BuildCoach.dir/src/ui/main_window.cpp.i"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/todd/gw2-build-coach/src/ui/main_window.cpp > CMakeFiles/BuildCoach.dir/src/ui/main_window.cpp.i
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/todd/gw2-build-coaches/gw2-build-coach/src/ui/main_window.cpp > CMakeFiles/BuildCoach.dir/src/ui/main_window.cpp.i
 
 CMakeFiles/BuildCoach.dir/src/ui/main_window.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BuildCoach.dir/src/ui/main_window.cpp.s"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/todd/gw2-build-coach/src/ui/main_window.cpp -o CMakeFiles/BuildCoach.dir/src/ui/main_window.cpp.s
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/todd/gw2-build-coaches/gw2-build-coach/src/ui/main_window.cpp -o CMakeFiles/BuildCoach.dir/src/ui/main_window.cpp.s
 
 CMakeFiles/BuildCoach.dir/src/ui/build_panel.cpp.obj: CMakeFiles/BuildCoach.dir/flags.make
 CMakeFiles/BuildCoach.dir/src/ui/build_panel.cpp.obj: CMakeFiles/BuildCoach.dir/includes_CXX.rsp
-CMakeFiles/BuildCoach.dir/src/ui/build_panel.cpp.obj: /home/todd/gw2-build-coach/src/ui/build_panel.cpp
+CMakeFiles/BuildCoach.dir/src/ui/build_panel.cpp.obj: /home/todd/gw2-build-coaches/gw2-build-coach/src/ui/build_panel.cpp
 CMakeFiles/BuildCoach.dir/src/ui/build_panel.cpp.obj: CMakeFiles/BuildCoach.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/todd/gw2-build-coach/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/BuildCoach.dir/src/ui/build_panel.cpp.obj"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BuildCoach.dir/src/ui/build_panel.cpp.obj -MF CMakeFiles/BuildCoach.dir/src/ui/build_panel.cpp.obj.d -o CMakeFiles/BuildCoach.dir/src/ui/build_panel.cpp.obj -c /home/todd/gw2-build-coach/src/ui/build_panel.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/todd/gw2-build-coaches/gw2-build-coach/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/BuildCoach.dir/src/ui/build_panel.cpp.obj"
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BuildCoach.dir/src/ui/build_panel.cpp.obj -MF CMakeFiles/BuildCoach.dir/src/ui/build_panel.cpp.obj.d -o CMakeFiles/BuildCoach.dir/src/ui/build_panel.cpp.obj -c /home/todd/gw2-build-coaches/gw2-build-coach/src/ui/build_panel.cpp
 
 CMakeFiles/BuildCoach.dir/src/ui/build_panel.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BuildCoach.dir/src/ui/build_panel.cpp.i"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/todd/gw2-build-coach/src/ui/build_panel.cpp > CMakeFiles/BuildCoach.dir/src/ui/build_panel.cpp.i
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/todd/gw2-build-coaches/gw2-build-coach/src/ui/build_panel.cpp > CMakeFiles/BuildCoach.dir/src/ui/build_panel.cpp.i
 
 CMakeFiles/BuildCoach.dir/src/ui/build_panel.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BuildCoach.dir/src/ui/build_panel.cpp.s"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/todd/gw2-build-coach/src/ui/build_panel.cpp -o CMakeFiles/BuildCoach.dir/src/ui/build_panel.cpp.s
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/todd/gw2-build-coaches/gw2-build-coach/src/ui/build_panel.cpp -o CMakeFiles/BuildCoach.dir/src/ui/build_panel.cpp.s
 
 CMakeFiles/BuildCoach.dir/src/ui/gear_panel.cpp.obj: CMakeFiles/BuildCoach.dir/flags.make
 CMakeFiles/BuildCoach.dir/src/ui/gear_panel.cpp.obj: CMakeFiles/BuildCoach.dir/includes_CXX.rsp
-CMakeFiles/BuildCoach.dir/src/ui/gear_panel.cpp.obj: /home/todd/gw2-build-coach/src/ui/gear_panel.cpp
+CMakeFiles/BuildCoach.dir/src/ui/gear_panel.cpp.obj: /home/todd/gw2-build-coaches/gw2-build-coach/src/ui/gear_panel.cpp
 CMakeFiles/BuildCoach.dir/src/ui/gear_panel.cpp.obj: CMakeFiles/BuildCoach.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/todd/gw2-build-coach/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/BuildCoach.dir/src/ui/gear_panel.cpp.obj"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BuildCoach.dir/src/ui/gear_panel.cpp.obj -MF CMakeFiles/BuildCoach.dir/src/ui/gear_panel.cpp.obj.d -o CMakeFiles/BuildCoach.dir/src/ui/gear_panel.cpp.obj -c /home/todd/gw2-build-coach/src/ui/gear_panel.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/todd/gw2-build-coaches/gw2-build-coach/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/BuildCoach.dir/src/ui/gear_panel.cpp.obj"
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BuildCoach.dir/src/ui/gear_panel.cpp.obj -MF CMakeFiles/BuildCoach.dir/src/ui/gear_panel.cpp.obj.d -o CMakeFiles/BuildCoach.dir/src/ui/gear_panel.cpp.obj -c /home/todd/gw2-build-coaches/gw2-build-coach/src/ui/gear_panel.cpp
 
 CMakeFiles/BuildCoach.dir/src/ui/gear_panel.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BuildCoach.dir/src/ui/gear_panel.cpp.i"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/todd/gw2-build-coach/src/ui/gear_panel.cpp > CMakeFiles/BuildCoach.dir/src/ui/gear_panel.cpp.i
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/todd/gw2-build-coaches/gw2-build-coach/src/ui/gear_panel.cpp > CMakeFiles/BuildCoach.dir/src/ui/gear_panel.cpp.i
 
 CMakeFiles/BuildCoach.dir/src/ui/gear_panel.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BuildCoach.dir/src/ui/gear_panel.cpp.s"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/todd/gw2-build-coach/src/ui/gear_panel.cpp -o CMakeFiles/BuildCoach.dir/src/ui/gear_panel.cpp.s
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/todd/gw2-build-coaches/gw2-build-coach/src/ui/gear_panel.cpp -o CMakeFiles/BuildCoach.dir/src/ui/gear_panel.cpp.s
 
 CMakeFiles/BuildCoach.dir/src/ui/dps_panel.cpp.obj: CMakeFiles/BuildCoach.dir/flags.make
 CMakeFiles/BuildCoach.dir/src/ui/dps_panel.cpp.obj: CMakeFiles/BuildCoach.dir/includes_CXX.rsp
-CMakeFiles/BuildCoach.dir/src/ui/dps_panel.cpp.obj: /home/todd/gw2-build-coach/src/ui/dps_panel.cpp
+CMakeFiles/BuildCoach.dir/src/ui/dps_panel.cpp.obj: /home/todd/gw2-build-coaches/gw2-build-coach/src/ui/dps_panel.cpp
 CMakeFiles/BuildCoach.dir/src/ui/dps_panel.cpp.obj: CMakeFiles/BuildCoach.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/todd/gw2-build-coach/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/BuildCoach.dir/src/ui/dps_panel.cpp.obj"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BuildCoach.dir/src/ui/dps_panel.cpp.obj -MF CMakeFiles/BuildCoach.dir/src/ui/dps_panel.cpp.obj.d -o CMakeFiles/BuildCoach.dir/src/ui/dps_panel.cpp.obj -c /home/todd/gw2-build-coach/src/ui/dps_panel.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/todd/gw2-build-coaches/gw2-build-coach/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/BuildCoach.dir/src/ui/dps_panel.cpp.obj"
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BuildCoach.dir/src/ui/dps_panel.cpp.obj -MF CMakeFiles/BuildCoach.dir/src/ui/dps_panel.cpp.obj.d -o CMakeFiles/BuildCoach.dir/src/ui/dps_panel.cpp.obj -c /home/todd/gw2-build-coaches/gw2-build-coach/src/ui/dps_panel.cpp
 
 CMakeFiles/BuildCoach.dir/src/ui/dps_panel.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BuildCoach.dir/src/ui/dps_panel.cpp.i"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/todd/gw2-build-coach/src/ui/dps_panel.cpp > CMakeFiles/BuildCoach.dir/src/ui/dps_panel.cpp.i
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/todd/gw2-build-coaches/gw2-build-coach/src/ui/dps_panel.cpp > CMakeFiles/BuildCoach.dir/src/ui/dps_panel.cpp.i
 
 CMakeFiles/BuildCoach.dir/src/ui/dps_panel.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BuildCoach.dir/src/ui/dps_panel.cpp.s"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/todd/gw2-build-coach/src/ui/dps_panel.cpp -o CMakeFiles/BuildCoach.dir/src/ui/dps_panel.cpp.s
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/todd/gw2-build-coaches/gw2-build-coach/src/ui/dps_panel.cpp -o CMakeFiles/BuildCoach.dir/src/ui/dps_panel.cpp.s
 
 CMakeFiles/BuildCoach.dir/src/ui/coaching_panel.cpp.obj: CMakeFiles/BuildCoach.dir/flags.make
 CMakeFiles/BuildCoach.dir/src/ui/coaching_panel.cpp.obj: CMakeFiles/BuildCoach.dir/includes_CXX.rsp
-CMakeFiles/BuildCoach.dir/src/ui/coaching_panel.cpp.obj: /home/todd/gw2-build-coach/src/ui/coaching_panel.cpp
+CMakeFiles/BuildCoach.dir/src/ui/coaching_panel.cpp.obj: /home/todd/gw2-build-coaches/gw2-build-coach/src/ui/coaching_panel.cpp
 CMakeFiles/BuildCoach.dir/src/ui/coaching_panel.cpp.obj: CMakeFiles/BuildCoach.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/todd/gw2-build-coach/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/BuildCoach.dir/src/ui/coaching_panel.cpp.obj"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BuildCoach.dir/src/ui/coaching_panel.cpp.obj -MF CMakeFiles/BuildCoach.dir/src/ui/coaching_panel.cpp.obj.d -o CMakeFiles/BuildCoach.dir/src/ui/coaching_panel.cpp.obj -c /home/todd/gw2-build-coach/src/ui/coaching_panel.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/todd/gw2-build-coaches/gw2-build-coach/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/BuildCoach.dir/src/ui/coaching_panel.cpp.obj"
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BuildCoach.dir/src/ui/coaching_panel.cpp.obj -MF CMakeFiles/BuildCoach.dir/src/ui/coaching_panel.cpp.obj.d -o CMakeFiles/BuildCoach.dir/src/ui/coaching_panel.cpp.obj -c /home/todd/gw2-build-coaches/gw2-build-coach/src/ui/coaching_panel.cpp
 
 CMakeFiles/BuildCoach.dir/src/ui/coaching_panel.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BuildCoach.dir/src/ui/coaching_panel.cpp.i"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/todd/gw2-build-coach/src/ui/coaching_panel.cpp > CMakeFiles/BuildCoach.dir/src/ui/coaching_panel.cpp.i
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/todd/gw2-build-coaches/gw2-build-coach/src/ui/coaching_panel.cpp > CMakeFiles/BuildCoach.dir/src/ui/coaching_panel.cpp.i
 
 CMakeFiles/BuildCoach.dir/src/ui/coaching_panel.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BuildCoach.dir/src/ui/coaching_panel.cpp.s"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/todd/gw2-build-coach/src/ui/coaching_panel.cpp -o CMakeFiles/BuildCoach.dir/src/ui/coaching_panel.cpp.s
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/todd/gw2-build-coaches/gw2-build-coach/src/ui/coaching_panel.cpp -o CMakeFiles/BuildCoach.dir/src/ui/coaching_panel.cpp.s
 
 CMakeFiles/BuildCoach.dir/src/ui/coach_window.cpp.obj: CMakeFiles/BuildCoach.dir/flags.make
 CMakeFiles/BuildCoach.dir/src/ui/coach_window.cpp.obj: CMakeFiles/BuildCoach.dir/includes_CXX.rsp
-CMakeFiles/BuildCoach.dir/src/ui/coach_window.cpp.obj: /home/todd/gw2-build-coach/src/ui/coach_window.cpp
+CMakeFiles/BuildCoach.dir/src/ui/coach_window.cpp.obj: /home/todd/gw2-build-coaches/gw2-build-coach/src/ui/coach_window.cpp
 CMakeFiles/BuildCoach.dir/src/ui/coach_window.cpp.obj: CMakeFiles/BuildCoach.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/todd/gw2-build-coach/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/BuildCoach.dir/src/ui/coach_window.cpp.obj"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BuildCoach.dir/src/ui/coach_window.cpp.obj -MF CMakeFiles/BuildCoach.dir/src/ui/coach_window.cpp.obj.d -o CMakeFiles/BuildCoach.dir/src/ui/coach_window.cpp.obj -c /home/todd/gw2-build-coach/src/ui/coach_window.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/todd/gw2-build-coaches/gw2-build-coach/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/BuildCoach.dir/src/ui/coach_window.cpp.obj"
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BuildCoach.dir/src/ui/coach_window.cpp.obj -MF CMakeFiles/BuildCoach.dir/src/ui/coach_window.cpp.obj.d -o CMakeFiles/BuildCoach.dir/src/ui/coach_window.cpp.obj -c /home/todd/gw2-build-coaches/gw2-build-coach/src/ui/coach_window.cpp
 
 CMakeFiles/BuildCoach.dir/src/ui/coach_window.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BuildCoach.dir/src/ui/coach_window.cpp.i"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/todd/gw2-build-coach/src/ui/coach_window.cpp > CMakeFiles/BuildCoach.dir/src/ui/coach_window.cpp.i
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/todd/gw2-build-coaches/gw2-build-coach/src/ui/coach_window.cpp > CMakeFiles/BuildCoach.dir/src/ui/coach_window.cpp.i
 
 CMakeFiles/BuildCoach.dir/src/ui/coach_window.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BuildCoach.dir/src/ui/coach_window.cpp.s"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/todd/gw2-build-coach/src/ui/coach_window.cpp -o CMakeFiles/BuildCoach.dir/src/ui/coach_window.cpp.s
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/todd/gw2-build-coaches/gw2-build-coach/src/ui/coach_window.cpp -o CMakeFiles/BuildCoach.dir/src/ui/coach_window.cpp.s
 
 CMakeFiles/BuildCoach.dir/src/ui/debug_window.cpp.obj: CMakeFiles/BuildCoach.dir/flags.make
 CMakeFiles/BuildCoach.dir/src/ui/debug_window.cpp.obj: CMakeFiles/BuildCoach.dir/includes_CXX.rsp
-CMakeFiles/BuildCoach.dir/src/ui/debug_window.cpp.obj: /home/todd/gw2-build-coach/src/ui/debug_window.cpp
+CMakeFiles/BuildCoach.dir/src/ui/debug_window.cpp.obj: /home/todd/gw2-build-coaches/gw2-build-coach/src/ui/debug_window.cpp
 CMakeFiles/BuildCoach.dir/src/ui/debug_window.cpp.obj: CMakeFiles/BuildCoach.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/todd/gw2-build-coach/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/BuildCoach.dir/src/ui/debug_window.cpp.obj"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BuildCoach.dir/src/ui/debug_window.cpp.obj -MF CMakeFiles/BuildCoach.dir/src/ui/debug_window.cpp.obj.d -o CMakeFiles/BuildCoach.dir/src/ui/debug_window.cpp.obj -c /home/todd/gw2-build-coach/src/ui/debug_window.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/todd/gw2-build-coaches/gw2-build-coach/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/BuildCoach.dir/src/ui/debug_window.cpp.obj"
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BuildCoach.dir/src/ui/debug_window.cpp.obj -MF CMakeFiles/BuildCoach.dir/src/ui/debug_window.cpp.obj.d -o CMakeFiles/BuildCoach.dir/src/ui/debug_window.cpp.obj -c /home/todd/gw2-build-coaches/gw2-build-coach/src/ui/debug_window.cpp
 
 CMakeFiles/BuildCoach.dir/src/ui/debug_window.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BuildCoach.dir/src/ui/debug_window.cpp.i"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/todd/gw2-build-coach/src/ui/debug_window.cpp > CMakeFiles/BuildCoach.dir/src/ui/debug_window.cpp.i
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/todd/gw2-build-coaches/gw2-build-coach/src/ui/debug_window.cpp > CMakeFiles/BuildCoach.dir/src/ui/debug_window.cpp.i
 
 CMakeFiles/BuildCoach.dir/src/ui/debug_window.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BuildCoach.dir/src/ui/debug_window.cpp.s"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/todd/gw2-build-coach/src/ui/debug_window.cpp -o CMakeFiles/BuildCoach.dir/src/ui/debug_window.cpp.s
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/todd/gw2-build-coaches/gw2-build-coach/src/ui/debug_window.cpp -o CMakeFiles/BuildCoach.dir/src/ui/debug_window.cpp.s
 
 CMakeFiles/BuildCoach.dir/src/ui/icon_cache.cpp.obj: CMakeFiles/BuildCoach.dir/flags.make
 CMakeFiles/BuildCoach.dir/src/ui/icon_cache.cpp.obj: CMakeFiles/BuildCoach.dir/includes_CXX.rsp
-CMakeFiles/BuildCoach.dir/src/ui/icon_cache.cpp.obj: /home/todd/gw2-build-coach/src/ui/icon_cache.cpp
+CMakeFiles/BuildCoach.dir/src/ui/icon_cache.cpp.obj: /home/todd/gw2-build-coaches/gw2-build-coach/src/ui/icon_cache.cpp
 CMakeFiles/BuildCoach.dir/src/ui/icon_cache.cpp.obj: CMakeFiles/BuildCoach.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/todd/gw2-build-coach/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/BuildCoach.dir/src/ui/icon_cache.cpp.obj"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BuildCoach.dir/src/ui/icon_cache.cpp.obj -MF CMakeFiles/BuildCoach.dir/src/ui/icon_cache.cpp.obj.d -o CMakeFiles/BuildCoach.dir/src/ui/icon_cache.cpp.obj -c /home/todd/gw2-build-coach/src/ui/icon_cache.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/todd/gw2-build-coaches/gw2-build-coach/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/BuildCoach.dir/src/ui/icon_cache.cpp.obj"
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BuildCoach.dir/src/ui/icon_cache.cpp.obj -MF CMakeFiles/BuildCoach.dir/src/ui/icon_cache.cpp.obj.d -o CMakeFiles/BuildCoach.dir/src/ui/icon_cache.cpp.obj -c /home/todd/gw2-build-coaches/gw2-build-coach/src/ui/icon_cache.cpp
 
 CMakeFiles/BuildCoach.dir/src/ui/icon_cache.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BuildCoach.dir/src/ui/icon_cache.cpp.i"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/todd/gw2-build-coach/src/ui/icon_cache.cpp > CMakeFiles/BuildCoach.dir/src/ui/icon_cache.cpp.i
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/todd/gw2-build-coaches/gw2-build-coach/src/ui/icon_cache.cpp > CMakeFiles/BuildCoach.dir/src/ui/icon_cache.cpp.i
 
 CMakeFiles/BuildCoach.dir/src/ui/icon_cache.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BuildCoach.dir/src/ui/icon_cache.cpp.s"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/todd/gw2-build-coach/src/ui/icon_cache.cpp -o CMakeFiles/BuildCoach.dir/src/ui/icon_cache.cpp.s
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/todd/gw2-build-coaches/gw2-build-coach/src/ui/icon_cache.cpp -o CMakeFiles/BuildCoach.dir/src/ui/icon_cache.cpp.s
 
 CMakeFiles/BuildCoach.dir/src/ui/build_editor.cpp.obj: CMakeFiles/BuildCoach.dir/flags.make
 CMakeFiles/BuildCoach.dir/src/ui/build_editor.cpp.obj: CMakeFiles/BuildCoach.dir/includes_CXX.rsp
-CMakeFiles/BuildCoach.dir/src/ui/build_editor.cpp.obj: /home/todd/gw2-build-coach/src/ui/build_editor.cpp
+CMakeFiles/BuildCoach.dir/src/ui/build_editor.cpp.obj: /home/todd/gw2-build-coaches/gw2-build-coach/src/ui/build_editor.cpp
 CMakeFiles/BuildCoach.dir/src/ui/build_editor.cpp.obj: CMakeFiles/BuildCoach.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/todd/gw2-build-coach/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/BuildCoach.dir/src/ui/build_editor.cpp.obj"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BuildCoach.dir/src/ui/build_editor.cpp.obj -MF CMakeFiles/BuildCoach.dir/src/ui/build_editor.cpp.obj.d -o CMakeFiles/BuildCoach.dir/src/ui/build_editor.cpp.obj -c /home/todd/gw2-build-coach/src/ui/build_editor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/todd/gw2-build-coaches/gw2-build-coach/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/BuildCoach.dir/src/ui/build_editor.cpp.obj"
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BuildCoach.dir/src/ui/build_editor.cpp.obj -MF CMakeFiles/BuildCoach.dir/src/ui/build_editor.cpp.obj.d -o CMakeFiles/BuildCoach.dir/src/ui/build_editor.cpp.obj -c /home/todd/gw2-build-coaches/gw2-build-coach/src/ui/build_editor.cpp
 
 CMakeFiles/BuildCoach.dir/src/ui/build_editor.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BuildCoach.dir/src/ui/build_editor.cpp.i"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/todd/gw2-build-coach/src/ui/build_editor.cpp > CMakeFiles/BuildCoach.dir/src/ui/build_editor.cpp.i
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/todd/gw2-build-coaches/gw2-build-coach/src/ui/build_editor.cpp > CMakeFiles/BuildCoach.dir/src/ui/build_editor.cpp.i
 
 CMakeFiles/BuildCoach.dir/src/ui/build_editor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BuildCoach.dir/src/ui/build_editor.cpp.s"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/todd/gw2-build-coach/src/ui/build_editor.cpp -o CMakeFiles/BuildCoach.dir/src/ui/build_editor.cpp.s
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/todd/gw2-build-coaches/gw2-build-coach/src/ui/build_editor.cpp -o CMakeFiles/BuildCoach.dir/src/ui/build_editor.cpp.s
 
 CMakeFiles/BuildCoach.dir/external/imgui/imgui.cpp.obj: CMakeFiles/BuildCoach.dir/flags.make
 CMakeFiles/BuildCoach.dir/external/imgui/imgui.cpp.obj: CMakeFiles/BuildCoach.dir/includes_CXX.rsp
-CMakeFiles/BuildCoach.dir/external/imgui/imgui.cpp.obj: /home/todd/gw2-build-coach/external/imgui/imgui.cpp
+CMakeFiles/BuildCoach.dir/external/imgui/imgui.cpp.obj: /home/todd/gw2-build-coaches/gw2-build-coach/external/imgui/imgui.cpp
 CMakeFiles/BuildCoach.dir/external/imgui/imgui.cpp.obj: CMakeFiles/BuildCoach.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/todd/gw2-build-coach/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/BuildCoach.dir/external/imgui/imgui.cpp.obj"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BuildCoach.dir/external/imgui/imgui.cpp.obj -MF CMakeFiles/BuildCoach.dir/external/imgui/imgui.cpp.obj.d -o CMakeFiles/BuildCoach.dir/external/imgui/imgui.cpp.obj -c /home/todd/gw2-build-coach/external/imgui/imgui.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/todd/gw2-build-coaches/gw2-build-coach/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/BuildCoach.dir/external/imgui/imgui.cpp.obj"
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BuildCoach.dir/external/imgui/imgui.cpp.obj -MF CMakeFiles/BuildCoach.dir/external/imgui/imgui.cpp.obj.d -o CMakeFiles/BuildCoach.dir/external/imgui/imgui.cpp.obj -c /home/todd/gw2-build-coaches/gw2-build-coach/external/imgui/imgui.cpp
 
 CMakeFiles/BuildCoach.dir/external/imgui/imgui.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BuildCoach.dir/external/imgui/imgui.cpp.i"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/todd/gw2-build-coach/external/imgui/imgui.cpp > CMakeFiles/BuildCoach.dir/external/imgui/imgui.cpp.i
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/todd/gw2-build-coaches/gw2-build-coach/external/imgui/imgui.cpp > CMakeFiles/BuildCoach.dir/external/imgui/imgui.cpp.i
 
 CMakeFiles/BuildCoach.dir/external/imgui/imgui.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BuildCoach.dir/external/imgui/imgui.cpp.s"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/todd/gw2-build-coach/external/imgui/imgui.cpp -o CMakeFiles/BuildCoach.dir/external/imgui/imgui.cpp.s
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/todd/gw2-build-coaches/gw2-build-coach/external/imgui/imgui.cpp -o CMakeFiles/BuildCoach.dir/external/imgui/imgui.cpp.s
 
 CMakeFiles/BuildCoach.dir/external/imgui/imgui_draw.cpp.obj: CMakeFiles/BuildCoach.dir/flags.make
 CMakeFiles/BuildCoach.dir/external/imgui/imgui_draw.cpp.obj: CMakeFiles/BuildCoach.dir/includes_CXX.rsp
-CMakeFiles/BuildCoach.dir/external/imgui/imgui_draw.cpp.obj: /home/todd/gw2-build-coach/external/imgui/imgui_draw.cpp
+CMakeFiles/BuildCoach.dir/external/imgui/imgui_draw.cpp.obj: /home/todd/gw2-build-coaches/gw2-build-coach/external/imgui/imgui_draw.cpp
 CMakeFiles/BuildCoach.dir/external/imgui/imgui_draw.cpp.obj: CMakeFiles/BuildCoach.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/todd/gw2-build-coach/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/BuildCoach.dir/external/imgui/imgui_draw.cpp.obj"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BuildCoach.dir/external/imgui/imgui_draw.cpp.obj -MF CMakeFiles/BuildCoach.dir/external/imgui/imgui_draw.cpp.obj.d -o CMakeFiles/BuildCoach.dir/external/imgui/imgui_draw.cpp.obj -c /home/todd/gw2-build-coach/external/imgui/imgui_draw.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/todd/gw2-build-coaches/gw2-build-coach/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/BuildCoach.dir/external/imgui/imgui_draw.cpp.obj"
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BuildCoach.dir/external/imgui/imgui_draw.cpp.obj -MF CMakeFiles/BuildCoach.dir/external/imgui/imgui_draw.cpp.obj.d -o CMakeFiles/BuildCoach.dir/external/imgui/imgui_draw.cpp.obj -c /home/todd/gw2-build-coaches/gw2-build-coach/external/imgui/imgui_draw.cpp
 
 CMakeFiles/BuildCoach.dir/external/imgui/imgui_draw.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BuildCoach.dir/external/imgui/imgui_draw.cpp.i"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/todd/gw2-build-coach/external/imgui/imgui_draw.cpp > CMakeFiles/BuildCoach.dir/external/imgui/imgui_draw.cpp.i
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/todd/gw2-build-coaches/gw2-build-coach/external/imgui/imgui_draw.cpp > CMakeFiles/BuildCoach.dir/external/imgui/imgui_draw.cpp.i
 
 CMakeFiles/BuildCoach.dir/external/imgui/imgui_draw.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BuildCoach.dir/external/imgui/imgui_draw.cpp.s"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/todd/gw2-build-coach/external/imgui/imgui_draw.cpp -o CMakeFiles/BuildCoach.dir/external/imgui/imgui_draw.cpp.s
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/todd/gw2-build-coaches/gw2-build-coach/external/imgui/imgui_draw.cpp -o CMakeFiles/BuildCoach.dir/external/imgui/imgui_draw.cpp.s
 
 CMakeFiles/BuildCoach.dir/external/imgui/imgui_widgets.cpp.obj: CMakeFiles/BuildCoach.dir/flags.make
 CMakeFiles/BuildCoach.dir/external/imgui/imgui_widgets.cpp.obj: CMakeFiles/BuildCoach.dir/includes_CXX.rsp
-CMakeFiles/BuildCoach.dir/external/imgui/imgui_widgets.cpp.obj: /home/todd/gw2-build-coach/external/imgui/imgui_widgets.cpp
+CMakeFiles/BuildCoach.dir/external/imgui/imgui_widgets.cpp.obj: /home/todd/gw2-build-coaches/gw2-build-coach/external/imgui/imgui_widgets.cpp
 CMakeFiles/BuildCoach.dir/external/imgui/imgui_widgets.cpp.obj: CMakeFiles/BuildCoach.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/todd/gw2-build-coach/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/BuildCoach.dir/external/imgui/imgui_widgets.cpp.obj"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BuildCoach.dir/external/imgui/imgui_widgets.cpp.obj -MF CMakeFiles/BuildCoach.dir/external/imgui/imgui_widgets.cpp.obj.d -o CMakeFiles/BuildCoach.dir/external/imgui/imgui_widgets.cpp.obj -c /home/todd/gw2-build-coach/external/imgui/imgui_widgets.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/todd/gw2-build-coaches/gw2-build-coach/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/BuildCoach.dir/external/imgui/imgui_widgets.cpp.obj"
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BuildCoach.dir/external/imgui/imgui_widgets.cpp.obj -MF CMakeFiles/BuildCoach.dir/external/imgui/imgui_widgets.cpp.obj.d -o CMakeFiles/BuildCoach.dir/external/imgui/imgui_widgets.cpp.obj -c /home/todd/gw2-build-coaches/gw2-build-coach/external/imgui/imgui_widgets.cpp
 
 CMakeFiles/BuildCoach.dir/external/imgui/imgui_widgets.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BuildCoach.dir/external/imgui/imgui_widgets.cpp.i"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/todd/gw2-build-coach/external/imgui/imgui_widgets.cpp > CMakeFiles/BuildCoach.dir/external/imgui/imgui_widgets.cpp.i
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/todd/gw2-build-coaches/gw2-build-coach/external/imgui/imgui_widgets.cpp > CMakeFiles/BuildCoach.dir/external/imgui/imgui_widgets.cpp.i
 
 CMakeFiles/BuildCoach.dir/external/imgui/imgui_widgets.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BuildCoach.dir/external/imgui/imgui_widgets.cpp.s"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/todd/gw2-build-coach/external/imgui/imgui_widgets.cpp -o CMakeFiles/BuildCoach.dir/external/imgui/imgui_widgets.cpp.s
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/todd/gw2-build-coaches/gw2-build-coach/external/imgui/imgui_widgets.cpp -o CMakeFiles/BuildCoach.dir/external/imgui/imgui_widgets.cpp.s
 
 CMakeFiles/BuildCoach.dir/external/imgui/imgui_tables.cpp.obj: CMakeFiles/BuildCoach.dir/flags.make
 CMakeFiles/BuildCoach.dir/external/imgui/imgui_tables.cpp.obj: CMakeFiles/BuildCoach.dir/includes_CXX.rsp
-CMakeFiles/BuildCoach.dir/external/imgui/imgui_tables.cpp.obj: /home/todd/gw2-build-coach/external/imgui/imgui_tables.cpp
+CMakeFiles/BuildCoach.dir/external/imgui/imgui_tables.cpp.obj: /home/todd/gw2-build-coaches/gw2-build-coach/external/imgui/imgui_tables.cpp
 CMakeFiles/BuildCoach.dir/external/imgui/imgui_tables.cpp.obj: CMakeFiles/BuildCoach.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/todd/gw2-build-coach/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/BuildCoach.dir/external/imgui/imgui_tables.cpp.obj"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BuildCoach.dir/external/imgui/imgui_tables.cpp.obj -MF CMakeFiles/BuildCoach.dir/external/imgui/imgui_tables.cpp.obj.d -o CMakeFiles/BuildCoach.dir/external/imgui/imgui_tables.cpp.obj -c /home/todd/gw2-build-coach/external/imgui/imgui_tables.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/todd/gw2-build-coaches/gw2-build-coach/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/BuildCoach.dir/external/imgui/imgui_tables.cpp.obj"
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BuildCoach.dir/external/imgui/imgui_tables.cpp.obj -MF CMakeFiles/BuildCoach.dir/external/imgui/imgui_tables.cpp.obj.d -o CMakeFiles/BuildCoach.dir/external/imgui/imgui_tables.cpp.obj -c /home/todd/gw2-build-coaches/gw2-build-coach/external/imgui/imgui_tables.cpp
 
 CMakeFiles/BuildCoach.dir/external/imgui/imgui_tables.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BuildCoach.dir/external/imgui/imgui_tables.cpp.i"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/todd/gw2-build-coach/external/imgui/imgui_tables.cpp > CMakeFiles/BuildCoach.dir/external/imgui/imgui_tables.cpp.i
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/todd/gw2-build-coaches/gw2-build-coach/external/imgui/imgui_tables.cpp > CMakeFiles/BuildCoach.dir/external/imgui/imgui_tables.cpp.i
 
 CMakeFiles/BuildCoach.dir/external/imgui/imgui_tables.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BuildCoach.dir/external/imgui/imgui_tables.cpp.s"
-	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/todd/gw2-build-coach/external/imgui/imgui_tables.cpp -o CMakeFiles/BuildCoach.dir/external/imgui/imgui_tables.cpp.s
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/todd/gw2-build-coaches/gw2-build-coach/external/imgui/imgui_tables.cpp -o CMakeFiles/BuildCoach.dir/external/imgui/imgui_tables.cpp.s
 
 # Object files for target BuildCoach
 BuildCoach_OBJECTS = \
@@ -490,7 +490,7 @@ BuildCoach.dll: CMakeFiles/BuildCoach.dir/build.make
 BuildCoach.dll: CMakeFiles/BuildCoach.dir/linkLibs.rsp
 BuildCoach.dll: CMakeFiles/BuildCoach.dir/objects1.rsp
 BuildCoach.dll: CMakeFiles/BuildCoach.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/todd/gw2-build-coach/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Linking CXX shared library BuildCoach.dll"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/todd/gw2-build-coaches/gw2-build-coach/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Linking CXX shared library BuildCoach.dll"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/BuildCoach.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -502,6 +502,6 @@ CMakeFiles/BuildCoach.dir/clean:
 .PHONY : CMakeFiles/BuildCoach.dir/clean
 
 CMakeFiles/BuildCoach.dir/depend:
-	cd /home/todd/gw2-build-coach/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/todd/gw2-build-coach /home/todd/gw2-build-coach /home/todd/gw2-build-coach/build /home/todd/gw2-build-coach/build /home/todd/gw2-build-coach/build/CMakeFiles/BuildCoach.dir/DependInfo.cmake "--color=$(COLOR)" BuildCoach
+	cd /home/todd/gw2-build-coaches/gw2-build-coach/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/todd/gw2-build-coaches/gw2-build-coach /home/todd/gw2-build-coaches/gw2-build-coach /home/todd/gw2-build-coaches/gw2-build-coach/build /home/todd/gw2-build-coaches/gw2-build-coach/build /home/todd/gw2-build-coaches/gw2-build-coach/build/CMakeFiles/BuildCoach.dir/DependInfo.cmake "--color=$(COLOR)" BuildCoach
 .PHONY : CMakeFiles/BuildCoach.dir/depend
 

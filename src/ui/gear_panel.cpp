@@ -18,6 +18,34 @@ inline std::string NormalizeWeaponType(std::string t)
     return t;
 }
 
+/* Convert GW2::WeaponType enum to the string the GW2 API returns for the same type.
+ * Used as a fallback when item_id is 0 (custom/user-authored builds). */
+inline std::string WeaponTypeToString(GW2::WeaponType wt)
+{
+    switch (wt) {
+        case GW2::WeaponType::Sword:      return "Sword";
+        case GW2::WeaponType::Greatsword: return "Greatsword";
+        case GW2::WeaponType::Hammer:     return "Hammer";
+        case GW2::WeaponType::Mace:       return "Mace";
+        case GW2::WeaponType::Axe:        return "Axe";
+        case GW2::WeaponType::Dagger:     return "Dagger";
+        case GW2::WeaponType::Scepter:    return "Scepter";
+        case GW2::WeaponType::Staff:      return "Staff";
+        case GW2::WeaponType::Torch:      return "Torch";
+        case GW2::WeaponType::Focus:      return "Focus";
+        case GW2::WeaponType::Shield:     return "Shield";
+        case GW2::WeaponType::Warhorn:    return "Warhorn";
+        case GW2::WeaponType::Shortbow:   return "ShortBow";
+        case GW2::WeaponType::Longbow:    return "LongBow";
+        case GW2::WeaponType::Rifle:      return "Rifle";
+        case GW2::WeaponType::Pistol:     return "Pistol";
+        case GW2::WeaponType::Spear:      return "Spear";
+        case GW2::WeaponType::Speargun:   return "Speargun";
+        case GW2::WeaponType::Trident:    return "Trident";
+        default: return "";
+    }
+}
+
 /* Resolve a stat set name: hardcoded table first, then async GW2Names lookup.
  * Returns "..." while the async lookup is still in flight. */
 inline std::string StatName(uint32_t id)
@@ -66,8 +94,11 @@ static const GW2::GearSlot WEAPON_SLOTS[] = {
 };
 
 /* ── Per-slot row ───────────────────────────────────────────────────────── */
+/* weapon_set_sigil_ok: pre-computed set-level sigil validity (only used when check_type=true).
+ * Callers pass the result of the set-level check so individual slots don't re-derive it. */
 static void RenderSlotRow(const GW2::GearItem* pi, const GW2::GearItem* ri,
-                          GW2::GearSlot sl, bool check_type = false)
+                          GW2::GearSlot sl, bool check_type = false,
+                          bool weapon_set_sigil_ok = true)
 {
     bool is_relic = ri && ri->item_id != 0 && ri->stat_id == 0
                        && ri->upgrade_id == 0 && ri->infusions.empty();
@@ -112,32 +143,37 @@ static void RenderSlotRow(const GW2::GearItem* pi, const GW2::GearItem* ri,
                 bool unresolved = (ps.rfind("Stat#",0)==0 || rs.rfind("Stat#",0)==0);
                 stat_ok = (NormalizeStat(ps) == NormalizeStat(rs)) || ps == "..." || rs == "..." || unresolved;
             }
-            if (ri->upgrade_id) {
-                upg_ok = (pi->upgrade_id == ri->upgrade_id);
-                if (!upg_ok) {
-                    const std::string& pn = GW2Names::GetItem(pi->upgrade_id);
-                    const std::string& rn = GW2Names::GetItem(ri->upgrade_id);
-                    if (!pn.empty() && pn != "..." && pn == rn) upg_ok = true;
-                }
-            } else if (!ri->upgrade_name.empty()) {
-                /* Reference uses text name (user-authored build) */
-                std::string rn = ri->upgrade_name;
-                while (!rn.empty() && (rn.back()==' '||rn.back()=='\t')) rn.pop_back();
-                if (pi->upgrade_id) {
-                    const std::string& pn_ref = GW2Names::GetItem(pi->upgrade_id);
-                    if (pn_ref.empty() || pn_ref == "...") {
-                        upg_ok = true; /* still loading — don't flag as wrong yet */
-                    } else {
-                        std::string pn = pn_ref;
+            if (check_type) {
+                /* Weapon slots: sigil validity determined at the set level by caller */
+                upg_ok = weapon_set_sigil_ok;
+            } else {
+                if (ri->upgrade_id) {
+                    upg_ok = (pi->upgrade_id == ri->upgrade_id);
+                    if (!upg_ok) {
+                        const std::string& pn = GW2Names::GetItem(pi->upgrade_id);
+                        const std::string& rn = GW2Names::GetItem(ri->upgrade_id);
+                        if (!pn.empty() && pn != "..." && pn == rn) upg_ok = true;
+                    }
+                } else if (!ri->upgrade_name.empty()) {
+                    /* Reference uses text name (user-authored build) */
+                    std::string rn = ri->upgrade_name;
+                    while (!rn.empty() && (rn.back()==' '||rn.back()=='\t')) rn.pop_back();
+                    if (pi->upgrade_id) {
+                        const std::string& pn_ref = GW2Names::GetItem(pi->upgrade_id);
+                        if (pn_ref.empty() || pn_ref == "...") {
+                            upg_ok = true; /* still loading */
+                        } else {
+                            std::string pn = pn_ref;
+                            while (!pn.empty() && (pn.back()==' '||pn.back()=='\t')) pn.pop_back();
+                            upg_ok = (pn == rn);
+                        }
+                    } else if (!pi->upgrade_name.empty()) {
+                        std::string pn = pi->upgrade_name;
                         while (!pn.empty() && (pn.back()==' '||pn.back()=='\t')) pn.pop_back();
                         upg_ok = (pn == rn);
+                    } else {
+                        upg_ok = false;
                     }
-                } else if (!pi->upgrade_name.empty()) {
-                    std::string pn = pi->upgrade_name;
-                    while (!pn.empty() && (pn.back()==' '||pn.back()=='\t')) pn.pop_back();
-                    upg_ok = (pn == rn);
-                } else {
-                    upg_ok = false;
                 }
             }
             if (!ri->infusions.empty())
@@ -146,11 +182,20 @@ static void RenderSlotRow(const GW2::GearItem* pi, const GW2::GearItem* ri,
     }
 
     bool weapon_type_ok = true;
-    if (check_type && !is_relic && pi && ri && pi->item_id && ri->item_id) {
-        std::string pt = NormalizeWeaponType(std::string(GW2Names::GetItemType(pi->item_id)));
-        std::string rt = NormalizeWeaponType(std::string(GW2Names::GetItemType(ri->item_id)));
-        while (!pt.empty() && (pt.back()==' '||pt.back()=='\t')) pt.pop_back();
-        while (!rt.empty() && (rt.back()==' '||rt.back()=='\t')) rt.pop_back();
+    if (check_type && !is_relic && pi && ri) {
+        std::string pt, rt;
+        if (pi->item_id) {
+            pt = NormalizeWeaponType(std::string(GW2Names::GetItemType(pi->item_id)));
+            while (!pt.empty() && (pt.back()==' '||pt.back()=='\t')) pt.pop_back();
+        } else if (pi->weapon_type != GW2::WeaponType::Unknown) {
+            pt = NormalizeWeaponType(WeaponTypeToString(pi->weapon_type));
+        }
+        if (ri->item_id) {
+            rt = NormalizeWeaponType(std::string(GW2Names::GetItemType(ri->item_id)));
+            while (!rt.empty() && (rt.back()==' '||rt.back()=='\t')) rt.pop_back();
+        } else if (ri->weapon_type != GW2::WeaponType::Unknown) {
+            rt = NormalizeWeaponType(WeaponTypeToString(ri->weapon_type));
+        }
         if (!pt.empty() && pt != "..." && !rt.empty() && rt != "...")
             weapon_type_ok = (pt == rt);
     }
@@ -194,8 +239,12 @@ static void RenderSlotRow(const GW2::GearItem* pi, const GW2::GearItem* ri,
         if (check_type) {
             std::string rt, rs;
             if (ri) {
-                rt = NormalizeWeaponType(std::string(GW2Names::GetItemType(ri->item_id)));
-                while (!rt.empty() && (rt.back()==' '||rt.back()=='\t')) rt.pop_back();
+                if (ri->item_id) {
+                    rt = NormalizeWeaponType(std::string(GW2Names::GetItemType(ri->item_id)));
+                    while (!rt.empty() && (rt.back()==' '||rt.back()=='\t')) rt.pop_back();
+                } else if (ri->weapon_type != GW2::WeaponType::Unknown) {
+                    rt = NormalizeWeaponType(WeaponTypeToString(ri->weapon_type));
+                }
                 rs = ri->stat_id ? StatName(ri->stat_id) : "";
                 while (!rs.empty() && (rs.back()==' '||rs.back()=='\t'||rs.back()=='\r')) rs.pop_back();
             }
@@ -207,8 +256,13 @@ static void RenderSlotRow(const GW2::GearItem* pi, const GW2::GearItem* ri,
             ImGui::TextColored(slot_ok ? COL_OK : COL_REF, "SC: %s", rline.c_str());
 
             if (!slot_ok && (!weapon_type_ok || !stat_ok)) {
-                std::string pt = NormalizeWeaponType(std::string(GW2Names::GetItemType(pi->item_id)));
-                while (!pt.empty() && (pt.back()==' '||pt.back()=='\t')) pt.pop_back();
+                std::string pt;
+                if (pi->item_id) {
+                    pt = NormalizeWeaponType(std::string(GW2Names::GetItemType(pi->item_id)));
+                    while (!pt.empty() && (pt.back()==' '||pt.back()=='\t')) pt.pop_back();
+                } else if (pi->weapon_type != GW2::WeaponType::Unknown) {
+                    pt = NormalizeWeaponType(WeaponTypeToString(pi->weapon_type));
+                }
                 uint32_t p_sid = pi->stat_id;
                 if (p_sid == 0 && pi->item_id) p_sid = GW2Names::GetItemStatId(pi->item_id);
                 std::string ps = p_sid ? StatName(p_sid) : "...";
@@ -234,9 +288,14 @@ static void RenderSlotRow(const GW2::GearItem* pi, const GW2::GearItem* ri,
             }
         }
     } else if (ri) {
-        if (check_type && ri->item_id) {
-            std::string itype = NormalizeWeaponType(std::string(GW2Names::GetItemType(ri->item_id)));
-            while (!itype.empty() && (itype.back()==' '||itype.back()=='\t')) itype.pop_back();
+        if (check_type) {
+            std::string itype;
+            if (ri->item_id) {
+                itype = NormalizeWeaponType(std::string(GW2Names::GetItemType(ri->item_id)));
+                while (!itype.empty() && (itype.back()==' '||itype.back()=='\t')) itype.pop_back();
+            } else if (ri->weapon_type != GW2::WeaponType::Unknown) {
+                itype = NormalizeWeaponType(WeaponTypeToString(ri->weapon_type));
+            }
             std::string rstat = ri->stat_id ? StatName(ri->stat_id) : "";
             while (!rstat.empty() && (rstat.back()==' '||rstat.back()=='\t'||rstat.back()=='\r')) rstat.pop_back();
             std::string line;
@@ -324,20 +383,24 @@ static void RenderSlotRow(const GW2::GearItem* pi, const GW2::GearItem* ri,
     }
 
     ImGui::TableSetColumnIndex(4);
-    if (missing)
+    if (missing) {
         ImGui::TextColored(COL_ERROR, "MISSING");
-    else if (slot_ok)
+    } else if (slot_ok) {
         ImGui::TextColored(COL_OK, "OK");
-    else if (is_relic && !item_id_ok)
-        ImGui::TextColored(COL_ERROR, "Wrong relic");
-    else if (!weapon_type_ok)
-        ImGui::TextColored(COL_ERROR, "Wrong weapon");
-    else if (!stat_ok)
-        ImGui::TextColored(COL_ERROR, "Wrong stat");
-    else if (!upg_ok)
-        ImGui::TextColored(COL_ERROR, "Wrong rune/sigil");
-    else
-        ImGui::TextColored(COL_WARN, "Infusions");
+    } else if (is_relic) {
+        if (!item_id_ok)
+            ImGui::TextColored(COL_ERROR, "Wrong relic");
+    } else {
+        /* Show every error — do not short-circuit after the first */
+        if (!weapon_type_ok)
+            ImGui::TextColored(COL_ERROR, "Wrong weapon");
+        if (!stat_ok)
+            ImGui::TextColored(COL_ERROR, "Wrong stat");
+        if (!upg_ok)
+            ImGui::TextColored(COL_ERROR, check_type ? "Wrong sigil set" : "Wrong sigil");
+        if (!inf_ok)
+            ImGui::TextColored(COL_WARN, "Infusions");
+    }
 }
 
 /* ── Slot group ─────────────────────────────────────────────────────────── */
@@ -347,13 +410,59 @@ static void RenderGroup(const char* label,
                         const std::map<GW2::GearSlot, const GW2::GearItem*>& rm,
                         bool check_type = false)
 {
+    /* Pre-compute weapon sigil set validity when rendering weapon slots.
+     * Sigils are an unordered pair per set: either sigil may be on either weapon. */
+    std::map<GW2::GearSlot, bool> slot_sigil_ok;
+    if (check_type) {
+        auto computeSigilOk = [&](GW2::GearSlot sl1, GW2::GearSlot sl2) {
+            auto ri1 = rm.find(sl1), ri2 = rm.find(sl2);
+            auto pi1 = pm.find(sl1), pi2 = pm.find(sl2);
+            const GW2::GearItem* r1 = ri1 != rm.end() ? ri1->second : nullptr;
+            const GW2::GearItem* r2 = ri2 != rm.end() ? ri2->second : nullptr;
+            const GW2::GearItem* p1 = pi1 != pm.end() ? pi1->second : nullptr;
+            const GW2::GearItem* p2 = pi2 != pm.end() ? pi2->second : nullptr;
+
+            /* Resolve sigil to canonical name: ID lookup first, text name fallback.
+             * Empty = no sigil present, "..." = still loading (treat as pass). */
+            auto sigilName = [](const GW2::GearItem* it) -> std::string {
+                if (!it) return "";
+                if (it->upgrade_id) {
+                    const std::string& n = GW2Names::GetItem(it->upgrade_id);
+                    return (n.empty() || n == "...") ? "..." : n;
+                }
+                return it->upgrade_name;
+            };
+
+            std::string rsig1 = sigilName(r1);
+            std::string rsig2 = sigilName(r2);
+            if (rsig1.empty() && rsig2.empty()) {
+                slot_sigil_ok[sl1] = slot_sigil_ok[sl2] = true;
+                return;
+            }
+
+            std::string psig1 = sigilName(p1);
+            std::string psig2 = sigilName(p2);
+
+            auto sigilEq = [](const std::string& p, const std::string& r) -> bool {
+                if (r.empty()) return true;
+                if (r == "..." || p == "...") return true; /* still loading */
+                return p == r;
+            };
+
+            bool ok = (sigilEq(psig1, rsig1) && sigilEq(psig2, rsig2))
+                   || (sigilEq(psig1, rsig2) && sigilEq(psig2, rsig1));
+            slot_sigil_ok[sl1] = slot_sigil_ok[sl2] = ok;
+        };
+        computeSigilOk(GW2::GearSlot::WeaponA1, GW2::GearSlot::WeaponA2);
+        computeSigilOk(GW2::GearSlot::WeaponB1, GW2::GearSlot::WeaponB2);
+    }
+
     if (!ImGui::BeginTable(label, 5,
             ImGuiTableFlags_SizingStretchProp |
             ImGuiTableFlags_Borders |
             ImGuiTableFlags_RowBg))
         return;
 
-    // ⭐ FIX: use stretch columns, not fixed widths
     ImGui::TableSetupColumn("Item",      ImGuiTableColumnFlags_WidthStretch, 0.75f);
     ImGui::TableSetupColumn("Stats",     ImGuiTableColumnFlags_WidthStretch, 2.25f);
     ImGui::TableSetupColumn("Rune/Sigil",ImGuiTableColumnFlags_WidthStretch, 1.4f);
@@ -371,6 +480,12 @@ static void RenderGroup(const char* label,
         auto* pi = pi_it != pm.end() ? pi_it->second : nullptr;
         auto* ri = ri_it != rm.end() ? ri_it->second : nullptr;
 
+        bool sigil_ok = true;
+        if (check_type) {
+            auto it = slot_sigil_ok.find(sl);
+            if (it != slot_sigil_ok.end()) sigil_ok = it->second;
+        }
+
         /* Title row — slot name */
         ImGui::TableNextRow();
         ImGui::TableSetColumnIndex(0);
@@ -378,8 +493,8 @@ static void RenderGroup(const char* label,
 
         /* Icon + data row */
         ImGui::TableNextRow(0, ICON_SZ + 4);
-        RenderSlotRow(pi, ri, sl, check_type);
-    }   // ← FIXED: this brace was missing
+        RenderSlotRow(pi, ri, sl, check_type, sigil_ok);
+    }
 
     ImGui::EndTable();
 }
@@ -467,11 +582,20 @@ void Render()
         if (!p || !r) return 0;
         int s = 0;
 
-        if (p->item_id && r->item_id) {
-            std::string pt = std::string(GW2Names::GetItemType(p->item_id));
-            std::string rt = std::string(GW2Names::GetItemType(r->item_id));
-            while (!pt.empty() && (pt.back()==' '||pt.back()=='\t')) pt.pop_back();
-            while (!rt.empty() && (rt.back()==' '||rt.back()=='\t')) rt.pop_back();
+        {
+            std::string pt, rt;
+            if (p->item_id) {
+                pt = NormalizeWeaponType(std::string(GW2Names::GetItemType(p->item_id)));
+                while (!pt.empty() && (pt.back()==' '||pt.back()=='\t')) pt.pop_back();
+            } else if (p->weapon_type != GW2::WeaponType::Unknown) {
+                pt = NormalizeWeaponType(WeaponTypeToString(p->weapon_type));
+            }
+            if (r->item_id) {
+                rt = NormalizeWeaponType(std::string(GW2Names::GetItemType(r->item_id)));
+                while (!rt.empty() && (rt.back()==' '||rt.back()=='\t')) rt.pop_back();
+            } else if (r->weapon_type != GW2::WeaponType::Unknown) {
+                rt = NormalizeWeaponType(WeaponTypeToString(r->weapon_type));
+            }
             if (!pt.empty() && pt != "..." && !rt.empty() && rt != "...")
                 s += (pt == rt) ? 4 : 0;
         }
@@ -513,14 +637,20 @@ void Render()
     normalize_rm(GW2::GearSlot::Ring1,      GW2::GearSlot::Ring2);
     normalize_rm(GW2::GearSlot::Accessory1, GW2::GearSlot::Accessory2);
 
+    /* Weapon set normalization: always moves both slots of a set together.
+     * Dual-set: swap A<->B if player's B set scores better against reference A.
+     * Single-set: if reference only defines one set (A or B), move the reference
+     * to whichever player set it better matches — so the display aligns correctly. */
     {
         auto rA1 = rm.find(GW2::GearSlot::WeaponA1);
         auto rB1 = rm.find(GW2::GearSlot::WeaponB1);
+        auto pA1 = pm.find(GW2::GearSlot::WeaponA1);
+        auto pB1 = pm.find(GW2::GearSlot::WeaponB1);
+        const GW2::GearItem* pa1 = pA1 != pm.end() ? pA1->second : nullptr;
+        const GW2::GearItem* pb1 = pB1 != pm.end() ? pB1->second : nullptr;
+
         if (rA1 != rm.end() && rB1 != rm.end()) {
-            auto pA1 = pm.find(GW2::GearSlot::WeaponA1);
-            auto pB1 = pm.find(GW2::GearSlot::WeaponB1);
-            const GW2::GearItem* pa1 = pA1 != pm.end() ? pA1->second : nullptr;
-            const GW2::GearItem* pb1 = pB1 != pm.end() ? pB1->second : nullptr;
+            /* Dual-set: swap A<->B together if B matches better */
             if (slot_score(pa1, rB1->second) + slot_score(pb1, rA1->second) >
                 slot_score(pa1, rA1->second) + slot_score(pb1, rB1->second)) {
                 std::swap(rA1->second, rB1->second);
@@ -529,30 +659,27 @@ void Render()
                 if (rA2 != rm.end() && rB2 != rm.end())
                     std::swap(rA2->second, rB2->second);
             }
-        }
-    }
-
-    {
-        auto rA2 = rm.find(GW2::GearSlot::WeaponA2);
-        auto rB2 = rm.find(GW2::GearSlot::WeaponB2);
-        auto pA2 = pm.find(GW2::GearSlot::WeaponA2);
-        auto pB2 = pm.find(GW2::GearSlot::WeaponB2);
-        const GW2::GearItem* pa2 = pA2 != pm.end() ? pA2->second : nullptr;
-        const GW2::GearItem* pb2 = pB2 != pm.end() ? pB2->second : nullptr;
-
-        if (rA2 != rm.end() && rB2 != rm.end()) {
-            if (slot_score(pa2, rB2->second) + slot_score(pb2, rA2->second) >
-                slot_score(pa2, rA2->second) + slot_score(pb2, rB2->second))
-                std::swap(rA2->second, rB2->second);
-        } else if (rA2 != rm.end() && rB2 == rm.end()) {
-            if (slot_score(pb2, rA2->second) > slot_score(pa2, rA2->second)) {
-                rm[GW2::GearSlot::WeaponB2] = rA2->second;
-                rm.erase(rA2);
+        } else if (rA1 != rm.end()) {
+            /* Reference has only set A: move to B if player's B matches better */
+            if (slot_score(pb1, rA1->second) > slot_score(pa1, rA1->second)) {
+                rm[GW2::GearSlot::WeaponB1] = rA1->second;
+                rm.erase(rA1);
+                auto rA2 = rm.find(GW2::GearSlot::WeaponA2);
+                if (rA2 != rm.end()) {
+                    rm[GW2::GearSlot::WeaponB2] = rA2->second;
+                    rm.erase(rA2);
+                }
             }
-        } else if (rB2 != rm.end() && rA2 == rm.end()) {
-            if (slot_score(pa2, rB2->second) > slot_score(pb2, rB2->second)) {
-                rm[GW2::GearSlot::WeaponA2] = rB2->second;
-                rm.erase(rB2);
+        } else if (rB1 != rm.end()) {
+            /* Reference has only set B: move to A if player's A matches better */
+            if (slot_score(pa1, rB1->second) > slot_score(pb1, rB1->second)) {
+                rm[GW2::GearSlot::WeaponA1] = rB1->second;
+                rm.erase(rB1);
+                auto rB2 = rm.find(GW2::GearSlot::WeaponB2);
+                if (rB2 != rm.end()) {
+                    rm[GW2::GearSlot::WeaponA2] = rB2->second;
+                    rm.erase(rB2);
+                }
             }
         }
     }
@@ -564,7 +691,9 @@ void Render()
     auto synthesize2H_ref = [&](GW2::GearSlot main_sl, GW2::GearSlot off_sl) {
         auto mi = rm.find(main_sl);
         if (mi == rm.end() || rm.count(off_sl)) return;
-        if (mi->second->item_id == 0) return;
+        /* Skip if the slot has no meaningful content at all (empty placeholder).
+         * Custom builds have item_id==0 but weapon_type set, so check both. */
+        if (mi->second->item_id == 0 && mi->second->weapon_type == GW2::WeaponType::Unknown) return;
         synth[synth_n].slot       = off_sl;
         synth[synth_n].upgrade_id = mi->second->upgrade2_id;
         rm[off_sl] = &synth[synth_n++];

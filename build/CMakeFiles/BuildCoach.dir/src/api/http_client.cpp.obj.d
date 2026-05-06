@@ -1,6 +1,6 @@
 CMakeFiles/BuildCoach.dir/src/api/http_client.cpp.obj: \
- /home/todd/gw2-build-coach/src/api/http_client.cpp \
- /home/todd/gw2-build-coach/src/api/http_client.h \
+ /home/todd/gw2-build-coaches/gw2-build-coach/src/api/http_client.cpp \
+ /home/todd/gw2-build-coaches/gw2-build-coach/src/api/http_client.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/string \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/requires_hosted.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++config.h \
@@ -18,8 +18,12 @@ CMakeFiles/BuildCoach.dir/src/api/http_client.cpp.obj: \
  /usr/x86_64-w64-mingw32/include/_mingw_mac.h \
  /usr/x86_64-w64-mingw32/include/_mingw_secapi.h \
  /usr/x86_64-w64-mingw32/include/vadefs.h \
- /usr/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
  /usr/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
+ /usr/x86_64-w64-mingw32/include/corecrt_wconio.h \
+ /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stddef.h \
+ /usr/x86_64-w64-mingw32/include/stddef.h \
+ /usr/x86_64-w64-mingw32/include/crtdefs.h \
+ /usr/x86_64-w64-mingw32/include/sec_api/wconio_s.h \
  /usr/x86_64-w64-mingw32/include/corecrt_wstdlib.h \
  /usr/x86_64-w64-mingw32/include/corecrt_wctype.h \
  /usr/x86_64-w64-mingw32/include/_mingw_off_t.h \
@@ -41,7 +45,6 @@ CMakeFiles/BuildCoach.dir/src/api/http_client.cpp.obj: \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++locale.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/clocale \
  /usr/x86_64-w64-mingw32/include/locale.h \
- /usr/x86_64-w64-mingw32/include/crtdefs.h \
  /usr/x86_64-w64-mingw32/include/stdio.h \
  /usr/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/iosfwd \
@@ -96,8 +99,6 @@ CMakeFiles/BuildCoach.dir/src/api/http_client.cpp.obj: \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/basic_string.tcc \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/memory_resource.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/cstddef \
- /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stddef.h \
- /usr/x86_64-w64-mingw32/include/stddef.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/uses_allocator.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/uses_allocator_args.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/tuple \
@@ -119,7 +120,7 @@ CMakeFiles/BuildCoach.dir/src/api/http_client.cpp.obj: \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/vector.tcc \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/array \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/compare \
- /home/todd/gw2-build-coach/src/api/api_rate_limiter.h \
+ /home/todd/gw2-build-coaches/gw2-build-coach/src/api/api_rate_limiter.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/mutex \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/chrono.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/ratio \

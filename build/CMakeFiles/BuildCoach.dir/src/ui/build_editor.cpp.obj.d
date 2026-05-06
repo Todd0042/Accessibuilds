@@ -1,7 +1,7 @@
 CMakeFiles/BuildCoach.dir/src/ui/build_editor.cpp.obj: \
- /home/todd/gw2-build-coach/src/ui/build_editor.cpp \
- /home/todd/gw2-build-coach/src/ui/build_editor.h \
- /home/todd/gw2-build-coach/src/ui/../build/types.h \
+ /home/todd/gw2-build-coaches/gw2-build-coach/src/ui/build_editor.cpp \
+ /home/todd/gw2-build-coaches/gw2-build-coach/src/ui/build_editor.h \
+ /home/todd/gw2-build-coaches/gw2-build-coach/src/ui/../build/types.h \
  /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdint.h \
  /usr/x86_64-w64-mingw32/include/stdint.h \
  /usr/x86_64-w64-mingw32/include/crtdefs.h \
@@ -10,7 +10,6 @@ CMakeFiles/BuildCoach.dir/src/ui/build_editor.cpp.obj: \
  /usr/x86_64-w64-mingw32/include/_mingw_mac.h \
  /usr/x86_64-w64-mingw32/include/_mingw_secapi.h \
  /usr/x86_64-w64-mingw32/include/vadefs.h \
- /usr/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
  /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stddef.h \
  /usr/x86_64-w64-mingw32/include/stddef.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/string \
@@ -26,6 +25,8 @@ CMakeFiles/BuildCoach.dir/src/ui/build_editor.cpp.obj: \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/cwchar \
  /usr/x86_64-w64-mingw32/include/wchar.h \
  /usr/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
+ /usr/x86_64-w64-mingw32/include/corecrt_wconio.h \
+ /usr/x86_64-w64-mingw32/include/sec_api/wconio_s.h \
  /usr/x86_64-w64-mingw32/include/corecrt_wstdlib.h \
  /usr/x86_64-w64-mingw32/include/corecrt_wctype.h \
  /usr/x86_64-w64-mingw32/include/_mingw_off_t.h \
@@ -111,9 +112,9 @@ CMakeFiles/BuildCoach.dir/src/ui/build_editor.cpp.obj: \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/vector.tcc \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/array \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/compare \
- /home/todd/gw2-build-coach/src/ui/ui_scale.h \
- /home/todd/gw2-build-coach/external/imgui/imgui.h \
- /home/todd/gw2-build-coach/external/imgui/imconfig.h \
+ /home/todd/gw2-build-coaches/gw2-build-coach/src/ui/ui_scale.h \
+ /home/todd/gw2-build-coaches/gw2-build-coach/external/imgui/imgui.h \
+ /home/todd/gw2-build-coaches/gw2-build-coach/external/imgui/imconfig.h \
  /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/include/float.h \
  /usr/x86_64-w64-mingw32/include/float.h \
  /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdarg.h \
@@ -122,8 +123,8 @@ CMakeFiles/BuildCoach.dir/src/ui/build_editor.cpp.obj: \
  /usr/x86_64-w64-mingw32/include/string.h \
  /usr/x86_64-w64-mingw32/include/sec_api/string_s.h \
  /usr/x86_64-w64-mingw32/include/assert.h \
- /home/todd/gw2-build-coach/src/ui/../shared.h \
- /home/todd/gw2-build-coach/src/ui/../../external/nexus/Nexus.h \
+ /home/todd/gw2-build-coaches/gw2-build-coach/src/ui/../shared.h \
+ /home/todd/gw2-build-coaches/gw2-build-coach/src/ui/../../external/nexus/Nexus.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/cstdint \
  /usr/x86_64-w64-mingw32/include/windows.h \
  /usr/x86_64-w64-mingw32/include/sdkddkver.h \
@@ -418,11 +419,11 @@ CMakeFiles/BuildCoach.dir/src/ui/build_editor.cpp.obj: \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/x86_64-w64-mingw32/bits/error_constants.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/ext/atomicity.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/x86_64-w64-mingw32/bits/atomic_word.h \
- /home/todd/gw2-build-coach/src/ui/../build/cache.h \
- /home/todd/gw2-build-coach/src/ui/../build/comparator.h \
- /home/todd/gw2-build-coach/src/ui/../api/item_lookup.h \
- /home/todd/gw2-build-coach/src/ui/../api/gw2names.h \
- /home/todd/gw2-build-coach/src/ui/../api/relic_db.h \
+ /home/todd/gw2-build-coaches/gw2-build-coach/src/ui/../build/cache.h \
+ /home/todd/gw2-build-coaches/gw2-build-coach/src/ui/../build/comparator.h \
+ /home/todd/gw2-build-coaches/gw2-build-coach/src/ui/../api/item_lookup.h \
+ /home/todd/gw2-build-coaches/gw2-build-coach/src/ui/../api/gw2names.h \
+ /home/todd/gw2-build-coaches/gw2-build-coach/src/ui/../api/relic_db.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/cstring \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/fstream \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/istream \
@@ -464,7 +465,7 @@ CMakeFiles/BuildCoach.dir/src/ui/build_editor.cpp.obj: \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/stl_tempbuf.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/pstl/glue_algorithm_defs.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/pstl/execution_defs.h \
- /home/todd/gw2-build-coach/src/ui/../api/snowcrows.h \
+ /home/todd/gw2-build-coaches/gw2-build-coach/src/ui/../api/snowcrows.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/functional \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/std_function.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/unordered_map \

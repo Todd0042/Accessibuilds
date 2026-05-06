@@ -202,15 +202,20 @@ ComparisonResult CompareGear(const GW2::GearBuild& player,
     };
     normalize_pair(GW2::GearSlot::Ring1,      GW2::GearSlot::Ring2);
     normalize_pair(GW2::GearSlot::Accessory1, GW2::GearSlot::Accessory2);
-    /* Weapon sets: swap both main and offhand slots together */
+    /* Weapon set normalization: always moves set as a whole (main + offhand together).
+     * Dual-set: swap A<->B if player's B set scores better against reference A.
+     * Single-set: if reference only has A (or only B), move reference to whichever
+     * player set matches it better, so the display aligns with the player's actual set. */
     {
         auto rA1 = ref_map.find(GW2::GearSlot::WeaponA1);
         auto rB1 = ref_map.find(GW2::GearSlot::WeaponB1);
+        auto pA1 = player_map.find(GW2::GearSlot::WeaponA1);
+        auto pB1 = player_map.find(GW2::GearSlot::WeaponB1);
+        const GW2::GearItem* pa1 = pA1 != player_map.end() ? pA1->second : nullptr;
+        const GW2::GearItem* pb1 = pB1 != player_map.end() ? pB1->second : nullptr;
+
         if (rA1 != ref_map.end() && rB1 != ref_map.end()) {
-            auto pA1 = player_map.find(GW2::GearSlot::WeaponA1);
-            auto pB1 = player_map.find(GW2::GearSlot::WeaponB1);
-            const GW2::GearItem* pa1 = pA1 != player_map.end() ? pA1->second : nullptr;
-            const GW2::GearItem* pb1 = pB1 != player_map.end() ? pB1->second : nullptr;
+            /* Dual-set reference: swap A<->B sets together if B matches better */
             if (slot_score(pa1, rB1->second) + slot_score(pb1, rA1->second) >
                 slot_score(pa1, rA1->second) + slot_score(pb1, rB1->second)) {
                 std::swap(rA1->second, rB1->second);
@@ -218,6 +223,28 @@ ComparisonResult CompareGear(const GW2::GearBuild& player,
                 auto rB2 = ref_map.find(GW2::GearSlot::WeaponB2);
                 if (rA2 != ref_map.end() && rB2 != ref_map.end())
                     std::swap(rA2->second, rB2->second);
+            }
+        } else if (rA1 != ref_map.end()) {
+            /* Single-set reference (only A): move to B if player's B set matches better */
+            if (slot_score(pb1, rA1->second) > slot_score(pa1, rA1->second)) {
+                ref_map[GW2::GearSlot::WeaponB1] = rA1->second;
+                ref_map.erase(rA1);
+                auto rA2 = ref_map.find(GW2::GearSlot::WeaponA2);
+                if (rA2 != ref_map.end()) {
+                    ref_map[GW2::GearSlot::WeaponB2] = rA2->second;
+                    ref_map.erase(rA2);
+                }
+            }
+        } else if (rB1 != ref_map.end()) {
+            /* Single-set reference (only B): move to A if player's A set matches better */
+            if (slot_score(pa1, rB1->second) > slot_score(pb1, rB1->second)) {
+                ref_map[GW2::GearSlot::WeaponA1] = rB1->second;
+                ref_map.erase(rB1);
+                auto rB2 = ref_map.find(GW2::GearSlot::WeaponB2);
+                if (rB2 != ref_map.end()) {
+                    ref_map[GW2::GearSlot::WeaponA2] = rB2->second;
+                    ref_map.erase(rB2);
+                }
             }
         }
     }
@@ -250,39 +277,46 @@ ComparisonResult CompareGear(const GW2::GearBuild& player,
             }
         }
 
-        /* Primary upgrade (rune/sigil) — ID match first, then name for legendary variants */
-        if (ri.upgrade_id && pi.upgrade_id != ri.upgrade_id) {
-            bool same_name = SameByName(GW2Names::GetItem(pi.upgrade_id),
-                                        GW2Names::GetItem(ri.upgrade_id));
-            if (!same_name) {
-                AddDiff(result, Severity::Error, "Gear",
-                        "Upgrade_" + std::to_string((int)pi.slot),
-                        std::to_string(pi.upgrade_id),
-                        std::to_string(ri.upgrade_id),
-                        "Wrong rune/sigil on " + SlotName(pi.slot));
-            }
-        } else if (!ri.upgrade_id && !ri.upgrade_name.empty()) {
-            /* Reference uses text name (user-authored build with no item ID) */
-            if (pi.upgrade_id) {
-                std::string pn = GW2Names::GetItem(pi.upgrade_id);
-                if (!pn.empty() && pn != "...") {
-                    if (!SameByName(pn, ri.upgrade_name))
-                        AddDiff(result, Severity::Error, "Gear",
-                                "Upgrade_" + std::to_string((int)pi.slot),
-                                pn, ri.upgrade_name,
-                                "Wrong rune/sigil on " + SlotName(pi.slot));
-                }
-            } else if (!pi.upgrade_name.empty()) {
-                if (!SameByName(pi.upgrade_name, ri.upgrade_name))
+        /* Primary upgrade (rune/sigil) — weapon slots use set-level check below;
+         * armor/jewelry uses per-slot check here. */
+        auto isWeaponSlot = [](GW2::GearSlot sl) -> bool {
+            return sl == GW2::GearSlot::WeaponA1 || sl == GW2::GearSlot::WeaponA2 ||
+                   sl == GW2::GearSlot::WeaponB1 || sl == GW2::GearSlot::WeaponB2;
+        };
+        if (!isWeaponSlot(pi.slot)) {
+            if (ri.upgrade_id && pi.upgrade_id != ri.upgrade_id) {
+                bool same_name = SameByName(GW2Names::GetItem(pi.upgrade_id),
+                                            GW2Names::GetItem(ri.upgrade_id));
+                if (!same_name) {
                     AddDiff(result, Severity::Error, "Gear",
                             "Upgrade_" + std::to_string((int)pi.slot),
-                            pi.upgrade_name, ri.upgrade_name,
+                            std::to_string(pi.upgrade_id),
+                            std::to_string(ri.upgrade_id),
                             "Wrong rune/sigil on " + SlotName(pi.slot));
-            } else {
-                AddDiff(result, Severity::Error, "Gear",
-                        "Upgrade_" + std::to_string((int)pi.slot),
-                        "(none)", ri.upgrade_name,
-                        "Missing rune/sigil on " + SlotName(pi.slot));
+                }
+            } else if (!ri.upgrade_id && !ri.upgrade_name.empty()) {
+                /* Reference uses text name (user-authored build with no item ID) */
+                if (pi.upgrade_id) {
+                    std::string pn = GW2Names::GetItem(pi.upgrade_id);
+                    if (!pn.empty() && pn != "...") {
+                        if (!SameByName(pn, ri.upgrade_name))
+                            AddDiff(result, Severity::Error, "Gear",
+                                    "Upgrade_" + std::to_string((int)pi.slot),
+                                    pn, ri.upgrade_name,
+                                    "Wrong rune/sigil on " + SlotName(pi.slot));
+                    }
+                } else if (!pi.upgrade_name.empty()) {
+                    if (!SameByName(pi.upgrade_name, ri.upgrade_name))
+                        AddDiff(result, Severity::Error, "Gear",
+                                "Upgrade_" + std::to_string((int)pi.slot),
+                                pi.upgrade_name, ri.upgrade_name,
+                                "Wrong rune/sigil on " + SlotName(pi.slot));
+                } else {
+                    AddDiff(result, Severity::Error, "Gear",
+                            "Upgrade_" + std::to_string((int)pi.slot),
+                            "(none)", ri.upgrade_name,
+                            "Missing rune/sigil on " + SlotName(pi.slot));
+                }
             }
         }
 
@@ -305,29 +339,72 @@ ComparisonResult CompareGear(const GW2::GearBuild& player,
         }
     }
 
-    /* Two-handed weapon: second sigil lives in A1/B1.upgrade2_id; SC stores it as
-     * a phantom A2/B2 item.  Compare explicitly when player has no offhand slot. */
-    auto check2H = [&](GW2::GearSlot main_sl, GW2::GearSlot off_sl) {
+    /* Weapon sigil set check: sigils are an unordered pair per weapon set.
+     * Either sigil may be on either weapon in the set; only the set as a whole matters.
+     * Handles both 1H+offhand (sigils in separate slots) and 2H (both sigils in main
+     * slot via upgrade_id + upgrade2_id). Supports ID-based and text-name-based sigils
+     * (custom builds use upgrade_name when upgrade_id is 0). */
+    auto checkWeaponSigilSet = [&](GW2::GearSlot main_sl, GW2::GearSlot off_sl) {
+        auto ri_main_it = ref_map.find(main_sl);
+        if (ri_main_it == ref_map.end()) return;
+        const GW2::GearItem& ri_main = *ri_main_it->second;
+        const GW2::GearItem* ri_off  = nullptr;
+        auto ri_off_it = ref_map.find(off_sl);
+        if (ri_off_it != ref_map.end()) ri_off = ri_off_it->second;
+
+        /* Resolve a sigil slot to its canonical name.
+         * use_upgrade2=true pulls the 2H second sigil from upgrade2_id instead. */
+        auto sigilName = [](const GW2::GearItem* it, bool use_upgrade2 = false) -> std::string {
+            if (!it) return "";
+            uint32_t uid = use_upgrade2 ? it->upgrade2_id : it->upgrade_id;
+            if (uid) {
+                std::string n = GW2Names::GetItem(uid);
+                return (n.empty() || n == "...") ? "..." : n;
+            }
+            if (!use_upgrade2 && !it->upgrade_name.empty()) return it->upgrade_name;
+            return "";
+        };
+
+        /* Collect reference sigils (off-slot present → 1H pair; absent → 2H) */
+        std::string rsig1 = sigilName(&ri_main);
+        std::string rsig2 = ri_off ? sigilName(ri_off) : sigilName(&ri_main, true);
+
+        if (rsig1.empty() && rsig2.empty()) return; /* no sigil requirement */
+
+        /* Collect player sigils */
         const GW2::GearItem* pi_main = nullptr;
-        for (const auto& item : player.items)
-            if (item.slot == main_sl) { pi_main = &item; break; }
-        if (!pi_main || pi_main->upgrade2_id == 0) return;
-        for (const auto& item : player.items)
-            if (item.slot == off_sl) return; /* has separate offhand, not 2H */
-        /* Reference second sigil is stored in the main slot's upgrade2_id —
-         * the scraper no longer emits a separate off-slot entry for 2H weapons. */
-        auto ri_main = ref_map.find(main_sl);
-        if (ri_main == ref_map.end() || !ri_main->second->upgrade2_id) return;
-        uint32_t p2 = pi_main->upgrade2_id;
-        uint32_t r2 = ri_main->second->upgrade2_id;
-        if (p2 != r2 && !SameByName(GW2Names::GetItem(p2), GW2Names::GetItem(r2)))
+        const GW2::GearItem* pi_off  = nullptr;
+        for (const auto& item : player.items) {
+            if (item.slot == main_sl) pi_main = &item;
+            if (item.slot == off_sl)  pi_off  = &item;
+        }
+        if (!pi_main) return;
+
+        std::string psig1 = sigilName(pi_main);
+        std::string psig2 = pi_off ? sigilName(pi_off) : sigilName(pi_main, true);
+
+        auto sigilEq = [](const std::string& p, const std::string& r) -> bool {
+            if (r.empty()) return true;                /* reference doesn't require this */
+            if (r == "..." || p == "...") return true; /* still loading */
+            return SameByName(p, r);
+        };
+
+        bool straight = sigilEq(psig1, rsig1) && sigilEq(psig2, rsig2);
+        bool swapped  = sigilEq(psig1, rsig2) && sigilEq(psig2, rsig1);
+
+        if (!straight && !swapped) {
+            std::string pset = psig1.empty() ? "(none)" : psig1;
+            if (!psig2.empty()) pset += " & " + psig2;
+            std::string rset = rsig1.empty() ? "(none)" : rsig1;
+            if (!rsig2.empty()) rset += " & " + rsig2;
             AddDiff(result, Severity::Error, "Gear",
-                    "Upgrade2_" + std::to_string((int)main_sl),
-                    std::to_string(p2), std::to_string(r2),
-                    "Wrong second sigil on " + SlotName(main_sl));
+                    "SigilSet_" + std::to_string((int)main_sl),
+                    pset, rset,
+                    "Wrong sigils on " + SlotName(main_sl) + " set");
+        }
     };
-    check2H(GW2::GearSlot::WeaponA1, GW2::GearSlot::WeaponA2);
-    check2H(GW2::GearSlot::WeaponB1, GW2::GearSlot::WeaponB2);
+    checkWeaponSigilSet(GW2::GearSlot::WeaponA1, GW2::GearSlot::WeaponA2);
+    checkWeaponSigilSet(GW2::GearSlot::WeaponB1, GW2::GearSlot::WeaponB2);
 
     /* Relic — use static relic DB for instant name lookup (avoids async "..." race).
      * Only fall back to GW2Names if both IDs are absent from the DB. */

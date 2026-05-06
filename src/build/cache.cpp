@@ -157,6 +157,7 @@ bool SaveSCBuildsFull(const std::vector<GW2::SCBuild>& builds)
         entry["notes"]         = b.notes;
         entry["source_url"]    = b.source_url;
         entry["chat_code"]     = b.chat_code;
+        entry["is_legacy"]     = b.is_legacy;
 
         /* Traits — "line1"/"line2"/"line3" dict matches ParseBuildJSON's parse_line() */
         static const char* line_keys[] = {"line1", "line2", "line3"};
@@ -474,6 +475,7 @@ bool SaveUserBuilds(const std::vector<GW2::SCBuild>& builds)
         entry["build_type"]    = (int)b.build_type;
         entry["benchmark_dps"] = b.benchmark_dps;
         entry["notes"]         = b.notes;
+        entry["is_legacy"]     = b.is_legacy;
 
         json traits_j = json::array();
         for (int i = 0; i < 3; i++) {
@@ -533,6 +535,7 @@ bool LoadUserBuilds(std::vector<GW2::SCBuild>& out_builds)
             b.build_type   = (GW2::BuildType) entry.value("build_type",  0);
             b.benchmark_dps = entry.value("benchmark_dps", 0.0);
             b.notes        = entry.value("notes", "");
+            b.is_legacy    = entry.value("is_legacy", false);
 
             if (entry.contains("traits")) {
                 auto& tl = entry["traits"];

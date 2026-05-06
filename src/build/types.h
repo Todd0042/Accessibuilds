@@ -183,6 +183,7 @@ struct SCBuild {
     std::string  notes;
     std::string  source_url;
     std::string  chat_code;  /* GW2 build template link, e.g. "[&BQcAAAA...]" */
+    bool         is_legacy   = false; /* appears under "Legacy" on Snow Crows */
 
     TraitBuild   traits;
     SkillBar     skills;

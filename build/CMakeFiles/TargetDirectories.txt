@@ -1,3 +1,3 @@
-/home/todd/gw2-build-coach/build/CMakeFiles/BuildCoach.dir
-/home/todd/gw2-build-coach/build/CMakeFiles/edit_cache.dir
-/home/todd/gw2-build-coach/build/CMakeFiles/rebuild_cache.dir
+/home/todd/gw2-build-coaches/gw2-build-coach/build/CMakeFiles/BuildCoach.dir
+/home/todd/gw2-build-coaches/gw2-build-coach/build/CMakeFiles/edit_cache.dir
+/home/todd/gw2-build-coaches/gw2-build-coach/build/CMakeFiles/rebuild_cache.dir
