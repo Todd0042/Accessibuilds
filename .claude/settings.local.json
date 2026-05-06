@@ -22,7 +22,14 @@
       "Bash(python3 -c \"import selenium\")",
       "Bash(pip3 show *)",
       "Bash(bash build.sh)",
-      "Bash(bash build.sh --regen)"
+      "Bash(bash build.sh --regen)",
+      "WebFetch(domain:docs.raidcore.gg)",
+      "Bash(curl -s \"https://api.github.com/repos/Krappa322/arcdps_healing_stats/contents/\")",
+      "Bash(curl -s \"https://snowcrows.com/builds/raids/warrior/condition-paragon-longbow-sword-sword\")",
+      "Bash(python3 -)",
+      "Bash(python3 scrape_snowcrows.py --url \"https://snowcrows.com/builds/raids/warrior/condition-paragon-longbow-sword-sword\" --out /tmp/sc_test/sc_builds_full.json --force)",
+      "Bash(grep -v \"^Loading\\\\|^$\\\\|palette\\\\|spec trait\")",
+      "Bash(curl -s \"https://api.guildwars2.com/v2/characters/I%20Todd%20I?access_token=5EAADB22-5FE1-A14B-9349-8B5B2178DC9A3BAF8BC9-303E-466C-81CB-B06C4BA84AD3&v=latest\")"
     ]
   }
 }

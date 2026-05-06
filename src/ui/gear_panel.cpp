@@ -100,8 +100,9 @@ static void RenderSlotRow(const GW2::GearItem* pi, const GW2::GearItem* ri,
                           GW2::GearSlot sl, bool check_type = false,
                           bool weapon_set_sigil_ok = true)
 {
-    bool is_relic = ri && ri->item_id != 0 && ri->stat_id == 0
-                       && ri->upgrade_id == 0 && ri->infusions.empty();
+    /* Detect the relic slot explicitly — field-based heuristics fail when scraped
+     * GearItems carry unexpected fields (e.g. upgrade_id from a rune-style slot). */
+    bool is_relic = (sl == GW2::GearSlot::Relic);
 
     bool stat_ok    = true;
     bool upg_ok     = true;
@@ -110,24 +111,36 @@ static void RenderSlotRow(const GW2::GearItem* pi, const GW2::GearItem* ri,
 
     if (pi && ri) {
         if (is_relic) {
+            constexpr uint32_t LEGENDARY_RELIC = 101582;
             if (!pi->item_id) {
-                item_id_ok = false;
-            } else if (pi->item_id == ri->item_id) {
+                item_id_ok = false; /* player has no relic */
+            } else if (pi->item_id == LEGENDARY_RELIC) {
+                item_id_ok = true; /* legendary relic satisfies any requirement */
+            } else if (ri->item_id && pi->item_id == ri->item_id) {
                 item_id_ok = true;
             } else {
-                /* Different IDs — compare by name via relic DB (instant, no async wait).
-                 * Handles PvE/WvW vs PvP ID variants of the same relic. */
-                const char* pn = FindRelicName(pi->item_id);
-                const char* rn = FindRelicName(ri->item_id);
-                if (pn && rn)
-                    item_id_ok = (strcmp(pn, rn) == 0);
-                else {
-                    /* Fall back to GW2Names — passes if still loading ("...") to
-                     * avoid false positives while names are being fetched. */
-                    const std::string& pa = GW2Names::GetItem(pi->item_id);
-                    const std::string& ra = GW2Names::GetItem(ri->item_id);
-                    item_id_ok = pa == "..." || ra == "..."
-                                 || (!pa.empty() && pa == ra);
+                /* Name-based comparison: relic DB (instant) then GW2Names (async).
+                 * ri->upgrade_name carries the text name for custom reference builds. */
+                auto relicName = [](uint32_t id, const std::string& text_fb) -> std::string {
+                    if (id) {
+                        const char* db = FindRelicName(id);
+                        if (db) return db;
+                        const std::string& n = GW2Names::GetItem(id);
+                        return (!n.empty() && n != "...") ? n : "...";
+                    }
+                    return text_fb;
+                };
+                std::string pname = relicName(pi->item_id, "");
+                std::string rname = relicName(ri->item_id, ri->upgrade_name);
+                if (pname == "..." || rname == "..." || rname.empty()) {
+                    item_id_ok = true; /* still loading — pass tentatively */
+                } else {
+                    auto trim = [](const std::string& s) {
+                        std::string r = s;
+                        while (!r.empty() && (r.back()==' '||r.back()=='\t')) r.pop_back();
+                        return r;
+                    };
+                    item_id_ok = (trim(pname) == trim(rname));
                 }
             }
         } else {
@@ -225,14 +238,26 @@ static void RenderSlotRow(const GW2::GearItem* pi, const GW2::GearItem* ri,
 
     ImGui::TableSetColumnIndex(1);
     if (is_relic) {
+        auto relicDisplayName = [](uint32_t id, const std::string& text_fb) -> std::string {
+            if (id) {
+                const char* db = FindRelicName(id);
+                if (db) return db;
+                const std::string& n = GW2Names::GetItem(id);
+                return (!n.empty() && n != "...") ? n : "...";
+            }
+            return text_fb.empty() ? "..." : text_fb;
+        };
         if (missing) {
-            if (ri && ri->item_id) {
-                std::string rn = std::string(GW2Names::GetItem(ri->item_id));
-                while (!rn.empty() && (rn.back()==' '||rn.back()=='\t')) rn.pop_back();
-                ImGui::TextColored(COL_REF, "-> %s",
-                    (!rn.empty() && rn != "...") ? rn.c_str() : "...");
-            } else {
-                ImGui::TextColored(COL_ERROR, "---");
+            std::string rn = ri ? relicDisplayName(ri->item_id, ri->upgrade_name) : "";
+            ImGui::TextColored(COL_REF, "-> %s", !rn.empty() ? rn.c_str() : "...");
+        } else if (pi) {
+            std::string pn = relicDisplayName(pi->item_id, "");
+            ImGui::TextColored(item_id_ok ? COL_OK : COL_ERROR, "%s",
+                !pn.empty() ? pn.c_str() : "...");
+            if (!item_id_ok && ri) {
+                std::string rn = relicDisplayName(ri->item_id, ri->upgrade_name);
+                if (!rn.empty() && rn != "...")
+                    ImGui::TextColored(COL_REF, "-> %s", rn.c_str());
             }
         }
     } else if (pi) {
@@ -320,10 +345,10 @@ static void RenderSlotRow(const GW2::GearItem* pi, const GW2::GearItem* ri,
 
     ImGui::TableSetColumnIndex(2);
     if (is_relic) {
-        if (!item_id_ok && ri && ri->item_id) {
+        if (!item_id_ok && ri) {
             ImGui::TextDisabled("->");
             ImGui::SameLine(0, 4);
-            {
+            if (ri->item_id) {
                 char key[32]; snprintf(key, sizeof(key), "BC_ITEM_%u", ri->item_id);
                 const std::string& rip = GW2Names::GetItemIcon(ri->item_id);
                 Texture_t* rt = rip.empty()
@@ -331,6 +356,8 @@ static void RenderSlotRow(const GW2::GearItem* pi, const GW2::GearItem* ri,
                     : IconCache::GetTexture(key, "render.guildwars2.com", rip.c_str());
                 IconRenderer::DrawBox(ICON_SZ_SM, rt ? rt->Resource : nullptr,
                     IM_COL32(80, 140, 220, 200), GW2Names::GetItem(ri->item_id).c_str());
+            } else if (!ri->upgrade_name.empty()) {
+                ImGui::TextColored(COL_REF, "%s", ri->upgrade_name.c_str());
             }
         }
     } else if (ri && !ri->upgrade_id && !ri->upgrade_name.empty()) {
@@ -565,12 +592,17 @@ void Render()
     synthesize2H(GW2::GearSlot::WeaponA1, GW2::GearSlot::WeaponA2);
     synthesize2H(GW2::GearSlot::WeaponB1, GW2::GearSlot::WeaponB2);
 
-    /* Relic synthesis */
-    if (sc.gear.relic_id) {
-        synth[synth_n].slot    = GW2::GearSlot::Relic;
-        synth[synth_n].item_id = sc.gear.relic_id;
+    /* Relic synthesis: create reference rm entry whenever the build specifies a relic
+     * (by ID or by text name). Store relic_text in upgrade_name so RenderSlotRow can
+     * use it when no item_id is available. */
+    if (sc.gear.relic_id || !sc.gear.relic_text.empty()) {
+        synth[synth_n].slot         = GW2::GearSlot::Relic;
+        synth[synth_n].item_id      = sc.gear.relic_id;
+        synth[synth_n].upgrade_name = sc.gear.relic_text;
         rm[GW2::GearSlot::Relic] = &synth[synth_n++];
-        if (player.gear.relic_id) {
+        /* Player relic: prefer what the items vector already provided (real GearItem
+         * from the equipment API). Fall back to relic_id only if pm has no entry yet. */
+        if (player.gear.relic_id && !pm.count(GW2::GearSlot::Relic)) {
             synth[synth_n].slot    = GW2::GearSlot::Relic;
             synth[synth_n].item_id = player.gear.relic_id;
             pm[GW2::GearSlot::Relic] = &synth[synth_n++];

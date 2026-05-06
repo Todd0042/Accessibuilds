@@ -1,0 +1,32 @@
+I can see several candidates. Here's an analysis from most to least likely, based on what the code actually does:
+
+1. WINHTTP_ACCESS_TYPE_DEFAULT_PROXY — highest likelihood
+In http_client.cpp:19, every single request opens a new WinHTTP session with WINHTTP_ACCESS_TYPE_DEFAULT_PROXY. On Windows, this triggers WPAD (Web Proxy Auto-Discovery) — the OS checks the registry, then attempts a DHCP/DNS query for a PAC file before making the actual connection. If the network doesn't respond to WPAD probes, this can block for 5–15 seconds per session. It happens on every DoGet call because sessions are never reused.
+
+Map loading kicks off equipment fetches, name lookups for every gear slot, trait/skill resolution — potentially dozens of WinHTTP sessions created in rapid succession, each paying the WPAD penalty. On Linux the WinHTTP call chain doesn't actually execute, so you'd never see this.
+
+Fix: Change to WINHTTP_ACCESS_TYPE_NO_PROXY if you don't need proxy support, or create one persistent session at startup and reuse it.
+
+2. Per-request session creation — amplifies #1
+Each DoGet / GetPage creates a full WinHTTP session, connection, and request, then tears it all down. There's no connection pooling and no TLS session resumption. For the API host (api.guildwars2.com) every call pays the full TLS handshake (~100–200 ms on a warm network). Six sequential batch fetches in gw2names.cpp:306-310 each pay this cost, one after another inside the detached thread.
+
+3. Detached threads + MinGW winpthread + DLL lifetime
+At gw2names.cpp:358, the fetch thread is .detach()-ed. With MinGW's statically linked winpthread (your link flags on line 80 of CMakeLists.txt), winpthread's internal thread registry lives inside your DLL's address space.
+
+When GW2 transitions maps, it may unload and reload addon DLLs. On unload, DLL_PROCESS_DETACH fires and winpthread tries to clean up its thread registry — but the detached thread is still alive, blocked inside WinHttpReceiveResponse. This is a known deadlock scenario specific to MinGW + statically linked winpthread in GW2 addon DLLs. It does not happen on Linux because you're not actually loading the DLL into a live process there.
+
+Shutdown() at gw2names.cpp:361 only spin-waits if AddonUnload is called cleanly first. If the game unloads the DLL without that path, the thread is abandoned.
+
+4. WinHttpOpen called from inside the loader lock window
+During map transitions, the game's loader lock is held while loading/unloading DLLs. If anything in DLL_PROCESS_ATTACH (even indirectly through static initializers) calls WinHttpOpen, Windows' deadlock prevention kicks in and can stall. MinGW's static runtime initialization runs more global constructors than MSVC does, making this more likely to accidentally touch something that indirectly calls into WinHTTP or creates a thread.
+
+What to investigate first
+Check if the freeze correlates with a network timeout. You can test by changing just these two lines in http_client.cpp:
+
+
+// In DoGet:
+WINHTTP_ACCESS_TYPE_DEFAULT_PROXY  →  WINHTTP_ACCESS_TYPE_NO_PROXY
+
+// In GetPage:
+same change
+If the freeze disappears or shortens significantly, proxy auto-detection was the culprit. If not, the winpthread DLL lifetime issue is next — the fix there is to keep a joinable thread handle in FlushPending and join() it in Shutdown() rather than detaching.

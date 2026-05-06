@@ -249,8 +249,10 @@ ComparisonResult CompareGear(const GW2::GearBuild& player,
         }
     }
 
-    /* Compare each player item against reference */
+    /* Compare each player item against reference.
+     * Relic slot is excluded here; it is handled by the dedicated relic check below. */
     for (const auto& pi : player.items) {
+        if (pi.slot == GW2::GearSlot::Relic) continue;
         auto it = ref_map.find(pi.slot);
         if (it == ref_map.end()) continue;
         const auto& ri = *it->second;
@@ -406,22 +408,56 @@ ComparisonResult CompareGear(const GW2::GearBuild& player,
     checkWeaponSigilSet(GW2::GearSlot::WeaponA1, GW2::GearSlot::WeaponA2);
     checkWeaponSigilSet(GW2::GearSlot::WeaponB1, GW2::GearSlot::WeaponB2);
 
-    /* Relic — use static relic DB for instant name lookup (avoids async "..." race).
-     * Only fall back to GW2Names if both IDs are absent from the DB. */
-    if (reference.relic_id && player.relic_id != reference.relic_id) {
-        const char* pn = FindRelicName(player.relic_id);
-        const char* rn = FindRelicName(reference.relic_id);
-        bool relic_ok = false;
-        if (pn && rn)
-            relic_ok = (strcmp(pn, rn) == 0);
-        else
-            relic_ok = SameByName(GW2Names::GetItem(player.relic_id),
-                                  GW2Names::GetItem(reference.relic_id));
-        if (!relic_ok) {
-            AddDiff(result, Severity::Error, "Gear", "Relic",
-                    pn ? pn : std::to_string(player.relic_id),
-                    rn ? rn : std::to_string(reference.relic_id),
-                    "Wrong relic");
+    /* Relic comparison: ID match, then name-based fallback (relic DB → GW2Names).
+     * Legendary Relic (ID 101582) satisfies any requirement.
+     * Also checks player/reference items vectors for slot==Relic when the separate
+     * relic_id field is 0 (handles builds that store relics only in gear.items). */
+    {
+        constexpr uint32_t LEGENDARY_RELIC = 101582;
+
+        uint32_t p_relic = player.relic_id;
+        if (!p_relic) {
+            for (const auto& it : player.items)
+                if (it.slot == GW2::GearSlot::Relic) { p_relic = it.item_id; break; }
+        }
+
+        uint32_t r_relic = reference.relic_id;
+        std::string r_relic_text = reference.relic_text;
+        if (!r_relic && r_relic_text.empty()) {
+            for (const auto& it : reference.items)
+                if (it.slot == GW2::GearSlot::Relic) {
+                    r_relic = it.item_id;
+                    if (!r_relic) r_relic_text = it.upgrade_name;
+                    break;
+                }
+        }
+
+        if (r_relic || !r_relic_text.empty()) {
+            auto relicName = [](uint32_t id, const std::string& text_fb) -> std::string {
+                if (id) {
+                    const char* db = FindRelicName(id);
+                    if (db) return db;
+                    std::string n = GW2Names::GetItem(id);
+                    return (!n.empty() && n != "...") ? std::move(n) : "...";
+                }
+                return text_fb;
+            };
+
+            if (p_relic == LEGENDARY_RELIC) {
+                /* legendary relic satisfies any requirement — no diff */
+            } else if (r_relic && p_relic == r_relic) {
+                /* exact ID match — no diff */
+            } else {
+                std::string pname = relicName(p_relic, "");
+                std::string rname = relicName(r_relic, r_relic_text);
+                bool loading = (pname == "..." || rname == "..." || rname.empty());
+                if (!loading && !SameByName(pname, rname)) {
+                    AddDiff(result, Severity::Error, "Gear", "Relic",
+                            pname.empty() ? (p_relic ? std::to_string(p_relic) : "(none)") : pname,
+                            rname.empty() ? std::to_string(r_relic) : rname,
+                            "Wrong relic");
+                }
+            }
         }
     }
 
