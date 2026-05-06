@@ -18,7 +18,7 @@ static Response DoGet(const std::wstring& host, const std::wstring& path,
 
     HINTERNET hSession = WinHttpOpen(
         L"BuildCoach/1.0",
-        WINHTTP_ACCESS_TYPE_DEFAULT_PROXY,
+        WINHTTP_ACCESS_TYPE_NO_PROXY,
         WINHTTP_NO_PROXY_NAME,
         WINHTTP_NO_PROXY_BYPASS, 0);
     if (!hSession) {
@@ -123,7 +123,7 @@ Response GetPage(const std::wstring& host, const std::wstring& path)
         L"Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
         L"AppleWebKit/537.36 (KHTML, like Gecko) "
         L"Chrome/124.0.0.0 Safari/537.36",
-        WINHTTP_ACCESS_TYPE_DEFAULT_PROXY,
+        WINHTTP_ACCESS_TYPE_NO_PROXY,
         WINHTTP_NO_PROXY_NAME,
         WINHTTP_NO_PROXY_BYPASS, 0);
     if (!hSession) { resp.error = "WinHttpOpen failed"; return resp; }

@@ -29,6 +29,7 @@ struct TypeCache {
 static std::mutex        s_mutex;
 static TypeCache         s_specs, s_traits, s_skills, s_items, s_itemstats;
 static std::atomic<bool> s_fetching{false};
+static std::thread       s_fetch_thread;
 static uint64_t          s_cache_build = 0;
 
 /* item_id → stat-set ID, resolved from /v2/items details.infix_upgrade.id
@@ -297,7 +298,8 @@ void FlushPending()
         return;
     }
 
-    std::thread([specs, traits, skills, items, itemstats, item_stat_ids]() {
+    if (s_fetch_thread.joinable()) s_fetch_thread.join();
+    s_fetch_thread = std::thread([specs, traits, skills, items, itemstats, item_stat_ids]() {
         auto trim = [](const std::vector<uint32_t>& v) {
             return v.size() > 200
                 ? std::vector<uint32_t>(v.begin(), v.begin() + 200)
@@ -355,13 +357,14 @@ void FlushPending()
             BuildCache::SaveNamesCache(s_cache_build, SerializeCache());
 
         s_fetching = false;
-    }).detach();
+    });
 }
 
 void Shutdown()
 {
     while (s_fetching.load())
         std::this_thread::sleep_for(std::chrono::milliseconds(50));
+    if (s_fetch_thread.joinable()) s_fetch_thread.join();
 }
 
 } /* namespace GW2Names */

@@ -115,11 +115,11 @@ __declspec(dllexport) void AddonLoad(AddonAPI_t* aApi)
 
 __declspec(dllexport) void AddonUnload()
 {
-    GW2Names::Shutdown();
-    ArcDPS::Shutdown();
-
     APIDefs->GUI_Deregister(OnRender);
     APIDefs->GUI_Deregister(OnOptions);
+
+    GW2Names::Shutdown();
+    ArcDPS::Shutdown();
 
     APIDefs->Events_Unsubscribe(EV_MUMBLE_IDENTITY_UPDATED, OnMumbleIdentityUpdated);
     /* ArcDPS combat events are unsubscribed inside ArcDPS::Shutdown() */
