@@ -1,0 +1,22 @@
+# Build output
+build/
+*.dll
+*.dll.a
+
+# Python cache
+__pycache__/
+*.pyc
+.scraper_cache/
+
+# Reference forks (not part of Accessibuilds)
+reference/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db

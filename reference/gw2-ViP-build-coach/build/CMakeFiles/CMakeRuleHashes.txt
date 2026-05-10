@@ -1,4 +1,0 @@
-# Hashes of file build rules.
-2632e35209a776b13b31f7d4b36b700b default_builds_data.h
-3a4dc45c469d7576dc1b843256340014 icon_bundle.h
-f28ae23fcae6b4761e9ccdc130f7453a version_data.h
