@@ -1,0 +1,401 @@
+GW2 NEXUS ADDON DEVELOPMENT - LESSONS LEARNED
+==============================================
+Compiled from real development experience building MapCompletionTracker.
+Use this as a reference when starting a new Nexus addon.
+
+
+═══════════════════════════════════════════════════════
+1. NEXUS.H - ALWAYS USE THE OFFICIAL CURRENT VERSION
+═══════════════════════════════════════════════════════
+
+- Always get Nexus.h from: https://github.com/RaidcoreGG/RCGG-lib-nexus-api
+- The AddonAPI struct layout changes between API versions. If even one field
+  is wrong or missing, every subsequent function pointer will be misaligned,
+  causing crashes that are very hard to diagnose.
+- The current type names use _t suffix: AddonAPI_t, AddonDefinition_t,
+  AddonVersion_t, Texture_t, etc.
+- Field names in AddonAPI_t changed significantly from older versions:
+    OLD                          NEW
+    RegisterRender            -> GUI_Register
+    DeregisterRender          -> GUI_Deregister
+    GetResource               -> DataLink_Get
+    ShareResource             -> DataLink_Share
+    SubscribeEvent            -> Events_Subscribe
+    UnsubscribeEvent          -> Events_Unsubscribe
+    RegisterKeybindWithString -> InputBinds_RegisterWithString
+    DeregisterKeybind         -> InputBinds_Deregister
+    AddSimpleShortcut         -> QuickAccess_AddContextMenu
+    RemoveSimpleShortcut      -> QuickAccess_RemoveContextMenu
+    SendAlert                 -> GUI_SendAlert
+    GetAddonDirectory         -> Paths_GetAddonDirectory
+    Log (ELogLevel_INFO)      -> Log (LOGL_INFO)
+- ERenderType values also renamed: ERenderType_Render -> RT_Render, etc.
+- EAddonFlags renamed: EAddonFlags_None -> AF_None
+- EUpdateProvider renamed: EUpdateProvider_None -> UP_None
+
+CRITICAL — MISSING GAMEBINDS SECTION:
+- The AddonAPI_t struct contains a GameBinds section between InputBinds and
+  DataLink that is easy to miss or omit. If you copy an older or incomplete
+  Nexus.h, these 6 fields will be absent, silently shifting every subsequent
+  field (DataLink, Textures, QuickAccess, etc.) by 48 bytes on x64.
+- Symptoms of missing GameBinds: texture functions appear to work but produce
+  garbled concatenated identifier strings in the log, and QuickAccess icons
+  fail with "Could not establish connection" errors.
+- The 6 missing fields and their typedefs:
+
+    typedef void (*GAMEBINDS_PRESSASYNC)   (uint32_t aGameBind);
+    typedef void (*GAMEBINDS_RELEASEASYNC) (uint32_t aGameBind);
+    typedef void (*GAMEBINDS_INVOKEASYNC)  (uint32_t aGameBind, int32_t aDuration);
+    typedef void (*GAMEBINDS_PRESS)        (uint32_t aGameBind);
+    typedef void (*GAMEBINDS_RELEASE)      (uint32_t aGameBind);
+    typedef bool (*GAMEBINDS_ISBOUND)      (uint32_t aGameBind);
+
+  In AddonAPI_t, after InputBinds_Deregister and before DataLink_Get:
+
+    GAMEBINDS_PRESSASYNC   GameBinds_PressAsync;
+    GAMEBINDS_RELEASEASYNC GameBinds_ReleaseAsync;
+    GAMEBINDS_INVOKEASYNC  GameBinds_InvokeAsync;
+    GAMEBINDS_PRESS        GameBinds_Press;
+    GAMEBINDS_RELEASE      GameBinds_Release;
+    GAMEBINDS_ISBOUND      GameBinds_IsBound;
+
+- Always verify the full field count of AddonAPI_t matches the official header
+  before assuming texture or QuickAccess calls are broken in isolation.
+
+
+═══════════════════════════════════════════════════════
+2. QUICKACCESS / SHORTCUTS
+═══════════════════════════════════════════════════════
+
+- QuickAccess_AddContextMenu signature (API v6):
+    void(const char* aIdentifier,
+         const char* aTargetShortcutIdentifier,
+         GUI_RENDER  aShortcutRenderCallback)
+  The second parameter CANNOT be nullptr — passing null crashes in ntdll.dll
+  with a write access violation. Either pass a valid shortcut identifier or
+  don't use QuickAccess_AddContextMenu at all.
+
+- To add a full icon shortcut (with texture) use QuickAccess_Add:
+    void(const char* aIdentifier,
+         const char* aTextureIdentifier,
+         const char* aTextureHoverIdentifier,
+         const char* aKeybindIdentifier,
+         const char* aTooltipText)
+  You need two texture identifiers (normal + hover) already registered via
+  one of the Textures_ functions before or after calling this — Nexus will
+  wait for them to be ready before showing the icon.
+
+- If you just want the window toggled by keybind with no icon, skip
+  QuickAccess entirely and just use InputBinds_RegisterWithString.
+
+- Always call QuickAccess_Remove in AddonUnload.
+
+
+═══════════════════════════════════════════════════════
+3. EMBEDDING TEXTURES IN THE DLL
+═══════════════════════════════════════════════════════
+
+- Do NOT use Textures_LoadFromResource under MinGW/Proton. The resource ID
+  gets misread as a string pointer, producing garbled log output.
+
+- Do NOT use Textures_LoadFromFile if you want the icon self-contained in
+  the DLL — it requires an external file on disk.
+
+- The correct approach is to embed the PNG as a C byte array and use
+  Textures_GetOrCreateFromMemory (synchronous, no callback needed):
+
+  Step 1: Save this as gen_icon.py in your project root and run it:
+
+    #!/usr/bin/env python3
+    data = open('src/map.png', 'rb').read()
+    with open('src/map_png.h', 'w') as f:
+        f.write('#pragma once\n\nstatic const unsigned char map_png[] = {\n    ')
+        hex_bytes = [f'0x{b:02x}' for b in data]
+        for i, h in enumerate(hex_bytes):
+            f.write(h)
+            if i < len(hex_bytes) - 1:
+                f.write(', ')
+            if (i + 1) % 16 == 0:
+                f.write('\n    ')
+        f.write(f'\n}};\n\nstatic const unsigned int map_png_len = {len(data)};\n')
+    print(f'Success: wrote {len(data)} bytes to src/map_png.h')
+
+    Run with: python3 gen_icon.py
+
+  Step 2: Include the header and call GetOrCreateFromMemory in AddonLoad:
+
+    #include "map_png.h"
+
+    APIDefs->Textures_GetOrCreateFromMemory(
+        "ICON_MYICON", (void*)map_png, (uint64_t)map_png_len);
+    APIDefs->Textures_GetOrCreateFromMemory(
+        "ICON_MYICON_HOVER", (void*)map_png, (uint64_t)map_png_len);
+
+    APIDefs->QuickAccess_Add(
+        "QA_MYICON",
+        "ICON_MYICON",
+        "ICON_MYICON_HOVER",
+        "KB_MY_TOGGLE",
+        "My Addon Tooltip"
+    );
+
+- Re-run gen_icon.py whenever you change the icon, then rebuild.
+- xxd and windres-based resource embedding do not work reliably under
+  MinGW cross-compilation for this use case.
+
+
+═══════════════════════════════════════════════════════
+4. MUMBLELINK & CHARACTER DETECTION
+═══════════════════════════════════════════════════════
+
+- There are TWO MumbleLink resources in Nexus:
+    "DL_MUMBLE_LINK"          -> PUBLIC  (raw MumbleLink shared memory)
+    "DL_MUMBLE_LINK_IDENTITY" -> INTERNAL (addons cannot access this)
+
+- DataLink_Get("DL_MUMBLE_LINK") may return null on some setups (especially
+  under Proton/Linux). Do not rely on polling it directly.
+
+- THE CORRECT APPROACH: Subscribe to the event EV_MUMBLE_IDENTITY_UPDATED.
+  Nexus fires this whenever the identity changes (character swap, map change,
+  FOV change, etc.). The aEventArgs pointer is a MumbleIdentity* with already-
+  parsed fields — no JSON parsing needed.
+
+  Example:
+    void OnMumbleIdentityUpdated(void* aEventArgs)
+    {
+        if (!aEventArgs) return;
+        MumbleIdentity* identity = static_cast<MumbleIdentity*>(aEventArgs);
+        if (identity->Name[0] == '\0') return;
+        // identity->Name, identity->MapID, identity->Profession, etc. are ready
+    }
+    // In AddonLoad:
+    APIDefs->Events_Subscribe("EV_MUMBLE_IDENTITY_UPDATED", OnMumbleIdentityUpdated);
+    // In AddonUnload:
+    APIDefs->Events_Unsubscribe("EV_MUMBLE_IDENTITY_UPDATED", OnMumbleIdentityUpdated);
+
+- MumbleIdentity struct (as exposed by Nexus event):
+    char     Name[20];
+    uint32_t Profession;
+    uint32_t Specialization;
+    uint32_t Race;
+    uint32_t MapID;
+    uint32_t WorldID;
+    uint32_t TeamColorID;
+    bool     IsCommander;
+    float    FOV;
+    uint32_t UISize;
+
+- The raw MumbleLink struct (if you do use DL_MUMBLE_LINK) stores the
+  character name inside identity[256] as a wchar_t JSON string:
+    {"name":"CharName","profession":4,"spec":55,"race":4,"map_id":50,...}
+  The map ID in the raw struct is in context bytes [8..11] as a little-endian
+  uint32, NOT in a MapID field.
+
+- EV_MUMBLE_IDENTITY_UPDATED fires on map change too, not just character swap,
+  so you will receive it frequently. Always check if Name actually changed
+  before doing expensive work.
+
+- Subscribe to EV_MUMBLE_IDENTITY_UPDATED in AddonLoad. If your addon
+  initializes lazily (e.g. first render frame), store the name in a global
+  buffer in the event handler and apply it during initialization.
+
+
+═══════════════════════════════════════════════════════
+5. IMGUI VERSION COMPATIBILITY
+═══════════════════════════════════════════════════════
+
+- Nexus uses ImGui 1.80. Many features added in later versions are unavailable:
+    BeginDisabled() / EndDisabled() -> added in 1.87, NOT available
+
+- To simulate disabled widgets in ImGui 1.80:
+    ImGui::PushStyleVar(ImGuiStyleVar_Alpha, ImGui::GetStyle().Alpha * 0.4f);
+    // ... your widgets ...
+    ImGui::PopStyleVar();
+  Note: this is visual only — widgets are still technically interactive.
+
+- Always verify any ImGui function you use was available in 1.80 before
+  building. The imgui.h from https://github.com/RaidcoreGG/imgui-v1.80
+  is the correct version to use.
+
+
+═══════════════════════════════════════════════════════
+6. BUILDING ON LINUX WITH MINGW (CROSS-COMPILE FOR WINDOWS)
+═══════════════════════════════════════════════════════
+
+- Use x86_64-w64-mingw32-g++ as the cross-compiler.
+- Use a toolchain file (mingw-toolchain.cmake) pointing to the mingw compiler.
+- #pragma comment(lib, "...") is MSVC-only and causes a warning under MinGW.
+  Remove these and add libraries to CMakeLists.txt target_link_libraries instead.
+- Statically link MinGW runtimes to avoid missing DLL dependencies:
+    target_link_options(... PRIVATE
+        -static-libgcc
+        -static-libstdc++
+        -Wl,-Bstatic,--whole-archive -lwinpthread -Wl,--no-whole-archive,-Bdynamic
+    )
+- WinHTTP is available under MinGW cross-compile: add "winhttp" to
+  target_link_libraries.
+- xxd is not always available on Linux. Use Python to generate C byte arrays
+  from binary files instead (see section 3).
+
+
+═══════════════════════════════════════════════════════
+7. PROTON / LINUX SPECIFIC ISSUES
+═══════════════════════════════════════════════════════
+
+- GW2 running under Proton (including Proton-CachyOS) can run Nexus addons,
+  but there are some differences:
+
+- The crash "Exception: c0000005, Memory at address 00000000`000000cf could
+  not be read, Module: d3d11.dll" is caused by a misaligned AddonAPI struct.
+  Fix: use the correct up-to-date Nexus.h, including the GameBinds section.
+
+- WINEDLLOVERRIDES=d3d11=n,b may be needed in Lutris environment variables
+  to ensure Nexus's d3d11.dll takes priority, but this alone does not fix
+  struct misalignment crashes.
+
+- DataLink_Get("DL_MUMBLE_LINK") may return null under Proton even when
+  Nexus successfully created the resource. Use EV_MUMBLE_IDENTITY_UPDATED
+  instead of polling MumbleLink directly.
+
+- Textures_LoadFromResource does not work correctly under Proton/MinGW.
+  Use Textures_GetOrCreateFromMemory with an embedded byte array instead.
+
+- ArcDPS loads slowly under Proton (1-1.5 seconds vs milliseconds on Windows).
+  This is normal and not a sign of a problem.
+
+
+═══════════════════════════════════════════════════════
+8. UNOFFICIAL EXTRAS INTEGRATION
+═══════════════════════════════════════════════════════
+
+- Unofficial Extras provides chat message events via:
+    EV_UNOFFICIAL_EXTRAS_CHAT_MESSAGE
+  aEventArgs is a ChatMessageInfo*:
+    struct ChatMessageInfo {
+        uint32_t     ChannelId;
+        EChannelType ChannelType;  // uint8_t enum
+        uint8_t      Subgroup;
+        uint8_t      IsBroadcast;
+        uint8_t      _pad1;
+        uint64_t     Timestamp;
+        const char*  AccountName;
+        const char*  CharacterName;
+        const char*  Text;
+    };
+
+- EChannelType_Local (3) is the local/system chat channel where GW2 sends
+  map completion messages: "You have completed <Map Name>!"
+
+- Unofficial Extras is NOT Nexus-compatible as a Nexus addon (you will see
+  "Unofficial_Extras.dll is not a Nexus-compatible library" in the log).
+  It runs as an ArcDPS extension. Its events are still available to Nexus
+  addons via the Nexus event system.
+
+- Always null-check aEventArgs and the Text field before use.
+
+
+═══════════════════════════════════════════════════════
+9. DATALINK / RESOURCE SHARING
+═══════════════════════════════════════════════════════
+
+- Resources created as "internal" by Nexus cannot be accessed by addons via
+  DataLink_Get. Only "public" resources are available.
+- You can check which resources are public vs internal in the Nexus log at
+  startup: "[DataLink] Created public/internal shared resource: ..."
+- DL_MUMBLE_LINK is public. DL_MUMBLE_LINK_IDENTITY is internal.
+- DataLink_Get can return null even for public resources if called too early
+  (before Nexus has fully initialized the resource). Retry in OnRender if null.
+
+
+═══════════════════════════════════════════════════════
+10. GENERAL ADDON STRUCTURE TIPS
+═══════════════════════════════════════════════════════
+
+- Do NOT initialize anything that touches ImGui or game state in AddonLoad.
+  AddonLoad is called before the renderer is ready. Instead, use a lazy init
+  pattern: set a bool s_initialized = false, and do real init on the first
+  call to your OnRender callback.
+
+- Always unsubscribe events, deregister renders, and deregister keybinds in
+  AddonUnload. Nexus will clean up leftovers but logs warnings for each one.
+
+- AddonDefinition_t.Signature must be a unique negative integer if your addon
+  is not hosted on Raidcore. Do not use 0 or a positive number.
+
+- The addon directory path from Paths_GetAddonDirectory("MyAddon") is:
+    <GW2Install>/addons/MyAddon/
+  Create it with CreateDirectoryA() before trying to write files there.
+
+- Nexus log level for general info: LOGL_INFO
+  For verbose/debug output: LOGL_DEBUG
+  For warnings: LOGL_WARNING
+  These appear in the Nexus log file and in-game log window.
+
+
+═══════════════════════════════════════════════════════
+11. GW2 API KEY INTEGRATION
+═══════════════════════════════════════════════════════
+
+- Use WinHTTP for HTTPS requests (always available on Windows/Wine):
+    WinHttpOpen -> WinHttpConnect -> WinHttpOpenRequest ->
+    WinHttpSendRequest -> WinHttpReceiveResponse -> WinHttpReadData
+  Always use WINHTTP_FLAG_SECURE and port INTERNET_DEFAULT_HTTPS_PORT for
+  api.guildwars2.com.
+
+- Run API requests on a detached std::thread to avoid blocking the render thread.
+
+- Character list endpoint:
+    GET https://api.guildwars2.com/v2/characters?ids=all
+    Header: Authorization: Bearer <API_KEY>
+  Requires the "characters" permission scope on the API key.
+  Returns a JSON array of character objects, each with a "name" field.
+
+- API key is 72 characters long. Store in a char[73] buffer.
+
+- Save the API key to your addon's JSON save file so it persists between
+  sessions. Load and auto-fetch on startup.
+
+- Add "winhttp" to CMakeLists.txt target_link_libraries.
+  Remove #pragma comment(lib, "winhttp.lib") — it's MSVC-only.
+
+
+═══════════════════════════════════════════════════════
+12. USEFUL NEXUS EVENTS (BUILT-IN)
+═══════════════════════════════════════════════════════
+
+EV_MUMBLE_IDENTITY_UPDATED  -> MumbleIdentity*  (character/map/fov changed)
+EV_WINDOW_RESIZED           -> nullptr           (game window resized)
+EV_ADDON_LOADED             -> uint32_t*         (addon signature)
+EV_ADDON_UNLOADED           -> uint32_t*         (addon signature)
+
+From Unofficial Extras (requires ArcDPS + Unofficial Extras installed):
+EV_UNOFFICIAL_EXTRAS_CHAT_MESSAGE -> ChatMessageInfo*
+
+
+═══════════════════════════════════════════════════════
+13. COMMON CRASH SIGNATURES AND CAUSES
+═══════════════════════════════════════════════════════
+
+c0000005 at ~0x000000cf, Module: d3d11.dll, Uptime ~8s
+  -> Misaligned AddonAPI struct. Nexus.h is outdated or wrong.
+  -> Fix: Replace Nexus.h with current version from RaidcoreGG/RCGG-lib-nexus-api.
+  -> Also check: GameBinds section missing between InputBinds and DataLink.
+
+c0000005 (write) at valid address, Module: ntdll.dll, Uptime ~9s
+  -> Null pointer passed to QuickAccess_AddContextMenu second argument.
+  -> Fix: Don't pass nullptr as aTargetShortcutIdentifier.
+
+Textures WARNING: "File provided does not exist: UH??H?? H???"
+  -> A function pointer is being passed as a texture filename string.
+  -> Cause: Wrong API struct layout causing AddShortcut to be called instead
+     of AddSimpleShortcut, with the render callback cast as a filename.
+  -> Fix: Correct the AddonAPI_t struct field order in Nexus.h.
+
+Textures DEBUG: "Error fetching ICON_XICON_Y_HOVERICON_XICON_Y_HOVER (QA_Z)
+                 Error: Could not establish connection"
+  -> Texture identifiers are being concatenated — function pointer is hitting
+     Textures_LoadFromURL instead of the intended texture function.
+  -> Cause: GameBinds section missing from AddonAPI_t, shifting all texture
+     and QuickAccess function pointers by 6 slots (48 bytes on x64).
+  -> Fix: Add the 6 GameBinds fields to AddonAPI_t between InputBinds and
+     DataLink. See section 1 for the exact fields required.

@@ -1,0 +1,97 @@
+cmake_minimum_required(VERSION 3.20)
+project(Accessibuilds CXX)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# ── Dependencies (local — no network required) ────────────────────────────────
+
+set(IMGUI_DIR     ${CMAKE_SOURCE_DIR}/external/imgui)
+set(NLOHMANN_DIR  ${CMAKE_SOURCE_DIR}/external/nlohmann)
+
+# ── Sources ───────────────────────────────────────────────────────────────────
+set(IMGUI_SOURCES
+    ${IMGUI_DIR}/imgui.cpp
+    ${IMGUI_DIR}/imgui_draw.cpp
+    ${IMGUI_DIR}/imgui_widgets.cpp
+    ${IMGUI_DIR}/imgui_tables.cpp
+)
+
+set(ADDON_SOURCES
+    src/addon.cpp
+
+    src/build/types.cpp
+
+    src/api/http_client.cpp
+    src/api/gw2api.cpp
+    src/api/gw2names.cpp
+    src/api/snowcrows.cpp
+    src/api/wingman.cpp
+    src/api/item_lookup.cpp
+
+    src/build/comparator.cpp
+    src/build/cache.cpp
+
+    src/arcdps/arcdps.cpp
+
+    src/ui/main_window.cpp
+    src/ui/build_panel.cpp
+    src/ui/gear_panel.cpp
+    src/ui/dps_panel.cpp
+    src/ui/coach_window.cpp
+    src/ui/debug_window.cpp
+    src/ui/icon_cache.cpp
+    src/ui/build_editor.cpp
+    src/ui/instructions_window.cpp
+
+    src/share/dict_tables.cpp
+    src/share/share_code.cpp
+)
+
+# ── Target ────────────────────────────────────────────────────────────────────
+add_library(Accessibuilds SHARED
+    ${ADDON_SOURCES}
+    ${IMGUI_SOURCES}
+)
+
+target_include_directories(Accessibuilds PRIVATE
+    ${CMAKE_SOURCE_DIR}/external/nexus
+    ${IMGUI_DIR}
+    ${CMAKE_SOURCE_DIR}/external   # resolves <nlohmann/json.hpp>
+)
+
+# ── Compile options ───────────────────────────────────────────────────────────
+target_compile_options(Accessibuilds PRIVATE
+    -Wall -Wextra
+    -Wno-unused-parameter
+    -Wno-unused-function
+    -Wno-stringop-truncation
+    -Wno-maybe-uninitialized
+    -O2
+    -Wno-unknown-pragmas
+)
+
+# ── Link ──────────────────────────────────────────────────────────────────────
+target_link_libraries(Accessibuilds PRIVATE
+    winhttp
+    shell32
+)
+
+target_link_options(Accessibuilds PRIVATE
+    -static-libgcc
+    -static-libstdc++
+    -Wl,-Bstatic,--whole-archive -lwinpthread -Wl,--no-whole-archive,-Bdynamic
+)
+
+# ── Output name ───────────────────────────────────────────────────────────────
+set_target_properties(Accessibuilds PROPERTIES
+    OUTPUT_NAME "Accessibuilds"
+    PREFIX      ""
+    SUFFIX      ".dll"
+)
+
+# ── Install helper ────────────────────────────────────────────────────────────
+if(DEFINED ENV{GW2_ADDONS_DIR})
+    install(TARGETS Accessibuilds
+            RUNTIME DESTINATION "$ENV{GW2_ADDONS_DIR}/Accessibuilds")
+endif()
