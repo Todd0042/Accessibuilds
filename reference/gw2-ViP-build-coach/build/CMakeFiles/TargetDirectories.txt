@@ -1,0 +1,3 @@
+/home/todd/gw2-ViP-build-coach/build/CMakeFiles/VipWvWBuildCoach.dir
+/home/todd/gw2-ViP-build-coach/build/CMakeFiles/edit_cache.dir
+/home/todd/gw2-ViP-build-coach/build/CMakeFiles/rebuild_cache.dir
