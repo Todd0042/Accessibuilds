@@ -17,7 +17,6 @@ Forks/
 build_editor.cpp
 BuildCoach.dll
 gen_icon.py
-mingw-toolchain.cmake
 
 # Scraping tools (keep scraper configs, not cache)
 scraper/__pycache__/

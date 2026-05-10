@@ -8,7 +8,7 @@ include("/home/todd/gw2-build-coaches/Accessibuilds/mingw-toolchain.cmake")
 set(CMAKE_SYSTEM "Windows")
 set(CMAKE_SYSTEM_NAME "Windows")
 set(CMAKE_SYSTEM_VERSION "")
-set(CMAKE_SYSTEM_PROCESSOR "x86_64")
+set(CMAKE_SYSTEM_PROCESSOR "")
 
 set(CMAKE_CROSSCOMPILING "TRUE")
 
