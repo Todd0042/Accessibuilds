@@ -1,0 +1,1819 @@
+{
+  "elementalist-condition-tempest": {
+    "sections": [
+      {
+        "title": "Key Concepts",
+        "items": [
+          {
+            "text": "This rotation stays inwith the option of usingif you want a more complex rotation."
+          },
+          {
+            "text": "The core concept of the rotation is to use yourF1,2,3and5skills in eachAttunementoffCooldown."
+          },
+          {
+            "text": "The majority of yourDamagecomes fromBurningandBleeding."
+          }
+        ]
+      },
+      {
+        "title": "Opener",
+        "items": [
+          {
+            "text": "Summonandinbefore you enter combat. It's freeDamage."
+          }
+        ]
+      },
+      {
+        "title": "Step One",
+        "items": [
+          {
+            "text": "After your opener, use all of your skills offCooldownwith the following priority:"
+          },
+          {
+            "text": "Auto Attackin the downtime between skills."
+          }
+        ]
+      },
+      {
+        "title": "Step Two",
+        "items": [
+          {
+            "text": "Next, we can add in your utility skills to provide even moreDamage."
+          },
+          {
+            "text": "Use the following skills offCooldown:"
+          },
+          {
+            "text": "So where do these skills fit in your priority:"
+          },
+          {
+            "text": "is higher priority than"
+          },
+          {
+            "text": "is lower priority than."
+          },
+          {
+            "text": "Usewhenever it's offCooldownto replaceAuto Attacks."
+          }
+        ]
+      },
+      {
+        "title": "Step Three",
+        "items": [
+          {
+            "text": "If you're looking for more complexity, you can add in."
+          },
+          {
+            "text": "In, you have a very short looped rotation:"
+          },
+          {
+            "text": "Now you know when you swap from, but when do you need to change from?"
+          },
+          {
+            "text": "Useas the first and last skill in.Cast it three times per."
+          },
+          {
+            "text": "Cast it three times per."
+          }
+        ]
+      },
+      {
+        "title": "Crowd Control",
+        "items": []
+      }
+    ]
+  },
+  "elementalist-heal-alacrity-tempest": {
+    "sections": [
+      {
+        "title": "Key Concepts",
+        "items": [
+          {
+            "text": "Your role as a healer is toHealyour party and maintain essential boons. You'll also be responsible for handling mechanics by providingStability,Aegis, and dealingBreakbardamage when needed."
+          },
+          {
+            "text": "You’ll be learning a simplerotation to maintain boons and passivelyHeal, while using utility skills to handle mechanics and activelyHealyour allies."
+          }
+        ]
+      },
+      {
+        "title": "Step One",
+        "items": [
+          {
+            "text": "First you'll want to get comfortable using your core rotation:"
+          },
+          {
+            "text": "+"
+          },
+          {
+            "text": "This will already upkeep permanent 25Might,Alacrity,Fury,Regeneration,ProtectionandVigor."
+          }
+        ]
+      },
+      {
+        "title": "Step Two",
+        "items": [
+          {
+            "text": "Useorwhenever you needHealingand/orCondition Cleanses."
+          },
+          {
+            "text": "Keep in mind thatcan interrupt other skill casts, so be mindful of when you use it."
+          }
+        ]
+      },
+      {
+        "title": "Step Three",
+        "items": [
+          {
+            "text": "Attune tobetweenand— in either direction — to trigger bothandfor extra passiveHealing."
+          },
+          {
+            "text": "While you're infeel free to use any of the following skills for even moreHealing:"
+          }
+        ]
+      },
+      {
+        "title": "Step Four",
+        "items": [
+          {
+            "text": "Addandto provideSwiftnessto your party. Yourwill now look like:"
+          },
+          {
+            "text": "Make sure to useimmediately afterso itBlasts'sLightning Field."
+          }
+        ]
+      },
+      {
+        "title": "Step Five",
+        "items": [
+          {
+            "text": "Now you can choose to add some complexity by swapping outfor. This will provide additionalHealingthroughBlastswhen using,,,andinside aCombo Field."
+          }
+        ]
+      },
+      {
+        "title": "Crowd Control",
+        "items": []
+      }
+    ]
+  },
+  "elementalist-power-tempest": {
+    "sections": [
+      {
+        "title": "Key Concepts",
+        "items": [
+          {
+            "text": "The majority of yourDamagein this build comes from."
+          },
+          {
+            "text": "allows this build to function by resetting theCooldownofwithCritical Hits."
+          },
+          {
+            "text": "As this build has almost 100%Critical Chance, you will instantly reset theCooldownofwhen you swap toor."
+          },
+          {
+            "text": "The core concept of yourAttunementsis as follows:"
+          },
+          {
+            "text": "Repeat"
+          }
+        ]
+      },
+      {
+        "title": "Opener",
+        "items": [
+          {
+            "text": "Summoninbefore you enter combat. It's freeDamage."
+          },
+          {
+            "text": "+"
+          },
+          {
+            "text": "and immediately back to"
+          }
+        ]
+      },
+      {
+        "title": "Step One",
+        "items": [
+          {
+            "text": "The base of your rotation is as follows:"
+          },
+          {
+            "text": "Auto Attack"
+          },
+          {
+            "text": "and immediately back to"
+          },
+          {
+            "text": "Auto Attack"
+          },
+          {
+            "text": "and immediately back to"
+          },
+          {
+            "text": "On step 3 and step 6,will immediately trigger allowing you to instantly swap back to."
+          },
+          {
+            "text": "You can move while castingbut you cannotDodgeor swapAttunements."
+          }
+        ]
+      },
+      {
+        "title": "Step Two",
+        "items": [
+          {
+            "text": "The next step is to add in additional skills when you're in. Use the following skills whenever they are available:"
+          }
+        ]
+      },
+      {
+        "title": "Step Three",
+        "items": [
+          {
+            "text": "Use the following skills offCooldownwhenever you're in:"
+          },
+          {
+            "text": "These are all instant cast skills and so are easy to slot in if the added complexity isn't too much."
+          }
+        ]
+      },
+      {
+        "title": "Step Four",
+        "items": [
+          {
+            "text": "You can add further complexity by using your skills in. You can use all of your skills whenever they are available but keep in mind that not everything will be offCooldown."
+          },
+          {
+            "text": "These are the skills inthat you'd want to use:"
+          }
+        ]
+      },
+      {
+        "title": "Crowd Control",
+        "items": []
+      }
+    ]
+  },
+  "mesmer-condition-alacrity-mirage": {
+    "sections": [
+      {
+        "title": "Opener",
+        "items": [
+          {
+            "text": "Quickly generateClonesand triggerwith the following:"
+          },
+          {
+            "text": "3"
+          },
+          {
+            "text": "2"
+          },
+          {
+            "text": "Dodge."
+          }
+        ]
+      },
+      {
+        "title": "Step One",
+        "items": [
+          {
+            "text": "Dodge!!"
+          },
+          {
+            "text": "Never let yourEndurancefill up!Dodgealone will not be enough for fullAlacrityuptime. To gain moreMirage Cloakuses add in the following as well:"
+          },
+          {
+            "text": "Weapon SwapoffCooldownto triggerfor moreEndurancetoDodgemore."
+          },
+          {
+            "text": "UseoffCooldownand walk into thethat is created."
+          },
+          {
+            "text": "isGround-Targeted. If you cast it at your feet by clicking the skill or manually aiming it then you will instantly pickup thecreated."
+          }
+        ]
+      },
+      {
+        "title": "Step Two",
+        "items": [
+          {
+            "text": "Make sure to leave a small gap between activations ofMirage Cloak.Clonesdo not benefit from yourQuicknessso will take a full second to castand can be easily interrupted. Casting a skill between eachMirage Cloakcan help ensure you get the most from yourClones."
+          },
+          {
+            "text": "Add in the following skills offCooldown, aiming to use one between eachMirage Cloakwhen available:"
+          },
+          {
+            "text": "3"
+          },
+          {
+            "text": "4"
+          },
+          {
+            "text": "5"
+          }
+        ]
+      },
+      {
+        "title": "Step Three",
+        "items": [
+          {
+            "text": "Finally, add in the following two skills:"
+          },
+          {
+            "text": "F2: Aim to use this offCooldown. If forced movement doesn't bother you, cast2after."
+          },
+          {
+            "text": "6: This skill will generate aafter a few seconds which you can walk into for an extraMirage Cloak."
+          }
+        ]
+      }
+    ]
+  },
+  "mesmer-condition-virtuoso": {
+    "sections": [
+      {
+        "title": "Key Concepts",
+        "items": [
+          {
+            "text": "The main damage from this build comes fromBleedingwhich deals 25% moreDamagethanks to."
+          },
+          {
+            "text": "Two traits give us all of ourBleeding:"
+          },
+          {
+            "text": "from ourPhantasmswhen they inflict aCritical Hit"
+          },
+          {
+            "text": "from anyBladeskill when they inflict aCritical Hit."
+          },
+          {
+            "text": "Due to these traits, it's very important that we reach 100%Critical Chance. Thankfully, this is made easier due to."
+          },
+          {
+            "text": "has a few important effects:"
+          },
+          {
+            "text": "Bladeskills will inflictVulnerabilitythereby easily maintaing the buff from"
+          },
+          {
+            "text": "It increases ourStrike DamageandCondition Damageby 5% after using aBladesong."
+          }
+        ]
+      },
+      {
+        "title": "Opener",
+        "items": [
+          {
+            "text": "+"
+          },
+          {
+            "text": "once you have fiveBlades"
+          }
+        ]
+      },
+      {
+        "title": "Step One",
+        "items": [
+          {
+            "text": "Use yourDagger/Swordskills offCooldownwith the following priority:"
+          }
+        ]
+      },
+      {
+        "title": "Step Two",
+        "items": [
+          {
+            "text": "Use yourBladesongswhenever you reach fiveBladeswith the following priority:"
+          },
+          {
+            "text": "Keepfrom reaching twoCharges. If it only has oneCharge, thenis of higher priority."
+          },
+          {
+            "text": "last seven seconds, you can delayif you already have the buff to guarantee 100% uptime."
+          }
+        ]
+      },
+      {
+        "title": "Step Three",
+        "items": [
+          {
+            "text": "UseoffCooldownas it is an instant cast."
+          },
+          {
+            "text": "can also be used offCooldownas the lowest priority skill you have available."
+          }
+        ]
+      },
+      {
+        "title": "Crowd Control",
+        "items": []
+      }
+    ]
+  },
+  "necromancer-power-reaper": {
+    "sections": [
+      {
+        "title": "Key Concepts",
+        "items": [
+          {
+            "text": "The idea of this build is to enterand start swinging your scythe. Maximizing your time indrastically increases yourCritical Damagethanks to two traits:"
+          },
+          {
+            "text": "gives 15%Critical Damagewhen in"
+          },
+          {
+            "text": "gives us +300Ferocitywhen in."
+          },
+          {
+            "text": "Whenever you leave shroud, use your bigAoEskills for a damage spike before going back into:"
+          },
+          {
+            "text": "Make sure toat the start of each fight or when your Flesh Golem gets killed."
+          }
+        ]
+      },
+      {
+        "title": "Opener",
+        "items": [
+          {
+            "text": "Your opener offers very strong burst and you'll repeat it every time you go intothroughout your rotation."
+          },
+          {
+            "text": "5"
+          },
+          {
+            "text": "4"
+          },
+          {
+            "text": "F1"
+          },
+          {
+            "text": "Every time youwhether intentionally of by taking excessive damage, wait until these skills are available again before before enteringagain."
+          }
+        ]
+      },
+      {
+        "title": "Step One",
+        "items": [
+          {
+            "text": "Whenever you enter, use the following skills as available:"
+          },
+          {
+            "text": "4"
+          },
+          {
+            "text": "5"
+          },
+          {
+            "text": "Thanks to, theCooldownof all yourskills will be significantly reduced so long as you keepAuto Attacking."
+          },
+          {
+            "text": "In addition, use3when needed for an extra burst of damage reduction and selfStability. Do not use the flip skillunless you need theDefiance Break."
+          }
+        ]
+      },
+      {
+        "title": "Step Two",
+        "items": [
+          {
+            "text": "Next, make sure to keep the largeDamagebuff fromactive all the time. To do this, you will need toF1after being in shroud for about 10-15 seconds . Instead of counting, you will know its time towhen either:"
+          },
+          {
+            "text": "TheCooldownsofandare about halfway done. Each should be cast once per shroud."
+          },
+          {
+            "text": "starts to flash on your boon bar, warning you it is about to lapse."
+          },
+          {
+            "text": "While outside of shroud, use the following loose priority onGreatswordwhile waiting forto come offCooldown:"
+          },
+          {
+            "text": "2"
+          },
+          {
+            "text": "3"
+          },
+          {
+            "text": "Auto Attack Chain"
+          },
+          {
+            "text": "Whenis available again, loop back to theOpenerand then back to yourskills."
+          }
+        ]
+      },
+      {
+        "title": "Step Three",
+        "items": [
+          {
+            "text": "Its now time to addWellsto theOpener. The new version will be:"
+          },
+          {
+            "text": "54"
+          },
+          {
+            "text": "F1"
+          },
+          {
+            "text": "WellsareGround-Targeted, but as you will be in melee range you can click the skills to drop themAoEat your feet."
+          },
+          {
+            "text": "Additionally, when the enemy is below 50%Health, you can spam2when you are onGreatsword. The skill instantlyRechargesitself when you hit an enemy that is below 50%Health. This will provide greater damage overAuto Attack ChainsonGreatswordat the cost ofLife Forcegeneration. If you need yourLife Forcetopped off, stick toAuto Attacks."
+          }
+        ]
+      },
+      {
+        "title": "Crowd Control",
+        "items": []
+      }
+    ]
+  },
+  "engineer-power-mechanist": {
+    "sections": [
+      {
+        "title": "Opener",
+        "items": []
+      },
+      {
+        "title": "Step One",
+        "items": [
+          {
+            "text": "After your opener, use the following skills offCooldown:"
+          },
+          {
+            "text": "Keep in mind thatis a leap andGround-Targeted. If you find that the forced movement is too complex, feel free to drop it from the rotation."
+          },
+          {
+            "text": "When none of the skills above are offCooldown, simply useAuto Attack."
+          }
+        ]
+      },
+      {
+        "title": "Step Two",
+        "items": [
+          {
+            "text": "Put your Mech skills onAuto-Castso you don't need to actively use them. They are the following:"
+          },
+          {
+            "text": "At this stage, you can add in. This skill has no cast time but will interrupt whatever your Mech is currently doing."
+          }
+        ]
+      },
+      {
+        "title": "Step Three",
+        "items": [
+          {
+            "text": "Now it's time to use your final skill in your arsenal -."
+          },
+          {
+            "text": "Usebefore your weapon skills and offCooldown."
+          }
+        ]
+      }
+    ]
+  },
+  "ranger-condition-soulbeast": {
+    "sections": [
+      {
+        "title": "Key Concepts",
+        "items": [
+          {
+            "text": "Merge with yourPetby using. This will improve the following skills:"
+          },
+          {
+            "text": "causes you to inflict additionalBleeding"
+          },
+          {
+            "text": "will copy your boons to yourself thereby increasing their duration and doubling their stacks."
+          },
+          {
+            "text": "You gain anAttribute Bonusdepending on yourPet'sarchetype. OnCondition Damagebuilds, you want to merge with aDeadlyarchetype for the +150Condition Damageand +100Precision."
+          },
+          {
+            "text": "InflictBleedingby dealingCritical Hits. Attack from the sides or back, or against defiant foes to triggerandWeapon Swapfrequently to maintainFuryandSwiftness."
+          },
+          {
+            "text": "YourShort Bowskills are also improved when attacking from the sides or back, or against defiant foes:"
+          },
+          {
+            "text": "inflicts longer lastingPoison"
+          },
+          {
+            "text": "inflictsImmobilize"
+          },
+          {
+            "text": "inflictsStun, rather thanDaze."
+          }
+        ]
+      },
+      {
+        "title": "Opener",
+        "items": [
+          {
+            "text": "Prior to start encounters, you can precast the following:"
+          },
+          {
+            "text": "+"
+          },
+          {
+            "text": "Don't castandtoo early as they don't last very long!"
+          }
+        ]
+      },
+      {
+        "title": "Step One",
+        "items": [
+          {
+            "text": "Use yourShort Bowskills offCooldownwith the following priority:"
+          },
+          {
+            "text": "Use yourAuto Attackwhen you don't have any skills to use."
+          }
+        ]
+      },
+      {
+        "title": "Step Two",
+        "items": [
+          {
+            "text": "The next step would be to also these additional skills offCooldown:"
+          }
+        ]
+      },
+      {
+        "title": "Step Three",
+        "items": [
+          {
+            "text": "provides you with a 10% increase inStrike DamageandCondition Damage. In order to trigger this trait, you need to useDefiance Break:"
+          },
+          {
+            "text": "Delayif you already see the buff fromis active due to recently using."
+          },
+          {
+            "text": "Dodgesandwill apply, and can be cast before the encounter or during downtime."
+          }
+        ]
+      },
+      {
+        "title": "Crowd Control",
+        "items": []
+      }
+    ]
+  },
+  "ranger-power-soulbeast": {
+    "sections": [
+      {
+        "title": "Key Concepts",
+        "items": [
+          {
+            "text": "Merge with yourPetby usingto gain trait bonuses from yourPet. There are quite a few traits that this works with:"
+          },
+          {
+            "text": "grants you +150Attribute Bonus"
+          },
+          {
+            "text": "increases yourDamageby 10%"
+          },
+          {
+            "text": "grants you +300Ferocityand 30%Movement Speed."
+          },
+          {
+            "text": "will also improve the following skills:"
+          },
+          {
+            "text": "will copy your boons to yourself thereby increasing their duration and doubling their stacks"
+          },
+          {
+            "text": "will increase yourDamageby 25%."
+          },
+          {
+            "text": "You gain anAttribute Bonusdepending on yourPet'sarchetype. OnPowerbuilds, you want to merge with aFerociousfor the +150Powerand +100Ferocity."
+          },
+          {
+            "text": "Do massiveDamagewithCritical Hits. Attack from the sides or back, or against defiant foes to triggerand maintainFuryto maximizeCritical Chance."
+          }
+        ]
+      },
+      {
+        "title": "Opener",
+        "items": []
+      },
+      {
+        "title": "Step One",
+        "items": [
+          {
+            "text": "After your opener, use the following skills offCooldown:"
+          },
+          {
+            "text": "Keep in mind thatandboth have forced movement. The upside is thatis also anEvade."
+          }
+        ]
+      },
+      {
+        "title": "Step Two",
+        "items": [
+          {
+            "text": "This step is all about preparing your burstDamage. It combines buffs with your highDamageskills to melt enemies."
+          },
+          {
+            "text": "provides a substantial 25%Damageincrease for 10 seconds."
+          },
+          {
+            "text": "Pairwith the following bigDamageskills:"
+          },
+          {
+            "text": "All these skills will come offCooldownat more or less the same time."
+          },
+          {
+            "text": "Ifis available, you can also use that with the above skills."
+          }
+        ]
+      },
+      {
+        "title": "Step Three",
+        "items": [
+          {
+            "text": "is an important skill that can help you increase yourDamagefurther:"
+          },
+          {
+            "text": "ItPullsyour target and therefore triggers"
+          },
+          {
+            "text": "increases yourDamageandCondition Damageby 10% for 10 seconds"
+          },
+          {
+            "text": "The skill isGround-Targetedand returns to you, so aim on the far side of the target if possible. This will let it triggeron the way out and on the way back."
+          },
+          {
+            "text": "You can delay this skill to provide yourself with aDamagebuff just before you use."
+          }
+        ]
+      },
+      {
+        "title": "Step Four",
+        "items": [
+          {
+            "text": "boosts yourDamagesignificantly. You have three skills in your kit that trigger it:"
+          },
+          {
+            "text": "isn't part of your normalDamagerotation so you can use it if you notice you don't have the buff from, and your burst is about to come offCooldown."
+          }
+        ]
+      },
+      {
+        "title": "Crowd Control",
+        "items": []
+      }
+    ]
+  },
+  "thief-condition-daredevil": {
+    "sections": [
+      {
+        "title": "Key Concepts",
+        "items": [
+          {
+            "text": "Condition Daredevilis all about using your specialDodgeability to both deal damage andEvadeenemy attacks. ADodgewill have the following effects:"
+          },
+          {
+            "text": "It will inflict conditions viaand."
+          },
+          {
+            "text": "It will upkeep. It lasts 6 seconds, which is plenty of time to recharge yourEndurancevia other parts of your kit (such asDaggerauto attacks!)."
+          },
+          {
+            "text": "Besides dodging, you have some very powerful buttons that deal a lot of damage with little input. In fact, three of them don't even have a casting time to worry about! Here's the skills you should prioritize:"
+          },
+          {
+            "text": "(this skill is instant-cast)"
+          },
+          {
+            "text": "(this skill is instant-cast)"
+          },
+          {
+            "text": "triggers, applying lots ofPoison(this skill is instant-cast)"
+          }
+        ]
+      },
+      {
+        "title": "Step One",
+        "items": [
+          {
+            "text": "Condition Daredevildeals a ton of damage via it'sDodge, which triggersand, so you'll start with just that and someAuto Attack Chains."
+          },
+          {
+            "text": "Dodge"
+          },
+          {
+            "text": "Fill time with two fullAuto Attack Chains."
+          },
+          {
+            "text": "Dodge"
+          },
+          {
+            "text": "YourDaggerauto attacks will restoreEnduranceon, so you'll be able to keep this going indefinitely!"
+          }
+        ]
+      },
+      {
+        "title": "Step Two",
+        "items": [
+          {
+            "text": "is your profession mechanic skill. Thanks toand, it will inflict a huge amount ofBleedingandPoison! Try to cast it off-Cooldownfor damage!"
+          },
+          {
+            "text": "will also triggerand, which will help maintain yourEnduranceeven more."
+          },
+          {
+            "text": "will also triggerand, which will help maintain yourEnduranceeven more."
+          },
+          {
+            "text": "Note that this skill will also teleport you to an enemy up to1200 Rangeaway, so feel free to use it for mobility purposes whenever the chance arises!"
+          },
+          {
+            "text": "Note that this skill will also teleport you to an enemy up to1200 Rangeaway, so feel free to use it for mobility purposes whenever the chance arises!"
+          }
+        ]
+      },
+      {
+        "title": "Step Three",
+        "items": [
+          {
+            "text": "There's a ton of damage in your utility skills, too! You'll want to incorporate them whenever possible. Follow this priority when incorporating them:"
+          },
+          {
+            "text": ". This is your biggest damage utility, but it takes a while to ramp up its damage, so it's best to cast it as early and often as possible."
+          },
+          {
+            "text": "and. These are instant-cast skills that apply stacks of a buff to you and 4 other allies that applies conditions on hit. Cast them around others for maximum payoff!"
+          }
+        ]
+      },
+      {
+        "title": "Crowd Control",
+        "items": []
+      }
+    ]
+  },
+  "thief-power-daredevil": {
+    "sections": [
+      {
+        "title": "Key Concepts",
+        "items": [
+          {
+            "text": "Power Daredevilis all about using your specialDodgeability to both deal damage andEvadeenemy attacks. ADodgewill have the following effects:"
+          },
+          {
+            "text": "It will deal heavy damage via."
+          },
+          {
+            "text": "It will upkeep. It lasts 6 seconds, so you don't need to be constantly worried about it."
+          },
+          {
+            "text": "Besides dodging, your main damage tool will beStaff. This weapon features the strongest Auto-attacks in all ofThief! Smack your enemy with the stick whenever you're between dodges!"
+          }
+        ]
+      },
+      {
+        "title": "Step One",
+        "items": [
+          {
+            "text": "Power Daredevildeals a ton of damage via it'sDodgewith, so you'll start with just that and someAuto Attack Chains."
+          },
+          {
+            "text": "Dodge. Make sure you land near your enemy so thathits!"
+          },
+          {
+            "text": "Fill time with three fullAuto Attack Chains."
+          },
+          {
+            "text": "Dodge"
+          },
+          {
+            "text": "Useto replenish one bar ofEndurancewhenever its running low via."
+          }
+        ]
+      },
+      {
+        "title": "Step Two",
+        "items": [
+          {
+            "text": "The next step is to useInitiative, your profession resource. You can spendInitiativefreely on, a very simple-to-use ability that cleaves enemies in an area around you! Here's an example of how to use it:"
+          },
+          {
+            "text": "Dodge"
+          },
+          {
+            "text": "Auto Attack Chainx2"
+          },
+          {
+            "text": "Dodge"
+          },
+          {
+            "text": "If you have moreInitiativeto spend, you can cast anotherin step 2 whenever you wish!"
+          }
+        ]
+      },
+      {
+        "title": "Step Three",
+        "items": [
+          {
+            "text": "You can go the extra mile by adding an utility skill."
+          },
+          {
+            "text": "Dodge"
+          },
+          {
+            "text": "x2"
+          },
+          {
+            "text": "Dodge"
+          },
+          {
+            "text": "To make thesequence much easier, we suggestholding down the key. This will makecast automatically if all the hits fromconnected!"
+          }
+        ]
+      }
+    ]
+  },
+  "thief-power-deadeye": {
+    "sections": [
+      {
+        "title": "Key Concepts",
+        "items": [
+          {
+            "text": "There are two key skills to use when learning this build:"
+          },
+          {
+            "text": "First, let's look at:"
+          },
+          {
+            "text": "You gainMalicewhen you strike a marked target"
+          },
+          {
+            "text": "You deal 10% increasedDamageto a marked target due to"
+          },
+          {
+            "text": "Whenever you kill a marked foe, yourwillRechargedue to."
+          },
+          {
+            "text": "Keep in mind thatdoesn't last forever! Use it again on your target if it runs out."
+          },
+          {
+            "text": "also reduces incomingDamagefrom your marked target by 15%."
+          },
+          {
+            "text": "is the dual-wield skill for yourPistolset. What do you need to know about it?"
+          },
+          {
+            "text": "It's your primary source ofDamage"
+          },
+          {
+            "text": "If all attacks hit, you gain additionalInitiative"
+          },
+          {
+            "text": "This skill isInitiativepositive, letting you use it continuously."
+          }
+        ]
+      },
+      {
+        "title": "Step One",
+        "items": [
+          {
+            "text": "Your rotation for this build will look like this:"
+          },
+          {
+            "text": "Useon your target"
+          },
+          {
+            "text": "on your marked target"
+          },
+          {
+            "text": "Once your target dies, recaston a new target."
+          },
+          {
+            "text": "Why can you spaminfinitely?"
+          },
+          {
+            "text": "As long as you hit your target with all of the hits from, then you will gain twoInitiative."
+          },
+          {
+            "text": "You passively gain oneInitiativeper second andtakes longer than one second to use."
+          },
+          {
+            "text": "only costs threeInitiativeand so as long as you keep hitting your target with the entire skill, you will always have enoughInitiative."
+          }
+        ]
+      },
+      {
+        "title": "Step Two",
+        "items": [
+          {
+            "text": "is your panic button and has a few uses:"
+          },
+          {
+            "text": "It's aStun Break"
+          },
+          {
+            "text": "It refreshes"
+          },
+          {
+            "text": "It grants threeInitiative"
+          },
+          {
+            "text": "It grants additionalInitiativefor each stack ofMaliceit removes."
+          },
+          {
+            "text": "This will allow you to recoverorInitiativein an emergency to keep using. With twoCharges, don't be scared to use this skill!"
+          }
+        ]
+      },
+      {
+        "title": "Crowd Control",
+        "items": []
+      }
+    ]
+  },
+  "thief-power-quickness-deadeye": {
+    "sections": [
+      {
+        "title": "Key Concepts",
+        "items": [
+          {
+            "text": "With this build, you will grantQuickness,Furyand 8Mightto yourself and 5 other allies from using your Stolen Skill, which will always bethanks to thetrait. You can gain charges ofby:"
+          },
+          {
+            "text": "Marking an enemy withwill grant 2 changes ofthanks to"
+          },
+          {
+            "text": "Using aCantripskill while you have aMarked Target, thanks to"
+          },
+          {
+            "text": "is your best utility skill for this build, never take this skill off your bar! It does lots of things:"
+          },
+          {
+            "text": "It is aCantrip, which will generate a"
+          },
+          {
+            "text": "It's an instant-castStun Break."
+          },
+          {
+            "text": "It replenishes at least 3Initiativeevery time."
+          },
+          {
+            "text": "Marking a target withalso has other strong benefits:"
+          },
+          {
+            "text": "increases damage to theMarked Targetby 10%, and reduces damage taken from it by 15%."
+          },
+          {
+            "text": "You will gainMalicewhen striking aMarked Targetwith. When you have 5Malice, you can enterStealthfor free when you cast."
+          },
+          {
+            "text": "Killing yourMarked Targetwill trigger."
+          },
+          {
+            "text": "Your primary source of damage in this build will be. This skill will refund its own cost if all bullets hit, making you able to spam it indefinitely."
+          }
+        ]
+      },
+      {
+        "title": "Step One",
+        "items": [
+          {
+            "text": "First, you’ll want to get comfortable with spending your charges of."
+          },
+          {
+            "text": "Useon an enemy."
+          },
+          {
+            "text": "Spend both of yourcharges."
+          },
+          {
+            "text": "You will want to re-castonce it comes offCooldown, as it doesn’t last forever on your target."
+          }
+        ]
+      },
+      {
+        "title": "Step Two",
+        "items": [
+          {
+            "text": "Now, let’s addto generate more charges offor you to cast."
+          },
+          {
+            "text": "As soon as you’ve spent your initial two charges offrom, castto reset it."
+          },
+          {
+            "text": "Spend the new charge offrom."
+          },
+          {
+            "text": "Recastfor two newcharges."
+          },
+          {
+            "text": "generated from different sources don’t stack, so remember toalways spend your old charges before generating new ones"
+          }
+        ]
+      },
+      {
+        "title": "Step Three",
+        "items": [
+          {
+            "text": "It’s time to start dealing damage. Now we add!"
+          },
+          {
+            "text": "Any other time during combat that you aren’t castingor, its time for. Consider this a replacement for yourAuto Attack."
+          },
+          {
+            "text": "For the best results, try alternating betweenand another skill cast when they are available. For example:"
+          }
+        ]
+      },
+      {
+        "title": "Step Four",
+        "items": [
+          {
+            "text": "You're pretty much already good to go, but for some extra damage and moreQuickness, you can add."
+          },
+          {
+            "text": "If you’ve followed up to here, you’ll notice you can run out of skills to cast, other than. Add this skill whenever you have that downtime to deal extra damage and get acharge!"
+          },
+          {
+            "text": "If you’ve followed up to here, you’ll notice you can run out of skills to cast, other than. Add this skill whenever you have that downtime to deal extra damage and get acharge!"
+          },
+          {
+            "text": "You may activate the second part of this skill for a short time afterwards, which will teleport you to its location and make it deal damage again. Take advantage of this mobility whenever you can!"
+          },
+          {
+            "text": "You may activate the second part of this skill for a short time afterwards, which will teleport you to its location and make it deal damage again. Take advantage of this mobility whenever you can!"
+          }
+        ]
+      },
+      {
+        "title": "Crowd Control",
+        "items": []
+      }
+    ]
+  },
+  "thief-condition-specter": {
+    "sections": [
+      {
+        "title": "Key Concepts",
+        "items": [
+          {
+            "text": "The main goal of this build is to spend yourInitiativeon yourwhile outside ofShadow Shroud, then go intoShadow Shroudand spam yourskill while waiting forInitiativeto recharge."
+          },
+          {
+            "text": "You’ll be pressing mostly these 3 skills:"
+          },
+          {
+            "text": ", while outside ofShadow Shroud."
+          },
+          {
+            "text": ", while inShadow Shroud."
+          },
+          {
+            "text": ", whenever it’s available."
+          },
+          {
+            "text": "You will also use your three Venom utility skills off-Cooldownfor damage; they are instant-cast, so no need to think much about them other than clicking them as soon as they are up:"
+          },
+          {
+            "text": "(will inflictPoisonvia)"
+          }
+        ]
+      },
+      {
+        "title": "Step One",
+        "items": [
+          {
+            "text": "You’ll want to first get comfortable with your skills outside ofShadow Shroud:"
+          },
+          {
+            "text": "Spend all yourInitiativeon."
+          },
+          {
+            "text": "When out ofInitiative, you can fill time withAuto Attacks."
+          }
+        ]
+      },
+      {
+        "title": "Step Two",
+        "items": [
+          {
+            "text": "We’ll addShadow Shroudnow to the mix. Whenis available, and you’ve spent availableInitiativeon, do the following simple loop:"
+          },
+          {
+            "text": "and let the game cast anAuto Attackfor you."
+          },
+          {
+            "text": "Fill time withAuto Attacks"
+          },
+          {
+            "text": "Fill time withAuto Attacks"
+          },
+          {
+            "text": "Once you exitShadow Shroud, you should have someInitiativeback again. Spend it onlike you learned in Step One."
+          }
+        ]
+      },
+      {
+        "title": "Step Three",
+        "items": [
+          {
+            "text": "Now that you know how to play in and out ofShadow Shroud, you can addand some utility skills."
+          },
+          {
+            "text": "Press,andwhenever they’re available."
+          },
+          {
+            "text": "Caston your enemy to inflict a lot ofBleedingandPoison. Use this skill whenever it’s available (even while inShadow Shroud)."
+          },
+          {
+            "text": "You can keepAuto Attackingduring downtime. It's useful filler!"
+          }
+        ]
+      },
+      {
+        "title": "Step Four",
+        "items": [
+          {
+            "text": "For a little bit of extra damage, you can addwhen available."
+          },
+          {
+            "text": "While inShadow Shroud, you can add a cast ofwhile in melee range for a nice spike ofPoisondamage."
+          }
+        ]
+      },
+      {
+        "title": "Crowd Control",
+        "items": []
+      }
+    ]
+  },
+  "thief-heal-alacrity-specter": {
+    "sections": [
+      {
+        "title": "Key Concepts",
+        "items": [
+          {
+            "text": "As a defensive support, your main goal is to provide boons for allies and keep them healthy."
+          },
+          {
+            "text": "You’ll be providing boons mainly from the following sources:"
+          },
+          {
+            "text": "While inShadow Shroud:"
+          },
+          {
+            "text": "will provideAlacrity."
+          },
+          {
+            "text": "At any moment while targetting an enemy:"
+          },
+          {
+            "text": "will provideFury, 10Might,Protection,SwiftnessandVigor."
+          },
+          {
+            "text": "While outside ofShadow Shroud:"
+          },
+          {
+            "text": "will provide moreMightandProtection."
+          },
+          {
+            "text": "will be your source ofRegenerationandStability. It also provides other boons already found on previous skills."
+          },
+          {
+            "text": "Casting these four abilities often will upkeep full uptime of the following essential boons on your party:"
+          },
+          {
+            "text": "Offensive boons:Alacrity,Might, andFury"
+          },
+          {
+            "text": "Defensive boons:ProtectionandRegeneration"
+          },
+          {
+            "text": "Utility boons:SwiftnessandVigor"
+          },
+          {
+            "text": "Most of yourHealingwill happen naturally fromShadow Shroudskills,Barrierfrom, and incidentalBlast Finishersfor, which will output a lot of healing even while forgetting it exists."
+          }
+        ]
+      },
+      {
+        "title": "Opener",
+        "items": [
+          {
+            "text": "Just learning this opener will ensure your party has its suite of vital boons as soon as possible. Take a little bit of time to learn it! You can fall back to it again for safety when in a hectic situation:"
+          },
+          {
+            "text": "x 2"
+          },
+          {
+            "text": "Fill time withAuto Attacks"
+          }
+        ]
+      },
+      {
+        "title": "Step One",
+        "items": [
+          {
+            "text": "You’ll want to first get comfortable with your skills outside ofShadow Shroud:"
+          },
+          {
+            "text": "Spend yourInitiativeon."
+          },
+          {
+            "text": "Spend yourInitiativeon."
+          },
+          {
+            "text": "UseandoffCooldownif you’re able."
+          },
+          {
+            "text": "UseandoffCooldownif you’re able."
+          },
+          {
+            "text": "will grant your group lots ofBarrier,MightandProtection, and serve as aBlast Finisheron any fields your party may have on the arena."
+          },
+          {
+            "text": "EnterShadow Shroudwhenever it’s offCooldownagain."
+          }
+        ]
+      },
+      {
+        "title": "Step Two",
+        "items": [
+          {
+            "text": "Whenis available, do the following simple loop:"
+          },
+          {
+            "text": "and let the game cast anAuto Attackfor you."
+          },
+          {
+            "text": "Fill time withAuto Attacks"
+          },
+          {
+            "text": "Fill time withAuto Attacks"
+          },
+          {
+            "text": "Each cast ofgrants a whopping 10 seconds ofAlacrityto your party, allowing you a lot of time to space out your visits toShadow Shroud."
+          }
+        ]
+      },
+      {
+        "title": "Step Three",
+        "items": [
+          {
+            "text": "Lastly, you can keep in mind the following adjustments to go the extra mile:"
+          },
+          {
+            "text": "is a big burst heal, followed by a tickingHealingfield. It has a short, accessibleCooldown, so don’t worry about saving it!"
+          },
+          {
+            "text": "is a big burst heal, followed by a tickingHealingfield. It has a short, accessibleCooldown, so don’t worry about saving it!"
+          },
+          {
+            "text": "All your Well skills, as well as, will spawn aDark Fieldunder you. You can give allies extraHealingandCondition Removalby usingspecifically in aDark Field."
+          },
+          {
+            "text": "All your Well skills, as well as, will spawn aDark Fieldunder you. You can give allies extraHealingandCondition Removalby usingspecifically in aDark Field."
+          },
+          {
+            "text": "While in Shroud, you can opt to usewhen available, for another big burst heal."
+          },
+          {
+            "text": "While in Shroud, you can opt to usewhen available, for another big burst heal."
+          }
+        ]
+      },
+      {
+        "title": "Crowd Control",
+        "items": []
+      }
+    ]
+  },
+  "guardian-power-dragonhunter": {
+    "sections": [
+      {
+        "title": "Key Concepts",
+        "items": [
+          {
+            "text": "This build is focused around completing yourAuto Attackon yourHammerin order to maintain permanentSymbolvia."
+          },
+          {
+            "text": "Complexity can be added through using,and."
+          },
+          {
+            "text": "Your traps provide you with additionalDamageand uptime on your."
+          }
+        ]
+      },
+      {
+        "title": "Step One",
+        "items": [
+          {
+            "text": "ContinuallyAuto Attackon yourHammer. We want to always finish off the fullAuto Attack Chain."
+          },
+          {
+            "text": "This is so we can leave aSymbolon the ground viawhich will continually tickDamage."
+          }
+        ]
+      },
+      {
+        "title": "Step Two",
+        "items": [
+          {
+            "text": "We can now add in."
+          },
+          {
+            "text": "Use youras soon as it becomes available as it provides very goodDamage."
+          },
+          {
+            "text": "Try not to interrupt yourAuto Attack ChainonHammerwhen using."
+          }
+        ]
+      },
+      {
+        "title": "Step Three",
+        "items": [
+          {
+            "text": "We can now add inand."
+          },
+          {
+            "text": "orshould be used when you see you don't have the buff from."
+          },
+          {
+            "text": "Try not to interrupt yourAuto Attack ChainonHammerwhen using."
+          }
+        ]
+      },
+      {
+        "title": "Defense",
+        "items": [
+          {
+            "text": "essentially functions as an invulnerability window, use this to your advantage."
+          },
+          {
+            "text": "willHealandRemove Conditions."
+          },
+          {
+            "text": "Useto gainAegisandBlockattacks for three seconds."
+          },
+          {
+            "text": "Attacks made behind or to the side of your character willnotbeBlocked."
+          },
+          {
+            "text": "Attacks made against allies near your character willalsobeBlocked."
+          },
+          {
+            "text": "You can still use all your other skills whileis active."
+          }
+        ]
+      },
+      {
+        "title": "Crowd Control",
+        "items": []
+      }
+    ]
+  },
+  "guardian-condition-willbender": {
+    "sections": [
+      {
+        "title": "Key Concepts",
+        "items": [
+          {
+            "text": "This build is focused on using both of yourPistolsandto quickly ramp up yourBurning."
+          },
+          {
+            "text": "Usinggrants theJusticebuff for 10 seconds due to. While this buff is active, inflictBurningin anAoEevery three strikes. Always useoffCooldownto maximize yourDamage."
+          },
+          {
+            "text": "Use yourPistolskills offCooldown:"
+          }
+        ]
+      },
+      {
+        "title": "Opener",
+        "items": [
+          {
+            "text": "Take time to learn this opening well as it will provide you with a strong opening burst."
+          }
+        ]
+      },
+      {
+        "title": "Step One",
+        "items": [
+          {
+            "text": "Use the following skills offCooldown:"
+          },
+          {
+            "text": "Fill in the gaps withAuto Attacks."
+          },
+          {
+            "text": "Keep in mind thatwill move you."
+          }
+        ]
+      },
+      {
+        "title": "Step Two",
+        "items": [
+          {
+            "text": "Once you are comfortable with the previous step, you can start to add in the firstPistolskills and use them offCooldown."
+          }
+        ]
+      },
+      {
+        "title": "Step Three",
+        "items": [
+          {
+            "text": "Now you can add in the remainingPistolskills:and"
+          },
+          {
+            "text": "Use yourPistolskills with the following priority offCooldown:"
+          },
+          {
+            "text": "Auto Attackwithwhen every other skill is onCooldown."
+          },
+          {
+            "text": "Useafter placing, assuming all other skills are onCooldown."
+          },
+          {
+            "text": "Ifandcome offCooldownat the same time, usefor moreDamage."
+          }
+        ]
+      },
+      {
+        "title": "Crowd Control",
+        "items": []
+      }
+    ]
+  },
+  "revenant-heal-quickness-herald": {
+    "sections": [
+      {
+        "title": "Key Concepts",
+        "items": [
+          {
+            "text": "Heal Quickness HeraldprovidesQuicknessand a wide array of other Boons to allies primarily by maintaining itsFacetswhile in. It also passively suppliesBarrierandHealingto allies in a very large radius around you."
+          },
+          {
+            "text": "Once activated,Facetscontinue to grant their effects until youSwap your Legendary Stanceor deplete yourEnergy."
+          },
+          {
+            "text": "gives you additional supportive tools, allowing you to provide a lot ofStabilityfor more than just your Subgroup."
+          },
+          {
+            "text": "generatesMightandQuicknessas long as you maintain at least -6Upkeep, and additionally heals your allies whenever you grant them Boons."
+          }
+        ]
+      },
+      {
+        "title": "Step One",
+        "items": [
+          {
+            "text": "Start on your. When you start the Encounter, you want to turn someFacetsto start providing Boons. Activate the following:"
+          },
+          {
+            "text": "6"
+          },
+          {
+            "text": "Utility"
+          },
+          {
+            "text": "Utility"
+          },
+          {
+            "text": "0"
+          },
+          {
+            "text": "Once yourEnergyis fully drained and your passive abilites turn off, wait until you have 50Energyand start again."
+          }
+        ]
+      },
+      {
+        "title": "Step Two",
+        "items": [
+          {
+            "text": "Auto Attackto generate additionalMightandBarrierwhen you are not activatingFacets."
+          }
+        ]
+      },
+      {
+        "title": "Step Three",
+        "items": [
+          {
+            "text": "We can now add inLegendary Stance SwapF1. Instead of waiting for yourEnergyto recharge to 50, we will useLegendary Stance SwapF1"
+          },
+          {
+            "text": "As soon as you enter, useUtility."
+          },
+          {
+            "text": "Always keepAuto Attackinguntil yourLegendary Stance SwapF1is available."
+          },
+          {
+            "text": "Use anotherUtilitybefore youLegendary Stance SwapF1."
+          }
+        ]
+      },
+      {
+        "title": "Defense",
+        "items": [
+          {
+            "text": "While keeping your allies alive, it is easy to forget about your own survival. You have some defensive tools in the form of passiveBarrierandHealing, but these alone are not always enough."
+          },
+          {
+            "text": "Luckily, you also have several options that can help you stay safe when things become dangerous."
+          }
+        ]
+      },
+      {
+        "title": "Crowd Control",
+        "items": [
+          {
+            "text": "Staffcan be an optional secondary weapon for additionalDefiance break.Use5and continue withAuto Attackuntil you canWeapon Swapagain."
+          }
+        ]
+      }
+    ]
+  },
+  "revenant-power-vindicator": {
+    "sections": [
+      {
+        "title": "Key Concepts",
+        "items": [
+          {
+            "text": "ActivatebyDodging.DodgingisDamage, so keepDodgingand never let yourEndurancefill up."
+          },
+          {
+            "text": "When you aren'tDodging, useAuto AttackonSwordand useUpkeepskills to boostDamage."
+          },
+          {
+            "text": "We can add further complexity through using,Swordskills and changing to a strongerLegendary Stance."
+          }
+        ]
+      },
+      {
+        "title": "Step One",
+        "items": [
+          {
+            "text": "Start withDodgeand immediately proceed with yourAuto Attacks."
+          },
+          {
+            "text": "Dodgeagain when yourEnduranceallows, while trying not to interrupt yourAuto Attack Chaintoo often."
+          },
+          {
+            "text": "Useand activate it repeatedly as soon it is available. This will grant theeffect to improve your nextDodge, so try to do so as soon as possible once activated."
+          },
+          {
+            "text": "Remember, you can move and reposition whileDodging!"
+          }
+        ]
+      },
+      {
+        "title": "Step Two",
+        "items": [
+          {
+            "text": "Next, we'll add inUpkeepskills."
+          },
+          {
+            "text": "Useand let it drain yourEnergy. This skill adds additionalDamagewhen you strike enemies."
+          },
+          {
+            "text": "When you run out ofEnergy, swap toand use. This skill acts similarly and dealsDamagearound you in close proximity."
+          },
+          {
+            "text": "Onceis ready again, swap back to it and repeat!"
+          }
+        ]
+      },
+      {
+        "title": "Step Three",
+        "items": [
+          {
+            "text": "Lastly, we should add in weapon skills. Try to weave these in betweenAuto Attacks, but still prioritiseDodge."
+          },
+          {
+            "text": "Follow this priority on yourSwords:"
+          },
+          {
+            "text": "Try to, as they have the sameCooldown."
+          }
+        ]
+      },
+      {
+        "title": "Step Four",
+        "items": [
+          {
+            "text": "Replacewith. This stance will use slot skills for more damage instead ofUpkeep."
+          },
+          {
+            "text": "Usewhen you enter the stance, and again before leaving."
+          },
+          {
+            "text": "Usetwice in between other skills."
+          },
+          {
+            "text": "is a great alternative skill that grants youFury,QuicknessandEnduranceto allow moreDodges."
+          }
+        ]
+      },
+      {
+        "title": "Defense",
+        "items": [
+          {
+            "text": "grants you 20% damage reduction while active, and you can gain further damage reduction from. This is also one of yourStun Breaks."
+          },
+          {
+            "text": "It can be good to not impulsively useDodgeall the time, such that you may be able toEvadean incoming attack. You can also use, your otherStun Break, whichEvadesbackwards, orto avoid attacks. However, both will lock you into an animation."
+          },
+          {
+            "text": "is a strong heal withCondition Removal.providesStabilityin a largeAoE."
+          },
+          {
+            "text": "Inyou have access to several other healing skills andStun Breaksby swapping between each faction with."
+          }
+        ]
+      },
+      {
+        "title": "Crowd Control",
+        "items": []
+      }
+    ]
+  },
+  "warrior-power-spellbreaker": {
+    "sections": [
+      {
+        "title": "Key Concepts",
+        "items": [
+          {
+            "text": "This build relies on stackingDamagebuffs from several sources:"
+          },
+          {
+            "text": "applied byBurst skills"
+          },
+          {
+            "text": "applied by Signets"
+          },
+          {
+            "text": "applied byDefiance Breakskills"
+          },
+          {
+            "text": "It then takes advantage of these buffs through weapon skills andAuto Attack Chains. YourAuto Attacksare ultra-fast thanks to."
+          }
+        ]
+      },
+      {
+        "title": "Step One",
+        "items": [
+          {
+            "text": "Start by using all your signet skills:"
+          },
+          {
+            "text": "These are preliminary to the rest of the rotation. You can take your time activating each one, as the buff fromlasts quite a long time."
+          },
+          {
+            "text": "Start combat withand follow up withAuto Attacks."
+          },
+          {
+            "text": "Useagain after theCooldownis halfway done, or as soon as you have a newChargeif you run out."
+          }
+        ]
+      },
+      {
+        "title": "Step Two",
+        "items": [
+          {
+            "text": "Activatewhenever available to refresh yourbuff."
+          },
+          {
+            "text": "For this step you should add in the following skills:"
+          },
+          {
+            "text": "adds a stack of, but is a priority skill. Beware not to interrupt other skill casts with it."
+          },
+          {
+            "text": "grantsand appliesto your target. This is a substantialDamagebuff, so it is one of your most important skills."
+          },
+          {
+            "text": "Be sure to use these skills as often as possible, and continue withandAuto Attacksin between."
+          }
+        ]
+      },
+      {
+        "title": "Step Three",
+        "items": [
+          {
+            "text": "Now we'll add in a skill combo:"
+          },
+          {
+            "text": "You can follow this up with aforementioned weapon skills to take advantage of the extra damage buffs from this combo."
+          },
+          {
+            "text": "As theCooldownsare on the longer side, you do not need to worry about casting these skills outside of this combo."
+          }
+        ]
+      },
+      {
+        "title": "Crowd Control",
+        "items": []
+      }
+    ]
+  }
+}
