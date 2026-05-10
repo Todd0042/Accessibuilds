@@ -18,11 +18,24 @@ Early testing phase still.
 
 .
 
+With Correct traits:
 <img width="828" height="1103" alt="Screenshot_20260510_192452" src="https://github.com/user-attachments/assets/5b020df4-c7fc-4791-9347-ea51a07932fd" />
+
+With Incorrect Traits:
 <img width="828" height="1103" alt="Screenshot_20260510_192529" src="https://github.com/user-attachments/assets/1c236210-dcad-4b67-8166-f687f2de55cc" />
+
+With Correct Equipment:
 <img width="828" height="1125" alt="Screenshot_20260510_192621" src="https://github.com/user-attachments/assets/fba280b4-2be8-4fef-b10b-333dfbedd725" />
+
+With Incorrect Equipment:
 <img width="829" height="1121" alt="Screenshot_20260510_192646" src="https://github.com/user-attachments/assets/9c7699c1-48ee-44e2-b4aa-0207b3b67db6" />
+
+DPS / Rotation:
 <img width="685" height="945" alt="Screenshot_20260510_193057" src="https://github.com/user-attachments/assets/1f17451c-3c73-40ea-8179-a87b17cd9af8" />
-<img width="957" height="1014" alt="Screenshot_20260510_193146" src="https://github.com/user-attachments/assets/8769cf22-e17e-4456-96c9-621f76b94ed9" />
+
+Heal / Barrier toggle:
 <img width="682" height="939" alt="Screenshot_20260510_193445" src="https://github.com/user-attachments/assets/d303462b-6c55-413b-aa4a-c58d33404fa5" />
+
+Build Editor:
+<img width="957" height="1014" alt="Screenshot_20260510_193146" src="https://github.com/user-attachments/assets/8769cf22-e17e-4456-96c9-621f76b94ed9" />
 
