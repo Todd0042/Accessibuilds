@@ -10,6 +10,18 @@ __pycache__/
 
 # Reference forks (not part of Accessibuilds)
 reference/
+forks/
+Forks/
+
+# Old standalone files
+build_editor.cpp
+BuildCoach.dll
+gen_icon.py
+mingw-toolchain.cmake
+
+# Scraping tools (keep scraper configs, not cache)
+scraper/__pycache__/
+scraper/.scraper_cache/
 
 # IDE
 .vscode/
