@@ -492,7 +492,7 @@ __declspec(dllexport) AddonDefinition_t* GetAddonDef()
         AddonUnload,
         AF_None,
         UP_GitHub,
-        "https://github.com/Todd0042/gw2-build-coach",
+        "https://github.com/Todd0042/BuildCoach",
     };
     return &def;
 }
