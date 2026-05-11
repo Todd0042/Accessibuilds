@@ -83,21 +83,6 @@ void Render()
     );
     ImGui::Spacing(); ImGui::Spacing();
 
-    /* ── Chat Build Detection ── */
-    ImGui::TextDisabled("Chat Build Detection");
-    ImGui::Separator();
-    ImGui::TextWrapped(
-        "Build Coach can automatically detect when someone posts an AB: share code in chat. "
-        "When detected, a small popup appears in the bottom-right corner asking if you want "
-        "to import the build into the editor."
-    );
-    ImGui::Spacing();
-    ImGui::BulletText("Requires the 'Events: Chat' Nexus addon to be installed");
-    ImGui::BulletText("Enable/disable in Settings → 'Detect build share codes in chat'");
-    ImGui::BulletText("Only triggers on AB: codes from other players (not your own messages)");
-    ImGui::BulletText("Import opens the Build Editor with the build loaded for review");
-    ImGui::Spacing(); ImGui::Spacing();
-
     /* ── gw2skills.net Import ── */
     ImGui::TextDisabled("Importing from gw2skills.net");
     ImGui::Separator();
