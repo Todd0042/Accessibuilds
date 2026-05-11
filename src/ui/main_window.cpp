@@ -551,6 +551,13 @@ void Render()
     ImGui::SameLine();
     if (ImGui::Button("Instructions")) InstructionsWindow::Toggle();
     ImGui::SameLine();
+    if (ImGui::Button("Refresh")) {
+        g_PlayerBuildDirty = true;
+        s_status = "Refreshing...";
+    }
+    if (ImGui::IsItemHovered())
+        ImGui::SetTooltip("Refresh current character build from GW2 API");
+    ImGui::SameLine();
     if (!s_status.empty()) ImGui::TextDisabled("%s", s_status.c_str());
 
     /* Hidden debug button — only rendered for account Todd.5124 */
@@ -560,13 +567,6 @@ void Render()
         if (strcmp(acct, "Todd.5124") == 0) {
             ImGui::SameLine();
             if (ImGui::SmallButton("DBG")) DebugWindow::Toggle();
-            ImGui::SameLine();
-            if (ImGui::SmallButton("Refresh")) {
-                g_PlayerBuildDirty = true;
-                s_status = "Refreshing...";
-            }
-            if (ImGui::IsItemHovered())
-                ImGui::SetTooltip("Refresh current character build from GW2 API");
         }
     }
 
