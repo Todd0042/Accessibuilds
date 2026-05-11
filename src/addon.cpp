@@ -65,7 +65,12 @@ static void OnChatMessage(void* aEventArgs)
             return;
     }
 
-    std::string content(msg->Text);
+    const char* text = msg->Text;
+    
+    /* Quick reject: message must contain "AB:" to be a build code */
+    if (!strstr(text, "AB:")) return;
+
+    std::string content(text);
 
     /* Scan for AB: share codes */
     size_t pos = 0;
@@ -73,7 +78,9 @@ static void OnChatMessage(void* aEventArgs)
         /* Extract the code: AB: followed by base64 chars until whitespace or end */
         size_t start = pos;
         size_t end = start + 3;
-        while (end < content.size()) {
+        
+        /* Limit code length: valid AB: codes are 45-55 chars total */
+        while (end < content.size() && (end - start) < 60) {
             char c = content[end];
             if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z') ||
                 (c >= '0' && c <= '9') || c == '-' || c == '_')
@@ -82,54 +89,59 @@ static void OnChatMessage(void* aEventArgs)
                 break;
         }
 
-        if (end - start > 3) {
-            std::string code = content.substr(start, end - start);
+        /* Reject if too short or too long */
+        size_t code_len = end - start;
+        if (code_len < 10 || code_len > 60) {
+            pos = end;
+            continue;
+        }
 
-            /* Quick validation: decode and check version byte */
-            std::vector<uint8_t> decoded;
-            decoded.reserve((end - start) / 4 * 3);
-            int buf = 0, bits = -8;
-            for (size_t i = 3; i < code.size(); i++) {
-                char c = code[i];
-                int v = -1;
-                if (c >= 'A' && c <= 'Z') v = c - 'A';
-                else if (c >= 'a' && c <= 'z') v = c - 'a' + 26;
-                else if (c >= '0' && c <= '9') v = c - '0' + 52;
-                else if (c == '-' || c == '+') v = 62;
-                else if (c == '_' || c == '/') v = 63;
-                if (v < 0) continue;
-                buf = (buf << 6) | v;
-                bits += 6;
-                if (bits >= 0) {
-                    decoded.push_back((uint8_t)(buf >> bits));
-                    bits -= 8;
-                }
+        std::string code = content.substr(start, code_len);
+
+        /* Quick validation: decode and check version byte */
+        std::vector<uint8_t> decoded;
+        decoded.reserve((code_len) / 4 * 3);
+        int buf = 0, bits = -8;
+        for (size_t i = 3; i < code.size(); i++) {
+            char c = code[i];
+            int v = -1;
+            if (c >= 'A' && c <= 'Z') v = c - 'A';
+            else if (c >= 'a' && c <= 'z') v = c - 'a' + 26;
+            else if (c >= '0' && c <= '9') v = c - '0' + 52;
+            else if (c == '-' || c == '+') v = 62;
+            else if (c == '_' || c == '/') v = 63;
+            if (v < 0) continue;
+            buf = (buf << 6) | v;
+            bits += 6;
+            if (bits >= 0) {
+                decoded.push_back((uint8_t)(buf >> bits));
+                bits -= 8;
             }
+        }
 
-            /* Validate: version byte must be 1 or 2, profession 1-9 */
-            if (decoded.size() >= 1) {
-                uint8_t version = decoded[0] >> 4;
-                uint8_t prof = decoded[0] & 0x0F;
-                if ((version == 1 || version == 2) && prof >= 1 && prof <= 9) {
-                    /* Valid share code detected! */
-                    std::string prof_name = GetProfessionName(prof);
+        /* Validate: version byte must be 1 or 2, profession 1-9 */
+        if (decoded.size() >= 1) {
+            uint8_t version = decoded[0] >> 4;
+            uint8_t prof = decoded[0] & 0x0F;
+            if ((version == 1 || version == 2) && prof >= 1 && prof <= 9) {
+                /* Valid share code detected! */
+                std::string prof_name = GetProfessionName(prof);
 
-                    /* TODO: Extract elite spec name from decoded data if possible */
-                    std::string spec_name;
+                /* TODO: Extract elite spec name from decoded data if possible */
+                std::string spec_name;
 
-                    {
-                        std::lock_guard<std::mutex> lock(g_ChatBuildToastMutex);
-                        g_ChatBuildToast.active = true;
-                        g_ChatBuildToast.sender = msg->CharacterName ? msg->CharacterName : "Unknown";
-                        g_ChatBuildToast.share_code = code;
-                        g_ChatBuildToast.profession = prof_name;
-                        g_ChatBuildToast.spec_name = spec_name;
-                        g_ChatBuildToast.channel = GetChannelName(msg->ChannelType);
-                    }
-
-                    Log(LOGL_DEBUG, ("Chat build detected from " + g_ChatBuildToast.sender + ": " + prof_name).c_str());
-                    break; /* Found one, stop scanning */
+                {
+                    std::lock_guard<std::mutex> lock(g_ChatBuildToastMutex);
+                    g_ChatBuildToast.active = true;
+                    g_ChatBuildToast.sender = msg->CharacterName ? msg->CharacterName : "Unknown";
+                    g_ChatBuildToast.share_code = code;
+                    g_ChatBuildToast.profession = prof_name;
+                    g_ChatBuildToast.spec_name = spec_name;
+                    g_ChatBuildToast.channel = GetChannelName(msg->ChannelType);
                 }
+
+                Log(LOGL_DEBUG, ("Chat build detected from " + g_ChatBuildToast.sender + ": " + prof_name).c_str());
+                break; /* Found one, stop scanning */
             }
         }
         pos = end;
