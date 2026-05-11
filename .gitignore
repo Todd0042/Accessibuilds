@@ -28,6 +28,9 @@ scraper/.scraper_cache/
 *.swp
 *.swo
 
+# AI/Assistant configs (local only)
+.claude/
+
 # OS
 .DS_Store
 Thumbs.db
