@@ -23,6 +23,7 @@ const std::string& GetSpecIcon (uint32_t id);
 const std::string& GetTraitIcon(uint32_t id);
 const std::string& GetSkillIcon(uint32_t id);
 const std::string& GetItemIcon (uint32_t id);
+const std::string& GetPetIcon (uint32_t id);
 
 /* Returns the GW2 item sub-type string (e.g. "Greatsword", "LongBow", "Coat").
  * Triggers an async /v2/items fetch on first call; returns "" until resolved. */

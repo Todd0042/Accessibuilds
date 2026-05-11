@@ -1,6 +1,7 @@
 #pragma once
 #include "../shared.h"
 #include "../api/gw2names.h"
+#include "../api/pet_names.h"
 #include "../build/types.h"
 #include "icon_cache.h"
 #include <imgui.h>
@@ -69,7 +70,33 @@ static inline void TraitIcon(uint32_t id, float sz = 38.f, bool ok = true)
     DrawBox(sz, t ? t->Resource : nullptr, col, GW2Names::GetTrait(id).c_str());
 }
 
-/* Blue border — used to show reference traits when the wrong spec is equipped */
+/* GW2 pet icons have excess padding — zoom in 2x with UV cropping */
+static inline void PetIcon(uint32_t id, float sz = 40.f, bool ok = true)
+{
+    if (!id) { ImGui::Dummy(ImVec2(sz, sz)); return; }
+    char key[32]; snprintf(key, sizeof(key), "BC_PET_%u", id);
+    const std::string& icon_path = GW2Names::GetPetIcon(id);
+    Texture_t* t = icon_path.empty()
+        ? IconCache::GetAddonTexture("icons/pet.png")
+        : Tex(key, icon_path.c_str());
+    ImU32 col = ok ? IM_COL32(60, 220, 60, 230) : IM_COL32(220, 60, 60, 230);
+    ImVec2 pos = ImGui::GetCursorScreenPos();
+    ImVec2 end = ImVec2(pos.x + sz, pos.y + sz);
+    auto* draw = ImGui::GetWindowDrawList();
+    if (t && t->Resource) {
+        ImGui::Image(static_cast<ImTextureID>(t->Resource), ImVec2(sz, sz),
+                     ImVec2(0.25f, 0.25f), ImVec2(0.75f, 0.75f));
+    } else {
+        ImGui::Dummy(ImVec2(sz, sz));
+        draw->AddRectFilled(pos, end, IM_COL32(30, 30, 30, 220));
+        draw->AddText(ImVec2(pos.x + sz / 2 - 4, pos.y + sz / 2 - 7),
+                      IM_COL32(100, 100, 100, 255), "...");
+    }
+    draw->AddRect(pos, end, col, 2.0f, 0, 2.0f);
+    if (const char* pname = OfflineData::GetPetName(id); pname && pname[0] && ImGui::IsItemHovered())
+        ImGui::SetTooltip("%s", pname);
+}
+
 static inline void TraitIconRef(uint32_t id, float sz = 38.f)
 {
     if (!id) { ImGui::Dummy(ImVec2(sz, sz)); return; }

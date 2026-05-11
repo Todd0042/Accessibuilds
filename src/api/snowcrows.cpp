@@ -1016,9 +1016,18 @@ bool ParseSingleBuildPage(const std::string& url, GW2::SCBuild& out)
     }
     j["traits"] = traits;
 
-    /* Extract skills */
-    size_t sk_pos = html.find("data-armory-embed=\"skills\"");
-    if (sk_pos != std::string::npos) {
+    /* Extract skills — skip tooltip-only embeds (data-armory-size) */
+    size_t sk_pos = 0;
+    for (;;) {
+        sk_pos = html.find("data-armory-embed=\"skills\"", sk_pos);
+        if (sk_pos == std::string::npos) break;
+        /* Skip if this is a tooltip-only embed */
+        size_t tag_end = html.find('>', sk_pos);
+        if (tag_end != std::string::npos &&
+            html.find("data-armory-size", sk_pos) < tag_end) {
+            sk_pos = tag_end + 1;
+            continue;
+        }
         std::string sid_str = FindHTMLAttr(html, "data-armory-ids", sk_pos);
         auto sids = ParseIntList(sid_str);
         if (sids.size() >= 5) {
@@ -1030,6 +1039,7 @@ bool ParseSingleBuildPage(const std::string& url, GW2::SCBuild& out)
             skills["elite"] = sids[4];
             j["skills"] = skills;
         }
+        break;
     }
 
     /* Extract gear items (data-armory-embed="items" excluding size/inline-text) */

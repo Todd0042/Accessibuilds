@@ -37,7 +37,7 @@ struct TypeCache {
 };
 
 static std::mutex        s_mutex;
-static TypeCache         s_specs, s_traits, s_skills, s_items, s_itemstats;
+static TypeCache         s_specs, s_traits, s_skills, s_items, s_itemstats, s_pets;
 static std::atomic<bool> s_fetching{false};
 static std::thread       s_fetch_thread;
 static uint64_t          s_cache_build = 0;
@@ -60,7 +60,7 @@ static std::string SerializeCache()
     struct Snapshot {
         std::map<uint32_t, std::string> names, icons;
     };
-    Snapshot sn_specs, sn_traits, sn_skills, sn_items, sn_itemstats;
+    Snapshot sn_specs, sn_traits, sn_skills, sn_items, sn_itemstats, sn_pets;
     std::map<uint32_t, uint32_t> snap_stat_id;
     std::map<uint32_t, std::string> snap_detail_type;
 
@@ -71,6 +71,7 @@ static std::string SerializeCache()
         sn_skills.names  = s_skills.names;  sn_skills.icons  = s_skills.icons;
         sn_items.names   = s_items.names;   sn_items.icons   = s_items.icons;
         sn_itemstats.names = s_itemstats.names; sn_itemstats.icons = s_itemstats.icons;
+        sn_pets.names    = s_pets.names;    sn_pets.icons    = s_pets.icons;
         snap_stat_id     = s_item_stat_id;
         snap_detail_type = s_item_detail_type;
     }
@@ -96,6 +97,7 @@ static std::string SerializeCache()
     j["skills"]    = tc_to_json(sn_skills);
     j["items"]     = tc_to_json(sn_items);
     j["itemstats"] = tc_to_json(sn_itemstats);
+    j["pets"]      = tc_to_json(sn_pets);
 
     json stat_ids = json::object();
     for (auto& kv : snap_stat_id)
@@ -283,6 +285,12 @@ const std::string& GetTraitIcon(uint32_t id) { return LookupIcon(s_traits, id); 
 const std::string& GetSkillIcon(uint32_t id) { return LookupIcon(s_skills, id); }
 const std::string& GetItemIcon (uint32_t id) { return LookupIcon(s_items,  id); }
 
+const std::string& GetPetIcon(uint32_t id)
+{
+    if (g_OfflineMode) return S_EMPTY;
+    return LookupIcon(s_pets, id);
+}
+
 void Init(uint64_t gw2_build)
 {
     /* Initialize offline spec names from embedded data */
@@ -315,6 +323,7 @@ void Init(uint64_t gw2_build)
         if (j.contains("skills"))    json_to_tc(j["skills"],    s_skills);
         if (j.contains("items"))     json_to_tc(j["items"],     s_items);
         if (j.contains("itemstats")) json_to_tc(j["itemstats"], s_itemstats);
+        if (j.contains("pets"))      json_to_tc(j["pets"],      s_pets);
 
         if (j.contains("item_stat_id"))
             for (auto it = j["item_stat_id"].begin(); it != j["item_stat_id"].end(); ++it)
@@ -330,7 +339,7 @@ void FlushPending()
 {
     if (s_fetching.exchange(true)) return;
 
-    std::vector<uint32_t> specs, traits, skills, items, itemstats, item_stat_ids;
+    std::vector<uint32_t> specs, traits, skills, items, itemstats, item_stat_ids, pets;
     {
         std::lock_guard<std::mutex> lk(s_mutex);
         specs.assign        (s_specs.pending.begin(),       s_specs.pending.end());
@@ -339,22 +348,24 @@ void FlushPending()
         items.assign        (s_items.pending.begin(),       s_items.pending.end());
         itemstats.assign    (s_itemstats.pending.begin(),   s_itemstats.pending.end());
         item_stat_ids.assign(s_item_stat_pending.begin(),   s_item_stat_pending.end());
+        pets.assign         (s_pets.pending.begin(),        s_pets.pending.end());
         s_specs.pending.clear();
         s_traits.pending.clear();
         s_skills.pending.clear();
         s_items.pending.clear();
         s_itemstats.pending.clear();
         s_item_stat_pending.clear();
+        s_pets.pending.clear();
     }
 
     if (specs.empty() && traits.empty() && skills.empty() &&
-        items.empty() && itemstats.empty() && item_stat_ids.empty()) {
+        items.empty() && itemstats.empty() && item_stat_ids.empty() && pets.empty()) {
         s_fetching = false;
         return;
     }
 
     if (s_fetch_thread.joinable()) s_fetch_thread.join();
-    s_fetch_thread = std::thread([specs, traits, skills, items, itemstats, item_stat_ids]() {
+    s_fetch_thread = std::thread([specs, traits, skills, items, itemstats, item_stat_ids, pets]() {
         auto trim = [](const std::vector<uint32_t>& v) {
             return v.size() > 200
                 ? std::vector<uint32_t>(v.begin(), v.begin() + 200)
@@ -365,6 +376,7 @@ void FlushPending()
         FetchBatch(L"/v2/skills",          trim(skills),    s_skills);
         FetchBatch(L"/v2/items",           trim(items),     s_items);
         FetchBatch(L"/v2/itemstats",       trim(itemstats), s_itemstats);
+        FetchBatch(L"/v2/pets",            trim(pets),      s_pets);
 
         /* Resolve fixed-stat item → stat-set ID via /v2/items details.infix_upgrade.id */
         if (!item_stat_ids.empty()) {

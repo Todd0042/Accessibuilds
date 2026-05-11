@@ -40,6 +40,8 @@ if version_file.exists():
     version = int(version_file.read_text().strip())
 else:
     version = 1
+version += 1
+version_file.write_text(str(version))
 
 def embed_file(src: str, var_name: str) -> str:
     raw = subprocess.check_output(["xxd", "-i", src]).decode()

@@ -317,10 +317,7 @@ static void RenderCompactLayout(const GW2::PlayerBuild& player,
                     if (sc.pets[i] != 0) {
                         const char* pet_name = OfflineData::GetPetName(sc.pets[i]);
                         ImGui::BeginGroup();
-                        /* Use generic pet icon since pet IDs aren't skill IDs */
-                        Texture_t* pet_icon = IconCache::GetAddonTexture("icons/pet.png");
-                        IconRenderer::DrawBox(ICON_SZ_SKILL, pet_icon ? pet_icon->Resource : nullptr,
-                                IM_COL32(60, 220, 60, 230), pet_name);
+                        IconRenderer::PetIcon(sc.pets[i], ICON_SZ_SKILL, true);
                         ImGui::TextDisabled("Pet%d", i + 1);
                         ImGui::TextColored(COL_NEUTRAL, "%s", pet_name);
                         ImGui::EndGroup();
@@ -875,11 +872,7 @@ static void RenderTraitGridLayout(const GW2::PlayerBuild& player,
                     if (player.pets[pj] == sc.pets[i]) ok = true;
                 const char* pname = OfflineData::GetPetName(sc.pets[i]);
                 ImGui::BeginGroup();
-                Texture_t* pet_icon = IconCache::GetAddonTexture("icons/pet.png");
-                IconRenderer::DrawBox(ICON_SZ_SKILL,
-                    pet_icon ? pet_icon->Resource : nullptr,
-                    ok ? IM_COL32(60, 220, 60, 230) : IM_COL32(220, 60, 60, 230),
-                    pname);
+                IconRenderer::PetIcon(sc.pets[i], ICON_SZ_SKILL, ok);
                 ImGui::TextDisabled("Pet%d", i + 1);
                 ImGui::TextColored(COL_NEUTRAL, "%s", pname);
                 ImGui::EndGroup();

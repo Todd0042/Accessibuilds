@@ -149,6 +149,19 @@ struct Gw2SkillsResult {
 static Gw2SkillsResult s_gw2skills_result;
 static std::chrono::steady_clock::time_point s_gw2skills_done_time{};
 
+/* ── Snow Crows URL import ── */
+static char s_sc_url[512] = {};
+enum class SCImportState { Idle, Fetching, Done, Error };
+static std::atomic<SCImportState> s_sc_import_state{SCImportState::Idle};
+static std::thread s_sc_import_thread;
+static std::mutex s_sc_import_mutex;
+struct SCImportResult {
+    GW2::SCBuild build;
+    std::string error;
+};
+static SCImportResult s_sc_import_result;
+static std::chrono::steady_clock::time_point s_sc_import_done_time{};
+
 /* ── Editor DB cache (gw2skills.net item database) ── */
 static std::mutex        s_editor_db_mutex;
 static nlohmann::json    s_editor_db;
@@ -1207,6 +1220,18 @@ static void BuildToForm(const GW2::SCBuild& b)
                 strncpy(s_upgrade_name[r], stripped.c_str(), sizeof(s_upgrade_name[r]) - 1);
             }
             s_weapon_type[r] = (int)gi.weapon_type;
+            /* 2H weapons store second sigil in off-hand slot (slot 13 for A1, 15 for B1) */
+            if (gi.upgrade2_id && (r == 12 || r == 14)) {
+                int r2 = r + 1;
+                bool found = false;
+                for (const auto& e : ItemLookup::GetItemNames())
+                    if (ItemLookup::FindItemID(e.c_str()) == gi.upgrade2_id) {
+                        std::string stripped = StripUpgradePrefix(e, r2);
+                        strncpy(s_upgrade_name[r2], stripped.c_str(), sizeof(s_upgrade_name[r2]) - 1);
+                        found = true; break;
+                    }
+                if (!found) snprintf(s_upgrade_name[r2], sizeof(s_upgrade_name[r2]), "%u", gi.upgrade2_id);
+            }
             break;
         }
     }
@@ -1241,6 +1266,41 @@ static void ResolveAll()
         s_stat_resolve[r]    = ResolveStat(s_stat_name[r]);
         s_upgrade_resolve[r] = ResolveUpgrade(s_upgrade_name[r], s_upgrade_id_override[r]);
     }
+}
+
+/* ── Snow Crows URL import ── */
+static void StartSCImport(const std::string& url)
+{
+    if (s_sc_import_state.load() == SCImportState::Fetching) return;
+    s_sc_import_state = SCImportState::Fetching;
+    if (s_sc_import_thread.joinable()) s_sc_import_thread.join();
+    s_sc_import_thread = std::thread([url]() {
+        SCImportResult result;
+        result.build.name = "From Snow Crows";
+        if (!SnowCrows::ParseSingleBuildPage(url, result.build)) {
+            result.error = "Failed to parse Snow Crows build page";
+            std::lock_guard<std::mutex> lk(s_sc_import_mutex);
+            s_sc_import_result = std::move(result);
+            s_sc_import_state = SCImportState::Error;
+            return;
+        }
+        std::lock_guard<std::mutex> lk(s_sc_import_mutex);
+        s_sc_import_result = std::move(result);
+        s_sc_import_state = SCImportState::Done;
+    });
+}
+
+static void ApplySCImportResult()
+{
+    if (s_sc_import_state.load() != SCImportState::Done) return;
+    SCImportResult res;
+    {
+        std::lock_guard<std::mutex> lk(s_sc_import_mutex);
+        res = s_sc_import_result;
+        s_sc_import_state = SCImportState::Idle;
+    }
+    BuildToForm(res.build);
+    s_sc_import_done_time = std::chrono::steady_clock::now();
 }
 
 static GW2::SCBuild FormToBuild()
@@ -1376,6 +1436,8 @@ void Render()
 
     /* Apply gw2skills.net import result if done */
     ApplyGw2SkillsResult();
+    /* Apply Snow Crows URL import result if done */
+    ApplySCImportResult();
 
     if (s_spec_idx != s_prev_spec_idx) {
         s_prev_spec_idx = s_spec_idx;
@@ -1468,157 +1530,190 @@ void Render()
     ImGui::SetNextItemWidth(S(90));
     ImGui::InputDouble("##bench", &s_benchmark_dps, 0.0, 0.0, "%.0f");
 
-    /* ── Import sections (Todd.5124 only) ── */
+    /* ── Import from Snow Crows ── */
     {
-        char acct[64] = {};
-        { std::lock_guard<std::mutex> lk(g_AccountNameMutex); strncpy(acct, g_AccountName, 63); }
-        if (strcmp(acct, "Todd.5124") == 0) {
-            ImGui::Text("SC builds: ");
-            ImGui::SameLine();
-            ImGui::SetNextItemWidth(S(90));
-            if (ImGui::BeginCombo("##sc_prof_filter", PROF_FILTER_NAMES[s_sc_filter_prof])) {
-                for (int i = 0; i < 10; i++)
-                    if (ImGui::Selectable(PROF_FILTER_NAMES[i], s_sc_filter_prof == i))
-                        s_sc_filter_prof = i;
-                ImGui::EndCombo();
-            }
-            ImGui::SameLine();
-            ImGui::SetNextItemWidth(S(90));
-            if (ImGui::BeginCombo("##sc_type_filter", TYPE_FILTER_NAMES[s_sc_filter_type])) {
-                for (int i = 0; i < 7; i++)
-                    if (ImGui::Selectable(TYPE_FILTER_NAMES[i], s_sc_filter_type == i))
-                        s_sc_filter_type = i;
-                ImGui::EndCombo();
-            }
-            ImGui::SameLine();
-            ImGui::SetNextItemWidth(S(130));
-            ImGui::InputTextWithHint("##sc_search", "Search...", s_sc_search_buf, sizeof(s_sc_search_buf));
-            ImGui::SameLine();
-            ImGui::Checkbox("Legacy##sc_legacy_filter", &s_sc_show_legacy);
-            if (ImGui::IsItemHovered()) ImGui::SetTooltip("Show legacy builds");
-            ImGui::SameLine();
+        ImGui::Text("SC builds: ");
+        ImGui::SameLine();
+        ImGui::SetNextItemWidth(S(90));
+        if (ImGui::BeginCombo("##sc_prof_filter", PROF_FILTER_NAMES[s_sc_filter_prof])) {
+            for (int i = 0; i < 10; i++)
+                if (ImGui::Selectable(PROF_FILTER_NAMES[i], s_sc_filter_prof == i))
+                    s_sc_filter_prof = i;
+            ImGui::EndCombo();
+        }
+        ImGui::SameLine();
+        ImGui::SetNextItemWidth(S(90));
+        if (ImGui::BeginCombo("##sc_type_filter", TYPE_FILTER_NAMES[s_sc_filter_type])) {
+            for (int i = 0; i < 7; i++)
+                if (ImGui::Selectable(TYPE_FILTER_NAMES[i], s_sc_filter_type == i))
+                    s_sc_filter_type = i;
+            ImGui::EndCombo();
+        }
+        ImGui::SameLine();
+        ImGui::SetNextItemWidth(S(130));
+        ImGui::InputTextWithHint("##sc_search", "Search...", s_sc_search_buf, sizeof(s_sc_search_buf));
+        ImGui::SameLine();
+        ImGui::Checkbox("Legacy##sc_legacy_filter", &s_sc_show_legacy);
+        if (ImGui::IsItemHovered()) ImGui::SetTooltip("Show legacy builds");
+        ImGui::SameLine();
 
-            {
-                GW2::Profession sc_fprof = s_sc_filter_prof > 0
-                    ? static_cast<GW2::Profession>(s_sc_filter_prof) : GW2::Profession::None;
-                GW2::BuildType sc_ftype = s_sc_filter_type > 0
-                    ? static_cast<GW2::BuildType>(s_sc_filter_type) : GW2::BuildType::Unknown;
-                auto sc_filtered = SnowCrows::FilterBuilds(s_sc_builds, sc_fprof,
-                                                           GW2::EliteSpec::None, sc_ftype);
-                sc_filtered.erase(std::remove_if(sc_filtered.begin(), sc_filtered.end(),
-                    [](const GW2::SCBuild* b) { return b->is_legacy; }),
-                    sc_filtered.end());
+        {
+            GW2::Profession sc_fprof = s_sc_filter_prof > 0
+                ? static_cast<GW2::Profession>(s_sc_filter_prof) : GW2::Profession::None;
+            GW2::BuildType sc_ftype = s_sc_filter_type > 0
+                ? static_cast<GW2::BuildType>(s_sc_filter_type) : GW2::BuildType::Unknown;
+            auto sc_filtered = SnowCrows::FilterBuilds(s_sc_builds, sc_fprof,
+                                                       GW2::EliteSpec::None, sc_ftype);
+            sc_filtered.erase(std::remove_if(sc_filtered.begin(), sc_filtered.end(),
+                [](const GW2::SCBuild* b) { return b->is_legacy; }),
+                sc_filtered.end());
 
-                std::vector<const GW2::SCBuild*> sc_legacy;
-                if (s_sc_show_legacy) {
-                    for (const auto& b : s_sc_builds) {
-                        if (!b.is_legacy) continue;
-                        if (sc_fprof != GW2::Profession::None && b.profession != sc_fprof) continue;
-                        if (sc_ftype != GW2::BuildType::Unknown && b.build_type != sc_ftype) continue;
-                        sc_legacy.push_back(&b);
+            std::vector<const GW2::SCBuild*> sc_legacy;
+            if (s_sc_show_legacy) {
+                for (const auto& b : s_sc_builds) {
+                    if (!b.is_legacy) continue;
+                    if (sc_fprof != GW2::Profession::None && b.profession != sc_fprof) continue;
+                    if (sc_ftype != GW2::BuildType::Unknown && b.build_type != sc_ftype) continue;
+                    sc_legacy.push_back(&b);
+                }
+            }
+
+            if (s_sc_search_buf[0]) {
+                auto lc_fn = [](const std::string& s) {
+                    std::string r = s;
+                    for (char& c : r) c = (char)tolower((unsigned char)c);
+                    return r;
+                };
+                std::string q = lc_fn(s_sc_search_buf);
+                auto text_match = [&](const GW2::SCBuild* b) {
+                    std::string hay = lc_fn(BuildDisplayLabel(b->id, b->name,
+                                            PROF_NAMES[(int)b->profession]));
+                    return hay.find(q) == std::string::npos;
+                };
+                sc_filtered.erase(std::remove_if(sc_filtered.begin(), sc_filtered.end(), text_match),
+                                   sc_filtered.end());
+                sc_legacy.erase(std::remove_if(sc_legacy.begin(), sc_legacy.end(), text_match),
+                                 sc_legacy.end());
+            }
+
+            std::string sc_preview = "-- Select SC Build --";
+            if (s_sc_list_idx >= 0 && s_sc_list_idx < (int)s_sc_builds.size()) {
+                const auto& b = s_sc_builds[s_sc_list_idx];
+                std::string disp = BuildDisplayLabel(b.id, b.name, PROF_NAMES[(int)b.profession]);
+                sc_preview = b.is_legacy ? "[Legacy] " + disp : disp;
+            }
+            ImGui::SetNextItemWidth(S(260));
+            if (ImGui::BeginCombo("##sc_build_list", sc_preview.c_str())) {
+                if (ImGui::Selectable("-- None --", s_sc_list_idx == -1)) {
+                    s_sc_list_idx = -1; ClearForm();
+                }
+                for (const auto* bp : sc_filtered) {
+                    int idx = (int)(bp - s_sc_builds.data());
+                    bool sel = (s_sc_list_idx == idx);
+                    std::string disp = BuildDisplayLabel(bp->id, bp->name,
+                                                         PROF_NAMES[(int)bp->profession]);
+                    if (ImGui::Selectable(disp.c_str(), sel)) {
+                        s_sc_list_idx = idx; s_list_idx = -1;
+                        BuildToForm(s_sc_builds[idx]);
                     }
                 }
-
-                if (s_sc_search_buf[0]) {
-                    auto lc_fn = [](const std::string& s) {
-                        std::string r = s;
-                        for (char& c : r) c = (char)tolower((unsigned char)c);
-                        return r;
-                    };
-                    std::string q = lc_fn(s_sc_search_buf);
-                    auto text_match = [&](const GW2::SCBuild* b) {
-                        std::string hay = lc_fn(BuildDisplayLabel(b->id, b->name,
-                                                PROF_NAMES[(int)b->profession]));
-                        return hay.find(q) == std::string::npos;
-                    };
-                    sc_filtered.erase(std::remove_if(sc_filtered.begin(), sc_filtered.end(), text_match),
-                                       sc_filtered.end());
-                    sc_legacy.erase(std::remove_if(sc_legacy.begin(), sc_legacy.end(), text_match),
-                                     sc_legacy.end());
-                }
-
-                std::string sc_preview = "-- Select SC Build --";
-                if (s_sc_list_idx >= 0 && s_sc_list_idx < (int)s_sc_builds.size()) {
-                    const auto& b = s_sc_builds[s_sc_list_idx];
-                    std::string disp = BuildDisplayLabel(b.id, b.name, PROF_NAMES[(int)b.profession]);
-                    sc_preview = b.is_legacy ? "[Legacy] " + disp : disp;
-                }
-                ImGui::SetNextItemWidth(S(260));
-                if (ImGui::BeginCombo("##sc_build_list", sc_preview.c_str())) {
-                    if (ImGui::Selectable("-- None --", s_sc_list_idx == -1)) {
-                        s_sc_list_idx = -1; ClearForm();
-                    }
-                    for (const auto* bp : sc_filtered) {
+                if (!sc_legacy.empty()) {
+                    ImGui::Separator();
+                    ImGui::TextDisabled("  Legacy");
+                    for (const auto* bp : sc_legacy) {
                         int idx = (int)(bp - s_sc_builds.data());
                         bool sel = (s_sc_list_idx == idx);
-                        std::string disp = BuildDisplayLabel(bp->id, bp->name,
+                        std::string disp = "[Legacy] " + BuildDisplayLabel(bp->id, bp->name,
                                                              PROF_NAMES[(int)bp->profession]);
                         if (ImGui::Selectable(disp.c_str(), sel)) {
                             s_sc_list_idx = idx; s_list_idx = -1;
                             BuildToForm(s_sc_builds[idx]);
                         }
                     }
-                    if (!sc_legacy.empty()) {
-                        ImGui::Separator();
-                        ImGui::TextDisabled("  Legacy");
-                        for (const auto* bp : sc_legacy) {
-                            int idx = (int)(bp - s_sc_builds.data());
-                            bool sel = (s_sc_list_idx == idx);
-                            std::string disp = "[Legacy] " + BuildDisplayLabel(bp->id, bp->name,
-                                                                 PROF_NAMES[(int)bp->profession]);
-                            if (ImGui::Selectable(disp.c_str(), sel)) {
-                                s_sc_list_idx = idx; s_list_idx = -1;
-                                BuildToForm(s_sc_builds[idx]);
-                            }
-                        }
-                    }
-                    ImGui::EndCombo();
                 }
-                ImGui::SameLine();
-                if (ImGui::Button("Use as Reference##sc") && s_sc_list_idx >= 0
-                        && s_sc_list_idx < (int)s_sc_builds.size()) {
-                    std::lock_guard<std::mutex> lk(g_SCBuildMutex);
-                    g_SCBuild = s_sc_builds[s_sc_list_idx]; g_SCBuildLoaded = true;
-                }
-                ImGui::SameLine();
-                int total_shown = (int)sc_filtered.size() + (int)sc_legacy.size();
-                ImGui::TextDisabled("(%d builds)", total_shown);
+                ImGui::EndCombo();
             }
+            ImGui::SameLine();
+            if (ImGui::Button("Use as Reference##sc") && s_sc_list_idx >= 0
+                    && s_sc_list_idx < (int)s_sc_builds.size()) {
+                std::lock_guard<std::mutex> lk(g_SCBuildMutex);
+                g_SCBuild = s_sc_builds[s_sc_list_idx]; g_SCBuildLoaded = true;
+            }
+            ImGui::SameLine();
+            int total_shown = (int)sc_filtered.size() + (int)sc_legacy.size();
+            ImGui::TextDisabled("(%d builds)", total_shown);
+        }
+    }
 
-            /* ── gw2skills.net import ── */
-            ImGui::Spacing();
-            ImGui::TextDisabled("Import from gw2skills.net:");
-            ImGui::SameLine();
-            ImGui::SetNextItemWidth(S(380));
-            ImGui::InputText("##gw2skills", s_gw2skills_url, sizeof(s_gw2skills_url));
-            ImGui::SameLine();
-            bool is_fetching = (s_gw2skills_state.load() == Gw2SkillsState::Fetching);
-            if (is_fetching) {
-                ImGui::PushStyleVar(ImGuiStyleVar_Alpha, 0.4f);
-                ImGui::Button("Importing...");
-                ImGui::PopStyleVar();
-            } else if (ImGui::Button("Import")) {
-                if (s_gw2skills_url[0]) {
-                    s_gw2skills_state = Gw2SkillsState::Idle;
-                    StartGw2SkillsImport(s_gw2skills_url);
-                }
+    /* ── Import from Snow Crows URL ── */
+    ImGui::Spacing();
+    ImGui::TextDisabled("Import from Snow Crows URL:");
+    ImGui::SameLine();
+    ImGui::SetNextItemWidth(S(380));
+    ImGui::InputText("##sc_url_import", s_sc_url, sizeof(s_sc_url));
+    ImGui::SameLine();
+    {
+        bool is_fetching = (s_sc_import_state.load() == SCImportState::Fetching);
+        if (is_fetching) {
+            ImGui::PushStyleVar(ImGuiStyleVar_Alpha, 0.4f);
+            ImGui::Button("Importing...");
+            ImGui::PopStyleVar();
+        } else if (ImGui::Button("Import##sc_url")) {
+            if (s_sc_url[0]) {
+                s_sc_import_state = SCImportState::Idle;
+                StartSCImport(s_sc_url);
             }
-            if (ImGui::IsItemHovered()) ImGui::SetTooltip("Paste a gw2skills.net URL and click to import traits + skills");
-            /* Show error state */
-            if (s_gw2skills_state.load() == Gw2SkillsState::Error) {
-                std::string err;
-                {
-                    std::lock_guard<std::mutex> lk(s_gw2skills_mutex);
-                    err = s_gw2skills_result.error;
-                }
-                if (!err.empty()) {
-                    ImGui::SameLine();
-                    ImGui::TextColored(ImVec4(1.f, 0.4f, 0.4f, 1.f), "Error: %s", err.c_str());
-                }
-                if (ImGui::Button("Dismiss Error")) {
-                    s_gw2skills_state = Gw2SkillsState::Idle;
-                }
-            }
+        }
+    }
+    if (ImGui::IsItemHovered()) ImGui::SetTooltip("Paste a Snow Crows build page URL and click to import");
+    /* Show error state */
+    if (s_sc_import_state.load() == SCImportState::Error) {
+        std::string err;
+        {
+            std::lock_guard<std::mutex> lk(s_sc_import_mutex);
+            err = s_sc_import_result.error;
+        }
+        if (!err.empty()) {
+            ImGui::SameLine();
+            ImGui::TextColored(ImVec4(1.f, 0.4f, 0.4f, 1.f), "Error: %s", err.c_str());
+        }
+        if (ImGui::Button("Dismiss Error##sc_url")) {
+            s_sc_import_state = SCImportState::Idle;
+        }
+    }
+
+    /* ── Import from gw2skills.net ── */
+    ImGui::Spacing();
+    ImGui::TextDisabled("Import from gw2skills.net:");
+    ImGui::SameLine();
+    ImGui::SetNextItemWidth(S(380));
+    ImGui::InputText("##gw2skills", s_gw2skills_url, sizeof(s_gw2skills_url));
+    ImGui::SameLine();
+    bool is_fetching = (s_gw2skills_state.load() == Gw2SkillsState::Fetching);
+    if (is_fetching) {
+        ImGui::PushStyleVar(ImGuiStyleVar_Alpha, 0.4f);
+        ImGui::Button("Importing...");
+        ImGui::PopStyleVar();
+    } else if (ImGui::Button("Import")) {
+        if (s_gw2skills_url[0]) {
+            s_gw2skills_state = Gw2SkillsState::Idle;
+            StartGw2SkillsImport(s_gw2skills_url);
+        }
+    }
+    if (ImGui::IsItemHovered()) ImGui::SetTooltip("Paste a gw2skills.net URL and click to import traits + skills");
+    /* Show error state */
+    if (s_gw2skills_state.load() == Gw2SkillsState::Error) {
+        std::string err;
+        {
+            std::lock_guard<std::mutex> lk(s_gw2skills_mutex);
+            err = s_gw2skills_result.error;
+        }
+        if (!err.empty()) {
+            ImGui::SameLine();
+            ImGui::TextColored(ImVec4(1.f, 0.4f, 0.4f, 1.f), "Error: %s", err.c_str());
+        }
+        if (ImGui::Button("Dismiss Error")) {
+            s_gw2skills_state = Gw2SkillsState::Idle;
         }
     }
 
@@ -2006,6 +2101,10 @@ void Render()
     if (std::chrono::steady_clock::now() - s_gw2skills_done_time < std::chrono::seconds(3)) {
         ImGui::SameLine();
         ImGui::TextColored(ImVec4(0.3f, 1.f, 0.3f, 1.f), "Imported from gw2skills.net!");
+    }
+    if (std::chrono::steady_clock::now() - s_sc_import_done_time < std::chrono::seconds(3)) {
+        ImGui::SameLine();
+        ImGui::TextColored(ImVec4(0.3f, 1.f, 0.3f, 1.f), "Imported from Snow Crows!");
     }
     int ok = 0, fail = 0;
     for (int r = 0; r < NUM_SLOTS; r++) if (s_stat_name[r][0]) {
