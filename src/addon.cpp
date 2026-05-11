@@ -18,24 +18,74 @@
 #include "share/share_code.h"
 #include "ui/build_editor.h"
 
-/* Chat event constant from "Events: Chat" addon */
-#define EV_UNOFFICIAL_EXTRAS_CHAT_MESSAGE "EV_UNOFFICIAL_EXTRAS_CHAT_MESSAGE"
+/* Chat event constant from "Events: Chat" addon (jsantorek/GW2-Chat) */
+#define EV_CHAT_MESSAGE "EV_CHAT:Message"
+
+/* Struct definitions matching the "Events: Chat" addon's event payload */
+typedef char* ChatStringUTF8;
+
+typedef struct {
+    uint32_t Data1;
+    uint16_t Data2;
+    uint16_t Data3;
+    uint8_t  Data4[8];
+} ChatGUID;
+
+typedef struct {
+    uint32_t Low;
+    uint32_t High;
+} ChatTimestamp;
+
+enum class ChatMessageType {
+    Error = 0, Guild, GuildMotD, Local, Map, Party, Squad,
+    SquadMessage, SquadBroadcast, TeamPvP, TeamWvW, Whisper,
+    Emote, EmoteCustom
+};
+
+enum class ChatMetadataFlags {
+    Whisper_IsFromMe = 1 << 4,
+};
+
+struct ChatGenericMessage {
+    ChatGUID       Account;
+    ChatStringUTF8 CharacterName;
+    ChatStringUTF8 AccountName;
+    ChatStringUTF8 Content;
+};
+
+struct EvChatMessage {
+    ChatTimestamp     DateTime;
+    ChatMessageType   Type;
+    ChatMetadataFlags Flags;
+    union {
+        ChatGenericMessage Whisper;
+        ChatGenericMessage Local;
+        ChatGenericMessage Map;
+        ChatGenericMessage Party;
+        ChatGenericMessage Squad;
+        ChatStringUTF8     SquadMessage;
+        ChatGenericMessage TeamPvP;
+        ChatGenericMessage ErrorGeneric;
+    };
+};
 
 /* ── Chat event handler forward declaration ─────────────────────────────── */
 static void OnChatMessage(void* aEventArgs);
 static void RenderChatBuildPopup();
 
 /* ── Chat channel name helper ──────────────────────────────────────────── */
-static const char* GetChannelName(EChannelType type)
+static const char* GetChannelName(ChatMessageType type)
 {
     switch (type) {
-        case EChannelType_Party:   return "Party";
-        case EChannelType_Squad:   return "Squad";
-        case EChannelType_Whisper: return "Whisper";
-        case EChannelType_Guild:   return "Guild";
-        case EChannelType_Map:     return "Map";
-        case EChannelType_Local:   return "Local";
-        default:                   return "Chat";
+        case ChatMessageType::Party:   return "Party";
+        case ChatMessageType::Squad:   return "Squad";
+        case ChatMessageType::Whisper: return "Whisper";
+        case ChatMessageType::Guild:   return "Guild";
+        case ChatMessageType::Map:     return "Map";
+        case ChatMessageType::Local:   return "Local";
+        case ChatMessageType::TeamPvP: return "PvP";
+        case ChatMessageType::TeamWvW: return "WvW";
+        default:                       return "Chat";
     }
 }
 
@@ -50,103 +100,128 @@ static const char* GetProfessionName(uint8_t prof)
 }
 
 /* ── Chat event handler ────────────────────────────────────────────────── */
-static void OnChatMessage(void* aEventArgs)
-{
-    if (!aEventArgs) return;
-    if (!g_ChatBuildDetection) return;
-
-    auto* msg = static_cast<ChatMessageInfo*>(aEventArgs);
-    if (!msg || !msg->Text) return;
-
-    /* Skip our own messages */
-    {
-        std::lock_guard<std::mutex> lock(g_CharacterMutex);
-        if (g_Character.valid && strcmp(msg->CharacterName, g_Character.name) == 0)
-            return;
-    }
-
-    const char* text = msg->Text;
-    
-    /* Quick reject: message must contain "AB:" to be a build code */
-    if (!strstr(text, "AB:")) return;
-
-    std::string content(text);
-
-    /* Scan for AB: share codes */
-    size_t pos = 0;
-    while ((pos = content.find("AB:", pos)) != std::string::npos) {
-        /* Extract the code: AB: followed by base64 chars until whitespace or end */
-        size_t start = pos;
-        size_t end = start + 3;
-        
-        /* Limit code length: valid AB: codes are 45-55 chars total */
-        while (end < content.size() && (end - start) < 60) {
-            char c = content[end];
-            if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z') ||
-                (c >= '0' && c <= '9') || c == '-' || c == '_')
-                end++;
-            else
-                break;
-        }
-
-        /* Reject if too short or too long */
-        size_t code_len = end - start;
-        if (code_len < 10 || code_len > 60) {
-            pos = end;
-            continue;
-        }
-
-        std::string code = content.substr(start, code_len);
-
-        /* Quick validation: decode and check version byte */
-        std::vector<uint8_t> decoded;
-        decoded.reserve((code_len) / 4 * 3);
-        int buf = 0, bits = -8;
-        for (size_t i = 3; i < code.size(); i++) {
-            char c = code[i];
-            int v = -1;
-            if (c >= 'A' && c <= 'Z') v = c - 'A';
-            else if (c >= 'a' && c <= 'z') v = c - 'a' + 26;
-            else if (c >= '0' && c <= '9') v = c - '0' + 52;
-            else if (c == '-' || c == '+') v = 62;
-            else if (c == '_' || c == '/') v = 63;
-            if (v < 0) continue;
-            buf = (buf << 6) | v;
-            bits += 6;
-            if (bits >= 0) {
-                decoded.push_back((uint8_t)(buf >> bits));
-                bits -= 8;
-            }
-        }
-
-        /* Validate: version byte must be 1 or 2, profession 1-9 */
-        if (decoded.size() >= 1) {
-            uint8_t version = decoded[0] >> 4;
-            uint8_t prof = decoded[0] & 0x0F;
-            if ((version == 1 || version == 2) && prof >= 1 && prof <= 9) {
-                /* Valid share code detected! */
-                std::string prof_name = GetProfessionName(prof);
-
-                /* TODO: Extract elite spec name from decoded data if possible */
-                std::string spec_name;
-
-                {
-                    std::lock_guard<std::mutex> lock(g_ChatBuildToastMutex);
-                    g_ChatBuildToast.active = true;
-                    g_ChatBuildToast.sender = msg->CharacterName ? msg->CharacterName : "Unknown";
-                    g_ChatBuildToast.share_code = code;
-                    g_ChatBuildToast.profession = prof_name;
-                    g_ChatBuildToast.spec_name = spec_name;
-                    g_ChatBuildToast.channel = GetChannelName(msg->ChannelType);
-                }
-
-                Log(LOGL_DEBUG, ("Chat build detected from " + g_ChatBuildToast.sender + ": " + prof_name).c_str());
-                break; /* Found one, stop scanning */
-            }
-        }
-        pos = end;
-    }
-}
+// DISABLED - causing game freezes
+// static void OnChatMessage(void* aEventArgs)
+// {
+//     if (!aEventArgs) return;
+//     if (!g_ChatBuildDetection) return;
+// 
+//     auto* msg = static_cast<EvChatMessage*>(aEventArgs);
+// 
+//     /* Only process message types that carry ChatGenericMessage text */
+//     switch (msg->Type) {
+//         case ChatMessageType::Party:
+//         case ChatMessageType::Squad:
+//         case ChatMessageType::Whisper:
+//         case ChatMessageType::Local:
+//         case ChatMessageType::Map:
+//         case ChatMessageType::Guild:
+//         case ChatMessageType::TeamPvP:
+//         case ChatMessageType::TeamWvW:
+//             break;
+//         default:
+//             return;
+//     }
+// 
+//     /* Skip our own outbound whispers */
+//     if (msg->Type == ChatMessageType::Whisper &&
+//         (static_cast<uint32_t>(msg->Flags) & static_cast<uint32_t>(ChatMetadataFlags::Whisper_IsFromMe)) != 0)
+//         return;
+// 
+//     /* All ChatGenericMessage union members share the same address — use Whisper */
+//     auto* gm = &msg->Whisper;
+//     if (!gm || !gm->Content) return;
+// 
+//     /* Skip our own messages (unless testing with detect-own toggle) */
+//     if (!g_ChatBuildDetectOwn && gm->CharacterName) {
+//         std::lock_guard<std::mutex> lock(g_CharacterMutex);
+//         if (g_Character.valid && strcmp(gm->CharacterName, g_Character.name) == 0)
+//             return;
+//     }
+// 
+//     const char* text = gm->Content;
+// 
+//     /* Quick reject: message must contain "AB:" to be a build code */
+//     if (!strstr(text, "AB:")) return;
+// 
+//     std::string content(text);
+// 
+//     /* Scan for AB: share codes */
+//     size_t pos = 0;
+//     while ((pos = content.find("AB:", pos)) != std::string::npos) {
+//         /* Extract the code: AB: followed by base64 chars until whitespace or end */
+//         size_t start = pos;
+//         size_t end = start + 3;
+//         
+//         /* Limit code length: valid AB: codes are 45-55 chars total */
+//         while (end < content.size() && (end - start) < 60) {
+//             char c = content[end];
+//             if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z') ||
+//                 (c >= '0' && c <= '9') || c == '-' || c == '_')
+//                 end++;
+//             else
+//                 break;
+//         }
+// 
+//         /* Reject if too short or too long */
+//         size_t code_len = end - start;
+//         if (code_len < 10 || code_len > 60) {
+//             pos = end;
+//             continue;
+//         }
+// 
+//         std::string code = content.substr(start, code_len);
+// 
+//         /* Quick validation: decode and check version byte */
+//         std::vector<uint8_t> decoded;
+//         decoded.reserve((code_len) / 4 * 3);
+//         int buf = 0, bits = -8;
+//         for (size_t i = 3; i < code.size(); i++) {
+//             char c = code[i];
+//             int v = -1;
+//             if (c >= 'A' && c <= 'Z') v = c - 'A';
+//             else if (c >= 'a' && c <= 'z') v = c - 'a' + 26;
+//             else if (c >= '0' && c <= '9') v = c - '0' + 52;
+//             else if (c == '-' || c == '+') v = 62;
+//             else if (c == '_' || c == '/') v = 63;
+//             if (v < 0) continue;
+//             buf = (buf << 6) | v;
+//             bits += 6;
+//             if (bits >= 0) {
+//                 decoded.push_back((uint8_t)(buf >> bits));
+//                 bits -= 8;
+//             }
+//         }
+// 
+//         /* Validate: version byte must be 1 or 2, profession 1-9 */
+//         /* BitWriter uses LSB-first packing: byte 0 low nibble = version, high = flags; byte 1 low nibble = profession */
+//         if (decoded.size() >= 2) {
+//             uint8_t version = decoded[0] & 0x0F;
+//             uint8_t prof = decoded[1] & 0x0F;
+//             if (version == 3 && prof >= 1 && prof <= 9) {
+//                 /* Valid share code detected! */
+//                 std::string prof_name = GetProfessionName(prof);
+// 
+//                 /* TODO: Extract elite spec name from decoded data if possible */
+//                 std::string spec_name;
+// 
+//                 {
+//                     std::lock_guard<std::mutex> lock(g_ChatBuildToastMutex);
+//                     g_ChatBuildToast.active = true;
+//                     g_ChatBuildToast.sender = gm->CharacterName ? gm->CharacterName : "Unknown";
+//                     g_ChatBuildToast.share_code = code;
+//                     g_ChatBuildToast.profession = prof_name;
+//                     g_ChatBuildToast.spec_name = spec_name;
+//                     g_ChatBuildToast.channel = GetChannelName(msg->Type);
+//                 }
+// 
+//                 Log(LOGL_DEBUG, ("Chat build detection from " + g_ChatBuildToast.sender + ": " + prof_name).c_str());
+//                 break; /* Found one, stop scanning */
+//             }
+//         }
+//         pos = end;
+//     }
+// }
 
 /* ── Render callbacks ────────────────────────────────────────────────────── */
 static void OnRender()
@@ -362,7 +437,7 @@ __declspec(dllexport) void AddonLoad(AddonAPI_t* aApi)
     APIDefs->GUI_Register(RT_OptionsRender, OnOptions);
 
     APIDefs->Events_Subscribe(EV_MUMBLE_IDENTITY_UPDATED, OnMumbleIdentityUpdated);
-    APIDefs->Events_Subscribe(EV_UNOFFICIAL_EXTRAS_CHAT_MESSAGE, OnChatMessage);
+    // APIDefs->Events_Subscribe(EV_CHAT_MESSAGE, OnChatMessage); // Disabled - causing game freezes
     /* ArcDPS combat events are subscribed inside ArcDPS::Init() — not here */
 
     APIDefs->InputBinds_RegisterWithString(KB_TOGGLE, OnKeybind, "");  /* No default keybind — users set via Nexus */
@@ -391,7 +466,7 @@ __declspec(dllexport) void AddonUnload()
     Http::Shutdown();
 
     APIDefs->Events_Unsubscribe(EV_MUMBLE_IDENTITY_UPDATED, OnMumbleIdentityUpdated);
-    APIDefs->Events_Unsubscribe(EV_UNOFFICIAL_EXTRAS_CHAT_MESSAGE, OnChatMessage);
+    // APIDefs->Events_Unsubscribe(EV_CHAT_MESSAGE, OnChatMessage); // Disabled - causing game freezes
     /* ArcDPS combat events are unsubscribed inside ArcDPS::Shutdown() */
 
     APIDefs->InputBinds_Deregister(KB_TOGGLE);
@@ -405,7 +480,7 @@ __declspec(dllexport) void AddonUnload()
 
 __declspec(dllexport) AddonDefinition_t* GetAddonDef()
 {
-    static AddonVersion_t version = {0, 1, 4, 0};
+    static AddonVersion_t version = {0, 2, 1, 0};
     static AddonDefinition_t def  = {
         ADDON_SIGNATURE,
         NEXUS_API_VERSION,
