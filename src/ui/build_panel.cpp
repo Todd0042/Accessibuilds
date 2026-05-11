@@ -6,6 +6,8 @@
 #include "../build/comparator.h"
 #include "../api/gw2names.h"
 #include "../api/item_lookup.h"
+#include "../api/legend_names.h"
+#include "../api/pet_names.h"
 #include "../share/share_code.h"
 #include <imgui.h>
 #include <string>
@@ -285,6 +287,47 @@ static void RenderCompactLayout(const GW2::PlayerBuild& player,
             ImGui::EndGroup();
         }
         ImGui::EndGroup();
+
+        /* ── Legends (Revenant) / Pets (Ranger) row ── */
+        if (sc.legends[0] != 0 || sc.legends[1] != 0 || 
+            sc.pets[0] != 0 || sc.pets[1] != 0) 
+        {
+            ImGui::SameLine(0, 16);
+            ImGui::BeginGroup();
+            
+            /* Revenant Legends */
+            if (sc.legends[0] != 0 || sc.legends[1] != 0) {
+                for (int i = 0; i < 2; i++) {
+                    if (i > 0) ImGui::SameLine(0, 8);
+                    if (sc.legends[i] != 0) {
+                        const char* legend_name = OfflineData::GetLegendName(sc.legends[i]);
+                        ImGui::BeginGroup();
+                        IconRenderer::SkillIcon(sc.legends[i], ICON_SZ_SKILL, true);
+                        ImGui::TextDisabled("L%d", i + 1);
+                        ImGui::TextColored(COL_REF, "%s", legend_name);
+                        ImGui::EndGroup();
+                    }
+                }
+            }
+            
+            /* Ranger Pets */
+            if (sc.pets[0] != 0 || sc.pets[1] != 0) {
+                for (int i = 0; i < 2; i++) {
+                    if (i > 0) ImGui::SameLine(0, 8);
+                    if (sc.pets[i] != 0) {
+                        const char* pet_name = OfflineData::GetPetName(sc.pets[i]);
+                        ImGui::BeginGroup();
+                        /* Use skill icon placeholder for pets */
+                        IconRenderer::SkillIcon(sc.pets[i], ICON_SZ_SKILL, true);
+                        ImGui::TextDisabled("Pet%d", i + 1);
+                        ImGui::TextColored(COL_NEUTRAL, "%s", pet_name);
+                        ImGui::EndGroup();
+                    }
+                }
+            }
+            
+            ImGui::EndGroup();
+        }
 
         /* Skills corrections column — use sub-table to avoid SameLine overflow */
         ImGui::TableSetColumnIndex(1);
