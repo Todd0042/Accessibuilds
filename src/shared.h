@@ -81,6 +81,9 @@ inline ChatBuildToast g_ChatBuildToast;
 inline std::mutex g_ChatBuildToastMutex;
 inline bool g_ChatBuildDetection = true;
 
+/* Offline mode — use embedded reference builds and name tables instead of API */
+inline std::atomic<bool> g_OfflineMode{false};
+
 /*
  * Log helper.
  * LOGL_DEBUG  → debug overlay only (never forwarded to Nexus or disk).

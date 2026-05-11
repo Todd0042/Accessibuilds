@@ -57,6 +57,7 @@ static char                       s_manual_char[20] = {};
 static bool s_show_settings = false;
 static char s_api_key_buf[73] = {};
 static bool s_chat_build_detection = true;
+static bool s_offline_mode = false;
 
 /* Account name — fetched once to gate the coach popout */
 static std::atomic<bool> s_account_fetched{false};
@@ -86,9 +87,11 @@ void Init()
     BuildCache::Settings settings;
     if (BuildCache::LoadSettings(settings)) {
         strncpy(s_api_key_buf, settings.api_key, 72);
+        s_offline_mode = settings.offline_mode;
 
         std::lock_guard<std::mutex> lock(g_APIKeyMutex);
         strncpy(g_APIKey, settings.api_key, 72);
+        g_OfflineMode = settings.offline_mode;
     }
 
     /* Load cached builds */
@@ -245,10 +248,20 @@ static void RenderSettings()
     }
 
     ImGui::Spacing();
+    ImGui::Checkbox("Offline Mode (use embedded reference builds, no API calls)", &s_offline_mode);
+    if (ImGui::IsItemHovered())
+        ImGui::SetTooltip("When enabled, uses embedded Snow Crows builds and name tables. No GW2 API calls are made.");
+
+    {
+        g_OfflineMode = s_offline_mode;
+    }
+
+    ImGui::Spacing();
     if (ImGui::Button("Save")) {
         BuildCache::Settings s;
         BuildCache::LoadSettings(s);
         strncpy(s.api_key, s_api_key_buf, 72);
+        s.offline_mode = s_offline_mode;
         if (s_selected_idx >= 0 && s_selected_idx < (int)s_sc_builds.size())
             strncpy(s.selected_build, s_sc_builds[s_selected_idx].id.c_str(), 127);
         BuildCache::SaveSettings(s);

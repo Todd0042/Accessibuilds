@@ -2,6 +2,10 @@
 #include "gw2api.h"
 #include "http_client.h"
 #include "weapon_type_db.h"
+#include "spec_names.h"
+#include "trait_names.h"
+#include "skill_names.h"
+#include "../sc_builds_offline.h"
 #include "../shared.h"
 #include "../build/cache.h"
 #include <sstream>
@@ -19,6 +23,12 @@ namespace GW2Names {
 
 static const std::string S_LOADING = "...";
 static const std::string S_EMPTY   = "";
+
+/* Offline mode fallback storage — populated from embedded tables when offline */
+static std::string s_offline_loading = "...";
+static std::string s_offline_unknown = "Unknown";
+static std::map<uint32_t, std::string> s_offline_spec_names;
+static std::map<uint32_t, std::string> s_offline_spec_icons;
 
 struct TypeCache {
     std::map<uint32_t, std::string> names;
@@ -178,9 +188,38 @@ static void FetchBatch(const wchar_t* endpoint,
 
 /* ── Public API ──────────────────────────────────────────────────────────── */
 
-const std::string& GetSpec    (uint32_t id) { return LookupName(s_specs,     id); }
-const std::string& GetTrait   (uint32_t id) { return LookupName(s_traits,    id); }
-const std::string& GetSkill   (uint32_t id) { return LookupName(s_skills,    id); }
+const std::string& GetSpec(uint32_t id)
+{
+    if (g_OfflineMode) {
+        auto it = s_offline_spec_names.find(id);
+        if (it != s_offline_spec_names.end()) return it->second;
+        return s_offline_unknown;
+    }
+    return LookupName(s_specs, id);
+}
+
+const std::string& GetTrait(uint32_t id)
+{
+    if (g_OfflineMode) {
+        /* Offline mode: return formatted ID string since we don't have names cached */
+        static thread_local std::string buf;
+        buf = "Trait " + std::to_string(id);
+        return buf;
+    }
+    return LookupName(s_traits, id);
+}
+
+const std::string& GetSkill(uint32_t id)
+{
+    if (g_OfflineMode) {
+        /* Offline mode: return formatted ID string since we don't have names cached */
+        static thread_local std::string buf;
+        buf = "Skill " + std::to_string(id);
+        return buf;
+    }
+    return LookupName(s_skills, id);
+}
+
 const std::string& GetItem    (uint32_t id) { return LookupName(s_items,     id); }
 const std::string& GetStatSet (uint32_t id) { return LookupName(s_itemstats, id); }
 
@@ -231,13 +270,29 @@ const std::string& GetItemType(uint32_t item_id)
     return S_LOADING; /* "..." until resolved */
 }
 
-const std::string& GetSpecIcon (uint32_t id) { return LookupIcon(s_specs,  id); }
+const std::string& GetSpecIcon(uint32_t id)
+{
+    if (g_OfflineMode) {
+        auto it = s_offline_spec_icons.find(id);
+        if (it != s_offline_spec_icons.end()) return it->second;
+        return S_EMPTY;
+    }
+    return LookupIcon(s_specs, id);
+}
 const std::string& GetTraitIcon(uint32_t id) { return LookupIcon(s_traits, id); }
 const std::string& GetSkillIcon(uint32_t id) { return LookupIcon(s_skills, id); }
 const std::string& GetItemIcon (uint32_t id) { return LookupIcon(s_items,  id); }
 
 void Init(uint64_t gw2_build)
 {
+    /* Initialize offline spec names from embedded data */
+    for (size_t i = 0; i < OfflineData::SPEC_COUNT; i++) {
+        const auto& spec = OfflineData::SPECS[i];
+        s_offline_spec_names[spec.id] = spec.name;
+        if (spec.icon && spec.icon[0])
+            s_offline_spec_icons[spec.id] = spec.icon;
+    }
+
     s_cache_build = gw2_build;
     std::string json_str;
     if (!BuildCache::LoadNamesCache(gw2_build, json_str) || json_str.empty()) return;

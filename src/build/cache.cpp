@@ -354,6 +354,7 @@ bool SaveSettings(const Settings& s)
     j["selected_boss"]  = s.selected_boss;
     j["auto_refresh"]   = s.auto_refresh;
     j["last_gw2_build"] = s.last_gw2_build;
+    j["offline_mode"]   = s.offline_mode;
     for (int i = 0; i < 3; i++) {
         j["tab_width"][i]  = s.tab_width[i];
         j["tab_height"][i] = s.tab_height[i];
@@ -385,6 +386,7 @@ bool LoadSettings(Settings& out)
         out.selected_boss  = j.value("selected_boss",  0u);
         out.auto_refresh   = j.value("auto_refresh",   true);
         out.last_gw2_build = j.value("last_gw2_build", uint64_t(0));
+        out.offline_mode   = j.value("offline_mode",   false);
         for (int i = 0; i < 3; i++) {
             if (j.contains("tab_width")  && i < (int)j["tab_width"].size())
                 out.tab_width[i]  = j["tab_width"][i];
