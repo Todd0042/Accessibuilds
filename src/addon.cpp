@@ -177,6 +177,13 @@ static void RenderChatBuildPopup()
 {
     std::lock_guard<std::mutex> lock(g_ChatBuildToastMutex);
     if (!g_ChatBuildToast.active) return;
+    
+    /* Safety: auto-dismiss if share_code is empty or invalid */
+    if (g_ChatBuildToast.share_code.empty() || 
+        g_ChatBuildToast.share_code.find("AB:") != 0) {
+        g_ChatBuildToast.active = false;
+        return;
+    }
 
     ImGui::PushStyleColor(ImGuiCol_WindowBg, ImVec4(0.12f, 0.10f, 0.08f, 0.95f));
     ImGui::PushStyleColor(ImGuiCol_Border, ImVec4(0.90f, 0.75f, 0.25f, 0.90f));
@@ -210,7 +217,8 @@ static void RenderChatBuildPopup()
         /* Title */
         ImGui::TextColored(ImVec4(0.90f, 0.75f, 0.25f, 1.0f), "BUILD SHARED");
         ImGui::SameLine();
-        ImGui::TextColored(ImVec4(0.5f, 0.47f, 0.40f, 1.0f), "via %s", g_ChatBuildToast.channel.c_str());
+        ImGui::TextColored(ImVec4(0.5f, 0.47f, 0.40f, 1.0f), "via %s", 
+            g_ChatBuildToast.channel.empty() ? "Chat" : g_ChatBuildToast.channel.c_str());
 
         ImGui::Spacing();
         ImGui::Separator();
@@ -219,16 +227,17 @@ static void RenderChatBuildPopup()
         /* Sender info */
         ImGui::Text("From:");
         ImGui::SameLine();
-        ImGui::TextColored(ImVec4(0.4f, 0.8f, 1.0f, 1.0f), "%s", g_ChatBuildToast.sender.c_str());
+        ImGui::TextColored(ImVec4(0.4f, 0.8f, 1.0f, 1.0f), "%s", 
+            g_ChatBuildToast.sender.empty() ? "Unknown" : g_ChatBuildToast.sender.c_str());
 
         ImGui::Text("Build:");
         ImGui::SameLine();
+        std::string prof = g_ChatBuildToast.profession.empty() ? "Unknown" : g_ChatBuildToast.profession;
         if (!g_ChatBuildToast.spec_name.empty()) {
             ImGui::TextColored(ImVec4(0.9f, 0.87f, 0.78f, 1.0f), "%s (%s)",
-                g_ChatBuildToast.spec_name.c_str(), g_ChatBuildToast.profession.c_str());
+                g_ChatBuildToast.spec_name.c_str(), prof.c_str());
         } else {
-            ImGui::TextColored(ImVec4(0.9f, 0.87f, 0.78f, 1.0f), "%s",
-                g_ChatBuildToast.profession.c_str());
+            ImGui::TextColored(ImVec4(0.9f, 0.87f, 0.78f, 1.0f), "%s", prof.c_str());
         }
 
         ImGui::Spacing();
@@ -241,16 +250,22 @@ static void RenderChatBuildPopup()
         ImGui::PushStyleColor(ImGuiCol_ButtonActive, ImVec4(0.30f, 0.70f, 0.30f, 1.00f));
 
         if (ImGui::Button("Import to Editor", ImVec2(buttonWidth, 32))) {
-            /* Populate the build editor form with the decoded share code */
-            GW2::SCBuild build;
-            if (ShareCode::Decode(g_ChatBuildToast.share_code, build)) {
-                BuildEditor::ImportFromShareCode(build);
-                BuildEditor::Open();
-                Log(LOGL_INFO, "Build loaded into editor from chat");
+            /* Safety: validate code before attempting decode */
+            if (g_ChatBuildToast.share_code.size() < 10 || g_ChatBuildToast.share_code.size() > 60) {
+                Log(LOGL_WARNING, "Invalid share code length");
                 g_ChatBuildToast.active = false;
             } else {
-                std::string err = ShareCode::LastError();
-                Log(LOGL_WARNING, ("Import failed: " + err).c_str());
+                GW2::SCBuild build;
+                if (ShareCode::Decode(g_ChatBuildToast.share_code, build)) {
+                    BuildEditor::ImportFromShareCode(build);
+                    BuildEditor::Open();
+                    Log(LOGL_INFO, "Build loaded into editor from chat");
+                    g_ChatBuildToast.active = false;
+                } else {
+                    std::string err = ShareCode::LastError();
+                    Log(LOGL_WARNING, ("Import failed: " + err).c_str());
+                    g_ChatBuildToast.active = false;
+                }
             }
         }
         ImGui::PopStyleColor(3);
