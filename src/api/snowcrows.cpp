@@ -206,6 +206,13 @@ bool ParseBuildJSON(const std::string& json_str, GW2::SCBuild& out)
             if (l.size() >= 2) out.legends[1] = (uint32_t)l[1];
         }
 
+        /* Pets (Ranger) */
+        if (j.contains("pets") && j["pets"].is_array()) {
+            auto& p = j["pets"];
+            if (p.size() >= 1) out.pets[0] = (uint32_t)p[0];
+            if (p.size() >= 2) out.pets[1] = (uint32_t)p[1];
+        }
+
         /* Rotation */
         auto parse_rotation = [&](const std::string& key,
                                   std::vector<GW2::RotationStep>& steps) {
