@@ -1,0 +1,4351 @@
+[
+  {
+    "id": "ranger-condition-druid-dagger-torch-axe-dagger",
+    "name": "Condition Druid (Dagger/Torch/Axe/Dagger)",
+    "profession": "Ranger",
+    "elite_spec": "Druid",
+    "build_type": "Condi",
+    "patch_version": "",
+    "benchmark_dps": 44667.0,
+    "notes": "Guild Wars 2 Condition Druid - Dagger & Torch / Axe & Dagger Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/ranger/condition-druid-dagger-torch-axe-dagger",
+    "chat_code": "[&DQQeLSE3BT95AAAAugAAAL0AAAC/AAAAwAAAAFVYAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 30,
+        "traits": [
+          1069,
+          1846,
+          1912
+        ]
+      },
+      "line2": {
+        "spec_id": 33,
+        "traits": [
+          1099,
+          1101,
+          1701
+        ]
+      },
+      "line3": {
+        "spec_id": 5,
+        "traits": [
+          1935,
+          2056,
+          2055
+        ]
+      }
+    },
+    "skills": {
+      "heal": 31914,
+      "utilities": [
+        12496,
+        12498,
+        12537
+      ],
+      "elite": 12580
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      597,
+      344
+    ],
+    "gear": {
+      "relic_id": 100153,
+      "food_id": 91876,
+      "utility_id": 43449,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 74357,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 72259,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 76710,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 75626,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 70641,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 73854,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 74179,
+          "stat_id": 1268,
+          "upgrade_id": 44944,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 76271,
+          "stat_id": 1268,
+          "upgrade_id": 24609,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 77122,
+          "stat_id": 1268,
+          "upgrade_id": 44944,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 74179,
+          "stat_id": 1268,
+          "upgrade_id": 24605,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "ranger-heal-alacrity-druid-staff-mace-warhorn",
+    "name": "Heal Alacrity Druid (Staff/Mace/Warhorn)",
+    "profession": "Ranger",
+    "elite_spec": "Druid",
+    "build_type": "Heal",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Heal Alacrity Druid - Staff / Mace & Warhorn Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/ranger/heal-alacrity-druid-staff-mace-warhorn",
+    "chat_code": "[&DQQIHxk6BRoJEwAAvQAAALkAAADmEgAAtBIAAOfrAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 8,
+        "traits": [
+          986,
+          1070,
+          996
+        ]
+      },
+      "line2": {
+        "spec_id": 25,
+        "traits": [
+          978,
+          965,
+          1697
+        ]
+      },
+      "line3": {
+        "spec_id": 5,
+        "traits": [
+          2016,
+          2001,
+          2057
+        ]
+      }
+    },
+    "skills": {
+      "heal": 31407,
+      "utilities": [
+        12498,
+        12495,
+        31746
+      ],
+      "elite": 31677
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      231,
+      235
+    ],
+    "gear": {
+      "relic_id": 101268,
+      "food_id": 91690,
+      "utility_id": 67528,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 85172,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 85183,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 84923,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 84983,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 85149,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 85343,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1377,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1430,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1377,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1430,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1377,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1430,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 85112,
+          "stat_id": 1377,
+          "upgrade_id": 24639,
+          "infusions": [],
+          "upgrade2_id": 74326
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 84912,
+          "stat_id": 1377,
+          "upgrade_id": 24639,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 84973,
+          "stat_id": 1377,
+          "upgrade_id": 74326,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "ranger-condition-soulbeast-shortbow-dagger-dagger",
+    "name": "Condition Soulbeast (Shortbow/Dagger/Dagger)",
+    "profession": "Ranger",
+    "elite_spec": "Soulbeast",
+    "build_type": "Condi",
+    "patch_version": "",
+    "benchmark_dps": 42481.0,
+    "notes": "Guild Wars 2 Condition Soulbeast - Shortbow / Dagger & Dagger Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/ranger/condition-soulbeast-shortbow-dagger-dagger",
+    "chat_code": "[&DQQeLSE3Ny55AAAAvwAAALoAAADpFgAALhYAAP4AAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 30,
+        "traits": [
+          1069,
+          1846,
+          1912
+        ]
+      },
+      "line2": {
+        "spec_id": 33,
+        "traits": [
+          1099,
+          1101,
+          1701
+        ]
+      },
+      "line3": {
+        "spec_id": 55,
+        "traits": [
+          2071,
+          2161,
+          2128
+        ]
+      }
+    },
+    "skills": {
+      "heal": 31914,
+      "utilities": [
+        12537,
+        12496,
+        40498
+      ],
+      "elite": 45717
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      1278
+    ],
+    "gear": {
+      "relic_id": 100153,
+      "food_id": 91876,
+      "utility_id": 9476,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 74357,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 72259,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 76710,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 75626,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 70641,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 73854,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 74569,
+          "stat_id": 1268,
+          "upgrade_id": 24560,
+          "infusions": [],
+          "upgrade2_id": 44950
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 74179,
+          "stat_id": 1268,
+          "upgrade_id": 44944,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 74179,
+          "stat_id": 1268,
+          "upgrade_id": 44950,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "ranger-condition-soulbeast-axe-dagger-dagger-torch",
+    "name": "Condition Soulbeast (Axe/Dagger/Dagger/Torch)",
+    "profession": "Ranger",
+    "elite_spec": "Soulbeast",
+    "build_type": "Condi",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Condition Soulbeast - Axe & Dagger / Dagger & Torch Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/ranger/condition-soulbeast-axe-dagger-dagger-torch",
+    "chat_code": "[&DQQeHSE3Ny55AAAAvwAAABsAAADpFgAALhYAAP4AAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 30,
+        "traits": [
+          1069,
+          1846,
+          1064
+        ]
+      },
+      "line2": {
+        "spec_id": 33,
+        "traits": [
+          1099,
+          1101,
+          1701
+        ]
+      },
+      "line3": {
+        "spec_id": 55,
+        "traits": [
+          2071,
+          2161,
+          2128
+        ]
+      }
+    },
+    "skills": {
+      "heal": 31914,
+      "utilities": [
+        12537,
+        12476,
+        40498
+      ],
+      "elite": 45717
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      1278
+    ],
+    "gear": {
+      "relic_id": 100153,
+      "food_id": 91876,
+      "utility_id": 48917,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 74357,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 72259,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 76710,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 75626,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 70641,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 73854,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 77122,
+          "stat_id": 1268,
+          "upgrade_id": 24560,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 74179,
+          "stat_id": 1268,
+          "upgrade_id": 44950,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 74179,
+          "stat_id": 1268,
+          "upgrade_id": 44944,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 76271,
+          "stat_id": 1268,
+          "upgrade_id": 44950,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "ranger-hand-kite-soulbeast-greatsword-staff",
+    "name": "Hand Kite Soulbeast (Greatsword/Staff)",
+    "profession": "Ranger",
+    "elite_spec": "Soulbeast",
+    "build_type": "Power",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Hand Kite Soulbeast - Greatsword / Staff Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/ranger/hand-kite-soulbeast-greatsword-staff",
+    "chat_code": "[&DQQhGhk+Nxp5AAAAuwAAAMIAAAC5AAAAlwEAAGRYAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 33,
+        "traits": [
+          1086,
+          2032,
+          1094
+        ]
+      },
+      "line2": {
+        "spec_id": 25,
+        "traits": [
+          978,
+          964,
+          1697
+        ]
+      },
+      "line3": {
+        "spec_id": 55,
+        "traits": [
+          2071,
+          2085,
+          2155
+        ]
+      }
+    },
+    "skills": {
+      "heal": 31914,
+      "utilities": [
+        12631,
+        12502,
+        12495
+      ],
+      "elite": 12569
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      356,
+      344
+    ],
+    "gear": {
+      "relic_id": 100934,
+      "food_id": 74969,
+      "utility_id": 87329,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 85172,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 85183,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 84923,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 84983,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 85149,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 85343,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1377,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1377,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1377,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1377,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1377,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1377,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 85121,
+          "stat_id": 1377,
+          "upgrade_id": 44947,
+          "infusions": [],
+          "upgrade2_id": 72092
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 85112,
+          "stat_id": 1377,
+          "upgrade_id": 44947,
+          "infusions": [],
+          "upgrade2_id": 74326
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "ranger-power-soulbeast-hammer-sword-axe",
+    "name": "Power Soulbeast (Hammer/Sword/Axe)",
+    "profession": "Ranger",
+    "elite_spec": "Soulbeast",
+    "build_type": "Power",
+    "patch_version": "",
+    "benchmark_dps": 39858.0,
+    "notes": "Guild Wars 2 Power Soulbeast - Hammer / Sword & Axe Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/ranger/power-soulbeast-hammer-sword-axe",
+    "chat_code": "[&DQQeOSA/Nzp5AAAApQEAALUAAACsAQAALhYAAEIAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 30,
+        "traits": [
+          1069,
+          1700,
+          1888
+        ]
+      },
+      "line2": {
+        "spec_id": 32,
+        "traits": [
+          1606,
+          970,
+          1066
+        ]
+      },
+      "line3": {
+        "spec_id": 55,
+        "traits": [
+          2071,
+          2085,
+          2143
+        ]
+      }
+    },
+    "skills": {
+      "heal": 31914,
+      "utilities": [
+        12633,
+        12492,
+        12491
+      ],
+      "elite": 45717
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      1090
+    ],
+    "gear": {
+      "relic_id": 103574,
+      "food_id": 91805,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48087,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48089,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48085,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48086,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48088,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48084,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46763,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 24554
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 46774,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 46759,
+          "stat_id": 1077,
+          "upgrade_id": 24597,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "ranger-power-soulbeast-hammer-axe-axe",
+    "name": "Power Soulbeast (Hammer/Axe/Axe)",
+    "profession": "Ranger",
+    "elite_spec": "Soulbeast",
+    "build_type": "Power",
+    "patch_version": "",
+    "benchmark_dps": 39871.0,
+    "notes": "Guild Wars 2 Power Soulbeast - Hammer / Axe & Axe Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/ranger/power-soulbeast-hammer-axe-axe",
+    "chat_code": "[&DQQeOSA/Nzp5AAAApQEAALUAAACsAQAALhYAAEIAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 30,
+        "traits": [
+          1069,
+          1700,
+          1888
+        ]
+      },
+      "line2": {
+        "spec_id": 32,
+        "traits": [
+          1606,
+          970,
+          1066
+        ]
+      },
+      "line3": {
+        "spec_id": 55,
+        "traits": [
+          2071,
+          2085,
+          2143
+        ]
+      }
+    },
+    "skills": {
+      "heal": 31914,
+      "utilities": [
+        12633,
+        12492,
+        12491
+      ],
+      "elite": 45717
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      1090
+    ],
+    "gear": {
+      "relic_id": 103574,
+      "food_id": 91805,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48087,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48089,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48085,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48086,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48088,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48084,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46763,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 24868
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 46759,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 46759,
+          "stat_id": 1077,
+          "upgrade_id": 24868,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "ranger-condition-quickness-untamed-axe-dagger-dagger-torch",
+    "name": "Condition Quickness Untamed (Axe/Dagger/Dagger/Torch)",
+    "profession": "Ranger",
+    "elite_spec": "Untamed",
+    "build_type": "Condi",
+    "patch_version": "",
+    "benchmark_dps": 35006.0,
+    "notes": "Guild Wars 2 Condition Quickness Untamed - Axe & Dagger / Dagger & Torch Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/ranger/condition-quickness-untamed-axe-dagger-dagger-torch",
+    "chat_code": "[&DQQeHSE3SB95AAAAvwAAAL0AAAC6AAAAwAAAADrrAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 30,
+        "traits": [
+          1069,
+          1846,
+          1064
+        ]
+      },
+      "line2": {
+        "spec_id": 33,
+        "traits": [
+          1099,
+          1101,
+          1701
+        ]
+      },
+      "line3": {
+        "spec_id": 72,
+        "traits": [
+          2301,
+          2278,
+          2271
+        ]
+      }
+    },
+    "skills": {
+      "heal": 31914,
+      "utilities": [
+        12537,
+        12498,
+        12496
+      ],
+      "elite": 12580
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      1082,
+      235
+    ],
+    "gear": {
+      "relic_id": 100153,
+      "food_id": 91876,
+      "utility_id": 81079,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 97440,
+          "stat_id": 1694,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 97862,
+          "stat_id": 1694,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 97154,
+          "stat_id": 1694,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 96795,
+          "stat_id": 1694,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 95714,
+          "stat_id": 1694,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 97395,
+          "stat_id": 1694,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1694,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1694,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1694,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1694,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1694,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1694,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 95781,
+          "stat_id": 1694,
+          "upgrade_id": 44944,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 96821,
+          "stat_id": 1694,
+          "upgrade_id": 44950,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 96821,
+          "stat_id": 1694,
+          "upgrade_id": 44944,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 97752,
+          "stat_id": 1694,
+          "upgrade_id": 44950,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "ranger-heal-quickness-untamed-staff-mace-warhorn",
+    "name": "Heal Quickness Untamed (Staff/Mace/Warhorn)",
+    "profession": "Ranger",
+    "elite_spec": "Untamed",
+    "build_type": "Heal",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Heal Quickness Untamed - Staff / Mace & Warhorn Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/ranger/heal-quickness-untamed-staff-mace-warhorn",
+    "chat_code": "[&DQQIHxkaSB+hAAAAvAAAALkAAACWCwAAlwEAAP/rAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 8,
+        "traits": [
+          986,
+          1070,
+          996
+        ]
+      },
+      "line2": {
+        "spec_id": 25,
+        "traits": [
+          978,
+          965,
+          1038
+        ]
+      },
+      "line3": {
+        "spec_id": 72,
+        "traits": [
+          2301,
+          2278,
+          2271
+        ]
+      }
+    },
+    "skills": {
+      "heal": 12489,
+      "utilities": [
+        12497,
+        12495,
+        10586
+      ],
+      "elite": 12569
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      1023,
+      235
+    ],
+    "gear": {
+      "relic_id": 101268,
+      "food_id": 91690,
+      "utility_id": 67528,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 85172,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 85183,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 84923,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 84983,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 85149,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 85343,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1377,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1430,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1377,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1430,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1377,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1430,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 85112,
+          "stat_id": 1377,
+          "upgrade_id": 24639,
+          "infusions": [],
+          "upgrade2_id": 74326
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 84912,
+          "stat_id": 1377,
+          "upgrade_id": 24639,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 84973,
+          "stat_id": 1377,
+          "upgrade_id": 74326,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "ranger-power-quickness-untamed-hammer-sword-axe",
+    "name": "Power Quickness Untamed (Hammer/Sword/Axe)",
+    "profession": "Ranger",
+    "elite_spec": "Untamed",
+    "build_type": "Power",
+    "patch_version": "",
+    "benchmark_dps": 35258.0,
+    "notes": "Guild Wars 2 Power Quickness Untamed - Beastmastery - Hammer / Sword & Axe Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/ranger/power-quickness-untamed-hammer-sword-axe",
+    "chat_code": "[&DQQgHx45SB95AAAAtgAAAKUBAACsAQAA7QAAAIhSAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 32,
+        "traits": [
+          1606,
+          970,
+          1945
+        ]
+      },
+      "line2": {
+        "spec_id": 30,
+        "traits": [
+          1069,
+          1700,
+          1888
+        ]
+      },
+      "line3": {
+        "spec_id": 72,
+        "traits": [
+          2301,
+          2278,
+          2271
+        ]
+      }
+    },
+    "skills": {
+      "heal": 31914,
+      "utilities": [
+        12493,
+        12633,
+        12491
+      ],
+      "elite": 12516
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      1160,
+      594
+    ],
+    "gear": {
+      "relic_id": 103574,
+      "food_id": 91805,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 89969,
+          "stat_id": 1566,
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48089,
+          "stat_id": 1077,
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48085,
+          "stat_id": 1077,
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48086,
+          "stat_id": 1077,
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48088,
+          "stat_id": 1077,
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48084,
+          "stat_id": 1077,
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46763,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 72339
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 46774,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 46759,
+          "stat_id": 1077,
+          "upgrade_id": 72339,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "ranger-power-quickness-untamed-nature-magic-hammer-sword-axe",
+    "name": "Power Quickness Untamed (Nature/Magic/Hammer/Sword/Axe)",
+    "profession": "Ranger",
+    "elite_spec": "Untamed",
+    "build_type": "Power",
+    "patch_version": "",
+    "benchmark_dps": 34281.0,
+    "notes": "Guild Wars 2 Power Quickness Untamed - Nature Magic - Hammer / Sword & Axe Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/ranger/power-quickness-untamed-nature-magic-hammer-sword-axe",
+    "chat_code": "[&DQQZGR45SB95AAAAtgAAAKUBAACsAQAADxsAAFHrAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 25,
+        "traits": [
+          1062,
+          965,
+          1038
+        ]
+      },
+      "line2": {
+        "spec_id": 30,
+        "traits": [
+          1069,
+          1700,
+          1888
+        ]
+      },
+      "line3": {
+        "spec_id": 72,
+        "traits": [
+          2301,
+          2278,
+          2271
+        ]
+      }
+    },
+    "skills": {
+      "heal": 31914,
+      "utilities": [
+        12493,
+        12633,
+        12491
+      ],
+      "elite": 63163
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      593,
+      235
+    ],
+    "gear": {
+      "relic_id": 103574,
+      "food_id": 91805,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48087,
+          "stat_id": 1077,
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48089,
+          "stat_id": 1077,
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48085,
+          "stat_id": 1077,
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48086,
+          "stat_id": 1077,
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48088,
+          "stat_id": 1077,
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48084,
+          "stat_id": 1077,
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46763,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 24868
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 46774,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 46759,
+          "stat_id": 1077,
+          "upgrade_id": 24868,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "ranger-power-untamed-hammer-sword-axe",
+    "name": "Power Untamed (Hammer/Sword/Axe)",
+    "profession": "Ranger",
+    "elite_spec": "Untamed",
+    "build_type": "Power",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Power Untamed - Hammer / Sword & Axe Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/ranger/power-untamed-hammer-sword-axe",
+    "chat_code": "[&DQQIFx45SDd5AAAAtQAAAL4AAACsAQAADxsAAFFVAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 8,
+        "traits": [
+          986,
+          1001,
+          996
+        ]
+      },
+      "line2": {
+        "spec_id": 30,
+        "traits": [
+          1069,
+          1700,
+          1888
+        ]
+      },
+      "line3": {
+        "spec_id": 72,
+        "traits": [
+          2301,
+          2263,
+          2274
+        ]
+      }
+    },
+    "skills": {
+      "heal": 31914,
+      "utilities": [
+        12492,
+        12499,
+        12491
+      ],
+      "elite": 63163
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      593,
+      597
+    ],
+    "gear": {
+      "relic_id": 100090,
+      "food_id": 91805,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48087,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48089,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48085,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48086,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48088,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48084,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46763,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 24868
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 46774,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 46759,
+          "stat_id": 1077,
+          "upgrade_id": 24554,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "ranger-power-untamed-hammer-spear",
+    "name": "Power Untamed (Hammer/Spear)",
+    "profession": "Ranger",
+    "elite_spec": "Untamed",
+    "build_type": "Power",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Power Untamed - Hammer / Spear Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/ranger/power-untamed-hammer-spear",
+    "chat_code": "[&DQQIFx45SDd5AAAAtQAAAL4AAACsAQAADxsAAHhVAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 8,
+        "traits": [
+          986,
+          1001,
+          996
+        ]
+      },
+      "line2": {
+        "spec_id": 30,
+        "traits": [
+          1069,
+          1700,
+          1888
+        ]
+      },
+      "line3": {
+        "spec_id": 72,
+        "traits": [
+          2301,
+          2263,
+          2274
+        ]
+      }
+    },
+    "skills": {
+      "heal": 31914,
+      "utilities": [
+        12492,
+        12499,
+        12491
+      ],
+      "elite": 63163
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      1144,
+      597
+    ],
+    "gear": {
+      "relic_id": 100090,
+      "food_id": 91805,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48087,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48089,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48085,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48086,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48088,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48084,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46763,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 24868
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 46764,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 24868
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "ranger-power-galeshot-longbow-axe-axe",
+    "name": "Power Galeshot (Longbow/Axe/Axe)",
+    "profession": "Ranger",
+    "elite_spec": "Galeshot",
+    "build_type": "Power",
+    "patch_version": "",
+    "benchmark_dps": 42575.0,
+    "notes": "Guild Wars 2 Power Galeshot - Longbow / Axe & Axe Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/ranger/power-galeshot-longbow-axe-axe",
+    "chat_code": "[&DQQIFx45Ti95AAAAXB0AAKwBAACDHQAAWx0AAOdVAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 8,
+        "traits": [
+          986,
+          1001,
+          996
+        ]
+      },
+      "line2": {
+        "spec_id": 30,
+        "traits": [
+          1069,
+          1700,
+          1888
+        ]
+      },
+      "line3": {
+        "spec_id": 78,
+        "traits": [
+          2360,
+          2396,
+          2336
+        ]
+      }
+    },
+    "skills": {
+      "heal": 31914,
+      "utilities": [
+        76757,
+        12491,
+        77264
+      ],
+      "elite": 76979
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      231,
+      597
+    ],
+    "gear": {
+      "relic_id": 103574,
+      "food_id": 91805,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48087,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48089,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48085,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48086,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48088,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48084,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46765,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 24868
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 46759,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 46759,
+          "stat_id": 1077,
+          "upgrade_id": 24597,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "ranger-power-quickness-galeshot-longbow-axe-axe",
+    "name": "Power Quickness Galeshot (Longbow/Axe/Axe)",
+    "profession": "Ranger",
+    "elite_spec": "Galeshot",
+    "build_type": "Power",
+    "patch_version": "",
+    "benchmark_dps": 35330.0,
+    "notes": "Guild Wars 2 Power Quickness Galeshot - Longbow / Axe & Axe Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/ranger/power-quickness-galeshot-longbow-axe-axe",
+    "chat_code": "[&DQQIFx45Th95AAAAXB0AAKwBAACDHQAAWx0AAFXnAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 8,
+        "traits": [
+          986,
+          1001,
+          996
+        ]
+      },
+      "line2": {
+        "spec_id": 30,
+        "traits": [
+          1069,
+          1700,
+          1888
+        ]
+      },
+      "line3": {
+        "spec_id": 78,
+        "traits": [
+          2360,
+          2396,
+          2425
+        ]
+      }
+    },
+    "skills": {
+      "heal": 31914,
+      "utilities": [
+        76757,
+        12491,
+        77264
+      ],
+      "elite": 76979
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      597,
+      231
+    ],
+    "gear": {
+      "relic_id": 103574,
+      "food_id": 91805,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48087,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48089,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48085,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48086,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48088,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48084,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46765,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 24868
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 46759,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 46759,
+          "stat_id": 1077,
+          "upgrade_id": 24868,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "ranger-beginner-power-soulbeast-hammer-sword-axe",
+    "name": "Beginner Power Soulbeast (Hammer/Sword/Axe)",
+    "profession": "Ranger",
+    "elite_spec": "Soulbeast",
+    "build_type": "Power",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Beginner Power Soulbeast - Hammer / Sword & Axe Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/ranger/beginner-power-soulbeast-hammer-sword-axe",
+    "chat_code": "[&DQQgPx45Nzp5AAAAtQAAAKUBAACsAQAALhYAAEIAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 32,
+        "traits": [
+          1606,
+          970,
+          1066
+        ]
+      },
+      "line2": {
+        "spec_id": 30,
+        "traits": [
+          1069,
+          1700,
+          1888
+        ]
+      },
+      "line3": {
+        "spec_id": 55,
+        "traits": [
+          2071,
+          2085,
+          2143
+        ]
+      }
+    },
+    "skills": {
+      "heal": 31914,
+      "utilities": [
+        12492,
+        12633,
+        12491
+      ],
+      "elite": 45717
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      1090
+    ],
+    "gear": {
+      "relic_id": 103574,
+      "food_id": 91805,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48087,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48089,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48085,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48086,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48088,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48084,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46763,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 24554
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 46774,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 46759,
+          "stat_id": 1077,
+          "upgrade_id": 24597,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "ranger-beginner-condition-quickness-untamed-axe-dagger-dagger-torch",
+    "name": "Beginner Condition Quickness Untamed (Axe/Dagger/Dagger/Torch)",
+    "profession": "Ranger",
+    "elite_spec": "Untamed",
+    "build_type": "Condi",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Beginner Condition Quickness Untamed - Axe & Dagger / Dagger & Torch Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/ranger/beginner-condition-quickness-untamed-axe-dagger-dagger-torch",
+    "chat_code": "[&DQQeHSE3SB95AAAAvwAAAL0AAAC6AAAAwAAAADrrAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 30,
+        "traits": [
+          1069,
+          1846,
+          1064
+        ]
+      },
+      "line2": {
+        "spec_id": 33,
+        "traits": [
+          1099,
+          1101,
+          1701
+        ]
+      },
+      "line3": {
+        "spec_id": 72,
+        "traits": [
+          2301,
+          2278,
+          2271
+        ]
+      }
+    },
+    "skills": {
+      "heal": 31914,
+      "utilities": [
+        12537,
+        12498,
+        12496
+      ],
+      "elite": 12580
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      1082,
+      235
+    ],
+    "gear": {
+      "relic_id": 100153,
+      "food_id": 91876,
+      "utility_id": 81079,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 97440,
+          "stat_id": 1694,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 97862,
+          "stat_id": 1694,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 97154,
+          "stat_id": 1694,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 96795,
+          "stat_id": 1694,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 95714,
+          "stat_id": 1694,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 97395,
+          "stat_id": 1694,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1694,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1694,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1694,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1694,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1694,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1694,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 95781,
+          "stat_id": 1694,
+          "upgrade_id": 44944,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 96821,
+          "stat_id": 1694,
+          "upgrade_id": 44950,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 96821,
+          "stat_id": 1694,
+          "upgrade_id": 44944,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 97752,
+          "stat_id": 1694,
+          "upgrade_id": 44950,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "ranger-condition-soulbeast-axe-torch-dagger-axe",
+    "name": "Condition Soulbeast (Axe/Torch/Dagger/Axe)",
+    "profession": "Ranger",
+    "elite_spec": "Soulbeast",
+    "build_type": "Condi",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Condition Soulbeast - Axe & Torch / Dagger & Axe Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/ranger/condition-soulbeast-axe-torch-dagger-axe",
+    "chat_code": "[&DQQePSA/Ny55AAAAvwAAAKUBAADpFgAALhYAANQAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 30,
+        "traits": [
+          1069,
+          1846,
+          1888
+        ]
+      },
+      "line2": {
+        "spec_id": 32,
+        "traits": [
+          1606,
+          970,
+          1066
+        ]
+      },
+      "line3": {
+        "spec_id": 55,
+        "traits": [
+          2071,
+          2161,
+          2128
+        ]
+      }
+    },
+    "skills": {
+      "heal": 31914,
+      "utilities": [
+        12537,
+        12633,
+        40498
+      ],
+      "elite": 45717
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      212
+    ],
+    "gear": {
+      "relic_id": 100153,
+      "food_id": 91878,
+      "utility_id": 48917,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 74357,
+          "stat_id": 1268,
+          "upgrade_id": 24762,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 72259,
+          "stat_id": 1268,
+          "upgrade_id": 24762,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 76710,
+          "stat_id": 1268,
+          "upgrade_id": 24762,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 75626,
+          "stat_id": 1268,
+          "upgrade_id": 24762,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 70641,
+          "stat_id": 1268,
+          "upgrade_id": 24762,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 73854,
+          "stat_id": 1268,
+          "upgrade_id": 24762,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 77122,
+          "stat_id": 1268,
+          "upgrade_id": 24605,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 76271,
+          "stat_id": 1268,
+          "upgrade_id": 24560,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 74179,
+          "stat_id": 1268,
+          "upgrade_id": 44944,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 77122,
+          "stat_id": 1268,
+          "upgrade_id": 24560,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "ranger-power-soulbeast-spear-axe-axe",
+    "name": "Power Soulbeast (Spear/Axe/Axe)",
+    "profession": "Ranger",
+    "elite_spec": "Soulbeast",
+    "build_type": "Power",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Power Soulbeast - Spear / Axe & Axe Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/ranger/power-soulbeast-spear-axe-axe",
+    "chat_code": "[&DQQeOSA/Nzp5AAAApQEAALUAAACsAQAALhYAAEIAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 30,
+        "traits": [
+          1069,
+          1700,
+          1888
+        ]
+      },
+      "line2": {
+        "spec_id": 32,
+        "traits": [
+          1606,
+          970,
+          1066
+        ]
+      },
+      "line3": {
+        "spec_id": 55,
+        "traits": [
+          2071,
+          2085,
+          2143
+        ]
+      }
+    },
+    "skills": {
+      "heal": 31914,
+      "utilities": [
+        12633,
+        12492,
+        12491
+      ],
+      "elite": 45717
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      1090
+    ],
+    "gear": {
+      "relic_id": 103574,
+      "food_id": 91805,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48087,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48089,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48085,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48086,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48088,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48084,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46764,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 24868
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 46759,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 46759,
+          "stat_id": 1077,
+          "upgrade_id": 24868,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "ranger-power-quickness-untamed-spear-sword-axe",
+    "name": "Power Quickness Untamed (Spear/Sword/Axe)",
+    "profession": "Ranger",
+    "elite_spec": "Untamed",
+    "build_type": "Power",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Power Quickness Untamed - Spear / Sword & Axe Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/ranger/power-quickness-untamed-spear-sword-axe",
+    "chat_code": "[&DQQZGR45SB8UGwAAtgAAAKUBAACsAQAADxsAAHjeAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 25,
+        "traits": [
+          1062,
+          965,
+          1038
+        ]
+      },
+      "line2": {
+        "spec_id": 30,
+        "traits": [
+          1069,
+          1700,
+          1888
+        ]
+      },
+      "line3": {
+        "spec_id": 72,
+        "traits": [
+          2301,
+          2278,
+          2271
+        ]
+      }
+    },
+    "skills": {
+      "heal": 63319,
+      "utilities": [
+        12493,
+        12633,
+        12491
+      ],
+      "elite": 63163
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      1144,
+      1246
+    ],
+    "gear": {
+      "relic_id": 103574,
+      "food_id": 91805,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48087,
+          "stat_id": 1077,
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48089,
+          "stat_id": 1077,
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48085,
+          "stat_id": 1077,
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48086,
+          "stat_id": 1077,
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48088,
+          "stat_id": 1077,
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48084,
+          "stat_id": 1077,
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46764,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 24868
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 46774,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 46759,
+          "stat_id": 1077,
+          "upgrade_id": 24868,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "ranger-power-quickness-untamed-spear-mace-mace",
+    "name": "Power Quickness Untamed (Spear/Mace/Mace)",
+    "profession": "Ranger",
+    "elite_spec": "Untamed",
+    "build_type": "Power",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Power Quickness Untamed - Spear / Mace & Mace Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/ranger/power-quickness-untamed-spear-mace-mace",
+    "chat_code": "[&DQQZGR41SB8UGwAAtgAAAKUBAACsAQAADxsAAHjeAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 25,
+        "traits": [
+          1062,
+          965,
+          1038
+        ]
+      },
+      "line2": {
+        "spec_id": 30,
+        "traits": [
+          1069,
+          1016,
+          1888
+        ]
+      },
+      "line3": {
+        "spec_id": 72,
+        "traits": [
+          2301,
+          2278,
+          2271
+        ]
+      }
+    },
+    "skills": {
+      "heal": 63319,
+      "utilities": [
+        12493,
+        12633,
+        12491
+      ],
+      "elite": 63163
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      1144,
+      1246
+    ],
+    "gear": {
+      "relic_id": 103574,
+      "food_id": 91805,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48087,
+          "stat_id": 1077,
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48089,
+          "stat_id": 1077,
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48085,
+          "stat_id": 1077,
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48086,
+          "stat_id": 1077,
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48088,
+          "stat_id": 1077,
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48084,
+          "stat_id": 1077,
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46764,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 24868
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 46766,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 46766,
+          "stat_id": 1077,
+          "upgrade_id": 24868,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "ranger-power-quickness-untamed-hammer-spear",
+    "name": "Power Quickness Untamed (Hammer/Spear)",
+    "profession": "Ranger",
+    "elite_spec": "Untamed",
+    "build_type": "Power",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Power Quickness Untamed - Hammer / Spear Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/ranger/power-quickness-untamed-hammer-spear",
+    "chat_code": "[&DQQZGR41SB8UGwAAtgAAAKUBAACsAQAADxsAAHjeAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 25,
+        "traits": [
+          1062,
+          965,
+          1038
+        ]
+      },
+      "line2": {
+        "spec_id": 30,
+        "traits": [
+          1069,
+          1016,
+          1888
+        ]
+      },
+      "line3": {
+        "spec_id": 72,
+        "traits": [
+          2301,
+          2278,
+          2271
+        ]
+      }
+    },
+    "skills": {
+      "heal": 63319,
+      "utilities": [
+        12493,
+        12633,
+        12491
+      ],
+      "elite": 63163
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      1144,
+      1246
+    ],
+    "gear": {
+      "relic_id": 103574,
+      "food_id": 91805,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48087,
+          "stat_id": 1077,
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48089,
+          "stat_id": 1077,
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48085,
+          "stat_id": 1077,
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48086,
+          "stat_id": 1077,
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48088,
+          "stat_id": 1077,
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48084,
+          "stat_id": 1077,
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46763,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 24868
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 46764,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 24868
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "ranger-power-quickness-untamed-hammer-sword-mace",
+    "name": "Power Quickness Untamed (Hammer/Sword/Mace)",
+    "profession": "Ranger",
+    "elite_spec": "Untamed",
+    "build_type": "Power",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Power Quickness Untamed - Hammer / Sword & Mace Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/ranger/power-quickness-untamed-hammer-sword-mace",
+    "chat_code": "[&DQQZGR45SB8UGwAAtgAAAKUBAACsAQAADxsAABbrAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 25,
+        "traits": [
+          1062,
+          965,
+          1038
+        ]
+      },
+      "line2": {
+        "spec_id": 30,
+        "traits": [
+          1069,
+          1700,
+          1888
+        ]
+      },
+      "line3": {
+        "spec_id": 72,
+        "traits": [
+          2301,
+          2278,
+          2271
+        ]
+      }
+    },
+    "skills": {
+      "heal": 63319,
+      "utilities": [
+        12493,
+        12633,
+        12491
+      ],
+      "elite": 63163
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      1046,
+      235
+    ],
+    "gear": {
+      "relic_id": 103574,
+      "food_id": 91805,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48087,
+          "stat_id": 1077,
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48089,
+          "stat_id": 1077,
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48085,
+          "stat_id": 1077,
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48086,
+          "stat_id": 1077,
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48088,
+          "stat_id": 1077,
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48084,
+          "stat_id": 1077,
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46763,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 24868
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 46774,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 46766,
+          "stat_id": 1077,
+          "upgrade_id": 24868,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "ranger-power-quickness-untamed-hammer-mace-mace",
+    "name": "Power Quickness Untamed (Hammer/Mace/Mace)",
+    "profession": "Ranger",
+    "elite_spec": "Untamed",
+    "build_type": "Power",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Power Quickness Untamed - Hammer / Mace & Mace Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/ranger/power-quickness-untamed-hammer-mace-mace",
+    "chat_code": "[&DQQgHx45SB95AAAAtgAAAKUBAACsAQAA7QAAAIhSAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 32,
+        "traits": [
+          1606,
+          970,
+          1945
+        ]
+      },
+      "line2": {
+        "spec_id": 30,
+        "traits": [
+          1069,
+          1700,
+          1888
+        ]
+      },
+      "line3": {
+        "spec_id": 72,
+        "traits": [
+          2301,
+          2278,
+          2271
+        ]
+      }
+    },
+    "skills": {
+      "heal": 31914,
+      "utilities": [
+        12493,
+        12633,
+        12491
+      ],
+      "elite": 12516
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      1160,
+      594
+    ],
+    "gear": {
+      "relic_id": 103574,
+      "food_id": 91805,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 89969,
+          "stat_id": 1566,
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48089,
+          "stat_id": 1077,
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48085,
+          "stat_id": 1077,
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48086,
+          "stat_id": 1077,
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48088,
+          "stat_id": 1077,
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48084,
+          "stat_id": 1077,
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46763,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 72339
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 46766,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 46766,
+          "stat_id": 1077,
+          "upgrade_id": 72339,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "ranger-power-quickness-untamed-hammer-greatsword",
+    "name": "Power Quickness Untamed (Hammer/Greatsword)",
+    "profession": "Ranger",
+    "elite_spec": "Untamed",
+    "build_type": "Power",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Power Quickness Untamed - Hammer / Greatsword Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/ranger/power-quickness-untamed-hammer-greatsword",
+    "chat_code": "[&DQQgHx45SB95AAAAtgAAAKUBAACsAQAA7QAAAIhSAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 32,
+        "traits": [
+          1606,
+          970,
+          1945
+        ]
+      },
+      "line2": {
+        "spec_id": 30,
+        "traits": [
+          1069,
+          1700,
+          1888
+        ]
+      },
+      "line3": {
+        "spec_id": 72,
+        "traits": [
+          2301,
+          2278,
+          2271
+        ]
+      }
+    },
+    "skills": {
+      "heal": 31914,
+      "utilities": [
+        12493,
+        12633,
+        12491
+      ],
+      "elite": 12516
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      1160,
+      594
+    ],
+    "gear": {
+      "relic_id": 100916,
+      "food_id": 91805,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 89969,
+          "stat_id": 1566,
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48089,
+          "stat_id": 1077,
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48085,
+          "stat_id": 1077,
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48086,
+          "stat_id": 1077,
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48088,
+          "stat_id": 1077,
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48084,
+          "stat_id": 1077,
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46763,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 72339
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 46762,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 72339
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  }
+]

@@ -19,7 +19,9 @@ for arg in "$@"; do
         -h|--help)
             echo "Usage: $0 [--clean] [--regen] [--install[=<path>]]"
             echo "  --clean            Remove build/ before configuring"
-            echo "  --regen            Regenerate src/sc_builds_embedded.h from JSON files"
+            echo "  --regen            Regenerate embedded headers from JSON files:"
+            echo "                       - src/sc_builds_embedded.h (binary xxd format)"
+            echo "                       - src/sc_builds_offline.h (C string format)"
             echo "  --install          Deploy DLL to \$GW2_ADDONS_DIR/Accessibuilds/"
             echo "  --install=<path>   Same, using an explicit path"
             exit 0
@@ -91,6 +93,9 @@ with open("src/sc_builds_embedded.h", "w") as f:
     f.write("\n".join(lines) + "\n")
 print("  Done.")
 PYEOF
+
+    echo "Regenerating src/sc_builds_offline.h ..."
+    python3 tools/embed_builds.py
 fi
 
 if [[ $CLEAN -eq 1 && -d "$BUILD_DIR" ]]; then

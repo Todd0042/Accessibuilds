@@ -4,7 +4,7 @@ Embed sc_builds_full.json as a C++ header file.
 """
 import json
 
-INPUT_FILE = "/home/todd/gw2-build-coaches/gw2-build-coach-new-modified/sc_builds_full.json"
+INPUT_FILE = "/home/todd/gw2-build-coaches/Accessibuilds/sc_builds_full.json"
 OUTPUT_FILE = "/home/todd/gw2-build-coaches/Accessibuilds/src/sc_builds_offline.h"
 
 def main():
