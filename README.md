@@ -12,7 +12,7 @@ Users should be aware that:
     the developer remains responsible for ensuring compliance with the game's Terms of Service.
 
 
-This is a Guild Wars 2 addon for the Nexus addon loader that shows variances between the players equipment and build and that of builds saved to its database. it includes the accessibility builds from Snowcrows and a build editor to add new builds or import from links others export or import from gw2skills.net.
+This is a Guild Wars 2 addon for the Nexus addon loader that shows variances between the players equipment and build and that of builds saved to its database. it includes the accessibility builds from Snowcrows and a build editor to add new builds or import from links others export or import from gw2skills.net. I was going to include all snowcrows builds at first but I spoke with Harry as this could negatively impact their website traffic and ultimately I decided to only include the accessibility builds and a link to the snowcrows page. You can however enter the builds from snowcrows manually into your database with the build editor to share them later.
 
 Early testing phase still.
 
