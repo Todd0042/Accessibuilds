@@ -2,7 +2,7 @@
 #pragma once
 #include <stddef.h>
 
-static const int sc_builds_version = 1;
+static const int sc_builds_version = 2;
 
 static const unsigned char sc_builds_json[] = {
   0x5b, 0x0a, 0x20, 0x20, 0x7b, 0x0a, 0x20, 0x20, 0x20, 0x20, 0x22, 0x69,
