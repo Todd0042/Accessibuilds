@@ -1,0 +1,5690 @@
+[
+  {
+    "id": "engineer-condition-quickness-scrapper-spear",
+    "name": "Condition Quickness Scrapper (Spear)",
+    "profession": "Engineer",
+    "elite_spec": "Scrapper",
+    "build_type": "Condi",
+    "patch_version": "",
+    "benchmark_dps": 34765.0,
+    "notes": "Guild Wars 2 Condition Quickness Scrapper - Spear Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/engineer/condition-quickness-scrapper-spear",
+    "chat_code": "[&DQMGJyY5Ky3ZEgAAAAAAAAcBAACTAQAAmAEAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 6,
+        "traits": [
+          1882,
+          482,
+          505
+        ]
+      },
+      "line2": {
+        "spec_id": 38,
+        "traits": [
+          1878,
+          2006,
+          433
+        ]
+      },
+      "line3": {
+        "spec_id": 43,
+        "traits": [
+          1917,
+          1860,
+          2052
+        ]
+      }
+    },
+    "skills": {
+      "heal": 30357,
+      "utilities": [
+        6020,
+        5812,
+        5927
+      ],
+      "elite": 30800
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 104022,
+      "food_id": 91878,
+      "utility_id": 9476,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 74357,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 67443,
+          "stat_id": 1067,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 76710,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 67446,
+          "stat_id": 1067,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 70641,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 73854,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1067,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 73580,
+          "stat_id": 1268,
+          "upgrade_id": 44944,
+          "infusions": [],
+          "upgrade2_id": 24605
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "engineer-heal-quickness-scrapper-mace-shield",
+    "name": "Heal Quickness Scrapper (Mace/Shield)",
+    "profession": "Engineer",
+    "elite_spec": "Scrapper",
+    "build_type": "Heal",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Heal Quickness Scrapper - Mace & Shield Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/engineer/heal-quickness-scrapper-mace-shield",
+    "chat_code": "[&DQMvOR0fKymEAAAAlQEAACcTAACWCwAAmAEAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 47,
+        "traits": [
+          394,
+          1834,
+          1916
+        ]
+      },
+      "line2": {
+        "spec_id": 29,
+        "traits": [
+          521,
+          470,
+          473
+        ]
+      },
+      "line3": {
+        "spec_id": 43,
+        "traits": [
+          1917,
+          1999,
+          2052
+        ]
+      }
+    },
+    "skills": {
+      "heal": 5802,
+      "utilities": [
+        5933,
+        31248,
+        10586
+      ],
+      "elite": 30800
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 101268,
+      "food_id": 91690,
+      "utility_id": 67528,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 85172,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 86623,
+          "stat_id": 1430,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 84923,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 84983,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 85149,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 85343,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1037,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1430,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1377,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1377,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1037,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1037,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 86504,
+          "stat_id": 1430,
+          "upgrade_id": 74326,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 86505,
+          "stat_id": 1430,
+          "upgrade_id": 24639,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "engineer-heal-quickness-scrapper-shortbow",
+    "name": "Heal Quickness Scrapper (Shortbow)",
+    "profession": "Engineer",
+    "elite_spec": "Scrapper",
+    "build_type": "Heal",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Heal Quickness Scrapper - Shortbow Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/engineer/heal-quickness-scrapper-shortbow",
+    "chat_code": "[&DQMvOR0fKymEAAAAlQEAACcTAACWCwAAmAEAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 47,
+        "traits": [
+          394,
+          1834,
+          1916
+        ]
+      },
+      "line2": {
+        "spec_id": 29,
+        "traits": [
+          521,
+          470,
+          473
+        ]
+      },
+      "line3": {
+        "spec_id": 43,
+        "traits": [
+          1917,
+          1999,
+          2052
+        ]
+      }
+    },
+    "skills": {
+      "heal": 5802,
+      "utilities": [
+        5933,
+        31248,
+        10586
+      ],
+      "elite": 30800
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 101268,
+      "food_id": 91690,
+      "utility_id": 67528,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 85172,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 86623,
+          "stat_id": 1430,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 84923,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 84983,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 85149,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 85343,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1037,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1430,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1377,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1377,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1037,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1037,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 86706,
+          "stat_id": 1430,
+          "upgrade_id": 74326,
+          "infusions": [],
+          "upgrade2_id": 24639
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "engineer-power-quickness-scrapper-hammer",
+    "name": "Power Quickness Scrapper (Hammer)",
+    "profession": "Engineer",
+    "elite_spec": "Scrapper",
+    "build_type": "Power",
+    "patch_version": "",
+    "benchmark_dps": 33015.0,
+    "notes": "Guild Wars 2 Power Quickness Scrapper - Hammer Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/engineer/power-quickness-scrapper-hammer",
+    "chat_code": "[&DQMGOyYfKy0qDwAAAAAAAAcBAAAmAQAAmAEAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 6,
+        "traits": [
+          1882,
+          1892,
+          1947
+        ]
+      },
+      "line2": {
+        "spec_id": 38,
+        "traits": [
+          1914,
+          1923,
+          510
+        ]
+      },
+      "line3": {
+        "spec_id": 43,
+        "traits": [
+          1917,
+          1860,
+          2052
+        ]
+      }
+    },
+    "skills": {
+      "heal": 21659,
+      "utilities": [
+        6020,
+        5812,
+        6161
+      ],
+      "elite": 30800
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 104800,
+      "food_id": 91805,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48087,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48089,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48085,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48086,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 96230,
+          "stat_id": 1697,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48084,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1697,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46763,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 24868
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "engineer-power-scrapper-hammer",
+    "name": "Power Scrapper (Hammer)",
+    "profession": "Engineer",
+    "elite_spec": "Scrapper",
+    "build_type": "Power",
+    "patch_version": "",
+    "benchmark_dps": 42205.0,
+    "notes": "Guild Wars 2 Power Scrapper - Hammer Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/engineer/power-scrapper-hammer",
+    "chat_code": "[&DQMGOyYfKz3ZEgAAAAAAACYBAAAHAQAAmAEAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 6,
+        "traits": [
+          1882,
+          1892,
+          1947
+        ]
+      },
+      "line2": {
+        "spec_id": 38,
+        "traits": [
+          1914,
+          1923,
+          510
+        ]
+      },
+      "line3": {
+        "spec_id": 43,
+        "traits": [
+          1917,
+          1860,
+          1849
+        ]
+      }
+    },
+    "skills": {
+      "heal": 30357,
+      "utilities": [
+        6020,
+        6161,
+        5812
+      ],
+      "elite": 30800
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 104800,
+      "food_id": 91805,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48087,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48089,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48085,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48086,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 96230,
+          "stat_id": 1697,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48084,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1697,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1697,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1697,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1697,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46763,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 24868
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "engineer-condition-holosmith-pistol-pistol",
+    "name": "Condition Holosmith (Pistol/Pistol)",
+    "profession": "Engineer",
+    "elite_spec": "Holosmith",
+    "build_type": "Condi",
+    "patch_version": "",
+    "benchmark_dps": 43198.0,
+    "notes": "Guild Wars 2 Condition Holosmith - Pistol & Pistol Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/engineer/condition-holosmith-pistol-pistol",
+    "chat_code": "[&DQMGJyY5OTcqDwAAAAAAAAcBAACTAQAA8BUAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 6,
+        "traits": [
+          1882,
+          482,
+          505
+        ]
+      },
+      "line2": {
+        "spec_id": 38,
+        "traits": [
+          1878,
+          2006,
+          433
+        ]
+      },
+      "line3": {
+        "spec_id": 57,
+        "traits": [
+          2106,
+          2103,
+          2064
+        ]
+      }
+    },
+    "skills": {
+      "heal": 21659,
+      "utilities": [
+        6020,
+        5812,
+        5927
+      ],
+      "elite": 42009
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100153,
+      "food_id": 91878,
+      "utility_id": 48917,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 74357,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 67443,
+          "stat_id": 1067,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 76710,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 67446,
+          "stat_id": 1067,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 70641,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 73854,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1067,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 72239,
+          "stat_id": 1268,
+          "upgrade_id": 24560,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 72239,
+          "stat_id": 1268,
+          "upgrade_id": 44944,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "engineer-condition-holosmith-spear",
+    "name": "Condition Holosmith (Spear)",
+    "profession": "Engineer",
+    "elite_spec": "Holosmith",
+    "build_type": "Condi",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Condition Holosmith - Spear Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/engineer/condition-holosmith-spear",
+    "chat_code": "[&DQMGJyY5OTcqDwAAAAAAAAcBAACTAQAA8BUAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 6,
+        "traits": [
+          1882,
+          482,
+          505
+        ]
+      },
+      "line2": {
+        "spec_id": 38,
+        "traits": [
+          1878,
+          2006,
+          433
+        ]
+      },
+      "line3": {
+        "spec_id": 57,
+        "traits": [
+          2106,
+          2103,
+          2064
+        ]
+      }
+    },
+    "skills": {
+      "heal": 21659,
+      "utilities": [
+        6020,
+        5812,
+        5927
+      ],
+      "elite": 42009
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100153,
+      "food_id": 91878,
+      "utility_id": 48917,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 74357,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 67443,
+          "stat_id": 1067,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 76710,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 67446,
+          "stat_id": 1067,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 70641,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 73854,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1067,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 73580,
+          "stat_id": 1268,
+          "upgrade_id": 24560,
+          "infusions": [],
+          "upgrade2_id": 44944
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "engineer-power-holosmith-sword-pistol",
+    "name": "Power Holosmith (Sword/Pistol)",
+    "profession": "Engineer",
+    "elite_spec": "Holosmith",
+    "build_type": "Power",
+    "patch_version": "",
+    "benchmark_dps": 41981.0,
+    "notes": "Guild Wars 2 Power Holosmith - Sword & Pistol / Shield Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/engineer/power-holosmith-sword-pistol",
+    "chat_code": "[&DQMGOyYfOSsqDwAAAAAAAOUWAABXFgAA8BUAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 6,
+        "traits": [
+          1882,
+          1892,
+          1947
+        ]
+      },
+      "line2": {
+        "spec_id": 38,
+        "traits": [
+          1914,
+          1923,
+          510
+        ]
+      },
+      "line3": {
+        "spec_id": 57,
+        "traits": [
+          2106,
+          2152,
+          2137
+        ]
+      }
+    },
+    "skills": {
+      "heal": 21659,
+      "utilities": [
+        6020,
+        43739,
+        42842
+      ],
+      "elite": 42009
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100947,
+      "food_id": 91805,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48087,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48089,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48085,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48086,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 96230,
+          "stat_id": 1697,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48084,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1697,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46774,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 46767,
+          "stat_id": 1077,
+          "upgrade_id": 24868,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 46770,
+          "stat_id": 1077,
+          "upgrade_id": 24639,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "engineer-condition-alacrity-mechanist-two-kits-spear",
+    "name": "Condition Alacrity Mechanist (Two/Kits/Spear)",
+    "profession": "Engineer",
+    "elite_spec": "Mechanist",
+    "build_type": "Condi",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Condition Alacrity Mechanist - Two Kits - Spear Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/engineer/condition-alacrity-mechanist-two-kits-spear",
+    "chat_code": "[&DQMGJyY5RikNGwAAhgAAAJMBAAAOGwAACRsAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 6,
+        "traits": [
+          1882,
+          482,
+          505
+        ]
+      },
+      "line2": {
+        "spec_id": 38,
+        "traits": [
+          1878,
+          2006,
+          433
+        ]
+      },
+      "line3": {
+        "spec_id": 70,
+        "traits": [
+          2282,
+          2276,
+          2281
+        ]
+      }
+    },
+    "skills": {
+      "heal": 63049,
+      "utilities": [
+        5805,
+        5927,
+        63113
+      ],
+      "elite": 63095
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100153,
+      "food_id": 91878,
+      "utility_id": 43449,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 97440,
+          "stat_id": 1694,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 97862,
+          "stat_id": 1694,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 97154,
+          "stat_id": 1694,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 96795,
+          "stat_id": 1694,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 95714,
+          "stat_id": 1694,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 97395,
+          "stat_id": 1694,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1694,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1694,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1694,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1694,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1694,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 73580,
+          "stat_id": 1268,
+          "upgrade_id": 24605,
+          "infusions": [],
+          "upgrade2_id": 44944
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "engineer-condition-alacrity-mechanist-one-kit-spear",
+    "name": "Condition Alacrity Mechanist (One/Kit/Spear)",
+    "profession": "Engineer",
+    "elite_spec": "Mechanist",
+    "build_type": "Condi",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Condition Alacrity Mechanist - One Kit - Spear Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/engineer/condition-alacrity-mechanist-one-kit-spear",
+    "chat_code": "[&DQMGJyY5RikNGwAAhgAAABAbAAAOGwAACRsAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 6,
+        "traits": [
+          1882,
+          482,
+          505
+        ]
+      },
+      "line2": {
+        "spec_id": 38,
+        "traits": [
+          1878,
+          2006,
+          433
+        ]
+      },
+      "line3": {
+        "spec_id": 70,
+        "traits": [
+          2282,
+          2276,
+          2281
+        ]
+      }
+    },
+    "skills": {
+      "heal": 63049,
+      "utilities": [
+        5805,
+        63111,
+        63113
+      ],
+      "elite": 63095
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100153,
+      "food_id": 91878,
+      "utility_id": 43449,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 97440,
+          "stat_id": 1694,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 97862,
+          "stat_id": 1694,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 97154,
+          "stat_id": 1694,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 96795,
+          "stat_id": 1694,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 95714,
+          "stat_id": 1694,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 97395,
+          "stat_id": 1694,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1694,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1694,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1694,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1694,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1694,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1694,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 73580,
+          "stat_id": 1268,
+          "upgrade_id": 24605,
+          "infusions": [],
+          "upgrade2_id": 24560
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "engineer-condition-mechanist-one-kit-spear",
+    "name": "Condition Mechanist (One/Kit/Spear)",
+    "profession": "Engineer",
+    "elite_spec": "Mechanist",
+    "build_type": "Condi",
+    "patch_version": "",
+    "benchmark_dps": 40667.0,
+    "notes": "Guild Wars 2 Condition Mechanist - One Kit - Spear Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/engineer/condition-mechanist-one-kit-spear",
+    "chat_code": "[&DQMGJyY5RhUNGwAAAAAAAA4bAAAQGwAACRsAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 6,
+        "traits": [
+          1882,
+          482,
+          505
+        ]
+      },
+      "line2": {
+        "spec_id": 38,
+        "traits": [
+          1878,
+          2006,
+          433
+        ]
+      },
+      "line3": {
+        "spec_id": 70,
+        "traits": [
+          2282,
+          2270,
+          2292
+        ]
+      }
+    },
+    "skills": {
+      "heal": 63049,
+      "utilities": [
+        6020,
+        63113,
+        63111
+      ],
+      "elite": 63095
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100153,
+      "food_id": 91878,
+      "utility_id": 9476,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 74357,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 72259,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 76710,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 75626,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 70641,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 73854,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 73580,
+          "stat_id": 1268,
+          "upgrade_id": 24560,
+          "infusions": [],
+          "upgrade2_id": 24605
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "engineer-condition-mechanist-two-kits-spear",
+    "name": "Condition Mechanist (Two/Kits/Spear)",
+    "profession": "Engineer",
+    "elite_spec": "Mechanist",
+    "build_type": "Condi",
+    "patch_version": "",
+    "benchmark_dps": 42018.0,
+    "notes": "Guild Wars 2 Condition Mechanist - Two Kits - Spear Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/engineer/condition-mechanist-two-kits-spear",
+    "chat_code": "[&DQMGJyY5RhUqDwAAAAAAABAbAACTAQAACRsAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 6,
+        "traits": [
+          1882,
+          482,
+          505
+        ]
+      },
+      "line2": {
+        "spec_id": 38,
+        "traits": [
+          1878,
+          2006,
+          433
+        ]
+      },
+      "line3": {
+        "spec_id": 70,
+        "traits": [
+          2282,
+          2270,
+          2292
+        ]
+      }
+    },
+    "skills": {
+      "heal": 21659,
+      "utilities": [
+        6020,
+        63111,
+        5927
+      ],
+      "elite": 63095
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100153,
+      "food_id": 91878,
+      "utility_id": 9476,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 74357,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 72259,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 76710,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 75626,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 70641,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 73854,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 73580,
+          "stat_id": 1268,
+          "upgrade_id": 44944,
+          "infusions": [],
+          "upgrade2_id": 24605
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "engineer-condition-mechanist-no-kit-spear",
+    "name": "Condition Mechanist (No/Kit/Spear)",
+    "profession": "Engineer",
+    "elite_spec": "Mechanist",
+    "build_type": "Condi",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Condition Mechanist - No Kit - Spear Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/engineer/condition-mechanist-no-kit-spear",
+    "chat_code": "[&DQMGOyY5RjUNGwAAGhsAAA4bAAAQGwAACRsAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 6,
+        "traits": [
+          1882,
+          1892,
+          1947
+        ]
+      },
+      "line2": {
+        "spec_id": 38,
+        "traits": [
+          1878,
+          2006,
+          433
+        ]
+      },
+      "line3": {
+        "spec_id": 70,
+        "traits": [
+          2282,
+          2270,
+          2298
+        ]
+      }
+    },
+    "skills": {
+      "heal": 63049,
+      "utilities": [
+        63253,
+        63113,
+        63111
+      ],
+      "elite": 63095
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100153,
+      "food_id": 91878,
+      "utility_id": 9476,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 74357,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 72259,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 76710,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 75626,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 70641,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 73854,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 73580,
+          "stat_id": 1268,
+          "upgrade_id": 24560,
+          "infusions": [],
+          "upgrade2_id": 48911
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "engineer-hand-kite-mechanist-mace-shield",
+    "name": "Hand Kite Alacrity Mechanist (Mace/Shield)",
+    "profession": "Engineer",
+    "elite_spec": "Mechanist",
+    "build_type": "Power",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Hand Kite Alacrity Mechanist - Mace & Shield Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/engineer/hand-kite-mechanist-mace-shield",
+    "chat_code": "[&DQMvOR0fRioUAQAAlQEAAAsbAACKAQAAmAEAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 47,
+        "traits": [
+          394,
+          1834,
+          1916
+        ]
+      },
+      "line2": {
+        "spec_id": 29,
+        "traits": [
+          521,
+          470,
+          473
+        ]
+      },
+      "line3": {
+        "spec_id": 70,
+        "traits": [
+          2296,
+          2276,
+          2281
+        ]
+      }
+    },
+    "skills": {
+      "heal": 5834,
+      "utilities": [
+        5933,
+        63262,
+        5904
+      ],
+      "elite": 30800
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 103015,
+      "food_id": 91737,
+      "utility_id": 87329,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 85172,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 85183,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 84923,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 84983,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 85149,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 85343,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1377,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1377,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1377,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1377,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1377,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1377,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 84912,
+          "stat_id": 1377,
+          "upgrade_id": 24599,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 84957,
+          "stat_id": 1377,
+          "upgrade_id": 44947,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "engineer-heal-alacrity-mechanist-shortbow",
+    "name": "Heal Alacrity Mechanist (Shortbow)",
+    "profession": "Engineer",
+    "elite_spec": "Mechanist",
+    "build_type": "Heal",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Heal Alacrity Mechanist - Shortbow Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/engineer/heal-alacrity-mechanist-shortbow",
+    "chat_code": "[&DQMvOR0fRiqEAAAAlQEAABAbAAAAAAAAmAEAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 47,
+        "traits": [
+          394,
+          1834,
+          1916
+        ]
+      },
+      "line2": {
+        "spec_id": 29,
+        "traits": [
+          521,
+          470,
+          473
+        ]
+      },
+      "line3": {
+        "spec_id": 70,
+        "traits": [
+          2296,
+          2276,
+          2281
+        ]
+      }
+    },
+    "skills": {
+      "heal": 5802,
+      "utilities": [
+        5933,
+        63111,
+        76790
+      ],
+      "elite": 30800
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 101268,
+      "food_id": 91690,
+      "utility_id": 67528,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 85172,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 86623,
+          "stat_id": 1430,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 84923,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 84983,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 85149,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 85343,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1377,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1430,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1377,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1377,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1377,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1377,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 86706,
+          "stat_id": 1430,
+          "upgrade_id": 74326,
+          "infusions": [],
+          "upgrade2_id": 24639
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "engineer-heal-alacrity-mechanist-mace-shield",
+    "name": "Heal Alacrity Mechanist (Mace/Shield)",
+    "profession": "Engineer",
+    "elite_spec": "Mechanist",
+    "build_type": "Heal",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Heal Alacrity Mechanist - Mace & Shield Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/engineer/heal-alacrity-mechanist-mace-shield",
+    "chat_code": "[&DQMvOR0fRiqEAAAAlQEAAAcBAAAAAAAAmAEAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 47,
+        "traits": [
+          394,
+          1834,
+          1916
+        ]
+      },
+      "line2": {
+        "spec_id": 29,
+        "traits": [
+          521,
+          470,
+          473
+        ]
+      },
+      "line3": {
+        "spec_id": 70,
+        "traits": [
+          2296,
+          2276,
+          2281
+        ]
+      }
+    },
+    "skills": {
+      "heal": 5802,
+      "utilities": [
+        5933,
+        5812,
+        76790
+      ],
+      "elite": 30800
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 101268,
+      "food_id": 91690,
+      "utility_id": 67528,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 85172,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 86623,
+          "stat_id": 1430,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 84923,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 84983,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 85149,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 85343,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1377,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1430,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1377,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1377,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1377,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1377,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 86504,
+          "stat_id": 1430,
+          "upgrade_id": 74326,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 86505,
+          "stat_id": 1430,
+          "upgrade_id": 24639,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "engineer-power-alacrity-mechanist-two-kits-sword-pistol",
+    "name": "Power Alacrity Mechanist (Two/Kits/Sword/Pistol)",
+    "profession": "Engineer",
+    "elite_spec": "Mechanist",
+    "build_type": "Power",
+    "patch_version": "",
+    "benchmark_dps": 34456.0,
+    "notes": "Guild Wars 2 Power Alacrity Mechanist - Two Kits - Sword & Pistol / Shield Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/engineer/power-alacrity-mechanist-two-kits-sword-pistol",
+    "chat_code": "[&DQMGNyYvRisNGwAAlQEAABobAAAHAQAACRsAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 6,
+        "traits": [
+          1882,
+          482,
+          1947
+        ]
+      },
+      "line2": {
+        "spec_id": 38,
+        "traits": [
+          1914,
+          1923,
+          526
+        ]
+      },
+      "line3": {
+        "spec_id": 70,
+        "traits": [
+          2279,
+          2276,
+          2281
+        ]
+      }
+    },
+    "skills": {
+      "heal": 63049,
+      "utilities": [
+        5933,
+        63253,
+        5812
+      ],
+      "elite": 63095
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 104800,
+      "food_id": 91805,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 89969,
+          "stat_id": 1566,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48089,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48085,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48086,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 89934,
+          "stat_id": 1566,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 89893,
+          "stat_id": 1566,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1566,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1566,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1566,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46774,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 46767,
+          "stat_id": 1077,
+          "upgrade_id": 24554,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 46770,
+          "stat_id": 1077,
+          "upgrade_id": 24639,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "engineer-power-alacrity-mechanist-rifle",
+    "name": "Power Alacrity Mechanist (Rifle)",
+    "profession": "Engineer",
+    "elite_spec": "Mechanist",
+    "build_type": "Power",
+    "patch_version": "",
+    "benchmark_dps": 31812.0,
+    "notes": "Guild Wars 2 Power Alacrity Mechanist - Rifle Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/engineer/power-alacrity-mechanist-rifle",
+    "chat_code": "[&DQMGNyYvRisNGwAAhgAAABobAAAQGwAACRsAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 6,
+        "traits": [
+          1882,
+          482,
+          1947
+        ]
+      },
+      "line2": {
+        "spec_id": 38,
+        "traits": [
+          1914,
+          1923,
+          526
+        ]
+      },
+      "line3": {
+        "spec_id": 70,
+        "traits": [
+          2279,
+          2276,
+          2281
+        ]
+      }
+    },
+    "skills": {
+      "heal": 63049,
+      "utilities": [
+        5805,
+        63253,
+        63111
+      ],
+      "elite": 63095
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100916,
+      "food_id": 91805,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 89969,
+          "stat_id": 1566,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48089,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48085,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48086,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 89934,
+          "stat_id": 1566,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 89893,
+          "stat_id": 1566,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1566,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1566,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1566,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46768,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 24554
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "engineer-power-mechanist-sword-pistol",
+    "name": "Power Mechanist (Sword/Pistol)",
+    "profession": "Engineer",
+    "elite_spec": "Mechanist",
+    "build_type": "Power",
+    "patch_version": "",
+    "benchmark_dps": 41141.0,
+    "notes": "Guild Wars 2 Power Mechanist - Sword & Pistol / Shield Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/engineer/power-mechanist-sword-pistol",
+    "chat_code": "[&DQMGNyYfRh8NGwAABwEAABobAAAQGwAACRsAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 6,
+        "traits": [
+          1882,
+          482,
+          1947
+        ]
+      },
+      "line2": {
+        "spec_id": 38,
+        "traits": [
+          1914,
+          1923,
+          510
+        ]
+      },
+      "line3": {
+        "spec_id": 70,
+        "traits": [
+          2279,
+          2294,
+          2292
+        ]
+      }
+    },
+    "skills": {
+      "heal": 63049,
+      "utilities": [
+        5812,
+        63253,
+        63111
+      ],
+      "elite": 63095
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 104800,
+      "food_id": 91805,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48087,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48089,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48085,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48086,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48088,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48084,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46774,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 46767,
+          "stat_id": 1077,
+          "upgrade_id": 24868,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 46770,
+          "stat_id": 1077,
+          "upgrade_id": 24639,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "engineer-power-mechanist-rifle",
+    "name": "Power Mechanist (Rifle)",
+    "profession": "Engineer",
+    "elite_spec": "Mechanist",
+    "build_type": "Power",
+    "patch_version": "",
+    "benchmark_dps": 38473.0,
+    "notes": "Guild Wars 2 Power Mechanist - Rifle Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/engineer/power-mechanist-rifle",
+    "chat_code": "[&DQMGNyYfRh8NGwAAhgAAABobAAAQGwAACRsAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 6,
+        "traits": [
+          1882,
+          482,
+          1947
+        ]
+      },
+      "line2": {
+        "spec_id": 38,
+        "traits": [
+          1914,
+          1923,
+          510
+        ]
+      },
+      "line3": {
+        "spec_id": 70,
+        "traits": [
+          2279,
+          2294,
+          2292
+        ]
+      }
+    },
+    "skills": {
+      "heal": 63049,
+      "utilities": [
+        5805,
+        63253,
+        63111
+      ],
+      "elite": 63095
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100916,
+      "food_id": 91805,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48087,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48089,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48085,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48086,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48088,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48084,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46768,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 24554
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "engineer-condition-alacrity-amalgam-steamshrieker-spear",
+    "name": "Condition Alacrity Amalgam (Steamshrieker/Spear)",
+    "profession": "Engineer",
+    "elite_spec": "Amalgam",
+    "build_type": "Condi",
+    "patch_version": "",
+    "benchmark_dps": 37433.0,
+    "notes": "Guild Wars 2 Condition Alacrity Amalgam - Steamshrieker - Spear Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/engineer/condition-alacrity-amalgam-steamshrieker-spear",
+    "chat_code": "[&DQMGJyY5SyaEAAAAAAAAAAcBAACTAQAAex0AAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 6,
+        "traits": [
+          1882,
+          482,
+          505
+        ]
+      },
+      "line2": {
+        "spec_id": 38,
+        "traits": [
+          1878,
+          2006,
+          433
+        ]
+      },
+      "line3": {
+        "spec_id": 75,
+        "traits": [
+          2395,
+          2383,
+          2387
+        ]
+      }
+    },
+    "skills": {
+      "heal": 5802,
+      "utilities": [
+        6020,
+        5812,
+        5927
+      ],
+      "elite": 76993
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 104022,
+      "food_id": 91878,
+      "utility_id": 9476,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 47943,
+          "stat_id": 559,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 67443,
+          "stat_id": 1067,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 47941,
+          "stat_id": 559,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 67446,
+          "stat_id": 1067,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 47944,
+          "stat_id": 559,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 47940,
+          "stat_id": 559,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1067,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 559,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 559,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 559,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 559,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 559,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 73580,
+          "stat_id": 1268,
+          "upgrade_id": 44944,
+          "infusions": [],
+          "upgrade2_id": 24560
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "engineer-condition-alacrity-amalgam-two-kits-spear",
+    "name": "Condition Alacrity Amalgam (Two/Kits/Spear)",
+    "profession": "Engineer",
+    "elite_spec": "Amalgam",
+    "build_type": "Condi",
+    "patch_version": "",
+    "benchmark_dps": 35846.0,
+    "notes": "Guild Wars 2 Condition Alacrity Amalgam - Two Kits - Spear Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/engineer/condition-alacrity-amalgam-two-kits-spear",
+    "chat_code": "[&DQMGJyY5SyYqDwAAAAAAAFodAACTAQAAex0AAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 6,
+        "traits": [
+          1882,
+          482,
+          505
+        ]
+      },
+      "line2": {
+        "spec_id": 38,
+        "traits": [
+          1878,
+          2006,
+          433
+        ]
+      },
+      "line3": {
+        "spec_id": 75,
+        "traits": [
+          2395,
+          2383,
+          2387
+        ]
+      }
+    },
+    "skills": {
+      "heal": 21659,
+      "utilities": [
+        6020,
+        77209,
+        5927
+      ],
+      "elite": 76993
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100153,
+      "food_id": 91878,
+      "utility_id": 48917,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 47943,
+          "stat_id": 559,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 67443,
+          "stat_id": 1067,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 47941,
+          "stat_id": 559,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 67446,
+          "stat_id": 1067,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 47944,
+          "stat_id": 559,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 47940,
+          "stat_id": 559,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1067,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 559,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 559,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 559,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 559,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 559,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 73580,
+          "stat_id": 1268,
+          "upgrade_id": 24609,
+          "infusions": [],
+          "upgrade2_id": 24560
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "engineer-condition-amalgam-steamshrieker-spear",
+    "name": "Condition Amalgam (Steamshrieker/Spear)",
+    "profession": "Engineer",
+    "elite_spec": "Amalgam",
+    "build_type": "Condi",
+    "patch_version": "",
+    "benchmark_dps": 42824.0,
+    "notes": "Guild Wars 2 Condition Amalgam - Steamshrieker - Spear Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/engineer/condition-amalgam-steamshrieker-spear",
+    "chat_code": "[&DQMGJyY5SzaEAAAAAAAAAAcBAACTAQAAex0AAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 6,
+        "traits": [
+          1882,
+          482,
+          505
+        ]
+      },
+      "line2": {
+        "spec_id": 38,
+        "traits": [
+          1878,
+          2006,
+          433
+        ]
+      },
+      "line3": {
+        "spec_id": 75,
+        "traits": [
+          2395,
+          2383,
+          2334
+        ]
+      }
+    },
+    "skills": {
+      "heal": 5802,
+      "utilities": [
+        6020,
+        5812,
+        5927
+      ],
+      "elite": 76993
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 104022,
+      "food_id": 91878,
+      "utility_id": 48917,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 74357,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 67443,
+          "stat_id": 1067,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 76710,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 67446,
+          "stat_id": 1067,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 70641,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 73854,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1067,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 73580,
+          "stat_id": 1268,
+          "upgrade_id": 44944,
+          "infusions": [],
+          "upgrade2_id": 24560
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "engineer-condition-amalgam-one-kit-spear",
+    "name": "Condition Amalgam (One/Kit/Spear)",
+    "profession": "Engineer",
+    "elite_spec": "Amalgam",
+    "build_type": "Condi",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Condition Amalgam - One Kit - Spear Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/engineer/condition-amalgam-one-kit-spear",
+    "chat_code": "[&DQMGJyY5SzaAHQAAAAAAACIBAABaHQAAex0AAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 6,
+        "traits": [
+          1882,
+          482,
+          505
+        ]
+      },
+      "line2": {
+        "spec_id": 38,
+        "traits": [
+          1878,
+          2006,
+          433
+        ]
+      },
+      "line3": {
+        "spec_id": 75,
+        "traits": [
+          2395,
+          2383,
+          2334
+        ]
+      }
+    },
+    "skills": {
+      "heal": 76738,
+      "utilities": [
+        6020,
+        5836,
+        77209
+      ],
+      "elite": 76993
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100153,
+      "food_id": 91878,
+      "utility_id": 9476,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 74357,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 67443,
+          "stat_id": 1067,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 76710,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 67446,
+          "stat_id": 1067,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 70641,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 73854,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1067,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 73580,
+          "stat_id": 1268,
+          "upgrade_id": 24605,
+          "infusions": [],
+          "upgrade2_id": 24609
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "engineer-heal-alacrity-amalgam-shortbow",
+    "name": "Heal Alacrity Amalgam (Shortbow)",
+    "profession": "Engineer",
+    "elite_spec": "Amalgam",
+    "build_type": "Heal",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Heal Alacrity Amalgam - Shortbow Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/engineer/heal-alacrity-amalgam-shortbow",
+    "chat_code": "[&DQMvOR0fSy6EAAAAlQEAAAAAAAAAAAAAmAEAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 47,
+        "traits": [
+          394,
+          1834,
+          1916
+        ]
+      },
+      "line2": {
+        "spec_id": 29,
+        "traits": [
+          521,
+          470,
+          473
+        ]
+      },
+      "line3": {
+        "spec_id": 75,
+        "traits": [
+          2395,
+          2349,
+          2387
+        ]
+      }
+    },
+    "skills": {
+      "heal": 5802,
+      "utilities": [
+        5933,
+        76790,
+        76790
+      ],
+      "elite": 30800
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 101268,
+      "food_id": 91690,
+      "utility_id": 67528,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 85172,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 86623,
+          "stat_id": 1430,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 84923,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 84983,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 85149,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 85343,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1377,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1430,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1377,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1377,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1377,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1377,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 86706,
+          "stat_id": 1430,
+          "upgrade_id": 74326,
+          "infusions": [],
+          "upgrade2_id": 24639
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "engineer-heal-alacrity-amalgam-mace-shield",
+    "name": "Heal Alacrity Amalgam (Mace/Shield)",
+    "profession": "Engineer",
+    "elite_spec": "Amalgam",
+    "build_type": "Heal",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Heal Alacrity Amalgam - Mace & Shield Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/engineer/heal-alacrity-amalgam-mace-shield",
+    "chat_code": "[&DQMvOR0fSy6EAAAAlQEAAAAAAAAAAAAAmAEAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 47,
+        "traits": [
+          394,
+          1834,
+          1916
+        ]
+      },
+      "line2": {
+        "spec_id": 29,
+        "traits": [
+          521,
+          470,
+          473
+        ]
+      },
+      "line3": {
+        "spec_id": 75,
+        "traits": [
+          2395,
+          2349,
+          2387
+        ]
+      }
+    },
+    "skills": {
+      "heal": 5802,
+      "utilities": [
+        5933,
+        76790,
+        76790
+      ],
+      "elite": 30800
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 101139,
+      "food_id": 91690,
+      "utility_id": 67528,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 85172,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 86623,
+          "stat_id": 1430,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 84923,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 84983,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 85149,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 85343,
+          "stat_id": 1377,
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1377,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1430,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1377,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1377,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1377,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1377,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 86504,
+          "stat_id": 1430,
+          "upgrade_id": 74326,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 86505,
+          "stat_id": 1430,
+          "upgrade_id": 24639,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "engineer-power-alacrity-amalgam-hammer",
+    "name": "Power Alacrity Amalgam (Hammer)",
+    "profession": "Engineer",
+    "elite_spec": "Amalgam",
+    "build_type": "Power",
+    "patch_version": "",
+    "benchmark_dps": 35416.0,
+    "notes": "Guild Wars 2 Power Alacrity Amalgam - Hammer Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/engineer/power-alacrity-amalgam-hammer",
+    "chat_code": "[&DQMGOyYvSy4qDwAAhgAAAAcBAAAmAQAAex0AAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 6,
+        "traits": [
+          1882,
+          1892,
+          1947
+        ]
+      },
+      "line2": {
+        "spec_id": 38,
+        "traits": [
+          1914,
+          1923,
+          526
+        ]
+      },
+      "line3": {
+        "spec_id": 75,
+        "traits": [
+          2395,
+          2349,
+          2387
+        ]
+      }
+    },
+    "skills": {
+      "heal": 21659,
+      "utilities": [
+        5805,
+        5812,
+        6161
+      ],
+      "elite": 76993
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 104800,
+      "food_id": 91805,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 89969,
+          "stat_id": 1566,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48089,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48085,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48086,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 89934,
+          "stat_id": 1566,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 89893,
+          "stat_id": 1566,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1566,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1566,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1566,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46763,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 24868
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "engineer-power-amalgam-double-helix-hammer",
+    "name": "Power Amalgam (Double/Helix/Hammer)",
+    "profession": "Engineer",
+    "elite_spec": "Amalgam",
+    "build_type": "Power",
+    "patch_version": "",
+    "benchmark_dps": 43571.0,
+    "notes": "Guild Wars 2 Power Amalgam - Double Helix - Hammer Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/engineer/power-amalgam-double-helix-hammer",
+    "chat_code": "[&DQMGOyYvSzoqDwAAhgAAAAcBAAAmAQAAex0AAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 6,
+        "traits": [
+          1882,
+          1892,
+          1947
+        ]
+      },
+      "line2": {
+        "spec_id": 38,
+        "traits": [
+          1914,
+          1923,
+          526
+        ]
+      },
+      "line3": {
+        "spec_id": 75,
+        "traits": [
+          2395,
+          2420,
+          2334
+        ]
+      }
+    },
+    "skills": {
+      "heal": 21659,
+      "utilities": [
+        5805,
+        5812,
+        6161
+      ],
+      "elite": 76993
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 104800,
+      "food_id": 91805,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48087,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48089,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48085,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48086,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48088,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48084,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 81167,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46763,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 24868
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "engineer-power-amalgam-hammer",
+    "name": "Power Amalgam (Hammer)",
+    "profession": "Engineer",
+    "elite_spec": "Amalgam",
+    "build_type": "Power",
+    "patch_version": "",
+    "benchmark_dps": 42170.0,
+    "notes": "Guild Wars 2 Power Amalgam - Symbiotic Synergy - Hammer Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/engineer/power-amalgam-hammer",
+    "chat_code": "[&DQMGOyYvSxoqDwAAhgAAAAcBAAAmAQAAex0AAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 6,
+        "traits": [
+          1882,
+          1892,
+          1947
+        ]
+      },
+      "line2": {
+        "spec_id": 38,
+        "traits": [
+          1914,
+          1923,
+          526
+        ]
+      },
+      "line3": {
+        "spec_id": 75,
+        "traits": [
+          2395,
+          2420,
+          2406
+        ]
+      }
+    },
+    "skills": {
+      "heal": 21659,
+      "utilities": [
+        5805,
+        5812,
+        6161
+      ],
+      "elite": 76993
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 104800,
+      "food_id": 91805,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48087,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48089,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48085,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48086,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48088,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48084,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46763,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 24868
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "engineer-beginner-power-scrapper-hammer",
+    "name": "Beginner Power Scrapper (Hammer)",
+    "profession": "Engineer",
+    "elite_spec": "Scrapper",
+    "build_type": "Power",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Beginner Power Scrapper - Hammer Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/engineer/beginner-power-scrapper-hammer",
+    "chat_code": "[&DQMGOyYvKz3ZEgAAAAAAACYBAAAHAQAAmAEAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 6,
+        "traits": [
+          1882,
+          1892,
+          1947
+        ]
+      },
+      "line2": {
+        "spec_id": 38,
+        "traits": [
+          1914,
+          1923,
+          526
+        ]
+      },
+      "line3": {
+        "spec_id": 43,
+        "traits": [
+          1917,
+          1860,
+          1849
+        ]
+      }
+    },
+    "skills": {
+      "heal": 30357,
+      "utilities": [
+        6020,
+        6161,
+        5812
+      ],
+      "elite": 30800
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 104800,
+      "food_id": 91805,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48087,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48089,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48085,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48086,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 96230,
+          "stat_id": 1697,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48084,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1697,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1697,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1697,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1697,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46763,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 24868
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "engineer-beginner-condition-holosmith-spear",
+    "name": "Beginner Condition Holosmith (Spear)",
+    "profession": "Engineer",
+    "elite_spec": "Holosmith",
+    "build_type": "Condi",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Beginner Condition Holosmith - Spear Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/engineer/beginner-condition-holosmith-spear",
+    "chat_code": "[&DQMGJyY5OTcqDwAAAAAAAAcBAACTAQAA8BUAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 6,
+        "traits": [
+          1882,
+          482,
+          505
+        ]
+      },
+      "line2": {
+        "spec_id": 38,
+        "traits": [
+          1878,
+          2006,
+          433
+        ]
+      },
+      "line3": {
+        "spec_id": 57,
+        "traits": [
+          2106,
+          2103,
+          2064
+        ]
+      }
+    },
+    "skills": {
+      "heal": 21659,
+      "utilities": [
+        6020,
+        5812,
+        5927
+      ],
+      "elite": 42009
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100153,
+      "food_id": 91878,
+      "utility_id": 48917,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 74357,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 67443,
+          "stat_id": 1067,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 76710,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 67446,
+          "stat_id": 1067,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 70641,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 73854,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1067,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 73580,
+          "stat_id": 1268,
+          "upgrade_id": 24560,
+          "infusions": [],
+          "upgrade2_id": 44944
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "engineer-condition-engineer-pistol-pistol",
+    "name": "Condition Engineer (Pistol/Pistol)",
+    "profession": "Engineer",
+    "elite_spec": "",
+    "build_type": "Condi",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Condition Engineer - Pistol & Pistol Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/engineer/condition-engineer-pistol-pistol",
+    "chat_code": "[&DQMGKyY5FRUqDwAAAAAAAAcBAACTAQAAmAEAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 6,
+        "traits": [
+          1882,
+          1892,
+          505
+        ]
+      },
+      "line2": {
+        "spec_id": 38,
+        "traits": [
+          1878,
+          2006,
+          433
+        ]
+      },
+      "line3": {
+        "spec_id": 21,
+        "traits": [
+          532,
+          512,
+          1856
+        ]
+      }
+    },
+    "skills": {
+      "heal": 21659,
+      "utilities": [
+        6020,
+        5812,
+        5927
+      ],
+      "elite": 30800
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100153,
+      "food_id": 91878,
+      "utility_id": 48917,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 74357,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 72259,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 76710,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 75626,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 70641,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 73854,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 72239,
+          "stat_id": 1268,
+          "upgrade_id": 24560,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 72239,
+          "stat_id": 1268,
+          "upgrade_id": 44944,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "engineer-power-engineer-hammer",
+    "name": "Power Engineer (Hammer)",
+    "profession": "Engineer",
+    "elite_spec": "",
+    "build_type": "Power",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Power Engineer - Hammer Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/engineer/power-engineer-hammer",
+    "chat_code": "[&DQMGNyYvFT0AAAAAAAAAAKMAAAAAAAAAmAEAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 6,
+        "traits": [
+          1882,
+          482,
+          1947
+        ]
+      },
+      "line2": {
+        "spec_id": 38,
+        "traits": [
+          1914,
+          1923,
+          526
+        ]
+      },
+      "line3": {
+        "spec_id": 21,
+        "traits": [
+          532,
+          1832,
+          1679
+        ]
+      }
+    },
+    "skills": {
+      "heal": 30881,
+      "utilities": [
+        6020,
+        5818,
+        30337
+      ],
+      "elite": 30800
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100947,
+      "food_id": 91805,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48087,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48089,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48085,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48086,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 96230,
+          "stat_id": 1697,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48084,
+          "stat_id": 1077,
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1697,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1697,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46763,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 24868
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "engineer-power-alacrity-mechanist-sword-pistol",
+    "name": "Power Alacrity Mechanist (Sword/Pistol)",
+    "profession": "Engineer",
+    "elite_spec": "Mechanist",
+    "build_type": "Power",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Power Alacrity Mechanist - Sword & Pistol / Shield Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/engineer/power-alacrity-mechanist-sword-pistol",
+    "chat_code": "[&DQMGNyYvRisNGwAAlQEAABobAAAQGwAACRsAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 6,
+        "traits": [
+          1882,
+          482,
+          1947
+        ]
+      },
+      "line2": {
+        "spec_id": 38,
+        "traits": [
+          1914,
+          1923,
+          526
+        ]
+      },
+      "line3": {
+        "spec_id": 70,
+        "traits": [
+          2279,
+          2276,
+          2281
+        ]
+      }
+    },
+    "skills": {
+      "heal": 63049,
+      "utilities": [
+        5933,
+        63253,
+        63111
+      ],
+      "elite": 63095
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100916,
+      "food_id": 91805,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 89969,
+          "stat_id": 1566,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48089,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48085,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48086,
+          "stat_id": 1077,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 89934,
+          "stat_id": 1566,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 89893,
+          "stat_id": 1566,
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1566,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1566,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1566,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1077,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46774,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 46767,
+          "stat_id": 1077,
+          "upgrade_id": 24554,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 46770,
+          "stat_id": 1077,
+          "upgrade_id": 24639,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "engineer-condition-amalgam-three-kits-spear",
+    "name": "Condition Amalgam (Three/Kits/Spear)",
+    "profession": "Engineer",
+    "elite_spec": "Amalgam",
+    "build_type": "Condi",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Guild Wars 2 Condition Amalgam - Three Kits - Spear Meta build for raids: complete guide with gear, runes, relics, traits, and rotation tips.",
+    "source_url": "https://snowcrows.com/builds/raids/engineer/condition-amalgam-three-kits-spear",
+    "chat_code": "[&DQMGJyY5SzaAHQAABwEAAJMBAAAAAAAAex0AAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 6,
+        "traits": [
+          1882,
+          482,
+          505
+        ]
+      },
+      "line2": {
+        "spec_id": 38,
+        "traits": [
+          1878,
+          2006,
+          433
+        ]
+      },
+      "line3": {
+        "spec_id": 75,
+        "traits": [
+          2395,
+          2383,
+          2334
+        ]
+      }
+    },
+    "skills": {
+      "heal": 76738,
+      "utilities": [
+        5812,
+        5927,
+        6020
+      ],
+      "elite": 76993
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100153,
+      "food_id": 91878,
+      "utility_id": 9476,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 74357,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 67443,
+          "stat_id": 1067,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 76710,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 67446,
+          "stat_id": 1067,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 70641,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 73854,
+          "stat_id": 1268,
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79837,
+          "stat_id": 1067,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79745,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79444,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 81169,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79710,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 81167,
+          "stat_id": 1268,
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 73580,
+          "stat_id": 1268,
+          "upgrade_id": 44944,
+          "infusions": [],
+          "upgrade2_id": 24605
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  }
+]

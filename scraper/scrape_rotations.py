@@ -60,6 +60,81 @@ def fetch(url: str, delay: float) -> str | None:
         return None
 
 
+def _extract_item(el):
+    """Recursively walk an element, replacing skill embeds with {skill:N}.
+    Returns (text, skill_ids) tuple.
+    """
+    parts = []
+    skill_ids = []
+
+    for child in el.children:
+        if isinstance(child, str):
+            parts.append(child)
+            continue
+
+        tag = child.name
+        if tag is None:
+            if child.strip():
+                parts.append(child)
+            continue
+
+        # ── Skill embed: <span data-armory-embed="skills" data-armory-ids="N,..."> ──
+        if tag == "span" and child.get("data-armory-embed") == "skills":
+            ids_str = child.get("data-armory-ids", "")
+            for sid in ids_str.split(","):
+                sid = sid.strip()
+                if not sid:
+                    continue
+                try:
+                    sid_int = int(sid)
+                    skill_ids.append(sid_int)
+                    parts.append("{skill:%d}" % sid_int)
+                except ValueError:
+                    pass
+            continue
+
+        # ── Armory custom term: <span class="sc-armory-custom" ...>Text</span> ──
+        # Keep the visible text (e.g. "Damage", "Cooldown", "Auto Attack")
+        if tag == "span" and child.get("class") and "sc-armory-custom" in child.get("class"):
+            inner = child.get_text(strip=True)
+            if inner:
+                parts.append(inner)
+            continue
+
+        # ── Inline code (F1, 2, 3, etc.) ──
+        if tag == "code":
+            inner = child.get_text(strip=True)
+            if inner:
+                parts.append(inner)
+            continue
+
+        # ── Arrow icon <i class="fas fa-arrow-right"> ──
+        if tag == "i":
+            cls = child.get("class", [])
+            if any("arrow-right" in c for c in cls):
+                parts.append(" -> ")
+            continue
+
+        # ── Line break ──
+        if tag == "br":
+            parts.append(" ")
+            continue
+
+        # ── Nested list — skip (inner items are picked up by find_all) ──
+        if tag in ("ul", "ol"):
+            continue
+
+        # ── Any other tag — recurse ──
+        sub_text, sub_ids = _extract_item(child)
+        if sub_text:
+            parts.append(sub_text)
+        skill_ids.extend(sub_ids)
+
+    text = "".join(parts)
+    text = re.sub(r"\s+", " ", text).strip()
+    return text, skill_ids
+
+
 def extract_rotation_sections(html: str) -> list[dict]:
     """Parse <h3> guide sections + their content divs from the page HTML."""
     soup = BeautifulSoup(html, "lxml")
@@ -85,11 +160,10 @@ def extract_rotation_sections(html: str) -> list[dict]:
 
         items = []
         for el in md_span.find_all(["p", "li"], recursive=True):
-            text = el.get_text(strip=True)
-            if not text:
+            text, sids = _extract_item(el)
+            text = text.strip()
+            if not text and not sids:
                 continue
-            # Clean up excessive whitespace
-            text = re.sub(r"\s+", " ", text)
             items.append({"text": text})
 
         sections.append({"title": title, "items": items})

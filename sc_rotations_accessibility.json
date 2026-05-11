@@ -5,13 +5,13 @@
         "title": "Key Concepts",
         "items": [
           {
-            "text": "This rotation stays inwith the option of usingif you want a more complex rotation."
+            "text": "This rotation stays in {skill:5492} with the option of using {skill:5495} if you want a more complex rotation."
           },
           {
-            "text": "The core concept of the rotation is to use yourF1,2,3and5skills in eachAttunementoffCooldown."
+            "text": "The core concept of the rotation is to use your F1, 2, 3 and 5 skills in each Attunement off Cooldown."
           },
           {
-            "text": "The majority of yourDamagecomes fromBurningandBleeding."
+            "text": "The majority of your Damage comes from Burning and Bleeding."
           }
         ]
       },
@@ -19,7 +19,22 @@
         "title": "Opener",
         "items": [
           {
-            "text": "Summonandinbefore you enter combat. It's freeDamage."
+            "text": "Summon {skill:5502} and {skill:25488} in {skill:5492} before you enter combat. It's free Damage."
+          },
+          {
+            "text": "{skill:5675}"
+          },
+          {
+            "text": "{skill:29533}"
+          },
+          {
+            "text": "{skill:5692}"
+          },
+          {
+            "text": "{skill:5542}"
+          },
+          {
+            "text": "{skill:29706}"
           }
         ]
       },
@@ -27,10 +42,22 @@
         "title": "Step One",
         "items": [
           {
-            "text": "After your opener, use all of your skills offCooldownwith the following priority:"
+            "text": "After your opener, use all of your skills off Cooldown with the following priority:"
           },
           {
-            "text": "Auto Attackin the downtime between skills."
+            "text": "{skill:5675}"
+          },
+          {
+            "text": "{skill:29706}"
+          },
+          {
+            "text": "{skill:5692}"
+          },
+          {
+            "text": "{skill:29533}"
+          },
+          {
+            "text": "Auto Attack in the downtime between skills."
           }
         ]
       },
@@ -38,22 +65,31 @@
         "title": "Step Two",
         "items": [
           {
-            "text": "Next, we can add in your utility skills to provide even moreDamage."
+            "text": "Next, we can add in your utility skills to provide even more Damage."
           },
           {
-            "text": "Use the following skills offCooldown:"
+            "text": "Use the following skills off Cooldown:"
+          },
+          {
+            "text": "{skill:5542}"
+          },
+          {
+            "text": "{skill:5734}"
+          },
+          {
+            "text": "{skill:25499}"
           },
           {
             "text": "So where do these skills fit in your priority:"
           },
           {
-            "text": "is higher priority than"
+            "text": "{skill:5542} is higher priority than {skill:29533}"
           },
           {
-            "text": "is lower priority than."
+            "text": "{skill:5734} is lower priority than {skill:29533}."
           },
           {
-            "text": "Usewhenever it's offCooldownto replaceAuto Attacks."
+            "text": "Use {skill:5502} whenever it's off Cooldown to replace Auto Attacks."
           }
         ]
       },
@@ -61,19 +97,37 @@
         "title": "Step Three",
         "items": [
           {
-            "text": "If you're looking for more complexity, you can add in."
+            "text": "If you're looking for more complexity, you can add in {skill:5495}."
           },
           {
-            "text": "In, you have a very short looped rotation:"
+            "text": "In {skill:5495}, you have a very short looped rotation:"
           },
           {
-            "text": "Now you know when you swap from, but when do you need to change from?"
+            "text": "{skill:5695} -> {skill:5780}"
           },
           {
-            "text": "Useas the first and last skill in.Cast it three times per."
+            "text": "{skill:5696}"
           },
           {
-            "text": "Cast it three times per."
+            "text": "{skill:29618}"
+          },
+          {
+            "text": "{skill:30336}"
+          },
+          {
+            "text": "{skill:5695} -> {skill:5780}"
+          },
+          {
+            "text": "{skill:5492}"
+          },
+          {
+            "text": "Now you know when you swap from {skill:5495} -> {skill:5492}, but when do you need to change from {skill:5492} -> {skill:5495}?"
+          },
+          {
+            "text": "Use {skill:5675} as the first and last skill in {skill:5492}."
+          },
+          {
+            "text": "Cast it three times per {skill:5492}."
           }
         ]
       },
@@ -89,10 +143,10 @@
         "title": "Key Concepts",
         "items": [
           {
-            "text": "Your role as a healer is toHealyour party and maintain essential boons. You'll also be responsible for handling mechanics by providingStability,Aegis, and dealingBreakbardamage when needed."
+            "text": "Your role as a healer is to Heal your party and maintain essential boons. You'll also be responsible for handling mechanics by providing Stability, Aegis, and dealing Breakbar damage when needed."
           },
           {
-            "text": "You’ll be learning a simplerotation to maintain boons and passivelyHeal, while using utility skills to handle mechanics and activelyHealyour allies."
+            "text": "You’ll be learning a simple {skill:29706} -> {skill:5493} -> {skill:29719} -> {skill:5493} rotation to maintain boons and passively Heal, while using utility skills to handle mechanics and actively Heal your allies."
           }
         ]
       },
@@ -103,10 +157,19 @@
             "text": "First you'll want to get comfortable using your core rotation:"
           },
           {
-            "text": "+"
+            "text": "{skill:29706} + {skill:30662}"
           },
           {
-            "text": "This will already upkeep permanent 25Might,Alacrity,Fury,Regeneration,ProtectionandVigor."
+            "text": "{skill:29548}"
+          },
+          {
+            "text": "{skill:5527}"
+          },
+          {
+            "text": "{skill:29719}"
+          },
+          {
+            "text": "This will already upkeep permanent 25 Might, Alacrity, Fury, Regeneration, Protection and Vigor."
           }
         ]
       },
@@ -114,10 +177,10 @@
         "title": "Step Two",
         "items": [
           {
-            "text": "Useorwhenever you needHealingand/orCondition Cleanses."
+            "text": "Use {skill:29535} or {skill:5570} whenever you need Healing and/or Condition Cleanses."
           },
           {
-            "text": "Keep in mind thatcan interrupt other skill casts, so be mindful of when you use it."
+            "text": "Keep in mind that {skill:29535} can interrupt other skill casts, so be mindful of when you use it."
           }
         ]
       },
@@ -125,10 +188,19 @@
         "title": "Step Three",
         "items": [
           {
-            "text": "Attune tobetweenand— in either direction — to trigger bothandfor extra passiveHealing."
+            "text": "Attune to {skill:5493} between {skill:5492} and {skill:5494} — in either direction — to trigger both and for extra passive Healing."
           },
           {
-            "text": "While you're infeel free to use any of the following skills for even moreHealing:"
+            "text": "While you're in {skill:5493} feel free to use any of the following skills for even more Healing:"
+          },
+          {
+            "text": "{skill:5537}"
+          },
+          {
+            "text": "{skill:30864}"
+          },
+          {
+            "text": "{skill:30446}"
           }
         ]
       },
@@ -136,10 +208,22 @@
         "title": "Step Four",
         "items": [
           {
-            "text": "Addandto provideSwiftnessto your party. Yourwill now look like:"
+            "text": "Add {skill:30008} and {skill:5646} to provide Swiftness to your party. Your {skill:5494} will now look like:"
           },
           {
-            "text": "Make sure to useimmediately afterso itBlasts'sLightning Field."
+            "text": "{skill:5527}"
+          },
+          {
+            "text": "{skill:30008}"
+          },
+          {
+            "text": "{skill:29719}"
+          },
+          {
+            "text": "{skill:5646}"
+          },
+          {
+            "text": "Make sure to use {skill:5646} immediately after {skill:29719} so it Blasts {skill:29719}'s Lightning Field."
           }
         ]
       },
@@ -147,7 +231,7 @@
         "title": "Step Five",
         "items": [
           {
-            "text": "Now you can choose to add some complexity by swapping outfor. This will provide additionalHealingthroughBlastswhen using,,,andinside aCombo Field."
+            "text": "Now you can choose to add some complexity by swapping out for . This will provide additional Healing through Blasts when using {skill:5646}, {skill:5487}, {skill:30864}, {skill:5638} and {skill:30432} inside a Combo Field."
           }
         ]
       },
@@ -163,16 +247,25 @@
         "title": "Key Concepts",
         "items": [
           {
-            "text": "The majority of yourDamagein this build comes from."
+            "text": "The majority of your Damage in this build comes from {skill:29719}."
           },
           {
-            "text": "allows this build to function by resetting theCooldownofwithCritical Hits."
+            "text": "allows this build to function by resetting the Cooldown of {skill:5494} with Critical Hits."
           },
           {
-            "text": "As this build has almost 100%Critical Chance, you will instantly reset theCooldownofwhen you swap toor."
+            "text": "As this build has almost 100% Critical Chance, you will instantly reset the Cooldown of {skill:5494} when you swap to {skill:5492} or {skill:5493}."
           },
           {
-            "text": "The core concept of yourAttunementsis as follows:"
+            "text": "The core concept of your Attunements is as follows:"
+          },
+          {
+            "text": "{skill:5494}"
+          },
+          {
+            "text": "{skill:5492} -> {skill:5494}"
+          },
+          {
+            "text": "{skill:5493} -> {skill:5494}"
           },
           {
             "text": "Repeat"
@@ -183,13 +276,19 @@
         "title": "Opener",
         "items": [
           {
-            "text": "Summoninbefore you enter combat. It's freeDamage."
+            "text": "Summon {skill:25488} in {skill:5492} before you enter combat. It's free Damage."
           },
           {
-            "text": "+"
+            "text": "{skill:29719}"
           },
           {
-            "text": "and immediately back to"
+            "text": "{skill:30662} + {skill:5539}"
+          },
+          {
+            "text": "{skill:5561}"
+          },
+          {
+            "text": "{skill:5492} and immediately back to {skill:5494}"
           }
         ]
       },
@@ -200,22 +299,25 @@
             "text": "The base of your rotation is as follows:"
           },
           {
-            "text": "Auto Attack"
+            "text": "{skill:5494}"
           },
           {
-            "text": "and immediately back to"
+            "text": "Auto Attack -> {skill:29719}"
           },
           {
-            "text": "Auto Attack"
+            "text": "{skill:5492} and immediately back to {skill:5494}"
           },
           {
-            "text": "and immediately back to"
+            "text": "Auto Attack -> {skill:29719}"
           },
           {
-            "text": "On step 3 and step 6,will immediately trigger allowing you to instantly swap back to."
+            "text": "{skill:5493} and immediately back to {skill:5494}"
           },
           {
-            "text": "You can move while castingbut you cannotDodgeor swapAttunements."
+            "text": "On step 3 and step 6, will immediately trigger allowing you to instantly swap back to {skill:5494}."
+          },
+          {
+            "text": "You can move while casting {skill:29719} but you cannot Dodge or swap Attunements."
           }
         ]
       },
@@ -223,7 +325,13 @@
         "title": "Step Two",
         "items": [
           {
-            "text": "The next step is to add in additional skills when you're in. Use the following skills whenever they are available:"
+            "text": "The next step is to add in additional skills when you're in {skill:5494}. Use the following skills whenever they are available:"
+          },
+          {
+            "text": "{skill:5561}"
+          },
+          {
+            "text": "{skill:5529}"
           }
         ]
       },
@@ -231,7 +339,16 @@
         "title": "Step Three",
         "items": [
           {
-            "text": "Use the following skills offCooldownwhenever you're in:"
+            "text": "Use the following skills off Cooldown whenever you're in {skill:5494}:"
+          },
+          {
+            "text": "{skill:30662}"
+          },
+          {
+            "text": "{skill:5539}"
+          },
+          {
+            "text": "{skill:25499}"
           },
           {
             "text": "These are all instant cast skills and so are easy to slot in if the added complexity isn't too much."
@@ -242,10 +359,22 @@
         "title": "Step Four",
         "items": [
           {
-            "text": "You can add further complexity by using your skills in. You can use all of your skills whenever they are available but keep in mind that not everything will be offCooldown."
+            "text": "You can add further complexity by using your skills in {skill:5492}. You can use all of your skills whenever they are available but keep in mind that not everything will be off Cooldown."
           },
           {
-            "text": "These are the skills inthat you'd want to use:"
+            "text": "These are the skills in {skill:5492} that you'd want to use:"
+          },
+          {
+            "text": "{skill:5692}"
+          },
+          {
+            "text": "{skill:5675}"
+          },
+          {
+            "text": "{skill:5691}"
+          },
+          {
+            "text": "{skill:5557}"
           }
         ]
       },
@@ -261,13 +390,13 @@
         "title": "Opener",
         "items": [
           {
-            "text": "Quickly generateClonesand triggerwith the following:"
+            "text": "Quickly generate Clones and trigger {skill:40184} with the following:"
           },
           {
-            "text": "3"
+            "text": "3 {skill:10216}"
           },
           {
-            "text": "2"
+            "text": "2 {skill:10310}"
           },
           {
             "text": "Dodge."
@@ -281,16 +410,16 @@
             "text": "Dodge!!"
           },
           {
-            "text": "Never let yourEndurancefill up!Dodgealone will not be enough for fullAlacrityuptime. To gain moreMirage Cloakuses add in the following as well:"
+            "text": "Never let your Endurance fill up! Dodge alone will not be enough for full Alacrity uptime. To gain more Mirage Cloak uses add in the following as well:"
           },
           {
-            "text": "Weapon SwapoffCooldownto triggerfor moreEndurancetoDodgemore."
+            "text": "Weapon Swap off Cooldown to trigger for more Endurance to Dodge more."
           },
           {
-            "text": "UseoffCooldownand walk into thethat is created."
+            "text": "Use {skill:41065} off Cooldown and walk into the {skill:44677} that is created."
           },
           {
-            "text": "isGround-Targeted. If you cast it at your feet by clicking the skill or manually aiming it then you will instantly pickup thecreated."
+            "text": "{skill:41065} is Ground-Targeted. If you cast it at your feet by clicking the skill or manually aiming it then you will instantly pickup the {skill:44677} created."
           }
         ]
       },
@@ -298,19 +427,19 @@
         "title": "Step Two",
         "items": [
           {
-            "text": "Make sure to leave a small gap between activations ofMirage Cloak.Clonesdo not benefit from yourQuicknessso will take a full second to castand can be easily interrupted. Casting a skill between eachMirage Cloakcan help ensure you get the most from yourClones."
+            "text": "Make sure to leave a small gap between activations of Mirage Cloak. Clones do not benefit from your Quickness so will take a full second to cast {skill:40184} and can be easily interrupted. Casting a skill between each Mirage Cloak can help ensure you get the most from your Clones."
           },
           {
-            "text": "Add in the following skills offCooldown, aiming to use one between eachMirage Cloakwhen available:"
+            "text": "Add in the following skills off Cooldown, aiming to use one between each Mirage Cloak when available:"
           },
           {
-            "text": "3"
+            "text": "3 {skill:10216}"
           },
           {
-            "text": "4"
+            "text": "4 {skill:10331}"
           },
           {
-            "text": "5"
+            "text": "5 {skill:10169}"
           }
         ]
       },
@@ -321,10 +450,10 @@
             "text": "Finally, add in the following two skills:"
           },
           {
-            "text": "F2: Aim to use this offCooldown. If forced movement doesn't bother you, cast2after."
+            "text": "F2 {skill:10190}: Aim to use this off Cooldown. If forced movement doesn't bother you, cast 2 {skill:10310} after."
           },
           {
-            "text": "6: This skill will generate aafter a few seconds which you can walk into for an extraMirage Cloak."
+            "text": "6 {skill:40200}: This skill will generate a {skill:44677} after a few seconds which you can walk into for an extra Mirage Cloak."
           }
         ]
       }
@@ -336,28 +465,28 @@
         "title": "Key Concepts",
         "items": [
           {
-            "text": "The main damage from this build comes fromBleedingwhich deals 25% moreDamagethanks to."
+            "text": "The main damage from this build comes from Bleeding which deals 25% more Damage thanks to ."
           },
           {
-            "text": "Two traits give us all of ourBleeding:"
+            "text": "Two traits give us all of our Bleeding:"
           },
           {
-            "text": "from ourPhantasmswhen they inflict aCritical Hit"
+            "text": "from our Phantasms when they inflict a Critical Hit"
           },
           {
-            "text": "from anyBladeskill when they inflict aCritical Hit."
+            "text": "from any Blade skill when they inflict a Critical Hit."
           },
           {
-            "text": "Due to these traits, it's very important that we reach 100%Critical Chance. Thankfully, this is made easier due to."
+            "text": "Due to these traits, it's very important that we reach 100% Critical Chance. Thankfully, this is made easier due to ."
           },
           {
             "text": "has a few important effects:"
           },
           {
-            "text": "Bladeskills will inflictVulnerabilitythereby easily maintaing the buff from"
+            "text": "Blade skills will inflict Vulnerability thereby easily maintaing the buff from"
           },
           {
-            "text": "It increases ourStrike DamageandCondition Damageby 5% after using aBladesong."
+            "text": "It increases our Strike Damage and Condition Damage by 5% after using a Bladesong."
           }
         ]
       },
@@ -365,10 +494,16 @@
         "title": "Opener",
         "items": [
           {
-            "text": "+"
+            "text": "{skill:62607}"
           },
           {
-            "text": "once you have fiveBlades"
+            "text": "{skill:10174} + {skill:62597}"
+          },
+          {
+            "text": "{skill:62560}"
+          },
+          {
+            "text": "{skill:62616} once you have five Blades"
           }
         ]
       },
@@ -376,7 +511,16 @@
         "title": "Step One",
         "items": [
           {
-            "text": "Use yourDagger/Swordskills offCooldownwith the following priority:"
+            "text": "Use your Dagger / Sword skills off Cooldown with the following priority:"
+          },
+          {
+            "text": "{skill:10174}"
+          },
+          {
+            "text": "{skill:62607}"
+          },
+          {
+            "text": "{skill:62560}"
           }
         ]
       },
@@ -384,13 +528,22 @@
         "title": "Step Two",
         "items": [
           {
-            "text": "Use yourBladesongswhenever you reach fiveBladeswith the following priority:"
+            "text": "Use your Bladesongs whenever you reach five Blades with the following priority:"
           },
           {
-            "text": "Keepfrom reaching twoCharges. If it only has oneCharge, thenis of higher priority."
+            "text": "{skill:62616}"
           },
           {
-            "text": "last seven seconds, you can delayif you already have the buff to guarantee 100% uptime."
+            "text": "{skill:62586}"
+          },
+          {
+            "text": "{skill:62597}"
+          },
+          {
+            "text": "Keep {skill:62586} from reaching two Charges. If it only has one Charge, then {skill:62597} is of higher priority."
+          },
+          {
+            "text": "last seven seconds, you can delay {skill:62586} if you already have the buff to guarantee 100% uptime."
           }
         ]
       },
@@ -398,10 +551,10 @@
         "title": "Step Three",
         "items": [
           {
-            "text": "UseoffCooldownas it is an instant cast."
+            "text": "Use {skill:24755} off Cooldown as it is an instant cast."
           },
           {
-            "text": "can also be used offCooldownas the lowest priority skill you have available."
+            "text": "{skill:62553} can also be used off Cooldown as the lowest priority skill you have available."
           }
         ]
       },
@@ -417,19 +570,28 @@
         "title": "Key Concepts",
         "items": [
           {
-            "text": "The idea of this build is to enterand start swinging your scythe. Maximizing your time indrastically increases yourCritical Damagethanks to two traits:"
+            "text": "The idea of this build is to enter {skill:30792} and start swinging your scythe. Maximizing your time in {skill:30792} drastically increases your Critical Damage thanks to two traits:"
           },
           {
-            "text": "gives 15%Critical Damagewhen in"
+            "text": "gives 15% Critical Damage when in {skill:30792}"
           },
           {
-            "text": "gives us +300Ferocitywhen in."
+            "text": "gives us +300 Ferocity when in {skill:30792}."
           },
           {
-            "text": "Whenever you leave shroud, use your bigAoEskills for a damage spike before going back into:"
+            "text": "Whenever you leave shroud, use your big AoE skills for a damage spike before going back into {skill:30792}:"
           },
           {
-            "text": "Make sure toat the start of each fight or when your Flesh Golem gets killed."
+            "text": "{skill:29855}"
+          },
+          {
+            "text": "{skill:10607}"
+          },
+          {
+            "text": "{skill:10674}"
+          },
+          {
+            "text": "Make sure to {skill:10646} at the start of each fight or when your Flesh Golem gets killed."
           }
         ]
       },
@@ -437,19 +599,19 @@
         "title": "Opener",
         "items": [
           {
-            "text": "Your opener offers very strong burst and you'll repeat it every time you go intothroughout your rotation."
+            "text": "Your opener offers very strong burst and you'll repeat it every time you go into {skill:30792} throughout your rotation."
           },
           {
-            "text": "5"
+            "text": "5 {skill:29740}"
           },
           {
-            "text": "4"
+            "text": "4 {skill:29855}"
           },
           {
-            "text": "F1"
+            "text": "F1 {skill:30792}"
           },
           {
-            "text": "Every time youwhether intentionally of by taking excessive damage, wait until these skills are available again before before enteringagain."
+            "text": "Every time you {skill:30961} whether intentionally of by taking excessive damage, wait until these skills are available again before before entering {skill:30792} again."
           }
         ]
       },
@@ -457,19 +619,19 @@
         "title": "Step One",
         "items": [
           {
-            "text": "Whenever you enter, use the following skills as available:"
+            "text": "Whenever you enter {skill:30792}, use the following skills as available:"
           },
           {
-            "text": "4"
+            "text": "4 {skill:30504}"
           },
           {
-            "text": "5"
+            "text": "5 {skill:30557}"
           },
           {
-            "text": "Thanks to, theCooldownof all yourskills will be significantly reduced so long as you keepAuto Attacking."
+            "text": "Thanks to , the Cooldown of all your {skill:30792} skills will be significantly reduced so long as you keep Auto Attacking."
           },
           {
-            "text": "In addition, use3when needed for an extra burst of damage reduction and selfStability. Do not use the flip skillunless you need theDefiance Break."
+            "text": "In addition, use 3 {skill:29958} when needed for an extra burst of damage reduction and self Stability. Do not use the flip skill {skill:29709} unless you need the Defiance Break."
           }
         ]
       },
@@ -477,28 +639,28 @@
         "title": "Step Two",
         "items": [
           {
-            "text": "Next, make sure to keep the largeDamagebuff fromactive all the time. To do this, you will need toF1after being in shroud for about 10-15 seconds . Instead of counting, you will know its time towhen either:"
+            "text": "Next, make sure to keep the large Damage buff from active all the time. To do this, you will need to F1 {skill:30961} after being in shroud for about 10-15 seconds . Instead of counting, you will know its time to {skill:30961} when either:"
           },
           {
-            "text": "TheCooldownsofandare about halfway done. Each should be cast once per shroud."
+            "text": "The Cooldowns of {skill:30504} and {skill:30557} are about halfway done. Each should be cast once per shroud."
           },
           {
             "text": "starts to flash on your boon bar, warning you it is about to lapse."
           },
           {
-            "text": "While outside of shroud, use the following loose priority onGreatswordwhile waiting forto come offCooldown:"
+            "text": "While outside of shroud, use the following loose priority on Greatsword while waiting for {skill:30792} to come off Cooldown:"
           },
           {
-            "text": "2"
+            "text": "2 {skill:30163}"
           },
           {
-            "text": "3"
+            "text": "3 {skill:30860}"
           },
           {
             "text": "Auto Attack Chain"
           },
           {
-            "text": "Whenis available again, loop back to theOpenerand then back to yourskills."
+            "text": "When {skill:30792} is available again, loop back to the Opener and then back to your {skill:30792} skills."
           }
         ]
       },
@@ -506,19 +668,22 @@
         "title": "Step Three",
         "items": [
           {
-            "text": "Its now time to addWellsto theOpener. The new version will be:"
+            "text": "Its now time to add Wells to the Opener. The new version will be:"
           },
           {
-            "text": "54"
+            "text": "5 {skill:29740} -> 4 {skill:29855}"
           },
           {
-            "text": "F1"
+            "text": "{skill:10607} -> {skill:10546}"
           },
           {
-            "text": "WellsareGround-Targeted, but as you will be in melee range you can click the skills to drop themAoEat your feet."
+            "text": "F1 {skill:30792}"
           },
           {
-            "text": "Additionally, when the enemy is below 50%Health, you can spam2when you are onGreatsword. The skill instantlyRechargesitself when you hit an enemy that is below 50%Health. This will provide greater damage overAuto Attack ChainsonGreatswordat the cost ofLife Forcegeneration. If you need yourLife Forcetopped off, stick toAuto Attacks."
+            "text": "Wells are Ground-Targeted, but as you will be in melee range you can click the skills to drop them AoE at your feet."
+          },
+          {
+            "text": "Additionally, when the enemy is below 50% Health, you can spam 2{skill:30163} when you are on Greatsword . The skill instantly Recharges itself when you hit an enemy that is below 50% Health. This will provide greater damage over Auto Attack Chains on Greatsword at the cost of Life Force generation. If you need your Life Force topped off, stick to Auto Attacks."
           }
         ]
       },
@@ -532,19 +697,47 @@
     "sections": [
       {
         "title": "Opener",
-        "items": []
+        "items": [
+          {
+            "text": "{skill:6004}"
+          },
+          {
+            "text": "{skill:6153}"
+          },
+          {
+            "text": "{skill:6154}"
+          },
+          {
+            "text": "{skill:6005}"
+          },
+          {
+            "text": "{skill:6161}"
+          }
+        ]
       },
       {
         "title": "Step One",
         "items": [
           {
-            "text": "After your opener, use the following skills offCooldown:"
+            "text": "After your opener, use the following skills off Cooldown:"
           },
           {
-            "text": "Keep in mind thatis a leap andGround-Targeted. If you find that the forced movement is too complex, feel free to drop it from the rotation."
+            "text": "{skill:6153}"
           },
           {
-            "text": "When none of the skills above are offCooldown, simply useAuto Attack."
+            "text": "{skill:6004}"
+          },
+          {
+            "text": "{skill:6154}"
+          },
+          {
+            "text": "{skill:6005}"
+          },
+          {
+            "text": "Keep in mind that {skill:6005} is a leap and Ground-Targeted. If you find that the forced movement is too complex, feel free to drop it from the rotation."
+          },
+          {
+            "text": "When none of the skills above are off Cooldown, simply use Auto Attack."
           }
         ]
       },
@@ -552,10 +745,19 @@
         "title": "Step Two",
         "items": [
           {
-            "text": "Put your Mech skills onAuto-Castso you don't need to actively use them. They are the following:"
+            "text": "Put your Mech skills on Auto-Cast so you don't need to actively use them. They are the following:"
           },
           {
-            "text": "At this stage, you can add in. This skill has no cast time but will interrupt whatever your Mech is currently doing."
+            "text": "{skill:63345}"
+          },
+          {
+            "text": "{skill:63121}"
+          },
+          {
+            "text": "{skill:63188}"
+          },
+          {
+            "text": "At this stage, you can add in {skill:63095}. This skill has no cast time but will interrupt whatever your Mech is currently doing."
           }
         ]
       },
@@ -563,10 +765,10 @@
         "title": "Step Three",
         "items": [
           {
-            "text": "Now it's time to use your final skill in your arsenal -."
+            "text": "Now it's time to use your final skill in your arsenal - {skill:6161}."
           },
           {
-            "text": "Usebefore your weapon skills and offCooldown."
+            "text": "Use {skill:6161} before your weapon skills and off Cooldown."
           }
         ]
       }
@@ -578,31 +780,31 @@
         "title": "Key Concepts",
         "items": [
           {
-            "text": "Merge with yourPetby using. This will improve the following skills:"
+            "text": "Merge with your Pet by using {skill:42944}. This will improve the following skills:"
           },
           {
-            "text": "causes you to inflict additionalBleeding"
+            "text": "{skill:12507} causes you to inflict additional Bleeding"
           },
           {
-            "text": "will copy your boons to yourself thereby increasing their duration and doubling their stacks."
+            "text": "{skill:31914} will copy your boons to yourself thereby increasing their duration and doubling their stacks."
           },
           {
-            "text": "You gain anAttribute Bonusdepending on yourPet'sarchetype. OnCondition Damagebuilds, you want to merge with aDeadlyarchetype for the +150Condition Damageand +100Precision."
+            "text": "You gain an Attribute Bonus depending on your Pet's archetype. On Condition Damage builds, you want to merge with a Deadly archetype for the +150 Condition Damage and +100 Precision."
           },
           {
-            "text": "InflictBleedingby dealingCritical Hits. Attack from the sides or back, or against defiant foes to triggerandWeapon Swapfrequently to maintainFuryandSwiftness."
+            "text": "Inflict Bleeding by dealing Critical Hits. Attack from the sides or back, or against defiant foes to trigger and Weapon Swap frequently to maintain Fury and Swiftness."
           },
           {
-            "text": "YourShort Bowskills are also improved when attacking from the sides or back, or against defiant foes:"
+            "text": "Your Short Bow skills are also improved when attacking from the sides or back, or against defiant foes:"
           },
           {
-            "text": "inflicts longer lastingPoison"
+            "text": "{skill:12468} inflicts longer lasting Poison"
           },
           {
-            "text": "inflictsImmobilize"
+            "text": "{skill:12507} inflicts Immobilize"
           },
           {
-            "text": "inflictsStun, rather thanDaze."
+            "text": "{skill:12508} inflicts Stun, rather than Daze."
           }
         ]
       },
@@ -613,10 +815,28 @@
             "text": "Prior to start encounters, you can precast the following:"
           },
           {
-            "text": "+"
+            "text": "{skill:12537} + {skill:40498}"
           },
           {
-            "text": "Don't castandtoo early as they don't last very long!"
+            "text": "Don't cast {skill:12537} and {skill:40498} too early as they don't last very long!"
+          },
+          {
+            "text": "{skill:12468}"
+          },
+          {
+            "text": "{skill:45717}"
+          },
+          {
+            "text": "{skill:12507}"
+          },
+          {
+            "text": "{skill:12476}"
+          },
+          {
+            "text": "{skill:44514}"
+          },
+          {
+            "text": "{skill:40588}"
           }
         ]
       },
@@ -624,10 +844,19 @@
         "title": "Step One",
         "items": [
           {
-            "text": "Use yourShort Bowskills offCooldownwith the following priority:"
+            "text": "Use your Short Bow skills off Cooldown with the following priority:"
           },
           {
-            "text": "Use yourAuto Attackwhen you don't have any skills to use."
+            "text": "{skill:12468}"
+          },
+          {
+            "text": "{skill:12507}"
+          },
+          {
+            "text": "{skill:12508}"
+          },
+          {
+            "text": "Use your Auto Attack when you don't have any skills to use."
           }
         ]
       },
@@ -635,7 +864,25 @@
         "title": "Step Two",
         "items": [
           {
-            "text": "The next step would be to also these additional skills offCooldown:"
+            "text": "The next step would be to also these additional skills off Cooldown:"
+          },
+          {
+            "text": "{skill:12537}"
+          },
+          {
+            "text": "{skill:40498}"
+          },
+          {
+            "text": "{skill:45717}"
+          },
+          {
+            "text": "{skill:12476}"
+          },
+          {
+            "text": "{skill:75814}"
+          },
+          {
+            "text": "{skill:40588}"
           }
         ]
       },
@@ -643,13 +890,22 @@
         "title": "Step Three",
         "items": [
           {
-            "text": "provides you with a 10% increase inStrike DamageandCondition Damage. In order to trigger this trait, you need to useDefiance Break:"
+            "text": "provides you with a 10% increase in Strike Damage and Condition Damage. In order to trigger this trait, you need to use Defiance Break:"
           },
           {
-            "text": "Delayif you already see the buff fromis active due to recently using."
+            "text": "{skill:12476}"
           },
           {
-            "text": "Dodgesandwill apply, and can be cast before the encounter or during downtime."
+            "text": "{skill:12508}"
+          },
+          {
+            "text": "{skill:75771}"
+          },
+          {
+            "text": "Delay {skill:12508} if you already see the buff from is active due to recently using {skill:12476}."
+          },
+          {
+            "text": "Dodges and {skill:12517} will apply , and can be cast before the encounter or during downtime."
           }
         ]
       },
@@ -665,46 +921,83 @@
         "title": "Key Concepts",
         "items": [
           {
-            "text": "Merge with yourPetby usingto gain trait bonuses from yourPet. There are quite a few traits that this works with:"
+            "text": "Merge with your Pet by using {skill:42944} to gain trait bonuses from your Pet. There are quite a few traits that this works with:"
           },
           {
-            "text": "grants you +150Attribute Bonus"
+            "text": "grants you +150 Attribute Bonus"
           },
           {
-            "text": "increases yourDamageby 10%"
+            "text": "increases your Damage by 10%"
           },
           {
-            "text": "grants you +300Ferocityand 30%Movement Speed."
+            "text": "grants you +300 Ferocity and 30% Movement Speed."
           },
           {
-            "text": "will also improve the following skills:"
+            "text": "{skill:42944} will also improve the following skills:"
           },
           {
-            "text": "will copy your boons to yourself thereby increasing their duration and doubling their stacks"
+            "text": "{skill:31914} will copy your boons to yourself thereby increasing their duration and doubling their stacks"
           },
           {
-            "text": "will increase yourDamageby 25%."
+            "text": "{skill:12633} will increase your Damage by 25%."
           },
           {
-            "text": "You gain anAttribute Bonusdepending on yourPet'sarchetype. OnPowerbuilds, you want to merge with aFerociousfor the +150Powerand +100Ferocity."
+            "text": "You gain an Attribute Bonus depending on your Pet's archetype. On Power builds, you want to merge with a Ferocious for the +150 Power and +100 Ferocity."
           },
           {
-            "text": "Do massiveDamagewithCritical Hits. Attack from the sides or back, or against defiant foes to triggerand maintainFuryto maximizeCritical Chance."
+            "text": "Do massive Damage with Critical Hits. Attack from the sides or back, or against defiant foes to trigger and maintain Fury to maximize Critical Chance."
           }
         ]
       },
       {
         "title": "Opener",
-        "items": []
+        "items": [
+          {
+            "text": "{skill:45717}"
+          },
+          {
+            "text": "{skill:46432}"
+          },
+          {
+            "text": "{skill:12492}"
+          },
+          {
+            "text": "{skill:12633}"
+          },
+          {
+            "text": "{skill:12638}"
+          },
+          {
+            "text": "{skill:69203}"
+          },
+          {
+            "text": "{skill:12482}"
+          },
+          {
+            "text": "{skill:12639}"
+          }
+        ]
       },
       {
         "title": "Step One",
         "items": [
           {
-            "text": "After your opener, use the following skills offCooldown:"
+            "text": "After your opener, use the following skills off Cooldown:"
           },
           {
-            "text": "Keep in mind thatandboth have forced movement. The upside is thatis also anEvade."
+            "text": "{skill:69203}"
+          },
+          {
+            "text": "{skill:12482}"
+          },
+          {
+            "text": "{skill:41406}"
+          },
+          {
+            "text": "{skill:40729}"
+          },
+          {
+            "text": "Keep in mind that {skill:69203} and {skill:12482} both have forced movement. The upside is that {skill:12482} is also an Evade."
           }
         ]
       },
@@ -712,19 +1005,25 @@
         "title": "Step Two",
         "items": [
           {
-            "text": "This step is all about preparing your burstDamage. It combines buffs with your highDamageskills to melt enemies."
+            "text": "This step is all about preparing your burst Damage. It combines buffs with your high Damage skills to melt enemies."
           },
           {
-            "text": "provides a substantial 25%Damageincrease for 10 seconds."
+            "text": "{skill:12633} provides a substantial 25% Damage increase for 10 seconds."
           },
           {
-            "text": "Pairwith the following bigDamageskills:"
+            "text": "Pair {skill:12633} with the following big Damage skills:"
           },
           {
-            "text": "All these skills will come offCooldownat more or less the same time."
+            "text": "{skill:12639}"
           },
           {
-            "text": "Ifis available, you can also use that with the above skills."
+            "text": "{skill:12492}"
+          },
+          {
+            "text": "All these skills will come off Cooldown at more or less the same time."
+          },
+          {
+            "text": "If {skill:45717} is available, you can also use that with the above skills."
           }
         ]
       },
@@ -732,19 +1031,19 @@
         "title": "Step Three",
         "items": [
           {
-            "text": "is an important skill that can help you increase yourDamagefurther:"
+            "text": "{skill:12638} is an important skill that can help you increase your Damage further:"
           },
           {
-            "text": "ItPullsyour target and therefore triggers"
+            "text": "It Pulls your target and therefore triggers"
           },
           {
-            "text": "increases yourDamageandCondition Damageby 10% for 10 seconds"
+            "text": "increases your Damage and Condition Damage by 10% for 10 seconds"
           },
           {
-            "text": "The skill isGround-Targetedand returns to you, so aim on the far side of the target if possible. This will let it triggeron the way out and on the way back."
+            "text": "The skill is Ground-Targeted and returns to you, so aim on the far side of the target if possible. This will let it trigger on the way out and on the way back."
           },
           {
-            "text": "You can delay this skill to provide yourself with aDamagebuff just before you use."
+            "text": "You can delay this skill to provide yourself with a Damage buff just before you use {skill:12633} -> {skill:12639}."
           }
         ]
       },
@@ -752,10 +1051,19 @@
         "title": "Step Four",
         "items": [
           {
-            "text": "boosts yourDamagesignificantly. You have three skills in your kit that trigger it:"
+            "text": "boosts your Damage significantly. You have three skills in your kit that trigger it:"
           },
           {
-            "text": "isn't part of your normalDamagerotation so you can use it if you notice you don't have the buff from, and your burst is about to come offCooldown."
+            "text": "{skill:12639}"
+          },
+          {
+            "text": "{skill:46432}"
+          },
+          {
+            "text": "{skill:40729}"
+          },
+          {
+            "text": "{skill:46432} isn't part of your normal Damage rotation so you can use it if you notice you don't have the buff from , and your burst is about to come off Cooldown."
           }
         ]
       },
@@ -771,25 +1079,28 @@
         "title": "Key Concepts",
         "items": [
           {
-            "text": "Condition Daredevilis all about using your specialDodgeability to both deal damage andEvadeenemy attacks. ADodgewill have the following effects:"
+            "text": "Condition Daredevil is all about using your special Dodge ability to both deal damage and Evade enemy attacks. A Dodge will have the following effects:"
           },
           {
-            "text": "It will inflict conditions viaand."
+            "text": "It will inflict conditions via {skill:14136} and {skill:31267}."
           },
           {
-            "text": "It will upkeep. It lasts 6 seconds, which is plenty of time to recharge yourEndurancevia other parts of your kit (such asDaggerauto attacks!)."
+            "text": "It will upkeep . It lasts 6 seconds, which is plenty of time to recharge your Endurance via other parts of your kit (such as Dagger auto attacks!)."
           },
           {
             "text": "Besides dodging, you have some very powerful buttons that deal a lot of damage with little input. In fact, three of them don't even have a casting time to worry about! Here's the skills you should prioritize:"
           },
           {
-            "text": "(this skill is instant-cast)"
+            "text": "{skill:13014} (this skill is instant-cast)"
           },
           {
-            "text": "(this skill is instant-cast)"
+            "text": "{skill:13028}"
           },
           {
-            "text": "triggers, applying lots ofPoison(this skill is instant-cast)"
+            "text": "{skill:13037} (this skill is instant-cast)"
+          },
+          {
+            "text": "{skill:13093} triggers , applying lots of Poison (this skill is instant-cast)"
           }
         ]
       },
@@ -797,19 +1108,19 @@
         "title": "Step One",
         "items": [
           {
-            "text": "Condition Daredevildeals a ton of damage via it'sDodge, which triggersand, so you'll start with just that and someAuto Attack Chains."
+            "text": "Condition Daredevil deals a ton of damage via it's Dodge, which triggers {skill:31267} and {skill:14136}, so you'll start with just that and some Auto Attack Chains."
           },
           {
             "text": "Dodge"
           },
           {
-            "text": "Fill time with two fullAuto Attack Chains."
+            "text": "Fill time with two full Auto Attack Chains."
           },
           {
             "text": "Dodge"
           },
           {
-            "text": "YourDaggerauto attacks will restoreEnduranceon, so you'll be able to keep this going indefinitely!"
+            "text": "Your Dagger auto attacks will restore Endurance on {skill:13087}, so you'll be able to keep this going indefinitely!"
           }
         ]
       },
@@ -817,19 +1128,19 @@
         "title": "Step Two",
         "items": [
           {
-            "text": "is your profession mechanic skill. Thanks toand, it will inflict a huge amount ofBleedingandPoison! Try to cast it off-Cooldownfor damage!"
+            "text": "{skill:13014} is your profession mechanic skill. Thanks to and , it will inflict a huge amount of Bleeding and Poison! Try to cast it off-Cooldown for damage!"
           },
           {
-            "text": "will also triggerand, which will help maintain yourEnduranceeven more."
+            "text": "{skill:13014} will also trigger and , which will help maintain your Endurance even more."
           },
           {
-            "text": "will also triggerand, which will help maintain yourEnduranceeven more."
+            "text": "{skill:13014} will also trigger and , which will help maintain your Endurance even more."
           },
           {
-            "text": "Note that this skill will also teleport you to an enemy up to1200 Rangeaway, so feel free to use it for mobility purposes whenever the chance arises!"
+            "text": "Note that this skill will also teleport you to an enemy up to 1200 Range away, so feel free to use it for mobility purposes whenever the chance arises!"
           },
           {
-            "text": "Note that this skill will also teleport you to an enemy up to1200 Rangeaway, so feel free to use it for mobility purposes whenever the chance arises!"
+            "text": "Note that this skill will also teleport you to an enemy up to 1200 Range away, so feel free to use it for mobility purposes whenever the chance arises!"
           }
         ]
       },
@@ -840,10 +1151,10 @@
             "text": "There's a ton of damage in your utility skills, too! You'll want to incorporate them whenever possible. Follow this priority when incorporating them:"
           },
           {
-            "text": ". This is your biggest damage utility, but it takes a while to ramp up its damage, so it's best to cast it as early and often as possible."
+            "text": "{skill:13028}. This is your biggest damage utility, but it takes a while to ramp up its damage, so it's best to cast it as early and often as possible."
           },
           {
-            "text": "and. These are instant-cast skills that apply stacks of a buff to you and 4 other allies that applies conditions on hit. Cast them around others for maximum payoff!"
+            "text": "{skill:13037} and {skill:13093}. These are instant-cast skills that apply stacks of a buff to you and 4 other allies that applies conditions on hit. Cast them around others for maximum payoff!"
           }
         ]
       },
@@ -859,16 +1170,16 @@
         "title": "Key Concepts",
         "items": [
           {
-            "text": "Power Daredevilis all about using your specialDodgeability to both deal damage andEvadeenemy attacks. ADodgewill have the following effects:"
+            "text": "Power Daredevil is all about using your special Dodge ability to both deal damage and Evade enemy attacks. A Dodge will have the following effects:"
           },
           {
-            "text": "It will deal heavy damage via."
+            "text": "It will deal heavy damage via {skill:31129}."
           },
           {
-            "text": "It will upkeep. It lasts 6 seconds, so you don't need to be constantly worried about it."
+            "text": "It will upkeep . It lasts 6 seconds, so you don't need to be constantly worried about it."
           },
           {
-            "text": "Besides dodging, your main damage tool will beStaff. This weapon features the strongest Auto-attacks in all ofThief! Smack your enemy with the stick whenever you're between dodges!"
+            "text": "Besides dodging, your main damage tool will be Staff. This weapon features the strongest Auto-attacks in all of Thief! Smack your enemy with the stick whenever you're between dodges!"
           }
         ]
       },
@@ -876,19 +1187,19 @@
         "title": "Step One",
         "items": [
           {
-            "text": "Power Daredevildeals a ton of damage via it'sDodgewith, so you'll start with just that and someAuto Attack Chains."
+            "text": "Power Daredevil deals a ton of damage via it's Dodge with {skill:31129}, so you'll start with just that and some Auto Attack Chains."
           },
           {
-            "text": "Dodge. Make sure you land near your enemy so thathits!"
+            "text": "Dodge. Make sure you land near your enemy so that {skill:31129} hits!"
           },
           {
-            "text": "Fill time with three fullAuto Attack Chains."
+            "text": "Fill time with three full Auto Attack Chains."
           },
           {
             "text": "Dodge"
           },
           {
-            "text": "Useto replenish one bar ofEndurancewhenever its running low via."
+            "text": "Use {skill:13014} to replenish one bar of Endurance whenever its running low via ."
           }
         ]
       },
@@ -896,19 +1207,22 @@
         "title": "Step Two",
         "items": [
           {
-            "text": "The next step is to useInitiative, your profession resource. You can spendInitiativefreely on, a very simple-to-use ability that cleaves enemies in an area around you! Here's an example of how to use it:"
+            "text": "The next step is to use Initiative, your profession resource. You can spend Initiative freely on {skill:29911}, a very simple-to-use ability that cleaves enemies in an area around you! Here's an example of how to use it:"
           },
           {
             "text": "Dodge"
           },
           {
-            "text": "Auto Attack Chainx2"
+            "text": "{skill:29911}"
+          },
+          {
+            "text": "Auto Attack Chain x2"
           },
           {
             "text": "Dodge"
           },
           {
-            "text": "If you have moreInitiativeto spend, you can cast anotherin step 2 whenever you wish!"
+            "text": "If you have more Initiative to spend, you can cast another {skill:29911} in step 2 whenever you wish!"
           }
         ]
       },
@@ -922,13 +1236,16 @@
             "text": "Dodge"
           },
           {
-            "text": "x2"
+            "text": "{skill:29911} x2"
+          },
+          {
+            "text": "{skill:30868} -> {skill:30693}"
           },
           {
             "text": "Dodge"
           },
           {
-            "text": "To make thesequence much easier, we suggestholding down the key. This will makecast automatically if all the hits fromconnected!"
+            "text": "To make the {skill:30868} -> {skill:30693} sequence much easier, we suggest holding down the key. This will make {skill:30693} cast automatically if all the hits from {skill:30868} connected!"
           }
         ]
       }
@@ -943,34 +1260,40 @@
             "text": "There are two key skills to use when learning this build:"
           },
           {
-            "text": "First, let's look at:"
+            "text": "{skill:43390}"
           },
           {
-            "text": "You gainMalicewhen you strike a marked target"
+            "text": "{skill:13011}"
           },
           {
-            "text": "You deal 10% increasedDamageto a marked target due to"
+            "text": "First, let's look at {skill:43390}:"
           },
           {
-            "text": "Whenever you kill a marked foe, yourwillRechargedue to."
+            "text": "You gain Malice when you strike a marked target"
           },
           {
-            "text": "Keep in mind thatdoesn't last forever! Use it again on your target if it runs out."
+            "text": "You deal 10% increased Damage to a marked target due to"
           },
           {
-            "text": "also reduces incomingDamagefrom your marked target by 15%."
+            "text": "Whenever you kill a marked foe, your {skill:43390} will Recharge due to ."
           },
           {
-            "text": "is the dual-wield skill for yourPistolset. What do you need to know about it?"
+            "text": "Keep in mind that {skill:43390} doesn't last forever! Use it again on your target if it runs out."
           },
           {
-            "text": "It's your primary source ofDamage"
+            "text": "also reduces incoming Damage from your marked target by 15%."
           },
           {
-            "text": "If all attacks hit, you gain additionalInitiative"
+            "text": "{skill:13011} is the dual-wield skill for your Pistol set. What do you need to know about it?"
           },
           {
-            "text": "This skill isInitiativepositive, letting you use it continuously."
+            "text": "It's your primary source of Damage"
+          },
+          {
+            "text": "If all attacks hit, you gain additional Initiative"
+          },
+          {
+            "text": "This skill is Initiative positive, letting you use it continuously."
           }
         ]
       },
@@ -981,25 +1304,25 @@
             "text": "Your rotation for this build will look like this:"
           },
           {
-            "text": "Useon your target"
+            "text": "Use {skill:43390} on your target"
           },
           {
-            "text": "on your marked target"
+            "text": "{skill:13011} on your marked target"
           },
           {
-            "text": "Once your target dies, recaston a new target."
+            "text": "Once your target dies, recast {skill:43390} on a new target."
           },
           {
-            "text": "Why can you spaminfinitely?"
+            "text": "Why can you spam {skill:13011} infinitely?"
           },
           {
-            "text": "As long as you hit your target with all of the hits from, then you will gain twoInitiative."
+            "text": "As long as you hit your target with all of the hits from {skill:13011}, then you will gain two Initiative."
           },
           {
-            "text": "You passively gain oneInitiativeper second andtakes longer than one second to use."
+            "text": "You passively gain one Initiative per second and {skill:13011} takes longer than one second to use."
           },
           {
-            "text": "only costs threeInitiativeand so as long as you keep hitting your target with the entire skill, you will always have enoughInitiative."
+            "text": "{skill:13011} only costs three Initiative and so as long as you keep hitting your target with the entire skill, you will always have enough Initiative."
           }
         ]
       },
@@ -1007,22 +1330,22 @@
         "title": "Step Two",
         "items": [
           {
-            "text": "is your panic button and has a few uses:"
+            "text": "{skill:41372} is your panic button and has a few uses:"
           },
           {
-            "text": "It's aStun Break"
+            "text": "It's a Stun Break"
           },
           {
-            "text": "It refreshes"
+            "text": "It refreshes {skill:43390}"
           },
           {
-            "text": "It grants threeInitiative"
+            "text": "It grants three Initiative"
           },
           {
-            "text": "It grants additionalInitiativefor each stack ofMaliceit removes."
+            "text": "It grants additional Initiative for each stack of Malice it removes."
           },
           {
-            "text": "This will allow you to recoverorInitiativein an emergency to keep using. With twoCharges, don't be scared to use this skill!"
+            "text": "This will allow you to recover {skill:43390} or Initiative in an emergency to keep using {skill:13011}. With two Charges, don't be scared to use this skill!"
           }
         ]
       },
@@ -1038,40 +1361,40 @@
         "title": "Key Concepts",
         "items": [
           {
-            "text": "With this build, you will grantQuickness,Furyand 8Mightto yourself and 5 other allies from using your Stolen Skill, which will always bethanks to thetrait. You can gain charges ofby:"
+            "text": "With this build, you will grant Quickness, Fury and 8 Might to yourself and 5 other allies from using your Stolen Skill, which will always be {skill:42863} thanks to the trait. You can gain charges of {skill:42863} by:"
           },
           {
-            "text": "Marking an enemy withwill grant 2 changes ofthanks to"
+            "text": "Marking an enemy with {skill:43390} will grant 2 changes of {skill:42863} thanks to"
           },
           {
-            "text": "Using aCantripskill while you have aMarked Target, thanks to"
+            "text": "Using a Cantrip skill while you have a Marked Target, thanks to"
           },
           {
-            "text": "is your best utility skill for this build, never take this skill off your bar! It does lots of things:"
+            "text": "{skill:41372} is your best utility skill for this build, never take this skill off your bar! It does lots of things:"
           },
           {
-            "text": "It is aCantrip, which will generate a"
+            "text": "It is a Cantrip, which will generate a {skill:42863}"
           },
           {
-            "text": "It's an instant-castStun Break."
+            "text": "It's an instant-cast Stun Break."
           },
           {
-            "text": "It replenishes at least 3Initiativeevery time."
+            "text": "It replenishes at least 3 Initiative every time."
           },
           {
-            "text": "Marking a target withalso has other strong benefits:"
+            "text": "Marking a target with {skill:43390} also has other strong benefits:"
           },
           {
-            "text": "increases damage to theMarked Targetby 10%, and reduces damage taken from it by 15%."
+            "text": "increases damage to the Marked Target by 10%, and reduces damage taken from it by 15%."
           },
           {
-            "text": "You will gainMalicewhen striking aMarked Targetwith. When you have 5Malice, you can enterStealthfor free when you cast."
+            "text": "You will gain Malice when striking a Marked Target with {skill:13011}. When you have 5 Malice, you can enter Stealth for free when you cast {skill:42863}."
           },
           {
-            "text": "Killing yourMarked Targetwill trigger."
+            "text": "Killing your Marked Target will trigger ."
           },
           {
-            "text": "Your primary source of damage in this build will be. This skill will refund its own cost if all bullets hit, making you able to spam it indefinitely."
+            "text": "Your primary source of damage in this build will be {skill:13011}. This skill will refund its own cost if all bullets hit, making you able to spam it indefinitely."
           }
         ]
       },
@@ -1079,16 +1402,16 @@
         "title": "Step One",
         "items": [
           {
-            "text": "First, you’ll want to get comfortable with spending your charges of."
+            "text": "First, you’ll want to get comfortable with spending your charges of {skill:42863}."
           },
           {
-            "text": "Useon an enemy."
+            "text": "Use {skill:43390} on an enemy."
           },
           {
-            "text": "Spend both of yourcharges."
+            "text": "Spend both of your {skill:42863} charges."
           },
           {
-            "text": "You will want to re-castonce it comes offCooldown, as it doesn’t last forever on your target."
+            "text": "You will want to re-cast {skill:43390} once it comes off Cooldown, as it doesn’t last forever on your target."
           }
         ]
       },
@@ -1096,19 +1419,19 @@
         "title": "Step Two",
         "items": [
           {
-            "text": "Now, let’s addto generate more charges offor you to cast."
+            "text": "Now, let’s add {skill:41372} to generate more charges of {skill:42863} for you to cast."
           },
           {
-            "text": "As soon as you’ve spent your initial two charges offrom, castto reset it."
+            "text": "As soon as you’ve spent your initial two charges of {skill:42863} from {skill:43390}, cast {skill:41372} to reset it."
           },
           {
-            "text": "Spend the new charge offrom."
+            "text": "Spend the new charge of {skill:42863} from {skill:41372}."
           },
           {
-            "text": "Recastfor two newcharges."
+            "text": "Recast {skill:43390} for two new {skill:42863} charges."
           },
           {
-            "text": "generated from different sources don’t stack, so remember toalways spend your old charges before generating new ones"
+            "text": "{skill:42863} generated from different sources don’t stack, so remember to always spend your old charges before generating new ones"
           }
         ]
       },
@@ -1116,13 +1439,28 @@
         "title": "Step Three",
         "items": [
           {
-            "text": "It’s time to start dealing damage. Now we add!"
+            "text": "It’s time to start dealing damage. Now we add {skill:13011}!"
           },
           {
-            "text": "Any other time during combat that you aren’t castingor, its time for. Consider this a replacement for yourAuto Attack."
+            "text": "Any other time during combat that you aren’t casting {skill:43390} or {skill:42863}, its time for {skill:13011}. Consider this a replacement for your Auto Attack."
           },
           {
-            "text": "For the best results, try alternating betweenand another skill cast when they are available. For example:"
+            "text": "For the best results, try alternating between {skill:13011} and another skill cast when they are available. For example:"
+          },
+          {
+            "text": "{skill:13011}"
+          },
+          {
+            "text": "{skill:42863}"
+          },
+          {
+            "text": "{skill:13011}"
+          },
+          {
+            "text": "{skill:43390}"
+          },
+          {
+            "text": "{skill:13011}"
           }
         ]
       },
@@ -1130,13 +1468,13 @@
         "title": "Step Four",
         "items": [
           {
-            "text": "You're pretty much already good to go, but for some extra damage and moreQuickness, you can add."
+            "text": "You're pretty much already good to go, but for some extra damage and more Quickness, you can add {skill:41158}."
           },
           {
-            "text": "If you’ve followed up to here, you’ll notice you can run out of skills to cast, other than. Add this skill whenever you have that downtime to deal extra damage and get acharge!"
+            "text": "If you’ve followed up to here, you’ll notice you can run out of skills to cast, other than {skill:13011}. Add this skill whenever you have that downtime to deal extra damage and get a {skill:42863} charge!"
           },
           {
-            "text": "If you’ve followed up to here, you’ll notice you can run out of skills to cast, other than. Add this skill whenever you have that downtime to deal extra damage and get acharge!"
+            "text": "If you’ve followed up to here, you’ll notice you can run out of skills to cast, other than {skill:13011}. Add this skill whenever you have that downtime to deal extra damage and get a {skill:42863} charge!"
           },
           {
             "text": "You may activate the second part of this skill for a short time afterwards, which will teleport you to its location and make it deal damage again. Take advantage of this mobility whenever you can!"
@@ -1158,25 +1496,31 @@
         "title": "Key Concepts",
         "items": [
           {
-            "text": "The main goal of this build is to spend yourInitiativeon yourwhile outside ofShadow Shroud, then go intoShadow Shroudand spam yourskill while waiting forInitiativeto recharge."
+            "text": "The main goal of this build is to spend your Initiative on your {skill:63254} while outside of Shadow Shroud, then go into Shadow Shroud and spam your {skill:63167} skill while waiting for Initiative to recharge."
           },
           {
             "text": "You’ll be pressing mostly these 3 skills:"
           },
           {
-            "text": ", while outside ofShadow Shroud."
+            "text": "{skill:63254}, while outside of Shadow Shroud."
           },
           {
-            "text": ", while inShadow Shroud."
+            "text": "{skill:63167}, while in Shadow Shroud."
           },
           {
-            "text": ", whenever it’s available."
+            "text": "{skill:63067}, whenever it’s available."
           },
           {
-            "text": "You will also use your three Venom utility skills off-Cooldownfor damage; they are instant-cast, so no need to think much about them other than clicking them as soon as they are up:"
+            "text": "You will also use your three Venom utility skills off-Cooldown for damage; they are instant-cast, so no need to think much about them other than clicking them as soon as they are up:"
           },
           {
-            "text": "(will inflictPoisonvia)"
+            "text": "{skill:13037}"
+          },
+          {
+            "text": "{skill:13055}"
+          },
+          {
+            "text": "{skill:13093} (will inflict Poison via )"
           }
         ]
       },
@@ -1184,13 +1528,13 @@
         "title": "Step One",
         "items": [
           {
-            "text": "You’ll want to first get comfortable with your skills outside ofShadow Shroud:"
+            "text": "You’ll want to first get comfortable with your skills outside of Shadow Shroud:"
           },
           {
-            "text": "Spend all yourInitiativeon."
+            "text": "Spend all your Initiative on {skill:63254}."
           },
           {
-            "text": "When out ofInitiative, you can fill time withAuto Attacks."
+            "text": "When out of Initiative, you can fill time with Auto Attacks."
           }
         ]
       },
@@ -1198,19 +1542,31 @@
         "title": "Step Two",
         "items": [
           {
-            "text": "We’ll addShadow Shroudnow to the mix. Whenis available, and you’ve spent availableInitiativeon, do the following simple loop:"
+            "text": "We’ll add Shadow Shroud now to the mix. When {skill:63155} is available, and you’ve spent available Initiative on {skill:63254}, do the following simple loop:"
           },
           {
-            "text": "and let the game cast anAuto Attackfor you."
+            "text": "{skill:63155} and let the game cast an Auto Attack for you."
           },
           {
-            "text": "Fill time withAuto Attacks"
+            "text": "{skill:63167}"
           },
           {
-            "text": "Fill time withAuto Attacks"
+            "text": "Fill time with Auto Attacks"
           },
           {
-            "text": "Once you exitShadow Shroud, you should have someInitiativeback again. Spend it onlike you learned in Step One."
+            "text": "{skill:63167}"
+          },
+          {
+            "text": "Fill time with Auto Attacks"
+          },
+          {
+            "text": "{skill:63167}"
+          },
+          {
+            "text": "{skill:63251}"
+          },
+          {
+            "text": "Once you exit Shadow Shroud, you should have some Initiative back again. Spend it on {skill:63254} like you learned in Step One."
           }
         ]
       },
@@ -1218,16 +1574,16 @@
         "title": "Step Three",
         "items": [
           {
-            "text": "Now that you know how to play in and out ofShadow Shroud, you can addand some utility skills."
+            "text": "Now that you know how to play in and out of Shadow Shroud, you can add {skill:63067} and some utility skills."
           },
           {
-            "text": "Press,andwhenever they’re available."
+            "text": "Press {skill:13037}, {skill:13055} and {skill:13093} whenever they’re available."
           },
           {
-            "text": "Caston your enemy to inflict a lot ofBleedingandPoison. Use this skill whenever it’s available (even while inShadow Shroud)."
+            "text": "Cast {skill:63067} on your enemy to inflict a lot of Bleeding and Poison. Use this skill whenever it’s available (even while in Shadow Shroud)."
           },
           {
-            "text": "You can keepAuto Attackingduring downtime. It's useful filler!"
+            "text": "You can keep Auto Attacking during downtime. It's useful filler!"
           }
         ]
       },
@@ -1235,10 +1591,10 @@
         "title": "Step Four",
         "items": [
           {
-            "text": "For a little bit of extra damage, you can addwhen available."
+            "text": "For a little bit of extra damage, you can add {skill:63160} when available."
           },
           {
-            "text": "While inShadow Shroud, you can add a cast ofwhile in melee range for a nice spike ofPoisondamage."
+            "text": "While in Shadow Shroud, you can add a cast of {skill:63160} while in melee range for a nice spike of Poison damage."
           }
         ]
       },
@@ -1260,40 +1616,40 @@
             "text": "You’ll be providing boons mainly from the following sources:"
           },
           {
-            "text": "While inShadow Shroud:"
+            "text": "While in Shadow Shroud:"
           },
           {
-            "text": "will provideAlacrity."
+            "text": "{skill:63167} will provide Alacrity."
           },
           {
             "text": "At any moment while targetting an enemy:"
           },
           {
-            "text": "will provideFury, 10Might,Protection,SwiftnessandVigor."
+            "text": "{skill:63067} will provide Fury, 10 Might, Protection, Swiftness and Vigor."
           },
           {
-            "text": "While outside ofShadow Shroud:"
+            "text": "While outside of Shadow Shroud:"
           },
           {
-            "text": "will provide moreMightandProtection."
+            "text": "{skill:63351} will provide more Might and Protection."
           },
           {
-            "text": "will be your source ofRegenerationandStability. It also provides other boons already found on previous skills."
+            "text": "{skill:63323} will be your source of Regeneration and Stability. It also provides other boons already found on previous skills."
           },
           {
             "text": "Casting these four abilities often will upkeep full uptime of the following essential boons on your party:"
           },
           {
-            "text": "Offensive boons:Alacrity,Might, andFury"
+            "text": "Offensive boons: Alacrity, Might, and Fury"
           },
           {
-            "text": "Defensive boons:ProtectionandRegeneration"
+            "text": "Defensive boons: Protection and Regeneration"
           },
           {
-            "text": "Utility boons:SwiftnessandVigor"
+            "text": "Utility boons: Swiftness and Vigor"
           },
           {
-            "text": "Most of yourHealingwill happen naturally fromShadow Shroudskills,Barrierfrom, and incidentalBlast Finishersfor, which will output a lot of healing even while forgetting it exists."
+            "text": "Most of your Healing will happen naturally from Shadow Shroud skills, Barrier from {skill:63351}, and incidental Blast Finishers for , which will output a lot of healing even while forgetting it exists."
           }
         ]
       },
@@ -1304,10 +1660,28 @@
             "text": "Just learning this opener will ensure your party has its suite of vital boons as soon as possible. Take a little bit of time to learn it! You can fall back to it again for safety when in a hectic situation:"
           },
           {
-            "text": "x 2"
+            "text": "{skill:63323}"
           },
           {
-            "text": "Fill time withAuto Attacks"
+            "text": "{skill:63351} x 2"
+          },
+          {
+            "text": "{skill:63155}"
+          },
+          {
+            "text": "{skill:63167}"
+          },
+          {
+            "text": "{skill:63067}"
+          },
+          {
+            "text": "Fill time with Auto Attacks"
+          },
+          {
+            "text": "{skill:63167}"
+          },
+          {
+            "text": "{skill:63251}"
           }
         ]
       },
@@ -1315,25 +1689,25 @@
         "title": "Step One",
         "items": [
           {
-            "text": "You’ll want to first get comfortable with your skills outside ofShadow Shroud:"
+            "text": "You’ll want to first get comfortable with your skills outside of Shadow Shroud:"
           },
           {
-            "text": "Spend yourInitiativeon."
+            "text": "Spend your Initiative on {skill:63351}."
           },
           {
-            "text": "Spend yourInitiativeon."
+            "text": "Spend your Initiative on {skill:63351}."
           },
           {
-            "text": "UseandoffCooldownif you’re able."
+            "text": "Use {skill:63067} and {skill:63323} off Cooldown if you’re able."
           },
           {
-            "text": "UseandoffCooldownif you’re able."
+            "text": "Use {skill:63067} and {skill:63323} off Cooldown if you’re able."
           },
           {
-            "text": "will grant your group lots ofBarrier,MightandProtection, and serve as aBlast Finisheron any fields your party may have on the arena."
+            "text": "{skill:63351} will grant your group lots of Barrier, Might and Protection, and serve as a Blast Finisher on any fields your party may have on the arena."
           },
           {
-            "text": "EnterShadow Shroudwhenever it’s offCooldownagain."
+            "text": "Enter Shadow Shroud whenever it’s off Cooldown again."
           }
         ]
       },
@@ -1341,19 +1715,31 @@
         "title": "Step Two",
         "items": [
           {
-            "text": "Whenis available, do the following simple loop:"
+            "text": "When {skill:63155} is available, do the following simple loop:"
           },
           {
-            "text": "and let the game cast anAuto Attackfor you."
+            "text": "{skill:63155} and let the game cast an Auto Attack for you."
           },
           {
-            "text": "Fill time withAuto Attacks"
+            "text": "{skill:63167}"
           },
           {
-            "text": "Fill time withAuto Attacks"
+            "text": "Fill time with Auto Attacks"
           },
           {
-            "text": "Each cast ofgrants a whopping 10 seconds ofAlacrityto your party, allowing you a lot of time to space out your visits toShadow Shroud."
+            "text": "{skill:63167}"
+          },
+          {
+            "text": "Fill time with Auto Attacks"
+          },
+          {
+            "text": "{skill:63167}"
+          },
+          {
+            "text": "{skill:63251}"
+          },
+          {
+            "text": "Each cast of {skill:63167} grants a whopping 10 seconds of Alacrity to your party, allowing you a lot of time to space out your visits to Shadow Shroud."
           }
         ]
       },
@@ -1364,22 +1750,22 @@
             "text": "Lastly, you can keep in mind the following adjustments to go the extra mile:"
           },
           {
-            "text": "is a big burst heal, followed by a tickingHealingfield. It has a short, accessibleCooldown, so don’t worry about saving it!"
+            "text": "{skill:63292} is a big burst heal, followed by a ticking Healing field. It has a short, accessible Cooldown, so don’t worry about saving it!"
           },
           {
-            "text": "is a big burst heal, followed by a tickingHealingfield. It has a short, accessibleCooldown, so don’t worry about saving it!"
+            "text": "{skill:63292} is a big burst heal, followed by a ticking Healing field. It has a short, accessible Cooldown, so don’t worry about saving it!"
           },
           {
-            "text": "All your Well skills, as well as, will spawn aDark Fieldunder you. You can give allies extraHealingandCondition Removalby usingspecifically in aDark Field."
+            "text": "All your Well skills, as well as {skill:63067}, will spawn a Dark Field under you. You can give allies extra Healing and Condition Removal by using {skill:63351} specifically in a Dark Field."
           },
           {
-            "text": "All your Well skills, as well as, will spawn aDark Fieldunder you. You can give allies extraHealingandCondition Removalby usingspecifically in aDark Field."
+            "text": "All your Well skills, as well as {skill:63067}, will spawn a Dark Field under you. You can give allies extra Healing and Condition Removal by using {skill:63351} specifically in a Dark Field."
           },
           {
-            "text": "While in Shroud, you can opt to usewhen available, for another big burst heal."
+            "text": "While in Shroud, you can opt to use {skill:63160} when available, for another big burst heal."
           },
           {
-            "text": "While in Shroud, you can opt to usewhen available, for another big burst heal."
+            "text": "While in Shroud, you can opt to use {skill:63160} when available, for another big burst heal."
           }
         ]
       },
@@ -1395,13 +1781,13 @@
         "title": "Key Concepts",
         "items": [
           {
-            "text": "This build is focused around completing yourAuto Attackon yourHammerin order to maintain permanentSymbolvia."
+            "text": "This build is focused around completing your Auto Attack on your Hammer in order to maintain permanent Symbol via {skill:9161}."
           },
           {
-            "text": "Complexity can be added through using,and."
+            "text": "Complexity can be added through using {skill:30364}, {skill:30553} and {skill:30273}."
           },
           {
-            "text": "Your traps provide you with additionalDamageand uptime on your."
+            "text": "Your traps provide you with additional Damage and uptime on your ."
           }
         ]
       },
@@ -1409,10 +1795,10 @@
         "title": "Step One",
         "items": [
           {
-            "text": "ContinuallyAuto Attackon yourHammer. We want to always finish off the fullAuto Attack Chain."
+            "text": "Continually Auto Attack on your Hammer. We want to always finish off the full Auto Attack Chain."
           },
           {
-            "text": "This is so we can leave aSymbolon the ground viawhich will continually tickDamage."
+            "text": "This is so we can leave a Symbol on the ground via {skill:9161} which will continually tick Damage."
           }
         ]
       },
@@ -1420,13 +1806,13 @@
         "title": "Step Two",
         "items": [
           {
-            "text": "We can now add in."
+            "text": "We can now add in {skill:30364}."
           },
           {
-            "text": "Use youras soon as it becomes available as it provides very goodDamage."
+            "text": "Use your {skill:30364} as soon as it becomes available as it provides very good Damage."
           },
           {
-            "text": "Try not to interrupt yourAuto Attack ChainonHammerwhen using."
+            "text": "Try not to interrupt your Auto Attack Chain on Hammer when using {skill:30364}."
           }
         ]
       },
@@ -1434,13 +1820,13 @@
         "title": "Step Three",
         "items": [
           {
-            "text": "We can now add inand."
+            "text": "We can now add in {skill:30553} and {skill:30273}."
           },
           {
-            "text": "orshould be used when you see you don't have the buff from."
+            "text": "{skill:30553} or {skill:30273} should be used when you see you don't have the buff from ."
           },
           {
-            "text": "Try not to interrupt yourAuto Attack ChainonHammerwhen using."
+            "text": "Try not to interrupt your Auto Attack Chain on Hammer when using {skill:30273}."
           }
         ]
       },
@@ -1448,22 +1834,22 @@
         "title": "Defense",
         "items": [
           {
-            "text": "essentially functions as an invulnerability window, use this to your advantage."
+            "text": "{skill:21664} essentially functions as an invulnerability window, use this to your advantage."
           },
           {
-            "text": "willHealandRemove Conditions."
+            "text": "{skill:30225} will Heal and Remove Conditions."
           },
           {
-            "text": "Useto gainAegisandBlockattacks for three seconds."
+            "text": "Use {skill:30039} to gain Aegis and Block attacks for three seconds."
           },
           {
-            "text": "Attacks made behind or to the side of your character willnotbeBlocked."
+            "text": "Attacks made behind or to the side of your character will not be Blocked."
           },
           {
-            "text": "Attacks made against allies near your character willalsobeBlocked."
+            "text": "Attacks made against allies near your character will also be Blocked."
           },
           {
-            "text": "You can still use all your other skills whileis active."
+            "text": "You can still use all your other skills while {skill:30039} is active."
           }
         ]
       },
@@ -1479,13 +1865,22 @@
         "title": "Key Concepts",
         "items": [
           {
-            "text": "This build is focused on using both of yourPistolsandto quickly ramp up yourBurning."
+            "text": "This build is focused on using both of your Pistols and {skill:62668} to quickly ramp up your Burning."
           },
           {
-            "text": "Usinggrants theJusticebuff for 10 seconds due to. While this buff is active, inflictBurningin anAoEevery three strikes. Always useoffCooldownto maximize yourDamage."
+            "text": "Using {skill:62668} grants the Justice buff for 10 seconds due to . While this buff is active, inflict Burning in an AoE every three strikes. Always use {skill:62668} off Cooldown to maximize your Damage."
           },
           {
-            "text": "Use yourPistolskills offCooldown:"
+            "text": "Use your Pistol skills off Cooldown:"
+          },
+          {
+            "text": "{skill:71968}"
+          },
+          {
+            "text": "{skill:71987}"
+          },
+          {
+            "text": "{skill:71817}"
           }
         ]
       },
@@ -1494,6 +1889,21 @@
         "items": [
           {
             "text": "Take time to learn this opening well as it will provide you with a strong opening burst."
+          },
+          {
+            "text": "{skill:62668}"
+          },
+          {
+            "text": "{skill:9187}"
+          },
+          {
+            "text": "{skill:71987} -> {skill:71968}"
+          },
+          {
+            "text": "{skill:62565}"
+          },
+          {
+            "text": "{skill:71817}"
           }
         ]
       },
@@ -1501,13 +1911,22 @@
         "title": "Step One",
         "items": [
           {
-            "text": "Use the following skills offCooldown:"
+            "text": "Use the following skills off Cooldown:"
           },
           {
-            "text": "Fill in the gaps withAuto Attacks."
+            "text": "{skill:62668}"
           },
           {
-            "text": "Keep in mind thatwill move you."
+            "text": "{skill:9187}"
+          },
+          {
+            "text": "{skill:62565}"
+          },
+          {
+            "text": "Fill in the gaps with Auto Attacks."
+          },
+          {
+            "text": "Keep in mind that {skill:62668} will move you."
           }
         ]
       },
@@ -1515,7 +1934,13 @@
         "title": "Step Two",
         "items": [
           {
-            "text": "Once you are comfortable with the previous step, you can start to add in the firstPistolskills and use them offCooldown."
+            "text": "Once you are comfortable with the previous step, you can start to add in the first Pistol skills and use them off Cooldown."
+          },
+          {
+            "text": "{skill:71968}"
+          },
+          {
+            "text": "{skill:71817}"
           }
         ]
       },
@@ -1523,19 +1948,31 @@
         "title": "Step Three",
         "items": [
           {
-            "text": "Now you can add in the remainingPistolskills:and"
+            "text": "Now you can add in the remaining Pistol skills: {skill:71987} and {skill:71918}"
           },
           {
-            "text": "Use yourPistolskills with the following priority offCooldown:"
+            "text": "Use your Pistol skills with the following priority off Cooldown:"
           },
           {
-            "text": "Auto Attackwithwhen every other skill is onCooldown."
+            "text": "{skill:71987}"
           },
           {
-            "text": "Useafter placing, assuming all other skills are onCooldown."
+            "text": "{skill:71968}"
           },
           {
-            "text": "Ifandcome offCooldownat the same time, usefor moreDamage."
+            "text": "{skill:71817}"
+          },
+          {
+            "text": "{skill:71918}"
+          },
+          {
+            "text": "Auto Attack with {skill:72031} when every other skill is on Cooldown."
+          },
+          {
+            "text": "Use {skill:71918} after placing {skill:71987}, assuming all other skills are on Cooldown."
+          },
+          {
+            "text": "If {skill:71968} and {skill:71987} come off Cooldown at the same time, use {skill:71987} -> {skill:71968} for more Damage."
           }
         ]
       },
@@ -1551,16 +1988,16 @@
         "title": "Key Concepts",
         "items": [
           {
-            "text": "Heal Quickness HeraldprovidesQuicknessand a wide array of other Boons to allies primarily by maintaining itsFacetswhile in. It also passively suppliesBarrierandHealingto allies in a very large radius around you."
+            "text": "Heal Quickness Herald provides Quickness and a wide array of other Boons to allies primarily by maintaining its Facets while in {skill:28085}. It also passively supplies Barrier and Healing to allies in a very large radius around you."
           },
           {
-            "text": "Once activated,Facetscontinue to grant their effects until youSwap your Legendary Stanceor deplete yourEnergy."
+            "text": "Once activated, Facets continue to grant their effects until you Swap your Legendary Stance or deplete your Energy."
           },
           {
-            "text": "gives you additional supportive tools, allowing you to provide a lot ofStabilityfor more than just your Subgroup."
+            "text": "{skill:28419} gives you additional supportive tools, allowing you to provide a lot of Stability for more than just your Subgroup."
           },
           {
-            "text": "generatesMightandQuicknessas long as you maintain at least -6Upkeep, and additionally heals your allies whenever you grant them Boons."
+            "text": "generates Might and Quickness as long as you maintain at least -6 Upkeep, and additionally heals your allies whenever you grant them Boons."
           }
         ]
       },
@@ -1568,22 +2005,22 @@
         "title": "Step One",
         "items": [
           {
-            "text": "Start on your. When you start the Encounter, you want to turn someFacetsto start providing Boons. Activate the following:"
+            "text": "Start on your {skill:28085}. When you start the Encounter, you want to turn some Facets to start providing Boons. Activate the following:"
           },
           {
-            "text": "6"
+            "text": "{skill:27220} 6"
           },
           {
-            "text": "Utility"
+            "text": "{skill:27014} Utility"
           },
           {
-            "text": "Utility"
+            "text": "{skill:28379} Utility"
           },
           {
-            "text": "0"
+            "text": "{skill:27760} 0"
           },
           {
-            "text": "Once yourEnergyis fully drained and your passive abilites turn off, wait until you have 50Energyand start again."
+            "text": "Once your Energy is fully drained and your passive abilites turn off, wait until you have 50 Energy and start again."
           }
         ]
       },
@@ -1591,7 +2028,7 @@
         "title": "Step Two",
         "items": [
           {
-            "text": "Auto Attackto generate additionalMightandBarrierwhen you are not activatingFacets."
+            "text": "Auto Attack to generate additional Might and Barrier when you are not activating Facets."
           }
         ]
       },
@@ -1599,16 +2036,16 @@
         "title": "Step Three",
         "items": [
           {
-            "text": "We can now add inLegendary Stance SwapF1. Instead of waiting for yourEnergyto recharge to 50, we will useLegendary Stance SwapF1"
+            "text": "We can now add in Legendary Stance Swap F1. Instead of waiting for your Energy to recharge to 50, we will use Legendary Stance Swap F1"
           },
           {
-            "text": "As soon as you enter, useUtility."
+            "text": "As soon as you enter {skill:28419}, use {skill:28516} Utility."
           },
           {
-            "text": "Always keepAuto Attackinguntil yourLegendary Stance SwapF1is available."
+            "text": "Always keep Auto Attacking until your Legendary Stance Swap F1 is available."
           },
           {
-            "text": "Use anotherUtilitybefore youLegendary Stance SwapF1."
+            "text": "Use another {skill:28516} Utility before you Legendary Stance Swap F1."
           }
         ]
       },
@@ -1616,7 +2053,7 @@
         "title": "Defense",
         "items": [
           {
-            "text": "While keeping your allies alive, it is easy to forget about your own survival. You have some defensive tools in the form of passiveBarrierandHealing, but these alone are not always enough."
+            "text": "While keeping your allies alive, it is easy to forget about your own survival. You have some defensive tools in the form of passive Barrier and Healing, but these alone are not always enough."
           },
           {
             "text": "Luckily, you also have several options that can help you stay safe when things become dangerous."
@@ -1627,7 +2064,7 @@
         "title": "Crowd Control",
         "items": [
           {
-            "text": "Staffcan be an optional secondary weapon for additionalDefiance break.Use5and continue withAuto Attackuntil you canWeapon Swapagain."
+            "text": "Staff can be an optional secondary weapon for additional Defiance break. Use {skill:28978} 5 and continue with Auto Attack until you can Weapon Swap again."
           }
         ]
       }
@@ -1639,13 +2076,13 @@
         "title": "Key Concepts",
         "items": [
           {
-            "text": "ActivatebyDodging.DodgingisDamage, so keepDodgingand never let yourEndurancefill up."
+            "text": "Activate {skill:62693} by Dodging. Dodging is Damage, so keep Dodging and never let your Endurance fill up."
           },
           {
-            "text": "When you aren'tDodging, useAuto AttackonSwordand useUpkeepskills to boostDamage."
+            "text": "When you aren't Dodging, use Auto Attack on Sword and use Upkeep skills to boost Damage."
           },
           {
-            "text": "We can add further complexity through using,Swordskills and changing to a strongerLegendary Stance."
+            "text": "We can add further complexity through using {skill:62757}, Sword skills and changing to a stronger Legendary Stance."
           }
         ]
       },
@@ -1653,16 +2090,16 @@
         "title": "Step One",
         "items": [
           {
-            "text": "Start withDodgeand immediately proceed with yourAuto Attacks."
+            "text": "Start with Dodge and immediately proceed with your Auto Attacks."
           },
           {
-            "text": "Dodgeagain when yourEnduranceallows, while trying not to interrupt yourAuto Attack Chaintoo often."
+            "text": "Dodge again when your Endurance allows, while trying not to interrupt your Auto Attack Chain too often."
           },
           {
-            "text": "Useand activate it repeatedly as soon it is available. This will grant theeffect to improve your nextDodge, so try to do so as soon as possible once activated."
+            "text": "Use {skill:62757} and activate it repeatedly as soon it is available. This will grant the effect to improve your next Dodge, so try to do so as soon as possible once activated."
           },
           {
-            "text": "Remember, you can move and reposition whileDodging!"
+            "text": "Remember, you can move and reposition while Dodging!"
           }
         ]
       },
@@ -1670,16 +2107,16 @@
         "title": "Step Two",
         "items": [
           {
-            "text": "Next, we'll add inUpkeepskills."
+            "text": "Next, we'll add in Upkeep skills."
           },
           {
-            "text": "Useand let it drain yourEnergy. This skill adds additionalDamagewhen you strike enemies."
+            "text": "Use {skill:27107} and let it drain your Energy. This skill adds additional Damage when you strike enemies."
           },
           {
-            "text": "When you run out ofEnergy, swap toand use. This skill acts similarly and dealsDamagearound you in close proximity."
+            "text": "When you run out of Energy, swap to {skill:28419} and use {skill:26557}. This skill acts similarly and deals Damage around you in close proximity."
           },
           {
-            "text": "Onceis ready again, swap back to it and repeat!"
+            "text": "Once {skill:28134} is ready again, swap back to it and repeat!"
           }
         ]
       },
@@ -1687,13 +2124,22 @@
         "title": "Step Three",
         "items": [
           {
-            "text": "Lastly, we should add in weapon skills. Try to weave these in betweenAuto Attacks, but still prioritiseDodge."
+            "text": "Lastly, we should add in weapon skills. Try to weave these in between Auto Attacks, but still prioritise Dodge."
           },
           {
-            "text": "Follow this priority on yourSwords:"
+            "text": "Follow this priority on your Swords:"
           },
           {
-            "text": "Try to, as they have the sameCooldown."
+            "text": "{skill:29233}"
+          },
+          {
+            "text": "{skill:28472}"
+          },
+          {
+            "text": "{skill:27074}"
+          },
+          {
+            "text": "Try to {skill:28472} -> {skill:27074}, as they have the same Cooldown."
           }
         ]
       },
@@ -1701,16 +2147,16 @@
         "title": "Step Four",
         "items": [
           {
-            "text": "Replacewith. This stance will use slot skills for more damage instead ofUpkeep."
+            "text": "Replace {skill:28419} with {skill:62749}. This stance will use slot skills for more damage instead of Upkeep."
           },
           {
-            "text": "Usewhen you enter the stance, and again before leaving."
+            "text": "Use {skill:62942} when you enter the stance, and again before leaving."
           },
           {
-            "text": "Usetwice in between other skills."
+            "text": "Use {skill:62832} twice in between other skills."
           },
           {
-            "text": "is a great alternative skill that grants youFury,QuicknessandEnduranceto allow moreDodges."
+            "text": "{skill:62962} is a great alternative skill that grants you Fury, Quickness and Endurance to allow more Dodges."
           }
         ]
       },
@@ -1718,16 +2164,16 @@
         "title": "Defense",
         "items": [
           {
-            "text": "grants you 20% damage reduction while active, and you can gain further damage reduction from. This is also one of yourStun Breaks."
+            "text": "{skill:26557} grants you 20% damage reduction while active, and you can gain further damage reduction from {skill:27975}. This is also one of your Stun Breaks."
           },
           {
-            "text": "It can be good to not impulsively useDodgeall the time, such that you may be able toEvadean incoming attack. You can also use, your otherStun Break, whichEvadesbackwards, orto avoid attacks. However, both will lock you into an animation."
+            "text": "It can be good to not impulsively use Dodge all the time, such that you may be able to Evade an incoming attack. You can also use {skill:29209}, your other Stun Break, which Evades backwards, or {skill:26699} to avoid attacks. However, both will lock you into an animation."
           },
           {
-            "text": "is a strong heal withCondition Removal.providesStabilityin a largeAoE."
+            "text": "{skill:27372} is a strong heal with Condition Removal. {skill:28516} provides Stability in a large AoE."
           },
           {
-            "text": "Inyou have access to several other healing skills andStun Breaksby swapping between each faction with."
+            "text": "In {skill:62749} you have access to several other healing skills and Stun Breaks by swapping between each faction with {skill:62729}."
           }
         ]
       },
@@ -1743,19 +2189,19 @@
         "title": "Key Concepts",
         "items": [
           {
-            "text": "This build relies on stackingDamagebuffs from several sources:"
+            "text": "This build relies on stacking Damage buffs from several sources:"
           },
           {
-            "text": "applied byBurst skills"
+            "text": "applied by Burst skills"
           },
           {
             "text": "applied by Signets"
           },
           {
-            "text": "applied byDefiance Breakskills"
+            "text": "applied by Defiance Break skills"
           },
           {
-            "text": "It then takes advantage of these buffs through weapon skills andAuto Attack Chains. YourAuto Attacksare ultra-fast thanks to."
+            "text": "It then takes advantage of these buffs through weapon skills and Auto Attack Chains. Your Auto Attacks are ultra-fast thanks to ."
           }
         ]
       },
@@ -1766,13 +2212,25 @@
             "text": "Start by using all your signet skills:"
           },
           {
-            "text": "These are preliminary to the rest of the rotation. You can take your time activating each one, as the buff fromlasts quite a long time."
+            "text": "{skill:14404}"
           },
           {
-            "text": "Start combat withand follow up withAuto Attacks."
+            "text": "{skill:14389}"
           },
           {
-            "text": "Useagain after theCooldownis halfway done, or as soon as you have a newChargeif you run out."
+            "text": "{skill:14355}"
+          },
+          {
+            "text": "{skill:14410}"
+          },
+          {
+            "text": "These are preliminary to the rest of the rotation. You can take your time activating each one, as the buff from lasts quite a long time."
+          },
+          {
+            "text": "Start combat with {skill:14502} and follow up with Auto Attacks."
+          },
+          {
+            "text": "Use {skill:14502} again after the Cooldown is halfway done, or as soon as you have a new Charge if you run out."
           }
         ]
       },
@@ -1780,19 +2238,25 @@
         "title": "Step Two",
         "items": [
           {
-            "text": "Activatewhenever available to refresh yourbuff."
+            "text": "Activate {skill:14355} whenever available to refresh your buff."
           },
           {
             "text": "For this step you should add in the following skills:"
           },
           {
-            "text": "adds a stack of, but is a priority skill. Beware not to interrupt other skill casts with it."
+            "text": "{skill:44937}"
           },
           {
-            "text": "grantsand appliesto your target. This is a substantialDamagebuff, so it is one of your most important skills."
+            "text": "{skill:45252}"
           },
           {
-            "text": "Be sure to use these skills as often as possible, and continue withandAuto Attacksin between."
+            "text": "{skill:44937} adds a stack of , but is a priority skill. Beware not to interrupt other skill casts with it."
+          },
+          {
+            "text": "{skill:45252} grants and applies to your target. This is a substantial Damage buff, so it is one of your most important skills."
+          },
+          {
+            "text": "Be sure to use these skills as often as possible, and continue with {skill:14502} and Auto Attacks in between."
           }
         ]
       },
@@ -1803,10 +2267,22 @@
             "text": "Now we'll add in a skill combo:"
           },
           {
+            "text": "{skill:14410}"
+          },
+          {
+            "text": "{skill:14518}"
+          },
+          {
+            "text": "{skill:14415}"
+          },
+          {
+            "text": "{skill:14518}"
+          },
+          {
             "text": "You can follow this up with aforementioned weapon skills to take advantage of the extra damage buffs from this combo."
           },
           {
-            "text": "As theCooldownsare on the longer side, you do not need to worry about casting these skills outside of this combo."
+            "text": "As the Cooldowns are on the longer side, you do not need to worry about casting these skills outside of this combo."
           }
         ]
       },
