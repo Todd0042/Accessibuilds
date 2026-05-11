@@ -13,16 +13,16 @@ namespace DebugWindow { void Print(const char* msg); }
 inline AddonAPI_t* APIDefs = nullptr;
 
 /* Addon identity */
-constexpr const char*    ADDON_NAME      = "Accessibuilds";
+constexpr const char*    ADDON_NAME      = "BuildCoach";
 constexpr const char*    ADDON_AUTHOR    = "Todd0042";
 /* Unique uint32_t — a negative signed int cast to uint32_t (lessons learned §10) */
 constexpr uint32_t       ADDON_SIGNATURE = (uint32_t)(-20250510);
 
 /* Quick access / keybind identifiers */
-constexpr const char* QA_IDENTIFIER = "QA_ACCESSIBUILDS";
-constexpr const char* KB_TOGGLE     = "KB_ACCESSIBUILDS_TOGGLE";
-constexpr const char* ICON_NORMAL   = "ICON_ACCESSIBUILDS";
-constexpr const char* ICON_HOVER    = "ICON_ACCESSIBUILDS_HOVER";
+constexpr const char* QA_IDENTIFIER = "QA_BUILDCOACH";
+constexpr const char* KB_TOGGLE     = "KB_BUILDCOACH_TOGGLE";
+constexpr const char* ICON_NORMAL   = "ICON_BUILDCOACH";
+constexpr const char* ICON_HOVER    = "ICON_BUILDCOACH_HOVER";
 
 /* Addon data directory (set in AddonLoad via Paths_GetAddonDirectory) */
 inline std::string g_AddonDir;

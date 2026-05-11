@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.20)
-project(Accessibuilds CXX)
+project(BuildCoach CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -49,19 +49,19 @@ set(ADDON_SOURCES
 )
 
 # ── Target ────────────────────────────────────────────────────────────────────
-add_library(Accessibuilds SHARED
+add_library(BuildCoach SHARED
     ${ADDON_SOURCES}
     ${IMGUI_SOURCES}
 )
 
-target_include_directories(Accessibuilds PRIVATE
+target_include_directories(BuildCoach PRIVATE
     ${CMAKE_SOURCE_DIR}/external/nexus
     ${IMGUI_DIR}
     ${CMAKE_SOURCE_DIR}/external   # resolves <nlohmann/json.hpp>
 )
 
 # ── Compile options ───────────────────────────────────────────────────────────
-target_compile_options(Accessibuilds PRIVATE
+target_compile_options(BuildCoach PRIVATE
     -Wall -Wextra
     -Wno-unused-parameter
     -Wno-unused-function
@@ -72,26 +72,26 @@ target_compile_options(Accessibuilds PRIVATE
 )
 
 # ── Link ──────────────────────────────────────────────────────────────────────
-target_link_libraries(Accessibuilds PRIVATE
+target_link_libraries(BuildCoach PRIVATE
     winhttp
     shell32
 )
 
-target_link_options(Accessibuilds PRIVATE
+target_link_options(BuildCoach PRIVATE
     -static-libgcc
     -static-libstdc++
     -Wl,-Bstatic,--whole-archive -lwinpthread -Wl,--no-whole-archive,-Bdynamic
 )
 
 # ── Output name ───────────────────────────────────────────────────────────────
-set_target_properties(Accessibuilds PROPERTIES
-    OUTPUT_NAME "Accessibuilds"
+set_target_properties(BuildCoach PROPERTIES
+    OUTPUT_NAME "BuildCoach"
     PREFIX      ""
     SUFFIX      ".dll"
 )
 
 # ── Install helper ────────────────────────────────────────────────────────────
 if(DEFINED ENV{GW2_ADDONS_DIR})
-    install(TARGETS Accessibuilds
-            RUNTIME DESTINATION "$ENV{GW2_ADDONS_DIR}/Accessibuilds")
+    install(TARGETS BuildCoach
+            RUNTIME DESTINATION "$ENV{GW2_ADDONS_DIR}/BuildCoach")
 endif()

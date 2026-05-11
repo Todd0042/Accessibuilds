@@ -373,7 +373,7 @@ __declspec(dllexport) void AddonLoad(AddonAPI_t* aApi)
         ICON_HOVER,  (void*)icon_png, (uint64_t)icon_png_len);
     APIDefs->QuickAccess_Add(
         QA_IDENTIFIER, ICON_NORMAL, ICON_HOVER, KB_TOGGLE,
-        "Accessibuilds — Build Advisor");
+        "Build Coach — Build Advisor");
 
     ArcDPS::Init();
     Log(LOGL_INFO, "loaded");
@@ -412,8 +412,7 @@ __declspec(dllexport) AddonDefinition_t* GetAddonDef()
         ADDON_NAME,
         version,
         ADDON_AUTHOR,
-        "Accessible build comparison tool. "
-        "Compares your build against Snow Crows reference builds.",
+        "Build Coach — compare your build against Snow Crows reference builds.",
         AddonLoad,
         AddonUnload,
         AF_None,

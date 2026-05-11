@@ -3,6 +3,7 @@
 // Source: GW2 API /v2/pets
 #pragma once
 #include <cstdint>
+#include <cstring>
 
 namespace OfflineData {
 
@@ -13,66 +14,74 @@ struct PetEntry {
 };
 
 inline constexpr PetEntry PETS[] = {
-    /* Terrestrial - Ferocious */
-    {56, "Juvenile Wolf", false},
-    {57, "Juvenile Wolf", false},
-    {58, "Juvenile Brown Bear", false},
-    {59, "Juvenile Spider", false},
-    {60, "Juvenile Lynx", false},
-    {61, "Juvenile Jaguar", false},
-    {62, "Juvenile Moa", false},
-    {63, "Juvenile Devourer", false},
-    {64, "Juvenile Drake", false},
-    {65, "Juvenile Pig", false},
-    {66, "Juvenile Raven", false},
-    {67, "Juvenile Shark", false},
-    {68, "Juvenile Smokescale", false},
-    {69, "Juvenile Jacaranda", false},
-    {70, "Juvenile Fern Hound", false},
-    /* Terrestrial - Sturdy */
-    {71, "Juvenile Bear", false},
-    {72, "Juvenile Black Bear", false},
-    {73, "Juvenile Polar Bear", false},
-    {74, "Juvenile Dragon Lizard", false},
-    {75, "Juvenile Rock Gazelle", false},
-    /* Terrestrial - Support */
-    {76, "Juvenile Pink Moa", false},
-    {77, "Juvenile Blue Moa", false},
-    {78, "Juvenile Red Moa", false},
-    {79, "Juvenile Black Moa", false},
-    {80, "Juvenile White Moa", false},
-    {81, "Juvenile Electric Wyvern", false},
-    {82, "Juvenile Fire Wyvern", false},
-    {83, "Juvenile Ice Wyvern", false},
-    /* Terrestrial - Elite/Special */
-    {84, "Juvenile Tiger", false},
-    {85, "Juvenile Hawk", false},
-    {86, "Juvenile Crocodile", false},
-    {87, "Juvenile Phoenix", false},
-    {88, "Juvenile Jellyfish", false},
-    {89, "Juvenile Warthog", false},
-    {90, "Juvenile Tiger", false},
-    {91, "Juvenile Shark", false},
-    /* Aquatic */
-    {92, "Juvenile Blue Eel", true},
-    {93, "Juvenile Red Eel", true},
-    {94, "Juvenile Tiger", true},
-    {95, "Juvenile Shark", true},
-    {96, "Juvenile Orca", true},
-    {97, "Juvenile Manta Ray", true},
-    {98, "Juvenile Sea Spider", true},
-    {99, "Juvenile Jellyfish", true},
-    {100, "Juvenile Crab", true},
-    /* Mount-linked (Soulbeast) */
-    {101, "Juvenile Wyvern", false},
-    {102, "Juvenile Griffon", false},
-    {103, "Juvenile Raptor", false},
-    {104, "Juvenile Springer", false},
-    {105, "Juvenile Skimmer", false},
-    {106, "Juvenile Jackal", false},
+    {1, "Juvenile Jungle Stalker", false},
+    {2, "Juvenile Boar", false},
+    {3, "Juvenile Lynx", false},
+    {4, "Juvenile Krytan Drakehound", false},
+    {5, "Juvenile Brown Bear", false},
+    {6, "Juvenile Carrion Devourer", false},
+    {7, "Juvenile Salamander Drake", false},
+    {8, "Juvenile Alpine Wolf", false},
+    {9, "Juvenile Snow Leopard", false},
+    {10, "Juvenile Raven", false},
+    {11, "Juvenile Jaguar", false},
+    {12, "Juvenile Marsh Drake", false},
+    {13, "Juvenile Blue Moa", false},
+    {14, "Juvenile White Moa", false},
+    {15, "Juvenile Pink Moa", false},
+    {16, "Juvenile Black Moa", false},
+    {17, "Juvenile Red Moa", false},
+    {18, "Juvenile Ice Drake", false},
+    {19, "Juvenile River Drake", false},
+    {20, "Juvenile Murellow", false},
+    {21, "Juvenile Shark", false},
+    {22, "Juvenile Fern Hound", false},
+    {23, "Juvenile Black Bear", false},
+    {24, "Juvenile Polar Bear", false},
+    {25, "Juvenile Arctodus", false},
+    {26, "Juvenile Whiptail Devourer", false},
+    {27, "Juvenile Lashtail Devourer", false},
+    {28, "Juvenile Hyena", false},
+    {29, "Juvenile Wolf", false},
+    {30, "Juvenile Owl", false},
+    {31, "Juvenile Eagle", false},
+    {32, "Juvenile White Raven", false},
+    {33, "Juvenile Forest Spider", false},
+    {34, "Juvenile Jungle Spider", false},
+    {35, "Juvenile Cave Spider", false},
+    {36, "Juvenile Black Widow Spider", false},
+    {37, "Juvenile Warthog", false},
+    {38, "Juvenile Siamoth", false},
+    {39, "Juvenile Pig", false},
+    {40, "Juvenile Armor Fish", false},
+    {41, "Juvenile Blue Jellyfish", false},
+    {42, "Juvenile Red Jellyfish", false},
+    {43, "Juvenile Rainbow Jellyfish", false},
+    {44, "Juvenile Hawk", false},
+    {45, "Juvenile Reef Drake", false},
+    {46, "Juvenile Smokescale", false},
+    {47, "Juvenile Tiger", false},
+    {48, "Juvenile Electric Wyvern", false},
+    {51, "Juvenile Fire Wyvern", false},
+    {52, "Juvenile Bristleback", false},
+    {54, "Juvenile Cheetah", false},
+    {55, "Juvenile Sand Lion", false},
+    {57, "Juvenile Jacaranda", false},
+    {59, "Juvenile Rock Gazelle", false},
+    {61, "Juvenile Fanged Iboga", false},
+    {63, "Juvenile White Tiger", false},
+    {64, "Juvenile Wallow", false},
+    {65, "Juvenile Phoenix", false},
+    {66, "Juvenile Siege Turtle", false},
+    {67, "Juvenile Aether Hunter", false},
+    {68, "Juvenile Sky-Chak Striker", false},
+    {69, "Juvenile Spinegazer", false},
+    {70, "Juvenile Warclaw", false},
+    {71, "Juvenile Janthiri Bee", false},
+    {72, "Juvenile Raptor Swiftwing", false},
 };
 
-inline constexpr size_t PET_COUNT = 51;
+inline constexpr size_t PET_COUNT = 65;
 
 inline const PetEntry* FindPet(uint32_t id) {
     for (const auto& p : PETS) {
@@ -84,6 +93,32 @@ inline const PetEntry* FindPet(uint32_t id) {
 inline const char* GetPetName(uint32_t id) {
     const auto* entry = FindPet(id);
     return entry ? entry->name : "Unknown Pet";
+}
+
+/* Match pet by short name (e.g. \"carrion devourer\" for \"Juvenile Carrion Devourer\") */
+inline const PetEntry* FindPetByName(const char* short_name) {
+    if (!short_name || !short_name[0]) return nullptr;
+    /* Build lowercase version of input */
+    char buf[64];
+    size_t i = 0;
+    for (; short_name[i] && i < sizeof(buf)-1; i++)
+        buf[i] = (short_name[i] >= 'A' && short_name[i] <= 'Z') ? short_name[i] + 32 : short_name[i];
+    buf[i] = '\0';
+    /* Strip leading 'juvenile ' */
+    const char* search = buf;
+    if (strncmp(search, "juvenile ", 9) == 0) search += 9;
+    for (const auto& p : PETS) {
+        /* Build lowercase short version of each pet name */
+        char pb[64];
+        size_t j = 0;
+        for (const char* s = p.name; *s && j < sizeof(pb)-1; s++)
+            pb[j++] = (*s >= 'A' && *s <= 'Z') ? *s + 32 : *s;
+        pb[j] = '\0';
+        const char* psearch = pb;
+        if (strncmp(psearch, "juvenile ", 9) == 0) psearch += 9;
+        if (strcmp(psearch, search) == 0) return &p;
+    }
+    return nullptr;
 }
 
 inline bool IsAquaticPet(uint32_t id) {

@@ -22,7 +22,7 @@ for arg in "$@"; do
             echo "  --regen            Regenerate embedded headers from JSON files:"
             echo "                       - src/sc_builds_embedded.h (binary xxd format)"
             echo "                       - src/sc_builds_offline.h (C string format)"
-            echo "  --install          Deploy DLL to \$GW2_ADDONS_DIR/Accessibuilds/"
+            echo "  --install          Deploy DLL to \$GW2_ADDONS_DIR/BuildCoach/"
             echo "  --install=<path>   Same, using an explicit path"
             exit 0
             ;;
@@ -113,7 +113,7 @@ cmake -S "$SCRIPT_DIR" -B "$BUILD_DIR" \
 echo "Building ..."
 cmake --build "$BUILD_DIR" --parallel "$(nproc)"
 
-DLL="$BUILD_DIR/Accessibuilds.dll"
+DLL="$BUILD_DIR/BuildCoach.dll"
 if [[ -f "$DLL" ]]; then
     echo "Built: $DLL"
 else
@@ -126,8 +126,8 @@ if [[ $INSTALL -eq 1 ]]; then
         echo "ERROR: --install requires \$GW2_ADDONS_DIR to be set or passed as --install=<path>" >&2
         exit 1
     fi
-    DEST="$GW2_ADDONS_DIR/Accessibuilds"
+    DEST="$GW2_ADDONS_DIR/BuildCoach"
     mkdir -p "$DEST"
-    cp "$DLL" "$DEST/Accessibuilds.dll"
-    echo "Installed: $DEST/Accessibuilds.dll"
+    cp "$DLL" "$DEST/BuildCoach.dll"
+    echo "Installed: $DEST/BuildCoach.dll"
 fi

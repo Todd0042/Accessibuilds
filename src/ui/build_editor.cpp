@@ -1789,6 +1789,21 @@ void Render()
                 ? "Import current character\xe2\x80\x99s gear and traits as a starting template"
                 : "Load a character first (click Refresh in the main window)");
     }
+    ImGui::SameLine();
+    {
+        bool sc_ready = g_SCBuildLoaded.load();
+        if (!sc_ready) ImGui::PushStyleVar(ImGuiStyleVar_Alpha, 0.4f);
+        if (ImGui::Button("From SC") && sc_ready) {
+            GW2::SCBuild sc;
+            { std::lock_guard<std::mutex> lk(g_SCBuildMutex); sc = g_SCBuild; }
+            BuildToForm(sc);
+        }
+        if (!sc_ready) ImGui::PopStyleVar();
+        if (ImGui::IsItemHovered())
+            ImGui::SetTooltip(sc_ready
+                ? "Import the currently selected Snow Crows reference build"
+                : "Select a reference build from the dropdown first");
+    }
     /* ── Share Code ── */
     ImGui::Spacing(); ImGui::Separator();
     ImGui::TextDisabled("Share Code (AB: format)");

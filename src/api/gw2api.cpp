@@ -495,6 +495,84 @@ bool FetchFullPlayerBuild(const std::string& api_key,
             Log(LOGL_DEBUG, rbuf);
         }
 
+        /* Pets for Ranger — /v2/characters/{name}/core returns a pets array */
+        if (out_build.profession == GW2::Profession::Ranger) {
+            std::string pet_ep = "/v2/characters/" + enc + "/core";
+            auto pet_resp = Http::GetWithBearer(HOST, BuildPath(pet_ep), api_key);
+            if (pet_resp.ok()) {
+                try {
+                    auto j = json::parse(pet_resp.body);
+                    if (j.contains("pets") && j["pets"].is_array()) {
+                        int idx = 0;
+                        for (auto& p : j["pets"]) {
+                            if (idx >= 2) break;
+                            out_build.pets[idx++] = p.value("id", 0u);
+                        }
+                        Log(LOGL_DEBUG, ("GW2API: pets=[" +
+                            std::to_string(out_build.pets[0]) + "," +
+                            std::to_string(out_build.pets[1]) + "] for " +
+                            character_name).c_str());
+                    }
+                } catch (...) { }
+            }
+        }
+
+        /* Revenant legend detection from skill bar — match player skills
+         * against known legend skill sets from /v2/legends API.
+         * Each legend has a unique set of heal/utility/elite skills + swap skill. */
+        if (out_build.profession == GW2::Profession::Revenant) {
+            /* Map: skill_id → legend_index (1-based, matching /v2/legends order) */
+            static const std::map<uint32_t, int> s_skill_to_legend = {
+                /* Legend1 (Shiro): swap=28085 */
+                {27220, 1}, {28379, 1}, {27014, 1}, {26644, 1}, {27760, 1}, {28085, 1},
+                /* Legend2 (Ventari): swap=28134 */
+                {26937, 2}, {29209, 2}, {28231, 2}, {27107, 2}, {28406, 2}, {28134, 2},
+                /* Legend3 (Jalis): swap=28419 */
+                {27372, 3}, {28516, 3}, {26679, 3}, {26557, 3}, {27975, 3}, {28419, 3},
+                /* Legend4 (Mallyx): swap=28494 */
+                {28219, 4}, {27322, 4}, {27505, 4}, {27917, 4}, {28287, 4}, {28494, 4},
+                /* Legend5 (Kalla/Renegade): swap=41858 */
+                {45686, 5}, {42949, 5}, {40485, 5}, {41220, 5}, {45773, 5}, {41858, 5},
+                /* Legend6 (Glint/Dragon): swap=28195 */
+                {28427, 6}, {26821, 6}, {27025, 6}, {27715, 6}, {27356, 6}, {28195, 6},
+                /* Legend7 (Vindicator/Alliance): swap=62749 */
+                {62719, 7}, {62832, 7}, {62962, 7}, {62878, 7}, {62942, 7}, {62749, 7},
+                /* Legend8 (Conduit): swap=76610 */
+                {77043, 8}, {77243, 8}, {77291, 8}, {76805, 8}, {76968, 8}, {76610, 8},
+            };
+            uint32_t skills[6] = {
+                out_build.skills.heal,
+                out_build.skills.utilities[0],
+                out_build.skills.utilities[1],
+                out_build.skills.utilities[2],
+                out_build.skills.elite,
+                /* Also check the scan skills from equipment tabs if available */
+            };
+            int found_count[8] = {};
+            for (int si = 0; si < 5; si++) {
+                auto it = s_skill_to_legend.find(skills[si]);
+                if (it != s_skill_to_legend.end())
+                    found_count[it->second - 1]++;
+            }
+            /* Convert legend index → swap skill ID to match SC data format */
+            static const uint32_t s_swap_ids[8] = {
+                28085, 28134, 28419, 28494, 41858, 28195, 62749, 76610
+            };
+            /* Pick top 2 legends by skill match count */
+            int legend_idx = 0;
+            for (int pass = 5; pass >= 0 && legend_idx < 2; pass--) {
+                for (int li = 0; li < 8 && legend_idx < 2; li++) {
+                    if (found_count[li] == pass) {
+                        out_build.legends[legend_idx++] = s_swap_ids[li];
+                    }
+                }
+            }
+            Log(LOGL_DEBUG, ("GW2API: legends=[" +
+                std::to_string(out_build.legends[0]) + "," +
+                std::to_string(out_build.legends[1]) + "] for " +
+                character_name).c_str());
+        }
+
         out_build.character_name = character_name;
         Log(LOGL_INFO, ("Player build loaded for " + character_name).c_str());
         return true;
@@ -790,7 +868,7 @@ void GenerateBuildChatCodeAsync(const GW2::SCBuild& build)
             if (!spec_ids.empty()) {
                 std::wstring path = L"/v2/specializations?ids=" +
                     std::wstring(spec_ids.begin(), spec_ids.end());
-                auto resp = Http::Get(HOST, path);
+                auto resp = Http::Get(GW2API::HOST, path);
                 if (!resp.ok()) return;
                 try {
                     auto arr = json::parse(resp.body);
@@ -839,15 +917,15 @@ void GenerateBuildChatCodeAsync(const GW2::SCBuild& build)
             std::string ep = "/v2/professions/" + prof_name +
                              "?v=2019-12-19T00:00:00.000Z";
             std::wstring path(ep.begin(), ep.end());
-            auto resp = Http::Get(HOST, path);
+            auto resp = Http::Get(GW2API::HOST, path);
             if (resp.ok()) {
                 try {
                     auto j = json::parse(resp.body);
                     std::map<uint32_t, uint32_t> m;
                     for (auto& pair : j.value("skills_by_palette", json::array())) {
                         if (!pair.is_array() || pair.size() != 2) continue;
-                        uint32_t pal = pair[0].get<uint32_t>();
-                        uint32_t sk  = pair[1].get<uint32_t>();
+                        uint32_t pal = (uint32_t)pair[0];
+                        uint32_t sk  = (uint32_t)pair[1];
                         if (pal && sk) m[sk] = pal;
                     }
                     std::lock_guard<std::mutex> lk(s_pubcache_mutex);
@@ -976,15 +1054,15 @@ bool ParseBuildTemplateLink(const std::string& chat_code,
         std::string ep = "/v2/professions/" + prof_name +
                          "?v=2019-12-19T00:00:00.000Z";
         std::wstring path(ep.begin(), ep.end());
-        auto resp = Http::Get(HOST, path);
+        auto resp = Http::Get(GW2API::HOST, path);
         if (resp.ok()) {
             try {
                 auto j = json::parse(resp.body);
                 std::map<uint32_t, uint32_t> m;
                 for (auto& pair : j.value("skills_by_palette", json::array())) {
                     if (!pair.is_array() || pair.size() != 2) continue;
-                    uint32_t pal = pair[0].get<uint32_t>();
-                    uint32_t sk  = pair[1].get<uint32_t>();
+                    uint32_t pal = (uint32_t)pair[0];
+                    uint32_t sk  = (uint32_t)pair[1];
                     if (pal && sk) m[sk] = pal;
                 }
                 std::lock_guard<std::mutex> lk(s_pubcache_mutex);

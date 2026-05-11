@@ -1548,10 +1548,14 @@ CMakeFiles/Accessibuilds.dir/src/api/gw2names.cpp.obj: /home/todd/gw2-build-coac
   /home/todd/gw2-build-coaches/Accessibuilds/external/nexus/nexus.h \
   /home/todd/gw2-build-coaches/Accessibuilds/src/build/cache.h \
   /home/todd/gw2-build-coaches/Accessibuilds/src/build/types.h \
+  /home/todd/gw2-build-coaches/Accessibuilds/src/sc_builds_offline.h \
   /home/todd/gw2-build-coaches/Accessibuilds/src/shared.h \
   /home/todd/gw2-build-coaches/Accessibuilds/src/api/gw2api.h \
   /home/todd/gw2-build-coaches/Accessibuilds/src/api/gw2names.h \
   /home/todd/gw2-build-coaches/Accessibuilds/src/api/http_client.h \
+  /home/todd/gw2-build-coaches/Accessibuilds/src/api/skill_names.h \
+  /home/todd/gw2-build-coaches/Accessibuilds/src/api/spec_names.h \
+  /home/todd/gw2-build-coaches/Accessibuilds/src/api/trait_names.h \
   /home/todd/gw2-build-coaches/Accessibuilds/src/api/weapon_type_db.h \
   /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/include/adxintrin.h \
   /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/include/ammintrin.h \
@@ -5131,6 +5135,7 @@ CMakeFiles/Accessibuilds.dir/src/build/cache.cpp.obj: /home/todd/gw2-build-coach
 CMakeFiles/Accessibuilds.dir/src/build/comparator.cpp.obj: /home/todd/gw2-build-coaches/Accessibuilds/src/build/comparator.cpp \
   /home/todd/gw2-build-coaches/Accessibuilds/src/api/gw2api.h \
   /home/todd/gw2-build-coaches/Accessibuilds/src/api/gw2names.h \
+  /home/todd/gw2-build-coaches/Accessibuilds/src/api/pet_names.h \
   /home/todd/gw2-build-coaches/Accessibuilds/src/api/relic_db.h \
   /home/todd/gw2-build-coaches/Accessibuilds/src/build/comparator.h \
   /home/todd/gw2-build-coaches/Accessibuilds/src/build/types.h \
@@ -6472,6 +6477,8 @@ CMakeFiles/Accessibuilds.dir/src/ui/build_panel.cpp.obj: /home/todd/gw2-build-co
   /home/todd/gw2-build-coaches/Accessibuilds/external/nexus/nexus.h \
   /home/todd/gw2-build-coaches/Accessibuilds/src/api/gw2names.h \
   /home/todd/gw2-build-coaches/Accessibuilds/src/api/item_lookup.h \
+  /home/todd/gw2-build-coaches/Accessibuilds/src/api/legend_names.h \
+  /home/todd/gw2-build-coaches/Accessibuilds/src/api/pet_names.h \
   /home/todd/gw2-build-coaches/Accessibuilds/src/build/cache.h \
   /home/todd/gw2-build-coaches/Accessibuilds/src/build/comparator.h \
   /home/todd/gw2-build-coaches/Accessibuilds/src/build/types.h \
@@ -6685,6 +6692,7 @@ CMakeFiles/Accessibuilds.dir/src/ui/build_panel.cpp.obj: /home/todd/gw2-build-co
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/cstdint \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/cstdio \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/cstdlib \
+  /usr/x86_64-w64-mingw32/include/c++/15.2.0/cstring \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/ctime \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/cwchar \
   /usr/x86_64-w64-mingw32/include/c++/15.2.0/debug/assertions.h \
@@ -9646,6 +9654,8 @@ CMakeFiles/Accessibuilds.dir/src/ui/main_window.cpp.obj: /home/todd/gw2-build-co
 
 /home/todd/gw2-build-coaches/Accessibuilds/src/build/comparator.h:
 
+/home/todd/gw2-build-coaches/Accessibuilds/src/api/pet_names.h:
+
 /home/todd/gw2-build-coaches/Accessibuilds/src/sc_builds_embedded.h:
 
 /home/todd/gw2-build-coaches/Accessibuilds/src/build/cache.cpp:
@@ -9675,6 +9685,10 @@ CMakeFiles/Accessibuilds.dir/src/ui/main_window.cpp.obj: /home/todd/gw2-build-co
 /home/todd/gw2-build-coaches/Accessibuilds/src/api/http_client.cpp:
 
 /home/todd/gw2-build-coaches/Accessibuilds/src/api/weapon_type_db.h:
+
+/home/todd/gw2-build-coaches/Accessibuilds/src/api/trait_names.h:
+
+/home/todd/gw2-build-coaches/Accessibuilds/src/sc_builds_offline.h:
 
 /home/todd/gw2-build-coaches/Accessibuilds/src/api/gw2names.cpp:
 
@@ -9948,6 +9962,8 @@ CMakeFiles/Accessibuilds.dir/src/ui/main_window.cpp.obj: /home/todd/gw2-build-co
 
 /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/include/avx512vlbwintrin.h:
 
+/home/todd/gw2-build-coaches/Accessibuilds/src/api/skill_names.h:
+
 /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/include/avx512vpopcntdqvlintrin.h:
 
 /usr/x86_64-w64-mingw32/include/c++/15.2.0/cstring:
@@ -10184,6 +10200,8 @@ CMakeFiles/Accessibuilds.dir/src/ui/main_window.cpp.obj: /home/todd/gw2-build-co
 
 /home/todd/gw2-build-coaches/Accessibuilds/external/nlohmann/json.hpp:
 
+/home/todd/gw2-build-coaches/Accessibuilds/src/api/spec_names.h:
+
 /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/include/enqcmdintrin.h:
 
 /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/include/float.h:
@@ -10205,6 +10223,8 @@ CMakeFiles/Accessibuilds.dir/src/ui/main_window.cpp.obj: /home/todd/gw2-build-co
 /usr/lib/gcc/x86_64-w64-mingw32/15.2.0/include/sha512intrin.h:
 
 /usr/x86_64-w64-mingw32/include/stdint.h:
+
+/home/todd/gw2-build-coaches/Accessibuilds/src/api/legend_names.h:
 
 /usr/x86_64-w64-mingw32/include/c++/15.2.0/ext/string_conversions.h:
 

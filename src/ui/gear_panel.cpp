@@ -739,8 +739,9 @@ void Render()
         auto mi = pm.find(main_sl);
         if (mi == pm.end() || pm.count(off_sl)) return;
         if (mi->second->upgrade2_id == 0) return;
-        synth[synth_n].slot       = off_sl;
-        synth[synth_n].upgrade_id = mi->second->upgrade2_id;
+        synth[synth_n].slot        = off_sl;
+        synth[synth_n].upgrade_id  = mi->second->upgrade2_id;
+        synth[synth_n].weapon_type = mi->second->weapon_type;
         pm[off_sl] = &synth[synth_n++];
     };
     synthesize2H(GW2::GearSlot::WeaponA1, GW2::GearSlot::WeaponA2);
@@ -880,8 +881,9 @@ void Render()
         /* Skip if the slot has no meaningful content at all (empty placeholder).
          * Custom builds have item_id==0 but weapon_type set, so check both. */
         if (mi->second->item_id == 0 && mi->second->weapon_type == GW2::WeaponType::Unknown) return;
-        synth[synth_n].slot       = off_sl;
-        synth[synth_n].upgrade_id = mi->second->upgrade2_id;
+        synth[synth_n].slot        = off_sl;
+        synth[synth_n].upgrade_id  = mi->second->upgrade2_id;
+        synth[synth_n].weapon_type = mi->second->weapon_type;
         rm[off_sl] = &synth[synth_n++];
     };
     synthesize2H_ref(GW2::GearSlot::WeaponA1, GW2::GearSlot::WeaponA2);

@@ -224,7 +224,7 @@ bool IsVisible() { return s_visible; }
 
 static void RenderSettings()
 {
-    if (!ImGui::Begin("Accessibuilds Settings", &s_show_settings)) {
+    if (!ImGui::Begin("Build Coach Settings", &s_show_settings)) {
         ImGui::End();
         return;
     }
@@ -455,7 +455,8 @@ void Render()
     /* Drain pending GW2 name lookups — fires background HTTP batch every call */
     GW2Names::FlushPending();
 
-    /* Auto-fetch: once per map change after 5s, one retry 5s after a failure */
+    /* Auto-fetch: once per map change after 5s, one retry 5s after a failure.
+     * Also checks g_PlayerBuildDirty (set by Mumble handler or manual trigger). */
     {
         uint32_t cur_map = 0;
         { std::lock_guard<std::mutex> lk(g_CharacterMutex); cur_map = g_Character.map_id; }
@@ -472,10 +473,15 @@ void Render()
             s_next_auto_fetch = {};
         }
 
+        bool dirty = g_PlayerBuildDirty.load();
+
         if (cur_map != 0 && cur_map != s_auto_map_id) {
             s_auto_map_id     = cur_map;
             s_auto_attempt    = 0;
             s_next_auto_fetch = std::chrono::steady_clock::now() + std::chrono::seconds(5);
+        } else if (dirty && !s_player_fetching.load() && cur_map != 0) {
+            s_next_auto_fetch = std::chrono::steady_clock::now();
+            s_auto_attempt    = 0;
         }
 
         bool cur_fetching = s_player_fetching.load();
@@ -532,7 +538,7 @@ void Render()
     /* Minimum size only — never force a max or clamp the player's chosen size */
     ImGui::SetNextWindowSizeConstraints(ImVec2(S(350), S(200)), ImVec2(FLT_MAX, FLT_MAX));
 
-    if (!ImGui::Begin("Accessibuilds", &s_visible)) {
+    if (!ImGui::Begin("Build Coach", &s_visible)) {
         ImGui::End();
         return;
     }
@@ -565,7 +571,7 @@ void Render()
     if (ImGui::Button("Instructions")) InstructionsWindow::Toggle();
     ImGui::SameLine();
     if (ImGui::Button("Refresh")) {
-        g_PlayerBuildDirty = true;
+        RefreshPlayerBuild();
         s_status = "Refreshing...";
     }
     if (ImGui::IsItemHovered())
@@ -625,7 +631,7 @@ void Render()
                             bool sel = strcmp(n.c_str(), s_manual_char) == 0;
                             if (ImGui::Selectable(n.c_str(), sel)) {
                                 strncpy(s_manual_char, n.c_str(), 19);
-                                g_PlayerBuildDirty = true;
+                                RefreshPlayerBuild();
                             }
                         }
                         ImGui::EndCombo();

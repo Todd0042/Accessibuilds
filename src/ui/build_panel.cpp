@@ -317,8 +317,10 @@ static void RenderCompactLayout(const GW2::PlayerBuild& player,
                     if (sc.pets[i] != 0) {
                         const char* pet_name = OfflineData::GetPetName(sc.pets[i]);
                         ImGui::BeginGroup();
-                        /* Use skill icon placeholder for pets */
-                        IconRenderer::SkillIcon(sc.pets[i], ICON_SZ_SKILL, true);
+                        /* Use generic pet icon since pet IDs aren't skill IDs */
+                        Texture_t* pet_icon = IconCache::GetAddonTexture("icons/pet.png");
+                        IconRenderer::DrawBox(ICON_SZ_SKILL, pet_icon ? pet_icon->Resource : nullptr,
+                                IM_COL32(60, 220, 60, 230), pet_name);
                         ImGui::TextDisabled("Pet%d", i + 1);
                         ImGui::TextColored(COL_NEUTRAL, "%s", pet_name);
                         ImGui::EndGroup();
@@ -836,6 +838,55 @@ static void RenderTraitGridLayout(const GW2::PlayerBuild& player,
     }
     ImGui::SameLine(0, S(4));
     sk_make(sc.skills.elite, S(28), true, 0);
+
+    /* ── Legends (Revenant) / Pets (Ranger) ── */
+    if (sc.legends[0] != 0 || sc.legends[1] != 0 ||
+        sc.pets[0] != 0 || sc.pets[1] != 0)
+    {
+        ImGui::Spacing();
+        ImGui::Separator();
+        ImGui::Text("Legends / Pets");
+        ImGui::Spacing();
+
+        if (sc.legends[0] != 0 || sc.legends[1] != 0) {
+            for (int i = 0; i < 2; i++) {
+                if (sc.legends[i] == 0) continue;
+                bool ok = false;
+                for (int pj = 0; pj < 2; pj++)
+                    if (player.legends[pj] == sc.legends[i]) ok = true;
+                ImGui::BeginGroup();
+                if (ok) {
+                    IconRenderer::SkillIcon(sc.legends[i], ICON_SZ_SKILL, true);
+                } else {
+                    IconRenderer::SkillIconRef(sc.legends[i], ICON_SZ_SKILL);
+                }
+                ImGui::TextDisabled("L%d", i + 1);
+                ImGui::TextColored(ok ? COL_OK : COL_REF, "%s",
+                    OfflineData::GetLegendName(sc.legends[i]));
+                ImGui::EndGroup();
+                if (i == 0) ImGui::SameLine(0, S(8));
+            }
+        }
+        if (sc.pets[0] != 0 || sc.pets[1] != 0) {
+            for (int i = 0; i < 2; i++) {
+                if (sc.pets[i] == 0) continue;
+                bool ok = false;
+                for (int pj = 0; pj < 2; pj++)
+                    if (player.pets[pj] == sc.pets[i]) ok = true;
+                const char* pname = OfflineData::GetPetName(sc.pets[i]);
+                ImGui::BeginGroup();
+                Texture_t* pet_icon = IconCache::GetAddonTexture("icons/pet.png");
+                IconRenderer::DrawBox(ICON_SZ_SKILL,
+                    pet_icon ? pet_icon->Resource : nullptr,
+                    ok ? IM_COL32(60, 220, 60, 230) : IM_COL32(220, 60, 60, 230),
+                    pname);
+                ImGui::TextDisabled("Pet%d", i + 1);
+                ImGui::TextColored(COL_NEUTRAL, "%s", pname);
+                ImGui::EndGroup();
+                if (i == 0) ImGui::SameLine(0, S(8));
+            }
+        }
+    }
 }
 
 /* ════════════════════════════════════════════════════════════════════════════

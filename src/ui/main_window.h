@@ -4,7 +4,7 @@
 #include <vector>
 
 /*
- * Main Accessibuilds window — dropdown for selecting SC build,
+ * Main Build Coach window — dropdown for selecting SC build,
  * plus tabs for Build, Gear, DPS, and Coaching panels.
  */
 namespace MainWindow {

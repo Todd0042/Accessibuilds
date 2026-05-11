@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Accessibuilds
+# Target rules for targets named BuildCoach
 
 # Build rule for target.
-Accessibuilds: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Accessibuilds
-.PHONY : Accessibuilds
+BuildCoach: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 BuildCoach
+.PHONY : BuildCoach
 
 # fast build rule for target.
-Accessibuilds/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/build
-.PHONY : Accessibuilds/fast
+BuildCoach/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/build
+.PHONY : BuildCoach/fast
 
 external/imgui/imgui.obj: external/imgui/imgui.cpp.obj
 .PHONY : external/imgui/imgui.obj
 
 # target to build an object file
 external/imgui/imgui.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/external/imgui/imgui.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/external/imgui/imgui.cpp.obj
 .PHONY : external/imgui/imgui.cpp.obj
 
 external/imgui/imgui.i: external/imgui/imgui.cpp.i
@@ -142,7 +142,7 @@ external/imgui/imgui.i: external/imgui/imgui.cpp.i
 
 # target to preprocess a source file
 external/imgui/imgui.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/external/imgui/imgui.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/external/imgui/imgui.cpp.i
 .PHONY : external/imgui/imgui.cpp.i
 
 external/imgui/imgui.s: external/imgui/imgui.cpp.s
@@ -150,7 +150,7 @@ external/imgui/imgui.s: external/imgui/imgui.cpp.s
 
 # target to generate assembly for a file
 external/imgui/imgui.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/external/imgui/imgui.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/external/imgui/imgui.cpp.s
 .PHONY : external/imgui/imgui.cpp.s
 
 external/imgui/imgui_draw.obj: external/imgui/imgui_draw.cpp.obj
@@ -158,7 +158,7 @@ external/imgui/imgui_draw.obj: external/imgui/imgui_draw.cpp.obj
 
 # target to build an object file
 external/imgui/imgui_draw.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/external/imgui/imgui_draw.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/external/imgui/imgui_draw.cpp.obj
 .PHONY : external/imgui/imgui_draw.cpp.obj
 
 external/imgui/imgui_draw.i: external/imgui/imgui_draw.cpp.i
@@ -166,7 +166,7 @@ external/imgui/imgui_draw.i: external/imgui/imgui_draw.cpp.i
 
 # target to preprocess a source file
 external/imgui/imgui_draw.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/external/imgui/imgui_draw.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/external/imgui/imgui_draw.cpp.i
 .PHONY : external/imgui/imgui_draw.cpp.i
 
 external/imgui/imgui_draw.s: external/imgui/imgui_draw.cpp.s
@@ -174,7 +174,7 @@ external/imgui/imgui_draw.s: external/imgui/imgui_draw.cpp.s
 
 # target to generate assembly for a file
 external/imgui/imgui_draw.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/external/imgui/imgui_draw.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/external/imgui/imgui_draw.cpp.s
 .PHONY : external/imgui/imgui_draw.cpp.s
 
 external/imgui/imgui_tables.obj: external/imgui/imgui_tables.cpp.obj
@@ -182,7 +182,7 @@ external/imgui/imgui_tables.obj: external/imgui/imgui_tables.cpp.obj
 
 # target to build an object file
 external/imgui/imgui_tables.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/external/imgui/imgui_tables.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/external/imgui/imgui_tables.cpp.obj
 .PHONY : external/imgui/imgui_tables.cpp.obj
 
 external/imgui/imgui_tables.i: external/imgui/imgui_tables.cpp.i
@@ -190,7 +190,7 @@ external/imgui/imgui_tables.i: external/imgui/imgui_tables.cpp.i
 
 # target to preprocess a source file
 external/imgui/imgui_tables.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/external/imgui/imgui_tables.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/external/imgui/imgui_tables.cpp.i
 .PHONY : external/imgui/imgui_tables.cpp.i
 
 external/imgui/imgui_tables.s: external/imgui/imgui_tables.cpp.s
@@ -198,7 +198,7 @@ external/imgui/imgui_tables.s: external/imgui/imgui_tables.cpp.s
 
 # target to generate assembly for a file
 external/imgui/imgui_tables.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/external/imgui/imgui_tables.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/external/imgui/imgui_tables.cpp.s
 .PHONY : external/imgui/imgui_tables.cpp.s
 
 external/imgui/imgui_widgets.obj: external/imgui/imgui_widgets.cpp.obj
@@ -206,7 +206,7 @@ external/imgui/imgui_widgets.obj: external/imgui/imgui_widgets.cpp.obj
 
 # target to build an object file
 external/imgui/imgui_widgets.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/external/imgui/imgui_widgets.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/external/imgui/imgui_widgets.cpp.obj
 .PHONY : external/imgui/imgui_widgets.cpp.obj
 
 external/imgui/imgui_widgets.i: external/imgui/imgui_widgets.cpp.i
@@ -214,7 +214,7 @@ external/imgui/imgui_widgets.i: external/imgui/imgui_widgets.cpp.i
 
 # target to preprocess a source file
 external/imgui/imgui_widgets.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/external/imgui/imgui_widgets.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/external/imgui/imgui_widgets.cpp.i
 .PHONY : external/imgui/imgui_widgets.cpp.i
 
 external/imgui/imgui_widgets.s: external/imgui/imgui_widgets.cpp.s
@@ -222,7 +222,7 @@ external/imgui/imgui_widgets.s: external/imgui/imgui_widgets.cpp.s
 
 # target to generate assembly for a file
 external/imgui/imgui_widgets.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/external/imgui/imgui_widgets.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/external/imgui/imgui_widgets.cpp.s
 .PHONY : external/imgui/imgui_widgets.cpp.s
 
 src/addon.obj: src/addon.cpp.obj
@@ -230,7 +230,7 @@ src/addon.obj: src/addon.cpp.obj
 
 # target to build an object file
 src/addon.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/addon.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/addon.cpp.obj
 .PHONY : src/addon.cpp.obj
 
 src/addon.i: src/addon.cpp.i
@@ -238,7 +238,7 @@ src/addon.i: src/addon.cpp.i
 
 # target to preprocess a source file
 src/addon.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/addon.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/addon.cpp.i
 .PHONY : src/addon.cpp.i
 
 src/addon.s: src/addon.cpp.s
@@ -246,7 +246,7 @@ src/addon.s: src/addon.cpp.s
 
 # target to generate assembly for a file
 src/addon.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/addon.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/addon.cpp.s
 .PHONY : src/addon.cpp.s
 
 src/api/gw2api.obj: src/api/gw2api.cpp.obj
@@ -254,7 +254,7 @@ src/api/gw2api.obj: src/api/gw2api.cpp.obj
 
 # target to build an object file
 src/api/gw2api.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/api/gw2api.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/api/gw2api.cpp.obj
 .PHONY : src/api/gw2api.cpp.obj
 
 src/api/gw2api.i: src/api/gw2api.cpp.i
@@ -262,7 +262,7 @@ src/api/gw2api.i: src/api/gw2api.cpp.i
 
 # target to preprocess a source file
 src/api/gw2api.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/api/gw2api.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/api/gw2api.cpp.i
 .PHONY : src/api/gw2api.cpp.i
 
 src/api/gw2api.s: src/api/gw2api.cpp.s
@@ -270,7 +270,7 @@ src/api/gw2api.s: src/api/gw2api.cpp.s
 
 # target to generate assembly for a file
 src/api/gw2api.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/api/gw2api.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/api/gw2api.cpp.s
 .PHONY : src/api/gw2api.cpp.s
 
 src/api/gw2names.obj: src/api/gw2names.cpp.obj
@@ -278,7 +278,7 @@ src/api/gw2names.obj: src/api/gw2names.cpp.obj
 
 # target to build an object file
 src/api/gw2names.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/api/gw2names.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/api/gw2names.cpp.obj
 .PHONY : src/api/gw2names.cpp.obj
 
 src/api/gw2names.i: src/api/gw2names.cpp.i
@@ -286,7 +286,7 @@ src/api/gw2names.i: src/api/gw2names.cpp.i
 
 # target to preprocess a source file
 src/api/gw2names.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/api/gw2names.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/api/gw2names.cpp.i
 .PHONY : src/api/gw2names.cpp.i
 
 src/api/gw2names.s: src/api/gw2names.cpp.s
@@ -294,7 +294,7 @@ src/api/gw2names.s: src/api/gw2names.cpp.s
 
 # target to generate assembly for a file
 src/api/gw2names.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/api/gw2names.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/api/gw2names.cpp.s
 .PHONY : src/api/gw2names.cpp.s
 
 src/api/http_client.obj: src/api/http_client.cpp.obj
@@ -302,7 +302,7 @@ src/api/http_client.obj: src/api/http_client.cpp.obj
 
 # target to build an object file
 src/api/http_client.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/api/http_client.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/api/http_client.cpp.obj
 .PHONY : src/api/http_client.cpp.obj
 
 src/api/http_client.i: src/api/http_client.cpp.i
@@ -310,7 +310,7 @@ src/api/http_client.i: src/api/http_client.cpp.i
 
 # target to preprocess a source file
 src/api/http_client.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/api/http_client.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/api/http_client.cpp.i
 .PHONY : src/api/http_client.cpp.i
 
 src/api/http_client.s: src/api/http_client.cpp.s
@@ -318,7 +318,7 @@ src/api/http_client.s: src/api/http_client.cpp.s
 
 # target to generate assembly for a file
 src/api/http_client.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/api/http_client.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/api/http_client.cpp.s
 .PHONY : src/api/http_client.cpp.s
 
 src/api/item_lookup.obj: src/api/item_lookup.cpp.obj
@@ -326,7 +326,7 @@ src/api/item_lookup.obj: src/api/item_lookup.cpp.obj
 
 # target to build an object file
 src/api/item_lookup.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/api/item_lookup.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/api/item_lookup.cpp.obj
 .PHONY : src/api/item_lookup.cpp.obj
 
 src/api/item_lookup.i: src/api/item_lookup.cpp.i
@@ -334,7 +334,7 @@ src/api/item_lookup.i: src/api/item_lookup.cpp.i
 
 # target to preprocess a source file
 src/api/item_lookup.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/api/item_lookup.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/api/item_lookup.cpp.i
 .PHONY : src/api/item_lookup.cpp.i
 
 src/api/item_lookup.s: src/api/item_lookup.cpp.s
@@ -342,7 +342,7 @@ src/api/item_lookup.s: src/api/item_lookup.cpp.s
 
 # target to generate assembly for a file
 src/api/item_lookup.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/api/item_lookup.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/api/item_lookup.cpp.s
 .PHONY : src/api/item_lookup.cpp.s
 
 src/api/snowcrows.obj: src/api/snowcrows.cpp.obj
@@ -350,7 +350,7 @@ src/api/snowcrows.obj: src/api/snowcrows.cpp.obj
 
 # target to build an object file
 src/api/snowcrows.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/api/snowcrows.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/api/snowcrows.cpp.obj
 .PHONY : src/api/snowcrows.cpp.obj
 
 src/api/snowcrows.i: src/api/snowcrows.cpp.i
@@ -358,7 +358,7 @@ src/api/snowcrows.i: src/api/snowcrows.cpp.i
 
 # target to preprocess a source file
 src/api/snowcrows.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/api/snowcrows.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/api/snowcrows.cpp.i
 .PHONY : src/api/snowcrows.cpp.i
 
 src/api/snowcrows.s: src/api/snowcrows.cpp.s
@@ -366,7 +366,7 @@ src/api/snowcrows.s: src/api/snowcrows.cpp.s
 
 # target to generate assembly for a file
 src/api/snowcrows.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/api/snowcrows.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/api/snowcrows.cpp.s
 .PHONY : src/api/snowcrows.cpp.s
 
 src/api/wingman.obj: src/api/wingman.cpp.obj
@@ -374,7 +374,7 @@ src/api/wingman.obj: src/api/wingman.cpp.obj
 
 # target to build an object file
 src/api/wingman.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/api/wingman.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/api/wingman.cpp.obj
 .PHONY : src/api/wingman.cpp.obj
 
 src/api/wingman.i: src/api/wingman.cpp.i
@@ -382,7 +382,7 @@ src/api/wingman.i: src/api/wingman.cpp.i
 
 # target to preprocess a source file
 src/api/wingman.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/api/wingman.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/api/wingman.cpp.i
 .PHONY : src/api/wingman.cpp.i
 
 src/api/wingman.s: src/api/wingman.cpp.s
@@ -390,7 +390,7 @@ src/api/wingman.s: src/api/wingman.cpp.s
 
 # target to generate assembly for a file
 src/api/wingman.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/api/wingman.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/api/wingman.cpp.s
 .PHONY : src/api/wingman.cpp.s
 
 src/arcdps/arcdps.obj: src/arcdps/arcdps.cpp.obj
@@ -398,7 +398,7 @@ src/arcdps/arcdps.obj: src/arcdps/arcdps.cpp.obj
 
 # target to build an object file
 src/arcdps/arcdps.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/arcdps/arcdps.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/arcdps/arcdps.cpp.obj
 .PHONY : src/arcdps/arcdps.cpp.obj
 
 src/arcdps/arcdps.i: src/arcdps/arcdps.cpp.i
@@ -406,7 +406,7 @@ src/arcdps/arcdps.i: src/arcdps/arcdps.cpp.i
 
 # target to preprocess a source file
 src/arcdps/arcdps.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/arcdps/arcdps.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/arcdps/arcdps.cpp.i
 .PHONY : src/arcdps/arcdps.cpp.i
 
 src/arcdps/arcdps.s: src/arcdps/arcdps.cpp.s
@@ -414,7 +414,7 @@ src/arcdps/arcdps.s: src/arcdps/arcdps.cpp.s
 
 # target to generate assembly for a file
 src/arcdps/arcdps.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/arcdps/arcdps.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/arcdps/arcdps.cpp.s
 .PHONY : src/arcdps/arcdps.cpp.s
 
 src/build/cache.obj: src/build/cache.cpp.obj
@@ -422,7 +422,7 @@ src/build/cache.obj: src/build/cache.cpp.obj
 
 # target to build an object file
 src/build/cache.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/build/cache.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/build/cache.cpp.obj
 .PHONY : src/build/cache.cpp.obj
 
 src/build/cache.i: src/build/cache.cpp.i
@@ -430,7 +430,7 @@ src/build/cache.i: src/build/cache.cpp.i
 
 # target to preprocess a source file
 src/build/cache.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/build/cache.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/build/cache.cpp.i
 .PHONY : src/build/cache.cpp.i
 
 src/build/cache.s: src/build/cache.cpp.s
@@ -438,7 +438,7 @@ src/build/cache.s: src/build/cache.cpp.s
 
 # target to generate assembly for a file
 src/build/cache.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/build/cache.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/build/cache.cpp.s
 .PHONY : src/build/cache.cpp.s
 
 src/build/comparator.obj: src/build/comparator.cpp.obj
@@ -446,7 +446,7 @@ src/build/comparator.obj: src/build/comparator.cpp.obj
 
 # target to build an object file
 src/build/comparator.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/build/comparator.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/build/comparator.cpp.obj
 .PHONY : src/build/comparator.cpp.obj
 
 src/build/comparator.i: src/build/comparator.cpp.i
@@ -454,7 +454,7 @@ src/build/comparator.i: src/build/comparator.cpp.i
 
 # target to preprocess a source file
 src/build/comparator.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/build/comparator.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/build/comparator.cpp.i
 .PHONY : src/build/comparator.cpp.i
 
 src/build/comparator.s: src/build/comparator.cpp.s
@@ -462,7 +462,7 @@ src/build/comparator.s: src/build/comparator.cpp.s
 
 # target to generate assembly for a file
 src/build/comparator.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/build/comparator.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/build/comparator.cpp.s
 .PHONY : src/build/comparator.cpp.s
 
 src/build/types.obj: src/build/types.cpp.obj
@@ -470,7 +470,7 @@ src/build/types.obj: src/build/types.cpp.obj
 
 # target to build an object file
 src/build/types.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/build/types.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/build/types.cpp.obj
 .PHONY : src/build/types.cpp.obj
 
 src/build/types.i: src/build/types.cpp.i
@@ -478,7 +478,7 @@ src/build/types.i: src/build/types.cpp.i
 
 # target to preprocess a source file
 src/build/types.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/build/types.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/build/types.cpp.i
 .PHONY : src/build/types.cpp.i
 
 src/build/types.s: src/build/types.cpp.s
@@ -486,7 +486,7 @@ src/build/types.s: src/build/types.cpp.s
 
 # target to generate assembly for a file
 src/build/types.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/build/types.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/build/types.cpp.s
 .PHONY : src/build/types.cpp.s
 
 src/share/dict_tables.obj: src/share/dict_tables.cpp.obj
@@ -494,7 +494,7 @@ src/share/dict_tables.obj: src/share/dict_tables.cpp.obj
 
 # target to build an object file
 src/share/dict_tables.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/share/dict_tables.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/share/dict_tables.cpp.obj
 .PHONY : src/share/dict_tables.cpp.obj
 
 src/share/dict_tables.i: src/share/dict_tables.cpp.i
@@ -502,7 +502,7 @@ src/share/dict_tables.i: src/share/dict_tables.cpp.i
 
 # target to preprocess a source file
 src/share/dict_tables.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/share/dict_tables.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/share/dict_tables.cpp.i
 .PHONY : src/share/dict_tables.cpp.i
 
 src/share/dict_tables.s: src/share/dict_tables.cpp.s
@@ -510,7 +510,7 @@ src/share/dict_tables.s: src/share/dict_tables.cpp.s
 
 # target to generate assembly for a file
 src/share/dict_tables.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/share/dict_tables.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/share/dict_tables.cpp.s
 .PHONY : src/share/dict_tables.cpp.s
 
 src/share/share_code.obj: src/share/share_code.cpp.obj
@@ -518,7 +518,7 @@ src/share/share_code.obj: src/share/share_code.cpp.obj
 
 # target to build an object file
 src/share/share_code.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/share/share_code.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/share/share_code.cpp.obj
 .PHONY : src/share/share_code.cpp.obj
 
 src/share/share_code.i: src/share/share_code.cpp.i
@@ -526,7 +526,7 @@ src/share/share_code.i: src/share/share_code.cpp.i
 
 # target to preprocess a source file
 src/share/share_code.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/share/share_code.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/share/share_code.cpp.i
 .PHONY : src/share/share_code.cpp.i
 
 src/share/share_code.s: src/share/share_code.cpp.s
@@ -534,7 +534,7 @@ src/share/share_code.s: src/share/share_code.cpp.s
 
 # target to generate assembly for a file
 src/share/share_code.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/share/share_code.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/share/share_code.cpp.s
 .PHONY : src/share/share_code.cpp.s
 
 src/ui/build_editor.obj: src/ui/build_editor.cpp.obj
@@ -542,7 +542,7 @@ src/ui/build_editor.obj: src/ui/build_editor.cpp.obj
 
 # target to build an object file
 src/ui/build_editor.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/ui/build_editor.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/ui/build_editor.cpp.obj
 .PHONY : src/ui/build_editor.cpp.obj
 
 src/ui/build_editor.i: src/ui/build_editor.cpp.i
@@ -550,7 +550,7 @@ src/ui/build_editor.i: src/ui/build_editor.cpp.i
 
 # target to preprocess a source file
 src/ui/build_editor.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/ui/build_editor.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/ui/build_editor.cpp.i
 .PHONY : src/ui/build_editor.cpp.i
 
 src/ui/build_editor.s: src/ui/build_editor.cpp.s
@@ -558,7 +558,7 @@ src/ui/build_editor.s: src/ui/build_editor.cpp.s
 
 # target to generate assembly for a file
 src/ui/build_editor.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/ui/build_editor.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/ui/build_editor.cpp.s
 .PHONY : src/ui/build_editor.cpp.s
 
 src/ui/build_panel.obj: src/ui/build_panel.cpp.obj
@@ -566,7 +566,7 @@ src/ui/build_panel.obj: src/ui/build_panel.cpp.obj
 
 # target to build an object file
 src/ui/build_panel.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/ui/build_panel.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/ui/build_panel.cpp.obj
 .PHONY : src/ui/build_panel.cpp.obj
 
 src/ui/build_panel.i: src/ui/build_panel.cpp.i
@@ -574,7 +574,7 @@ src/ui/build_panel.i: src/ui/build_panel.cpp.i
 
 # target to preprocess a source file
 src/ui/build_panel.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/ui/build_panel.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/ui/build_panel.cpp.i
 .PHONY : src/ui/build_panel.cpp.i
 
 src/ui/build_panel.s: src/ui/build_panel.cpp.s
@@ -582,7 +582,7 @@ src/ui/build_panel.s: src/ui/build_panel.cpp.s
 
 # target to generate assembly for a file
 src/ui/build_panel.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/ui/build_panel.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/ui/build_panel.cpp.s
 .PHONY : src/ui/build_panel.cpp.s
 
 src/ui/coach_window.obj: src/ui/coach_window.cpp.obj
@@ -590,7 +590,7 @@ src/ui/coach_window.obj: src/ui/coach_window.cpp.obj
 
 # target to build an object file
 src/ui/coach_window.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/ui/coach_window.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/ui/coach_window.cpp.obj
 .PHONY : src/ui/coach_window.cpp.obj
 
 src/ui/coach_window.i: src/ui/coach_window.cpp.i
@@ -598,7 +598,7 @@ src/ui/coach_window.i: src/ui/coach_window.cpp.i
 
 # target to preprocess a source file
 src/ui/coach_window.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/ui/coach_window.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/ui/coach_window.cpp.i
 .PHONY : src/ui/coach_window.cpp.i
 
 src/ui/coach_window.s: src/ui/coach_window.cpp.s
@@ -606,7 +606,7 @@ src/ui/coach_window.s: src/ui/coach_window.cpp.s
 
 # target to generate assembly for a file
 src/ui/coach_window.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/ui/coach_window.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/ui/coach_window.cpp.s
 .PHONY : src/ui/coach_window.cpp.s
 
 src/ui/debug_window.obj: src/ui/debug_window.cpp.obj
@@ -614,7 +614,7 @@ src/ui/debug_window.obj: src/ui/debug_window.cpp.obj
 
 # target to build an object file
 src/ui/debug_window.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/ui/debug_window.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/ui/debug_window.cpp.obj
 .PHONY : src/ui/debug_window.cpp.obj
 
 src/ui/debug_window.i: src/ui/debug_window.cpp.i
@@ -622,7 +622,7 @@ src/ui/debug_window.i: src/ui/debug_window.cpp.i
 
 # target to preprocess a source file
 src/ui/debug_window.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/ui/debug_window.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/ui/debug_window.cpp.i
 .PHONY : src/ui/debug_window.cpp.i
 
 src/ui/debug_window.s: src/ui/debug_window.cpp.s
@@ -630,7 +630,7 @@ src/ui/debug_window.s: src/ui/debug_window.cpp.s
 
 # target to generate assembly for a file
 src/ui/debug_window.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/ui/debug_window.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/ui/debug_window.cpp.s
 .PHONY : src/ui/debug_window.cpp.s
 
 src/ui/dps_panel.obj: src/ui/dps_panel.cpp.obj
@@ -638,7 +638,7 @@ src/ui/dps_panel.obj: src/ui/dps_panel.cpp.obj
 
 # target to build an object file
 src/ui/dps_panel.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/ui/dps_panel.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/ui/dps_panel.cpp.obj
 .PHONY : src/ui/dps_panel.cpp.obj
 
 src/ui/dps_panel.i: src/ui/dps_panel.cpp.i
@@ -646,7 +646,7 @@ src/ui/dps_panel.i: src/ui/dps_panel.cpp.i
 
 # target to preprocess a source file
 src/ui/dps_panel.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/ui/dps_panel.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/ui/dps_panel.cpp.i
 .PHONY : src/ui/dps_panel.cpp.i
 
 src/ui/dps_panel.s: src/ui/dps_panel.cpp.s
@@ -654,7 +654,7 @@ src/ui/dps_panel.s: src/ui/dps_panel.cpp.s
 
 # target to generate assembly for a file
 src/ui/dps_panel.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/ui/dps_panel.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/ui/dps_panel.cpp.s
 .PHONY : src/ui/dps_panel.cpp.s
 
 src/ui/gear_panel.obj: src/ui/gear_panel.cpp.obj
@@ -662,7 +662,7 @@ src/ui/gear_panel.obj: src/ui/gear_panel.cpp.obj
 
 # target to build an object file
 src/ui/gear_panel.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/ui/gear_panel.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/ui/gear_panel.cpp.obj
 .PHONY : src/ui/gear_panel.cpp.obj
 
 src/ui/gear_panel.i: src/ui/gear_panel.cpp.i
@@ -670,7 +670,7 @@ src/ui/gear_panel.i: src/ui/gear_panel.cpp.i
 
 # target to preprocess a source file
 src/ui/gear_panel.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/ui/gear_panel.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/ui/gear_panel.cpp.i
 .PHONY : src/ui/gear_panel.cpp.i
 
 src/ui/gear_panel.s: src/ui/gear_panel.cpp.s
@@ -678,7 +678,7 @@ src/ui/gear_panel.s: src/ui/gear_panel.cpp.s
 
 # target to generate assembly for a file
 src/ui/gear_panel.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/ui/gear_panel.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/ui/gear_panel.cpp.s
 .PHONY : src/ui/gear_panel.cpp.s
 
 src/ui/icon_cache.obj: src/ui/icon_cache.cpp.obj
@@ -686,7 +686,7 @@ src/ui/icon_cache.obj: src/ui/icon_cache.cpp.obj
 
 # target to build an object file
 src/ui/icon_cache.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/ui/icon_cache.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/ui/icon_cache.cpp.obj
 .PHONY : src/ui/icon_cache.cpp.obj
 
 src/ui/icon_cache.i: src/ui/icon_cache.cpp.i
@@ -694,7 +694,7 @@ src/ui/icon_cache.i: src/ui/icon_cache.cpp.i
 
 # target to preprocess a source file
 src/ui/icon_cache.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/ui/icon_cache.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/ui/icon_cache.cpp.i
 .PHONY : src/ui/icon_cache.cpp.i
 
 src/ui/icon_cache.s: src/ui/icon_cache.cpp.s
@@ -702,7 +702,7 @@ src/ui/icon_cache.s: src/ui/icon_cache.cpp.s
 
 # target to generate assembly for a file
 src/ui/icon_cache.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/ui/icon_cache.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/ui/icon_cache.cpp.s
 .PHONY : src/ui/icon_cache.cpp.s
 
 src/ui/instructions_window.obj: src/ui/instructions_window.cpp.obj
@@ -710,7 +710,7 @@ src/ui/instructions_window.obj: src/ui/instructions_window.cpp.obj
 
 # target to build an object file
 src/ui/instructions_window.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/ui/instructions_window.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/ui/instructions_window.cpp.obj
 .PHONY : src/ui/instructions_window.cpp.obj
 
 src/ui/instructions_window.i: src/ui/instructions_window.cpp.i
@@ -718,7 +718,7 @@ src/ui/instructions_window.i: src/ui/instructions_window.cpp.i
 
 # target to preprocess a source file
 src/ui/instructions_window.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/ui/instructions_window.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/ui/instructions_window.cpp.i
 .PHONY : src/ui/instructions_window.cpp.i
 
 src/ui/instructions_window.s: src/ui/instructions_window.cpp.s
@@ -726,7 +726,7 @@ src/ui/instructions_window.s: src/ui/instructions_window.cpp.s
 
 # target to generate assembly for a file
 src/ui/instructions_window.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/ui/instructions_window.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/ui/instructions_window.cpp.s
 .PHONY : src/ui/instructions_window.cpp.s
 
 src/ui/main_window.obj: src/ui/main_window.cpp.obj
@@ -734,7 +734,7 @@ src/ui/main_window.obj: src/ui/main_window.cpp.obj
 
 # target to build an object file
 src/ui/main_window.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/ui/main_window.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/ui/main_window.cpp.obj
 .PHONY : src/ui/main_window.cpp.obj
 
 src/ui/main_window.i: src/ui/main_window.cpp.i
@@ -742,7 +742,7 @@ src/ui/main_window.i: src/ui/main_window.cpp.i
 
 # target to preprocess a source file
 src/ui/main_window.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/ui/main_window.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/ui/main_window.cpp.i
 .PHONY : src/ui/main_window.cpp.i
 
 src/ui/main_window.s: src/ui/main_window.cpp.s
@@ -750,7 +750,7 @@ src/ui/main_window.s: src/ui/main_window.cpp.s
 
 # target to generate assembly for a file
 src/ui/main_window.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Accessibuilds.dir/build.make CMakeFiles/Accessibuilds.dir/src/ui/main_window.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BuildCoach.dir/build.make CMakeFiles/BuildCoach.dir/src/ui/main_window.cpp.s
 .PHONY : src/ui/main_window.cpp.s
 
 # Help Target
@@ -761,7 +761,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... Accessibuilds"
+	@echo "... BuildCoach"
 	@echo "... external/imgui/imgui.obj"
 	@echo "... external/imgui/imgui.i"
 	@echo "... external/imgui/imgui.s"

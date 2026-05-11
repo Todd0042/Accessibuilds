@@ -1,18 +1,27 @@
 #!/usr/bin/env python3
 """
 Embed sc_builds_full.json as a C++ header file.
+If the file doesn't exist, embed an empty JSON array.
 """
 import json
+import os
+import sys
 
-INPUT_FILE = "/home/todd/gw2-build-coaches/Accessibuilds/sc_builds_full.json"
-OUTPUT_FILE = "/home/todd/gw2-build-coaches/Accessibuilds/src/sc_builds_offline.h"
+SCRIPT_DIR = os.path.dirname(os.path.realpath(__file__))
+REPO_DIR = os.path.normpath(os.path.join(SCRIPT_DIR, ".."))
+INPUT_FILE = os.path.join(REPO_DIR, "sc_builds_full.json")
+OUTPUT_FILE = os.path.join(REPO_DIR, "src", "sc_builds_offline.h")
 
 def main():
-    print(f"Loading {INPUT_FILE}...")
-    with open(INPUT_FILE, 'r', encoding='utf-8') as f:
-        builds = json.load(f)
+    if not os.path.exists(INPUT_FILE):
+        print(f"  {INPUT_FILE} not found, embedding empty array")
+        builds = []
+    else:
+        print(f"  Loading {INPUT_FILE}...")
+        with open(INPUT_FILE, 'r', encoding='utf-8') as f:
+            builds = json.load(f)
     
-    print(f"Loaded {len(builds)} builds")
+    print(f"  {len(builds)} builds")
     
     # Re-serialize with consistent formatting
     json_str = json.dumps(builds, indent=2, ensure_ascii=False)
@@ -36,11 +45,11 @@ inline constexpr size_t OFFLINE_BUILD_COUNT = {len(builds)};
 }} /* namespace OfflineData */
 '''
     
-    print(f"Writing {OUTPUT_FILE}...")
+    print(f"  Writing {OUTPUT_FILE}...")
     with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
         f.write(header)
     
-    print("Done!")
+    print("  Done!")
 
 if __name__ == "__main__":
     main()

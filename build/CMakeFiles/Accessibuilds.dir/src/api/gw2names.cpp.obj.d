@@ -127,6 +127,10 @@ CMakeFiles/Accessibuilds.dir/src/api/gw2names.cpp.obj: \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/bits/erase_if.h \
  /home/todd/gw2-build-coaches/Accessibuilds/src/api/http_client.h \
  /home/todd/gw2-build-coaches/Accessibuilds/src/api/weapon_type_db.h \
+ /home/todd/gw2-build-coaches/Accessibuilds/src/api/spec_names.h \
+ /home/todd/gw2-build-coaches/Accessibuilds/src/api/trait_names.h \
+ /home/todd/gw2-build-coaches/Accessibuilds/src/api/skill_names.h \
+ /home/todd/gw2-build-coaches/Accessibuilds/src/api/../sc_builds_offline.h \
  /home/todd/gw2-build-coaches/Accessibuilds/src/api/../shared.h \
  /home/todd/gw2-build-coaches/Accessibuilds/src/api/../../external/nexus/nexus.h \
  /usr/x86_64-w64-mingw32/include/windows.h \

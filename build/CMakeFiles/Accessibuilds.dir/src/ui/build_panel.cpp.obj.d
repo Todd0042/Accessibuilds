@@ -425,5 +425,8 @@ CMakeFiles/Accessibuilds.dir/src/ui/build_panel.cpp.obj: \
  /home/todd/gw2-build-coaches/Accessibuilds/src/ui/../build/cache.h \
  /home/todd/gw2-build-coaches/Accessibuilds/src/ui/../build/comparator.h \
  /home/todd/gw2-build-coaches/Accessibuilds/src/ui/../api/item_lookup.h \
+ /home/todd/gw2-build-coaches/Accessibuilds/src/ui/../api/legend_names.h \
+ /home/todd/gw2-build-coaches/Accessibuilds/src/ui/../api/pet_names.h \
+ /usr/x86_64-w64-mingw32/include/c++/15.2.0/cstring \
  /home/todd/gw2-build-coaches/Accessibuilds/src/ui/../share/share_code.h \
  /usr/x86_64-w64-mingw32/include/c++/15.2.0/chrono

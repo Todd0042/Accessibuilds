@@ -26,7 +26,7 @@ void Render()
     ImGui::TextDisabled("General Usage");
     ImGui::Separator();
     ImGui::TextWrapped(
-        "Accessibuilds helps you compare your equipped gear against Snow Crows reference builds. "
+        "Build Coach helps you compare your equipped gear against Snow Crows reference builds. "
         "Select a reference build from the dropdown, make sure your character is loaded, "
         "and the Build / Gear / DPS tabs will show you exactly what differs.");
     ImGui::Spacing();
@@ -87,7 +87,7 @@ void Render()
     ImGui::TextDisabled("Chat Build Detection");
     ImGui::Separator();
     ImGui::TextWrapped(
-        "Accessibuilds can automatically detect when someone posts an AB: share code in chat. "
+        "Build Coach can automatically detect when someone posts an AB: share code in chat. "
         "When detected, a small popup appears in the bottom-right corner asking if you want "
         "to import the build into the editor."
     );

@@ -1,6 +1,7 @@
 #include "comparator.h"
 #include "../api/gw2api.h"
 #include "../api/gw2names.h"
+#include "../api/pet_names.h"
 #include "../api/relic_db.h"
 #include <sstream>
 #include <map>
@@ -479,6 +480,65 @@ ComparisonResult Compare(const GW2::PlayerBuild& player,
     append(CompareTraits(player.traits,  reference.traits));
     append(CompareSkills(player.skills,  reference.skills));
     append(CompareGear(player.gear,      reference.gear));
+
+    /* ── Pets (Ranger) ── */
+    if ((reference.pets[0] || reference.pets[1]) && player.profession == GW2::Profession::Ranger) {
+        bool all_pets_ok = true;
+        for (int pi = 0; pi < 2; pi++) {
+            if (!reference.pets[pi]) continue;
+            bool found = false;
+            for (int pj = 0; pj < 2; pj++) {
+                if (player.pets[pj] && player.pets[pj] == reference.pets[pi]) {
+                    found = true;
+                    break;
+                }
+            }
+            if (!found) { all_pets_ok = false; break; }
+        }
+        if (!all_pets_ok) {
+            std::string pnames = OfflineData::GetPetName(reference.pets[0]);
+            if (reference.pets[1]) pnames += " / " + std::string(OfflineData::GetPetName(reference.pets[1]));
+            std::string ppets;
+            if (player.pets[0]) ppets = OfflineData::GetPetName(player.pets[0]);
+            if (player.pets[1]) {
+                if (!ppets.empty()) ppets += " / ";
+                ppets += OfflineData::GetPetName(player.pets[1]);
+            }
+            AddDiff(result, Severity::Error, "Pet", "Pets",
+                    ppets.empty() ? "(none)" : ppets, pnames,
+                    "Wrong pets equipped");
+        }
+    }
+
+    /* ── Legends (Revenant) ── */
+    if ((reference.legends[0] || reference.legends[1]) && player.profession == GW2::Profession::Revenant) {
+        bool all_legends_ok = true;
+        for (int li = 0; li < 2; li++) {
+            if (!reference.legends[li]) continue;
+            bool found = false;
+            for (int lj = 0; lj < 2; lj++) {
+                if (player.legends[lj] && player.legends[lj] == reference.legends[li]) {
+                    found = true;
+                    break;
+                }
+            }
+            if (!found) { all_legends_ok = false; break; }
+        }
+        if (!all_legends_ok) {
+            std::string lnames = GW2Names::GetSkill(reference.legends[0]);
+            if (reference.legends[1])
+                lnames += " / " + GW2Names::GetSkill(reference.legends[1]);
+            std::string plegends;
+            if (player.legends[0]) plegends = GW2Names::GetSkill(player.legends[0]);
+            if (player.legends[1]) {
+                if (!plegends.empty()) plegends += " / ";
+                plegends += GW2Names::GetSkill(player.legends[1]);
+            }
+            AddDiff(result, Severity::Error, "Legend", "Legends",
+                    plegends.empty() ? "(none)" : plegends, lnames,
+                    "Wrong legends equipped");
+        }
+    }
 
     result.perfect_match = result.diffs.empty();
     return result;
