@@ -57,6 +57,7 @@ static char                       s_manual_char[20] = {};
 static bool s_show_settings = false;
 static char s_api_key_buf[73] = {};
 static bool s_chat_build_detection = true;
+static bool s_chat_build_detect_own = false;
 static bool s_offline_mode = false;
 
 /* Account name — fetched once to gate the coach popout */
@@ -242,9 +243,16 @@ static void RenderSettings()
     if (ImGui::IsItemHovered())
         ImGui::SetTooltip("When enabled, displays a popup when an AB: share code is posted in chat");
 
+    ImGui::Indent();
+    ImGui::Checkbox("Detect from my own messages", &s_chat_build_detect_own);
+    if (ImGui::IsItemHovered())
+        ImGui::SetTooltip("Also detect share codes in your own messages (useful for testing)");
+    ImGui::Unindent();
+
     {
         std::lock_guard<std::mutex> lock(g_ChatBuildToastMutex);
         g_ChatBuildDetection = s_chat_build_detection;
+        g_ChatBuildDetectOwn = s_chat_build_detect_own;
     }
 
     ImGui::Spacing();
@@ -546,7 +554,7 @@ void Render()
     /* Toolbar */
     if (ImGui::Button("Settings")) s_show_settings = !s_show_settings;
     ImGui::SameLine();
-    if (ImGui::Button("Builds")) BuildEditor::Toggle();
+    if (ImGui::Button("Build Editor")) BuildEditor::Toggle();
     ImGui::SameLine();
     if (ImGui::Button("DPS / Rotation")) CoachWindow::Toggle();
     ImGui::SameLine();
