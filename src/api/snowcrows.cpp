@@ -2,6 +2,7 @@
 #include "http_client.h"
 #include "../shared.h"
 #include "weapon_type_db.h"
+#include "pet_names.h"
 #include <nlohmann/json.hpp>
 #include <fstream>
 #include <map>
@@ -982,12 +983,42 @@ bool ParseSingleBuildPage(const std::string& url, GW2::SCBuild& out)
         }
     }
 
+    /* ── Extract benchmark DPS (average, not max) ── */
+    double benchmark_dps = 0.0;
+    {
+        size_t pos = html.find("Last Benchmark Average");
+        if (pos != std::string::npos) {
+            size_t div = html.find("text-lg", pos);
+            if (div != std::string::npos) {
+                size_t gt = html.find('>', div);
+                size_t end = html.find("</div>", gt);
+                if (gt != std::string::npos && end != std::string::npos) {
+                    std::string inner = html.substr(gt + 1, end - gt - 1);
+                    while (true) {
+                        size_t tag = inner.find('<');
+                        if (tag == std::string::npos) break;
+                        size_t te = inner.find('>', tag);
+                        if (te == std::string::npos) break;
+                        inner.erase(tag, te - tag + 1);
+                    }
+                    while (!inner.empty() && inner.front() == ' ') inner.erase(0, 1);
+                    while (!inner.empty() && inner.back() == ' ') inner.pop_back();
+                    try {
+                        double val = std::stod(inner);
+                        if (val > 5000 && val < 200000) benchmark_dps = val;
+                    } catch (...) {}
+                }
+            }
+        }
+    }
+
     /* ── Build JSON ── */
     json j;
     j["id"] = url_prof + "-" + url_slug;
     j["name"] = page_title.empty() ? url_slug : page_title;
     j["profession"] = url_prof;
     j["source_url"] = url;
+    if (benchmark_dps > 0) j["benchmark_dps"] = benchmark_dps;
 
     /* Extract specializations */
     json traits = json::object();
@@ -1016,37 +1047,145 @@ bool ParseSingleBuildPage(const std::string& url, GW2::SCBuild& out)
     }
     j["traits"] = traits;
 
-    /* Extract skills — skip tooltip-only embeds (data-armory-size) */
-    size_t sk_pos = 0;
-    for (;;) {
-        sk_pos = html.find("data-armory-embed=\"skills\"", sk_pos);
-        if (sk_pos == std::string::npos) break;
-        /* Skip if this is a tooltip-only embed */
-        size_t tag_end = html.find('>', sk_pos);
-        if (tag_end != std::string::npos &&
-            html.find("data-armory-size", sk_pos) < tag_end) {
+    /* Extract skills and Revenant legends — skip tooltip-only embeds (data-armory-size) */
+    {
+        size_t sk_pos = 0;
+        bool has_skills = false, has_legends = false;
+        for (;;) {
+            sk_pos = html.find("data-armory-embed=\"skills\"", sk_pos);
+            if (sk_pos == std::string::npos) break;
+            size_t tag_end = html.find('>', sk_pos);
+            if (tag_end != std::string::npos &&
+                html.find("data-armory-size", sk_pos) < tag_end) {
+                sk_pos = tag_end + 1;
+                continue;
+            }
+            std::string sid_str = FindHTMLAttr(html, "data-armory-ids", sk_pos);
+            auto sids = ParseIntList(sid_str);
+            if (!has_skills && sids.size() >= 5) {
+                json skills = json::object();
+                skills["heal"] = sids[0];
+                json utils = json::array();
+                for (int i = 1; i <= 3; i++) utils.push_back(sids[i]);
+                skills["elite"] = sids[4];
+                j["skills"] = skills;
+                has_skills = true;
+            } else if (!has_legends && sids.size() == 2 && !sids.empty()) {
+                j["legends"] = json::array({sids[0], sids[1]});
+                has_legends = true;
+            }
             sk_pos = tag_end + 1;
-            continue;
         }
-        std::string sid_str = FindHTMLAttr(html, "data-armory-ids", sk_pos);
-        auto sids = ParseIntList(sid_str);
-        if (sids.size() >= 5) {
-            json skills = json::object();
-            skills["heal"] = sids[0];
-            json utils = json::array();
-            for (int i = 1; i <= 3; i++) utils.push_back(sids[i]);
-            skills["utilities"] = utils;
-            skills["elite"] = sids[4];
-            j["skills"] = skills;
-        }
-        break;
     }
 
-    /* Extract gear items (data-armory-embed="items" excluding size/inline-text) */
+    /* Extract Ranger pets — scan for spans with data-armory-id + data-tippy-content.
+     * The data-armory-id on SC is an asset/icon ID, not the pet API ID.
+     * The actual pet name is in data-tippy-content; look it up by name to get the ID.
+     * Other data-armory-id spans use data-armory-title instead of data-tippy-content. */
+    {
+        std::vector<uint32_t> pet_ids;
+        size_t pos = 0;
+        while (pos < html.size() && pet_ids.size() < 2) {
+            size_t aid = html.find("data-armory-id=\"", pos);
+            if (aid == std::string::npos) break;
+            size_t gt = html.find('>', aid);
+            if (gt == std::string::npos) break;
+            std::string tag = html.substr(aid, gt - aid);
+            size_t tpos = tag.find("data-tippy-content=\"");
+            if (tpos != std::string::npos) {
+                size_t vs = tpos + 20; /* len of data-tippy-content=" */
+                size_t ve = tag.find('"', vs);
+                if (ve != std::string::npos) {
+                    std::string name = tag.substr(vs, ve - vs);
+                    const auto* pet = OfflineData::FindPetByName(name.c_str());
+                    if (pet) pet_ids.push_back(pet->id);
+                }
+            }
+            pos = gt + 1;
+        }
+        /* Also check for queryLake(ID) if no pets found via old format */
+        if (pet_ids.empty()) {
+            pos = 0;
+            while (pos < html.size() && pet_ids.size() < 2) {
+                size_t ql = html.find("queryLake(", pos);
+                if (ql == std::string::npos) break;
+                size_t vs = ql + 10;
+                size_t ve = html.find(')', vs);
+                if (ve != std::string::npos) {
+                    std::string val = html.substr(vs, ve - vs);
+                    try { pet_ids.push_back((uint32_t)std::stoul(val)); }
+                    catch (...) {}
+                }
+                pos = ve + 1;
+            }
+        }
+        if (!pet_ids.empty()) {
+            json pj = json::array();
+            for (auto id : pet_ids) pj.push_back(id);
+            j["pets"] = pj;
+        }
+    }
+
+    /* ── Helper: detect hand label from HTML context after embed ── */
+    auto FindHandLabel = [&](const std::string& html, size_t pos) -> std::string {
+        size_t end = std::min(pos + 600, html.size());
+        std::string ctx(html.begin() + pos, html.begin() + end);
+        std::transform(ctx.begin(), ctx.end(), ctx.begin(), ::tolower);
+        /* Look for exact ">Main Hand<", ">Off Hand<" inside HTML tags —
+         * much more precise than plain substring matching. */
+        if (ctx.find(">main hand<")   != std::string::npos ||
+            ctx.find(">two-handed<")  != std::string::npos ||
+            ctx.find(">two handed<")  != std::string::npos ||
+            ctx.find(">two-hand<")    != std::string::npos)
+            return "Main Hand";
+        if (ctx.find(">off hand<")    != std::string::npos)
+            return "Off Hand";
+        /* Fallback: plain text match (some SC layouts may not wrap in tags) */
+        if (ctx.find("main hand")  != std::string::npos) return "Main Hand";
+        if (ctx.find("off hand")   != std::string::npos) return "Off Hand";
+        return "";
+    };
+
+    auto IsTooltipEmbed = [&](const std::string& html, size_t ip) -> bool {
+        size_t gt = html.find('>', ip);
+        if (gt == std::string::npos) return false;
+        return (html.find("data-armory-size", ip) < gt ||
+                html.find("data-armory-inline-text", ip) < gt);
+    };
+
+    /* ── Pre-scan: detect which Main Hand weapon embeds are 2H ── */
+    std::vector<bool> mh_2h;
+    {
+        size_t ps = 0;
+        for (;;) {
+            size_t ip = html.find("data-armory-embed=\"items\"", ps);
+            if (ip == std::string::npos) break;
+            ps = ip + 1;
+            if (IsTooltipEmbed(html, ip)) continue;
+            uint32_t iid = ParseIntAttr(html, "data-armory-ids", ip);
+            if (!iid) continue;
+            if (FindHandLabel(html, ip) != "Main Hand") continue;
+            auto ups = ParseIntList(FindHTMLAttr(html,
+                "data-armory-" + std::to_string(iid) + "-upgrades", ip));
+            mh_2h.push_back(ups.size() >= 2);
+        }
+    }
+
+    /* Build off-hand slot sequence: skip A2/B2 for 2H main-hands */
+    std::vector<const char*> off_hand_seq;
+    {
+        const char* all_off[] = {"WeaponA2", "WeaponB2"};
+        for (int i = 0; i < 2; i++)
+            if (i >= (int)mh_2h.size() || !mh_2h[i])
+                off_hand_seq.push_back(all_off[i]);
+    }
+
+    /* ── Extract gear items ── */
     json items = json::array();
-    int item_idx = 0;    /* counts armor+trinket+weapon items (not consumables) */
-    int weapon_count = 0; /* 0=none yet, 1=A1 seen, 2=A2/B1 seen, 3=B1/B2 seen */
-    bool a_is_2h = false;
+    int  item_idx     = 0;
+    int  mh_count     = 0, oh_count = 0;
+    int  weapon_count = 0;
+    bool a_is_2h      = false;
     search_pos = 0;
     bool has_relic = false, has_food = false, has_utility = false;
     for (;;) {
@@ -1054,15 +1193,12 @@ bool ParseSingleBuildPage(const std::string& url, GW2::SCBuild& out)
         if (ip == std::string::npos) break;
         search_pos = ip + 1;
 
-        /* Skip tooltip-only embeds (they have data-armory-size or inline-text) */
-        if (html.find("data-armory-size", ip) < html.find('>', ip) ||
-            html.find("data-armory-inline-text", ip) < html.find('>', ip))
-            continue;
+        if (IsTooltipEmbed(html, ip)) continue;
 
         uint32_t iid = ParseIntAttr(html, "data-armory-ids", ip);
         if (!iid) continue;
 
-        /* Check for relic, food, utility by scanning surrounding context */
+        /* Relic / food / utility detection */
         {
             size_t prev_row = (ip > 600) ? ip - 600 : 0;
             std::string ctx = html.substr(prev_row, ip - prev_row + 200);
@@ -1080,7 +1216,7 @@ bool ParseSingleBuildPage(const std::string& url, GW2::SCBuild& out)
                 continue;
             }
             if (!has_utility && (ctx.find("utility") != std::string::npos ||
-                                 ctx.find("enhancement") != std::string::npos)) {
+                                  ctx.find("enhancement") != std::string::npos)) {
                 j["gear"]["utility_id"] = iid;
                 has_utility = true;
                 continue;
@@ -1088,36 +1224,68 @@ bool ParseSingleBuildPage(const std::string& url, GW2::SCBuild& out)
         }
 
         uint32_t stat_id = ParseIntAttr(html, "data-armory-" + std::to_string(iid) + "-stat", ip);
-        auto upg_ids = ParseIntList(FindHTMLAttr(html, "data-armory-" + std::to_string(iid) + "-upgrades", ip));
-        uint32_t upg_id = upg_ids.empty() ? 0 : upg_ids[0];
+        auto upg_ids     = ParseIntList(FindHTMLAttr(html, "data-armory-" + std::to_string(iid) + "-upgrades", ip));
+        uint32_t upg_id  = upg_ids.empty() ? 0 : upg_ids[0];
 
-        /* Determine slot — armor/trinkets by position, weapons with 2H awareness */
-        const char* slot_str;
-        if (item_idx < 12) {
-            slot_str = SlotFromItemIndex(item_idx);
-        } else {
-            /* Weapon set A may be 2H, which means SC emits no A2 row.
-             * Detect on the first weapon by looking up its type in the DB. */
-            if (weapon_count == 0) {
-                slot_str = "WeaponA1";
-                a_is_2h = Is2HWeapon(WeaponTypeDB::GetType(iid));
-            } else if (weapon_count == 1) {
-                slot_str = a_is_2h ? "WeaponB1" : "WeaponA2";
-            } else if (weapon_count == 2) {
-                slot_str = a_is_2h ? "WeaponB2" : "WeaponB1";
-            } else {
-                slot_str = "WeaponB2";
-            }
-            weapon_count++;
+        /* ── Slot detection ── */
+        const char* slot_str = nullptr;
+
+        /* Label-based detection only for weapon-area items */
+        std::string hand;
+        if (item_idx >= 12) hand = FindHandLabel(html, ip);
+        if (hand == "Main Hand") {
+            slot_str = (mh_count == 0) ? "WeaponA1" : "WeaponB1";
+            mh_count++;
+        } else if (hand == "Off Hand") {
+            slot_str = (oh_count < (int)off_hand_seq.size())
+                           ? off_hand_seq[oh_count]
+                           : "WeaponB2";
+            oh_count++;
         }
+
+        /* In weapon area with no hand label: skip non-gear items
+         * (infusions, jade bot cores, etc. — no stat, no upgrades) */
+        if (!slot_str && item_idx >= 12 && !stat_id && upg_ids.empty())
+            continue;
+
+        /* Positional fallback (no hand label recognised) */
+        if (!slot_str) {
+            if (item_idx < 12) {
+                slot_str = SlotFromItemIndex(item_idx);
+            } else {
+                if (weapon_count == 0) {
+                    slot_str = "WeaponA1";
+                    a_is_2h = Is2HWeapon(WeaponTypeDB::GetType(iid));
+                } else if (weapon_count == 1) {
+                    slot_str = a_is_2h ? "WeaponB1" : "WeaponA2";
+                } else if (weapon_count == 2) {
+                    slot_str = a_is_2h ? "WeaponB2" : "WeaponB1";
+                } else {
+                    slot_str = "WeaponB2";
+                }
+                weapon_count++;
+            }
+        } else {
+            /* Sync weapon_count for any subsequent positional fallback */
+            int sync = (slot_str[6] == 'A' && slot_str[7] == '1') ? 1 :
+                       (slot_str[6] == 'A' && slot_str[7] == '2') ? 2 :
+                       (slot_str[6] == 'B' && slot_str[7] == '1') ? 2 :
+                       (slot_str[6] == 'B' && slot_str[7] == '2') ? 3 : weapon_count;
+            if (sync > weapon_count) weapon_count = sync;
+        }
+
+        /* Track 2H for WeaponA1 (keeps positional fallback in sync) */
+        if (strcmp(slot_str, "WeaponA1") == 0)
+            a_is_2h = (upg_ids.size() >= 2) || Is2HWeapon(WeaponTypeDB::GetType(iid));
 
         json item = json::object();
         item["slot"]    = slot_str;
         item["item_id"] = iid;
         if (stat_id)  item["stat_id"]    = stat_id;
         if (upg_id)   item["upgrade_id"] = upg_id;
-        /* 2H main-hand weapons have two sigil IDs in the upgrades attribute */
-        bool is_mainhand = (strcmp(slot_str, "WeaponA1") == 0 || strcmp(slot_str, "WeaponB1") == 0);
+
+        bool is_mainhand = (strcmp(slot_str, "WeaponA1") == 0 ||
+                            strcmp(slot_str, "WeaponB1") == 0);
         if (is_mainhand && upg_ids.size() >= 2) item["upgrade2_id"] = upg_ids[1];
         items.push_back(item);
         item_idx++;

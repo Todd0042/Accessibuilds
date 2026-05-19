@@ -480,14 +480,14 @@ __declspec(dllexport) void AddonUnload()
 
 __declspec(dllexport) AddonDefinition_t* GetAddonDef()
 {
-    static AddonVersion_t version = {0, 2, 2, 0};
+    static AddonVersion_t version = {1, 0, 0, 0};
     static AddonDefinition_t def  = {
         ADDON_SIGNATURE,
         NEXUS_API_VERSION,
         ADDON_NAME,
         version,
         ADDON_AUTHOR,
-        "Build Coach — compare your build against Snow Crows reference builds.",
+        "Build Coach — compare your build against reference builds.",
         AddonLoad,
         AddonUnload,
         AF_None,
