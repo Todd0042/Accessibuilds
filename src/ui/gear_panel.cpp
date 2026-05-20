@@ -279,7 +279,7 @@ static void RenderSlotRow(const GW2::GearItem* pi, const GW2::GearItem* ri,
                 rline = rt + (!rs.empty() ? " (" + rs + ")" : "");
             else
                 rline = !rs.empty() ? rs : "...";
-            ImGui::TextColored(slot_ok ? COL_OK : COL_REF, "SC: %s", rline.c_str());
+            ImGui::TextColored(slot_ok ? COL_OK : COL_REF, "Ref: %s", rline.c_str());
 
             if (!slot_ok && (!weapon_type_ok || !stat_ok)) {
                 std::string pt;
@@ -688,13 +688,13 @@ void Render()
 
     auto cmp = BuildComparator::CompareGear(player.gear, sc.gear);
     if (cmp.perfect_match)
-        ImGui::TextColored(COL_OK, "Gear matches Snow Crows reference");
+        ImGui::TextColored(COL_OK, "Gear matches reference");
     else
         ImGui::TextColored(COL_ERROR, "%d error(s), %d warning(s)",
                            cmp.error_count, cmp.warning_count);
     if (sc.is_accessibility) {
         ImGui::SameLine(); ImGui::TextDisabled(" [Accessibility]");
-        if (ImGui::IsItemHovered()) ImGui::SetTooltip("This build is from the Snow Crows accessibility listing");
+        if (ImGui::IsItemHovered()) ImGui::SetTooltip("This build is from the accessibility listing");
     }
 
     /* Export share code */
@@ -923,7 +923,7 @@ void Render()
             RenderGroup("WeaponsTable", WEAPON_SLOTS, 4, pm, rm, true);
 
             ImGui::TableSetColumnIndex(1);
-            ImGui::TextColored(ImVec4(0.7f,0.7f,0.7f,1), "Consumables (SC Recommended)");
+            ImGui::TextColored(ImVec4(0.7f,0.7f,0.7f,1), "Consumables (Ref)");
             ImGui::Separator();
 
             auto show_rec = [&](const char* label, uint32_t rec, const std::string& txt = "") {
@@ -1219,7 +1219,7 @@ static void RenderPaperDollLayout(
             break;
         default: break;
     }
-    Texture_t* armor_tex = APIDefs->Textures_Get(armor_key);
+    Texture_t* armor_tex = armor_key ? IconCache::GetAddonTexture(armor_key) : nullptr;
 
     /* Backdrop image at 35% opacity */
     if (armor_tex && armor_tex->Resource) {

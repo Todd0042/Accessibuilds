@@ -355,6 +355,7 @@ bool SaveSettings(const Settings& s)
     j["auto_refresh"]   = s.auto_refresh;
     j["last_gw2_build"] = s.last_gw2_build;
     j["offline_mode"]   = s.offline_mode;
+    j["setup_complete"] = s.setup_complete;
     for (int i = 0; i < 3; i++) {
         j["tab_width"][i]  = s.tab_width[i];
         j["tab_height"][i] = s.tab_height[i];
@@ -387,6 +388,7 @@ bool LoadSettings(Settings& out)
         out.auto_refresh   = j.value("auto_refresh",   true);
         out.last_gw2_build = j.value("last_gw2_build", uint64_t(0));
         out.offline_mode   = j.value("offline_mode",   false);
+        out.setup_complete = j.value("setup_complete", false);
         for (int i = 0; i < 3; i++) {
             if (j.contains("tab_width")  && i < (int)j["tab_width"].size())
                 out.tab_width[i]  = j["tab_width"][i];
@@ -536,6 +538,7 @@ bool SaveUserBuilds(const std::vector<GW2::SCBuild>& builds)
         entry["build_type"]    = (int)b.build_type;
         entry["benchmark_dps"] = b.benchmark_dps;
         entry["notes"]         = b.notes;
+        entry["source_url"]    = b.source_url;
         entry["is_legacy"]     = b.is_legacy;
 
         json traits_j = json::array();
@@ -570,6 +573,14 @@ bool SaveUserBuilds(const std::vector<GW2::SCBuild>& builds)
         gear_j["utility_text"] = b.gear.utility_text;
         entry["gear"]        = gear_j;
 
+        json pets_j = json::array();
+        for (auto id : b.pets) pets_j.push_back(id);
+        entry["pets"] = pets_j;
+
+        json legends_j = json::array();
+        for (auto id : b.legends) legends_j.push_back(id);
+        entry["legends"] = legends_j;
+
         arr.push_back(entry);
     }
     std::ofstream f(s_CacheDir + "user_builds.json");
@@ -596,6 +607,7 @@ bool LoadUserBuilds(std::vector<GW2::SCBuild>& out_builds)
             b.build_type   = (GW2::BuildType) entry.value("build_type",  0);
             b.benchmark_dps = entry.value("benchmark_dps", 0.0);
             b.notes        = entry.value("notes", "");
+            b.source_url   = entry.value("source_url", "");
             b.is_legacy    = entry.value("is_legacy", false);
 
             if (entry.contains("traits")) {
@@ -632,6 +644,17 @@ bool LoadUserBuilds(std::vector<GW2::SCBuild>& out_builds)
                 if (gj.contains("items"))
                     for (const auto& ij : gj["items"])
                         b.gear.items.push_back(DeserializeGearItem(ij));
+            }
+
+            if (entry.contains("pets")) {
+                auto& pj = entry["pets"];
+                for (int i = 0; i < 2 && i < (int)pj.size(); i++)
+                    b.pets[i] = pj[i].get<uint32_t>();
+            }
+            if (entry.contains("legends")) {
+                auto& lj = entry["legends"];
+                for (int i = 0; i < 2 && i < (int)lj.size(); i++)
+                    b.legends[i] = lj[i].get<uint32_t>();
             }
 
             out_builds.push_back(std::move(b));

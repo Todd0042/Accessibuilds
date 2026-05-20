@@ -6,6 +6,8 @@
 #include "../api/item_lookup.h"
 #include "../api/gw2names.h"
 #include "../api/relic_db.h"
+#include "../api/pet_names.h"
+#include "../api/legend_names.h"
 #include <imgui.h>
 #include <cstring>
 #include <cstdlib>
@@ -58,6 +60,7 @@ static int    s_prev_spec_idx = 0;
 static double s_benchmark_dps = 0.0;
 static bool   s_is_legacy = false;
 static bool   s_is_accessibility = false;
+static std::string s_source_url;
 
 /* ── Traits ── */
 static uint32_t s_spec_id_val [3]    = {};
@@ -68,6 +71,10 @@ static int      s_trait_sel   [3][3] = {{-1,-1,-1},{-1,-1,-1},{-1,-1,-1}};
 static char s_skill_heal_name   [128]    = {};
 static char s_skill_util_name [3][128]   = {};
 static char s_skill_elite_name  [128]    = {};
+
+/* ── Pets / Legends ── */
+static char s_pet_name   [2][128] = {};
+static char s_legend_name[2][128] = {};
 
 /* ── Gear ── */
 struct SlotRow { GW2::GearSlot slot; const char* label; bool is_weapon; };
@@ -490,6 +497,7 @@ static void ClearForm()
     s_prof_idx = 0; s_spec_idx = 0; s_type_idx = 0; s_prev_spec_idx = 0; s_benchmark_dps = 0.0;
     s_is_legacy = false;
     s_is_accessibility = false;
+    s_source_url.clear();
 
     memset(s_spec_id_val,         0, sizeof(s_spec_id_val));
     memset(s_raw_trait_id,        0, sizeof(s_raw_trait_id));
@@ -498,6 +506,8 @@ static void ClearForm()
     memset(s_skill_heal_name,     0, sizeof(s_skill_heal_name));
     memset(s_skill_util_name,     0, sizeof(s_skill_util_name));
     memset(s_skill_elite_name,    0, sizeof(s_skill_elite_name));
+    memset(s_pet_name,            0, sizeof(s_pet_name));
+    memset(s_legend_name,         0, sizeof(s_legend_name));
 
     memset(s_stat_name,           0, sizeof(s_stat_name));
     memset(s_upgrade_name,        0, sizeof(s_upgrade_name));
@@ -1089,6 +1099,18 @@ static void ApplyGw2SkillsResult()
     fillSkill(res.skills.utilities[1],   s_skill_util_name[1], sizeof(s_skill_util_name[1]));
     fillSkill(res.skills.utilities[2],   s_skill_util_name[2], sizeof(s_skill_util_name[2]));
     fillSkill(res.skills.elite,          s_skill_elite_name,   sizeof(s_skill_elite_name));
+    if (s_prof_idx == (int)GW2::Profession::Ranger) {
+        for (int p = 0; p < 2; p++) if (res.pets[p]) {
+            const char* pn = OfflineData::GetPetName(res.pets[p]);
+            strncpy(s_pet_name[p], pn, sizeof(s_pet_name[p]) - 1);
+        }
+    }
+    if (s_prof_idx == (int)GW2::Profession::Revenant) {
+        for (int l = 0; l < 2; l++) if (res.legends[l]) {
+            const char* ln = OfflineData::GetLegendName(res.legends[l]);
+            strncpy(s_legend_name[l], ln, sizeof(s_legend_name[l]) - 1);
+        }
+    }
     /* Copy weapon types */
     if (res.weapon_a1) s_weapon_type[12] = res.weapon_a1;
     if (res.weapon_a2) s_weapon_type[13] = res.weapon_a2;
@@ -1199,6 +1221,17 @@ static void BuildToForm(const GW2::SCBuild& b)
         strncpy(s_skill_util_name[i], n.c_str(), 127);
     }
     if (b.skills.elite) { auto n = SkillIDToName(b.skills.elite, prof); strncpy(s_skill_elite_name, n.c_str(), 127); }
+
+    if (b.profession == GW2::Profession::Ranger) {
+        if (b.pets[0]) { auto n = OfflineData::GetPetName(b.pets[0]); strncpy(s_pet_name[0], n, 127); }
+        if (b.pets[1]) { auto n = OfflineData::GetPetName(b.pets[1]); strncpy(s_pet_name[1], n, 127); }
+    }
+    if (b.profession == GW2::Profession::Revenant) {
+        if (b.legends[0]) { auto n = OfflineData::GetLegendName(b.legends[0]); strncpy(s_legend_name[0], n, 127); }
+        if (b.legends[1]) { auto n = OfflineData::GetLegendName(b.legends[1]); strncpy(s_legend_name[1], n, 127); }
+    }
+
+    s_source_url = b.source_url;
 
     for (const auto& gi : b.gear.items) {
         for (int r = 0; r < NUM_SLOTS; r++) {
@@ -1313,6 +1346,7 @@ static GW2::SCBuild FormToBuild()
     b.build_type = (GW2::BuildType)s_type_idx;
     b.benchmark_dps = s_benchmark_dps;
     b.is_legacy  = s_is_legacy;
+    b.source_url = s_source_url;
     b.id = b.name;
     for (char& c : b.id) c = (c == ' ') ? '-' : (char)tolower((unsigned char)c);
 
@@ -1332,6 +1366,19 @@ static GW2::SCBuild FormToBuild()
     b.skills.heal = ResolveSkillName(s_skill_heal_name);
     for (int i = 0; i < 3; i++) b.skills.utilities[i] = ResolveSkillName(s_skill_util_name[i]);
     b.skills.elite = ResolveSkillName(s_skill_elite_name);
+
+    for (int p = 0; p < 2; p++) {
+        if (s_pet_name[p][0]) {
+            if (IsAllDigits(s_pet_name[p])) b.pets[p] = (uint32_t)atoi(s_pet_name[p]);
+            else { const auto* pe = OfflineData::FindPetByName(s_pet_name[p]); if (pe) b.pets[p] = pe->id; }
+        }
+    }
+    for (int l = 0; l < 2; l++) {
+        if (s_legend_name[l][0]) {
+            if (IsAllDigits(s_legend_name[l])) b.legends[l] = (uint32_t)atoi(s_legend_name[l]);
+            else { const auto* le = OfflineData::FindLegendByName(s_legend_name[l]); if (le) b.legends[l] = le->id; }
+        }
+    }
 
     for (int r = 0; r < NUM_SLOTS; r++) {
         auto& sr = s_stat_resolve[r];
@@ -1530,9 +1577,9 @@ void Render()
     ImGui::SetNextItemWidth(S(90));
     ImGui::InputDouble("##bench", &s_benchmark_dps, 0.0, 0.0, "%.0f");
 
-    /* ── Import from Snow Crows ── */
+    /* ── Import from Reference Builds ── */
     {
-        ImGui::Text("SC builds: ");
+        ImGui::Text("Ref builds: ");
         ImGui::SameLine();
         ImGui::SetNextItemWidth(S(90));
         if (ImGui::BeginCombo("##sc_prof_filter", PROF_FILTER_NAMES[s_sc_filter_prof])) {
@@ -1596,7 +1643,7 @@ void Render()
                                  sc_legacy.end());
             }
 
-            std::string sc_preview = "-- Select SC Build --";
+            std::string sc_preview = "-- Select Ref --";
             if (s_sc_list_idx >= 0 && s_sc_list_idx < (int)s_sc_builds.size()) {
                 const auto& b = s_sc_builds[s_sc_list_idx];
                 std::string disp = BuildDisplayLabel(b.id, b.name, PROF_NAMES[(int)b.profession]);
@@ -1983,6 +2030,52 @@ void Render()
     ImGui::SameLine(0, S(16));
     ConsRow("Utility:", s_utility_name, sizeof(s_utility_name), s_utility_id_override, sizeof(s_utility_id_override), "##un", "##ui");
 
+    /* ── Pets / Legends ── */
+    {
+        bool is_ranger   = (s_prof_idx == (int)GW2::Profession::Ranger);
+        bool is_revenant = (s_prof_idx == (int)GW2::Profession::Revenant);
+        if (is_ranger || is_revenant) {
+            ImGui::Spacing();
+            ImGui::TextDisabled(is_ranger ? "Pets  (type name or numeric ID)" : "Legends  (type name or numeric ID)");
+            ImGui::Separator();
+            if (ImGui::BeginTable("##pets_legends", 3, ImGuiTableFlags_Borders | ImGuiTableFlags_SizingFixedFit)) {
+                ImGui::TableSetupColumn("Slot",     ImGuiTableColumnFlags_WidthFixed, S(60));
+                ImGui::TableSetupColumn("Name",     ImGuiTableColumnFlags_WidthFixed, S(220));
+                ImGui::TableSetupColumn("Resolved", ImGuiTableColumnFlags_WidthStretch);
+                ImGui::TableHeadersRow();
+
+                auto PetRow = [&](int idx, const char* wid) {
+                    ImGui::TableNextRow();
+                    char label[16]; snprintf(label, sizeof(label), "Pet %d", idx + 1);
+                    ImGui::TableSetColumnIndex(0); ImGui::TextUnformatted(label);
+                    ImGui::TableSetColumnIndex(1); ImGui::SetNextItemWidth(-1); ImGui::InputText(wid, s_pet_name[idx], sizeof(s_pet_name[idx]));
+                    ImGui::TableSetColumnIndex(2);
+                    if (s_pet_name[idx][0]) {
+                        const auto* pe = OfflineData::FindPetByName(s_pet_name[idx]);
+                        if (pe) ImGui::TextColored(ImVec4(0.3f,1.f,0.3f,1.f), "\xe2\x9c\x93 %u  %s", pe->id, pe->name);
+                        else    ImGui::TextColored(ImVec4(1.f,0.45f,0.45f,1.f), "not found");
+                    }
+                };
+                auto LegendRow = [&](int idx, const char* wid) {
+                    ImGui::TableNextRow();
+                    char label[16]; snprintf(label, sizeof(label), "Leg %d", idx + 1);
+                    ImGui::TableSetColumnIndex(0); ImGui::TextUnformatted(label);
+                    ImGui::TableSetColumnIndex(1); ImGui::SetNextItemWidth(-1); ImGui::InputText(wid, s_legend_name[idx], sizeof(s_legend_name[idx]));
+                    ImGui::TableSetColumnIndex(2);
+                    if (s_legend_name[idx][0]) {
+                        const auto* le = OfflineData::FindLegendByName(s_legend_name[idx]);
+                        if (le) ImGui::TextColored(ImVec4(0.3f,1.f,0.3f,1.f), "\xe2\x9c\x93 %u  %s", le->id, le->name);
+                        else    ImGui::TextColored(ImVec4(1.f,0.45f,0.45f,1.f), "not found");
+                    }
+                };
+
+                if (is_ranger)   { PetRow(0, "##pet1"); PetRow(1, "##pet2"); }
+                if (is_revenant) { LegendRow(0, "##leg1"); LegendRow(1, "##leg2"); }
+                ImGui::EndTable();
+            }
+        }
+    }
+
     ImGui::Spacing(); ImGui::Separator();
 
     /* ── Buttons ── */
@@ -2015,7 +2108,7 @@ void Render()
     {
         bool sc_ready = g_SCBuildLoaded.load();
         if (!sc_ready) ImGui::PushStyleVar(ImGuiStyleVar_Alpha, 0.4f);
-        if (ImGui::Button("From SC") && sc_ready) {
+        if (ImGui::Button("From Ref") && sc_ready) {
             GW2::SCBuild sc;
             { std::lock_guard<std::mutex> lk(g_SCBuildMutex); sc = g_SCBuild; }
             BuildToForm(sc);
@@ -2023,7 +2116,7 @@ void Render()
         if (!sc_ready) ImGui::PopStyleVar();
         if (ImGui::IsItemHovered())
             ImGui::SetTooltip(sc_ready
-                ? "Import the currently selected Snow Crows reference build"
+                ? "Import the currently selected reference build"
                 : "Select a reference build from the dropdown first");
     }
     /* ── Share Code ── */
@@ -2128,11 +2221,11 @@ void Render()
     if (ImGui::IsItemHovered())
         ImGui::SetTooltip("Open Hardstruck — competitive GW2 PvE/raid builds and guides");
     ImGui::SameLine();
-    if (ImGui::Button("MetaBattle")) {
-        ShellExecuteA(nullptr, "open", "https://metabattle.com/wiki/MetaBattle_Wiki", nullptr, nullptr, SW_SHOWNORMAL);
+    if (ImGui::Button("GuildJen")) {
+        ShellExecuteA(nullptr, "open", "https://guildjen.com/", nullptr, nullptr, SW_SHOWNORMAL);
     }
     if (ImGui::IsItemHovered())
-        ImGui::SetTooltip("Open MetaBattle — the most reliable source for WvW and PvP builds");
+        ImGui::SetTooltip("Open GuildJen — GW2 builds, guides, and tier lists for all game modes");
 
     ImGui::End();
 }

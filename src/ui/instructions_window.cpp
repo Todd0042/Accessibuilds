@@ -46,7 +46,7 @@ void Render()
     ImGui::TextDisabled("Build Editor");
     ImGui::Separator();
     ImGui::TextWrapped(
-        "Click Builds in the toolbar to open the build editor. Here you can:"
+        "Click Build Editor in the toolbar to open the build editor. Here you can:"
     );
     ImGui::BulletText("Create and save your own builds for later reference");
     ImGui::BulletText("Import your current character's data as a starting template");
@@ -105,12 +105,11 @@ void Render()
     );
     ImGui::Spacing(); ImGui::Spacing();
 
-    /* ── Snow Crows ── */
-    ImGui::TextDisabled("Snow Crows Reference Builds");
+    /* ── Reference Builds ── */
+    ImGui::TextDisabled("Reference Builds");
     ImGui::Separator();
     ImGui::TextWrapped(
-        "Snow Crows is a long-running GW2 community site with a large library of builds for raids, fractals, and general PvE. "
-        "The addon fetches builds from Snow Crows so you can compare your gear, traits, skills, and rotations against popular community reference setups."
+        "The addon fetches builds from community reference sites like Snow Crows so you can compare your gear, traits, skills, and rotations against popular setups."
     );
     ImGui::Spacing();
     ImGui::TextWrapped(
@@ -126,11 +125,11 @@ void Render()
     );
     ImGui::Spacing(); ImGui::Spacing();
 
-    ImGui::TextDisabled("MetaBattle Builds");
+    ImGui::TextDisabled("GuildJen Builds");
     ImGui::Separator();
     ImGui::TextWrapped(
-        "MetaBattle is the most reliable resource for WvW and PvP build information in Guild Wars 2. "
-        "It provides class-specific build guides, role advice, and metadata from the PvP/WvW community, making it the best choice for non-raid competitive content."
+        "GuildJen provides GW2 build guides, tier lists, and content for WvW, PvP, and open world. "
+        "It offers class-specific builds with detailed explanations, making it a great resource for competitive and solo play."
     );
     ImGui::Spacing(); ImGui::Spacing();
 
@@ -146,8 +145,8 @@ void Render()
         ShellExecuteA(nullptr, "open", "https://hardstuck.gg/", nullptr, nullptr, SW_SHOWNORMAL);
     }
     ImGui::SameLine();
-    if (ImGui::Button("metabattle.com")) {
-        ShellExecuteA(nullptr, "open", "https://metabattle.com/wiki/MetaBattle_Wiki", nullptr, nullptr, SW_SHOWNORMAL);
+    if (ImGui::Button("guildjen.com")) {
+        ShellExecuteA(nullptr, "open", "https://guildjen.com/", nullptr, nullptr, SW_SHOWNORMAL);
     }
 
     ImGui::End();

@@ -852,6 +852,26 @@ static std::vector<uint32_t> ParseIntList(const std::string& s)
     return r;
 }
 
+/* Parse exactly n comma-delimited slots, preserving empty slots as 0.
+ * Used for 5-slot skill bars that may have empty utility/elite slots
+ * e.g. "12345,67890,,," → [12345, 67890, 0, 0, 0] */
+static std::vector<uint32_t> ParseExactSlots(const std::string& s, size_t n)
+{
+    std::vector<uint32_t> r(n, 0);
+    size_t slot = 0, pos = 0;
+    while (slot < n && pos <= s.size()) {
+        size_t comma = s.find(',', pos);
+        if (comma == std::string::npos) comma = s.size();
+        const char* tok = s.c_str() + pos;
+        char* end = nullptr;
+        long val = strtol(tok, &end, 10);
+        if (end > tok) r[slot] = (uint32_t)val;
+        slot++;
+        pos = (comma < s.size()) ? comma + 1 : s.size() + 1;
+    }
+    return r;
+}
+
 /* Extract a single integer from an attribute value */
 static uint32_t ParseIntAttr(const std::string& html, const std::string& attr,
                              size_t from)
@@ -1056,23 +1076,29 @@ bool ParseSingleBuildPage(const std::string& url, GW2::SCBuild& out)
             if (sk_pos == std::string::npos) break;
             size_t tag_end = html.find('>', sk_pos);
             if (tag_end != std::string::npos &&
-                html.find("data-armory-size", sk_pos) < tag_end) {
+                (html.find("data-armory-size",        sk_pos) < tag_end ||
+                 html.find("data-armory-inline-text", sk_pos) < tag_end)) {
                 sk_pos = tag_end + 1;
                 continue;
             }
             std::string sid_str = FindHTMLAttr(html, "data-armory-ids", sk_pos);
-            auto sids = ParseIntList(sid_str);
-            if (!has_skills && sids.size() >= 5) {
+            size_t comma_count = std::count(sid_str.begin(), sid_str.end(), ',');
+            if (!has_skills && comma_count == 4) {
+                auto slot_ids = ParseExactSlots(sid_str, 5);
                 json skills = json::object();
-                skills["heal"] = sids[0];
+                skills["heal"] = slot_ids[0];
                 json utils = json::array();
-                for (int i = 1; i <= 3; i++) utils.push_back(sids[i]);
-                skills["elite"] = sids[4];
+                for (int i = 1; i <= 3; i++) utils.push_back(slot_ids[i]);
+                skills["utilities"] = utils;
+                skills["elite"] = slot_ids[4];
                 j["skills"] = skills;
                 has_skills = true;
-            } else if (!has_legends && sids.size() == 2 && !sids.empty()) {
-                j["legends"] = json::array({sids[0], sids[1]});
-                has_legends = true;
+            } else {
+                auto sids = ParseIntList(sid_str);
+                if (!has_legends && sids.size() == 2) {
+                    j["legends"] = json::array({sids[0], sids[1]});
+                    has_legends = true;
+                }
             }
             sk_pos = tag_end + 1;
         }

@@ -168,7 +168,7 @@ static inline const char* SlotFallbackFile(GW2::GearSlot sl,
                 case WT::Rifle:      return "icons/rifle.png";
                 case WT::Pistol:     return "icons/pistol.png";
                 case WT::Spear:      return "icons/spear.png";
-                default:             return "icons/sword.png";
+                default:             return nullptr;
             }
         default: return nullptr;
     }

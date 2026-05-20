@@ -55,6 +55,7 @@ static char                       s_manual_char[20] = {};
 
 /* Settings window */
 static bool s_show_settings = false;
+static bool s_setup_complete = true; /* default true — Init() sets false if not yet done */
 static char s_api_key_buf[73] = {};
 static bool s_chat_build_detection = true;
 static bool s_chat_build_detect_own = false;
@@ -89,6 +90,7 @@ void Init()
     if (BuildCache::LoadSettings(settings)) {
         strncpy(s_api_key_buf, settings.api_key, 72);
         s_offline_mode = settings.offline_mode;
+        s_setup_complete = settings.setup_complete;
 
         std::lock_guard<std::mutex> lock(g_APIKeyMutex);
         strncpy(g_APIKey, settings.api_key, 72);
@@ -223,6 +225,43 @@ void Shutdown()
 void Toggle() { s_visible = !s_visible; }
 bool IsVisible() { return s_visible; }
 
+static void RenderSetupScreen()
+{
+    if (s_setup_complete) return;
+    ImGui::SetNextWindowSize(ImVec2(S(500), S(250)), ImGuiCond_Once);
+    if (!ImGui::Begin("Welcome to Build Coach", nullptr,
+                       ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoResize)) {
+        ImGui::End();
+        return;
+    }
+    ImGui::TextWrapped(
+        "Welcome to Build Coach! This addon compares your equipped gear "
+        "against reference builds from community sites.");
+    ImGui::Spacing();
+    ImGui::Text("GW2 API Key:");
+    ImGui::SameLine();
+    ImGui::TextDisabled("(optional — needed to fetch your character data)");
+    ImGui::SetNextItemWidth(S(460));
+    if (ImGui::InputText("##setup_apikey", s_api_key_buf, sizeof(s_api_key_buf),
+                         ImGuiInputTextFlags_Password)) {
+        std::lock_guard<std::mutex> lock(g_APIKeyMutex);
+        strncpy(g_APIKey, s_api_key_buf, 72);
+    }
+    ImGui::Spacing();
+    ImGui::TextWrapped(
+        "To get started, create or import builds in the Build Editor screen.");
+    ImGui::Spacing();
+    if (ImGui::Button("Get Started", ImVec2(S(120), 0))) {
+        s_setup_complete = true;
+        BuildCache::Settings s;
+        BuildCache::LoadSettings(s);
+        s.setup_complete = true;
+        strncpy(s.api_key, s_api_key_buf, 72);
+        BuildCache::SaveSettings(s);
+    }
+    ImGui::End();
+}
+
 static void RenderSettings()
 {
     if (!ImGui::Begin("Build Coach Settings", &s_show_settings)) {
@@ -258,7 +297,7 @@ static void RenderSettings()
     ImGui::Spacing();
     ImGui::Checkbox("Offline Mode (use embedded reference builds, no API calls)", &s_offline_mode);
     if (ImGui::IsItemHovered())
-        ImGui::SetTooltip("When enabled, uses embedded Snow Crows builds and name tables. No GW2 API calls are made.");
+        ImGui::SetTooltip("When enabled, uses embedded reference builds and name tables. No GW2 API calls are made.");
 
     {
         g_OfflineMode = s_offline_mode;
@@ -407,26 +446,42 @@ static void RenderBuildDropdown()
         }
 
         if (!user_builds.empty()) {
-            ImGui::TextDisabled("Custom Builds");
-            for (int i = 0; i < (int)user_builds.size(); i++) {
-                const auto& ub = user_builds[i];
-                bool sel = (s_user_build_idx == i);
-                std::string lbl = ub.name + "##ub_" + std::to_string(i);
-                if (ImGui::Selectable(lbl.c_str(), sel)) {
-                    s_user_build_idx = i;
-                    s_selected_idx   = -1;
-                    {
-                        std::lock_guard<std::mutex> lk(g_SCBuildMutex);
-                        g_SCBuild       = ub;
-                        g_SCBuildLoaded = true;
+            auto filtered_user = SnowCrows::FilterBuilds(user_builds, fprof, GW2::EliteSpec::None, ftype);
+            if (s_search_buf[0]) {
+                std::string lower_search = s_search_buf;
+                for (char& c : lower_search) c = (char)tolower((unsigned char)c);
+                std::vector<const GW2::SCBuild*> searched;
+                for (const auto* b : filtered_user) {
+                    std::string lower_name = b->name;
+                    for (char& c : lower_name) c = (char)tolower((unsigned char)c);
+                    if (lower_name.find(lower_search) != std::string::npos)
+                        searched.push_back(b);
+                }
+                filtered_user = std::move(searched);
+            }
+            if (!filtered_user.empty()) {
+                ImGui::TextDisabled("Custom Builds");
+                for (const auto* b : filtered_user) {
+                    int i = (int)(b - user_builds.data());
+                    bool sel = (s_user_build_idx == i);
+                    std::string lbl = b->name + "##ub_" + std::to_string(i);
+                    if (ImGui::Selectable(lbl.c_str(), sel)) {
+                        s_user_build_idx = i;
+                        s_selected_idx   = -1;
+                        {
+                            std::lock_guard<std::mutex> lk(g_SCBuildMutex);
+                            g_SCBuild       = *b;
+                            g_SCBuildLoaded = true;
+                        }
+                        GW2API::GenerateBuildChatCodeAsync(*b);
                     }
                 }
+                ImGui::Separator();
             }
-            ImGui::Separator();
         }
 
         if (!normal_builds.empty()) {
-            ImGui::TextDisabled("SnowCrows Builds");
+            ImGui::TextDisabled("Reference Builds");
             for (const auto* b : normal_builds) {
                 bool sel = (s_user_build_idx < 0 &&
                             b->id == (s_selected_idx >= 0 ? s_sc_builds[s_selected_idx].id : ""));
@@ -528,6 +583,7 @@ void Render()
     CoachWindow::Render();
     BuildEditor::Render();
     InstructionsWindow::Render();
+    RenderSetupScreen();
 
     if (!s_visible) return;
 
@@ -570,11 +626,11 @@ void Render()
     if (ImGui::IsItemHovered())
         ImGui::SetTooltip("Open Hardstruck — competitive GW2 PvE/raid builds and guides");
     ImGui::SameLine();
-    if (ImGui::Button("MetaBattle")) {
-        ShellExecuteA(nullptr, "open", "https://metabattle.com/wiki/MetaBattle_Wiki", nullptr, nullptr, SW_SHOWNORMAL);
+    if (ImGui::Button("GuildJen")) {
+        ShellExecuteA(nullptr, "open", "https://guildjen.com/", nullptr, nullptr, SW_SHOWNORMAL);
     }
     if (ImGui::IsItemHovered())
-        ImGui::SetTooltip("Open MetaBattle — the most reliable source for WvW and PvP builds");
+        ImGui::SetTooltip("Open GuildJen — GW2 builds, guides, and tier lists for all game modes");
     ImGui::SameLine();
     if (ImGui::Button("Instructions")) InstructionsWindow::Toggle();
     ImGui::SameLine();
@@ -717,10 +773,10 @@ void Render()
             ImGui::SetCursorPosY(y);
             ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(0.6f, 0.75f, 1.0f, 0.8f));
             ImGui::TextWrapped(
-                "Snow Crows, Hardstruck, and MetaBattle are three major GW2 build resources. "
-                "Snow Crows and Hardstruck focus on PvE and raid builds, while MetaBattle is the most reliable source for WvW and PvP. "
+                "Snow Crows, Hardstruck, and GuildJen are excellent build resources for all GW2 game modes. "
+                "Snow Crows and Hardstruck focus on PvE and raid builds, while GuildJen covers WvW, PvP, and open world. "
                 "Start with accessibility and beginner PvE builds on Snow Crows/Hardstruck, "
-                "then use MetaBattle for competitive play and WvW role guides as you expand your skills.");
+                "then explore GuildJen for competitive play, WvW, and solo open-world guides.");
             ImGui::PopStyleColor();
         }
     }

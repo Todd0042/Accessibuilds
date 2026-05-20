@@ -108,7 +108,7 @@ static void RenderSkillBar(const GW2::SkillBar& player,
         ImGui::BeginGroup();
         ImGui::TextDisabled("Heal");
         IconRenderer::SkillIcon(player.heal, ICON_SZ_SKILL, ok);
-        if (!ok) { ImGui::TextDisabled("-> SC:"); IconRenderer::SkillIconRef(ref.heal, ICON_SZ_SKILL); }
+        if (!ok) { ImGui::TextDisabled("-> Ref:"); IconRenderer::SkillIconRef(ref.heal, ICON_SZ_SKILL); }
         ImGui::EndGroup();
     }
 
@@ -123,7 +123,7 @@ static void RenderSkillBar(const GW2::SkillBar& player,
 
     ImGui::SameLine(0, 16);
     ImGui::BeginGroup();
-    ImGui::TextDisabled("SC:");
+    ImGui::TextDisabled("Ref:");
     for (int j = 0; j < 3; j++) {
         if (j > 0) ImGui::SameLine(0, 4);
         IconRenderer::SkillIconRef(ref.utilities[j], S(32.f));
@@ -136,7 +136,7 @@ static void RenderSkillBar(const GW2::SkillBar& player,
         ImGui::BeginGroup();
         ImGui::TextDisabled("Elite");
         IconRenderer::SkillIcon(player.elite, ICON_SZ_SKILL, ok);
-        if (!ok) { ImGui::TextDisabled("-> SC:"); IconRenderer::SkillIconRef(ref.elite, ICON_SZ_SKILL); }
+        if (!ok) { ImGui::TextDisabled("-> Ref:"); IconRenderer::SkillIconRef(ref.elite, ICON_SZ_SKILL); }
         ImGui::EndGroup();
     }
 }
@@ -582,7 +582,7 @@ static void GridTraitIcon(uint32_t id, float sz, int status)
     switch (status) {
         case 1: col = IM_COL32(60, 220, 60, 230); break;  /* green — correct */
         case 2: col = IM_COL32(220, 60, 60, 230); break;   /* red — wrong */
-        case 3: col = IM_COL32(80, 140, 220, 230); break;  /* blue — SC target */
+        case 3: col = IM_COL32(80, 140, 220, 230); break;  /* blue — Ref target */
         default: col = IM_COL32(80, 80, 80, 150); break;   /* dimmed */
     }
 
@@ -634,7 +634,7 @@ static void RenderTraitGrid(const uint32_t* minor_traits, const uint32_t* major_
                 int st = 0;
                 if (tid == pt && pt == rt) st = 1;              /* selected + correct */
                 else if (tid == pt) st = 2;                      /* selected + wrong */
-                else if (tid == rt && pt != rt) st = 3;          /* not selected but is SC target */
+                else if (tid == rt && pt != rt) st = 3;          /* not selected but is Ref target */
                 /* else st = 0 (unselected, dimmed) */
 
                 GridTraitIcon(tid, col_sz, st);
@@ -760,9 +760,9 @@ static void RenderTraitGridLayout(const GW2::PlayerBuild& player,
                                     *wrong_pline, s_empty);
                 }
 
-                /* Col 2: reference traits (SC targets in blue) */
+                /* Col 2: reference traits (Ref targets in blue) */
                 ImGui::TableSetColumnIndex(2);
-                ImGui::TextColored(COL_REF, "SC:");
+                ImGui::TextColored(COL_REF, "Ref:");
                 ImGui::SameLine();
                 ImGui::TextColored(COL_REF, "%s", rspec->name.c_str());
                 RenderTraitGrid(rspec->minor_traits, rspec->major_traits, rline, rline);
@@ -824,9 +824,9 @@ static void RenderTraitGridLayout(const GW2::PlayerBuild& player,
     sk_make(player.skills.elite, skill_sz, e_ok, 0);
     ImGui::EndGroup();
 
-    /* SC reference skills row */
+    /* Reference skills row */
     ImGui::Spacing();
-    ImGui::TextDisabled("SC:");
+    ImGui::TextDisabled("Ref:");
     ImGui::SameLine(0, S(6));
     sk_make(sc.skills.heal, S(28), true, 0);
     for (int j = 0; j < 3; j++) {
@@ -912,7 +912,7 @@ void Render()
     }
 
     /* Header */
-    ImGui::TextColored(COL_REF, "SC Reference: %s", sc.name.c_str());
+    ImGui::TextColored(COL_REF, "Ref: %s", sc.name.c_str());
     if (sc.benchmark_dps > 0) {
         ImGui::SameLine(S(300));
         ImGui::TextColored(COL_NEUTRAL, "Benchmark: %.0f DPS", sc.benchmark_dps);

@@ -23,6 +23,7 @@ struct Settings {
     int      tab_width[3]      = {}; /* Per-tab main window width (0 = use default) */
     int      tab_height[3]     = {}; /* Per-tab main window height (0 = use default) */
     bool     offline_mode      = false; /* Use embedded reference builds, no API calls */
+    bool     setup_complete    = false; /* First-run setup wizard dismissed */
 };
 bool SaveSettings(const Settings& s);
 bool LoadSettings(Settings& out);

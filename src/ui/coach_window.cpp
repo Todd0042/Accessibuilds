@@ -248,7 +248,7 @@ static void RenderDpsPanel()
 
         ImGui::SameLine(col_w);
         ImGui::BeginGroup();
-        ImGui::TextColored(COL_SC, "SC Benchmark");
+        ImGui::TextColored(COL_SC, "Ref Benchmark");
         if (sc_dps > 0) {
             ImGui::TextColored(COL_SC, "%s", Fmt(sc_dps).c_str());
             double pct = player_dps / sc_dps * 100.0;
@@ -264,10 +264,10 @@ static void RenderDpsPanel()
             double gap = sc_dps - player_dps;
             if (gap > 0)
                 ImGui::TextColored(ImVec4(1,0.8f,0,1),
-                                   "DPS gap vs SC: -%s", Fmt(gap).c_str());
+                                   "DPS gap vs Ref: -%s", Fmt(gap).c_str());
             else
                 ImGui::TextColored(ImVec4(0.4f,1,0.4f,1),
-                                   "DPS above SC benchmark! (+%s)", Fmt(-gap).c_str());
+                                   "DPS above benchmark! (+%s)", Fmt(-gap).c_str());
         }
 
         std::vector<float> history = ArcDPS::GetDpsHistory();
@@ -354,7 +354,7 @@ static void StartFetch(const std::string& url, const std::string& build_name,
                 SnowCrows::SaveRotationCache(url, rot, cache_dir);
                 Log(LOGL_INFO, "SC rotation: fetched and cached");
             } else {
-                s_error_msg = "Fetch failed or no sections found. Check network / SC page may have changed.";
+                s_error_msg = "Fetch failed or no sections found. Check network / page may have changed.";
                 s_state = FetchState::Error;
                 return;
             }
@@ -565,7 +565,7 @@ void Render()
 
     if (cur_url.empty()) {
         ImGui::TextColored(ImVec4(1.0f, 0.8f, 0.0f, 1.0f),
-            "No Snow Crows source URL is available for this build.");
+            "No source URL is available for this build.");
         ImGui::TextDisabled("Build: %s", cur_name.c_str());
         ImGui::End();
         return;
@@ -585,7 +585,7 @@ void Render()
 
     switch (state) {
         case FetchState::Idle:
-            ImGui::TextDisabled("Click Fetch to load the rotation from Snow Crows.");
+            ImGui::TextDisabled("Click Fetch to load the rotation.");
             break;
 
         case FetchState::Fetching:
@@ -601,7 +601,7 @@ void Render()
             { std::lock_guard<std::mutex> lk(s_rotation_mutex); rot = s_rotation; }
             if (rot.sections.empty()) {
                 ImGui::TextColored(ImVec4(1.0f, 0.8f, 0.0f, 1.0f),
-                    "No sections parsed — SC page layout may have changed.");
+                    "No sections parsed — page layout may have changed.");
                 break;
             }
 
