@@ -80,6 +80,7 @@ struct ChatBuildToast {
 inline ChatBuildToast g_ChatBuildToast;
 inline std::mutex g_ChatBuildToastMutex;
 inline bool g_ChatBuildDetection = true;
+inline bool g_ChatBuildDetectOwn = false;
 
 /* Offline mode — use embedded reference builds and name tables instead of API */
 inline std::atomic<bool> g_OfflineMode{false};
