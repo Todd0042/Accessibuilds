@@ -408,7 +408,8 @@ static void ImportFromPlayer()
             s_import_pb.elite_spec = g_Character.elite_spec;
     }
     ImportLog("  prof=" + std::to_string((uint32_t)s_import_pb.profession)
-              + " items=" + std::to_string(s_import_pb.gear.items.size()));
+              + " items=" + std::to_string(s_import_pb.gear.items.size())
+              + " relic_id=" + std::to_string(s_import_pb.gear.relic_id));
 
     /* Fill form */
     ClearForm();
@@ -490,9 +491,13 @@ static void ImportFromPlayer()
     }
 
     if (s_import_pb.gear.relic_id) {
-        const std::string& rn = GW2Names::GetItem(s_import_pb.gear.relic_id);
-        if (!rn.empty() && rn != "...") strncpy(s_relic_name, rn.c_str(), sizeof(s_relic_name) - 1);
-        else snprintf(s_relic_name, sizeof(s_relic_name), "%u", s_import_pb.gear.relic_id);
+        if (const char* db = FindRelicName(s_import_pb.gear.relic_id)) {
+            strncpy(s_relic_name, db, sizeof(s_relic_name) - 1);
+        } else {
+            const std::string& rn = GW2Names::GetItem(s_import_pb.gear.relic_id);
+            if (!rn.empty() && rn != "...") strncpy(s_relic_name, rn.c_str(), sizeof(s_relic_name) - 1);
+            else snprintf(s_relic_name, sizeof(s_relic_name), "%u", s_import_pb.gear.relic_id);
+        }
     }
     if (s_import_pb.gear.food_id) {
         const std::string& fn = GW2Names::GetItem(s_import_pb.gear.food_id);

@@ -1,8 +1,10 @@
 #include "addon.h"
 #include "shared.h"
 #include "ui/main_window.h"
+#include "ui/coach_window.h"
 #include "ui/icon_cache.h"
 #include "arcdps/arcdps.h"
+#include "api/http_client.h"
 #include "api/gw2names.h"
 #include "api/item_lookup.h"
 #include "build/cache.h"
@@ -82,6 +84,8 @@ __declspec(dllexport) void AddonLoad(AddonAPI_t* aApi)
 {
     APIDefs = aApi;
 
+    Http::Init();
+
     const char* dir = APIDefs->Paths_GetAddonDirectory(ADDON_NAME);
     if (dir) {
         g_AddonDir = dir;
@@ -118,8 +122,11 @@ __declspec(dllexport) void AddonUnload()
     APIDefs->GUI_Deregister(OnRender);
     APIDefs->GUI_Deregister(OnOptions);
 
+    MainWindow::Shutdown();
+    CoachWindow::Shutdown();
     GW2Names::Shutdown();
     ArcDPS::Shutdown();
+    Http::Shutdown();
 
     APIDefs->Events_Unsubscribe(EV_MUMBLE_IDENTITY_UPDATED, OnMumbleIdentityUpdated);
     /* ArcDPS combat events are unsubscribed inside ArcDPS::Shutdown() */

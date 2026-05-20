@@ -19,4 +19,7 @@ bool IsVisible();
 /* Trigger a background refresh of SC builds + Wingman top log */
 void RefreshData();
 
+/* Join all background threads — call from AddonUnload before Http::Shutdown() */
+void Shutdown();
+
 } /* namespace MainWindow */

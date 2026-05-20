@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s -H \"Authorization: Bearer 5EAADB22-5FE1-A14B-9349-8B5B2178DC9A3BAF8BC9-303E-466C-81CB-B06C4BA84AD3\" \"https://api.guildwars2.com/v2/characters/I%20Todd%20I?v=2024-04-01T00:00:00.000Z\")",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\('TOP-LEVEL KEYS:', list\\(d.keys\\(\\)\\)\\); eq=d.get\\('equipment',[]\\); print\\('Top-level equipment slots:', [i.get\\('slot'\\) for i in eq] if isinstance\\(eq,list\\) else 'NOT A LIST'\\); tabs=d.get\\('equipment_tabs',[]\\); print\\('Num equipment_tabs:', len\\(tabs\\)\\); [print\\(f'  tab {t.get\\(\\\\\"tab\\\\\"\\)} is_active={t.get\\(\\\\\"is_active\\\\\"\\)} slots:', [i.get\\(\\\\\"slot\\\\\"\\) for i in t.get\\(\\\\\"equipment\\\\\",[]\\)]\\) for t in tabs]\")",
+      "Bash(python3 -c ' *)",
+      "Bash(curl -s \"https://api.guildwars2.com/v2/items/104709\")",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\('name:', d.get\\('name'\\)\\); print\\('type:', d.get\\('type'\\)\\); print\\('details:', d.get\\('details'\\)\\)\")",
+      "Bash(curl -s -H \"Authorization: Bearer 5EAADB22-5FE1-A14B-9349-8B5B2178DC9A3BAF8BC9-303E-466C-81CB-B06C4BA84AD3\" \"https://api.guildwars2.com/v2/items/104709\")"
+    ]
+  }
+}

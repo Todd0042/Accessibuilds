@@ -1,7 +1,7 @@
 {
 	"InstallScripts" : 
 	[
-		"/home/todd/gw2-build-coaches/gw2-build-coach/build/cmake_install.cmake"
+		"C:/Users/s-r-b/OneDrive/Documents/GitHub/gw2-build-coach/build/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

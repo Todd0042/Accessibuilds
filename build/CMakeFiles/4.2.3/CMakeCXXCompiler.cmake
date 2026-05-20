@@ -1,4 +1,4 @@
-set(CMAKE_CXX_COMPILER "/usr/bin/x86_64-w64-mingw32-g++")
+set(CMAKE_CXX_COMPILER "C:/msys64/mingw64/bin/c++.exe")
 set(CMAKE_CXX_COMPILER_ARG1 "")
 set(CMAKE_CXX_COMPILER_ID "GNU")
 set(CMAKE_CXX_COMPILER_VERSION "15.2.0")
@@ -25,17 +25,16 @@ set(CMAKE_CXX_COMPILER_ARCHITECTURE_ID "x86_64")
 
 
 
-
-set(CMAKE_AR "/usr/bin/x86_64-w64-mingw32-ar")
-set(CMAKE_CXX_COMPILER_AR "/usr/bin/x86_64-w64-mingw32-gcc-ar")
-set(CMAKE_RANLIB "/usr/bin/x86_64-w64-mingw32-ranlib")
-set(CMAKE_CXX_COMPILER_RANLIB "/usr/bin/x86_64-w64-mingw32-gcc-ranlib")
-set(CMAKE_LINKER "/usr/bin/x86_64-w64-mingw32-ld")
+set(CMAKE_AR "C:/msys64/mingw64/bin/ar.exe")
+set(CMAKE_CXX_COMPILER_AR "C:/msys64/mingw64/bin/gcc-ar.exe")
+set(CMAKE_RANLIB "C:/msys64/mingw64/bin/ranlib.exe")
+set(CMAKE_CXX_COMPILER_RANLIB "C:/msys64/mingw64/bin/gcc-ranlib.exe")
+set(CMAKE_LINKER "C:/msys64/mingw64/bin/ld.exe")
 set(CMAKE_LINKER_LINK "")
 set(CMAKE_LINKER_LLD "")
-set(CMAKE_CXX_COMPILER_LINKER "/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/ld")
+set(CMAKE_CXX_COMPILER_LINKER "C:/msys64/mingw64/x86_64-w64-mingw32/bin/ld.exe")
 set(CMAKE_CXX_COMPILER_LINKER_ID "GNU")
-set(CMAKE_CXX_COMPILER_LINKER_VERSION 2.46.0.20260210)
+set(CMAKE_CXX_COMPILER_LINKER_VERSION 2.46)
 set(CMAKE_CXX_COMPILER_LINKER_FRONTEND_VARIANT GNU)
 set(CMAKE_MT "")
 set(CMAKE_TAPI "CMAKE_TAPI-NOTFOUND")
@@ -91,12 +90,19 @@ endif()
 
 
 
-set(CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES "/usr/x86_64-w64-mingw32/include/c++/15.2.0;/usr/x86_64-w64-mingw32/include/c++/15.2.0/x86_64-w64-mingw32;/usr/x86_64-w64-mingw32/include/c++/15.2.0/backward;/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/include;/usr/lib/gcc/x86_64-w64-mingw32/15.2.0/include-fixed;/usr/x86_64-w64-mingw32/include")
+set(CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES "C:/msys64/mingw64/include/c++/15.2.0;C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32;C:/msys64/mingw64/include/c++/15.2.0/backward;C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include;C:/msys64/mingw64/include;C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include-fixed")
 set(CMAKE_CXX_IMPLICIT_LINK_LIBRARIES "stdc++;mingw32;gcc_s;gcc;mingwex;kernel32;pthread;advapi32;shell32;user32;kernel32;mingw32;gcc_s;gcc;mingwex;kernel32")
-set(CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES "/usr/lib/gcc/x86_64-w64-mingw32/15.2.0;/usr/x86_64-w64-mingw32/lib")
+set(CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES "C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0;C:/msys64/mingw64/lib/gcc;C:/msys64/mingw64/x86_64-w64-mingw32/lib;C:/msys64/mingw64/lib")
 set(CMAKE_CXX_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")
 set(CMAKE_CXX_COMPILER_CLANG_RESOURCE_DIR "")
 
 set(CMAKE_CXX_COMPILER_IMPORT_STD "")
-set(CMAKE_CXX_COMPILER_IMPORT_STD_ERROR_MESSAGE  "Unsupported generator: Unix Makefiles")
-set(CMAKE_CXX_STDLIB_MODULES_JSON "")
+### Imported target for C++23 standard library
+set(CMAKE_CXX23_COMPILER_IMPORT_STD_NOT_FOUND_MESSAGE "Experimental `import std` support not enabled when detecting toolchain; it must be set before `CXX` is enabled (usually a `project()` call)")
+
+
+### Imported target for C++26 standard library
+set(CMAKE_CXX26_COMPILER_IMPORT_STD_NOT_FOUND_MESSAGE "Experimental `import std` support not enabled when detecting toolchain; it must be set before `CXX` is enabled (usually a `project()` call)")
+
+
+

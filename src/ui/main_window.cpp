@@ -28,12 +28,14 @@ static std::vector<GW2::SCBuild>  s_sc_builds;
 static int                        s_selected_idx  = -1;
 static int                        s_user_build_idx = -1; /* index into BuildEditor::GetBuilds() */
 static std::atomic<bool>          s_refreshing    = false;
+static std::thread                s_refresh_thread;
 static std::string                s_status;
 
 /* Character picker (used when Mumble hasn't detected a live character) */
 static std::vector<std::string>   s_char_list;
 static std::atomic<bool>          s_char_list_loaded{false};
 static std::atomic<bool>          s_char_list_fetching{false};
+static std::thread                s_char_list_thread;
 static char                       s_manual_char[20] = {};
 
 /* Filters */
@@ -115,13 +117,14 @@ static void FetchCharacterListAsync()
         key = g_APIKey;
     }
     if (key.empty()) { s_char_list_fetching = false; return; }
-    std::thread([key]() {
+    if (s_char_list_thread.joinable()) s_char_list_thread.join();
+    s_char_list_thread = std::thread([key]() {
         std::vector<std::string> names;
         if (GW2API::FetchCharacterList(key, names))
             s_char_list = std::move(names);
         s_char_list_loaded  = true;
         s_char_list_fetching = false;
-    }).detach();
+    });
 }
 
 static void DoRefresh()
@@ -224,7 +227,14 @@ static void DoRefresh()
 void RefreshData()
 {
     if (s_refreshing.exchange(true)) return;
-    std::thread(DoRefresh).detach();
+    if (s_refresh_thread.joinable()) s_refresh_thread.join();
+    s_refresh_thread = std::thread(DoRefresh);
+}
+
+void Shutdown()
+{
+    if (s_refresh_thread.joinable())    s_refresh_thread.join();
+    if (s_char_list_thread.joinable())  s_char_list_thread.join();
 }
 
 void Toggle() { s_visible = !s_visible; }
@@ -477,17 +487,16 @@ void Render()
         }
     }
 
-    /* Clear ImGui keyboard focus when the game changes state (map load, combat
-     * enter/exit) so the search box doesn't hijack game keyboard input. */
+    /* Track game state changes (map/combat) — was previously calling
+     * ImGui::SetWindowFocus(nullptr) here, but that call goes through
+     * Nexus's d3d11 Present hook and crashes during scene transitions
+     * because GW2's D3D state at [rdi+0x1C90] is null mid-init. */
     {
         uint32_t cur_map = 0;
         { std::lock_guard<std::mutex> lk(g_CharacterMutex); cur_map = g_Character.map_id; }
         bool cur_combat = ArcDPS::IsInCombat();
-        if (cur_map != s_last_map_id || cur_combat != s_last_in_combat) {
-            ImGui::SetWindowFocus(nullptr);
-            s_last_map_id    = cur_map;
-            s_last_in_combat = cur_combat;
-        }
+        s_last_map_id    = cur_map;
+        s_last_in_combat = cur_combat;
     }
 
     /* Popout windows are independent — render even when the main window is closed */

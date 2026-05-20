@@ -1,0 +1,27 @@
+# ninja log v7
+24	933	7998368670827347	CMakeFiles/BuildCoach.dir/src/build/types.cpp.obj	e6768c394e32381f
+133	2201	7998368671905465	CMakeFiles/BuildCoach.dir/src/ui/debug_window.cpp.obj	11129d74d854ccc5
+240	8131	7998368672980286	CMakeFiles/BuildCoach.dir/external/imgui/imgui_tables.cpp.obj	d920fdab63fd6537
+19	8489	7998368670766526	CMakeFiles/BuildCoach.dir/src/addon.cpp.obj	d239df673722b304
+29	8592	7998368670867372	CMakeFiles/BuildCoach.dir/src/api/http_client.cpp.obj	5c61e9e8cf67a1d8
+117	8747	7998368671748069	CMakeFiles/BuildCoach.dir/src/ui/coaching_panel.cpp.obj	56dfbb36b09596a1
+110	8749	7998368671683153	CMakeFiles/BuildCoach.dir/src/ui/dps_panel.cpp.obj	8e4a77385cb5d10d
+69	8979	7998368671268289	CMakeFiles/BuildCoach.dir/src/build/comparator.cpp.obj	7bfc68e2e9cb0ffd
+95	9548	7998368671529054	CMakeFiles/BuildCoach.dir/src/ui/build_panel.cpp.obj	f30d9df19d89b41
+139	9555	7998368672004554	CMakeFiles/BuildCoach.dir/src/ui/icon_cache.cpp.obj	14512811d9e0fa0c
+125	9942	7998368671831742	CMakeFiles/BuildCoach.dir/src/ui/coach_window.cpp.obj	4ea64df13dcd2aac
+83	11325	7998368671413616	CMakeFiles/BuildCoach.dir/src/arcdps/arcdps.cpp.obj	7209b751affa48d
+214	11446	7998368672860284	CMakeFiles/BuildCoach.dir/external/imgui/imgui_draw.cpp.obj	fa2e399d5b8e0a15
+88	12097	7998368671463621	CMakeFiles/BuildCoach.dir/src/ui/main_window.cpp.obj	6e3bc327af2a2a42
+101	12971	7998368671598470	CMakeFiles/BuildCoach.dir/src/ui/gear_panel.cpp.obj	2dedd3c39ca6bd6f
+152	13564	7998368672104521	CMakeFiles/BuildCoach.dir/src/ui/build_editor.cpp.obj	22cd6e37f802ba92
+234	14291	7998368672930294	CMakeFiles/BuildCoach.dir/external/imgui/imgui_widgets.cpp.obj	8bf1fffb7b446193
+52	15134	7998368671102556	CMakeFiles/BuildCoach.dir/src/api/wingman.cpp.obj	d3bccc8d4c8fbfff
+207	16234	7998368672655055	CMakeFiles/BuildCoach.dir/external/imgui/imgui.cpp.obj	3af9d23e2a663d30
+60	17303	7998368671188286	CMakeFiles/BuildCoach.dir/src/api/item_lookup.cpp.obj	679394ff0fc0d388
+41	17427	7998368670997008	CMakeFiles/BuildCoach.dir/src/api/gw2names.cpp.obj	96ec2ae77d4c64ee
+78	18399	7998368671368524	CMakeFiles/BuildCoach.dir/src/build/cache.cpp.obj	eaa07a8ebf3b65eb
+34	18412	7998368670930700	CMakeFiles/BuildCoach.dir/src/api/gw2api.cpp.obj	bab17f8063b09126
+47	18816	7998368671048235	CMakeFiles/BuildCoach.dir/src/api/snowcrows.cpp.obj	76a6b2eea233859d
+18817	19140	7998368861802064	BuildCoach.dll	2c2694f372720e12
+18817	19140	7998368861802064	libBuildCoach.dll.a	2c2694f372720e12

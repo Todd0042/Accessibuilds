@@ -434,7 +434,7 @@ bool FetchFullPlayerBuild(const std::string& api_key,
         }
 
         /* Relic is character-level, not tab-specific.
-         * Primary: top-level equipment[] in the versioned schema response. */
+         * Check 1: top-level equipment[] in the versioned schema response. */
         if (j.contains("equipment") && j["equipment"].is_array()) {
             for (auto& item : j["equipment"]) {
                 if (item.value("slot", "") == "Relic") {
@@ -444,7 +444,7 @@ bool FetchFullPlayerBuild(const std::string& api_key,
             }
         }
 
-        /* Fallback: scan every equipment tab — some API responses include the Relic
+        /* Check 2: scan every equipment tab — some API responses put the Relic
          * inside tab equipment rather than at the top level. */
         if (!out_build.gear.relic_id && j.contains("equipment_tabs")
                 && j["equipment_tabs"].is_array()) {
@@ -458,6 +458,41 @@ bool FetchFullPlayerBuild(const std::string& api_key,
                 }
             }
             relic_found:;
+        }
+
+        /* Check 3: dedicated /equipment endpoint with schema version — the only
+         * reliable source for the Relic slot when the character endpoint omits it. */
+        if (!out_build.gear.relic_id) {
+            std::string sup_ep = "/v2/characters/" + enc +
+                                 "/equipment?v=2024-04-01T00:00:00.000Z";
+            auto sup = Http::GetWithBearer(HOST, BuildPath(sup_ep), api_key);
+            if (sup.ok()) {
+                try {
+                    auto sj = json::parse(sup.body);
+                    const json* eq = nullptr;
+                    if (sj.is_object() && sj.contains("equipment") && sj["equipment"].is_array())
+                        eq = &sj["equipment"];
+                    else if (sj.is_array())
+                        eq = &sj;
+                    if (eq) {
+                        for (auto& item : *eq) {
+                            if (item.value("slot", "") == "Relic") {
+                                out_build.gear.relic_id = item.value("id", 0u);
+                                if (out_build.gear.relic_id)
+                                    Log(LOGL_DEBUG, "Relic found via supplemental /equipment endpoint");
+                                break;
+                            }
+                        }
+                    }
+                } catch (...) {}
+            }
+        }
+
+        {
+            char rbuf[64];
+            snprintf(rbuf, sizeof(rbuf), "GW2API: relic_id=%u for %s",
+                     out_build.gear.relic_id, character_name.c_str());
+            Log(LOGL_DEBUG, rbuf);
         }
 
         out_build.character_name = character_name;

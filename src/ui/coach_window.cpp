@@ -18,6 +18,7 @@ static bool s_visible = false;
 
 enum class FetchState { Idle, Fetching, Done, Error };
 static std::atomic<FetchState>    s_state{FetchState::Idle};
+static std::thread                s_fetch_thread;
 static SnowCrows::ParsedRotation  s_rotation;
 static std::mutex                 s_rotation_mutex;
 static std::string                s_error_msg;
@@ -35,7 +36,8 @@ static void StartFetch(const std::string& url, const std::string& build_name,
     s_fetched_url  = url;
     s_fetched_name = build_name;
     s_section_open.clear();
-    std::thread([url, force_refresh]() {
+    if (s_fetch_thread.joinable()) s_fetch_thread.join();
+    s_fetch_thread = std::thread([url, force_refresh]() {
         std::string cache_dir = g_AddonDir + "sc_cache\\";
         SnowCrows::ParsedRotation rot;
 
@@ -63,7 +65,7 @@ static void StartFetch(const std::string& url, const std::string& build_name,
             s_rotation = std::move(rot);
         }
         s_state = FetchState::Done;
-    }).detach();
+    });
 }
 
 /* Returns the source_url and display name from the current g_SCBuild */
@@ -86,6 +88,11 @@ void Toggle()
 }
 
 bool IsVisible() { return s_visible; }
+
+void Shutdown()
+{
+    if (s_fetch_thread.joinable()) s_fetch_thread.join();
+}
 
 /* Draw one rotation section as a collapsible header with icon rows */
 static void RenderSection(const SnowCrows::RotationSection& sec, int idx)

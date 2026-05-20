@@ -8,6 +8,9 @@
  */
 namespace Http {
 
+void Init();
+void Shutdown();
+
 struct Response {
     int         status_code = 0;
     std::string body;

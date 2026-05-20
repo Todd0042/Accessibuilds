@@ -7,30 +7,50 @@
 
 namespace Http {
 
-static Response DoGet(const std::wstring& host, const std::wstring& path,
-                      const std::wstring& extra_headers)
+/* One session per User-Agent, created at AddonLoad, destroyed at AddonUnload.
+ * WinHttpOpen triggers the Windows thread pool; creating it once at startup
+ * instead of per-request prevents a spike of ~20 pool threads on login that
+ * was pushing GW2's D3D allocator to fail with ERROR_NOT_ENOUGH_MEMORY. */
+static HINTERNET s_session      = nullptr; /* BuildCoach/1.0 — GW2 API calls  */
+static HINTERNET s_session_page = nullptr; /* browser UA    — web-page fetches */
+
+void Init()
 {
-    APIRateLimit::WaitAndAcquire();   /* respect GW2 API rate limit */
-    APIRateLimit::g_InFlight++;
-    struct InFlightGuard { ~InFlightGuard() { APIRateLimit::g_InFlight--; } } _guard;
-
-    Response resp;
-
-    HINTERNET hSession = WinHttpOpen(
+    s_session = WinHttpOpen(
         L"BuildCoach/1.0",
         WINHTTP_ACCESS_TYPE_NO_PROXY,
         WINHTTP_NO_PROXY_NAME,
         WINHTTP_NO_PROXY_BYPASS, 0);
-    if (!hSession) {
-        resp.error = "WinHttpOpen failed";
-        return resp;
-    }
+
+    s_session_page = WinHttpOpen(
+        L"Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        L"AppleWebKit/537.36 (KHTML, like Gecko) "
+        L"Chrome/124.0.0.0 Safari/537.36",
+        WINHTTP_ACCESS_TYPE_NO_PROXY,
+        WINHTTP_NO_PROXY_NAME,
+        WINHTTP_NO_PROXY_BYPASS, 0);
+}
+
+void Shutdown()
+{
+    if (s_session_page) { WinHttpCloseHandle(s_session_page); s_session_page = nullptr; }
+    if (s_session)      { WinHttpCloseHandle(s_session);      s_session = nullptr; }
+}
+
+static Response DoGet(const std::wstring& host, const std::wstring& path,
+                      const std::wstring& extra_headers)
+{
+    APIRateLimit::WaitAndAcquire();
+    APIRateLimit::g_InFlight++;
+    struct InFlightGuard { ~InFlightGuard() { APIRateLimit::g_InFlight--; } } _guard;
+
+    Response resp;
+    if (!s_session) { resp.error = "Http not initialized"; return resp; }
 
     HINTERNET hConnect = WinHttpConnect(
-        hSession, host.c_str(),
+        s_session, host.c_str(),
         INTERNET_DEFAULT_HTTPS_PORT, 0);
     if (!hConnect) {
-        WinHttpCloseHandle(hSession);
         resp.error = "WinHttpConnect failed";
         return resp;
     }
@@ -42,7 +62,6 @@ static Response DoGet(const std::wstring& host, const std::wstring& path,
         WINHTTP_FLAG_SECURE);
     if (!hRequest) {
         WinHttpCloseHandle(hConnect);
-        WinHttpCloseHandle(hSession);
         resp.error = "WinHttpOpenRequest failed";
         return resp;
     }
@@ -57,7 +76,6 @@ static Response DoGet(const std::wstring& host, const std::wstring& path,
                             WINHTTP_NO_REQUEST_DATA, 0, 0, 0)) {
         WinHttpCloseHandle(hRequest);
         WinHttpCloseHandle(hConnect);
-        WinHttpCloseHandle(hSession);
         resp.error = "WinHttpSendRequest failed";
         return resp;
     }
@@ -65,7 +83,6 @@ static Response DoGet(const std::wstring& host, const std::wstring& path,
     if (!WinHttpReceiveResponse(hRequest, nullptr)) {
         WinHttpCloseHandle(hRequest);
         WinHttpCloseHandle(hConnect);
-        WinHttpCloseHandle(hSession);
         resp.error = "WinHttpReceiveResponse failed";
         return resp;
     }
@@ -95,7 +112,6 @@ static Response DoGet(const std::wstring& host, const std::wstring& path,
 
     WinHttpCloseHandle(hRequest);
     WinHttpCloseHandle(hConnect);
-    WinHttpCloseHandle(hSession);
     return resp;
 }
 
@@ -115,26 +131,12 @@ Response GetWithBearer(const std::wstring& host, const std::wstring& path,
 
 Response GetPage(const std::wstring& host, const std::wstring& path)
 {
-    /* Separate WinHTTP session with a real browser User-Agent so Cloudflare
-     * and similar CDN guards don't challenge or block the request. */
     Response resp;
+    if (!s_session_page) { resp.error = "Http not initialized"; return resp; }
 
-    HINTERNET hSession = WinHttpOpen(
-        L"Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-        L"AppleWebKit/537.36 (KHTML, like Gecko) "
-        L"Chrome/124.0.0.0 Safari/537.36",
-        WINHTTP_ACCESS_TYPE_NO_PROXY,
-        WINHTTP_NO_PROXY_NAME,
-        WINHTTP_NO_PROXY_BYPASS, 0);
-    if (!hSession) { resp.error = "WinHttpOpen failed"; return resp; }
-
-    HINTERNET hConnect = WinHttpConnect(hSession, host.c_str(),
+    HINTERNET hConnect = WinHttpConnect(s_session_page, host.c_str(),
                                         INTERNET_DEFAULT_HTTPS_PORT, 0);
-    if (!hConnect) {
-        WinHttpCloseHandle(hSession);
-        resp.error = "WinHttpConnect failed";
-        return resp;
-    }
+    if (!hConnect) { resp.error = "WinHttpConnect failed"; return resp; }
 
     HINTERNET hRequest = WinHttpOpenRequest(
         hConnect, L"GET", path.c_str(),
@@ -143,7 +145,6 @@ Response GetPage(const std::wstring& host, const std::wstring& path)
         WINHTTP_FLAG_SECURE);
     if (!hRequest) {
         WinHttpCloseHandle(hConnect);
-        WinHttpCloseHandle(hSession);
         resp.error = "WinHttpOpenRequest failed";
         return resp;
     }
@@ -158,7 +159,6 @@ Response GetPage(const std::wstring& host, const std::wstring& path)
         !WinHttpReceiveResponse(hRequest, nullptr)) {
         WinHttpCloseHandle(hRequest);
         WinHttpCloseHandle(hConnect);
-        WinHttpCloseHandle(hSession);
         resp.error = "WinHttpSendRequest/ReceiveResponse failed";
         return resp;
     }
@@ -184,7 +184,6 @@ Response GetPage(const std::wstring& host, const std::wstring& path)
 
     WinHttpCloseHandle(hRequest);
     WinHttpCloseHandle(hConnect);
-    WinHttpCloseHandle(hSession);
     return resp;
 }
 

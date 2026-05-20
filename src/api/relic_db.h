@@ -9,7 +9,8 @@
 struct RelicEntry { const char* name; uint32_t id; };
 
 static const RelicEntry RELIC_DB[] = {
-    { "Legendary Relic",                    101582 },
+    { "Legendary Relic",                    101582 }, /* account-bound pickup form */
+    { "Legendary Relic",                    104709 }, /* character-bound equipped form */
     { "Relic of Agony",                     104849 },
     { "Relic of Akeem",                     100432 },
     { "Relic of Altruism",                  104256 },

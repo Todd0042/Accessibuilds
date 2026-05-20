@@ -104,18 +104,24 @@ static void RenderSlotRow(const GW2::GearItem* pi, const GW2::GearItem* ri,
      * GearItems carry unexpected fields (e.g. upgrade_id from a rune-style slot). */
     bool is_relic = (sl == GW2::GearSlot::Relic);
 
-    bool stat_ok    = true;
-    bool upg_ok     = true;
-    bool inf_ok     = true;
-    bool item_id_ok = true;
+    bool stat_ok              = true;
+    bool upg_ok               = true;
+    bool inf_ok               = true;
+    bool item_id_ok           = true;
+    bool player_legendary_relic = false; /* set below; used to show manual-check warning */
+
+    /* 101582 = account-bound pickup; 104709 = character-bound equipped form */
+    auto isLegendaryRelic = [](uint32_t id) {
+        return id == 101582 || id == 104709;
+    };
 
     if (pi && ri) {
         if (is_relic) {
-            constexpr uint32_t LEGENDARY_RELIC = 101582;
             if (!pi->item_id) {
                 item_id_ok = false; /* player has no relic */
-            } else if (pi->item_id == LEGENDARY_RELIC) {
-                item_id_ok = true; /* legendary relic satisfies any requirement */
+            } else if (isLegendaryRelic(pi->item_id)) {
+                player_legendary_relic = true;
+                item_id_ok = true; /* slot is filled — warn separately that effect can't be verified */
             } else if (ri->item_id && pi->item_id == ri->item_id) {
                 item_id_ok = true;
             } else {
@@ -252,12 +258,25 @@ static void RenderSlotRow(const GW2::GearItem* pi, const GW2::GearItem* ri,
             ImGui::TextColored(COL_REF, "-> %s", !rn.empty() ? rn.c_str() : "...");
         } else if (pi) {
             std::string pn = relicDisplayName(pi->item_id, "");
-            ImGui::TextColored(item_id_ok ? COL_OK : COL_ERROR, "%s",
-                !pn.empty() ? pn.c_str() : "...");
-            if (!item_id_ok && ri) {
+            /* When the player has a Legendary Relic and the reference specifies a
+             * particular relic, we can't verify which effect is active — warn instead. */
+            bool ref_is_legendary = ri && isLegendaryRelic(ri->item_id);
+            bool needs_manual     = player_legendary_relic && ri
+                                    && (ri->item_id || !ri->upgrade_name.empty())
+                                    && !ref_is_legendary;
+            if (needs_manual) {
                 std::string rn = relicDisplayName(ri->item_id, ri->upgrade_name);
+                ImGui::TextColored(COL_WARN, "%s", !pn.empty() ? pn.c_str() : "...");
                 if (!rn.empty() && rn != "...")
-                    ImGui::TextColored(COL_REF, "-> %s", rn.c_str());
+                    ImGui::TextColored(COL_WARN, "Ensure \"%s\" is active", rn.c_str());
+            } else {
+                ImGui::TextColored(item_id_ok ? COL_OK : COL_ERROR, "%s",
+                    !pn.empty() ? pn.c_str() : "...");
+                if (!item_id_ok && ri) {
+                    std::string rn = relicDisplayName(ri->item_id, ri->upgrade_name);
+                    if (!rn.empty() && rn != "...")
+                        ImGui::TextColored(COL_REF, "-> %s", rn.c_str());
+                }
             }
         }
     } else if (pi) {
