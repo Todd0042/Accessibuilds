@@ -168,6 +168,10 @@ void Render()
     if (ImGui::Button("metabattle.com")) {
         ShellExecuteA(nullptr, "open", "https://metabattle.com/", nullptr, nullptr, SW_SHOWNORMAL);
     }
+    ImGui::SameLine();
+    if (ImGui::Button("syrma.cc")) {
+        ShellExecuteA(nullptr, "open", "https://syrma.cc/", nullptr, nullptr, SW_SHOWNORMAL);
+    }
 
     ImGui::End();
 }

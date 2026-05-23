@@ -2462,6 +2462,12 @@ void Render()
     }
     if (ImGui::IsItemHovered())
         ImGui::SetTooltip("Open MetaBattle — community GW2 builds wiki for all game modes");
+    ImGui::SameLine();
+    if (ImGui::Button("Syrma")) {
+        ShellExecuteA(nullptr, "open", "https://syrma.cc/", nullptr, nullptr, SW_SHOWNORMAL);
+    }
+    if (ImGui::IsItemHovered())
+        ImGui::SetTooltip("Open syrma.cc — GW2 build guides and video content");
 
     ImGui::End();
 }
