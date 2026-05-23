@@ -990,6 +990,8 @@ def parse_build_page(meta: dict, delay: float) -> Optional[dict]:
         "profession":    meta["profession"].title(),
         "elite_spec":    elite_spec_from_lines(spec_lines),
         "build_type":    build_type_from_slug(meta["slug"]),
+        "source":        "snowcrows",
+        "game_mode":     "GroupPvE",
         "patch_version": extract_patch_version(soup),
         "benchmark_dps": extract_benchmark_dps(soup),
         "notes":         extract_notes(soup),

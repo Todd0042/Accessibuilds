@@ -98,6 +98,70 @@ PYEOF
 
     echo "Regenerating src/sc_builds_offline.h ..."
     python3 tools/embed_builds.py
+
+    echo "Regenerating src/hs_builds_embedded.h ..."
+    python3 - << 'PYEOF'
+import subprocess, re, sys, os, json, pathlib
+
+root = pathlib.Path(".")
+hs_src = root / "hs-builds" / "hs_builds_full.json"
+
+hs_version_file = root / "hs_builds_version.txt"
+if hs_version_file.exists():
+    hs_version = int(hs_version_file.read_text().strip())
+else:
+    hs_version = 1
+hs_version += 1
+hs_version_file.write_text(str(hs_version))
+
+if not hs_src.exists():
+    print("  No hs-builds/hs_builds_full.json found — writing empty header.")
+    header = [
+        "/* Auto-generated — do not edit. Regenerate with ./build.sh --regen */",
+        "#pragma once",
+        "#include <stddef.h>",
+        "",
+        "static const int hs_builds_version = %d;" % hs_version,
+        "",
+        "static const unsigned char hs_builds_json[] = {0x5b, 0x5d}; /* [] */",
+        "static const size_t hs_builds_json_len = 2;",
+    ]
+    with open("src/hs_builds_embedded.h", "w") as f:
+        f.write("\n".join(header) + "\n")
+    sys.exit(0)
+
+# Filter out PvP/Unknown builds before embedding
+with open(hs_src, encoding="utf-8") as f:
+    all_builds = json.load(f)
+
+filtered = [b for b in all_builds if b.get("game_mode", "Unknown") != "Unknown"]
+print("  Filtering: %d / %d builds (excluded %d PvP/Unknown)" %
+      (len(filtered), len(all_builds), len(all_builds) - len(filtered)))
+
+import tempfile
+with tempfile.NamedTemporaryFile(mode="w", suffix=".json", delete=False, encoding="utf-8") as tmp:
+    json.dump(filtered, tmp, separators=(",", ":"), ensure_ascii=False)
+    tmp_path = tmp.name
+
+raw = subprocess.check_output(["xxd", "-i", tmp_path]).decode()
+os.unlink(tmp_path)
+raw = re.sub(r'unsigned char \S+\[\]', 'static const unsigned char hs_builds_json[]', raw)
+raw = re.sub(r'unsigned int \S+',      'static const size_t hs_builds_json_len',       raw)
+
+header = [
+    "/* Auto-generated — do not edit. Regenerate with ./build.sh --regen */",
+    "#pragma once",
+    "#include <stddef.h>",
+    "",
+    "static const int hs_builds_version = %d;" % hs_version,
+    "",
+    raw,
+]
+with open("src/hs_builds_embedded.h", "w") as f:
+    f.write("\n".join(header) + "\n")
+print("  hs_builds_embedded.h: %d builds embedded" % len(filtered))
+print("  Done.")
+PYEOF
 fi
 
 if [[ $CLEAN -eq 1 && -d "$BUILD_DIR" ]]; then

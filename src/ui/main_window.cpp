@@ -54,10 +54,10 @@ static const char* SOURCE_VALUES[] = {
     "", "snowcrows", "hardstuck"
 };
 static const char* GAME_MODE_FILTER_NAMES[] = {
-    "All Modes", "Group PvE", "WvW Zerg", "WvW Roaming", "Open World", "Raid", "Fractal", "Strike"
+    "All Modes", "Group PvE", "WvW Zerg", "WvW Roaming", "Open World"
 };
 static const char* GAME_MODE_VALUES[] = {
-    "", "GroupPvE", "WvWZerg", "WvWRoaming", "OpenWorld", "Raid", "Fractal", "Strike"
+    "", "GroupPvE", "WvWZerg", "WvWRoaming", "OpenWorld"
 };
 
 /* Character picker (used when Mumble hasn't detected a live character) */
@@ -783,7 +783,7 @@ void Render()
         }
         ImGui::SameLine();
         if (ImGui::BeginCombo("##mode_filter", GAME_MODE_FILTER_NAMES[s_filter_game_mode], ImGuiComboFlags_HeightLarge)) {
-            for (int i = 0; i < 8; i++)
+            for (int i = 0; i < 5; i++)
                 if (ImGui::Selectable(GAME_MODE_FILTER_NAMES[i], s_filter_game_mode == i))
                     s_filter_game_mode = i;
             ImGui::EndCombo();
