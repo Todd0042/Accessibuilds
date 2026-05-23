@@ -108,7 +108,15 @@ fi
 mkdir -p "$BUILD_DIR"
 
 echo "Configuring ..."
+# Resolve the MSYS2 ninja explicitly so CMake doesn't pick up Strawberry Perl's broken copy.
+NINJA_BIN="$(command -v ninja 2>/dev/null || true)"
+NINJA_ARGS=()
+if [[ -n "$NINJA_BIN" ]]; then
+    NINJA_ARGS=(-G Ninja -DCMAKE_MAKE_PROGRAM="$NINJA_BIN")
+fi
+
 cmake -S "$SCRIPT_DIR" -B "$BUILD_DIR" \
+    "${NINJA_ARGS[@]}" \
     -DCMAKE_TOOLCHAIN_FILE="$SCRIPT_DIR/mingw-toolchain.cmake" \
     -DCMAKE_BUILD_TYPE=Release \
 
