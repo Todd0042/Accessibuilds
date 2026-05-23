@@ -1,0 +1,44 @@
+AI Notice
+
+This addon includes AI-generated content and/or AI-assisted code.
+
+AI may have been used during development for tasks such as code generation, suggestions, documentation, or content creation. While efforts are made to review and validate all AI-generated output, it may not always be fully accurate, optimal, or free of unintended behavior.
+
+Users should be aware that:
+
+AI-generated components may contain errors or inconsistencies or may be unstable,
+behavior may change as the addon evolves or is updated,
+the developer remains responsible for ensuring compliance with the game's Terms of Service.
+
+
+BuildCoach
+
+A Guild Wars 2 addon for the Nexus addon loader that compares your current build against community reference builds and highlights differences.
+
+Features
+
+    Compares your equipped gear, traits, and skills against a saved reference build
+    Highlights mismatches in stats, upgrades, relics, food, and utility items
+    Shows the correct pets (Ranger) and legends (Revenant) for each build
+    Import builds from community sites by pasting a URL directly into the Build Editor
+    Supports Snow Crows, Hardstuck, GuildJen, MetaBattle, and gw2skills.net
+    Supports all 9 professions and their elite specs
+    Export and share builds via compact AB: share codes
+
+Installation
+
+    Download BuildCoach.dll from the latest release
+    Place it in \addons\BuildCoach\BuildCoach.dll
+    Launch the game and enable the addon in the Nexus addon manager
+
+Getting Build Data
+
+No reference builds are bundled with the addon. Add them in-game using the Build Editor:
+
+    Open the Build Editor panel from the toolbar
+    Paste a build page URL from any supported site into the Import URL field
+    Click the button for that site — traits, skills, gear, and consumables are loaded automatically
+    Give the build a name and click Save
+    The build now appears in the main window dropdown for comparison
+
+Supported import sources: Snow Crows, Hardstuck, GuildJen, MetaBattle, gw2skills.net
