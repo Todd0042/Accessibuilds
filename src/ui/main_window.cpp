@@ -89,12 +89,14 @@ void Init()
     BuildCache::Settings settings;
     if (BuildCache::LoadSettings(settings)) {
         strncpy(s_api_key_buf, settings.api_key, 72);
-        s_offline_mode = settings.offline_mode;
-        s_setup_complete = settings.setup_complete;
+        s_offline_mode        = settings.offline_mode;
+        s_setup_complete      = settings.setup_complete;
+        s_chat_build_detect_own = settings.chat_detect_own;
 
         std::lock_guard<std::mutex> lock(g_APIKeyMutex);
         strncpy(g_APIKey, settings.api_key, 72);
-        g_OfflineMode = settings.offline_mode;
+        g_OfflineMode        = settings.offline_mode;
+        g_ChatBuildDetectOwn = settings.chat_detect_own;
     }
 
     /* Load cached builds */
@@ -308,7 +310,8 @@ static void RenderSettings()
         BuildCache::Settings s;
         BuildCache::LoadSettings(s);
         strncpy(s.api_key, s_api_key_buf, 72);
-        s.offline_mode = s_offline_mode;
+        s.offline_mode      = s_offline_mode;
+        s.chat_detect_own   = s_chat_build_detect_own;
         if (s_selected_idx >= 0 && s_selected_idx < (int)s_sc_builds.size())
             strncpy(s.selected_build, s_sc_builds[s_selected_idx].id.c_str(), 127);
         BuildCache::SaveSettings(s);
@@ -607,30 +610,12 @@ void Render()
         return;
     }
 
-    /* Toolbar */
+    /* Toolbar — row 1: action buttons */
     if (ImGui::Button("Settings")) s_show_settings = !s_show_settings;
     ImGui::SameLine();
     if (ImGui::Button("Build Editor")) BuildEditor::Toggle();
     ImGui::SameLine();
     if (ImGui::Button("DPS / Rotation")) CoachWindow::Toggle();
-    ImGui::SameLine();
-    if (ImGui::Button("SnowCrows")) {
-        ShellExecuteA(nullptr, "open", "https://snowcrows.com/", nullptr, nullptr, SW_SHOWNORMAL);
-    }
-    if (ImGui::IsItemHovered())
-        ImGui::SetTooltip("Open Snow Crows — community reference builds for GW2 PvE/raid");
-    ImGui::SameLine();
-    if (ImGui::Button("Hardstruck")) {
-        ShellExecuteA(nullptr, "open", "https://hardstuck.gg/", nullptr, nullptr, SW_SHOWNORMAL);
-    }
-    if (ImGui::IsItemHovered())
-        ImGui::SetTooltip("Open Hardstruck — competitive GW2 PvE/raid builds and guides");
-    ImGui::SameLine();
-    if (ImGui::Button("GuildJen")) {
-        ShellExecuteA(nullptr, "open", "https://guildjen.com/", nullptr, nullptr, SW_SHOWNORMAL);
-    }
-    if (ImGui::IsItemHovered())
-        ImGui::SetTooltip("Open GuildJen — GW2 builds, guides, and tier lists for all game modes");
     ImGui::SameLine();
     if (ImGui::Button("Instructions")) InstructionsWindow::Toggle();
     ImGui::SameLine();
@@ -652,6 +637,31 @@ void Render()
             if (ImGui::SmallButton("DBG")) DebugWindow::Toggle();
         }
     }
+
+    /* Toolbar — row 2: website links */
+    if (ImGui::Button("SnowCrows")) {
+        ShellExecuteA(nullptr, "open", "https://snowcrows.com/", nullptr, nullptr, SW_SHOWNORMAL);
+    }
+    if (ImGui::IsItemHovered())
+        ImGui::SetTooltip("Open Snow Crows — community reference builds for GW2 PvE/raid");
+    ImGui::SameLine();
+    if (ImGui::Button("Hardstuck")) {
+        ShellExecuteA(nullptr, "open", "https://hardstuck.gg/", nullptr, nullptr, SW_SHOWNORMAL);
+    }
+    if (ImGui::IsItemHovered())
+        ImGui::SetTooltip("Open Hardstuck — competitive GW2 PvE/raid builds and guides");
+    ImGui::SameLine();
+    if (ImGui::Button("GuildJen")) {
+        ShellExecuteA(nullptr, "open", "https://guildjen.com/", nullptr, nullptr, SW_SHOWNORMAL);
+    }
+    if (ImGui::IsItemHovered())
+        ImGui::SetTooltip("Open GuildJen — GW2 builds, guides, and tier lists for all game modes");
+    ImGui::SameLine();
+    if (ImGui::Button("MetaBattle")) {
+        ShellExecuteA(nullptr, "open", "https://metabattle.com/wiki/MetaBattle_Wiki", nullptr, nullptr, SW_SHOWNORMAL);
+    }
+    if (ImGui::IsItemHovered())
+        ImGui::SetTooltip("Open MetaBattle — community-voted GW2 meta builds");
 
     ImGui::Separator();
 
@@ -773,9 +783,9 @@ void Render()
             ImGui::SetCursorPosY(y);
             ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(0.6f, 0.75f, 1.0f, 0.8f));
             ImGui::TextWrapped(
-                "Snow Crows, Hardstruck, and GuildJen are excellent build resources for all GW2 game modes. "
-                "Snow Crows and Hardstruck focus on PvE and raid builds, while GuildJen covers WvW, PvP, and open world. "
-                "Start with accessibility and beginner PvE builds on Snow Crows/Hardstruck, "
+                "Snow Crows, Hardstuck, and GuildJen are excellent build resources for all GW2 game modes. "
+                "Snow Crows and Hardstuck focus on PvE and raid builds, while GuildJen covers WvW, PvP, and open world. "
+                "Start with accessibility and beginner PvE builds on Snow Crows/Hardstuck, "
                 "then explore GuildJen for competitive play, WvW, and solo open-world guides.");
             ImGui::PopStyleColor();
         }

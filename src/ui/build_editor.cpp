@@ -22,6 +22,9 @@
 #include "../api/http_client.h"
 #include "../share/share_code.h"
 #include "../api/snowcrows.h"
+#include "../api/guildjen.h"
+#include "../api/hardstuck.h"
+#include "../api/metabattle.h"
 #include <sstream>
 #include <chrono>
 #include <windows.h>
@@ -120,8 +123,10 @@ static std::ofstream             s_import_log;
 static std::chrono::steady_clock::time_point s_import_start;
 static std::chrono::steady_clock::time_point s_import_done_time{};
 
+/* ── Shared import URL ── */
+static char s_import_url[512] = {};
+
 /* ── gw2skills.net import ── */
-static char s_gw2skills_url[512] = {};
 static char s_share_code_import[128] = {};
 static auto s_share_copy_time = std::chrono::steady_clock::time_point{};
 static auto s_share_import_time = std::chrono::steady_clock::time_point{}; 
@@ -157,7 +162,6 @@ static Gw2SkillsResult s_gw2skills_result;
 static std::chrono::steady_clock::time_point s_gw2skills_done_time{};
 
 /* ── Snow Crows URL import ── */
-static char s_sc_url[512] = {};
 enum class SCImportState { Idle, Fetching, Done, Error };
 static std::atomic<SCImportState> s_sc_import_state{SCImportState::Idle};
 static std::thread s_sc_import_thread;
@@ -168,6 +172,43 @@ struct SCImportResult {
 };
 static SCImportResult s_sc_import_result;
 static std::chrono::steady_clock::time_point s_sc_import_done_time{};
+
+/* ── GuildJen URL import ── */
+enum class GJImportState { Idle, Fetching, Done, Error };
+static std::atomic<GJImportState> s_gj_import_state{GJImportState::Idle};
+static std::thread s_gj_import_thread;
+static std::mutex s_gj_import_mutex;
+struct GJImportResult {
+    GW2::SCBuild build;
+    std::string  armor_stat_name;
+    std::string  error;
+};
+static GJImportResult s_gj_import_result;
+static std::chrono::steady_clock::time_point s_gj_import_done_time{};
+
+/* ── Hardstuck URL import ── */
+enum class HSImportState { Idle, Fetching, Done, Error };
+static std::atomic<HSImportState> s_hs_import_state{HSImportState::Idle};
+static std::thread s_hs_import_thread;
+static std::mutex s_hs_import_mutex;
+struct HSImportResult {
+    GW2::SCBuild build;
+    std::string  error;
+};
+static HSImportResult s_hs_import_result;
+static std::chrono::steady_clock::time_point s_hs_import_done_time{};
+
+/* ── MetaBattle URL import ── */
+enum class MBImportState { Idle, Fetching, Done, Error };
+static std::atomic<MBImportState> s_mb_import_state{MBImportState::Idle};
+static std::thread s_mb_import_thread;
+static std::mutex s_mb_import_mutex;
+struct MBImportResult {
+    GW2::SCBuild build;
+    std::string  error;
+};
+static MBImportResult s_mb_import_result;
+static std::chrono::steady_clock::time_point s_mb_import_done_time{};
 
 /* ── Editor DB cache (gw2skills.net item database) ── */
 static std::mutex        s_editor_db_mutex;
@@ -1236,7 +1277,19 @@ static void BuildToForm(const GW2::SCBuild& b)
     for (const auto& gi : b.gear.items) {
         for (int r = 0; r < NUM_SLOTS; r++) {
             if (SLOT_ROWS[r].slot != gi.slot) continue;
-            if (gi.stat_id) snprintf(s_stat_name[r], sizeof(s_stat_name[r]), "%u", gi.stat_id);
+            if (gi.stat_id) {
+                std::string sname = ItemLookup::FindStatName(gi.stat_id);
+                if (!sname.empty())
+                    strncpy(s_stat_name[r], sname.c_str(), sizeof(s_stat_name[r]) - 1);
+                else
+                    snprintf(s_stat_name[r], sizeof(s_stat_name[r]), "%u", gi.stat_id);
+            } else if (!gi.stat_name.empty()) {
+                /* Text stat name (e.g. from GuildJen): try with possessive 's if bare form fails */
+                std::string sname = gi.stat_name;
+                if (!ItemLookup::FindStatID(sname.c_str()))
+                    sname = gi.stat_name + "'s";
+                strncpy(s_stat_name[r], sname.c_str(), sizeof(s_stat_name[r]) - 1);
+            }
             /* Load upgrade: strip rune/sigil prefix for armor/weapon display */
             if (gi.upgrade_id) {
                 /* Try to find a cached human-readable name first */
@@ -1334,6 +1387,155 @@ static void ApplySCImportResult()
     }
     BuildToForm(res.build);
     s_sc_import_done_time = std::chrono::steady_clock::now();
+}
+
+/* ── GuildJen URL import ── */
+static void StartGuildJenImport(const std::string& url)
+{
+    if (s_gj_import_state.load() == GJImportState::Fetching) return;
+    s_gj_import_state = GJImportState::Fetching;
+    if (s_gj_import_thread.joinable()) s_gj_import_thread.join();
+    s_gj_import_thread = std::thread([url]() {
+        GJImportResult result;
+        if (!GuildJen::ParseBuildPage(url, result.build, result.armor_stat_name)) {
+            result.error = "Failed to parse GuildJen build page";
+            std::lock_guard<std::mutex> lk(s_gj_import_mutex);
+            s_gj_import_result = std::move(result);
+            s_gj_import_state = GJImportState::Error;
+            return;
+        }
+        std::lock_guard<std::mutex> lk(s_gj_import_mutex);
+        s_gj_import_result = std::move(result);
+        s_gj_import_state = GJImportState::Done;
+    });
+}
+
+static void ApplyGuildJenImportResult()
+{
+    if (s_gj_import_state.load() != GJImportState::Done) return;
+    GJImportResult res;
+    {
+        std::lock_guard<std::mutex> lk(s_gj_import_mutex);
+        res = s_gj_import_result;
+        s_gj_import_state = GJImportState::Idle;
+    }
+    BuildToForm(res.build);
+    s_gj_import_done_time = std::chrono::steady_clock::now();
+}
+
+/* ── Hardstuck URL import ── */
+static void StartHardstuckImport(const std::string& url)
+{
+    if (s_hs_import_state.load() == HSImportState::Fetching) return;
+    s_hs_import_state = HSImportState::Fetching;
+    if (s_hs_import_thread.joinable()) s_hs_import_thread.join();
+    s_hs_import_thread = std::thread([url]() {
+        HSImportResult result;
+        if (!Hardstuck::ParseBuildPage(url, result.build)) {
+            result.error = "Failed to parse Hardstuck build page";
+            std::lock_guard<std::mutex> lk(s_hs_import_mutex);
+            s_hs_import_result = std::move(result);
+            s_hs_import_state = HSImportState::Error;
+            return;
+        }
+        std::lock_guard<std::mutex> lk(s_hs_import_mutex);
+        s_hs_import_result = std::move(result);
+        s_hs_import_state = HSImportState::Done;
+    });
+}
+
+static void ApplyHardstuckImportResult()
+{
+    if (s_hs_import_state.load() != HSImportState::Done) return;
+    HSImportResult res;
+    {
+        std::lock_guard<std::mutex> lk(s_hs_import_mutex);
+        res = s_hs_import_result;
+        s_hs_import_state = HSImportState::Idle;
+    }
+    BuildToForm(res.build);
+    s_hs_import_done_time = std::chrono::steady_clock::now();
+}
+
+static void StartMetaBattleImport(const std::string& url)
+{
+    if (s_mb_import_state.load() == MBImportState::Fetching) return;
+    s_mb_import_state = MBImportState::Fetching;
+    if (s_mb_import_thread.joinable()) s_mb_import_thread.join();
+    s_mb_import_thread = std::thread([url]() {
+        MBImportResult result;
+        if (!MetaBattle::ParseBuildPage(url, result.build)) {
+            result.error = "Failed to parse MetaBattle build page";
+            std::lock_guard<std::mutex> lk(s_mb_import_mutex);
+            s_mb_import_result = std::move(result);
+            s_mb_import_state = MBImportState::Error;
+            return;
+        }
+        std::lock_guard<std::mutex> lk(s_mb_import_mutex);
+        s_mb_import_result = std::move(result);
+        s_mb_import_state = MBImportState::Done;
+    });
+}
+
+static void ApplyMetaBattleImportResult()
+{
+    if (s_mb_import_state.load() != MBImportState::Done) return;
+    MBImportResult res;
+    {
+        std::lock_guard<std::mutex> lk(s_mb_import_mutex);
+        res = s_mb_import_result;
+        s_mb_import_state = MBImportState::Idle;
+    }
+    BuildToForm(res.build);
+    s_mb_import_done_time = std::chrono::steady_clock::now();
+}
+
+/* ── URL-based site detection + auto-dispatch ── */
+enum class ImportSite { Unknown, SnowCrows, Hardstuck, GuildJen, Gw2Skills, MetaBattle };
+
+static ImportSite DetectSiteFromURL(const char* url)
+{
+    if (!url || !url[0]) return ImportSite::Unknown;
+    /* Case-insensitive search: just check lowercased copy of the first 256 chars */
+    char low[256] = {};
+    for (int i = 0; i < 255 && url[i]; i++)
+        low[i] = (char)tolower((unsigned char)url[i]);
+    if (strstr(low, "snowcrows.com"))  return ImportSite::SnowCrows;
+    if (strstr(low, "hardstuck.gg"))  return ImportSite::Hardstuck;
+    if (strstr(low, "guildjen.com"))  return ImportSite::GuildJen;
+    if (strstr(low, "gw2skills.net")) return ImportSite::Gw2Skills;
+    if (strstr(low, "metabattle.com")) return ImportSite::MetaBattle;
+    return ImportSite::Unknown;
+}
+
+static void StartAutoImport(const std::string& url, ImportSite hint)
+{
+    ImportSite site = DetectSiteFromURL(url.c_str());
+    if (site == ImportSite::Unknown) site = hint;
+    switch (site) {
+    case ImportSite::SnowCrows:
+        s_sc_import_state = SCImportState::Idle;
+        StartSCImport(url);
+        break;
+    case ImportSite::Hardstuck:
+        s_hs_import_state = HSImportState::Idle;
+        StartHardstuckImport(url);
+        break;
+    case ImportSite::GuildJen:
+        s_gj_import_state = GJImportState::Idle;
+        StartGuildJenImport(url);
+        break;
+    case ImportSite::Gw2Skills:
+        s_gw2skills_state = Gw2SkillsState::Idle;
+        StartGw2SkillsImport(url);
+        break;
+    case ImportSite::MetaBattle:
+        s_mb_import_state = MBImportState::Idle;
+        StartMetaBattleImport(url);
+        break;
+    default:
+        break;
+    }
 }
 
 static GW2::SCBuild FormToBuild()
@@ -1481,10 +1683,11 @@ void Render()
 
     if (s_prof_idx > 0) ItemLookup::LoadSkillsForProfession((uint8_t)s_prof_idx);
 
-    /* Apply gw2skills.net import result if done */
     ApplyGw2SkillsResult();
-    /* Apply Snow Crows URL import result if done */
     ApplySCImportResult();
+    ApplyGuildJenImportResult();
+    ApplyHardstuckImportResult();
+    ApplyMetaBattleImportResult();
 
     if (s_spec_idx != s_prev_spec_idx) {
         s_prev_spec_idx = s_spec_idx;
@@ -1692,75 +1895,90 @@ void Render()
         }
     }
 
-    /* ── Import from Snow Crows URL ── */
+    /* ── URL import (shared field, four source buttons) ── */
     ImGui::Spacing();
-    ImGui::TextDisabled("Import from Snow Crows URL:");
+    ImGui::TextDisabled("Import URL:");
     ImGui::SameLine();
-    ImGui::SetNextItemWidth(S(380));
-    ImGui::InputText("##sc_url_import", s_sc_url, sizeof(s_sc_url));
-    ImGui::SameLine();
-    {
-        bool is_fetching = (s_sc_import_state.load() == SCImportState::Fetching);
-        if (is_fetching) {
-            ImGui::PushStyleVar(ImGuiStyleVar_Alpha, 0.4f);
-            ImGui::Button("Importing...");
-            ImGui::PopStyleVar();
-        } else if (ImGui::Button("Import##sc_url")) {
-            if (s_sc_url[0]) {
-                s_sc_import_state = SCImportState::Idle;
-                StartSCImport(s_sc_url);
-            }
-        }
-    }
-    if (ImGui::IsItemHovered()) ImGui::SetTooltip("Paste a Snow Crows build page URL and click to import");
-    /* Show error state */
-    if (s_sc_import_state.load() == SCImportState::Error) {
-        std::string err;
-        {
-            std::lock_guard<std::mutex> lk(s_sc_import_mutex);
-            err = s_sc_import_result.error;
-        }
-        if (!err.empty()) {
-            ImGui::SameLine();
-            ImGui::TextColored(ImVec4(1.f, 0.4f, 0.4f, 1.f), "Error: %s", err.c_str());
-        }
-        if (ImGui::Button("Dismiss Error##sc_url")) {
-            s_sc_import_state = SCImportState::Idle;
-        }
-    }
+    ImGui::SetNextItemWidth(S(480));
+    ImGui::InputTextWithHint("##import_url", "Paste a Snow Crows, Hardstuck, GuildJen, gw2skills, or MetaBattle URL...",
+                             s_import_url, sizeof(s_import_url));
 
-    /* ── Import from gw2skills.net ── */
-    ImGui::Spacing();
-    ImGui::TextDisabled("Import from gw2skills.net:");
-    ImGui::SameLine();
-    ImGui::SetNextItemWidth(S(380));
-    ImGui::InputText("##gw2skills", s_gw2skills_url, sizeof(s_gw2skills_url));
-    ImGui::SameLine();
-    bool is_fetching = (s_gw2skills_state.load() == Gw2SkillsState::Fetching);
-    if (is_fetching) {
-        ImGui::PushStyleVar(ImGuiStyleVar_Alpha, 0.4f);
-        ImGui::Button("Importing...");
-        ImGui::PopStyleVar();
-    } else if (ImGui::Button("Import")) {
-        if (s_gw2skills_url[0]) {
-            s_gw2skills_state = Gw2SkillsState::Idle;
-            StartGw2SkillsImport(s_gw2skills_url);
+    bool any_fetching = (s_sc_import_state.load()  == SCImportState::Fetching
+                      || s_hs_import_state.load()  == HSImportState::Fetching
+                      || s_gj_import_state.load()  == GJImportState::Fetching
+                      || s_gw2skills_state.load()  == Gw2SkillsState::Fetching
+                      || s_mb_import_state.load()  == MBImportState::Fetching);
+
+    /* Source buttons — each dispatches through DetectSiteFromURL so clicking
+     * any button with any supported URL will use the correct scraper.
+     * The hint (ImportSite::X) is the fallback when the URL isn't recognised. */
+    auto ImportBtn = [&](const char* label, ImportSite hint) {
+        if (any_fetching) {
+            ImGui::PushStyleVar(ImGuiStyleVar_Alpha, 0.4f);
+            ImGui::Button(label);
+            ImGui::PopStyleVar();
+        } else {
+            if (ImGui::Button(label) && s_import_url[0])
+                StartAutoImport(s_import_url, hint);
         }
-    }
-    if (ImGui::IsItemHovered()) ImGui::SetTooltip("Paste a gw2skills.net URL and click to import traits + skills");
-    /* Show error state */
-    if (s_gw2skills_state.load() == Gw2SkillsState::Error) {
+    };
+
+    ImportBtn("Snow Crows##imp", ImportSite::SnowCrows);
+    if (ImGui::IsItemHovered())
+        ImGui::SetTooltip("Import from a snowcrows.com build page URL");
+
+    ImGui::SameLine();
+    ImportBtn("Hardstuck##imp", ImportSite::Hardstuck);
+    if (ImGui::IsItemHovered())
+        ImGui::SetTooltip("Import from a hardstuck.gg build page URL");
+
+    ImGui::SameLine();
+    ImportBtn("GuildJen##imp", ImportSite::GuildJen);
+    if (ImGui::IsItemHovered())
+        ImGui::SetTooltip("Import from a guildjen.com build page URL");
+
+    ImGui::SameLine();
+    ImportBtn("gw2skills##imp", ImportSite::Gw2Skills);
+    if (ImGui::IsItemHovered())
+        ImGui::SetTooltip("Import traits + skills from a gw2skills.net URL");
+
+    ImGui::SameLine();
+    ImportBtn("MetaBattle##imp", ImportSite::MetaBattle);
+    if (ImGui::IsItemHovered())
+        ImGui::SetTooltip("Import from a metabattle.com build page URL");
+
+    /* Error messages */
+    {
         std::string err;
-        {
-            std::lock_guard<std::mutex> lk(s_gw2skills_mutex);
-            err = s_gw2skills_result.error;
+        if (s_sc_import_state.load() == SCImportState::Error) {
+            { std::lock_guard<std::mutex> lk(s_sc_import_mutex); err = s_sc_import_result.error; }
+            if (!err.empty())
+                ImGui::TextColored(ImVec4(1.f, 0.4f, 0.4f, 1.f), "Snow Crows: %s", err.c_str());
+            if (ImGui::Button("Dismiss##sc_err")) s_sc_import_state = SCImportState::Idle;
         }
-        if (!err.empty()) {
-            ImGui::SameLine();
-            ImGui::TextColored(ImVec4(1.f, 0.4f, 0.4f, 1.f), "Error: %s", err.c_str());
+        if (s_hs_import_state.load() == HSImportState::Error) {
+            { std::lock_guard<std::mutex> lk(s_hs_import_mutex); err = s_hs_import_result.error; }
+            if (!err.empty())
+                ImGui::TextColored(ImVec4(1.f, 0.4f, 0.4f, 1.f), "Hardstuck: %s", err.c_str());
+            if (ImGui::Button("Dismiss##hs_err")) s_hs_import_state = HSImportState::Idle;
         }
-        if (ImGui::Button("Dismiss Error")) {
-            s_gw2skills_state = Gw2SkillsState::Idle;
+        if (s_gj_import_state.load() == GJImportState::Error) {
+            { std::lock_guard<std::mutex> lk(s_gj_import_mutex); err = s_gj_import_result.error; }
+            if (!err.empty())
+                ImGui::TextColored(ImVec4(1.f, 0.4f, 0.4f, 1.f), "GuildJen: %s", err.c_str());
+            if (ImGui::Button("Dismiss##gj_err")) s_gj_import_state = GJImportState::Idle;
+        }
+        if (s_gw2skills_state.load() == Gw2SkillsState::Error) {
+            { std::lock_guard<std::mutex> lk(s_gw2skills_mutex); err = s_gw2skills_result.error; }
+            if (!err.empty())
+                ImGui::TextColored(ImVec4(1.f, 0.4f, 0.4f, 1.f), "gw2skills: %s", err.c_str());
+            if (ImGui::Button("Dismiss##gs_err")) s_gw2skills_state = Gw2SkillsState::Idle;
+        }
+        if (s_mb_import_state.load() == MBImportState::Error) {
+            { std::lock_guard<std::mutex> lk(s_mb_import_mutex); err = s_mb_import_result.error; }
+            if (!err.empty())
+                ImGui::TextColored(ImVec4(1.f, 0.4f, 0.4f, 1.f), "MetaBattle: %s", err.c_str());
+            if (ImGui::Button("Dismiss##mb_err")) s_mb_import_state = MBImportState::Idle;
         }
     }
 
@@ -2191,13 +2409,25 @@ void Render()
         ImGui::SameLine();
         ImGui::TextColored(ImVec4(0.3f, 1.f, 0.3f, 1.f), "Imported!");
     }
+    if (std::chrono::steady_clock::now() - s_sc_import_done_time < std::chrono::seconds(3)) {
+        ImGui::SameLine();
+        ImGui::TextColored(ImVec4(0.3f, 1.f, 0.3f, 1.f), "Imported from Snow Crows!");
+    }
+    if (std::chrono::steady_clock::now() - s_hs_import_done_time < std::chrono::seconds(3)) {
+        ImGui::SameLine();
+        ImGui::TextColored(ImVec4(0.3f, 1.f, 0.3f, 1.f), "Imported from Hardstuck!");
+    }
+    if (std::chrono::steady_clock::now() - s_gj_import_done_time < std::chrono::seconds(3)) {
+        ImGui::SameLine();
+        ImGui::TextColored(ImVec4(0.3f, 1.f, 0.3f, 1.f), "Imported from GuildJen!");
+    }
     if (std::chrono::steady_clock::now() - s_gw2skills_done_time < std::chrono::seconds(3)) {
         ImGui::SameLine();
         ImGui::TextColored(ImVec4(0.3f, 1.f, 0.3f, 1.f), "Imported from gw2skills.net!");
     }
-    if (std::chrono::steady_clock::now() - s_sc_import_done_time < std::chrono::seconds(3)) {
+    if (std::chrono::steady_clock::now() - s_mb_import_done_time < std::chrono::seconds(3)) {
         ImGui::SameLine();
-        ImGui::TextColored(ImVec4(0.3f, 1.f, 0.3f, 1.f), "Imported from Snow Crows!");
+        ImGui::TextColored(ImVec4(0.3f, 1.f, 0.3f, 1.f), "Imported from MetaBattle!");
     }
     int ok = 0, fail = 0;
     for (int r = 0; r < NUM_SLOTS; r++) if (s_stat_name[r][0]) {
@@ -2215,17 +2445,23 @@ void Render()
     if (ImGui::IsItemHovered())
         ImGui::SetTooltip("Open Snow Crows — community reference builds for GW2 PvE/raid");
     ImGui::SameLine();
-    if (ImGui::Button("Hardstruck")) {
+    if (ImGui::Button("Hardstuck")) {
         ShellExecuteA(nullptr, "open", "https://hardstuck.gg/", nullptr, nullptr, SW_SHOWNORMAL);
     }
     if (ImGui::IsItemHovered())
-        ImGui::SetTooltip("Open Hardstruck — competitive GW2 PvE/raid builds and guides");
+        ImGui::SetTooltip("Open Hardstuck — competitive GW2 PvE/raid builds and guides");
     ImGui::SameLine();
     if (ImGui::Button("GuildJen")) {
         ShellExecuteA(nullptr, "open", "https://guildjen.com/", nullptr, nullptr, SW_SHOWNORMAL);
     }
     if (ImGui::IsItemHovered())
         ImGui::SetTooltip("Open GuildJen — GW2 builds, guides, and tier lists for all game modes");
+    ImGui::SameLine();
+    if (ImGui::Button("MetaBattle")) {
+        ShellExecuteA(nullptr, "open", "https://metabattle.com/wiki/MetaBattle_Wiki", nullptr, nullptr, SW_SHOWNORMAL);
+    }
+    if (ImGui::IsItemHovered())
+        ImGui::SetTooltip("Open MetaBattle — community GW2 builds wiki for all game modes");
 
     ImGui::End();
 }

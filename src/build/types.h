@@ -137,6 +137,7 @@ struct GearItem {
     std::vector<InfusionSlot> infusions;
     WeaponType weapon_type = WeaponType::Unknown;
     std::string upgrade_name; /* text name when upgrade_id is 0 (user-authored builds) */
+    std::string stat_name;    /* text name when stat_id is 0 (e.g. from GuildJen import) */
 };
 
 struct GearBuild {

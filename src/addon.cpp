@@ -100,128 +100,114 @@ static const char* GetProfessionName(uint8_t prof)
 }
 
 /* ── Chat event handler ────────────────────────────────────────────────── */
-// DISABLED - causing game freezes
-// static void OnChatMessage(void* aEventArgs)
-// {
-//     if (!aEventArgs) return;
-//     if (!g_ChatBuildDetection) return;
-// 
-//     auto* msg = static_cast<EvChatMessage*>(aEventArgs);
-// 
-//     /* Only process message types that carry ChatGenericMessage text */
-//     switch (msg->Type) {
-//         case ChatMessageType::Party:
-//         case ChatMessageType::Squad:
-//         case ChatMessageType::Whisper:
-//         case ChatMessageType::Local:
-//         case ChatMessageType::Map:
-//         case ChatMessageType::Guild:
-//         case ChatMessageType::TeamPvP:
-//         case ChatMessageType::TeamWvW:
-//             break;
-//         default:
-//             return;
-//     }
-// 
-//     /* Skip our own outbound whispers */
-//     if (msg->Type == ChatMessageType::Whisper &&
-//         (static_cast<uint32_t>(msg->Flags) & static_cast<uint32_t>(ChatMetadataFlags::Whisper_IsFromMe)) != 0)
-//         return;
-// 
-//     /* All ChatGenericMessage union members share the same address — use Whisper */
-//     auto* gm = &msg->Whisper;
-//     if (!gm || !gm->Content) return;
-// 
-//     /* Skip our own messages (unless testing with detect-own toggle) */
-//     if (!g_ChatBuildDetectOwn && gm->CharacterName) {
-//         std::lock_guard<std::mutex> lock(g_CharacterMutex);
-//         if (g_Character.valid && strcmp(gm->CharacterName, g_Character.name) == 0)
-//             return;
-//     }
-// 
-//     const char* text = gm->Content;
-// 
-//     /* Quick reject: message must contain "AB:" to be a build code */
-//     if (!strstr(text, "AB:")) return;
-// 
-//     std::string content(text);
-// 
-//     /* Scan for AB: share codes */
-//     size_t pos = 0;
-//     while ((pos = content.find("AB:", pos)) != std::string::npos) {
-//         /* Extract the code: AB: followed by base64 chars until whitespace or end */
-//         size_t start = pos;
-//         size_t end = start + 3;
-//         
-//         /* Limit code length: valid AB: codes are 45-55 chars total */
-//         while (end < content.size() && (end - start) < 60) {
-//             char c = content[end];
-//             if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z') ||
-//                 (c >= '0' && c <= '9') || c == '-' || c == '_')
-//                 end++;
-//             else
-//                 break;
-//         }
-// 
-//         /* Reject if too short or too long */
-//         size_t code_len = end - start;
-//         if (code_len < 10 || code_len > 60) {
-//             pos = end;
-//             continue;
-//         }
-// 
-//         std::string code = content.substr(start, code_len);
-// 
-//         /* Quick validation: decode and check version byte */
-//         std::vector<uint8_t> decoded;
-//         decoded.reserve((code_len) / 4 * 3);
-//         int buf = 0, bits = -8;
-//         for (size_t i = 3; i < code.size(); i++) {
-//             char c = code[i];
-//             int v = -1;
-//             if (c >= 'A' && c <= 'Z') v = c - 'A';
-//             else if (c >= 'a' && c <= 'z') v = c - 'a' + 26;
-//             else if (c >= '0' && c <= '9') v = c - '0' + 52;
-//             else if (c == '-' || c == '+') v = 62;
-//             else if (c == '_' || c == '/') v = 63;
-//             if (v < 0) continue;
-//             buf = (buf << 6) | v;
-//             bits += 6;
-//             if (bits >= 0) {
-//                 decoded.push_back((uint8_t)(buf >> bits));
-//                 bits -= 8;
-//             }
-//         }
-// 
-//         /* Validate: version byte must be 1 or 2, profession 1-9 */
-//         /* BitWriter uses LSB-first packing: byte 0 low nibble = version, high = flags; byte 1 low nibble = profession */
-//         if (decoded.size() >= 2) {
-//             uint8_t version = decoded[0] & 0x0F;
-//             uint8_t prof = decoded[1] & 0x0F;
-//             if (version == 3 && prof >= 1 && prof <= 9) {
-//                 /* Valid share code detected! */
-//                 std::string prof_name = GetProfessionName(prof);
-// 
-//                 /* TODO: Extract elite spec name from decoded data if possible */
-//                 std::string spec_name;
-// 
-//                 {
-//                     std::lock_guard<std::mutex> lock(g_ChatBuildToastMutex);
-//                     g_ChatBuildToast.active = true;
-//                     g_ChatBuildToast.sender = gm->CharacterName ? gm->CharacterName : "Unknown";
-//                     g_ChatBuildToast.share_code = code;
-//                     g_ChatBuildToast.profession = prof_name;
-//                     g_ChatBuildToast.spec_name = spec_name;
-//                     g_ChatBuildToast.channel = GetChannelName(msg->Type);
-//                 }
-// 
-//                 Log(LOGL_DEBUG, ("Chat build detection from " + g_ChatBuildToast.sender + ": " + prof_name).c_str());
-//                 break; /* Found one, stop scanning */
-//             }
-//         }
-//         pos = end;
-//     }
-// }
+static void OnChatMessage(void* aEventArgs)
+{
+    if (!aEventArgs) return;
+    if (!g_ChatBuildDetection) return;
+
+    auto* msg = static_cast<EvChatMessage*>(aEventArgs);
+
+    /* Only process message types that carry ChatGenericMessage text */
+    switch (msg->Type) {
+        case ChatMessageType::Party:
+        case ChatMessageType::Squad:
+        case ChatMessageType::Whisper:
+        case ChatMessageType::Local:
+        case ChatMessageType::Map:
+        case ChatMessageType::Guild:
+        case ChatMessageType::TeamPvP:
+        case ChatMessageType::TeamWvW:
+            break;
+        default:
+            return;
+    }
+
+    /* Skip our own outbound whispers */
+    if (msg->Type == ChatMessageType::Whisper &&
+        (static_cast<uint32_t>(msg->Flags) & static_cast<uint32_t>(ChatMetadataFlags::Whisper_IsFromMe)) != 0)
+        return;
+
+    /* All ChatGenericMessage union members share the same layout — use Whisper */
+    auto* gm = &msg->Whisper;
+    if (!gm->Content) return;
+
+    /* Skip our own messages (unless detect-own is enabled) */
+    if (!g_ChatBuildDetectOwn && gm->CharacterName) {
+        std::lock_guard<std::mutex> lock(g_CharacterMutex);
+        if (g_Character.valid && strcmp(gm->CharacterName, g_Character.name) == 0)
+            return;
+    }
+
+    const char* text = gm->Content;
+
+    /* Quick reject: message must contain "AB:" to be a build code */
+    if (!strstr(text, "AB:")) return;
+
+    std::string content(text);
+
+    /* Scan for AB: share codes */
+    size_t pos = 0;
+    while ((pos = content.find("AB:", pos)) != std::string::npos) {
+        size_t start = pos;
+        size_t end = start + 3;
+
+        while (end < content.size() && (end - start) < 60) {
+            char c = content[end];
+            if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z') ||
+                (c >= '0' && c <= '9') || c == '-' || c == '_')
+                end++;
+            else
+                break;
+        }
+
+        size_t code_len = end - start;
+        if (code_len < 10 || code_len > 60) { pos = end; continue; }
+
+        std::string code = content.substr(start, code_len);
+
+        /* Quick validation: decode first two bytes, check version + profession */
+        std::vector<uint8_t> decoded;
+        decoded.reserve(code_len / 4 * 3);
+        int buf = 0, bits = -8;
+        for (size_t i = 3; i < code.size(); i++) {
+            char c = code[i];
+            int v = -1;
+            if      (c >= 'A' && c <= 'Z') v = c - 'A';
+            else if (c >= 'a' && c <= 'z') v = c - 'a' + 26;
+            else if (c >= '0' && c <= '9') v = c - '0' + 52;
+            else if (c == '-' || c == '+') v = 62;
+            else if (c == '_' || c == '/') v = 63;
+            if (v < 0) continue;
+            buf = (buf << 6) | v;
+            bits += 6;
+            if (bits >= 0) {
+                decoded.push_back((uint8_t)(buf >> bits));
+                bits -= 8;
+            }
+            if (decoded.size() >= 2) break;
+        }
+
+        if (decoded.size() >= 2) {
+            uint8_t version = decoded[0] & 0x0F;
+            uint8_t prof    = decoded[1] & 0x0F;
+            if ((version == 1 || version == 2) && prof >= 1 && prof <= 9) {
+                std::string prof_name = GetProfessionName(prof);
+                /* Brief lock — just write the struct, no ImGui or heavy work */
+                {
+                    std::lock_guard<std::mutex> lock(g_ChatBuildToastMutex);
+                    g_ChatBuildToast.active     = true;
+                    g_ChatBuildToast.sender     = gm->CharacterName ? gm->CharacterName : "Unknown";
+                    g_ChatBuildToast.share_code = code;
+                    g_ChatBuildToast.profession = prof_name;
+                    g_ChatBuildToast.spec_name  = {};
+                    g_ChatBuildToast.channel    = GetChannelName(msg->Type);
+                }
+                break;
+            }
+        }
+        pos = end;
+    }
+}
 
 /* ── Render callbacks ────────────────────────────────────────────────────── */
 static void OnRender()
@@ -250,12 +236,18 @@ static void OnOptions()
 /* ── Chat build import popup ───────────────────────────────────────────── */
 static void RenderChatBuildPopup()
 {
-    std::lock_guard<std::mutex> lock(g_ChatBuildToastMutex);
-    if (!g_ChatBuildToast.active) return;
-    
-    /* Safety: auto-dismiss if share_code is empty or invalid */
-    if (g_ChatBuildToast.share_code.empty() || 
-        g_ChatBuildToast.share_code.find("AB:") != 0) {
+    /* Snapshot under a brief lock — never hold the mutex across ImGui calls,
+     * because OnChatMessage runs on the game thread and would block waiting
+     * for the render frame to finish (causing the observed freeze). */
+    ChatBuildToast toast;
+    {
+        std::lock_guard<std::mutex> lk(g_ChatBuildToastMutex);
+        if (!g_ChatBuildToast.active) return;
+        toast = g_ChatBuildToast;
+    }
+
+    if (toast.share_code.empty() || toast.share_code.find("AB:") != 0) {
+        std::lock_guard<std::mutex> lk(g_ChatBuildToastMutex);
         g_ChatBuildToast.active = false;
         return;
     }
@@ -267,7 +259,7 @@ static void RenderChatBuildPopup()
 
     const float popupWidth = 380.0f;
     ImGui::SetNextWindowSize(ImVec2(popupWidth, 0), ImGuiCond_Always);
-    
+
     /* Bottom-right corner, non-intrusive */
     ImVec2 displaySize = ImGui::GetIO().DisplaySize;
     ImGui::SetNextWindowPos(ImVec2(displaySize.x - popupWidth - 20, displaySize.y - 200), ImGuiCond_Always);
@@ -276,6 +268,7 @@ static void RenderChatBuildPopup()
         | ImGuiWindowFlags_NoScrollbar | ImGuiWindowFlags_NoNav
         | ImGuiWindowFlags_AlwaysAutoResize | ImGuiWindowFlags_NoSavedSettings;
 
+    bool dismiss = false;
     bool open = true;
     if (ImGui::Begin("Build Shared##ChatPopup", &open, flags)) {
         /* Gold accent bar */
@@ -292,8 +285,8 @@ static void RenderChatBuildPopup()
         /* Title */
         ImGui::TextColored(ImVec4(0.90f, 0.75f, 0.25f, 1.0f), "BUILD SHARED");
         ImGui::SameLine();
-        ImGui::TextColored(ImVec4(0.5f, 0.47f, 0.40f, 1.0f), "via %s", 
-            g_ChatBuildToast.channel.empty() ? "Chat" : g_ChatBuildToast.channel.c_str());
+        ImGui::TextColored(ImVec4(0.5f, 0.47f, 0.40f, 1.0f), "via %s",
+            toast.channel.empty() ? "Chat" : toast.channel.c_str());
 
         ImGui::Spacing();
         ImGui::Separator();
@@ -302,15 +295,15 @@ static void RenderChatBuildPopup()
         /* Sender info */
         ImGui::Text("From:");
         ImGui::SameLine();
-        ImGui::TextColored(ImVec4(0.4f, 0.8f, 1.0f, 1.0f), "%s", 
-            g_ChatBuildToast.sender.empty() ? "Unknown" : g_ChatBuildToast.sender.c_str());
+        ImGui::TextColored(ImVec4(0.4f, 0.8f, 1.0f, 1.0f), "%s",
+            toast.sender.empty() ? "Unknown" : toast.sender.c_str());
 
         ImGui::Text("Build:");
         ImGui::SameLine();
-        std::string prof = g_ChatBuildToast.profession.empty() ? "Unknown" : g_ChatBuildToast.profession;
-        if (!g_ChatBuildToast.spec_name.empty()) {
+        std::string prof = toast.profession.empty() ? "Unknown" : toast.profession;
+        if (!toast.spec_name.empty()) {
             ImGui::TextColored(ImVec4(0.9f, 0.87f, 0.78f, 1.0f), "%s (%s)",
-                g_ChatBuildToast.spec_name.c_str(), prof.c_str());
+                toast.spec_name.c_str(), prof.c_str());
         } else {
             ImGui::TextColored(ImVec4(0.9f, 0.87f, 0.78f, 1.0f), "%s", prof.c_str());
         }
@@ -325,23 +318,20 @@ static void RenderChatBuildPopup()
         ImGui::PushStyleColor(ImGuiCol_ButtonActive, ImVec4(0.30f, 0.70f, 0.30f, 1.00f));
 
         if (ImGui::Button("Import to Editor", ImVec2(buttonWidth, 32))) {
-            /* Safety: validate code before attempting decode */
-            if (g_ChatBuildToast.share_code.size() < 10 || g_ChatBuildToast.share_code.size() > 60) {
-                Log(LOGL_WARNING, "Invalid share code length");
-                g_ChatBuildToast.active = false;
-            } else {
+            if (toast.share_code.size() >= 10 && toast.share_code.size() <= 60) {
                 GW2::SCBuild build;
-                if (ShareCode::Decode(g_ChatBuildToast.share_code, build)) {
+                if (ShareCode::Decode(toast.share_code, build)) {
                     BuildEditor::ImportFromShareCode(build);
                     BuildEditor::Open();
                     Log(LOGL_INFO, "Build loaded into editor from chat");
-                    g_ChatBuildToast.active = false;
                 } else {
                     std::string err = ShareCode::LastError();
                     Log(LOGL_WARNING, ("Import failed: " + err).c_str());
-                    g_ChatBuildToast.active = false;
                 }
+            } else {
+                Log(LOGL_WARNING, "Invalid share code length");
             }
+            dismiss = true;
         }
         ImGui::PopStyleColor(3);
 
@@ -352,7 +342,7 @@ static void RenderChatBuildPopup()
         ImGui::PushStyleColor(ImGuiCol_ButtonActive, ImVec4(0.45f, 0.38f, 0.16f, 1.00f));
 
         if (ImGui::Button("Dismiss", ImVec2(buttonWidth, 32))) {
-            g_ChatBuildToast.active = false;
+            dismiss = true;
         }
         ImGui::PopStyleColor(3);
 
@@ -360,12 +350,15 @@ static void RenderChatBuildPopup()
     }
     ImGui::End();
 
-    if (!open) {
-        g_ChatBuildToast.active = false;
-    }
+    if (!open) dismiss = true;
 
     ImGui::PopStyleVar(2);
     ImGui::PopStyleColor(2);
+
+    if (dismiss) {
+        std::lock_guard<std::mutex> lk(g_ChatBuildToastMutex);
+        g_ChatBuildToast.active = false;
+    }
 }
 
 /* ── Event callbacks ─────────────────────────────────────────────────────── */
@@ -437,7 +430,7 @@ __declspec(dllexport) void AddonLoad(AddonAPI_t* aApi)
     APIDefs->GUI_Register(RT_OptionsRender, OnOptions);
 
     APIDefs->Events_Subscribe(EV_MUMBLE_IDENTITY_UPDATED, OnMumbleIdentityUpdated);
-    // APIDefs->Events_Subscribe(EV_CHAT_MESSAGE, OnChatMessage); // Disabled - causing game freezes
+    APIDefs->Events_Subscribe(EV_CHAT_MESSAGE, OnChatMessage);
     /* ArcDPS combat events are subscribed inside ArcDPS::Init() — not here */
 
     APIDefs->InputBinds_RegisterWithString(KB_TOGGLE, OnKeybind, "");  /* No default keybind — users set via Nexus */
@@ -466,7 +459,7 @@ __declspec(dllexport) void AddonUnload()
     Http::Shutdown();
 
     APIDefs->Events_Unsubscribe(EV_MUMBLE_IDENTITY_UPDATED, OnMumbleIdentityUpdated);
-    // APIDefs->Events_Unsubscribe(EV_CHAT_MESSAGE, OnChatMessage); // Disabled - causing game freezes
+    APIDefs->Events_Unsubscribe(EV_CHAT_MESSAGE, OnChatMessage);
     /* ArcDPS combat events are unsubscribed inside ArcDPS::Shutdown() */
 
     APIDefs->InputBinds_Deregister(KB_TOGGLE);
@@ -480,7 +473,7 @@ __declspec(dllexport) void AddonUnload()
 
 __declspec(dllexport) AddonDefinition_t* GetAddonDef()
 {
-    static AddonVersion_t version = {1, 0, 0, 0};
+    static AddonVersion_t version = {1, 1, 0, 0};
     static AddonDefinition_t def  = {
         ADDON_SIGNATURE,
         NEXUS_API_VERSION,

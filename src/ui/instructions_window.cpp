@@ -117,10 +117,10 @@ void Render()
         "They typically use simpler rotations and more forgiving gear while still aiming to be effective in group PvE.");
     ImGui::Spacing(); ImGui::Spacing();
 
-    ImGui::TextDisabled("Hardstruck Builds");
+    ImGui::TextDisabled("Hardstuck Builds");
     ImGui::Separator();
     ImGui::TextWrapped(
-        "Hardstruck is a competitive GW2 site offering builds, team guides, and class-focused recommendations. "
+        "Hardstuck is a competitive GW2 site offering builds, team guides, and class-focused recommendations. "
         "It’s a useful resource for players interested in high-end or structured PvE content and for comparing your setup with player-tested builds."
     );
     ImGui::Spacing(); ImGui::Spacing();

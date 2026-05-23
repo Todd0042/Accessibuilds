@@ -203,7 +203,7 @@ void Render()
     }
 
     ImGui::Spacing();
-    ImGui::TextWrapped("For rotation advice, see SnowCrows, Hardstruck, or MetaBattle via the buttons on the top panel.");
+    ImGui::TextWrapped("For rotation advice, see SnowCrows, Hardstuck, or MetaBattle via the buttons on the top panel.");
     ImGui::Spacing();
 
     bool in_combat = ArcDPS::IsInCombat();

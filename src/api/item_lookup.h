@@ -38,6 +38,7 @@ uint32_t                      FindSkillID(const char* name, uint8_t prof);
 bool                          StatNamesLoaded();
 std::vector<std::string>      GetStatNames();
 uint32_t                      FindStatID(const char* name);
+std::string                   FindStatName(uint32_t id);
 void                          RefreshStatNames();
 
 /* User item name <-> ID cache (populated via CacheItemName; persisted to disk) */

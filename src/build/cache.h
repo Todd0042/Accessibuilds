@@ -24,6 +24,7 @@ struct Settings {
     int      tab_height[3]     = {}; /* Per-tab main window height (0 = use default) */
     bool     offline_mode      = false; /* Use embedded reference builds, no API calls */
     bool     setup_complete    = false; /* First-run setup wizard dismissed */
+    bool     chat_detect_own   = false; /* Detect build codes in own chat messages */
 };
 bool SaveSettings(const Settings& s);
 bool LoadSettings(Settings& out);

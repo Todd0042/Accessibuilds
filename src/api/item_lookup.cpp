@@ -481,6 +481,14 @@ uint32_t FindStatID(const char* name)
     return it != s_stat_by_name.end() ? it->second : 0;
 }
 
+std::string FindStatName(uint32_t id)
+{
+    if (!id) return {};
+    std::lock_guard<std::mutex> lk(s_mutex);
+    auto it = s_stat_id_to_name.find(id);
+    return it != s_stat_id_to_name.end() ? it->second : std::string();
+}
+
 void RefreshStatNames()
 {
     if (s_stats_fetching.exchange(true)) return;

@@ -26,6 +26,9 @@ set(ADDON_SOURCES
     src/api/gw2api.cpp
     src/api/gw2names.cpp
     src/api/snowcrows.cpp
+    src/api/guildjen.cpp
+    src/api/hardstuck.cpp
+    src/api/metabattle.cpp
     src/api/wingman.cpp
     src/api/item_lookup.cpp
 
