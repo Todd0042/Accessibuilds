@@ -182,7 +182,9 @@ struct SCBuild {
     std::string  patch_version;
     double       benchmark_dps = 0.0;
     std::string  notes;
+    std::string  source;     /* "snowcrows" | "hardstuck" | "metabattle" | "user" | "" */
     std::string  source_url;
+    std::string  game_mode;  /* "GroupPvE" | "WvWZerg" | "WvWRoaming" | "OpenWorld" | "Raid" | "Fractal" | "Strike" | "" */
     std::string  chat_code;  /* GW2 build template link, e.g. "[&BQcAAAA...]" */
     bool         is_legacy        = false; /* appears under "Legacy" on Snow Crows */
     bool         is_accessibility = false; /* from the accessibility listing page */

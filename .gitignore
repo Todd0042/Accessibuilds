@@ -24,9 +24,13 @@ gen_icon.py
 # Nexus store copy (local reference only)
 Nexus-release-text.txt
 
-# Scraping tools (keep scraper configs, not cache)
+# Scraping tools (keep scripts, not cache or output)
 scraper/__pycache__/
 scraper/.scraper_cache/
+scraper/.mb_cache/
+scraper/.hs_cache/
+mb-builds/
+hs-builds/
 
 # IDE
 .vscode/

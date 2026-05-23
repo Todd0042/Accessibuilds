@@ -34,8 +34,10 @@ static std::thread                s_player_thread;
 static std::string                s_status;
 
 /* Reference build filters & search */
-static int  s_filter_prof  = 0;  /* 0 = All */
-static int  s_filter_type  = 0;  /* 0 = All */
+static int  s_filter_prof      = 0;  /* 0 = All */
+static int  s_filter_type      = 0;  /* 0 = All */
+static int  s_filter_source    = 0;  /* 0 = All */
+static int  s_filter_game_mode = 0;  /* 0 = All */
 static char s_search_buf[128] = {};
 
 static const char* PROF_FILTER_NAMES[] = {
@@ -44,6 +46,18 @@ static const char* PROF_FILTER_NAMES[] = {
 };
 static const char* TYPE_FILTER_NAMES[] = {
     "All","Power","Condi","Support","Heal","Quickness","Alacrity"
+};
+static const char* SOURCE_FILTER_NAMES[] = {
+    "All Sources", "Snow Crows", "Hardstuck"
+};
+static const char* SOURCE_VALUES[] = {
+    "", "snowcrows", "hardstuck"
+};
+static const char* GAME_MODE_FILTER_NAMES[] = {
+    "All Modes", "Group PvE", "WvW Zerg", "WvW Roaming", "Open World", "Raid", "Fractal", "Strike"
+};
+static const char* GAME_MODE_VALUES[] = {
+    "", "GroupPvE", "WvWZerg", "WvWRoaming", "OpenWorld", "Raid", "Fractal", "Strike"
 };
 
 /* Character picker (used when Mumble hasn't detected a live character) */
@@ -389,6 +403,20 @@ static void RenderBuildDropdown()
         filtered = std::move(searched);
     }
 
+    /* Apply source and game mode filters */
+    if (s_filter_source > 0 || s_filter_game_mode > 0) {
+        std::vector<const GW2::SCBuild*> filtered2;
+        for (const auto* b : filtered) {
+            if (s_filter_source > 0 && b->source != SOURCE_VALUES[s_filter_source])
+                continue;
+            if (s_filter_game_mode > 0 && !b->game_mode.empty() &&
+                b->game_mode != GAME_MODE_VALUES[s_filter_game_mode])
+                continue;
+            filtered2.push_back(b);
+        }
+        filtered = std::move(filtered2);
+    }
+
     std::vector<const GW2::SCBuild*> access_builds;
     std::vector<const GW2::SCBuild*> normal_builds;
     access_builds.reserve(filtered.size());
@@ -725,7 +753,7 @@ void Render()
         ImGui::SameLine();
         RenderBuildDropdown();
 
-        /* Filter row */
+        /* Filter row 1: profession, type, search */
         ImGui::PushItemWidth(S(130));
         if (ImGui::BeginCombo("##prof_filter", PROF_FILTER_NAMES[s_filter_prof], ImGuiComboFlags_HeightLarge)) {
             for (int i = 0; i < 10; i++)
@@ -744,6 +772,22 @@ void Render()
         ImGui::PushItemWidth(S(180));
         ImGui::InputTextWithHint("##build_search", "Search...", s_search_buf,
                                  sizeof(s_search_buf));
+        ImGui::PopItemWidth();
+
+        /* Filter row 2: source website and game mode */
+        if (ImGui::BeginCombo("##source_filter", SOURCE_FILTER_NAMES[s_filter_source], ImGuiComboFlags_HeightLarge)) {
+            for (int i = 0; i < 3; i++)
+                if (ImGui::Selectable(SOURCE_FILTER_NAMES[i], s_filter_source == i))
+                    s_filter_source = i;
+            ImGui::EndCombo();
+        }
+        ImGui::SameLine();
+        if (ImGui::BeginCombo("##mode_filter", GAME_MODE_FILTER_NAMES[s_filter_game_mode], ImGuiComboFlags_HeightLarge)) {
+            for (int i = 0; i < 8; i++)
+                if (ImGui::Selectable(GAME_MODE_FILTER_NAMES[i], s_filter_game_mode == i))
+                    s_filter_game_mode = i;
+            ImGui::EndCombo();
+        }
         ImGui::PopItemWidth();
         ImGui::Separator();
     }

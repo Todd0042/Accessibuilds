@@ -2,6 +2,7 @@
 #include "../api/snowcrows.h"
 #include "../shared.h"
 #include "../sc_builds_embedded.h"
+#include "../hs_builds_embedded.h"
 #include <nlohmann/json.hpp>
 #include <fstream>
 #include <mutex>
@@ -78,6 +79,29 @@ void SetCacheDir(const std::string& addon_dir)
         Log(LOGL_INFO, ("BuildCache: updated SC builds database to v"
                         + std::to_string(sc_builds_version)).c_str());
     }
+
+    /* Deploy bundled Hardstuck builds when the DLL carries a newer version */
+    std::string hs_path     = s_CacheDir + "hs_builds_full.json";
+    std::string hs_ver_path = s_CacheDir + "hs_builds_version.txt";
+
+    int hs_cached_version = 0;
+    {
+        std::ifstream vf(hs_ver_path);
+        if (vf.is_open()) vf >> hs_cached_version;
+    }
+
+    if (hs_builds_version > hs_cached_version) {
+        std::ofstream f(hs_path, std::ios::binary);
+        if (f.is_open()) {
+            f.write(reinterpret_cast<const char*>(hs_builds_json),
+                    (std::streamsize)hs_builds_json_len);
+            f.close();
+        }
+        std::ofstream vf(hs_ver_path);
+        if (vf.is_open()) vf << hs_builds_version;
+        Log(LOGL_INFO, ("BuildCache: deployed Hardstuck builds database v"
+                        + std::to_string(hs_builds_version)).c_str());
+    }
 }
 
 /* ── SC builds ───────────────────────────────────────────────────────────── */
@@ -111,61 +135,85 @@ bool LoadSCBuilds(std::vector<GW2::SCBuild>& out_builds)
 {
     if (s_CacheDir.empty()) return false;
 
-    static const struct { const char* slug; GW2::Profession prof; } PROFS[] = {
-        {"guardian",     GW2::Profession::Guardian},
-        {"warrior",      GW2::Profession::Warrior},
-        {"engineer",     GW2::Profession::Engineer},
-        {"ranger",       GW2::Profession::Ranger},
-        {"thief",        GW2::Profession::Thief},
-        {"elementalist", GW2::Profession::Elementalist},
-        {"mesmer",       GW2::Profession::Mesmer},
-        {"necromancer",  GW2::Profession::Necromancer},
-        {"revenant",     GW2::Profession::Revenant},
-        {nullptr,        GW2::Profession::None},
+    static const char* PROF_SLUGS[] = {
+        "guardian","warrior","engineer","ranger","thief",
+        "elementalist","mesmer","necromancer","revenant", nullptr
     };
 
-    /* Load per-profession files (written by scraper --prof <name>).
-     * These provide profession-specific builds and are merged with the combined file.
-     * If a build exists in both per-prof and combined sources, the per-prof copy wins.
-     */
-    std::set<std::string> seen_ids;
-    for (int i = 0; PROFS[i].slug; i++) {
-        std::string path = s_CacheDir + "sc_builds_" + PROFS[i].slug + ".json";
+    /* ── Snow Crows builds ───────────────────────────────────────────────── */
+    std::set<std::string> sc_seen;
+    for (int i = 0; PROF_SLUGS[i]; i++) {
+        std::string path = s_CacheDir + "sc_builds_" + PROF_SLUGS[i] + ".json";
         std::vector<GW2::SCBuild> tmp;
         if (SnowCrows::LoadBuildsFromFile(path, tmp) > 0) {
             for (auto& b : tmp) {
-                if (!b.id.empty()) seen_ids.insert(b.id);
+                b.source    = "snowcrows";
+                if (b.game_mode.empty()) b.game_mode = "GroupPvE";
+                if (!b.id.empty()) sc_seen.insert(b.id);
                 out_builds.push_back(std::move(b));
             }
         }
     }
-
-    /* Load the combined file as a supplemental source; do not skip professions.
-     * Duplicate build IDs that already came from per-profession files are ignored.
-     */
     {
         std::vector<GW2::SCBuild> full;
         if (SnowCrows::LoadBuildsFromFile(s_CacheDir + "sc_builds_full.json", full) > 0) {
             for (auto& b : full) {
-                if (!b.id.empty() && seen_ids.count(b.id)) continue;
-                if (!b.id.empty()) seen_ids.insert(b.id);
+                if (!b.id.empty() && sc_seen.count(b.id)) continue;
+                b.source    = "snowcrows";
+                if (b.game_mode.empty()) b.game_mode = "GroupPvE";
+                if (!b.id.empty()) sc_seen.insert(b.id);
+                out_builds.push_back(std::move(b));
+            }
+        }
+    }
+    {
+        std::vector<GW2::SCBuild> acc;
+        if (SnowCrows::LoadBuildsFromFile(s_CacheDir + "sc_builds_accessibility.json", acc) > 0) {
+            for (auto& b : acc) {
+                b.source    = "snowcrows";
+                if (b.game_mode.empty()) b.game_mode = "GroupPvE";
+                out_builds.push_back(std::move(b));
+            }
+        }
+    }
+    if (sc_seen.empty()) {
+        std::vector<GW2::SCBuild> fallback;
+        if (SnowCrows::LoadBuildsFromFile(s_CacheDir + "sc_builds.json", fallback) > 0) {
+            for (auto& b : fallback) {
+                b.source    = "snowcrows";
+                if (b.game_mode.empty()) b.game_mode = "GroupPvE";
                 out_builds.push_back(std::move(b));
             }
         }
     }
 
-    /* Load accessibility builds — always included, not gated by covered profs */
+    /* ── Hardstuck builds ────────────────────────────────────────────────── */
+    std::set<std::string> hs_seen;
+    for (int i = 0; PROF_SLUGS[i]; i++) {
+        std::string path = s_CacheDir + "hs_builds_" + PROF_SLUGS[i] + ".json";
+        std::vector<GW2::SCBuild> tmp;
+        if (SnowCrows::LoadBuildsFromFile(path, tmp) > 0) {
+            for (auto& b : tmp) {
+                if (b.source.empty())    b.source    = "hardstuck";
+                if (!b.id.empty()) hs_seen.insert(b.id);
+                out_builds.push_back(std::move(b));
+            }
+        }
+    }
     {
-        std::vector<GW2::SCBuild> acc;
-        if (SnowCrows::LoadBuildsFromFile(s_CacheDir + "sc_builds_accessibility.json", acc) > 0) {
-            for (auto& b : acc) out_builds.push_back(std::move(b));
+        std::vector<GW2::SCBuild> hs_full;
+        if (SnowCrows::LoadBuildsFromFile(s_CacheDir + "hs_builds_full.json", hs_full) > 0) {
+            for (auto& b : hs_full) {
+                if (!b.id.empty() && hs_seen.count(b.id)) continue;
+                if (b.game_mode == "Unknown") continue; /* skip PvP builds */
+                if (b.source.empty()) b.source = "hardstuck";
+                if (!b.id.empty()) hs_seen.insert(b.id);
+                out_builds.push_back(std::move(b));
+            }
         }
     }
 
-    if (!out_builds.empty()) return true;
-
-    /* Final fallback to the summary-only cache */
-    return SnowCrows::LoadBuildsFromFile(s_CacheDir + "sc_builds.json", out_builds) > 0;
+    return !out_builds.empty();
 }
 
 bool SaveSCBuildsFull(const std::vector<GW2::SCBuild>& builds)

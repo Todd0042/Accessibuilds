@@ -134,8 +134,10 @@ bool ParseBuildJSON(const std::string& json_str, GW2::SCBuild& out)
         out.patch_version = j.value("patch_version", "");
         out.benchmark_dps = j.value("benchmark_dps", 0.0);
         out.notes       = j.value("notes", "");
+        out.source      = j.value("source",     "");
         out.source_url  = j.value("source_url", "");
-        out.chat_code   = j.value("chat_code", "");
+        out.game_mode   = j.value("game_mode",  "");
+        out.chat_code   = j.value("chat_code",  "");
         out.is_legacy        = j.value("is_legacy", false);
         out.is_accessibility = j.value("accessibility", false);
         out.build_type = BuildTypeFromString(
