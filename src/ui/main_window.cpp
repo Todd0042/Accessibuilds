@@ -230,16 +230,12 @@ bool IsVisible() { return s_visible; }
 static void RenderSetupScreen()
 {
     if (s_setup_complete) return;
-    ImGui::SetNextWindowSize(ImVec2(S(500), S(250)), ImGuiCond_Once);
+    ImGui::SetNextWindowSize(ImVec2(S(500), S(160)), ImGuiCond_Once);
     if (!ImGui::Begin("Welcome to Build Coach", nullptr,
                        ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoResize)) {
         ImGui::End();
         return;
     }
-    ImGui::TextWrapped(
-        "Welcome to Build Coach! This addon compares your equipped gear "
-        "against reference builds from community sites.");
-    ImGui::Spacing();
     ImGui::Text("GW2 API Key:");
     ImGui::SameLine();
     ImGui::TextDisabled("(optional — needed to fetch your character data)");
@@ -249,9 +245,6 @@ static void RenderSetupScreen()
         std::lock_guard<std::mutex> lock(g_APIKeyMutex);
         strncpy(g_APIKey, s_api_key_buf, 72);
     }
-    ImGui::Spacing();
-    ImGui::TextWrapped(
-        "To get started, create or import builds in the Build Editor screen.");
     ImGui::Spacing();
     if (ImGui::Button("Get Started", ImVec2(S(120), 0))) {
         s_setup_complete = true;
