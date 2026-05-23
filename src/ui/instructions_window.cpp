@@ -14,7 +14,7 @@ void Render()
 {
     if (!s_visible) return;
 
-    ImGui::SetNextWindowSize(ImVec2(S(540), S(620)), ImGuiCond_FirstUseEver);
+    ImGui::SetNextWindowSize(ImVec2(S(560), S(720)), ImGuiCond_FirstUseEver);
     ImGui::SetNextWindowSizeConstraints(ImVec2(S(400), S(300)), ImVec2(FLT_MAX, FLT_MAX));
 
     if (!ImGui::Begin("Instructions", &s_visible)) {
@@ -22,23 +22,58 @@ void Render()
         return;
     }
 
+    /* ── Getting Started ── */
+    ImGui::TextDisabled("Getting Started");
+    ImGui::Separator();
+    ImGui::TextWrapped(
+        "Build Coach has no reference builds bundled — you add them yourself by importing "
+        "build pages from community sites. Once saved, they appear in the main window "
+        "dropdown so you can compare your gear against them.");
+    ImGui::Spacing();
+    ImGui::TextWrapped(
+        "Quick start: open Build Editor, paste a build page URL (Snow Crows, Hardstuck, "
+        "GuildJen, MetaBattle, or gw2skills.net) into the Import URL field, click the "
+        "matching site button, then click Save. The build is now in your list.");
+    ImGui::Spacing(); ImGui::Spacing();
+
+    /* ── URL Import ── */
+    ImGui::TextDisabled("Importing Builds via URL");
+    ImGui::Separator();
+    ImGui::TextWrapped(
+        "The Build Editor has a single Import URL field that accepts pages from any "
+        "supported site. Paste a build page URL, then click the button for that site. "
+        "The addon fetches and parses the page — traits, skills, gear, consumables, "
+        "and weapon sets are loaded into the editor automatically.");
+    ImGui::Spacing();
+    ImGui::BulletText("Snow Crows  — snowcrows.com  (full gear + traits + skills)");
+    ImGui::BulletText("Hardstuck   — hardstuck.gg   (full gear + traits + skills)");
+    ImGui::BulletText("GuildJen    — guildjen.com   (full gear + traits + skills)");
+    ImGui::BulletText("MetaBattle  — metabattle.com (full gear + traits + skills)");
+    ImGui::BulletText("gw2skills   — en.gw2skills.net (traits + skills + equipment when saved)");
+    ImGui::Spacing();
+    ImGui::TextWrapped(
+        "After the import loads, review the form, give the build a name, and click Save. "
+        "It will then appear in the main window Build dropdown for comparison.");
+    ImGui::Spacing();
+    ImGui::TextWrapped(
+        "Tip: the site buttons are just hints — paste any supported URL and click any "
+        "button; the addon auto-detects the site from the URL.");
+    ImGui::Spacing(); ImGui::Spacing();
+
     /* ── General Usage ── */
     ImGui::TextDisabled("General Usage");
     ImGui::Separator();
     ImGui::TextWrapped(
-        "Build Coach helps you compare your equipped gear against Snow Crows reference builds. "
-        "Select a reference build from the dropdown, make sure your character is loaded, "
-        "and the Build / Gear / DPS tabs will show you exactly what differs.");
+        "Select a saved reference build from the dropdown in the main window, make sure "
+        "your character is loaded, and the Build / Gear / DPS tabs will show exactly "
+        "what differs between your equipped gear and the reference.");
     ImGui::Spacing();
-
     ImGui::TextWrapped(
-        "API Key: Click the API Key button to set your GW2 API key (needed to fetch "
-        "your character's gear and traits). Requires at least the 'builds' and 'characters' "
-        "permissions.");
+        "API Key: click the API Key button to set your GW2 API key. Requires at least "
+        "the ‘builds’ and ‘characters’ permissions.");
     ImGui::Spacing();
-
     ImGui::TextWrapped(
-        "Refresh: Click Refresh to fetch your current character's data from the GW2 API. "
+        "Refresh: click Refresh to fetch your current character’s data from the GW2 API. "
         "Auto-fetches when you change maps.");
     ImGui::Spacing(); ImGui::Spacing();
 
@@ -46,96 +81,77 @@ void Render()
     ImGui::TextDisabled("Build Editor");
     ImGui::Separator();
     ImGui::TextWrapped(
-        "Click Build Editor in the toolbar to open the build editor. Here you can:"
-    );
-    ImGui::BulletText("Create and save your own builds for later reference");
-    ImGui::BulletText("Import your current character's data as a starting template");
-    ImGui::BulletText("Import from gw2skills.net (see below)");
-    ImGui::BulletText("Export and import builds via compact share codes (AB: format)");
-    ImGui::Spacing(); ImGui::Spacing();
-
-    /* ── Share Code Export / Import ── */
-    ImGui::TextDisabled("Exporting via Share Code (AB: format)");
-    ImGui::Separator();
-    ImGui::TextWrapped(
-        "The share code is a compact, self-contained build representation that starts "
-        "with AB:. It encodes profession, traits, skills, all gear slots with stats and "
-        "upgrades, relic, food, and utility into roughly 43 base64 characters — small "
-        "enough to share in chat, text files, or Discord."
-    );
-    ImGui::Spacing();
-    ImGui::TextWrapped(
-        "To export: open the Build Editor, load or create a build, then click Copy. "
-        "The code is copied to your clipboard. You can also export the current reference "
-        "build from the Build or Gear tabs via their Copy Share Code buttons."
-    );
-    ImGui::Spacing();
-    ImGui::TextWrapped(
-        "To import: paste an AB: code into the import field in the Build Editor and "
-        "click Import. The build is loaded into the editor form where you can review, "
-        "modify, and save it."
-    );
-    ImGui::Spacing();
-    ImGui::TextWrapped(
-        "Share codes encode both main-hand and off-hand weapon sets (A and B), including "
-        "all weapon types and sigils for each set. Relic, food, and utility are included. "
-        "Revenant legends are not yet encoded — skills are stored as raw IDs."
-    );
+        "Click Build Editor in the toolbar to open the build editor. Here you can:");
+    ImGui::BulletText("Import builds from community site URLs (see above)");
+    ImGui::BulletText("Create and save builds manually");
+    ImGui::BulletText("Import your current character’s data as a starting template");
+    ImGui::BulletText("Import and export builds via compact AB: share codes");
     ImGui::Spacing(); ImGui::Spacing();
 
     /* ── gw2skills.net Import ── */
     ImGui::TextDisabled("Importing from gw2skills.net");
     ImGui::Separator();
     ImGui::TextWrapped(
-        "The build editor can import builds directly from gw2skills.net. This is useful "
-        "for importing builds from community sites, build videos, or your own saved builds "
-        "on the editor."
-    );
-    ImGui::Spacing();
-    ImGui::BulletText("Go to gw2skills.net and set up your desired build");
-    ImGui::BulletText("Copy the page URL from your browser's address bar");
-    ImGui::BulletText("Paste the URL into the Import from gw2skills.net field in the Build Editor");
-    ImGui::BulletText("Click Import — traits, skills, equipment, and consumables will be loaded");
-    ImGui::Spacing();
-    ImGui::TextWrapped(
-        "Note: gw2skills.net uses internal editor IDs for equipment stats and upgrades. "
-        "The addon fetches the editor database to resolve these to human-readable names. "
-        "Stats and upgrades are resolved by name, so they'll work even if the specific "
-        "item IDs differ."
-    );
+        "gw2skills.net links import traits, skills, weapon types, and equipment "
+        "stats when the build was saved with gear. Copy the page URL from your browser "
+        "after setting up a build, paste it into the Import URL field, and click "
+        "gw2skills. Stats and upgrades are resolved from the site’s editor database "
+        "to human-readable names.");
     ImGui::Spacing(); ImGui::Spacing();
 
-    /* ── Reference Builds ── */
-    ImGui::TextDisabled("Reference Builds");
+    /* ── Share Code Export / Import ── */
+    ImGui::TextDisabled("Share Codes (AB: format)");
     ImGui::Separator();
     ImGui::TextWrapped(
-        "The addon fetches builds from community reference sites like Snow Crows so you can compare your gear, traits, skills, and rotations against popular setups."
-    );
+        "Share codes are compact, self-contained build snapshots that start with AB:. "
+        "They encode profession, traits, skills, all gear slots with stats and upgrades, "
+        "relic, food, and utility — small enough to share in chat or Discord.");
     ImGui::Spacing();
     ImGui::TextWrapped(
-        "Accessibility builds are a curated subset intended for players learning a class. "
-        "They typically use simpler rotations and more forgiving gear while still aiming to be effective in group PvE.");
+        "To export: open the Build Editor, load or create a build, then click Copy. "
+        "You can also export the current reference build from the Build or Gear tabs "
+        "via their Copy Share Code buttons.");
+    ImGui::Spacing();
+    ImGui::TextWrapped(
+        "To import: paste an AB: code into the share code field in the Build Editor "
+        "and click Import. The build loads into the editor form for review and saving.");
     ImGui::Spacing(); ImGui::Spacing();
 
-    ImGui::TextDisabled("Hardstuck Builds");
+    /* ── Reference Sites ── */
+    ImGui::TextDisabled("Snow Crows");
     ImGui::Separator();
     ImGui::TextWrapped(
-        "Hardstuck is a competitive GW2 site offering builds, team guides, and class-focused recommendations. "
-        "It’s a useful resource for players interested in high-end or structured PvE content and for comparing your setup with player-tested builds."
-    );
+        "Snow Crows is the primary benchmark site for GW2 PvE. Builds are tested and "
+        "optimised for maximum DPS or support output in organised groups. Accessibility "
+        "builds (marked on the site) use simpler rotations and are great for learning.");
     ImGui::Spacing(); ImGui::Spacing();
 
-    ImGui::TextDisabled("GuildJen Builds");
+    ImGui::TextDisabled("Hardstuck");
     ImGui::Separator();
     ImGui::TextWrapped(
-        "GuildJen provides GW2 build guides, tier lists, and content for WvW, PvP, and open world. "
-        "It offers class-specific builds with detailed explanations, making it a great resource for competitive and solo play."
-    );
+        "Hardstuck covers high-end PvE builds with class guides and team compositions. "
+        "A good resource for raid and strike content and for comparing your setup with "
+        "player-tested builds.");
+    ImGui::Spacing(); ImGui::Spacing();
+
+    ImGui::TextDisabled("GuildJen");
+    ImGui::Separator();
+    ImGui::TextWrapped(
+        "GuildJen provides build guides for WvW, PvP, and open world with tier lists "
+        "and detailed class explanations. Useful for competitive and solo play.");
+    ImGui::Spacing(); ImGui::Spacing();
+
+    ImGui::TextDisabled("MetaBattle");
+    ImGui::Separator();
+    ImGui::TextWrapped(
+        "MetaBattle is a community wiki covering the current meta builds across all "
+        "game modes — PvE, WvW, and PvP. Builds are maintained by the community and "
+        "updated as the meta shifts.");
     ImGui::Spacing(); ImGui::Spacing();
 
     ImGui::Separator();
     ImGui::Spacing();
-    ImGui::TextDisabled("For more information, visit:");
+    ImGui::TextDisabled("Visit:");
     ImGui::SameLine();
     if (ImGui::Button("snowcrows.com")) {
         ShellExecuteA(nullptr, "open", "https://snowcrows.com/", nullptr, nullptr, SW_SHOWNORMAL);
@@ -147,6 +163,10 @@ void Render()
     ImGui::SameLine();
     if (ImGui::Button("guildjen.com")) {
         ShellExecuteA(nullptr, "open", "https://guildjen.com/", nullptr, nullptr, SW_SHOWNORMAL);
+    }
+    ImGui::SameLine();
+    if (ImGui::Button("metabattle.com")) {
+        ShellExecuteA(nullptr, "open", "https://metabattle.com/", nullptr, nullptr, SW_SHOWNORMAL);
     }
 
     ImGui::End();
