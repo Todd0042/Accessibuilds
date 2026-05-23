@@ -766,24 +766,6 @@ void Render()
     if (s_active_tab != prev_tab)
         s_resize_for_tab = -1;
 
-    /* Inspirational note */
-    {
-        float line_h = ImGui::GetTextLineHeightWithSpacing();
-        float pad    = ImGui::GetStyle().WindowPadding.y;
-        ImVec2 ws    = ImGui::GetWindowSize();
-        float y      = ws.y - line_h * (APIRateLimit::ShouldShowLimitedMessage() ? 4 : 3) - pad;
-        if (y > ImGui::GetCursorPosY()) {
-            ImGui::SetCursorPosY(y);
-            ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(0.6f, 0.75f, 1.0f, 0.8f));
-            ImGui::TextWrapped(
-                "Snow Crows, Hardstuck, and GuildJen are excellent build resources for all GW2 game modes. "
-                "Snow Crows and Hardstuck focus on PvE and raid builds, while GuildJen covers WvW, PvP, and open world. "
-                "Start with accessibility and beginner PvE builds on Snow Crows/Hardstuck, "
-                "then explore GuildJen for competitive play, WvW, and solo open-world guides.");
-            ImGui::PopStyleColor();
-        }
-    }
-
     /* Rate-limit notice at the bottom of the window */
     if (APIRateLimit::ShouldShowLimitedMessage()) {
         float line_h = ImGui::GetTextLineHeightWithSpacing();
