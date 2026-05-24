@@ -1013,18 +1013,62 @@ bool ParseBuildTemplateLink(const std::string& chat_code,
      * Layout matches GenerateBuildChatCodeAsync encoding:
      *   data[2 + i*2]     = spec_id low byte (all current spec IDs < 100)
      *   data[2 + i*2 + 1] = trait choices packed as 3×2-bit values */
+    uint8_t trait_choices[3][3] = {};
     for (int i = 0; i < 3; i++) {
         out_traits.lines[i].spec_id = data[2 + i * 2];
         uint8_t tbyte = data[2 + i * 2 + 1];
-        int choices[3] = { (tbyte & 3), ((tbyte >> 2) & 3), ((tbyte >> 4) & 3) };
+        trait_choices[i][0] = tbyte & 3;
+        trait_choices[i][1] = (tbyte >> 2) & 3;
+        trait_choices[i][2] = (tbyte >> 4) & 3;
+    }
 
-        /* Resolve trait IDs from choices using the spec cache */
+    /* Fetch any spec major_traits not already in the cache.
+     * Needed when game is not running (GW2BuildNumber == 0) so LoadPublicCache
+     * was a no-op — the gw2skills importer calls this from a background thread
+     * so blocking here is fine. */
+    {
+        std::string missing_ids;
+        {
+            std::lock_guard<std::mutex> lk(s_pubcache_mutex);
+            for (int i = 0; i < 3; i++) {
+                uint32_t sid = out_traits.lines[i].spec_id;
+                if (sid && s_pubcache_specs.find(sid) == s_pubcache_specs.end()) {
+                    if (!missing_ids.empty()) missing_ids += ",";
+                    missing_ids += std::to_string(sid);
+                }
+            }
+        }
+        if (!missing_ids.empty()) {
+            std::wstring path = L"/v2/specializations?ids=" +
+                std::wstring(missing_ids.begin(), missing_ids.end());
+            auto resp = Http::Get(GW2API::HOST, path);
+            if (resp.ok()) {
+                try {
+                    auto arr = json::parse(resp.body);
+                    std::lock_guard<std::mutex> lk(s_pubcache_mutex);
+                    for (auto& s : arr) {
+                        uint32_t sid = s.value("id", 0u);
+                        if (!sid) continue;
+                        std::vector<uint32_t> major;
+                        for (auto& v : s.value("major_traits", json::array()))
+                            major.push_back(v.get<uint32_t>());
+                        if ((int)major.size() == 9)
+                            s_pubcache_specs[sid] = std::move(major);
+                    }
+                    SavePublicCache(gw2_build);
+                } catch (...) {}
+            }
+        }
+    }
+
+    /* Resolve trait IDs from choices using the (now populated) spec cache */
+    for (int i = 0; i < 3; i++) {
         std::lock_guard<std::mutex> lk(s_pubcache_mutex);
         auto it = s_pubcache_specs.find(out_traits.lines[i].spec_id);
         if (it != s_pubcache_specs.end()) {
             const auto& major = it->second;
             for (int t = 0; t < 3; t++) {
-                int pick = choices[t];
+                int pick = trait_choices[i][t];
                 if (pick >= 1 && pick <= 3) {
                     int idx = t * 3 + (pick - 1);
                     if (idx < (int)major.size())
@@ -1032,7 +1076,6 @@ bool ParseBuildTemplateLink(const std::string& chat_code,
                 }
             }
         }
-        /* If traits not resolved yet, they remain 0 — that's OK */
     }
 
     /* Skill palette IDs (bytes 8-27, 5 skills × 4 bytes = 20 bytes, little-endian) */

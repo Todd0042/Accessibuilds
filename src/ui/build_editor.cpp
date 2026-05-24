@@ -976,24 +976,6 @@ static void StartGw2SkillsImport(const std::string& url)
                 if (wpn.size() >= 3 && wpn[2].is_number_integer()) result.weapon_b1 = editorWep(wpn[2].get<int>());
                 if (wpn.size() >= 4 && wpn[3].is_number_integer()) result.weapon_b2 = editorWep(wpn[3].get<int>());
             }
-            /* Trait fallback: if chatlink didn't resolve individual traits, use preload
-             * which stores API trait IDs directly. Format: [[spec_id, t1, t2, t3], ...] */
-            if (j.contains("trait") && j["trait"].is_array()) {
-                auto& tr = j["trait"];
-                bool missing = true;
-                for (int i = 0; i < 3 && missing; i++)
-                    for (int t = 0; t < 3 && missing; t++)
-                        if (result.traits.lines[i].traits[t].trait_id) missing = false;
-                if (missing) {
-                    for (int i = 0; i < 3 && i < (int)tr.size(); i++) {
-                        if (!tr[i].is_array() || tr[i].size() < 4) continue;
-                        if (tr[i][0].is_number_integer()) result.traits.lines[i].spec_id = tr[i][0].get<int>();
-                        for (int t = 0; t < 3; t++)
-                            if (tr[i][1+t].is_number_integer())
-                                result.traits.lines[i].traits[t].trait_id = tr[i][1+t].get<int>();
-                    }
-                }
-            }
             /* Load editor DB for name lookups (only if we have equipment data). 
              * The dbid is in the constructor args, e.g. `dbid: 1777332967,` */
             int editor_dbid = 0;
