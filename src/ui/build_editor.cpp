@@ -1241,6 +1241,14 @@ static void ApplyGw2SkillsResult()
     }
 
     s_gw2skills_done_time = std::chrono::steady_clock::now();
+
+    /* All data has been extracted — release the ~730KB editor DB from memory.
+     * It will be re-fetched (and re-cached on disk) if needed for a future import. */
+    {
+        std::lock_guard<std::mutex> lk(s_editor_db_mutex);
+        s_editor_db = nlohmann::json{};
+        s_editor_db_dbid = 0;
+    }
 }
 
 static void BuildToForm(const GW2::SCBuild& b)

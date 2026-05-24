@@ -479,7 +479,7 @@ __declspec(dllexport) void AddonUnload()
 
 __declspec(dllexport) AddonDefinition_t* GetAddonDef()
 {
-    static AddonVersion_t version = {1, 2, 6, 0};
+    static AddonVersion_t version = {1, 2, 7, 0};
     static AddonDefinition_t def  = {
         ADDON_SIGNATURE,
         NEXUS_API_VERSION,

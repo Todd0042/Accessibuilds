@@ -104,6 +104,10 @@ std::vector<Entry> GetForProfession(const std::string& profession,
     auto it = s_cache.find(profession);
     if (it != s_cache.end()) return it->second;
 
+    /* Keep only the current profession's entries — evict anything else.
+     * Max 9 professions, but there's no reason to hold them all in memory. */
+    s_cache.clear();
+
     std::string path = CachePath(cache_dir, profession);
     std::vector<Entry> entries;
 
