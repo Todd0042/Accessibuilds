@@ -1,0 +1,4432 @@
+[
+  {
+    "id": "mb-mesmer-chronomancer-boon-support-condi-dps",
+    "name": "Chronomancer - Boon Support Condi DPS",
+    "profession": "Mesmer",
+    "elite_spec": "Chronomancer",
+    "build_type": "Condi",
+    "game_mode": "Raid",
+    "tier": "Great",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Raid build for Chronomancer in GW2 that focuses on Condition Damage, Support and Utility. This build is rated great.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Chronomancer_-_Boon_Support_Condi_DPS",
+    "gw2skills_url": "",
+    "chat_code": "[&DQctPRg/KAojDyMPgQGBAYMBgwFrAWsBvAG8AQAAAAAAAAAAAAAAAAAAAAADVQBWADEAAA==]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 45,
+        "traits": [
+          670,
+          669,
+          1687
+        ]
+      },
+      "line2": {
+        "spec_id": 24,
+        "traits": [
+          691,
+          1690,
+          753
+        ]
+      },
+      "line3": {
+        "spec_id": 40,
+        "traits": [
+          1995,
+          1913,
+          -1
+        ]
+      }
+    },
+    "skills": {
+      "heal": 10289,
+      "utilities": [
+        10276,
+        10168,
+        10285
+      ],
+      "elite": 10189
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100432,
+      "food_id": 95942,
+      "utility_id": 77567,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 75770,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 73225,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 71436,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 73852,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 75378,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 74264,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79444,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79745,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 80241,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79124,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 79712,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 76688,
+          "stat_id": 0,
+          "upgrade_id": 24560,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 76271,
+          "stat_id": 0,
+          "upgrade_id": 44944,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 71387,
+          "stat_id": 0,
+          "upgrade_id": 48911,
+          "infusions": [],
+          "upgrade2_id": 44944
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-mesmer-chronomancer-boon-support-healer",
+    "name": "Chronomancer - Boon Support Healer",
+    "profession": "Mesmer",
+    "elite_spec": "Chronomancer",
+    "build_type": "Heal",
+    "game_mode": "Raid",
+    "tier": "Great",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Raid and Fractal build for Chronomancer in GW2 that focuses on Support and Utility. This is a meta build.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Chronomancer_-_Boon_Support_Healer",
+    "gw2skills_url": "",
+    "chat_code": "[&DQctOhcqKAvwEm0BaQFpAc8SAAAAAAAAvAG8AQAAAAAAAAAAAAAAAAAAAAADVQBWADEAAA==]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 45,
+        "traits": [
+          675,
+          668,
+          1687
+        ]
+      },
+      "line2": {
+        "spec_id": 23,
+        "traits": [
+          738,
+          740,
+          1866
+        ]
+      },
+      "line3": {
+        "spec_id": 40,
+        "traits": [
+          1987,
+          1913,
+          -1
+        ]
+      }
+    },
+    "skills": {
+      "heal": 10289,
+      "utilities": [
+        10276,
+        10168,
+        30769
+      ],
+      "elite": 30643
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 99965,
+      "food_id": 68634,
+      "utility_id": 67528,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 85161,
+          "stat_id": 0,
+          "stat_name": "Harrier",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 85089,
+          "stat_id": 0,
+          "stat_name": "Harrier",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 85098,
+          "stat_id": 0,
+          "stat_name": "Harrier",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85004,
+          "stat_id": 0,
+          "stat_name": "Harrier",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 70414,
+          "stat_id": 0,
+          "stat_name": "Minstrel",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 85317,
+          "stat_id": 0,
+          "stat_name": "Harrier",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 1134,
+          "stat_name": "Minstrel",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 83429,
+          "stat_id": 0,
+          "stat_name": "Harrier",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79745,
+          "stat_id": 1134,
+          "stat_name": "Minstrel",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 80241,
+          "stat_id": 1134,
+          "stat_name": "Minstrel",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79124,
+          "stat_id": 1134,
+          "stat_name": "Minstrel",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 79712,
+          "stat_id": 1134,
+          "stat_name": "Minstrel",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 85027,
+          "stat_id": 0,
+          "upgrade_id": 74326,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 84957,
+          "stat_id": 0,
+          "upgrade_id": 72339,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 85348,
+          "stat_id": 0,
+          "upgrade_id": 74326,
+          "infusions": [],
+          "upgrade2_id": 72339
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-mesmer-chronomancer-boon-support-power-dps",
+    "name": "Chronomancer - Boon Support Power DPS",
+    "profession": "Mesmer",
+    "elite_spec": "Chronomancer",
+    "build_type": "Power",
+    "game_mode": "Raid",
+    "tier": "Great",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Raid build for Chronomancer in GW2 that focuses on Direct Damage, Support and Utility. This is a meta build.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Chronomancer_-_Boon_Support_Power_DPS",
+    "gw2skills_url": "",
+    "chat_code": "[&DQcKGgEdKAUjDyMPBBNpAYcSawHPEo8BsxK8AQAAAAAAAAAAAAAAAAAAAAADLwBaAAkBAA==]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 10,
+        "traits": [
+          682,
+          713,
+          681
+        ]
+      },
+      "line2": {
+        "spec_id": 1,
+        "traits": [
+          701,
+          708,
+          692
+        ]
+      },
+      "line3": {
+        "spec_id": 40,
+        "traits": [
+          1838,
+          2009,
+          -1
+        ]
+      }
+    },
+    "skills": {
+      "heal": 62510,
+      "utilities": [
+        62560,
+        62607,
+        10280
+      ],
+      "elite": 10174
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 103574,
+      "food_id": 41569,
+      "utility_id": 78305,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48081,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48083,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48079,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48080,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48136,
+          "stat_id": 0,
+          "stat_name": "Assassin",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48078,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 37009,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 39233,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 39232,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 39273,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 37075,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 37086,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46760,
+          "stat_id": 0,
+          "upgrade_id": 24615,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 46774,
+          "stat_id": 0,
+          "upgrade_id": 24618,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 46764,
+          "stat_id": 0,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 24618
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-mesmer-chronomancer-power-dps",
+    "name": "Chronomancer - Power DPS",
+    "profession": "Mesmer",
+    "elite_spec": "Chronomancer",
+    "build_type": "Power",
+    "game_mode": "Raid",
+    "tier": "Great",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Raid and Fractal build for Chronomancer in GW2 that focuses on Direct Damage. This build is rated great.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Chronomancer_-_Power_DPS",
+    "gw2skills_url": "",
+    "chat_code": "[&DQcKGgEdKDUjDyMPaQFpAQQTawGPAY8BsxK8AQAAAAAAAAAAAAAAAAAAAAADLwBaAAkBAA==]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 10,
+        "traits": [
+          682,
+          713,
+          681
+        ]
+      },
+      "line2": {
+        "spec_id": 1,
+        "traits": [
+          701,
+          708,
+          692
+        ]
+      },
+      "line3": {
+        "spec_id": 40,
+        "traits": [
+          1838,
+          2009,
+          1890
+        ]
+      }
+    },
+    "skills": {
+      "heal": 62510,
+      "utilities": [
+        62560,
+        62607,
+        10280
+      ],
+      "elite": 10174
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 103574,
+      "food_id": 41569,
+      "utility_id": 78305,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48081,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48083,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48079,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48080,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48136,
+          "stat_id": 0,
+          "stat_name": "Assassin",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48078,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 37009,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 39233,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 39232,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 39273,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 37075,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 37086,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46760,
+          "stat_id": 0,
+          "upgrade_id": 24615,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 46774,
+          "stat_id": 0,
+          "upgrade_id": 24618,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 46764,
+          "stat_id": 0,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 24618
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-mesmer-chronomancer-utility-boon-support",
+    "name": "Chronomancer - Utility Boon Support",
+    "profession": "Mesmer",
+    "elite_spec": "Chronomancer",
+    "build_type": "Support",
+    "game_mode": "Raid",
+    "tier": "Meta",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Raid build for Chronomancer in GW2 that focuses on Boon Support, Utility and Direct Damage. This is an archived build.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Chronomancer_-_Utility_Boon_Support",
+    "gw2skills_url": "",
+    "chat_code": "[&DQcKGhc7KDYjDwAAgAEAAIcSAADPEgAAvAEAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 10,
+        "traits": [
+          682,
+          713,
+          681
+        ]
+      },
+      "line2": {
+        "spec_id": 23,
+        "traits": [
+          756,
+          740,
+          752
+        ]
+      },
+      "line3": {
+        "spec_id": 40,
+        "traits": [
+          1838,
+          2009,
+          1890
+        ]
+      }
+    },
+    "skills": {
+      "heal": 10170,
+      "utilities": [
+        10334,
+        10173,
+        30769
+      ],
+      "elite": 30643
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 0,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 89912,
+          "stat_id": 0,
+          "stat_name": "Diviner",
+          "upgrade_id": 24702,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48083,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24702,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 89768,
+          "stat_id": 0,
+          "stat_name": "Diviner",
+          "upgrade_id": 24702,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48080,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24702,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 89940,
+          "stat_id": 0,
+          "stat_name": "Diviner",
+          "upgrade_id": 24702,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48078,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24702,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 37009,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 89544,
+          "stat_id": 0,
+          "stat_name": "Diviner",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 86978,
+          "stat_id": 1539,
+          "stat_name": "Diviner",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 89759,
+          "stat_id": 0,
+          "stat_name": "Diviner",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 89508,
+          "stat_id": 0,
+          "stat_name": "Diviner",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 86974,
+          "stat_id": 1539,
+          "stat_name": "Diviner",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 89645,
+          "stat_id": 0,
+          "upgrade_id": 72339,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 89922,
+          "stat_id": 0,
+          "upgrade_id": 24615,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 89645,
+          "stat_id": 0,
+          "upgrade_id": 72339,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 89846,
+          "stat_id": 0,
+          "upgrade_id": 24615,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-mesmer-mirage-alacrity-support-condi-dps",
+    "name": "Mirage - Alacrity Support Condi DPS",
+    "profession": "Mesmer",
+    "elite_spec": "Mirage",
+    "build_type": "Alacrity",
+    "game_mode": "Raid",
+    "tier": "Great",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Raid and Fractal build for Mirage in GW2 that focuses on Condition Damage and Support. This build is rated great.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Mirage_-_Alacrity_Support_Condi_DPS",
+    "gw2skills_url": "",
+    "chat_code": "[&DQctPRg/OzkjDyMP4BV/AYEBgQGDAYMBRhe8AQAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 24,
+        "traits": [
+          691,
+          1690,
+          753
+        ]
+      },
+      "line2": {
+        "spec_id": 45,
+        "traits": [
+          670,
+          669,
+          1687
+        ]
+      },
+      "line3": {
+        "spec_id": 59,
+        "traits": [
+          2141,
+          2174,
+          2169
+        ]
+      }
+    },
+    "skills": {
+      "heal": 10273,
+      "utilities": [
+        10310,
+        10216,
+        10331
+      ],
+      "elite": 10169
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100153,
+      "food_id": 95942,
+      "utility_id": 77567,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 75770,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 73225,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 71436,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 73852,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 75378,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 74264,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79444,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79745,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 80241,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79124,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 79712,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 71387,
+          "stat_id": 0,
+          "upgrade_id": 48911,
+          "infusions": [],
+          "upgrade2_id": 24607
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 77122,
+          "stat_id": 0,
+          "upgrade_id": 24560,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 76271,
+          "stat_id": 0,
+          "upgrade_id": 24607,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-mesmer-mirage-condi-dps",
+    "name": "Mirage - Condi DPS",
+    "profession": "Mesmer",
+    "elite_spec": "Mirage",
+    "build_type": "Condi",
+    "game_mode": "Raid",
+    "tier": "Great",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Raid build for Mirage in GW2 that focuses on Condition Damage. This build is rated great.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Mirage_-_Condi_DPS",
+    "gw2skills_url": "",
+    "chat_code": "[&DQctHRg/Ox0jDyMP4BWKFoMBgwGBAYEBRhe8AQAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 24,
+        "traits": [
+          691,
+          1690,
+          753
+        ]
+      },
+      "line2": {
+        "spec_id": 45,
+        "traits": [
+          670,
+          669,
+          671
+        ]
+      },
+      "line3": {
+        "spec_id": 59,
+        "traits": [
+          2141,
+          2098,
+          2070
+        ]
+      }
+    },
+    "skills": {
+      "heal": 44791,
+      "utilities": [
+        45243,
+        43761,
+        10285
+      ],
+      "elite": 10189
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100153,
+      "food_id": 95942,
+      "utility_id": 77567,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 75770,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 73225,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 71436,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 73852,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 75378,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 74264,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79444,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79745,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 80241,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79124,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 79712,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 77122,
+          "stat_id": 0,
+          "upgrade_id": 24560,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 76271,
+          "stat_id": 0,
+          "upgrade_id": 24607,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 71387,
+          "stat_id": 0,
+          "upgrade_id": 48911,
+          "infusions": [],
+          "upgrade2_id": 24607
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-mesmer-troubadour-quickness-support-healer",
+    "name": "Troubadour - Quickness Support Healer",
+    "profession": "Mesmer",
+    "elite_spec": "Troubadour",
+    "build_type": "Quickness",
+    "game_mode": "Raid",
+    "tier": "Good",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Raid and Fractal build for Troubadour in GW2 that focuses on Support and Utility. This is a test build.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Troubadour_-_Quickness_Support_Healer",
+    "gw2skills_url": "",
+    "chat_code": "[&DQctOhcqSRptAW0BaQFpAVMdUx2EHYQdbR1tHQAAAAAAAAAAAAAAAAAAAAADVgAxAFUAAA==]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 45,
+        "traits": [
+          675,
+          668,
+          1687
+        ]
+      },
+      "line2": {
+        "spec_id": 23,
+        "traits": [
+          738,
+          740,
+          1866
+        ]
+      },
+      "line3": {
+        "spec_id": 73,
+        "traits": [
+          2326,
+          2367,
+          2353
+        ]
+      }
+    },
+    "skills": {
+      "heal": 10289,
+      "utilities": [
+        10276,
+        10168,
+        30769
+      ],
+      "elite": 30643
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 99965,
+      "food_id": 68634,
+      "utility_id": 67528,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 85161,
+          "stat_id": 0,
+          "stat_name": "Harrier",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 85089,
+          "stat_id": 0,
+          "stat_name": "Harrier",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 85098,
+          "stat_id": 0,
+          "stat_name": "Harrier",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85004,
+          "stat_id": 0,
+          "stat_name": "Harrier",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 70414,
+          "stat_id": 0,
+          "stat_name": "Minstrel",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 85317,
+          "stat_id": 0,
+          "stat_name": "Harrier",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 1134,
+          "stat_name": "Minstrel",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 83429,
+          "stat_id": 0,
+          "stat_name": "Harrier",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79745,
+          "stat_id": 1134,
+          "stat_name": "Minstrel",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 80241,
+          "stat_id": 1134,
+          "stat_name": "Minstrel",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79124,
+          "stat_id": 1134,
+          "stat_name": "Minstrel",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 79712,
+          "stat_id": 1134,
+          "stat_name": "Minstrel",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 85027,
+          "stat_id": 0,
+          "upgrade_id": 74326,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 84957,
+          "stat_id": 0,
+          "upgrade_id": 24639,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 85348,
+          "stat_id": 0,
+          "upgrade_id": 74326,
+          "infusions": [],
+          "upgrade2_id": 24639
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-mesmer-troubadour-quickness-support-power-dps",
+    "name": "Troubadour - Quickness Support Power DPS",
+    "profession": "Mesmer",
+    "elite_spec": "Troubadour",
+    "build_type": "Quickness",
+    "game_mode": "Raid",
+    "tier": "",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Raid build for Troubadour in GW2 that focuses on Direct Damage, Support and Utility. This is a test build.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Troubadour_-_Quickness_Support_Power_DPS",
+    "gw2skills_url": "",
+    "chat_code": "[&DQcKGgEdSRuJHYkdaQFpAVMdUx1mHWYdbR1tHQAAAAAAAAAAAAAAAAAAAAADCQEvAFoAAA==]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 10,
+        "traits": [
+          682,
+          713,
+          681
+        ]
+      },
+      "line2": {
+        "spec_id": 1,
+        "traits": [
+          701,
+          708,
+          692
+        ]
+      },
+      "line3": {
+        "spec_id": 73,
+        "traits": [
+          2432,
+          2367,
+          2353
+        ]
+      }
+    },
+    "skills": {
+      "heal": 62510,
+      "utilities": [
+        62560,
+        62607,
+        10280
+      ],
+      "elite": 10174
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 103574,
+      "food_id": 41569,
+      "utility_id": 78305,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48081,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48083,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48079,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48080,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48136,
+          "stat_id": 0,
+          "stat_name": "Assassin",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48078,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 37009,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 39233,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 39232,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 39273,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 37075,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 37086,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46760,
+          "stat_id": 0,
+          "upgrade_id": 24615,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 46774,
+          "stat_id": 0,
+          "upgrade_id": 24618,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 46764,
+          "stat_id": 0,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 24618
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-mesmer-virtuoso-condi-chaos-dps",
+    "name": "Virtuoso - Condi Chaos DPS",
+    "profession": "Mesmer",
+    "elite_spec": "Virtuoso",
+    "build_type": "Condi",
+    "game_mode": "Raid",
+    "tier": "Good",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Raid and Fractal build for Virtuoso in GW2 that focuses on Condition Damage. This build is rated good.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Virtuoso_-_Condi_Chaos_DPS",
+    "gw2skills_url": "",
+    "chat_code": "[&DQctHRgdQj9tAdsa3RrdGoMBgQGBAYMB5Rq8AQAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 24,
+        "traits": [
+          721,
+          1690,
+          733
+        ]
+      },
+      "line2": {
+        "spec_id": 45,
+        "traits": [
+          670,
+          669,
+          671
+        ]
+      },
+      "line3": {
+        "spec_id": 66,
+        "traits": [
+          2202,
+          2207,
+          2223
+        ]
+      }
+    },
+    "skills": {
+      "heal": 62510,
+      "utilities": [
+        62560,
+        62607,
+        10285
+      ],
+      "elite": 10189
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100849,
+      "food_id": 12485,
+      "utility_id": 48917,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 67442,
+          "stat_id": 0,
+          "stat_name": "Sinister",
+          "upgrade_id": 24762,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 67449,
+          "stat_id": 0,
+          "stat_name": "Sinister",
+          "upgrade_id": 24762,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 71436,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 24762,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 67452,
+          "stat_id": 0,
+          "stat_name": "Sinister",
+          "upgrade_id": 24762,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 75378,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 24762,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 67454,
+          "stat_id": 0,
+          "stat_name": "Sinister",
+          "upgrade_id": 24762,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 658,
+          "stat_name": "Rampager",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 39555,
+          "stat_id": 0,
+          "stat_name": "Rampager",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 39554,
+          "stat_id": 0,
+          "stat_name": "Rampager",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 67898,
+          "stat_id": 0,
+          "stat_name": "Sinister",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 39604,
+          "stat_id": 0,
+          "stat_name": "Rampager",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 39605,
+          "stat_id": 0,
+          "stat_name": "Rampager",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 74179,
+          "stat_id": 0,
+          "upgrade_id": 24605,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 46794,
+          "stat_id": 0,
+          "upgrade_id": 24560,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 46780,
+          "stat_id": 0,
+          "upgrade_id": 24560,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-mesmer-virtuoso-condi-dps",
+    "name": "Virtuoso - Condi DPS",
+    "profession": "Mesmer",
+    "elite_spec": "Virtuoso",
+    "build_type": "Condi",
+    "game_mode": "Raid",
+    "tier": "Great",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Fractal and Raid build for Virtuoso in GW2 that focuses on Hybrid Damage. This is a meta build.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Virtuoso_-_Condi_DPS",
+    "gw2skills_url": "",
+    "chat_code": "[&DQcBHRgdQjsjDyMPgQGBAYMBgwGCAd0a5RrtEgAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 1,
+        "traits": [
+          701,
+          708,
+          692
+        ]
+      },
+      "line2": {
+        "spec_id": 24,
+        "traits": [
+          721,
+          1690,
+          733
+        ]
+      },
+      "line3": {
+        "spec_id": 66,
+        "traits": [
+          2202,
+          2205,
+          2223
+        ]
+      }
+    },
+    "skills": {
+      "heal": 62510,
+      "utilities": [
+        62560,
+        62607,
+        10280
+      ],
+      "elite": 10174
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100849,
+      "food_id": 12485,
+      "utility_id": 48917,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48117,
+          "stat_id": 0,
+          "stat_name": "Rampager",
+          "upgrade_id": 24762,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 67449,
+          "stat_id": 0,
+          "stat_name": "Sinister",
+          "upgrade_id": 24762,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48115,
+          "stat_id": 0,
+          "stat_name": "Rampager",
+          "upgrade_id": 24762,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 67452,
+          "stat_id": 0,
+          "stat_name": "Sinister",
+          "upgrade_id": 24762,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 75378,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 24762,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 67454,
+          "stat_id": 0,
+          "stat_name": "Sinister",
+          "upgrade_id": 24762,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 658,
+          "stat_name": "Rampager",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 67896,
+          "stat_id": 0,
+          "stat_name": "Sinister",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 39554,
+          "stat_id": 0,
+          "stat_name": "Rampager",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 67898,
+          "stat_id": 0,
+          "stat_name": "Sinister",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 67906,
+          "stat_id": 0,
+          "stat_name": "Sinister",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 67905,
+          "stat_id": 0,
+          "stat_name": "Sinister",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 67948,
+          "stat_id": 0,
+          "upgrade_id": 24612,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 67938,
+          "stat_id": 0,
+          "upgrade_id": 24560,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 67951,
+          "stat_id": 0,
+          "upgrade_id": 24560,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-mesmer-virtuoso-hybrid-dps",
+    "name": "Virtuoso - Hybrid DPS",
+    "profession": "Mesmer",
+    "elite_spec": "Virtuoso",
+    "build_type": "Power",
+    "game_mode": "Raid",
+    "tier": "Meta",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Raid and Fractal build for Virtuoso in GW2 that focuses on Condition Damage. This is an archived build.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Virtuoso_-_Hybrid_DPS",
+    "gw2skills_url": "",
+    "chat_code": "[&DQcYHQEdQjsjDyMP3RrdGoMBgwGBAYEB5Rq8AQAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 24,
+        "traits": [
+          721,
+          1690,
+          733
+        ]
+      },
+      "line2": {
+        "spec_id": 1,
+        "traits": [
+          701,
+          708,
+          692
+        ]
+      },
+      "line3": {
+        "spec_id": 66,
+        "traits": [
+          2202,
+          2205,
+          2223
+        ]
+      }
+    },
+    "skills": {
+      "heal": 62510,
+      "utilities": [
+        62560,
+        62607,
+        10280
+      ],
+      "elite": 10174
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 0,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 75770,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 24762,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48119,
+          "stat_id": 0,
+          "stat_name": "Rampager",
+          "upgrade_id": 24762,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 71436,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 24762,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 67452,
+          "stat_id": 0,
+          "stat_name": "Sinister",
+          "upgrade_id": 24762,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 75378,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 24762,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 67454,
+          "stat_id": 0,
+          "stat_name": "Sinister",
+          "upgrade_id": 24762,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 39555,
+          "stat_id": 0,
+          "stat_name": "Rampager",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 67894,
+          "stat_id": 0,
+          "stat_name": "Sinister",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 67898,
+          "stat_id": 0,
+          "stat_name": "Sinister",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 39604,
+          "stat_id": 0,
+          "stat_name": "Rampager",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 79712,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 74179,
+          "stat_id": 0,
+          "upgrade_id": 44944,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 70838,
+          "stat_id": 0,
+          "upgrade_id": 24560,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 71584,
+          "stat_id": 0,
+          "upgrade_id": 24560,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-mesmer-virtuoso-power-dps",
+    "name": "Virtuoso - Power DPS",
+    "profession": "Mesmer",
+    "elite_spec": "Virtuoso",
+    "build_type": "Power",
+    "game_mode": "Raid",
+    "tier": "Great",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Raid and Fractal build for Virtuoso in GW2 that focuses on Direct Damage. This is a meta build.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Virtuoso_-_Power_DPS",
+    "gw2skills_url": "",
+    "chat_code": "[&DQcKGQEdQiojDyMPaQFpAY8BjwHdGt0a5Rq8AQAAAAAAAAAAAAAAAAAAAAACCQEyAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 10,
+        "traits": [
+          686,
+          713,
+          681
+        ]
+      },
+      "line2": {
+        "spec_id": 1,
+        "traits": [
+          701,
+          708,
+          692
+        ]
+      },
+      "line3": {
+        "spec_id": 66,
+        "traits": [
+          2208,
+          2205,
+          2206
+        ]
+      }
+    },
+    "skills": {
+      "heal": 10219,
+      "utilities": [
+        10333,
+        10218,
+        10221
+      ],
+      "elite": 10220
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100947,
+      "food_id": 41569,
+      "utility_id": 78305,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48135,
+          "stat_id": 0,
+          "stat_name": "Assassin",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48083,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48079,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48080,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48082,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48078,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 37009,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 39233,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 39232,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 39273,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 37075,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 37086,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46762,
+          "stat_id": 0,
+          "upgrade_id": 24618,
+          "infusions": [],
+          "upgrade2_id": 24615
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 46764,
+          "stat_id": 0,
+          "upgrade_id": 24618,
+          "infusions": [],
+          "upgrade2_id": 24615
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-mesmer-chronomancer-boon-chrono",
+    "name": "Chronomancer - Boon Chrono",
+    "profession": "Mesmer",
+    "elite_spec": "Chronomancer",
+    "build_type": "Power",
+    "game_mode": "OpenWorld",
+    "tier": "Meta",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "This is an excellent farm build that utilizes's Chronomancer's high DPS and Quickness uptime to buff nearby allies in open world.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Chronomancer_-_Boon_Chrono",
+    "gw2skills_url": "",
+    "chat_code": "[&DQcKGRc7KC4jDyMPtgFmAc8SgAGAAYUBvAGaAQAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 10,
+        "traits": [
+          686,
+          713,
+          681
+        ]
+      },
+      "line2": {
+        "spec_id": 23,
+        "traits": [
+          744,
+          740,
+          752
+        ]
+      },
+      "line3": {
+        "spec_id": 40,
+        "traits": [
+          1995,
+          1978,
+          2022
+        ]
+      }
+    },
+    "skills": {
+      "heal": 10170,
+      "utilities": [
+        10334,
+        10173,
+        10280
+      ],
+      "elite": 10174
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 0,
+      "food_id": 77643,
+      "utility_id": 67368,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48081,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24702,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48083,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24702,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48079,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24702,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48080,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24702,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48082,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24702,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48078,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24702,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 80369,
+          "stat_id": 1539,
+          "stat_name": "Diviner",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 89544,
+          "stat_id": 0,
+          "stat_name": "Diviner",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 86978,
+          "stat_id": 1539,
+          "stat_name": "Diviner",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 89759,
+          "stat_id": 0,
+          "stat_name": "Diviner",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 89508,
+          "stat_id": 0,
+          "stat_name": "Diviner",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 86974,
+          "stat_id": 1539,
+          "stat_name": "Diviner",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46774,
+          "stat_id": 0,
+          "upgrade_id": 24615,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 46774,
+          "stat_id": 0,
+          "upgrade_id": 72339,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 46762,
+          "stat_id": 0,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 72339
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-mesmer-chronomancer-porter",
+    "name": "Chronomancer - Porter",
+    "profession": "Mesmer",
+    "elite_spec": "Chronomancer",
+    "build_type": "Power",
+    "game_mode": "OpenWorld",
+    "tier": "Meta",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Open World build for Chronomancer in GW2 that focuses on . This is an archived build.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Chronomancer_-_Porter",
+    "gw2skills_url": "",
+    "chat_code": "",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 24,
+        "traits": [
+          721,
+          -1,
+          2035
+        ]
+      },
+      "line2": {
+        "spec_id": 45,
+        "traits": [
+          677,
+          -1,
+          -1
+        ]
+      },
+      "line3": {
+        "spec_id": 40,
+        "traits": [
+          -1,
+          1978,
+          1942
+        ]
+      }
+    },
+    "skills": {
+      "heal": -1,
+      "utilities": [
+        -1,
+        -1,
+        30769
+      ],
+      "elite": 30643
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 0,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": []
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-mesmer-chronomancer-power-chrono",
+    "name": "Chronomancer - Power Chrono",
+    "profession": "Mesmer",
+    "elite_spec": "Chronomancer",
+    "build_type": "Power",
+    "game_mode": "OpenWorld",
+    "tier": "Great",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Open World build for Chronomancer in GW2 that focuses on Strike damage and Defense. This is a meta build.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Chronomancer_-_Power_Chrono",
+    "gw2skills_url": "",
+    "chat_code": "[&DQcBHRgaKDojDyMPjwGPAQQTaQFlAYUBsxLtEgAAAAAAAAAAAAAAAAAAAAADCQEvAFoAAA==]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 1,
+        "traits": [
+          701,
+          708,
+          692
+        ]
+      },
+      "line2": {
+        "spec_id": 24,
+        "traits": [
+          1869,
+          729,
+          733
+        ]
+      },
+      "line3": {
+        "spec_id": 40,
+        "traits": [
+          1995,
+          1913,
+          1890
+        ]
+      }
+    },
+    "skills": {
+      "heal": 62510,
+      "utilities": [
+        62560,
+        62607,
+        10280
+      ],
+      "elite": 10174
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 103574,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48081,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48083,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48079,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48080,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48136,
+          "stat_id": 0,
+          "stat_name": "Assassin",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48078,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 37009,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 39233,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 39232,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 39273,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 37075,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 37086,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46760,
+          "stat_id": 0,
+          "upgrade_id": 24615,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 46774,
+          "stat_id": 0,
+          "upgrade_id": 24618,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 46764,
+          "stat_id": 0,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 24618
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-mesmer-mesmer-core-power-mesmer",
+    "name": "Mesmer - Core Power Mesmer",
+    "profession": "Mesmer",
+    "elite_spec": "",
+    "build_type": "Power",
+    "game_mode": "OpenWorld",
+    "tier": "Good",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Open World build for Mesmer in GW2 that focuses on Strike damage. This build is rated good.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Mesmer_-_Core_Power_Mesmer",
+    "gw2skills_url": "",
+    "chat_code": "[&DQcKGRgaAR0jDyMPaQFpAY8BjwFlAYYBvAG8AQAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 10,
+        "traits": [
+          686,
+          713,
+          681
+        ]
+      },
+      "line2": {
+        "spec_id": 24,
+        "traits": [
+          1869,
+          729,
+          733
+        ]
+      },
+      "line3": {
+        "spec_id": 1,
+        "traits": [
+          701,
+          708,
+          692
+        ]
+      }
+    },
+    "skills": {
+      "heal": 10170,
+      "utilities": [
+        10334,
+        10173,
+        10280
+      ],
+      "elite": 10174
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100916,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48081,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48083,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48079,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48080,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48136,
+          "stat_id": 0,
+          "stat_name": "Assassin",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48078,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 37009,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 39233,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 39232,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 39273,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 37075,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 37086,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46774,
+          "stat_id": 0,
+          "upgrade_id": 24615,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 46774,
+          "stat_id": 0,
+          "upgrade_id": 24618,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 46762,
+          "stat_id": 0,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 24618
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-mesmer-mirage-axe-mirage",
+    "name": "Mirage - Axe Mirage",
+    "profession": "Mesmer",
+    "elite_spec": "Mirage",
+    "build_type": "Power",
+    "game_mode": "OpenWorld",
+    "tier": "Meta",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Open World build for Mirage in GW2 that focuses on Condition damage. This is an archived build.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Mirage_-_Axe_Mirage",
+    "gw2skills_url": "",
+    "chat_code": "[&DQcBOy0+Ox4jDw8B4BWAAYMBZwGBAWYBRhftEgAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 1,
+        "traits": [
+          700,
+          1960,
+          704
+        ]
+      },
+      "line2": {
+        "spec_id": 45,
+        "traits": [
+          675,
+          669,
+          1687
+        ]
+      },
+      "line3": {
+        "spec_id": 59,
+        "traits": [
+          2082,
+          2098,
+          2070
+        ]
+      }
+    },
+    "skills": {
+      "heal": 44791,
+      "utilities": [
+        45243,
+        43761,
+        10285
+      ],
+      "elite": 10189
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100432,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 75770,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 24848,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 73225,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 24848,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 71436,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 24848,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 73852,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 24848,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 75378,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 24848,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 74264,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 24848,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79444,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79745,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 80241,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79124,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 79712,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 77122,
+          "stat_id": 0,
+          "upgrade_id": 44944,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 76271,
+          "stat_id": 0,
+          "upgrade_id": 24607,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 72239,
+          "stat_id": 0,
+          "upgrade_id": 24607,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-mesmer-mirage-condi-mirage",
+    "name": "Mirage - Condi Mirage",
+    "profession": "Mesmer",
+    "elite_spec": "Mirage",
+    "build_type": "Condi",
+    "game_mode": "OpenWorld",
+    "tier": "Great",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Open World build for Mirage in GW2 that focuses on Condition damage. This build is rated great.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Mirage_-_Condi_Mirage",
+    "gw2skills_url": "",
+    "chat_code": "[&DQcBOi09OxruFW4BgQGBAYMBgwHgFQcWRhftEgAAAAAAAAAAAAAAAAAAAAABWQAA]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 1,
+        "traits": [
+          705,
+          1960,
+          704
+        ]
+      },
+      "line2": {
+        "spec_id": 45,
+        "traits": [
+          670,
+          669,
+          1687
+        ]
+      },
+      "line3": {
+        "spec_id": 59,
+        "traits": [
+          2082,
+          2174,
+          2070
+        ]
+      }
+    },
+    "skills": {
+      "heal": 10273,
+      "utilities": [
+        10310,
+        10216,
+        10331
+      ],
+      "elite": 10169
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100153,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 75770,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 73225,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 71436,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 73852,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 75378,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 74264,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79444,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79745,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 80241,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79124,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 79712,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 71387,
+          "stat_id": 0,
+          "upgrade_id": 44944,
+          "infusions": [],
+          "upgrade2_id": 24607
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 71387,
+          "stat_id": 0,
+          "upgrade_id": 44944,
+          "infusions": [],
+          "upgrade2_id": 24607
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-mesmer-mirage-power-mirage",
+    "name": "Mirage - Power Mirage",
+    "profession": "Mesmer",
+    "elite_spec": "Mirage",
+    "build_type": "Power",
+    "game_mode": "OpenWorld",
+    "tier": "Good",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Open World build for Mirage in GW2 that focuses on Strike damage. This build is rated good.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Mirage_-_Power_Mirage",
+    "gw2skills_url": "",
+    "chat_code": "[&DQcBHQoZOz0jDyMPihaKFuAVBxZpAWkB7RLtEgAAAAAAAAAAAAAAAAAAAAADMgAvAFoAAA==]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 1,
+        "traits": [
+          701,
+          708,
+          692
+        ]
+      },
+      "line2": {
+        "spec_id": 10,
+        "traits": [
+          686,
+          713,
+          681
+        ]
+      },
+      "line3": {
+        "spec_id": 59,
+        "traits": [
+          2141,
+          2098,
+          2169
+        ]
+      }
+    },
+    "skills": {
+      "heal": 10219,
+      "utilities": [
+        10333,
+        10218,
+        10221
+      ],
+      "elite": 10220
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100916,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48081,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24703,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48137,
+          "stat_id": 0,
+          "stat_name": "Assassin",
+          "upgrade_id": 24703,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48079,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24703,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48134,
+          "stat_id": 0,
+          "stat_name": "Assassin",
+          "upgrade_id": 24703,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48136,
+          "stat_id": 0,
+          "stat_name": "Assassin",
+          "upgrade_id": 24703,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48132,
+          "stat_id": 0,
+          "stat_name": "Assassin",
+          "upgrade_id": 24703,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 37009,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 67298,
+          "stat_id": 0,
+          "stat_name": "Assassin",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 67302,
+          "stat_id": 0,
+          "stat_name": "Assassin",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 39273,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 37075,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 37086,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46762,
+          "stat_id": 0,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 24618
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 46760,
+          "stat_id": 0,
+          "upgrade_id": 24615,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 46774,
+          "stat_id": 0,
+          "upgrade_id": 24618,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-mesmer-mirage-tag-mirage",
+    "name": "Mirage - Tag Mirage",
+    "profession": "Mesmer",
+    "elite_spec": "Mirage",
+    "build_type": "Power",
+    "game_mode": "OpenWorld",
+    "tier": "Meta",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Open World build for Mirage in GW2 that focuses on Event farming. This is an archived build.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Mirage_-_Tag_Mirage",
+    "gw2skills_url": "",
+    "chat_code": "[&DQcBOi03OxruFW0BZQFqAX8BfwGAAYABRheaAQAAAAAAAAAAAAAAAAAAAAADLwBaAAkBAA==]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 1,
+        "traits": [
+          705,
+          1960,
+          704
+        ]
+      },
+      "line2": {
+        "spec_id": 45,
+        "traits": [
+          677,
+          673,
+          1687
+        ]
+      },
+      "line3": {
+        "spec_id": 59,
+        "traits": [
+          2082,
+          2174,
+          2070
+        ]
+      }
+    },
+    "skills": {
+      "heal": 10219,
+      "utilities": [
+        10333,
+        10218,
+        10221
+      ],
+      "elite": 10220
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100148,
+      "food_id": 12453,
+      "utility_id": 67367,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48081,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24703,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48137,
+          "stat_id": 0,
+          "stat_name": "Assassin",
+          "upgrade_id": 24703,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48079,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24703,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48134,
+          "stat_id": 0,
+          "stat_name": "Assassin",
+          "upgrade_id": 24703,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48136,
+          "stat_id": 0,
+          "stat_name": "Assassin",
+          "upgrade_id": 24703,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48132,
+          "stat_id": 0,
+          "stat_name": "Assassin",
+          "upgrade_id": 24703,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 37009,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 67298,
+          "stat_id": 0,
+          "stat_name": "Assassin",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 67302,
+          "stat_id": 0,
+          "stat_name": "Assassin",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 39273,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 37075,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 37086,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46762,
+          "stat_id": 0,
+          "upgrade_id": 24548,
+          "infusions": [],
+          "upgrade2_id": 24592
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 46760,
+          "stat_id": 0,
+          "upgrade_id": 24615,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 46774,
+          "stat_id": 0,
+          "upgrade_id": 24618,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-mesmer-troubadour-power-troubadour",
+    "name": "Troubadour - Power Troubadour",
+    "profession": "Mesmer",
+    "elite_spec": "Troubadour",
+    "build_type": "Power",
+    "game_mode": "OpenWorld",
+    "tier": "Good",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Open World build for Troubadour in GW2 that focuses on Strike damage. This build is rated good.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Troubadour_-_Power_Troubadour",
+    "gw2skills_url": "",
+    "chat_code": "[&DQcBHQoaSRsjDyMPUx1THWYdZh1lAWsdbR1tHQAAAAAAAAAAAAAAAAAAAAADLwBaAAkBAA==]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 10,
+        "traits": [
+          682,
+          713,
+          681
+        ]
+      },
+      "line2": {
+        "spec_id": 1,
+        "traits": [
+          701,
+          708,
+          692
+        ]
+      },
+      "line3": {
+        "spec_id": 73,
+        "traits": [
+          2432,
+          2367,
+          2353
+        ]
+      }
+    },
+    "skills": {
+      "heal": 73154,
+      "utilities": [
+        73093,
+        73152,
+        72946
+      ],
+      "elite": 72957
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 103574,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48081,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48137,
+          "stat_id": 0,
+          "stat_name": "Assassin",
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48079,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48080,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48082,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48078,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 37009,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 39233,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 39232,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 39273,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 37075,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 37086,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46764,
+          "stat_id": 0,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 24618
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 46760,
+          "stat_id": 0,
+          "upgrade_id": 24615,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 46774,
+          "stat_id": 0,
+          "upgrade_id": 24618,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-mesmer-virtuoso-condition-virtuoso",
+    "name": "Virtuoso - Condition Virtuoso",
+    "profession": "Mesmer",
+    "elite_spec": "Virtuoso",
+    "build_type": "Condi",
+    "game_mode": "OpenWorld",
+    "tier": "Great",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Open World build for Virtuoso in GW2 that focuses on Condition damage. This build is rated great.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Virtuoso_-_Condition_Virtuoso",
+    "gw2skills_url": "",
+    "chat_code": "[&DQcBHRgdQj8jDyMPgQGBAYMBgwHdGoIB5RrtEgAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 1,
+        "traits": [
+          701,
+          708,
+          692
+        ]
+      },
+      "line2": {
+        "spec_id": 24,
+        "traits": [
+          721,
+          1690,
+          733
+        ]
+      },
+      "line3": {
+        "spec_id": 66,
+        "traits": [
+          2202,
+          2205,
+          2223
+        ]
+      }
+    },
+    "skills": {
+      "heal": 62510,
+      "utilities": [
+        62560,
+        62607,
+        10280
+      ],
+      "elite": 10174
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100849,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48117,
+          "stat_id": 0,
+          "stat_name": "Rampager",
+          "upgrade_id": 24762,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48119,
+          "stat_id": 0,
+          "stat_name": "Rampager",
+          "upgrade_id": 24762,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 67453,
+          "stat_id": 0,
+          "stat_name": "Sinister",
+          "upgrade_id": 24762,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48116,
+          "stat_id": 0,
+          "stat_name": "Rampager",
+          "upgrade_id": 24762,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 67450,
+          "stat_id": 0,
+          "stat_name": "Sinister",
+          "upgrade_id": 24762,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 67454,
+          "stat_id": 0,
+          "stat_name": "Sinister",
+          "upgrade_id": 24762,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 658,
+          "stat_name": "Rampager",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 67896,
+          "stat_id": 0,
+          "stat_name": "Sinister",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 67894,
+          "stat_id": 0,
+          "stat_name": "Sinister",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 67898,
+          "stat_id": 0,
+          "stat_name": "Sinister",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 39604,
+          "stat_id": 0,
+          "stat_name": "Rampager",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 39605,
+          "stat_id": 0,
+          "stat_name": "Rampager",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 67948,
+          "stat_id": 0,
+          "upgrade_id": 24612,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 67938,
+          "stat_id": 0,
+          "upgrade_id": 24560,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 67951,
+          "stat_id": 0,
+          "upgrade_id": 24560,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-mesmer-virtuoso-power-virtuoso",
+    "name": "Virtuoso - Power Virtuoso",
+    "profession": "Mesmer",
+    "elite_spec": "Virtuoso",
+    "build_type": "Power",
+    "game_mode": "OpenWorld",
+    "tier": "Great",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Open World build for Virtuoso in GW2 that focuses on Strike damage. This build is rated great.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Virtuoso_-_Power_Virtuoso",
+    "gw2skills_url": "",
+    "chat_code": "[&DQcBHRgaQiojDyMP3RrdGmkBaQFlAYUB5RrtEgAAAAAAAAAAAAAAAAAAAAADLwBaAAkBAA==]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 1,
+        "traits": [
+          701,
+          708,
+          692
+        ]
+      },
+      "line2": {
+        "spec_id": 24,
+        "traits": [
+          1869,
+          729,
+          733
+        ]
+      },
+      "line3": {
+        "spec_id": 66,
+        "traits": [
+          2208,
+          2205,
+          2206
+        ]
+      }
+    },
+    "skills": {
+      "heal": 62510,
+      "utilities": [
+        62560,
+        62607,
+        10280
+      ],
+      "elite": 10174
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100947,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48135,
+          "stat_id": 0,
+          "stat_name": "Assassin",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48083,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48079,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48080,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48136,
+          "stat_id": 0,
+          "stat_name": "Assassin",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48078,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 37009,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 39233,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 39232,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 39273,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 37075,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 37086,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46760,
+          "stat_id": 0,
+          "upgrade_id": 24615,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 46774,
+          "stat_id": 0,
+          "upgrade_id": 24618,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 46764,
+          "stat_id": 0,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 24618
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  }
+]

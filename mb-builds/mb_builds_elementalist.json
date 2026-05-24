@@ -1,0 +1,5498 @@
+[
+  {
+    "id": "mb-elementalist-catalyst-boon-support-healer",
+    "name": "Catalyst - Boon Support Healer",
+    "profession": "Elementalist",
+    "elite_spec": "Catalyst",
+    "build_type": "Heal",
+    "game_mode": "Raid",
+    "tier": "",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Raid build for Catalyst in GW2 that focuses on Healing, Support and Utility. This is a test build.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Catalyst_-_Boon_Support_Healer",
+    "gw2skills_url": "",
+    "chat_code": "[&DQYROiUWQz8nDycPjwCPAAUBAAAAAAAAJgD3GgAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 37,
+        "traits": [
+          266,
+          265,
+          238
+        ]
+      },
+      "line2": {
+        "spec_id": 17,
+        "traits": [
+          363,
+          358,
+          2028
+        ]
+      },
+      "line3": {
+        "spec_id": 67,
+        "traits": [
+          2224,
+          2234,
+          2251
+        ]
+      }
+    },
+    "skills": {
+      "heal": 5491,
+      "utilities": [
+        5548,
+        5679,
+        5680
+      ],
+      "elite": 5501
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 101268,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 85161,
+          "stat_id": 0,
+          "stat_name": "Harrier",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 85089,
+          "stat_id": 0,
+          "stat_name": "Harrier",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 85098,
+          "stat_id": 0,
+          "stat_name": "Harrier",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85004,
+          "stat_id": 0,
+          "stat_name": "Harrier",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 70414,
+          "stat_id": 0,
+          "stat_name": "Minstrel",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 85317,
+          "stat_id": 0,
+          "stat_name": "Harrier",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 1134,
+          "stat_name": "Minstrel",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 83429,
+          "stat_id": 0,
+          "stat_name": "Harrier",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 86978,
+          "stat_id": 1345,
+          "stat_name": "Harrier",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 82769,
+          "stat_id": 0,
+          "stat_name": "Harrier",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 84018,
+          "stat_id": 0,
+          "stat_name": "Harrier",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 82851,
+          "stat_id": 0,
+          "stat_name": "Harrier",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 85112,
+          "stat_id": 0,
+          "upgrade_id": 74326,
+          "infusions": [],
+          "upgrade2_id": 24551
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-elementalist-catalyst-condi-dps",
+    "name": "Catalyst - Condi DPS",
+    "profession": "Elementalist",
+    "elite_spec": "Catalyst",
+    "build_type": "Condi",
+    "game_mode": "Raid",
+    "tier": "Meta",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Raid and Fractal build for Catalyst in GW2 that focuses on Condition Damage and Support. This is an archived build.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Catalyst_-_Condi_DPS",
+    "gw2skills_url": "",
+    "chat_code": "[&DQYfFRomQyYXARcBkQCRAHIA+BrLAMsAJgD3GgAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 31,
+        "traits": [
+          296,
+          325,
+          1510
+        ]
+      },
+      "line2": {
+        "spec_id": 26,
+        "traits": [
+          1507,
+          275,
+          287
+        ]
+      },
+      "line3": {
+        "spec_id": 67,
+        "traits": [
+          2252,
+          2247,
+          2241
+        ]
+      }
+    },
+    "skills": {
+      "heal": 62925,
+      "utilities": [
+        62884,
+        62758,
+        62807
+      ],
+      "elite": 62910
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 0,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 75770,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 24848,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 73225,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 24848,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 71436,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 24848,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 73852,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 24848,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 75378,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 24848,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 74264,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 24848,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79444,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79745,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 80241,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79124,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 79712,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 74363,
+          "stat_id": 0,
+          "upgrade_id": 44944,
+          "infusions": [],
+          "upgrade2_id": 24560
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-elementalist-catalyst-hybrid-dps",
+    "name": "Catalyst - Hybrid DPS",
+    "profession": "Elementalist",
+    "elite_spec": "Catalyst",
+    "build_type": "Power",
+    "game_mode": "Raid",
+    "tier": "Meta",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Raid and Fractal build for Catalyst in GW2 that focuses on Hybrid Damage and Support. This is an archived build.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Catalyst_-_Hybrid_DPS",
+    "gw2skills_url": "",
+    "chat_code": "[&DQYfNSkbQyYXARcBcgCRAL4B+Br4GssAJgD3GgAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 31,
+        "traits": [
+          296,
+          334,
+          1510
+        ]
+      },
+      "line2": {
+        "spec_id": 41,
+        "traits": [
+          232,
+          214,
+          226
+        ]
+      },
+      "line3": {
+        "spec_id": 67,
+        "traits": [
+          2252,
+          2247,
+          2241
+        ]
+      }
+    },
+    "skills": {
+      "heal": 62925,
+      "utilities": [
+        62884,
+        62758,
+        62807
+      ],
+      "elite": 62910
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 0,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 85296,
+          "stat_id": 0,
+          "stat_name": "Grieving",
+          "upgrade_id": 24797,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 85241,
+          "stat_id": 0,
+          "stat_name": "Grieving",
+          "upgrade_id": 24797,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 85319,
+          "stat_id": 0,
+          "stat_name": "Grieving",
+          "upgrade_id": 24797,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85048,
+          "stat_id": 0,
+          "stat_name": "Grieving",
+          "upgrade_id": 24797,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 85352,
+          "stat_id": 0,
+          "stat_name": "Grieving",
+          "upgrade_id": 24797,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 85007,
+          "stat_id": 0,
+          "stat_name": "Grieving",
+          "upgrade_id": 24797,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 83992,
+          "stat_id": 1366,
+          "stat_name": "Grieving",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 83404,
+          "stat_id": 0,
+          "stat_name": "Grieving",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 86978,
+          "stat_id": 1366,
+          "stat_name": "Grieving",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 82897,
+          "stat_id": 0,
+          "stat_name": "Grieving",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 83563,
+          "stat_id": 0,
+          "stat_name": "Grieving",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 84185,
+          "stat_id": 0,
+          "stat_name": "Grieving",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 85249,
+          "stat_id": 0,
+          "upgrade_id": 44944,
+          "infusions": [],
+          "upgrade2_id": 24615
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-elementalist-catalyst-power-bloodstone-dps",
+    "name": "Catalyst - Power Bloodstone DPS",
+    "profession": "Elementalist",
+    "elite_spec": "Catalyst",
+    "build_type": "Power",
+    "game_mode": "Raid",
+    "tier": "Great",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Raid and Fractal build for Catalyst in GW2 that focuses on Direct Damage. This is a meta build.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Catalyst_-_Power_Bloodstone_DPS",
+    "gw2skills_url": "",
+    "chat_code": "[&DQYfPSkfQyYnDycP+Br4GssAywC+AVABJgD3GgAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 31,
+        "traits": [
+          296,
+          334,
+          1675
+        ]
+      },
+      "line2": {
+        "spec_id": 41,
+        "traits": [
+          232,
+          1502,
+          226
+        ]
+      },
+      "line3": {
+        "spec_id": 67,
+        "traits": [
+          2252,
+          2247,
+          2241
+        ]
+      }
+    },
+    "skills": {
+      "heal": 5508,
+      "utilities": [
+        5692,
+        5675,
+        5691
+      ],
+      "elite": 5557
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 104800,
+      "food_id": 41569,
+      "utility_id": 78305,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48081,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24797,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48083,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24797,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48079,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24797,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48080,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24797,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48082,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24797,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48078,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24797,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 37009,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 39233,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 39232,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 39273,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 37075,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 37086,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46769,
+          "stat_id": 0,
+          "upgrade_id": 24615,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 46760,
+          "stat_id": 0,
+          "upgrade_id": 24624,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-elementalist-catalyst-power-dps",
+    "name": "Catalyst - Power DPS",
+    "profession": "Elementalist",
+    "elite_spec": "Catalyst",
+    "build_type": "Power",
+    "game_mode": "Raid",
+    "tier": "Great",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Raid and Fractal build for Catalyst in GW2 that focuses on Direct Damage. This is a meta build.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Catalyst_-_Power_DPS",
+    "gw2skills_url": "",
+    "chat_code": "[&DQYfHSkfQyZ0AHQA+Br4GlAB7hq+AVAB9xr3GgAAAAAAAAAAAAAAAAAAAAADWgAvADMAAA==]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 31,
+        "traits": [
+          296,
+          334,
+          1510
+        ]
+      },
+      "line2": {
+        "spec_id": 41,
+        "traits": [
+          232,
+          1502,
+          226
+        ]
+      },
+      "line3": {
+        "spec_id": 67,
+        "traits": [
+          2252,
+          2247,
+          2241
+        ]
+      }
+    },
+    "skills": {
+      "heal": 39964,
+      "utilities": [
+        45313,
+        44451,
+        5691
+      ],
+      "elite": 5557
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 103574,
+      "food_id": 41569,
+      "utility_id": 78305,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48081,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48083,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48079,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48080,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48082,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48078,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 37009,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 39233,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 39232,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 39273,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 37075,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 37086,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46774,
+          "stat_id": 0,
+          "upgrade_id": 24615,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 46760,
+          "stat_id": 0,
+          "upgrade_id": 24868,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-elementalist-catalyst-quickness-support-power-dps",
+    "name": "Catalyst - Quickness Support Power DPS",
+    "profession": "Elementalist",
+    "elite_spec": "Catalyst",
+    "build_type": "Quickness",
+    "game_mode": "Raid",
+    "tier": "Great",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Raid build for Catalyst in GW2 that focuses on Direct Damage and Support. This is a meta build.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Catalyst_-_Quickness_Support_Power_DPS",
+    "gw2skills_url": "",
+    "chat_code": "[&DQYfHSkvQz4nDycP+Br4GssAywC+AVABJgD3GgAAAAAAAAAAAAAAAAAAAAADWgAvADMAAA==]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 31,
+        "traits": [
+          296,
+          334,
+          1510
+        ]
+      },
+      "line2": {
+        "spec_id": 41,
+        "traits": [
+          232,
+          1502,
+          1503
+        ]
+      },
+      "line3": {
+        "spec_id": 67,
+        "traits": [
+          2252,
+          2234,
+          2251
+        ]
+      }
+    },
+    "skills": {
+      "heal": 5508,
+      "utilities": [
+        5692,
+        5675,
+        5691
+      ],
+      "elite": 5557
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100947,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48081,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48083,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48079,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48080,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48082,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48078,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 37009,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 39233,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 39232,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 39273,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 37075,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 37086,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46769,
+          "stat_id": 0,
+          "upgrade_id": 24615,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 46760,
+          "stat_id": 0,
+          "upgrade_id": 24868,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 46777,
+          "stat_id": 0,
+          "upgrade_id": 24868,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-elementalist-evoker-boon-support-healer",
+    "name": "Evoker - Boon Support Healer",
+    "profession": "Elementalist",
+    "elite_spec": "Evoker",
+    "build_type": "Heal",
+    "game_mode": "Raid",
+    "tier": "",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Raid build for Evoker in GW2 that focuses on Healing, Support and Utility. This is a draft build.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Evoker_-_Boon_Support_Healer",
+    "gw2skills_url": "",
+    "chat_code": "[&DQYROSUWUCpiHWIddx13HYsdix1yHXIdJgBqHQAAAAAAAAAAAAAAAAAAAAADVgAvAFoAAA==]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 17,
+        "traits": [
+          348,
+          358,
+          2028
+        ]
+      },
+      "line2": {
+        "spec_id": 37,
+        "traits": [
+          266,
+          265,
+          238
+        ]
+      },
+      "line3": {
+        "spec_id": 80,
+        "traits": [
+          2415,
+          2380,
+          2436
+        ]
+      }
+    },
+    "skills": {
+      "heal": 5491,
+      "utilities": [
+        5548,
+        5679,
+        5680
+      ],
+      "elite": 5501
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 101268,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 85161,
+          "stat_id": 0,
+          "stat_name": "Harrier",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 85089,
+          "stat_id": 0,
+          "stat_name": "Harrier",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 85098,
+          "stat_id": 0,
+          "stat_name": "Harrier",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85004,
+          "stat_id": 0,
+          "stat_name": "Harrier",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 70414,
+          "stat_id": 0,
+          "stat_name": "Minstrel",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 85317,
+          "stat_id": 0,
+          "stat_name": "Harrier",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 1134,
+          "stat_name": "Minstrel",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 83429,
+          "stat_id": 0,
+          "stat_name": "Harrier",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 86978,
+          "stat_id": 1345,
+          "stat_name": "Harrier",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 82769,
+          "stat_id": 0,
+          "stat_name": "Harrier",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 84018,
+          "stat_id": 0,
+          "stat_name": "Harrier",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 82851,
+          "stat_id": 0,
+          "stat_name": "Harrier",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 85112,
+          "stat_id": 0,
+          "upgrade_id": 74326,
+          "infusions": [],
+          "upgrade2_id": 24551
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-elementalist-evoker-power-air-dps",
+    "name": "Evoker - Power Air DPS",
+    "profession": "Elementalist",
+    "elite_spec": "Evoker",
+    "build_type": "Power",
+    "game_mode": "Raid",
+    "tier": "",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Raid and Fractal build for Evoker in GW2 that focuses on Direct Damage. This is a test build.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Evoker_-_Power_Air_DPS",
+    "gw2skills_url": "",
+    "chat_code": "[&DQYfHSkfUBViHWIddx13Hb4BUAHLAMsAah1qHQAAAAAAAAAAAAAAAAAAAAADWgAvADMAAA==]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 31,
+        "traits": [
+          296,
+          334,
+          1510
+        ]
+      },
+      "line2": {
+        "spec_id": 41,
+        "traits": [
+          232,
+          1502,
+          226
+        ]
+      },
+      "line3": {
+        "spec_id": 80,
+        "traits": [
+          2391,
+          2342,
+          2335
+        ]
+      }
+    },
+    "skills": {
+      "heal": 5508,
+      "utilities": [
+        5692,
+        5675,
+        5691
+      ],
+      "elite": 5557
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100947,
+      "food_id": 41569,
+      "utility_id": 78305,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48081,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48083,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48079,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48080,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48082,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48078,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 37009,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 39233,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 39232,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 39273,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 37075,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 37086,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46769,
+          "stat_id": 0,
+          "upgrade_id": 24868,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 46760,
+          "stat_id": 0,
+          "upgrade_id": 24615,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-elementalist-evoker-power-fire-dps",
+    "name": "Evoker - Power Fire DPS",
+    "profession": "Elementalist",
+    "elite_spec": "Evoker",
+    "build_type": "Power",
+    "game_mode": "Raid",
+    "tier": "",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Raid and Fractal build for Evoker in GW2 that focuses on Direct Damage. This is a test build.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Evoker_-_Power_Fire_DPS",
+    "gw2skills_url": "",
+    "chat_code": "[&DQYfPSkfUDViHWIdywDLAHcddx1yAI4AJgBqHQAAAAAAAAAAAAAAAAAAAAADVgAvAFoAAA==]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 31,
+        "traits": [
+          296,
+          334,
+          1675
+        ]
+      },
+      "line2": {
+        "spec_id": 41,
+        "traits": [
+          232,
+          1502,
+          226
+        ]
+      },
+      "line3": {
+        "spec_id": 80,
+        "traits": [
+          2391,
+          2342,
+          2437
+        ]
+      }
+    },
+    "skills": {
+      "heal": 5508,
+      "utilities": [
+        5692,
+        5675,
+        5497
+      ],
+      "elite": 5678
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100947,
+      "food_id": 12467,
+      "utility_id": 78305,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48081,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24797,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48083,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24797,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48079,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24797,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48080,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24797,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48082,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24797,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48078,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24797,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 37009,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 39233,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 39232,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 39273,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 37075,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 37086,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46769,
+          "stat_id": 0,
+          "upgrade_id": 24624,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 46761,
+          "stat_id": 0,
+          "upgrade_id": 44950,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-elementalist-evoker-quickness-support-power-air-dps",
+    "name": "Evoker - Quickness Support Power Air DPS",
+    "profession": "Elementalist",
+    "elite_spec": "Evoker",
+    "build_type": "Quickness",
+    "game_mode": "Raid",
+    "tier": "",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Raid and Fractal build for Evoker in GW2 that focuses on Direct Damage. This is a test build.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Evoker_-_Quickness_Support_Power_Air_DPS",
+    "gw2skills_url": "",
+    "chat_code": "[&DQYfHSkfUBliHWIddx13Hb4BUAHLAMsAah1qHQAAAAAAAAAAAAAAAAAAAAADWgAvADMAAA==]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 31,
+        "traits": [
+          296,
+          334,
+          1510
+        ]
+      },
+      "line2": {
+        "spec_id": 41,
+        "traits": [
+          232,
+          1502,
+          226
+        ]
+      },
+      "line3": {
+        "spec_id": 80,
+        "traits": [
+          2391,
+          2380,
+          2335
+        ]
+      }
+    },
+    "skills": {
+      "heal": 5508,
+      "utilities": [
+        5692,
+        5675,
+        5691
+      ],
+      "elite": 5557
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100947,
+      "food_id": 41569,
+      "utility_id": 78305,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48081,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48083,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48079,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48080,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48082,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48078,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 37009,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 39233,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 39232,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 39273,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 37075,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 37086,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46769,
+          "stat_id": 0,
+          "upgrade_id": 24868,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 46760,
+          "stat_id": 0,
+          "upgrade_id": 24615,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-elementalist-evoker-quickness-support-power-fire-dps",
+    "name": "Evoker - Quickness Support Power Fire DPS",
+    "profession": "Elementalist",
+    "elite_spec": "Evoker",
+    "build_type": "Quickness",
+    "game_mode": "Raid",
+    "tier": "",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Raid and Fractal build for Evoker in GW2 that focuses on Direct Damage. This is a test build.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Evoker_-_Quickness_Support_Power_Fire_DPS",
+    "gw2skills_url": "",
+    "chat_code": "[&DQYfPSkfUDliHWIdywDLAHcddx1yAI4AJgBqHQAAAAAAAAAAAAAAAAAAAAADWgAvADMAAA==]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 31,
+        "traits": [
+          296,
+          334,
+          1675
+        ]
+      },
+      "line2": {
+        "spec_id": 41,
+        "traits": [
+          232,
+          1502,
+          226
+        ]
+      },
+      "line3": {
+        "spec_id": 80,
+        "traits": [
+          2391,
+          2380,
+          2437
+        ]
+      }
+    },
+    "skills": {
+      "heal": 5508,
+      "utilities": [
+        5692,
+        5675,
+        5497
+      ],
+      "elite": 5678
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100947,
+      "food_id": 12467,
+      "utility_id": 78305,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48081,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24797,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48083,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24797,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48079,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24797,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48080,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24797,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48082,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24797,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48078,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24797,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 37009,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 39233,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 39232,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 39273,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 37075,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 37086,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46769,
+          "stat_id": 0,
+          "upgrade_id": 24624,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 46761,
+          "stat_id": 0,
+          "upgrade_id": 44950,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-elementalist-tempest-alacrity-support-condi-dps",
+    "name": "Tempest - Alacrity Support Condi DPS",
+    "profession": "Elementalist",
+    "elite_spec": "Tempest",
+    "build_type": "Alacrity",
+    "game_mode": "Raid",
+    "tier": "",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Raid build for Tempest in GW2 that focuses on Condition Damage and Support. This is a test build.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Tempest_-_Alacrity_Support_Condi_DPS",
+    "gw2skills_url": "",
+    "chat_code": "[&DQYfFRomMCfHEnQAywDLAHIAkQBzAHMAJgCZEgAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 31,
+        "traits": [
+          296,
+          325,
+          1510
+        ]
+      },
+      "line2": {
+        "spec_id": 26,
+        "traits": [
+          1507,
+          275,
+          287
+        ]
+      },
+      "line3": {
+        "spec_id": 48,
+        "traits": [
+          1886,
+          1891,
+          2033
+        ]
+      }
+    },
+    "skills": {
+      "heal": 71929,
+      "utilities": [
+        71828,
+        71940,
+        29548
+      ],
+      "elite": 29533
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100153,
+      "food_id": 43361,
+      "utility_id": 77567,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 96005,
+          "stat_id": 0,
+          "stat_name": "Ritualist",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 97313,
+          "stat_id": 0,
+          "stat_name": "Ritualist",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 96962,
+          "stat_id": 0,
+          "stat_name": "Ritualist",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 96140,
+          "stat_id": 0,
+          "stat_name": "Ritualist",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 97476,
+          "stat_id": 0,
+          "stat_name": "Ritualist",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 96739,
+          "stat_id": 0,
+          "stat_name": "Ritualist",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79444,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 97322,
+          "stat_id": 0,
+          "stat_name": "Ritualist",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 95892,
+          "stat_id": 0,
+          "stat_name": "Ritualist",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79124,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 79712,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 72239,
+          "stat_id": 0,
+          "upgrade_id": 44944,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 75325,
+          "stat_id": 0,
+          "upgrade_id": 44950,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-elementalist-tempest-alacrity-support-healer",
+    "name": "Tempest - Alacrity Support Healer",
+    "profession": "Elementalist",
+    "elite_spec": "Tempest",
+    "build_type": "Alacrity",
+    "game_mode": "Raid",
+    "tier": "Good",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Raid build for Tempest in GW2 that focuses on Healing, Support and Utility. This build is rated good.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Tempest_-_Alacrity_Support_Healer",
+    "gw2skills_url": "",
+    "chat_code": "[&DQYRKSUXMD/HEscSBQF0Eo8AjwDDEsMSJgCZEgAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 17,
+        "traits": [
+          348,
+          358,
+          361
+        ]
+      },
+      "line2": {
+        "spec_id": 37,
+        "traits": [
+          1487,
+          265,
+          238
+        ]
+      },
+      "line3": {
+        "spec_id": 48,
+        "traits": [
+          1886,
+          2015,
+          1986
+        ]
+      }
+    },
+    "skills": {
+      "heal": 15718,
+      "utilities": [
+        5496,
+        5644,
+        29548
+      ],
+      "elite": 29533
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 101268,
+      "food_id": 91690,
+      "utility_id": 67528,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 85161,
+          "stat_id": 0,
+          "stat_name": "Harrier",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 85089,
+          "stat_id": 0,
+          "stat_name": "Harrier",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 85098,
+          "stat_id": 0,
+          "stat_name": "Harrier",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85004,
+          "stat_id": 0,
+          "stat_name": "Harrier",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 84926,
+          "stat_id": 0,
+          "stat_name": "Harrier",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 85317,
+          "stat_id": 0,
+          "stat_name": "Harrier",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 1037,
+          "stat_name": "Magi",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 67306,
+          "stat_id": 0,
+          "stat_name": "Magi",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 67307,
+          "stat_id": 0,
+          "stat_name": "Magi",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 82769,
+          "stat_id": 0,
+          "stat_name": "Harrier",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 84018,
+          "stat_id": 0,
+          "stat_name": "Harrier",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 82851,
+          "stat_id": 0,
+          "stat_name": "Harrier",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 85051,
+          "stat_id": 0,
+          "upgrade_id": 74326,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 84973,
+          "stat_id": 0,
+          "upgrade_id": 24551,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 85112,
+          "stat_id": 0,
+          "upgrade_id": 74326,
+          "infusions": [],
+          "upgrade2_id": 24551
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-elementalist-tempest-alacrity-support-power-dps",
+    "name": "Tempest - Alacrity Support Power DPS",
+    "profession": "Elementalist",
+    "elite_spec": "Tempest",
+    "build_type": "Alacrity",
+    "game_mode": "Raid",
+    "tier": "Good",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Raid build for Tempest in GW2 that focuses on Direct Damage. This build is rated good.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Tempest_-_Alacrity_Support_Power_DPS",
+    "gw2skills_url": "",
+    "chat_code": "[&DQYpLx8dMCfHEscSywDLAL4BUAHDEsMSJgCZEgAAAAAAAAAAAAAAAAAAAAADWgAvADMAAA==]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 41,
+        "traits": [
+          232,
+          1502,
+          1503
+        ]
+      },
+      "line2": {
+        "spec_id": 31,
+        "traits": [
+          296,
+          334,
+          1510
+        ]
+      },
+      "line3": {
+        "spec_id": 48,
+        "traits": [
+          1886,
+          1891,
+          2033
+        ]
+      }
+    },
+    "skills": {
+      "heal": 62925,
+      "utilities": [
+        62884,
+        62758,
+        62807
+      ],
+      "elite": 62910
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100947,
+      "food_id": 41569,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 89912,
+          "stat_id": 0,
+          "stat_name": "Diviner",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48083,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48079,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48080,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 89940,
+          "stat_id": 0,
+          "stat_name": "Diviner",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48078,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 80369,
+          "stat_id": 1539,
+          "stat_name": "Diviner",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 39233,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 39232,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 39273,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 37075,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 37086,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46763,
+          "stat_id": 0,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 24618
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-elementalist-tempest-condi-dps",
+    "name": "Tempest - Condi DPS",
+    "profession": "Elementalist",
+    "elite_spec": "Tempest",
+    "build_type": "Condi",
+    "game_mode": "Raid",
+    "tier": "Good",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Raid build for Tempest in GW2 that focuses on Condition Damage. This build is rated good.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Tempest_-_Condi_DPS",
+    "gw2skills_url": "",
+    "chat_code": "[&DQYfFRomMBd0AHQAywDLAHIAkQC+AXMAJgCZEgAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 31,
+        "traits": [
+          296,
+          325,
+          1510
+        ]
+      },
+      "line2": {
+        "spec_id": 26,
+        "traits": [
+          1507,
+          275,
+          287
+        ]
+      },
+      "line3": {
+        "spec_id": 48,
+        "traits": [
+          1886,
+          1891,
+          1839
+        ]
+      }
+    },
+    "skills": {
+      "heal": 71929,
+      "utilities": [
+        71828,
+        71940,
+        29548
+      ],
+      "elite": 29533
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100153,
+      "food_id": 12464,
+      "utility_id": 9476,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 75770,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 73225,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 71436,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 73852,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 75378,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 74264,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79444,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79745,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 80241,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79124,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 79712,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 72239,
+          "stat_id": 0,
+          "upgrade_id": 44950,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 75325,
+          "stat_id": 0,
+          "upgrade_id": 44944,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-elementalist-tempest-condi-fire-dps",
+    "name": "Tempest - Condi Fire DPS",
+    "profession": "Elementalist",
+    "elite_spec": "Tempest",
+    "build_type": "Condi",
+    "game_mode": "Raid",
+    "tier": "Good",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Raid build for Tempest in GW2 that focuses on Condition Damage. This build is rated good.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Tempest_-_Condi_Fire_DPS",
+    "gw2skills_url": "",
+    "chat_code": "[&DQYfFRomMBcnDycPywDLAHIAcwCRAJEAJgCZEgAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 31,
+        "traits": [
+          296,
+          325,
+          1510
+        ]
+      },
+      "line2": {
+        "spec_id": 26,
+        "traits": [
+          1507,
+          275,
+          287
+        ]
+      },
+      "line3": {
+        "spec_id": 48,
+        "traits": [
+          1886,
+          1891,
+          1839
+        ]
+      }
+    },
+    "skills": {
+      "heal": 5508,
+      "utilities": [
+        5692,
+        5675,
+        5497
+      ],
+      "elite": 5678
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100153,
+      "food_id": 86997,
+      "utility_id": 48917,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 75770,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 24765,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 67449,
+          "stat_id": 0,
+          "stat_name": "Sinister",
+          "upgrade_id": 24765,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 71436,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 24765,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 67452,
+          "stat_id": 0,
+          "stat_name": "Sinister",
+          "upgrade_id": 24765,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 75378,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 24765,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 67454,
+          "stat_id": 0,
+          "stat_name": "Sinister",
+          "upgrade_id": 24765,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 1064,
+          "stat_name": "Sinister",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 67896,
+          "stat_id": 0,
+          "stat_name": "Sinister",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 67894,
+          "stat_id": 0,
+          "stat_name": "Sinister",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 80241,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 67906,
+          "stat_id": 0,
+          "stat_name": "Sinister",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 79712,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 76688,
+          "stat_id": 0,
+          "upgrade_id": 44944,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 71584,
+          "stat_id": 0,
+          "upgrade_id": 24560,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-elementalist-tempest-power-dps",
+    "name": "Tempest - Power DPS",
+    "profession": "Elementalist",
+    "elite_spec": "Tempest",
+    "build_type": "Power",
+    "game_mode": "Raid",
+    "tier": "Great",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Raid build for Tempest in GW2 that focuses on Direct Damage. This is a meta build.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Tempest_-_Power_DPS",
+    "gw2skills_url": "",
+    "chat_code": "[&DQYfHSkvMBcXARcBywDLAL4BUAHDEsMSJgCZEgAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 41,
+        "traits": [
+          232,
+          1502,
+          1503
+        ]
+      },
+      "line2": {
+        "spec_id": 31,
+        "traits": [
+          296,
+          334,
+          1510
+        ]
+      },
+      "line3": {
+        "spec_id": 48,
+        "traits": [
+          1886,
+          1891,
+          1839
+        ]
+      }
+    },
+    "skills": {
+      "heal": 62925,
+      "utilities": [
+        62884,
+        62758,
+        62807
+      ],
+      "elite": 62910
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100947,
+      "food_id": 41569,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48081,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48083,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48079,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48080,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48082,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48078,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 37009,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 39233,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 39232,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 39273,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 37075,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 37086,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46763,
+          "stat_id": 0,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 24618
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-elementalist-tempest-support-healer",
+    "name": "Tempest - Support Healer",
+    "profession": "Elementalist",
+    "elite_spec": "Tempest",
+    "build_type": "Heal",
+    "game_mode": "Raid",
+    "tier": "Meta",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Raid build for Tempest in GW2 that focuses on Healing and Support. This is an archived build.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Tempest_-_Support_Healer",
+    "gw2skills_url": "",
+    "chat_code": "[&DQYRPSUWMD7HEscSwxLDEqUSpRJ0EnQSmRKZEgAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 17,
+        "traits": [
+          348,
+          349,
+          2028
+        ]
+      },
+      "line2": {
+        "spec_id": 37,
+        "traits": [
+          266,
+          265,
+          238
+        ]
+      },
+      "line3": {
+        "spec_id": 48,
+        "traits": [
+          1962,
+          2015,
+          1986
+        ]
+      }
+    },
+    "skills": {
+      "heal": 5491,
+      "utilities": [
+        5548,
+        5679,
+        5680
+      ],
+      "elite": 5501
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 0,
+      "food_id": 68634,
+      "utility_id": 67528,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48027,
+          "stat_id": 0,
+          "stat_name": "Magi",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48029,
+          "stat_id": 0,
+          "stat_name": "Magi",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48025,
+          "stat_id": 0,
+          "stat_name": "Magi",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48026,
+          "stat_id": 0,
+          "stat_name": "Magi",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48028,
+          "stat_id": 0,
+          "stat_name": "Magi",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48024,
+          "stat_id": 0,
+          "stat_name": "Magi",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 1037,
+          "stat_name": "Magi",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 67306,
+          "stat_id": 0,
+          "stat_name": "Magi",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 67307,
+          "stat_id": 0,
+          "stat_name": "Magi",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 80241,
+          "stat_id": 1037,
+          "stat_name": "Magi",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79124,
+          "stat_id": 1037,
+          "stat_name": "Magi",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 79712,
+          "stat_id": 1037,
+          "stat_name": "Magi",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46982,
+          "stat_id": 0,
+          "upgrade_id": 74326,
+          "infusions": [],
+          "upgrade2_id": 24551
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-elementalist-weaver-condi-dps",
+    "name": "Weaver - Condi DPS",
+    "profession": "Elementalist",
+    "elite_spec": "Weaver",
+    "build_type": "Condi",
+    "game_mode": "Raid",
+    "tier": "Great",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Raid build for Weaver in GW2 that focuses on Condition damage. This build is rated great.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Weaver_-_Condi_DPS",
+    "gw2skills_url": "",
+    "chat_code": "[&DQYfJRomOBV0AHQANRc1F8sAywByAHMAEhcSFwAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 31,
+        "traits": [
+          296,
+          325,
+          294
+        ]
+      },
+      "line2": {
+        "spec_id": 26,
+        "traits": [
+          1507,
+          275,
+          287
+        ]
+      },
+      "line3": {
+        "spec_id": 56,
+        "traits": [
+          2177,
+          2180,
+          2131
+        ]
+      }
+    },
+    "skills": {
+      "heal": 71929,
+      "utilities": [
+        71828,
+        71940,
+        29548
+      ],
+      "elite": 29533
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100153,
+      "food_id": 86997,
+      "utility_id": 48917,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 75770,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 73225,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 71436,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 73852,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 75378,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 74264,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 1064,
+          "stat_name": "Sinister",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79444,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79745,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 80241,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79124,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 79712,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 72239,
+          "stat_id": 0,
+          "upgrade_id": 44944,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 75325,
+          "stat_id": 0,
+          "upgrade_id": 24560,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 74179,
+          "stat_id": 0,
+          "upgrade_id": 24560,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-elementalist-weaver-power-dps",
+    "name": "Weaver - Power DPS",
+    "profession": "Elementalist",
+    "elite_spec": "Weaver",
+    "build_type": "Power",
+    "game_mode": "Raid",
+    "tier": "Great",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Raid and Fractal build for Weaver in GW2 that focuses on Direct damage. This is a meta build.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Weaver_-_Power_DPS",
+    "gw2skills_url": "",
+    "chat_code": "[&DQYfHSkfOBkXARcBNRc1F74BexZQAVABEhcSFwAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 31,
+        "traits": [
+          296,
+          334,
+          1510
+        ]
+      },
+      "line2": {
+        "spec_id": 41,
+        "traits": [
+          232,
+          1502,
+          226
+        ]
+      },
+      "line3": {
+        "spec_id": 56,
+        "traits": [
+          2177,
+          2061,
+          2131
+        ]
+      }
+    },
+    "skills": {
+      "heal": 39964,
+      "utilities": [
+        45313,
+        44451,
+        5691
+      ],
+      "elite": 5557
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100947,
+      "food_id": 41569,
+      "utility_id": 78305,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48081,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48083,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48079,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48080,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48082,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48078,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 37009,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 39233,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 39232,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 39273,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 37075,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 37086,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46774,
+          "stat_id": 0,
+          "upgrade_id": 24615,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 46760,
+          "stat_id": 0,
+          "upgrade_id": 24868,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-elementalist-catalyst-power-catalyst",
+    "name": "Catalyst - Power Catalyst",
+    "profession": "Elementalist",
+    "elite_spec": "Catalyst",
+    "build_type": "Power",
+    "game_mode": "OpenWorld",
+    "tier": "Good",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Open World build for Catalyst in GW2 that focuses on Strike damage. This build is rated good.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Catalyst_-_Power_Catalyst",
+    "gw2skills_url": "",
+    "chat_code": "[&DQYpHx8dQz4XAScP+Br4Gr4B7hrLAMsA9xr3GgAAAAAAAAAAAAAAAAAAAAADVgAxADMAAA==]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 31,
+        "traits": [
+          296,
+          334,
+          1510
+        ]
+      },
+      "line2": {
+        "spec_id": 41,
+        "traits": [
+          232,
+          1502,
+          226
+        ]
+      },
+      "line3": {
+        "spec_id": 67,
+        "traits": [
+          2252,
+          2234,
+          2251
+        ]
+      }
+    },
+    "skills": {
+      "heal": 73088,
+      "utilities": [
+        73080,
+        73137,
+        72988
+      ],
+      "elite": 73054
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100947,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48081,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48083,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 89768,
+          "stat_id": 0,
+          "stat_name": "Diviner",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48080,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48082,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48078,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 80369,
+          "stat_id": 1539,
+          "stat_name": "Diviner",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 89544,
+          "stat_id": 0,
+          "stat_name": "Diviner",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 86978,
+          "stat_id": 1539,
+          "stat_name": "Diviner",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 39273,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 37075,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 37086,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 89610,
+          "stat_id": 0,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 24618
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 89846,
+          "stat_id": 0,
+          "upgrade_id": 24615,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 46760,
+          "stat_id": 0,
+          "upgrade_id": 24618,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-elementalist-elementalist-core-power",
+    "name": "Elementalist - Core Power",
+    "profession": "Elementalist",
+    "elite_spec": "",
+    "build_type": "Power",
+    "game_mode": "OpenWorld",
+    "tier": "Good",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Open World build for Elementalist in GW2 that focuses on Strike damage. This build is rated good.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Elementalist_-_Core_Power",
+    "gw2skills_url": "",
+    "chat_code": "[&DQYpGR8tET4XARcBUAFQAb4BTgH2APYAJgCWAAAAAAAAAAAAAAAAAAAAAAACLwBZAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 41,
+        "traits": [
+          227,
+          214,
+          226
+        ]
+      },
+      "line2": {
+        "spec_id": 31,
+        "traits": [
+          296,
+          334,
+          294
+        ]
+      },
+      "line3": {
+        "spec_id": 17,
+        "traits": [
+          363,
+          349,
+          2028
+        ]
+      }
+    },
+    "skills": {
+      "heal": 5508,
+      "utilities": [
+        5692,
+        5675,
+        5691
+      ],
+      "elite": 5557
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100916,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48081,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48083,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48079,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48080,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48082,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48078,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 37009,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 39233,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 39232,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 39273,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 37075,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 37086,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46769,
+          "stat_id": 0,
+          "upgrade_id": 24615,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 46760,
+          "stat_id": 0,
+          "upgrade_id": 24618,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 46773,
+          "stat_id": 0,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 24618
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-elementalist-evoker-power-evoker-fire-inferno",
+    "name": "Evoker - Power Evoker Fire Inferno",
+    "profession": "Elementalist",
+    "elite_spec": "Evoker",
+    "build_type": "Power",
+    "game_mode": "OpenWorld",
+    "tier": "Great",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Open World build for Evoker in GW2 that focuses on Strike damage. This build is rated great.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Evoker_-_Power_Evoker_Fire_Inferno",
+    "gw2skills_url": "",
+    "chat_code": "[&DQYfPSkbUDViHQAAdx0AAMsAAABPAQAAJgAAAAAAAAAAAAAAAAAAAAAAAAADVgAxADMAAA==]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 31,
+        "traits": [
+          296,
+          334,
+          1675
+        ]
+      },
+      "line2": {
+        "spec_id": 41,
+        "traits": [
+          232,
+          214,
+          226
+        ]
+      },
+      "line3": {
+        "spec_id": 80,
+        "traits": [
+          2391,
+          2342,
+          2437
+        ]
+      }
+    },
+    "skills": {
+      "heal": 5508,
+      "utilities": [
+        5692,
+        5675,
+        5497
+      ],
+      "elite": 5678
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100947,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48081,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24797,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48083,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24797,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48079,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24797,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48080,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24797,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48082,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24797,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48078,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24797,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 37009,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 39233,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 39232,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 39273,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 37075,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 37086,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46769,
+          "stat_id": 0,
+          "upgrade_id": 44950,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 46761,
+          "stat_id": 0,
+          "upgrade_id": 24624,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 46760,
+          "stat_id": 0,
+          "upgrade_id": 24624,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-elementalist-tempest-condi-tempest",
+    "name": "Tempest - Condi Tempest",
+    "profession": "Elementalist",
+    "elite_spec": "Tempest",
+    "build_type": "Condi",
+    "game_mode": "OpenWorld",
+    "tier": "Great",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Open World build for Tempest in GW2 that focuses on Condition damage and Defense. This build is rated great.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Tempest_-_Condi_Tempest",
+    "gw2skills_url": "",
+    "chat_code": "[&DQYfFRonMBsXARcBywDLAMMSwxJzAPYAJgCZEgAAAAAAAAAAAAAAAAAAAAADVgBnAFkAAA==]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 31,
+        "traits": [
+          296,
+          325,
+          1510
+        ]
+      },
+      "line2": {
+        "spec_id": 26,
+        "traits": [
+          289,
+          275,
+          287
+        ]
+      },
+      "line3": {
+        "spec_id": 48,
+        "traits": [
+          1886,
+          1902,
+          1839
+        ]
+      }
+    },
+    "skills": {
+      "heal": 5508,
+      "utilities": [
+        5692,
+        5675,
+        29548
+      ],
+      "elite": 29533
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100153,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 75770,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 73225,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 71436,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 73852,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 75378,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 74264,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79444,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79745,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 80241,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79124,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 79712,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 76688,
+          "stat_id": 0,
+          "upgrade_id": 24560,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 75325,
+          "stat_id": 0,
+          "upgrade_id": 44950,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 72239,
+          "stat_id": 0,
+          "upgrade_id": 44944,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-elementalist-tempest-fresh-air",
+    "name": "Tempest - Fresh Air",
+    "profession": "Elementalist",
+    "elite_spec": "Tempest",
+    "build_type": "Power",
+    "game_mode": "OpenWorld",
+    "tier": "Great",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Open World build for Tempest in GW2 that focuses on Strike damage. This build is rated great.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Tempest_-_Fresh_Air",
+    "gw2skills_url": "",
+    "chat_code": "[&DQYpLx8dMBcXARcBwxLDEnQSdBLLAMsAJgCWAAAAAAAAAAAAAAAAAAAAAAADVgBnAFkAAA==]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 41,
+        "traits": [
+          232,
+          1502,
+          1503
+        ]
+      },
+      "line2": {
+        "spec_id": 31,
+        "traits": [
+          296,
+          334,
+          1510
+        ]
+      },
+      "line3": {
+        "spec_id": 48,
+        "traits": [
+          1886,
+          1902,
+          1839
+        ]
+      }
+    },
+    "skills": {
+      "heal": 5508,
+      "utilities": [
+        5692,
+        5675,
+        29548
+      ],
+      "elite": 29533
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100947,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48081,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48083,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48079,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48080,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48082,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48078,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 37009,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 39233,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 39232,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 39273,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 37075,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 37086,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46769,
+          "stat_id": 0,
+          "upgrade_id": 24615,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 46777,
+          "stat_id": 0,
+          "upgrade_id": 24618,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-elementalist-tempest-heal-support",
+    "name": "Tempest - Heal Support",
+    "profession": "Elementalist",
+    "elite_spec": "Tempest",
+    "build_type": "Heal",
+    "game_mode": "OpenWorld",
+    "tier": "Meta",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Open World build for Tempest in GW2 that focuses on Healing and Support. This is an archived build.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Tempest_-_Heal_Support",
+    "gw2skills_url": "",
+    "chat_code": "[&DQYpOREuMD/HEscSwxLDEqUSpRJ0EnQSmRKZEgAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 41,
+        "traits": [
+          227,
+          214,
+          1672
+        ]
+      },
+      "line2": {
+        "spec_id": 17,
+        "traits": [
+          363,
+          349,
+          2028
+        ]
+      },
+      "line3": {
+        "spec_id": 48,
+        "traits": [
+          1962,
+          2015,
+          2033
+        ]
+      }
+    },
+    "skills": {
+      "heal": 15718,
+      "utilities": [
+        5496,
+        5644,
+        29548
+      ],
+      "elite": 29533
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 0,
+      "food_id": 68634,
+      "utility_id": 67528,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 85161,
+          "stat_id": 0,
+          "stat_name": "Harrier",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 85089,
+          "stat_id": 0,
+          "stat_name": "Harrier",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 85098,
+          "stat_id": 0,
+          "stat_name": "Harrier",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85004,
+          "stat_id": 0,
+          "stat_name": "Harrier",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 84926,
+          "stat_id": 0,
+          "stat_name": "Harrier",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 85317,
+          "stat_id": 0,
+          "stat_name": "Harrier",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 83029,
+          "stat_id": 1345,
+          "stat_name": "Harrier",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 83429,
+          "stat_id": 0,
+          "stat_name": "Harrier",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 86978,
+          "stat_id": 1345,
+          "stat_name": "Harrier",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 82769,
+          "stat_id": 0,
+          "stat_name": "Harrier",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 84018,
+          "stat_id": 0,
+          "stat_name": "Harrier",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 82851,
+          "stat_id": 0,
+          "stat_name": "Harrier",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 85051,
+          "stat_id": 0,
+          "upgrade_id": 74326,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 84973,
+          "stat_id": 0,
+          "upgrade_id": 72339,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 85112,
+          "stat_id": 0,
+          "upgrade_id": 74326,
+          "infusions": [],
+          "upgrade2_id": 72339
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-elementalist-tempest-li-tempest",
+    "name": "Tempest - LI Tempest",
+    "profession": "Elementalist",
+    "elite_spec": "Tempest",
+    "build_type": "Power",
+    "game_mode": "OpenWorld",
+    "tier": "Meta",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Open World build for Tempest in GW2 that focuses on Condition damage, Defense and Low intensity. This is an archived build.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Tempest_-_LI_Tempest",
+    "gw2skills_url": "",
+    "chat_code": "[&DQYaFiUdMCl0AAAAcgAAAJEAAACPAAAAJgAAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 26,
+        "traits": [
+          1507,
+          275,
+          1508
+        ]
+      },
+      "line2": {
+        "spec_id": 37,
+        "traits": [
+          253,
+          257,
+          238
+        ]
+      },
+      "line3": {
+        "spec_id": 48,
+        "traits": [
+          1952,
+          1902,
+          2033
+        ]
+      }
+    },
+    "skills": {
+      "heal": 15718,
+      "utilities": [
+        5496,
+        5644,
+        29548
+      ],
+      "elite": 29533
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 0,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 47937,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 76166,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 47939,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 76166,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 47935,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 76166,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 47936,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 76166,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 47938,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 76166,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 47934,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 76166,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 588,
+          "stat_name": "Celestial",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 39243,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 39242,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 39282,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 37088,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 37078,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 47007,
+          "stat_id": 0,
+          "upgrade_id": 24560,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 47024,
+          "stat_id": 0,
+          "upgrade_id": 24578,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-elementalist-weaver-condi-weaver",
+    "name": "Weaver - Condi Weaver",
+    "profession": "Elementalist",
+    "elite_spec": "Weaver",
+    "build_type": "Condi",
+    "game_mode": "OpenWorld",
+    "tier": "Great",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Open World build for Weaver in GW2 that focuses on Condition damage. This build is rated great.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Weaver_-_Condi_Weaver",
+    "gw2skills_url": "",
+    "chat_code": "[&DQYfJRomOBV0AHQAywDLADUXNRdzAHMAJgASFwAAAAAAAAAAAAAAAAAAAAADVgBnAFoAAA==]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 31,
+        "traits": [
+          296,
+          325,
+          294
+        ]
+      },
+      "line2": {
+        "spec_id": 26,
+        "traits": [
+          1507,
+          275,
+          287
+        ]
+      },
+      "line3": {
+        "spec_id": 56,
+        "traits": [
+          2177,
+          2180,
+          2131
+        ]
+      }
+    },
+    "skills": {
+      "heal": 5508,
+      "utilities": [
+        5692,
+        5675,
+        29548
+      ],
+      "elite": 29533
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100153,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 75770,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 73225,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 71436,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 73852,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 75378,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 74264,
+          "stat_id": 0,
+          "stat_name": "Viper",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79444,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79745,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 80241,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79124,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 79712,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 76688,
+          "stat_id": 0,
+          "upgrade_id": 44944,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 75325,
+          "stat_id": 0,
+          "upgrade_id": 24562,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 71387,
+          "stat_id": 0,
+          "upgrade_id": 82876,
+          "infusions": [],
+          "upgrade2_id": 24578
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-elementalist-weaver-power-weaver",
+    "name": "Weaver - Power Weaver",
+    "profession": "Elementalist",
+    "elite_spec": "Weaver",
+    "build_type": "Power",
+    "game_mode": "OpenWorld",
+    "tier": "Great",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Open World build for Weaver in GW2 that focuses on Strike damage. This build is rated great.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Weaver_-_Power_Weaver",
+    "gw2skills_url": "",
+    "chat_code": "[&DQYpGR8dOBl0AHQANRc1F74BUAH1FfYAEhcSFwAAAAAAAAAAAAAAAAAAAAADCQFWAGcAAA==]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 41,
+        "traits": [
+          227,
+          214,
+          226
+        ]
+      },
+      "line2": {
+        "spec_id": 31,
+        "traits": [
+          296,
+          334,
+          1510
+        ]
+      },
+      "line3": {
+        "spec_id": 56,
+        "traits": [
+          2177,
+          2061,
+          2131
+        ]
+      }
+    },
+    "skills": {
+      "heal": 39964,
+      "utilities": [
+        45313,
+        44451,
+        5691
+      ],
+      "elite": 5557
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100947,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48081,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48083,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48079,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48080,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48082,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48078,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 37009,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 39233,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 39232,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 39273,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 37075,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 37086,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46774,
+          "stat_id": 0,
+          "upgrade_id": 24615,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 46760,
+          "stat_id": 0,
+          "upgrade_id": 24868,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 46773,
+          "stat_id": 0,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 82876
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-elementalist-weaver-staff-weaver",
+    "name": "Weaver - Staff Weaver",
+    "profession": "Elementalist",
+    "elite_spec": "Weaver",
+    "build_type": "Power",
+    "game_mode": "OpenWorld",
+    "tier": "Good",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "Open World build for Weaver in GW2 that focuses on Strike damage. This build is rated good.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Weaver_-_Staff_Weaver",
+    "gw2skills_url": "",
+    "chat_code": "[&DQYfFSkZOBkXARcBvgFOAVABUAH2APYAJgASFwAAAAAAAAAAAAAAAAAAAAADWQBWAGcAAA==]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 31,
+        "traits": [
+          296,
+          325,
+          1510
+        ]
+      },
+      "line2": {
+        "spec_id": 41,
+        "traits": [
+          227,
+          214,
+          226
+        ]
+      },
+      "line3": {
+        "spec_id": 56,
+        "traits": [
+          2177,
+          2061,
+          2131
+        ]
+      }
+    },
+    "skills": {
+      "heal": 5491,
+      "utilities": [
+        5548,
+        5679,
+        5680
+      ],
+      "elite": 5501
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100916,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48081,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48083,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48079,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48080,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48082,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48078,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 37009,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 39233,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 39232,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 39273,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 37075,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 37086,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46773,
+          "stat_id": 0,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 24868
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 46773,
+          "stat_id": 0,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 24575
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  }
+]

@@ -48,16 +48,16 @@ static const char* TYPE_FILTER_NAMES[] = {
     "All","Power","Condi","Support","Heal","Quickness","Alacrity"
 };
 static const char* SOURCE_FILTER_NAMES[] = {
-    "All Sources", "Snow Crows", "Hardstuck"
+    "All Sources", "Snow Crows", "Hardstuck", "MetaBattle"
 };
 static const char* SOURCE_VALUES[] = {
-    "", "snowcrows", "hardstuck"
+    "", "snowcrows", "hardstuck", "metabattle"
 };
 static const char* GAME_MODE_FILTER_NAMES[] = {
-    "All Modes", "Group PvE", "WvW Zerg", "WvW Roaming", "Open World"
+    "All Modes", "Group PvE", "Raid", "Open World", "WvW Zerg", "WvW Roaming"
 };
 static const char* GAME_MODE_VALUES[] = {
-    "", "GroupPvE", "WvWZerg", "WvWRoaming", "OpenWorld"
+    "", "GroupPvE", "Raid", "OpenWorld", "WvWZerg", "WvWRoaming"
 };
 
 /* Character picker (used when Mumble hasn't detected a live character) */
@@ -776,14 +776,14 @@ void Render()
 
         /* Filter row 2: source website and game mode */
         if (ImGui::BeginCombo("##source_filter", SOURCE_FILTER_NAMES[s_filter_source], ImGuiComboFlags_HeightLarge)) {
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 4; i++)
                 if (ImGui::Selectable(SOURCE_FILTER_NAMES[i], s_filter_source == i))
                     s_filter_source = i;
             ImGui::EndCombo();
         }
         ImGui::SameLine();
         if (ImGui::BeginCombo("##mode_filter", GAME_MODE_FILTER_NAMES[s_filter_game_mode], ImGuiComboFlags_HeightLarge)) {
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 6; i++)
                 if (ImGui::Selectable(GAME_MODE_FILTER_NAMES[i], s_filter_game_mode == i))
                     s_filter_game_mode = i;
             ImGui::EndCombo();

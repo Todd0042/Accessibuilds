@@ -62,7 +62,7 @@ except ImportError:
 BASE_URL    = "https://snowcrows.com"
 GW2_API     = "https://api.guildwars2.com"
 SCRIPT_DIR  = Path(__file__).parent
-DEFAULT_OUT = SCRIPT_DIR / ".." / "full-builds" / "sc_builds_full.json"
+DEFAULT_OUT = SCRIPT_DIR / ".." / "sc-builds" / "sc_builds_full.json"
 CACHE_DIR   = SCRIPT_DIR / ".scraper_cache"
 
 # Use dated schema for skills_by_palette support

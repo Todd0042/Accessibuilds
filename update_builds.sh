@@ -23,6 +23,7 @@ BUILD_ARGS=("--regen")
 INSTALL_PATH=""
 RUN_SC=1
 RUN_HS=1
+RUN_MB=1
 
 for arg in "$@"; do
     case "$arg" in
@@ -34,8 +35,9 @@ for arg in "$@"; do
         --prof=*)    SCRAPER_ARGS+=("--prof" "${arg#--prof=}") ;;
         --prof)      shift; SCRAPER_ARGS+=("--prof" "$1") ;;
         --limit=*)   SCRAPER_ARGS+=("--limit" "${arg#--limit=}") ;;
-        --sc-only)   RUN_HS=0 ;;
-        --hs-only)   RUN_SC=0 ;;
+        --sc-only)   RUN_HS=0; RUN_MB=0 ;;
+        --hs-only)   RUN_SC=0; RUN_MB=0 ;;
+        --mb-only)   RUN_SC=0; RUN_HS=0 ;;
         -h|--help)
             sed -n '2,17p' "$0" | sed 's/^# //'
             exit 0 ;;
@@ -43,7 +45,7 @@ for arg in "$@"; do
     esac
 done
 
-TOTAL_STEPS=$(( 2 + RUN_SC + RUN_HS ))
+TOTAL_STEPS=$(( 2 + RUN_SC + RUN_HS + RUN_MB ))
 STEP=0
 
 echo "================================="
@@ -64,6 +66,14 @@ if [[ $RUN_HS -eq 1 ]]; then
     STEP=$(( STEP + 1 ))
     echo "Step $STEP/$TOTAL_STEPS  Scraping Hardstuck..."
     python3 "$SCRIPT_DIR/scraper/scrape_hardstuck.py" "${SCRAPER_ARGS[@]+"${SCRAPER_ARGS[@]}"}"
+    echo
+fi
+
+# --- Scrape MetaBattle -------------------------------------------------------
+if [[ $RUN_MB -eq 1 ]]; then
+    STEP=$(( STEP + 1 ))
+    echo "Step $STEP/$TOTAL_STEPS  Scraping MetaBattle..."
+    python3 "$SCRIPT_DIR/scraper/scrape_metabattle.py" "${SCRAPER_ARGS[@]+"${SCRAPER_ARGS[@]}"}"
     echo
 fi
 

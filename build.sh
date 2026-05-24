@@ -57,10 +57,10 @@ lines.append("")
 lines.append("static const int sc_builds_version = %d;" % version)
 lines.append("")
 
-BUILD_DIR = root / "full-builds"
+SC_DIR = root / "sc-builds"
 
-# Main builds (may be empty)
-main_src = BUILD_DIR / "sc_builds_full.json"
+# Main builds (may be empty — sc-builds/ not present until SC permission granted)
+main_src = SC_DIR / "sc_builds_full.json"
 if main_src.exists():
     main_raw = embed_file(str(main_src), "sc_builds_json")
     lines.append(main_raw)
@@ -70,10 +70,10 @@ if main_src.exists():
 else:
     lines.append("static const unsigned char sc_builds_json[] = {0x5b, 0x5d}; /* [] */")
     lines.append("static const size_t sc_builds_json_len = 2;")
-    print("  Main data: no file, embedded empty array")
+    print("  Main data: no sc-builds/sc_builds_full.json — embedded empty array")
 
 # Accessibility builds
-acc_src = BUILD_DIR / "sc_builds_accessibility.json"
+acc_src = SC_DIR / "sc_builds_accessibility.json"
 if acc_src.exists():
     acc_raw = embed_file(str(acc_src), "sc_builds_accessibility_json")
     lines.append(acc_raw)
@@ -83,10 +83,10 @@ if acc_src.exists():
 else:
     lines.append("static const unsigned char sc_builds_accessibility_json[] = {0x5b, 0x5d}; /* [] */")
     lines.append("static const size_t sc_builds_accessibility_json_len = 2;")
-    print("  Accessibility: no file, embedded empty array")
+    print("  Accessibility: no sc-builds/ — embedded empty array")
 
 # Rotation data
-rot_src = BUILD_DIR / "sc_rotations_accessibility.json"
+rot_src = SC_DIR / "sc_rotations_accessibility.json"
 if rot_src.exists():
     rot_raw = embed_file(str(rot_src), "sc_rotations_accessibility_json")
     lines.append(rot_raw)
@@ -96,7 +96,7 @@ if rot_src.exists():
 else:
     lines.append("static const unsigned char sc_rotations_accessibility_json[] = {0x7b, 0x7d}; /* {} */")
     lines.append("static const size_t sc_rotations_accessibility_json_len = 2;")
-    print("  Rotations: no file, embedded empty object")
+    print("  Rotations: no sc-builds/ — embedded empty object")
 
 with open("src/sc_builds_embedded.h", "w") as f:
     f.write("\n".join(lines) + "\n")
@@ -105,6 +105,70 @@ PYEOF
 
     echo "Regenerating src/sc_builds_offline.h ..."
     python3 tools/embed_builds.py
+
+    echo "Regenerating src/mb_builds_embedded.h ..."
+    python3 - << 'PYEOF'
+import subprocess, re, sys, os, json, pathlib, tempfile
+
+root   = pathlib.Path(".")
+mb_src = root / "mb-builds" / "mb_builds_full.json"
+
+mb_version_file = root / "mb_builds_version.txt"
+if mb_version_file.exists():
+    mb_version = int(mb_version_file.read_text().strip())
+else:
+    mb_version = 1
+mb_version += 1
+mb_version_file.write_text(str(mb_version))
+
+def embed_bytes(src_path: str, var_name: str) -> str:
+    raw = subprocess.check_output(["xxd", "-i", src_path]).decode()
+    raw = re.sub(r'unsigned char \S+\[\]', f'static const unsigned char {var_name}[]', raw)
+    raw = re.sub(r'unsigned int \S+',      f'static const size_t {var_name}_len',       raw)
+    return raw
+
+if not mb_src.exists():
+    print("  No mb-builds/mb_builds_full.json found — writing empty header.")
+    header = [
+        "/* Auto-generated — do not edit. Regenerate with ./build.sh --regen */",
+        "#pragma once",
+        "#include <stddef.h>",
+        "",
+        "static const int mb_builds_version = %d;" % mb_version,
+        "",
+        "static const unsigned char mb_builds_json[] = {0x5b, 0x5d}; /* [] */",
+        "static const size_t mb_builds_json_len = 2;",
+    ]
+    with open("src/mb_builds_embedded.h", "w") as f:
+        f.write("\n".join(header) + "\n")
+    sys.exit(0)
+
+with open(mb_src, encoding="utf-8") as f:
+    all_builds = json.load(f)
+
+print("  %d MetaBattle builds found" % len(all_builds))
+
+with tempfile.NamedTemporaryFile(mode="w", suffix=".json", delete=False, encoding="utf-8") as tmp:
+    json.dump(all_builds, tmp, separators=(",", ":"), ensure_ascii=False)
+    tmp_path = tmp.name
+
+raw = embed_bytes(tmp_path, "mb_builds_json")
+os.unlink(tmp_path)
+
+header = [
+    "/* Auto-generated — do not edit. Regenerate with ./build.sh --regen */",
+    "#pragma once",
+    "#include <stddef.h>",
+    "",
+    "static const int mb_builds_version = %d;" % mb_version,
+    "",
+    raw,
+]
+with open("src/mb_builds_embedded.h", "w") as f:
+    f.write("\n".join(header) + "\n")
+print("  mb_builds_embedded.h: %d builds embedded" % len(all_builds))
+print("  Done.")
+PYEOF
 
     echo "Regenerating src/hs_builds_embedded.h ..."
     python3 - << 'PYEOF'

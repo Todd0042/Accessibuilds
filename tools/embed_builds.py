@@ -9,7 +9,7 @@ import sys
 
 SCRIPT_DIR = os.path.dirname(os.path.realpath(__file__))
 REPO_DIR = os.path.normpath(os.path.join(SCRIPT_DIR, ".."))
-INPUT_FILE = os.path.join(REPO_DIR, "full-builds", "sc_builds_full.json")
+INPUT_FILE = os.path.join(REPO_DIR, "sc-builds", "sc_builds_full.json")
 OUTPUT_FILE = os.path.join(REPO_DIR, "src", "sc_builds_offline.h")
 
 def main():

@@ -3,6 +3,7 @@
 #include "../shared.h"
 #include "../sc_builds_embedded.h"
 #include "../hs_builds_embedded.h"
+#include "../mb_builds_embedded.h"
 #include <nlohmann/json.hpp>
 #include <fstream>
 #include <mutex>
@@ -101,6 +102,29 @@ void SetCacheDir(const std::string& addon_dir)
         if (vf.is_open()) vf << hs_builds_version;
         Log(LOGL_INFO, ("BuildCache: deployed Hardstuck builds database v"
                         + std::to_string(hs_builds_version)).c_str());
+    }
+
+    /* Deploy bundled MetaBattle builds when the DLL carries a newer version */
+    std::string mb_path     = s_CacheDir + "mb_builds_full.json";
+    std::string mb_ver_path = s_CacheDir + "mb_builds_version.txt";
+
+    int mb_cached_version = 0;
+    {
+        std::ifstream vf(mb_ver_path);
+        if (vf.is_open()) vf >> mb_cached_version;
+    }
+
+    if (mb_builds_version > mb_cached_version) {
+        std::ofstream f(mb_path, std::ios::binary);
+        if (f.is_open()) {
+            f.write(reinterpret_cast<const char*>(mb_builds_json),
+                    (std::streamsize)mb_builds_json_len);
+            f.close();
+        }
+        std::ofstream vf(mb_ver_path);
+        if (vf.is_open()) vf << mb_builds_version;
+        Log(LOGL_INFO, ("BuildCache: deployed MetaBattle builds database v"
+                        + std::to_string(mb_builds_version)).c_str());
     }
 }
 
@@ -208,6 +232,31 @@ bool LoadSCBuilds(std::vector<GW2::SCBuild>& out_builds)
                 if (b.game_mode == "Unknown") continue; /* skip PvP builds */
                 if (b.source.empty()) b.source = "hardstuck";
                 if (!b.id.empty()) hs_seen.insert(b.id);
+                out_builds.push_back(std::move(b));
+            }
+        }
+    }
+
+    /* ── MetaBattle builds ───────────────────────────────────────────────── */
+    std::set<std::string> mb_seen;
+    for (int i = 0; PROF_SLUGS[i]; i++) {
+        std::string path = s_CacheDir + "mb_builds_" + PROF_SLUGS[i] + ".json";
+        std::vector<GW2::SCBuild> tmp;
+        if (SnowCrows::LoadBuildsFromFile(path, tmp) > 0) {
+            for (auto& b : tmp) {
+                if (b.source.empty()) b.source = "metabattle";
+                if (!b.id.empty()) mb_seen.insert(b.id);
+                out_builds.push_back(std::move(b));
+            }
+        }
+    }
+    {
+        std::vector<GW2::SCBuild> mb_full;
+        if (SnowCrows::LoadBuildsFromFile(s_CacheDir + "mb_builds_full.json", mb_full) > 0) {
+            for (auto& b : mb_full) {
+                if (!b.id.empty() && mb_seen.count(b.id)) continue;
+                if (b.source.empty()) b.source = "metabattle";
+                if (!b.id.empty()) mb_seen.insert(b.id);
                 out_builds.push_back(std::move(b));
             }
         }

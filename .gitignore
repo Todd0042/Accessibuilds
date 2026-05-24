@@ -29,7 +29,6 @@ scraper/__pycache__/
 scraper/.scraper_cache/
 scraper/.mb_cache/
 scraper/.hs_cache/
-mb-builds/
 hs-builds/
 
 # IDE
