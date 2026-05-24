@@ -6,6 +6,8 @@
 #include "../api/hardstuck.h"
 #include "../api/metabattle.h"
 #include "../api/guildjen.h"
+#include "../api/gw2_skills_db.h"
+#include "../build/types.h"
 #include "../arcdps/arcdps.h"
 #include <imgui.h>
 #include <atomic>
@@ -341,13 +343,19 @@ static void StartFetch(const std::string& url, const std::string& build_name,
     s_fetched_name = build_name;
     s_section_open.clear();
     if (s_fetch_thread.joinable()) s_fetch_thread.join();
-    s_fetch_thread = std::thread([url, force_refresh]() {
-        std::string cache_dir = g_AddonDir + "\\cache\\sc_cache\\";
+
+    /* Capture profession for MetaBattle skill annotation */
+    GW2::Profession prof = GW2::Profession::None;
+    { std::lock_guard<std::mutex> lk(g_SCBuildMutex); prof = g_SCBuild.profession; }
+
+    s_fetch_thread = std::thread([url, force_refresh, prof]() {
+        std::string rot_cache_dir  = g_AddonDir + "\\cache\\sc_cache\\";
+        std::string skill_cache_dir = g_AddonDir + "\\cache\\";
         SnowCrows::ParsedRotation rot;
 
         const int max_age_hours = 24 * 7 * 6; /* six weeks */
         bool from_cache = !force_refresh &&
-                          SnowCrows::LoadRotationCache(url, rot, cache_dir,
+                          SnowCrows::LoadRotationCache(url, rot, rot_cache_dir,
                                                      max_age_hours);
         if (from_cache) {
             Log(LOGL_INFO, "Rotation: loaded from cache");
@@ -358,14 +366,27 @@ static void StartFetch(const std::string& url, const std::string& build_name,
             else if (url.find("guildjen.com")    != std::string::npos) ok = GuildJen::FetchRotationPage(url, rot);
             else                                                        ok = SnowCrows::FetchRotationPage(url, rot);
 
-            if (ok) {
-                SnowCrows::SaveRotationCache(url, rot, cache_dir);
-                Log(LOGL_INFO, "Rotation: fetched and cached");
-            } else {
+            if (!ok) {
                 s_error_msg = "Fetch failed or no rotation section found. The page may have changed.";
                 s_state = FetchState::Error;
                 return;
             }
+
+            /* Annotate MetaBattle prose text with {skill:ID} markers */
+            if (url.find("metabattle.com") != std::string::npos &&
+                prof != GW2::Profession::None) {
+                const std::string prof_name = GW2::ProfessionName(prof);
+                auto skills = GW2SkillsDB::GetForProfession(prof_name, skill_cache_dir);
+                if (!skills.empty()) {
+                    for (auto& sec : rot.sections)
+                        for (auto& item : sec.items)
+                            if (item.skill_ids.empty() && !item.text.empty())
+                                item.text = GW2SkillsDB::AnnotateText(item.text, skills);
+                }
+            }
+
+            SnowCrows::SaveRotationCache(url, rot, rot_cache_dir);
+            Log(LOGL_INFO, "Rotation: fetched and cached");
         }
 
         {

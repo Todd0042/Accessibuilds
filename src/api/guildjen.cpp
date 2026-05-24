@@ -716,10 +716,30 @@ static std::string GJRotStripTags(const std::string& html)
 {
     std::string r;
     bool in_tag = false;
-    for (char c : html) {
-        if      (c == '<') { in_tag = true; r += ' '; }
-        else if (c == '>') { in_tag = false; }
-        else if (!in_tag)  { r += (c == '\n' || c == '\r' || c == '\t') ? ' ' : c; }
+    size_t i = 0;
+    while (i < html.size()) {
+        char c = html[i];
+        if (c == '<') { in_tag = true; r += ' '; i++; }
+        else if (c == '>') { in_tag = false; i++; }
+        else if (in_tag) { i++; }
+        else if (c == '&') {
+            /* decode common HTML entities */
+            auto match = [&](const char* ent) {
+                size_t n = strlen(ent);
+                return html.compare(i, n, ent) == 0;
+            };
+            if      (match("&gt;"))   { r += '>'; i += 4; }
+            else if (match("&lt;"))   { r += '<'; i += 4; }
+            else if (match("&amp;"))  { r += '&'; i += 5; }
+            else if (match("&nbsp;")) { r += ' '; i += 6; }
+            else if (match("&#8211;") || match("&ndash;")) { r += '-'; i += (html[i+1]=='#' ? 7 : 7); }
+            else if (match("&#8212;") || match("&mdash;")) { r += '-'; r += '-'; i += 7; }
+            else if (match("&#038;")) { r += '&'; i += 6; }
+            else { r += c; i++; }
+        } else {
+            r += (c == '\n' || c == '\r' || c == '\t') ? ' ' : c;
+            i++;
+        }
     }
     std::string out;
     bool sp = false;
@@ -823,91 +843,128 @@ bool FetchRotationPage(const std::string& url, SnowCrows::ParsedRotation& out)
         }
     }
 
-    /* GuildJen uses h2 "Usage", "Rotation", "Gameplay", or "How to Play" */
-    static const char* ROT_KEYWORDS[] = {
-        "usage", "rotation", "gameplay", "how to play", "skill priority",
-        "damage", "playstyle", nullptr
+    /* GuildJen uses <p><strong>Heading:</strong></p> for section headings.
+     * Scan them all, then collect rotation-related sections. */
+    struct PseudoH {
+        std::string title;     /* display name (original case, colon stripped) */
+        std::string title_low; /* lowercase for keyword matching */
+        size_t before;         /* byte index of the opening <p */
+        size_t after;          /* byte index after the closing </p> */
+    };
+    std::vector<PseudoH> pheads;
+
+    {
+        size_t p = 0;
+        while (p < low.size()) {
+            size_t ps = low.find("<p", p);
+            if (ps == std::string::npos) break;
+            /* verify <p> or <p ...> */
+            size_t n2 = ps + 2;
+            if (n2 >= low.size() || (low[n2] != '>' && low[n2] != ' ')) { p = ps + 1; continue; }
+            size_t gt = low.find('>', ps);
+            if (gt == std::string::npos) break;
+            /* skip whitespace after > */
+            size_t ns = gt + 1;
+            while (ns < low.size() && (low[ns]==' '||low[ns]=='\t'||low[ns]=='\n'||low[ns]=='\r')) ns++;
+            if (low.substr(ns, 8) != "<strong>") { p = gt + 1; continue; }
+            size_t strong_end = low.find("</strong>", ns + 8);
+            if (strong_end == std::string::npos) { p = ns + 8; continue; }
+            size_t p_end = low.find("</p>", strong_end + 9);
+            if (p_end == std::string::npos) { p = strong_end + 9; continue; }
+
+            std::string tlow = GJRotStripTags(low.substr(ns + 8, strong_end - ns - 8));
+            std::string tdisp = GJRotStripTags(html.substr(ns + 8, strong_end - ns - 8));
+            /* strip trailing colon/space */
+            while (!tlow.empty()  && (tlow.back()  == ':' || tlow.back()  == ' ')) tlow.pop_back();
+            while (!tdisp.empty() && (tdisp.back() == ':' || tdisp.back() == ' ')) tdisp.pop_back();
+            if (!tlow.empty())
+                pheads.push_back({tdisp, tlow, ps, p_end + 4});
+            p = p_end + 4;
+        }
+    }
+
+    /* Keywords that START a rotation section */
+    static const char* ROT_KW[] = {
+        "rotation", "usage", "skill", "priority", "cc", "crowd control",
+        "shroud", "playstyle", nullptr
+    };
+    /* Keywords that STOP collection (non-rotation headings that follow) */
+    static const char* STOP_KW[] = {
+        "chat code", "alternatives", "role", "gameplay", "video", "comment", nullptr
     };
 
-    size_t rot_start = std::string::npos;
-    size_t rot_end   = std::string::npos;
-    for (const char** ht : {(const char**)nullptr}) { (void)ht; } /* suppress warning */
-
-    for (const char* ht : {"<h2", "<h3"}) {
-        std::string close_h = std::string("</") + (ht + 1) + ">";
-        size_t p = 0;
-        while ((p = low.find(ht, p)) != std::string::npos) {
-            size_t n = p + strlen(ht);
-            char nc = (n < low.size()) ? low[n] : '\0';
-            if (nc != ' ' && nc != '>') { p++; continue; }
-            size_t gt  = low.find('>', p);
-            if (gt == std::string::npos) { p++; continue; }
-            size_t clo = low.find(close_h, gt);
-            if (clo == std::string::npos) clo = gt + 100;
-            std::string title_low = low.substr(gt + 1, clo - gt - 1);
-            for (const char** kw = ROT_KEYWORDS; *kw; ++kw) {
-                if (title_low.find(*kw) != std::string::npos) {
-                    rot_start = clo + close_h.size();
-                    rot_end   = low.find(ht, rot_start);
-                    if (rot_end == std::string::npos) rot_end = html.size();
-                    break;
-                }
-            }
-            if (rot_start != std::string::npos) break;
-            p = clo + close_h.size();
-        }
-        if (rot_start != std::string::npos) break;
+    size_t start_idx = pheads.size();
+    for (size_t i = 0; i < pheads.size() && start_idx == pheads.size(); i++) {
+        for (const char** kw = ROT_KW; *kw; ++kw)
+            if (pheads[i].title_low.find(*kw) != std::string::npos) { start_idx = i; break; }
     }
 
-    if (rot_start == std::string::npos) {
-        Log(LOGL_WARNING, "GJ rotation: no usage/rotation section found");
-        return false;
-    }
+    if (start_idx < pheads.size()) {
+        /* collect consecutive rotation sections */
+        for (size_t i = start_idx; i < pheads.size(); i++) {
+            bool stop = false;
+            for (const char** kw = STOP_KW; *kw; ++kw)
+                if (pheads[i].title_low.find(*kw) != std::string::npos) { stop = true; break; }
+            if (stop) break;
 
-    std::string rot_html = html.substr(rot_start, rot_end - rot_start);
-    std::string rot_low  = low.substr(rot_start,  rot_end - rot_start);
+            size_t cs = pheads[i].after;
+            size_t ce = (i + 1 < pheads.size()) ? pheads[i + 1].before : html.size();
+            if (ce <= cs) continue;
 
-    /* Split by h3/h4 sub-sections */
-    std::vector<std::pair<size_t, std::string>> subs;
-    for (const char* ht : {"<h3", "<h4"}) {
-        std::string close_h = std::string("</") + (ht + 1) + ">";
-        size_t p = 0;
-        while ((p = rot_low.find(ht, p)) != std::string::npos) {
-            size_t n = p + strlen(ht);
-            char nc = (n < rot_low.size()) ? rot_low[n] : '\0';
-            if (nc != ' ' && nc != '>') { p++; continue; }
-            size_t gt  = rot_low.find('>', p);
-            if (gt == std::string::npos) { p++; continue; }
-            size_t clo = rot_low.find(close_h, gt);
-            if (clo == std::string::npos) clo = gt + 100;
-            std::string title = GJRotStripTags(rot_html.substr(gt + 1, clo - gt - 1));
-            if (!title.empty())
-                subs.push_back({clo + close_h.size(), title});
-            p = clo + close_h.size();
-        }
-        if (!subs.empty()) break;
-    }
-
-    if (subs.empty()) {
-        SnowCrows::RotationSection sec;
-        sec.title = "Usage";
-        sec.items = GJRotParseItems(rot_html, rot_low);
-        if (!sec.items.empty()) out.sections.push_back(std::move(sec));
-    } else {
-        for (size_t i = 0; i < subs.size(); i++) {
-            size_t cs = subs[i].first;
-            size_t ce = (i + 1 < subs.size()) ? subs[i + 1].first : rot_html.size();
-            std::string c     = rot_html.substr(cs, ce - cs);
-            std::string c_low = rot_low.substr(cs,  ce - cs);
+            std::string c     = html.substr(cs, ce - cs);
+            std::string c_low = low.substr(cs,  ce - cs);
             SnowCrows::RotationSection sec;
-            sec.title = subs[i].second;
+            sec.title = pheads[i].title;
             sec.items = GJRotParseItems(c, c_low);
             if (!sec.items.empty()) out.sections.push_back(std::move(sec));
         }
     }
 
+    /* Fallback: scan h2/h3 headings (some older GuildJen pages use them) */
     if (out.sections.empty()) {
-        Log(LOGL_WARNING, "GJ rotation: parsed 0 sections");
+        static const char* H2KW[] = {
+            "usage", "rotation", "gameplay", "how to play", "skill priority",
+            "damage", "playstyle", nullptr
+        };
+        size_t rot_start = std::string::npos;
+        size_t rot_end   = std::string::npos;
+        for (const char* ht : {"<h2", "<h3"}) {
+            std::string close_h = std::string("</") + (ht + 1) + ">";
+            size_t p = 0;
+            while ((p = low.find(ht, p)) != std::string::npos) {
+                size_t n = p + strlen(ht);
+                char nc = (n < low.size()) ? low[n] : '\0';
+                if (nc != ' ' && nc != '>') { p++; continue; }
+                size_t gt  = low.find('>', p);
+                if (gt == std::string::npos) { p++; continue; }
+                size_t clo = low.find(close_h, gt);
+                if (clo == std::string::npos) clo = gt + 100;
+                std::string title_low = low.substr(gt + 1, clo - gt - 1);
+                for (const char** kw = H2KW; *kw; ++kw) {
+                    if (title_low.find(*kw) != std::string::npos) {
+                        rot_start = clo + close_h.size();
+                        rot_end   = low.find(ht, rot_start);
+                        if (rot_end == std::string::npos) rot_end = html.size();
+                        break;
+                    }
+                }
+                if (rot_start != std::string::npos) break;
+                p = clo + close_h.size();
+            }
+            if (rot_start != std::string::npos) break;
+        }
+        if (rot_start != std::string::npos) {
+            std::string rot_html = html.substr(rot_start, rot_end - rot_start);
+            std::string rot_low  = low.substr(rot_start,  rot_end - rot_start);
+            SnowCrows::RotationSection sec;
+            sec.title = "Usage";
+            sec.items = GJRotParseItems(rot_html, rot_low);
+            if (!sec.items.empty()) out.sections.push_back(std::move(sec));
+        }
+    }
+
+    if (out.sections.empty()) {
+        Log(LOGL_WARNING, "GJ rotation: no rotation sections found");
         return false;
     }
     return true;

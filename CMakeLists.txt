@@ -29,6 +29,7 @@ set(ADDON_SOURCES
     src/api/guildjen.cpp
     src/api/hardstuck.cpp
     src/api/metabattle.cpp
+    src/api/gw2_skills_db.cpp
     src/api/wingman.cpp
     src/api/item_lookup.cpp
 
