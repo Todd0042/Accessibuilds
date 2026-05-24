@@ -18,7 +18,7 @@ A Guild Wars 2 addon for the Nexus addon loader that compares your current build
 Features
 
     573 reference builds bundled — Hardstuck and MetaBattle included out of the box
-    Filter builds by source (Hardstuck, MetaBattle, Snow Crows) and game mode (Raid, Open World, WvW Zerg, WvW Roaming, Group PvE)
+    Filter builds by source (Snow Crows, Hardstuck, MetaBattle, GuildJen) and game mode (Raid, Open World, WvW Zerg, WvW Roaming, Group PvE)
     Compares your equipped gear, traits, and skills against any reference build
     Highlights mismatches in stats, upgrades, relics, food, and utility items
     Shows the correct pets (Ranger) and legends (Revenant) for each build
@@ -34,7 +34,7 @@ Installation
     Place it in \addons\BuildCoach.dll
     Launch the game and enable the addon in the Nexus addon manager
 
-Bundled Builds (v1.2.3)
+Bundled Builds (v1.2.4)
 
 573 builds are included and ready to use immediately:
 
