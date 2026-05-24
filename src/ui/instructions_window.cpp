@@ -26,14 +26,31 @@ void Render()
     ImGui::TextDisabled("Getting Started");
     ImGui::Separator();
     ImGui::TextWrapped(
-        "Build Coach has no reference builds bundled — you add them yourself by importing "
-        "build pages from community sites. Once saved, they appear in the main window "
-        "dropdown so you can compare your gear against them.");
+        "Build Coach comes with reference builds from Hardstuck and MetaBattle bundled "
+        "in — they appear in the dropdown as soon as the addon loads. Use the Source and "
+        "Game Mode filters to narrow the list, then pick a build and compare your "
+        "equipped gear against it.");
     ImGui::Spacing();
     ImGui::TextWrapped(
-        "Quick start: open Build Editor, paste a build page URL (Snow Crows, Hardstuck, "
-        "GuildJen, MetaBattle, or gw2skills.net) into the Import URL field, click the "
-        "matching site button, then click Save. The build is now in your list.");
+        "You can also add your own builds from any supported site: open Build Editor, "
+        "paste a build page URL (Snow Crows, Hardstuck, GuildJen, MetaBattle, or "
+        "gw2skills.net) into the Import URL field, click the matching site button, then "
+        "click Save. Saved builds always appear at the top of the dropdown.");
+    ImGui::Spacing(); ImGui::Spacing();
+
+    /* ── Bundled Builds ── */
+    ImGui::TextDisabled("Bundled Reference Builds");
+    ImGui::Separator();
+    ImGui::TextWrapped(
+        "The following builds are included out of the box and update with each new "
+        "addon release:");
+    ImGui::Spacing();
+    ImGui::BulletText("Hardstuck  — 111 builds  (Group PvE, Open World, WvW Zerg, WvW Roaming)");
+    ImGui::BulletText("MetaBattle — 462 builds  (Raid, Open World, WvW Zerg, WvW Roaming)");
+    ImGui::Spacing();
+    ImGui::TextWrapped(
+        "Use the Source filter to show only one site's builds, and the Game Mode filter "
+        "to show only builds for a specific mode (Raid, Open World, WvW Zerg, etc.).");
     ImGui::Spacing(); ImGui::Spacing();
 
     /* ── URL Import ── */
@@ -123,30 +140,32 @@ void Render()
     ImGui::TextWrapped(
         "Snow Crows is the primary benchmark site for GW2 PvE. Builds are tested and "
         "optimised for maximum DPS or support output in organised groups. Accessibility "
-        "builds (marked on the site) use simpler rotations and are great for learning.");
+        "builds use simpler rotations and are great for learning. Snow Crows builds are "
+        "not bundled yet — import them individually via the Build Editor.");
     ImGui::Spacing(); ImGui::Spacing();
 
-    ImGui::TextDisabled("Hardstuck");
+    ImGui::TextDisabled("Hardstuck  [bundled]");
     ImGui::Separator();
     ImGui::TextWrapped(
-        "Hardstuck covers high-end PvE builds with class guides and team compositions. "
-        "A good resource for raid and strike content and for comparing your setup with "
-        "player-tested builds.");
+        "Hardstuck covers Group PvE, Open World, and WvW builds with class guides and "
+        "team compositions. 111 builds are bundled across all 9 professions and update "
+        "with each addon release.");
     ImGui::Spacing(); ImGui::Spacing();
 
     ImGui::TextDisabled("GuildJen");
     ImGui::Separator();
     ImGui::TextWrapped(
         "GuildJen provides build guides for WvW, PvP, and open world with tier lists "
-        "and detailed class explanations. Useful for competitive and solo play.");
+        "and detailed class explanations. Useful for competitive and solo play. Import "
+        "builds individually via the Build Editor.");
     ImGui::Spacing(); ImGui::Spacing();
 
-    ImGui::TextDisabled("MetaBattle");
+    ImGui::TextDisabled("MetaBattle  [bundled]");
     ImGui::Separator();
     ImGui::TextWrapped(
         "MetaBattle is a community wiki covering the current meta builds across all "
-        "game modes — PvE, WvW, and PvP. Builds are maintained by the community and "
-        "updated as the meta shifts.");
+        "game modes. 462 builds are bundled — Raid, Open World, WvW Zerg, and WvW "
+        "Roaming — and update with each addon release.");
     ImGui::Spacing(); ImGui::Spacing();
 
     ImGui::Separator();
