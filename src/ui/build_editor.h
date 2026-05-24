@@ -5,6 +5,7 @@
 namespace BuildEditor {
 
 void Init();
+void Shutdown();
 void Render();
 void Toggle();
 void Open();

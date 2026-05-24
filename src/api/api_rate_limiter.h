@@ -4,6 +4,7 @@
 #include <thread>
 #include <algorithm>
 #include <atomic>
+#include "../shared.h"
 
 /*
  * Token-bucket rate limiter for GW2 API calls.
@@ -42,7 +43,8 @@ inline void _Refill()
     detail::g_last_refill = now;
 }
 
-/* Block the calling thread until a token is available (or 10-second timeout).
+/* Block the calling thread until a token is available, a 10-second timeout
+ * elapses, or the addon signals shutdown (g_AddonShutdown).
  * Call this at the top of every background HTTP request. */
 inline void WaitAndAcquire()
 {
@@ -50,6 +52,7 @@ inline void WaitAndAcquire()
     auto deadline = steady_clock::now() + seconds(10);
 
     while (steady_clock::now() < deadline) {
+        if (g_AddonShutdown.load(std::memory_order_relaxed)) return;
         {
             std::lock_guard<std::mutex> lk(detail::g_mutex);
             _Refill();

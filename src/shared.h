@@ -85,6 +85,9 @@ inline bool g_ChatBuildDetectOwn = false;
 /* Offline mode — use embedded reference builds and name tables instead of API */
 inline std::atomic<bool> g_OfflineMode{false};
 
+/* Set to true at the start of AddonUnload so background threads can exit early */
+inline std::atomic<bool> g_AddonShutdown{false};
+
 /*
  * Log helper.
  * LOGL_DEBUG  → debug overlay only (never forwarded to Nexus or disk).

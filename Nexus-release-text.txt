@@ -35,7 +35,7 @@ Installation
     Place it in \addons\BuildCoach.dll
     Launch the game and enable the addon in the Nexus addon manager
 
-Bundled Builds (v1.2.5)
+Bundled Builds (v1.2.6)
 
 573 builds are included and ready to use immediately:
 

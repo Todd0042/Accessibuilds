@@ -449,9 +449,15 @@ __declspec(dllexport) void AddonLoad(AddonAPI_t* aApi)
 
 __declspec(dllexport) void AddonUnload()
 {
+    /* Signal all background threads to stop before doing anything else.
+     * The rate limiter checks this flag and returns immediately instead of
+     * spinning, so in-flight HTTP calls exit quickly after Http::Shutdown(). */
+    g_AddonShutdown = true;
+
     APIDefs->GUI_Deregister(OnRender);
     APIDefs->GUI_Deregister(OnOptions);
 
+    BuildEditor::Shutdown();
     MainWindow::Shutdown();
     CoachWindow::Shutdown();
     GW2Names::Shutdown();
@@ -473,7 +479,7 @@ __declspec(dllexport) void AddonUnload()
 
 __declspec(dllexport) AddonDefinition_t* GetAddonDef()
 {
-    static AddonVersion_t version = {1, 2, 5, 0};
+    static AddonVersion_t version = {1, 2, 6, 0};
     static AddonDefinition_t def  = {
         ADDON_SIGNATURE,
         NEXUS_API_VERSION,

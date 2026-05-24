@@ -2503,4 +2503,17 @@ void Render()
     ImGui::End();
 }
 
+void Shutdown()
+{
+    /* Join all import threads so the DLL can be unloaded safely.
+     * Http::Shutdown() (called before this) has already closed the WinHttp
+     * session, so any in-flight HTTP call returns immediately with an error.
+     * The join here just waits for the thread to notice and exit cleanly. */
+    if (s_gw2skills_thread.joinable()) s_gw2skills_thread.join();
+    if (s_sc_import_thread.joinable()) s_sc_import_thread.join();
+    if (s_gj_import_thread.joinable()) s_gj_import_thread.join();
+    if (s_hs_import_thread.joinable()) s_hs_import_thread.join();
+    if (s_mb_import_thread.joinable()) s_mb_import_thread.join();
+}
+
 } /* namespace BuildEditor */
