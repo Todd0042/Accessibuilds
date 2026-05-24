@@ -738,6 +738,49 @@ bool FetchRotationPage(const std::string& url, ParsedRotation& out)
         }
     }
 
+    /* ── Accessibility guide section fallback ────────────────────────────────
+     * Accessibility build pages use named h3 headings instead of a "Rotation"
+     * h2. If nothing was extracted above, scan the full page for those headings. */
+    if (out.sections.empty()) {
+        static const char* kHeadings[] = {
+            "key concepts", "opener", "step one", "step two", "step three",
+            "step four", "step five", "step six", "defense",
+            "crowd control", "priority", "skill usage", nullptr
+        };
+
+        std::vector<std::pair<size_t, std::string>> matches;
+        size_t p = 0;
+        while ((p = low.find("<h3", p)) != std::string::npos) {
+            size_t n = p + 3;
+            char nc = (n < low.size()) ? low[n] : '\0';
+            if (nc != ' ' && nc != '>' && nc != '\t' && nc != '\n') { p++; continue; }
+            size_t gt = low.find('>', p);
+            if (gt == std::string::npos) { p++; continue; }
+            size_t clo = low.find("</h3>", gt);
+            if (clo == std::string::npos) { p = gt + 1; continue; }
+            std::string title = SCStripTags(html.substr(gt + 1, clo - gt - 1));
+            std::string title_low = title;
+            std::transform(title_low.begin(), title_low.end(), title_low.begin(), ::tolower);
+            for (const char** h = kHeadings; *h; ++h) {
+                if (title_low.find(*h) == 0) {
+                    matches.push_back({clo + 5, title});
+                    break;
+                }
+            }
+            p = clo + 5;
+        }
+
+        for (size_t i = 0; i < matches.size(); i++) {
+            size_t cs = matches[i].first;
+            size_t ce = (i + 1 < matches.size()) ? matches[i + 1].first : html.size();
+            RotationSection sec;
+            sec.title = matches[i].second;
+            sec.items = ExtractItems(html.substr(cs, ce - cs));
+            if (!sec.items.empty() || !sec.title.empty())
+                out.sections.push_back(std::move(sec));
+        }
+    }
+
     bool ok = !out.sections.empty();
     if (!ok) Log(LOGL_WARNING, "SC rotation: parsed 0 sections");
     return ok;

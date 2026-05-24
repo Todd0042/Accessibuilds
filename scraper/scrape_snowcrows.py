@@ -148,6 +148,20 @@ ELITE_SPEC_IDS: set[int] = {
     81, 74, 75, 78, 77, 80, 73, 76, 79,  # Expansion (2025+)
 }
 
+# SC URL section → canonical game_mode value (matches addon filter strings).
+# WvW note: SC's WvW listing mixes Zerging and Roaming, but the category filter is
+# Livewire-only (JS-rendered) — there's no static signal on individual build pages.
+# All WvW builds are tagged WvWZerg since SC's WvW content is primarily zerg-focused.
+GAME_MODE_SECTIONS: dict[str, str] = {
+    "raids":         "GroupPvE",
+    "open-world":    "OpenWorld",
+    "wvw":           "WvWZerg",
+    "accessibuilds": "GroupPvE",
+}
+
+# Sections scraped during a full-site run (pvp excluded intentionally).
+SCRAPEABLE_SECTIONS = ["raids", "open-world", "wvw"]
+
 # Slug keyword → canonical build_type string
 BUILD_TYPE_KEYWORDS: dict[str, str] = {
     "power": "Power",     "condi": "Condi",     "condition": "Condi",
@@ -441,7 +455,7 @@ def generate_chat_code(profession_slug: str,
 # ---------------------------------------------------------------------------
 # Build-list discovery (Playwright for JS-rendered listing pages)
 # ---------------------------------------------------------------------------
-def _find_legacy_slugs(html: str, prof_slug: str) -> set[str]:
+def _find_legacy_slugs(html: str, prof_slug: str, section: str = "raids") -> set[str]:
     """Walk the listing page DOM and return slugs that appear after a Legacy heading.
 
     SC listing pages have a heading element (h2/h3/div with class or text containing
@@ -455,7 +469,7 @@ def _find_legacy_slugs(html: str, prof_slug: str) -> set[str]:
         return set()
 
     slug_pattern = re.compile(
-        r"/builds/raids/%s/([a-z0-9-]+)" % re.escape(prof_slug.lower())
+        r"/builds/%s/%s/([a-z0-9-]+)" % (re.escape(section), re.escape(prof_slug.lower()))
     )
     legacy_slugs: set[str] = set()
     in_legacy = False
@@ -491,9 +505,11 @@ def _find_legacy_slugs(html: str, prof_slug: str) -> set[str]:
     return legacy_slugs
 
 
-def discover_build_urls(prof_slug: str, delay: float, force: bool = False) -> list[dict]:
+def discover_build_urls(prof_slug: str, delay: float, force: bool = False,
+                        section: str = "raids") -> list[dict]:
     slug_lower = prof_slug.lower()
-    url = "%s/builds/raids/%s" % (BASE_URL, slug_lower)
+    game_mode  = GAME_MODE_SECTIONS.get(section, "GroupPvE")
+    url = "%s/builds/%s/%s" % (BASE_URL, section, slug_lower)
 
     if HAS_PLAYWRIGHT:
         html = _fetch_with_playwright(url, force=force)
@@ -503,10 +519,10 @@ def discover_build_urls(prof_slug: str, delay: float, force: bool = False) -> li
     if not html:
         return []
 
-    legacy_slugs = _find_legacy_slugs(html, slug_lower)
+    legacy_slugs = _find_legacy_slugs(html, slug_lower, section=section)
 
     # SC always uses lowercase slugs in href paths regardless of URL case
-    pattern = re.compile(r"/builds/raids/%s/([a-z0-9-]+)" % re.escape(slug_lower))
+    pattern = re.compile(r"/builds/%s/%s/([a-z0-9-]+)" % (re.escape(section), re.escape(slug_lower)))
     seen    = set()
     builds  = []
     for m in pattern.finditer(html):
@@ -515,9 +531,11 @@ def discover_build_urls(prof_slug: str, delay: float, force: bool = False) -> li
             continue
         seen.add(slug)
         builds.append({
-            "url":        BASE_URL + "/builds/raids/%s/%s" % (slug_lower, slug),
+            "url":        BASE_URL + "/builds/%s/%s/%s" % (section, slug_lower, slug),
             "profession": slug_lower,
             "slug":       slug,
+            "section":    section,
+            "game_mode":  game_mode,
             "is_legacy":  slug in legacy_slugs,
         })
 
@@ -991,7 +1009,7 @@ def parse_build_page(meta: dict, delay: float) -> Optional[dict]:
         "elite_spec":    elite_spec_from_lines(spec_lines),
         "build_type":    build_type_from_slug(meta["slug"]),
         "source":        "snowcrows",
-        "game_mode":     "GroupPvE",
+        "game_mode":     meta.get("game_mode", "GroupPvE"),
         "patch_version": extract_patch_version(soup),
         "benchmark_dps": extract_benchmark_dps(soup),
         "notes":         extract_notes(soup),
@@ -1054,15 +1072,32 @@ def _merge_into_prof_file(out_dir: Path, result: dict) -> None:
 
 
 def main() -> None:
-    ap = argparse.ArgumentParser(description="Scrape Snow Crows → sc_builds_full.json")
+    valid_sections = ", ".join(SCRAPEABLE_SECTIONS)
+    ap = argparse.ArgumentParser(
+        description="Scrape Snow Crows builds → per-section JSON files",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+sections:  %s
+
+examples:
+  python3 scrape_snowcrows.py                        # all sections (raids, open-world, wvw)
+  python3 scrape_snowcrows.py --mode raids           # raids only
+  python3 scrape_snowcrows.py --mode wvw             # WvW only
+  python3 scrape_snowcrows.py --mode open-world --prof guardian
+  python3 scrape_snowcrows.py --url https://snowcrows.com/builds/wvw/guardian/power-dragonhunter
+  python3 scrape_snowcrows.py --listing-url https://snowcrows.com/builds/accessibuilds
+  python3 scrape_snowcrows.py --force                # ignore cache
+""" % valid_sections)
     ap.add_argument("--out",   default=str(DEFAULT_OUT))
     ap.add_argument("--delay", type=float, default=1.5)
     ap.add_argument("--force", action="store_true", help="Clear disk cache and re-fetch everything")
-    ap.add_argument("--limit", type=int,   default=0, help="Max builds per prof, 0=all")
+    ap.add_argument("--limit", type=int,   default=0, help="Max builds per prof per section, 0=all")
     ap.add_argument("--prof",  default="",            help="Only this profession slug")
+    ap.add_argument("--mode",  default="",
+                    help="Scrape only this section: %s" % valid_sections)
     ap.add_argument("--url",   default="",
-                    help="Scrape a single build URL, e.g. "
-                         "https://snowcrows.com/builds/raids/warrior/condition-paragon-longbow-sword-sword")
+                    help="Scrape a single build URL (any section), e.g. "
+                         "https://snowcrows.com/builds/wvw/guardian/power-dragonhunter")
     ap.add_argument("--listing-url", default="",
                     help="Scrape all builds from a custom listing page URL, "
                          "e.g. https://snowcrows.com/builds/accessibuilds. "
@@ -1077,8 +1112,16 @@ def main() -> None:
         listing_url = args.listing_url.rstrip("/")
         access_path = out_dir / "sc_builds_accessibility.json"
 
+        # Infer game_mode from listing URL section if recognizable
+        listing_section = ""
+        m_sec = re.search(r"/builds/([a-z-]+)(?:/|$)", listing_url)
+        if m_sec:
+            listing_section = m_sec.group(1)
+        listing_game_mode = GAME_MODE_SECTIONS.get(listing_section, "GroupPvE")
+
         print("=== Snow Crows Scraper (custom listing) ===")
         print("Listing URL : %s" % listing_url)
+        print("Game mode   : %s" % listing_game_mode)
         print("Output      : %s" % access_path)
         print()
 
@@ -1091,26 +1134,29 @@ def main() -> None:
             print("ERROR: failed to fetch listing page.")
             sys.exit(1)
 
-        # Discover all build URLs regardless of URL prefix (raids, accessibuilds, etc.)
-        pattern = re.compile(r"/builds/(?:raids|accessibuilds)/([a-z]+)/([a-z0-9-]+)")
+        # Discover all build URLs regardless of URL prefix
+        all_sections = "|".join(re.escape(s) for s in list(GAME_MODE_SECTIONS) + ["pvp"])
+        pattern = re.compile(r"/builds/(%s)/([a-z]+)/([a-z0-9-]+)" % all_sections)
         seen = set()
         metas = []
         for m in pattern.finditer(html):
-            prof_slug = m.group(1)
-            slug = m.group(2)
+            sec       = m.group(1)
+            prof_slug = m.group(2)
+            slug      = m.group(3)
             if prof_slug not in PROFESSION_SLUGS:
                 continue
-            key = (prof_slug, slug)
+            key = (sec, prof_slug, slug)
             if key in seen:
                 continue
             seen.add(key)
-            # Reconstruct the actual URL from the href found in the page
             metas.append({
-                "url":        BASE_URL + m.group(0),
-                "profession": prof_slug,
-                "slug":       slug,
-                "is_legacy":       False,
-                "accessibility":   True,
+                "url":           BASE_URL + m.group(0),
+                "profession":    prof_slug,
+                "slug":          slug,
+                "section":       sec,
+                "game_mode":     GAME_MODE_SECTIONS.get(sec, listing_game_mode),
+                "is_legacy":     False,
+                "accessibility": True,
             })
         print("  %d build(s) found on listing page" % len(metas))
         if args.limit > 0:
@@ -1145,20 +1191,23 @@ def main() -> None:
     # ── Single-build mode ────────────────────────────────────────────────────
     if args.url:
         url = args.url.rstrip("/")
-        # Expect path: /builds/raids/<prof>/<slug>
-        m = re.search(r"/builds/raids/([a-z]+)/([a-z0-9-]+)$", url)
+        # Accept any SC section in the URL
+        all_sec_pat = "|".join(re.escape(s) for s in list(GAME_MODE_SECTIONS) + ["pvp"])
+        m = re.search(r"/builds/(%s)/([a-z]+)/([a-z0-9-]+)$" % all_sec_pat, url)
         if not m:
             print("ERROR: URL does not look like a Snow Crows build page.")
-            print("       Expected: https://snowcrows.com/builds/raids/<prof>/<slug>")
+            print("       Expected: https://snowcrows.com/builds/<section>/<prof>/<slug>")
+            print("       Sections: %s" % ", ".join(SCRAPEABLE_SECTIONS))
             sys.exit(1)
-        prof_slug  = m.group(1)
-        build_slug = m.group(2)
+        url_section = m.group(1)
+        prof_slug   = m.group(2)
+        build_slug  = m.group(3)
         if prof_slug not in PROFESSION_SLUGS:
             print("ERROR: Unknown profession %r in URL." % prof_slug)
             sys.exit(1)
+        inferred_mode = GAME_MODE_SECTIONS.get(url_section, "GroupPvE")
 
         if args.force:
-            # Evict only the cache entry for this specific URL
             safe = re.sub(r"[^a-zA-Z0-9_-]", "_", url.replace(BASE_URL, ""))
             for cp in [CACHE_DIR / (safe[:200] + ".html"),
                        CACHE_DIR / ("_pw_" + safe[:200] + ".html")]:
@@ -1166,8 +1215,9 @@ def main() -> None:
                     cp.unlink()
 
         print("=== Snow Crows Scraper (single build) ===")
-        print("URL    : %s" % url)
-        print("Output : %s" % out_dir)
+        print("URL       : %s" % url)
+        print("Section   : %s  →  game_mode: %s" % (url_section, inferred_mode))
+        print("Output    : %s" % out_dir)
         print()
 
         print("Loading GW2 API caches...")
@@ -1177,7 +1227,8 @@ def main() -> None:
             print("  WARN: API cache load failed: %s" % exc)
         print()
 
-        meta   = {"url": url, "profession": prof_slug, "slug": build_slug}
+        meta = {"url": url, "profession": prof_slug, "slug": build_slug,
+                "section": url_section, "game_mode": inferred_mode}
         print("Scraping %s/%s ... " % (prof_slug, build_slug), end="", flush=True)
         result = parse_build_page(meta, delay=args.delay)
         if not result:
@@ -1195,7 +1246,11 @@ def main() -> None:
         print("  cp sc_builds_*.json <GW2>/addons/BuildCoach/cache/")
         return
 
-    # ── Profession / full-site mode ──────────────────────────────────────────
+    # ── Section / full-site mode ─────────────────────────────────────────────
+    if args.mode and args.mode not in SCRAPEABLE_SECTIONS:
+        print("ERROR: Unknown mode %r. Valid options: %s" % (args.mode, valid_sections))
+        sys.exit(1)
+
     if args.prof:
         args.prof = args.prof.lower()
         if args.prof not in PROFESSION_SLUGS:
@@ -1209,12 +1264,14 @@ def main() -> None:
             shutil.rmtree(CACHE_DIR)
         CACHE_DIR.mkdir()
 
-    profs = [args.prof] if args.prof else PROFESSION_SLUGS
+    sections = [args.mode] if args.mode else SCRAPEABLE_SECTIONS
+    profs    = [args.prof] if args.prof else PROFESSION_SLUGS
 
     print("=== Snow Crows Scraper ===")
-    print("Output   : %s" % args.out)
-    print("Delay    : %.1fs" % args.delay)
-    print("Profs    : %s" % ", ".join(profs))
+    print("Output    : %s" % args.out)
+    print("Delay     : %.1fs" % args.delay)
+    print("Sections  : %s" % ", ".join(sections))
+    print("Profs     : %s" % (", ".join(profs) if args.prof else "all"))
     print("Playwright: %s" % ("yes" if HAS_PLAYWRIGHT else "no (install for full coverage)"))
     print()
 
@@ -1230,40 +1287,60 @@ def main() -> None:
 
     all_builds: list[dict] = []
 
-    for prof in profs:
-        print("── %s ──" % prof.title())
-        metas = discover_build_urls(prof, args.delay, force=args.force)
-        print("  %d build page(s) found" % len(metas))
-        if args.limit > 0:
-            metas = metas[: args.limit]
+    for sec in sections:
+        game_mode = GAME_MODE_SECTIONS[sec]
+        print("══ %s  [%s] ══" % (sec, game_mode))
+        sec_builds: list[dict] = []
 
-        for i, meta in enumerate(metas, 1):
-            print("  [%2d/%d] %s  " % (i, len(metas), meta["slug"]), end="", flush=True)
-            result = parse_build_page(meta, delay=args.delay)
-            if result:
-                all_builds.append(result)
-                _print_result(result)
-            else:
-                print("SKIP")
+        for prof in profs:
+            print("  ── %s ──" % prof.title(), end="  ", flush=True)
+            metas = discover_build_urls(prof, args.delay, force=args.force, section=sec)
+            print("%d build(s) found" % len(metas))
+            if args.limit > 0:
+                metas = metas[: args.limit]
+
+            for i, meta in enumerate(metas, 1):
+                print("    [%2d/%d] %s  " % (i, len(metas), meta["slug"]), end="", flush=True)
+                result = parse_build_page(meta, delay=args.delay)
+                if result:
+                    sec_builds.append(result)
+                    all_builds.append(result)
+                    _print_result(result)
+                else:
+                    print("SKIP")
+
+        # Write per-section combined file
+        sec_path = out_dir / ("sc_builds_%s.json" % sec.replace("-", "_"))
+        with open(sec_path, "w", encoding="utf-8") as fh:
+            json.dump(sec_builds, fh, indent=2, ensure_ascii=False)
+        print("  → %d builds  →  %s" % (len(sec_builds), sec_path.name))
         print()
 
-    # Always write per-profession files (enables individual re-scrapes)
+    # Per-profession files (all sections merged)
     by_prof: dict[str, list] = {}
     for build in all_builds:
-        slug = build["profession"].lower()
-        if slug not in by_prof:
-            by_prof[slug] = []
-        by_prof[slug].append(build)
+        by_prof.setdefault(build["profession"].lower(), []).append(build)
 
     print("Writing per-profession files:")
-    for slug in sorted(by_prof.keys()):
-        prof_path = out_dir / ("sc_builds_" + slug + ".json")
+    for prof_slug in sorted(by_prof.keys()):
+        prof_path = out_dir / ("sc_builds_" + prof_slug + ".json")
+        existing: dict[str, dict] = {}
+        if prof_path.exists() and not (args.mode == "" and not args.prof):
+            # Merge with existing file when only a subset was scraped
+            try:
+                for b in json.loads(prof_path.read_text(encoding="utf-8")):
+                    existing[b["id"]] = b
+            except Exception:
+                pass
+        for b in by_prof[prof_slug]:
+            existing[b["id"]] = b
+        merged = list(existing.values())
         with open(prof_path, "w", encoding="utf-8") as fh:
-            json.dump(by_prof[slug], fh, indent=2, ensure_ascii=False)
-        print("  %3d builds  →  %s" % (len(by_prof[slug]), prof_path.name))
+            json.dump(merged, fh, indent=2, ensure_ascii=False)
+        print("  %3d builds  →  %s" % (len(merged), prof_path.name))
 
-    # Write combined file only when all professions were scraped in this run
-    if not args.prof:
+    # Combined file only when scraping everything
+    if not args.mode and not args.prof:
         out_path = Path(args.out).resolve()
         with open(out_path, "w", encoding="utf-8") as fh:
             json.dump(all_builds, fh, indent=2, ensure_ascii=False)

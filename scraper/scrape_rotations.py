@@ -32,8 +32,8 @@ except ImportError:
 
 BASE_URL = "https://snowcrows.com"
 SCRIPT_DIR = Path(__file__).parent
-DEFAULT_INPUT = SCRIPT_DIR / ".." / "sc_builds_accessibility.json"
-DEFAULT_OUTPUT = SCRIPT_DIR / ".." / "sc_rotations_accessibility.json"
+DEFAULT_INPUT  = SCRIPT_DIR / ".." / "snowcrows" / "sc_builds_accessibility.json"
+DEFAULT_OUTPUT = SCRIPT_DIR / ".." / "snowcrows" / "sc_rotations_accessibility.json"
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "

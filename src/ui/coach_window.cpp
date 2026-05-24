@@ -432,7 +432,14 @@ void Toggle()
         std::string id, url, name;
         bool is_accessibility = false;
         GetCurrentBuildInfo(id, url, name, is_accessibility);
-        if (!is_accessibility && !url.empty() && s_state == FetchState::Idle)
+        bool skip_fetch = false;
+        if (is_accessibility) {
+            EnsureLocalRotationsLoaded();
+            std::lock_guard<std::mutex> lk(s_local_rot_mutex);
+            auto it = s_local_rotations.find(id);
+            skip_fetch = (it != s_local_rotations.end() && !it->second.sections.empty());
+        }
+        if (!skip_fetch && !url.empty() && s_state == FetchState::Idle)
             StartFetch(url, name);
     }
 }
@@ -464,43 +471,44 @@ static void RenderRotationItem(const SnowCrows::RotationItem& item)
     const std::string& src = item.text;
     size_t pos = 0;
     float icon_sz = S(22.f);
-    bool first = true;
 
+    ImGui::PushTextWrapPos(0.0f);
     while (pos < src.size()) {
         size_t brace = src.find("{skill:", pos);
         if (brace == std::string::npos) {
-            if (!first) ImGui::SameLine(0, 0);
-            ImGui::TextUnformatted(src.c_str() + pos);
+            ImGui::TextWrapped("%s", src.c_str() + pos);
             break;
         }
 
+        /* Text before this skill gets its own line */
         if (brace > pos) {
-            if (!first) ImGui::SameLine(0, 0);
-            ImGui::TextUnformatted(src.c_str() + pos, src.c_str() + brace);
-            first = false;
+            std::string seg(src.c_str() + pos, src.c_str() + brace);
+            /* trim trailing whitespace so the line doesn't end with a dangling space */
+            while (!seg.empty() && seg.back() == ' ') seg.pop_back();
+            if (!seg.empty())
+                ImGui::TextWrapped("%s", seg.c_str());
         }
 
         size_t close = src.find("}", brace);
         if (close == std::string::npos) {
-            if (!first) ImGui::SameLine(0, 0);
-            ImGui::TextUnformatted(src.c_str() + brace);
+            ImGui::TextWrapped("%s", src.c_str() + brace);
             break;
         }
 
         uint32_t sid = 0;
         try { sid = (uint32_t)std::stoul(src.substr(brace + 7, close - brace - 7)); } catch (...) {}
 
-        if (!first) ImGui::SameLine(0, 0);
+        /* Skill icon + name together on their own line */
         if (sid) {
             IconRenderer::SkillIconRef(sid, icon_sz);
-            ImGui::SameLine(0, 0);
+            ImGui::SameLine(0, 6);
             ImGui::TextUnformatted(GW2Names::GetSkill(sid).c_str());
-        } else {
-            ImGui::Dummy(ImVec2(icon_sz, icon_sz));
         }
-        first = false;
         pos = close + 1;
+        /* skip leading whitespace that was part of the separator before the skill */
+        while (pos < src.size() && src[pos] == ' ') pos++;
     }
+    ImGui::PopTextWrapPos();
 }
 
 /* Draw one rotation section as a collapsible header with icon rows. */
@@ -538,7 +546,18 @@ void Render()
     bool is_accessibility = false;
     GetCurrentBuildInfo(cur_id, cur_url, cur_name, is_accessibility);
 
-    if (!is_accessibility && !cur_url.empty() &&
+    /* For accessibility builds: check pre-scraped local data first.
+     * If none is found, fall through to live fetch like a regular build. */
+    bool accessibility_has_local = false;
+    if (is_accessibility) {
+        EnsureLocalRotationsLoaded();
+        std::lock_guard<std::mutex> lk(s_local_rot_mutex);
+        auto it = s_local_rotations.find(cur_id);
+        accessibility_has_local = (it != s_local_rotations.end() && !it->second.sections.empty());
+    }
+
+    if (!cur_url.empty() &&
+        !(is_accessibility && accessibility_has_local) &&
         cur_url != s_fetched_url &&
         s_state != FetchState::Fetching)
     {
@@ -563,25 +582,13 @@ void Render()
     ImGui::Spacing();
 
     /* ── Rotation Guide (scrolling section below) ─────────────────────── */
-    if (is_accessibility) {
-        EnsureLocalRotationsLoaded();
-
+    if (is_accessibility && accessibility_has_local) {
         SnowCrows::ParsedRotation rot;
         {
             std::lock_guard<std::mutex> lk(s_local_rot_mutex);
             auto it = s_local_rotations.find(cur_id);
-            if (it != s_local_rotations.end())
-                rot = it->second;
+            if (it != s_local_rotations.end()) rot = it->second;
         }
-
-        if (rot.sections.empty()) {
-            ImGui::TextColored(ImVec4(1.0f, 0.4f, 0.4f, 1.0f),
-                "No rotation guide available for this accessibility build.");
-            ImGui::TextDisabled("Build: %s", cur_name.c_str());
-            ImGui::End();
-            return;
-        }
-
         float avail_h = ImGui::GetContentRegionAvail().y;
         if (ImGui::BeginChild("##rot_scroll", ImVec2(0, avail_h), false)) {
             for (int i = 0; i < (int)rot.sections.size(); i++)
