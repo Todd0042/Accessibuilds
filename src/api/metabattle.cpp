@@ -794,4 +794,203 @@ bool ParseBuildPage(const std::string& url, GW2::SCBuild& out)
     return !out.name.empty() || out.profession != GW2::Profession::None;
 }
 
+/* ── Rotation parsing ────────────────────────────────────────────────────── */
+
+static std::string MBRotStripTags(const std::string& html)
+{
+    std::string r;
+    bool in_tag = false;
+    for (char c : html) {
+        if      (c == '<') { in_tag = true; r += ' '; }
+        else if (c == '>') { in_tag = false; }
+        else if (!in_tag)  { r += (c == '\n' || c == '\r' || c == '\t') ? ' ' : c; }
+    }
+    std::string out;
+    bool sp = false;
+    for (char c : r) {
+        if (c == ' ') { if (!sp && !out.empty()) { out += ' '; sp = true; } }
+        else          { out += c; sp = false; }
+    }
+    while (!out.empty() && out.back() == ' ') out.pop_back();
+    return out;
+}
+
+static std::vector<uint32_t> MBRotExtractSkillIDs(const std::string& html,
+                                                    const std::string& low)
+{
+    std::vector<uint32_t> ids;
+    size_t pos = 0;
+    while ((pos = low.find("<gw2object", pos)) != std::string::npos) {
+        size_t gt = low.find('>', pos);
+        if (gt == std::string::npos) { pos++; continue; }
+        std::string tag_low = low.substr(pos, gt - pos);
+        if (tag_low.find("type=\"skill\"") != std::string::npos ||
+            tag_low.find("type='skill'")  != std::string::npos) {
+            std::string objid = FindHTMLAttr(html.substr(pos, gt - pos), "objid", 0);
+            if (!objid.empty()) {
+                uint32_t id = (uint32_t)atol(objid.c_str());
+                if (id) ids.push_back(id);
+            }
+        }
+        pos = gt + 1;
+    }
+    return ids;
+}
+
+static std::vector<SnowCrows::RotationItem> MBRotParseItems(const std::string& html,
+                                                              const std::string& low)
+{
+    std::vector<SnowCrows::RotationItem> items;
+    size_t pos = 0;
+    while (pos < low.size()) {
+        size_t li    = low.find("<li", pos);
+        size_t ptag  = low.find("<p",  pos);
+        size_t start = std::min(li, ptag);
+        if (start == std::string::npos) break;
+
+        bool is_li = (li <= ptag);
+        const char* close = is_li ? "</li>" : "</p>";
+
+        size_t gt = low.find('>', start);
+        if (gt == std::string::npos) { pos = start + 1; continue; }
+        size_t end = low.find(close, gt + 1);
+        if (end == std::string::npos) end = std::min(gt + 600, low.size());
+
+        std::string content     = html.substr(gt + 1, end - gt - 1);
+        std::string content_low = low.substr(gt + 1,  end - gt - 1);
+
+        SnowCrows::RotationItem item;
+        item.skill_ids = MBRotExtractSkillIDs(content, content_low);
+        item.text      = MBRotStripTags(content);
+
+        if (!item.text.empty() || !item.skill_ids.empty())
+            items.push_back(std::move(item));
+
+        pos = end + strlen(close);
+    }
+    return items;
+}
+
+bool FetchRotationPage(const std::string& url, SnowCrows::ParsedRotation& out)
+{
+    if (url.size() < 9 || url.substr(0, 8) != "https://") return false;
+    std::string stripped = url.substr(8);
+    auto slash = stripped.find('/');
+    if (slash == std::string::npos) return false;
+    std::wstring host(stripped.begin(), stripped.begin() + slash);
+    std::wstring path(stripped.begin() + slash, stripped.end());
+
+    auto resp = Http::GetPage(host, path);
+    if (!resp.ok()) {
+        Log(LOGL_WARNING, ("MB rotation: HTTP " + std::to_string(resp.status_code)).c_str());
+        return false;
+    }
+
+    std::string html = resp.body;
+    std::string low  = html;
+    std::transform(low.begin(), low.end(), low.begin(), ::tolower);
+
+    /* Strip navigation noise */
+    for (const char* tag : {"<nav", "<header", "<footer"}) {
+        std::string ctag = std::string("</") + (tag + 1) + ">";
+        for (;;) {
+            size_t s = low.find(tag);
+            if (s == std::string::npos) break;
+            size_t n = s + strlen(tag);
+            char nc = (n < low.size()) ? low[n] : '\0';
+            if (nc != ' ' && nc != '>' && nc != '\t') { html[s] = low[s] = ' '; continue; }
+            size_t e = low.find(ctag, s);
+            if (e == std::string::npos) break;
+            e += ctag.size();
+            html.erase(s, e - s);
+            low.erase(s, e - s);
+        }
+    }
+
+    /* MetaBattle uses h2 "Usage" or "Gameplay" for rotation/priority info */
+    static const char* ROT_KEYWORDS[] = {
+        "usage", "gameplay", "rotation", "skill priority", "damage", nullptr
+    };
+
+    /* Find h2 section matching a rotation keyword */
+    size_t rot_start = std::string::npos;
+    size_t rot_end   = std::string::npos;
+    {
+        size_t p = 0;
+        while ((p = low.find("<h2", p)) != std::string::npos) {
+            size_t n = p + 3;
+            char nc = (n < low.size()) ? low[n] : '\0';
+            if (nc != ' ' && nc != '>') { p++; continue; }
+            size_t gt  = low.find('>', p);
+            if (gt == std::string::npos) { p++; continue; }
+            size_t clo = low.find("</h2>", gt);
+            if (clo == std::string::npos) clo = gt + 100;
+            std::string title_low = low.substr(gt + 1, clo - gt - 1);
+            for (const char** kw = ROT_KEYWORDS; *kw; ++kw) {
+                if (title_low.find(*kw) != std::string::npos) {
+                    rot_start = clo + 5; /* after </h2> */
+                    /* end = next h2 */
+                    rot_end = low.find("<h2", rot_start);
+                    if (rot_end == std::string::npos) rot_end = html.size();
+                    break;
+                }
+            }
+            if (rot_start != std::string::npos) break;
+            p = clo + 5;
+        }
+    }
+
+    if (rot_start == std::string::npos) {
+        Log(LOGL_WARNING, "MB rotation: no usage/gameplay section found");
+        return false;
+    }
+
+    std::string rot_html = html.substr(rot_start, rot_end - rot_start);
+    std::string rot_low  = low.substr(rot_start,  rot_end - rot_start);
+
+    /* Split by h3 subsections */
+    std::vector<std::pair<size_t, std::string>> subs;
+    {
+        size_t p = 0;
+        while ((p = rot_low.find("<h3", p)) != std::string::npos) {
+            size_t n = p + 3;
+            char nc = (n < rot_low.size()) ? rot_low[n] : '\0';
+            if (nc != ' ' && nc != '>') { p++; continue; }
+            size_t gt  = rot_low.find('>', p);
+            if (gt == std::string::npos) { p++; continue; }
+            size_t clo = rot_low.find("</h3>", gt);
+            if (clo == std::string::npos) clo = gt + 100;
+            std::string title = MBRotStripTags(rot_html.substr(gt + 1, clo - gt - 1));
+            if (!title.empty())
+                subs.push_back({clo + 5, title});
+            p = clo + 5;
+        }
+    }
+
+    if (subs.empty()) {
+        /* No h3 sub-sections — treat the whole block as one section */
+        SnowCrows::RotationSection sec;
+        sec.title = "Usage";
+        sec.items = MBRotParseItems(rot_html, rot_low);
+        if (!sec.items.empty()) out.sections.push_back(std::move(sec));
+    } else {
+        for (size_t i = 0; i < subs.size(); i++) {
+            size_t cs = subs[i].first;
+            size_t ce = (i + 1 < subs.size()) ? subs[i + 1].first : rot_html.size();
+            std::string c     = rot_html.substr(cs, ce - cs);
+            std::string c_low = rot_low.substr(cs,  ce - cs);
+            SnowCrows::RotationSection sec;
+            sec.title = subs[i].second;
+            sec.items = MBRotParseItems(c, c_low);
+            if (!sec.items.empty()) out.sections.push_back(std::move(sec));
+        }
+    }
+
+    if (out.sections.empty()) {
+        Log(LOGL_WARNING, "MB rotation: parsed 0 sections");
+        return false;
+    }
+    return true;
+}
+
 } /* namespace MetaBattle */

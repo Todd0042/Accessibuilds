@@ -721,4 +721,188 @@ bool ParseBuildPage(const std::string& url, GW2::SCBuild& out)
     return !out.name.empty() || out.profession != GW2::Profession::None;
 }
 
+/* ── Rotation parsing ────────────────────────────────────────────────────── */
+
+static std::string RotStripTags(const std::string& html)
+{
+    std::string r;
+    bool in_tag = false;
+    for (char c : html) {
+        if      (c == '<') { in_tag = true; r += ' '; }
+        else if (c == '>') { in_tag = false; }
+        else if (!in_tag)  { r += (c == '\n' || c == '\r' || c == '\t') ? ' ' : c; }
+    }
+    std::string out;
+    bool sp = false;
+    for (char c : r) {
+        if (c == ' ') { if (!sp && !out.empty()) { out += ' '; sp = true; } }
+        else          { out += c; sp = false; }
+    }
+    while (!out.empty() && out.back() == ' ') out.pop_back();
+    return out;
+}
+
+/* Extract skill IDs from <gw2object ... type="skill" ... objid="ID"> tags */
+static std::vector<uint32_t> RotExtractSkillIDs(const std::string& html,
+                                                  const std::string& low)
+{
+    std::vector<uint32_t> ids;
+    size_t pos = 0;
+    while ((pos = low.find("<gw2object", pos)) != std::string::npos) {
+        size_t gt = low.find('>', pos);
+        if (gt == std::string::npos) { pos++; continue; }
+        std::string tag_low = low.substr(pos, gt - pos);
+        if (tag_low.find("type=\"skill\"") != std::string::npos ||
+            tag_low.find("type='skill'")  != std::string::npos) {
+            std::string objid = FindHTMLAttr(html.substr(pos, gt - pos), "objid", 0);
+            if (!objid.empty()) {
+                uint32_t id = (uint32_t)atol(objid.c_str());
+                if (id) ids.push_back(id);
+            }
+        }
+        pos = gt + 1;
+    }
+    return ids;
+}
+
+/* Parse <li> and <p> elements out of a block of HTML into RotationItems */
+static std::vector<SnowCrows::RotationItem> RotParseItems(const std::string& html,
+                                                           const std::string& low)
+{
+    std::vector<SnowCrows::RotationItem> items;
+    size_t pos = 0;
+    while (pos < low.size()) {
+        size_t li    = low.find("<li", pos);
+        size_t ptag  = low.find("<p",  pos);
+        size_t start = std::min(li, ptag);
+        if (start == std::string::npos) break;
+
+        bool is_li = (li <= ptag);
+        const char* close = is_li ? "</li>" : "</p>";
+
+        size_t gt = low.find('>', start);
+        if (gt == std::string::npos) { pos = start + 1; continue; }
+        size_t end = low.find(close, gt + 1);
+        if (end == std::string::npos) end = std::min(gt + 600, low.size());
+
+        std::string content     = html.substr(gt + 1, end - gt - 1);
+        std::string content_low = low.substr(gt + 1,  end - gt - 1);
+
+        SnowCrows::RotationItem item;
+        item.skill_ids = RotExtractSkillIDs(content, content_low);
+        item.text      = RotStripTags(content);
+
+        if (!item.text.empty() || !item.skill_ids.empty())
+            items.push_back(std::move(item));
+
+        pos = end + strlen(close);
+    }
+    return items;
+}
+
+bool FetchRotationPage(const std::string& url, SnowCrows::ParsedRotation& out)
+{
+    if (url.size() < 9 || url.substr(0, 8) != "https://") return false;
+    std::string stripped = url.substr(8);
+    auto slash = stripped.find('/');
+    if (slash == std::string::npos) return false;
+    std::wstring host(stripped.begin(), stripped.begin() + slash);
+    std::wstring path(stripped.begin() + slash, stripped.end());
+
+    auto resp = Http::GetPage(host, path);
+    if (!resp.ok()) {
+        Log(LOGL_WARNING, ("HS rotation: HTTP " + std::to_string(resp.status_code)).c_str());
+        return false;
+    }
+
+    std::string html = resp.body;
+    std::string low  = html;
+    std::transform(low.begin(), low.end(), low.begin(), ::tolower);
+
+    /* Strip navigation noise */
+    for (const char* tag : {"<nav", "<header", "<footer"}) {
+        std::string ctag = std::string("</") + (tag + 1) + ">";
+        for (;;) {
+            size_t s = low.find(tag);
+            if (s == std::string::npos) break;
+            size_t n = s + strlen(tag);
+            char nc = (n < low.size()) ? low[n] : '\0';
+            if (nc != ' ' && nc != '>' && nc != '\t') { html[s] = low[s] = ' '; continue; }
+            size_t e = low.find(ctag, s);
+            if (e == std::string::npos) break;
+            e += ctag.size();
+            html.erase(s, e - s);
+            low.erase(s, e - s);
+        }
+    }
+
+    /* Find the first heading that contains any of our rotation keywords.
+     * Hardstuck uses h2 "Skill Priority" on some builds, h3 "Priority List..."
+     * on others.  Accept both and collect ALL matching headings as sections. */
+    static const char* ROT_KEYWORDS[] = {
+        "skill priority", "priority list", "rotation", "skills", nullptr
+    };
+    static const char* HEADINGS[] = { "<h2", "<h3", "<h4", nullptr };
+
+    /* Find the content block to search — skip everything before "utility skills" */
+    size_t search_start = 0;
+    {
+        size_t us = low.find("utility skills");
+        if (us != std::string::npos) search_start = us;
+    }
+
+    /* Collect candidate section headings */
+    std::vector<std::pair<size_t, std::string>> subs; /* (content_start, title) */
+    for (const char** ht = HEADINGS; *ht; ++ht) {
+        std::string close_h = std::string("</") + (*ht + 1) + ">";
+        size_t p = search_start;
+        while ((p = low.find(*ht, p)) != std::string::npos) {
+            size_t n = p + strlen(*ht);
+            char nc = (n < low.size()) ? low[n] : '\0';
+            if (nc != ' ' && nc != '>' && nc != '\t') { p++; continue; }
+            size_t gt = low.find('>', p);
+            if (gt == std::string::npos) { p++; continue; }
+            size_t clo = low.find(close_h, gt);
+            if (clo == std::string::npos) clo = gt + 100;
+            std::string title = RotStripTags(html.substr(gt + 1, clo - gt - 1));
+            std::string title_low = title;
+            std::transform(title_low.begin(), title_low.end(), title_low.begin(), ::tolower);
+            for (const char** kw = ROT_KEYWORDS; *kw; ++kw) {
+                if (title_low.find(*kw) != std::string::npos) {
+                    subs.push_back({clo + close_h.size(), title});
+                    break;
+                }
+            }
+            p = clo + close_h.size();
+        }
+        if (!subs.empty()) break; /* use only the first matching heading level */
+    }
+
+    if (subs.empty()) {
+        Log(LOGL_WARNING, "HS rotation: no rotation headings found");
+        return false;
+    }
+
+    /* For each found section, grab content until the next found section */
+    for (size_t i = 0; i < subs.size(); i++) {
+        size_t content_start = subs[i].first;
+        size_t content_end   = (i + 1 < subs.size())
+                               ? subs[i + 1].first : std::min(content_start + 8000, html.size());
+        std::string content     = html.substr(content_start, content_end - content_start);
+        std::string content_low = low.substr(content_start,  content_end - content_start);
+
+        SnowCrows::RotationSection sec;
+        sec.title = subs[i].second;
+        sec.items = RotParseItems(content, content_low);
+        if (!sec.items.empty())
+            out.sections.push_back(std::move(sec));
+    }
+
+    if (out.sections.empty()) {
+        Log(LOGL_WARNING, "HS rotation: parsed 0 sections");
+        return false;
+    }
+    return true;
+}
+
 } /* namespace Hardstuck */

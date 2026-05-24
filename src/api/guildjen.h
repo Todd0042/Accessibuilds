@@ -1,5 +1,6 @@
 #pragma once
 #include "../build/types.h"
+#include "snowcrows.h"
 #include <string>
 
 namespace GuildJen {
@@ -12,5 +13,6 @@ namespace GuildJen {
  * Returns true on success. */
 bool ParseBuildPage(const std::string& url, GW2::SCBuild& out,
                     std::string& out_armor_stat);
+bool FetchRotationPage(const std::string& url, SnowCrows::ParsedRotation& out);
 
 } /* namespace GuildJen */

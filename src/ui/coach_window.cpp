@@ -3,6 +3,9 @@
 #include "icon_renderer.h"
 #include "../shared.h"
 #include "../api/snowcrows.h"
+#include "../api/hardstuck.h"
+#include "../api/metabattle.h"
+#include "../api/guildjen.h"
 #include "../arcdps/arcdps.h"
 #include <imgui.h>
 #include <atomic>
@@ -347,14 +350,19 @@ static void StartFetch(const std::string& url, const std::string& build_name,
                           SnowCrows::LoadRotationCache(url, rot, cache_dir,
                                                      max_age_hours);
         if (from_cache) {
-            Log(LOGL_INFO, "SC rotation: loaded from cache");
+            Log(LOGL_INFO, "Rotation: loaded from cache");
         } else {
-            bool ok = SnowCrows::FetchRotationPage(url, rot);
+            bool ok = false;
+            if      (url.find("hardstuck.gg")   != std::string::npos) ok = Hardstuck::FetchRotationPage(url, rot);
+            else if (url.find("metabattle.com")  != std::string::npos) ok = MetaBattle::FetchRotationPage(url, rot);
+            else if (url.find("guildjen.com")    != std::string::npos) ok = GuildJen::FetchRotationPage(url, rot);
+            else                                                        ok = SnowCrows::FetchRotationPage(url, rot);
+
             if (ok) {
                 SnowCrows::SaveRotationCache(url, rot, cache_dir);
-                Log(LOGL_INFO, "SC rotation: fetched and cached");
+                Log(LOGL_INFO, "Rotation: fetched and cached");
             } else {
-                s_error_msg = "Fetch failed or no sections found. Check network / page may have changed.";
+                s_error_msg = "Fetch failed or no rotation section found. The page may have changed.";
                 s_state = FetchState::Error;
                 return;
             }
