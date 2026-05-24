@@ -232,6 +232,13 @@ else
     exit 1
 fi
 
+# Always deploy to the live GW2 addons folder
+GW2_LIVE="/home/todd/Games/guild-wars-2/drive_c/Program Files/Guild Wars 2/addons/BuildCoach.dll"
+if [[ -d "$(dirname "$GW2_LIVE")" ]]; then
+    cp "$DLL" "$GW2_LIVE"
+    echo "Deployed: $GW2_LIVE"
+fi
+
 if [[ $INSTALL -eq 1 ]]; then
     if [[ -z "$GW2_ADDONS_DIR" ]]; then
         echo "ERROR: --install requires \$GW2_ADDONS_DIR to be set or passed as --install=<path>" >&2
