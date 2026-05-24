@@ -1,0 +1,2267 @@
+[
+  {
+    "id": "hs-mesmer-heal-boon-chronomancer",
+    "name": "Heal Boon Chronomancer",
+    "profession": "Mesmer",
+    "elite_spec": "Chronomancer",
+    "build_type": "Heal",
+    "game_mode": "GroupPvE",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/mesmer/heal-boon-chronomancer/",
+    "chat_code": "[&DQctOhcqKA9tAQAAzxIAAIcSAACTEgAAsxIAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 45,
+        "traits": [
+          675,
+          668,
+          1687
+        ]
+      },
+      "line2": {
+        "spec_id": 23,
+        "traits": [
+          738,
+          740,
+          1866
+        ]
+      },
+      "line3": {
+        "spec_id": 40,
+        "traits": [
+          1987,
+          1978,
+          1942
+        ]
+      }
+    },
+    "skills": {
+      "heal": 10213,
+      "utilities": [
+        30814,
+        29856,
+        29526
+      ],
+      "elite": 30359
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100031,
+      "food_id": 91690,
+      "utility_id": 67528,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 85128,
+          "stat_id": 1345,
+          "stat_name": "",
+          "upgrade_id": 24842,
+          "infusions": [
+            43250
+          ]
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 84918,
+          "stat_id": 1345,
+          "stat_name": "",
+          "upgrade_id": 24842,
+          "infusions": [
+            43250
+          ]
+        },
+        {
+          "slot": "Chest",
+          "item_id": 85333,
+          "stat_id": 1345,
+          "stat_name": "",
+          "upgrade_id": 24842,
+          "infusions": [
+            43250
+          ]
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85070,
+          "stat_id": 1345,
+          "stat_name": "",
+          "upgrade_id": 24842,
+          "infusions": [
+            43250
+          ]
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 85362,
+          "stat_id": 1345,
+          "stat_name": "",
+          "upgrade_id": 24842,
+          "infusions": [
+            43250
+          ]
+        },
+        {
+          "slot": "Boots",
+          "item_id": 80815,
+          "stat_id": 1345,
+          "stat_name": "",
+          "upgrade_id": 24842,
+          "infusions": [
+            43250
+          ]
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 91637,
+          "stat_id": 1345,
+          "upgrade_id": 74326,
+          "infusions": [],
+          "upgrade2_id": 43250
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 91619,
+          "stat_id": 1345,
+          "upgrade_id": 74326,
+          "infusions": [],
+          "upgrade2_id": 43250
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 91633,
+          "stat_id": 1345,
+          "upgrade_id": 24639,
+          "infusions": [],
+          "upgrade2_id": 43250
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 49365,
+          "stat_id": 1345,
+          "stat_name": "",
+          "upgrade_id": 43250,
+          "infusions": [
+            43250
+          ]
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 79745,
+          "stat_id": 1345,
+          "stat_name": "",
+          "upgrade_id": 43250,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 92706,
+          "stat_id": 1345,
+          "stat_name": "",
+          "upgrade_id": 43250,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 92215,
+          "stat_id": 1345,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79710,
+          "stat_id": 1345,
+          "stat_name": "",
+          "upgrade_id": 43250,
+          "infusions": [
+            43250,
+            43250
+          ]
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 90238,
+          "stat_id": 1345,
+          "stat_name": "",
+          "upgrade_id": 43250,
+          "infusions": [
+            43250,
+            43250
+          ]
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-mesmer-condition-mirage",
+    "name": "Condition Mirage",
+    "profession": "Mesmer",
+    "elite_spec": "Mirage",
+    "build_type": "Condi",
+    "game_mode": "GroupPvE",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/mesmer/condition-mirage/",
+    "chat_code": "[&DQctHQEnOx0jDwAA4BUAAIEBAACDAQAARhcAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 45,
+        "traits": [
+          670,
+          669,
+          671
+        ]
+      },
+      "line2": {
+        "spec_id": 1,
+        "traits": [
+          700,
+          1889,
+          1950
+        ]
+      },
+      "line3": {
+        "spec_id": 59,
+        "traits": [
+          2141,
+          2098,
+          2070
+        ]
+      }
+    },
+    "skills": {
+      "heal": 21750,
+      "utilities": [
+        41065,
+        10232,
+        10234
+      ],
+      "elite": 45449
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 0,
+      "food_id": 91878,
+      "utility_id": 77567,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 85128,
+          "stat_id": 1153,
+          "stat_name": "",
+          "upgrade_id": 24848,
+          "infusions": [
+            43251
+          ]
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 84918,
+          "stat_id": 1153,
+          "stat_name": "",
+          "upgrade_id": 24848,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 85333,
+          "stat_id": 1153,
+          "stat_name": "",
+          "upgrade_id": 24848,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85070,
+          "stat_id": 1153,
+          "stat_name": "",
+          "upgrade_id": 24848,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 85362,
+          "stat_id": 1153,
+          "stat_name": "",
+          "upgrade_id": 24848,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 80815,
+          "stat_id": 1153,
+          "stat_name": "",
+          "upgrade_id": 24848,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 91622,
+          "stat_id": 1153,
+          "upgrade_id": 44944,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 91675,
+          "stat_id": 1153,
+          "upgrade_id": 24607,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 91653,
+          "stat_id": 1153,
+          "upgrade_id": 24607,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 49365,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 79745,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 92706,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 92215,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79710,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 90238,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-mesmer-condition-alacrity-mirage",
+    "name": "Condition Alacrity Mirage",
+    "profession": "Mesmer",
+    "elite_spec": "Mirage",
+    "build_type": "Condi",
+    "game_mode": "GroupPvE",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/mesmer/condition-alacrity-mirage/",
+    "chat_code": "[&DQctPQElOxvuFQAA4BUAAIMBAACBAQAARhcAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 45,
+        "traits": [
+          670,
+          669,
+          1687
+        ]
+      },
+      "line2": {
+        "spec_id": 1,
+        "traits": [
+          701,
+          1889,
+          1950
+        ]
+      },
+      "line3": {
+        "spec_id": 59,
+        "traits": [
+          2110,
+          2174,
+          2070
+        ]
+      }
+    },
+    "skills": {
+      "heal": 40200,
+      "utilities": [
+        41065,
+        10234,
+        10232
+      ],
+      "elite": 45449
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 0,
+      "food_id": 91878,
+      "utility_id": 77567,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 96005,
+          "stat_id": 1686,
+          "stat_name": "",
+          "upgrade_id": 24848,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 97313,
+          "stat_id": 1686,
+          "stat_name": "",
+          "upgrade_id": 24848,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 96962,
+          "stat_id": 1686,
+          "stat_name": "",
+          "upgrade_id": 24848,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 96140,
+          "stat_id": 1686,
+          "stat_name": "",
+          "upgrade_id": 24848,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 97476,
+          "stat_id": 1686,
+          "stat_name": "",
+          "upgrade_id": 24848,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 96739,
+          "stat_id": 1686,
+          "stat_name": "",
+          "upgrade_id": 24848,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 91674,
+          "stat_id": 1153,
+          "upgrade_id": 24607,
+          "infusions": [],
+          "upgrade2_id": 44944
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 91674,
+          "stat_id": 1224,
+          "upgrade_id": 24607,
+          "infusions": [],
+          "upgrade2_id": 44944
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 74155,
+          "stat_id": 1694,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 98322,
+          "stat_id": 1694,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 98322,
+          "stat_id": 1694,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 98299,
+          "stat_id": 1694,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 98303,
+          "stat_id": 1694,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 98303,
+          "stat_id": 1694,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-mesmer-power-virtuoso",
+    "name": "Power Virtuoso",
+    "profession": "Mesmer",
+    "elite_spec": "Virtuoso",
+    "build_type": "Power",
+    "game_mode": "Unknown",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/mesmer/24929/",
+    "chat_code": "[&DQcKJxgpQiVuAQAAZQEAANwaAABmAQAAmgEAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 10,
+        "traits": [
+          687,
+          693,
+          680
+        ]
+      },
+      "line2": {
+        "spec_id": 24,
+        "traits": [
+          721,
+          729,
+          2035
+        ]
+      },
+      "line3": {
+        "spec_id": 66,
+        "traits": [
+          2212,
+          2215,
+          2206
+        ]
+      }
+    },
+    "skills": {
+      "heal": 10176,
+      "utilities": [
+        10200,
+        43343,
+        10201
+      ],
+      "elite": 10245
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 0,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": []
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-mesmer-condition-virtuoso",
+    "name": "Condition Virtuoso",
+    "profession": "Mesmer",
+    "elite_spec": "Virtuoso",
+    "build_type": "Condi",
+    "game_mode": "GroupPvE",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/mesmer/condition-virtuoso/",
+    "chat_code": "[&DQcYHQEdQjsjDwAAgwEAAIIBAACBAQAA5hoAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 24,
+        "traits": [
+          721,
+          1690,
+          733
+        ]
+      },
+      "line2": {
+        "spec_id": 1,
+        "traits": [
+          701,
+          708,
+          692
+        ]
+      },
+      "line3": {
+        "spec_id": 66,
+        "traits": [
+          2202,
+          2205,
+          2223
+        ]
+      }
+    },
+    "skills": {
+      "heal": 21750,
+      "utilities": [
+        10234,
+        10247,
+        10232
+      ],
+      "elite": 24755
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100849,
+      "food_id": 91804,
+      "utility_id": 48917,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 85128,
+          "stat_id": 1078,
+          "stat_name": "",
+          "upgrade_id": 24762,
+          "infusions": [
+            37130
+          ]
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 84918,
+          "stat_id": 1078,
+          "stat_name": "",
+          "upgrade_id": 24762,
+          "infusions": [
+            37130
+          ]
+        },
+        {
+          "slot": "Chest",
+          "item_id": 85333,
+          "stat_id": 1067,
+          "stat_name": "",
+          "upgrade_id": 24762,
+          "infusions": [
+            37130
+          ]
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85070,
+          "stat_id": 1078,
+          "stat_name": "",
+          "upgrade_id": 24762,
+          "infusions": [
+            37130
+          ]
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 85362,
+          "stat_id": 1067,
+          "stat_name": "",
+          "upgrade_id": 24762,
+          "infusions": [
+            37130
+          ]
+        },
+        {
+          "slot": "Boots",
+          "item_id": 80815,
+          "stat_id": 1067,
+          "stat_name": "",
+          "upgrade_id": 24762,
+          "infusions": [
+            37130
+          ]
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 91636,
+          "stat_id": 1067,
+          "upgrade_id": 24612,
+          "infusions": [],
+          "upgrade2_id": 37130
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 91649,
+          "stat_id": 1067,
+          "upgrade_id": 24560,
+          "infusions": [],
+          "upgrade2_id": 37130
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 91657,
+          "stat_id": 1067,
+          "upgrade_id": 24560,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 49365,
+          "stat_id": 1078,
+          "stat_name": "",
+          "upgrade_id": 37130,
+          "infusions": [
+            37130
+          ]
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 79745,
+          "stat_id": 1067,
+          "stat_name": "",
+          "upgrade_id": 37130,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 92706,
+          "stat_id": 1067,
+          "stat_name": "",
+          "upgrade_id": 37130,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 92215,
+          "stat_id": 1067,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79710,
+          "stat_id": 1078,
+          "stat_name": "",
+          "upgrade_id": 37130,
+          "infusions": [
+            37130,
+            37130
+          ]
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 90238,
+          "stat_id": 1078,
+          "stat_name": "",
+          "upgrade_id": 37130,
+          "infusions": [
+            37130,
+            37130
+          ]
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-mesmer-power-boonstrip-virtuoso",
+    "name": "Power Boonstrip Virtuoso",
+    "profession": "Mesmer",
+    "elite_spec": "Virtuoso",
+    "build_type": "Power",
+    "game_mode": "WvWZerg",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/mesmer/power-boonstrip-virtuoso/",
+    "chat_code": "[&DQcKJRglQhUjDwAAhQEAANwaAADqGgAAvAEAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 10,
+        "traits": [
+          686,
+          693,
+          680
+        ]
+      },
+      "line2": {
+        "spec_id": 24,
+        "traits": [
+          721,
+          722,
+          2035
+        ]
+      },
+      "line3": {
+        "spec_id": 66,
+        "traits": [
+          2212,
+          2215,
+          2211
+        ]
+      }
+    },
+    "skills": {
+      "heal": 21750,
+      "utilities": [
+        10237,
+        43343,
+        35637
+      ],
+      "elite": 10311
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 101191,
+      "food_id": 91734,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 97161,
+          "stat_id": 1697,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 84918,
+          "stat_id": 1263,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Chest",
+          "item_id": 95626,
+          "stat_id": 1697,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 97390,
+          "stat_id": 1697,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 85362,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Boots",
+          "item_id": 80815,
+          "stat_id": 1263,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 91646,
+          "stat_id": 161,
+          "upgrade_id": 24548,
+          "infusions": [],
+          "upgrade2_id": 43254
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 91649,
+          "stat_id": 161,
+          "upgrade_id": 24575,
+          "infusions": [],
+          "upgrade2_id": 43254
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 91633,
+          "stat_id": 161,
+          "upgrade_id": 24607,
+          "infusions": [],
+          "upgrade2_id": 43254
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 74155,
+          "stat_id": 1697,
+          "stat_name": "",
+          "upgrade_id": 43254,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 98322,
+          "stat_id": 1697,
+          "stat_name": "",
+          "upgrade_id": 43254,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 98322,
+          "stat_id": 1697,
+          "stat_name": "",
+          "upgrade_id": 43254,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 92215,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 98303,
+          "stat_id": 1697,
+          "stat_name": "",
+          "upgrade_id": 43254,
+          "infusions": [
+            43254,
+            43254
+          ]
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 90238,
+          "stat_id": 1263,
+          "stat_name": "",
+          "upgrade_id": 43254,
+          "infusions": [
+            43254,
+            43254
+          ]
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-mesmer-support-chronomancer",
+    "name": "Support Chronomancer",
+    "profession": "Mesmer",
+    "elite_spec": "Chronomancer",
+    "build_type": "Support",
+    "game_mode": "Unknown",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/mesmer/support-chronomancer-2/",
+    "chat_code": "[&DQcXLi06KB1tAQAAhQEAAH8BAACCAQAAvAEAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 23,
+        "traits": [
+          738,
+          1980,
+          1866
+        ]
+      },
+      "line2": {
+        "spec_id": 45,
+        "traits": [
+          675,
+          668,
+          1687
+        ]
+      },
+      "line3": {
+        "spec_id": 40,
+        "traits": [
+          1838,
+          1978,
+          1942
+        ]
+      }
+    },
+    "skills": {
+      "heal": 10213,
+      "utilities": [
+        10237,
+        10302,
+        10247
+      ],
+      "elite": 10311
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 0,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": []
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-mesmer-confusion-virtuoso",
+    "name": "Confusion Virtuoso",
+    "profession": "Mesmer",
+    "elite_spec": "Virtuoso",
+    "build_type": "Power",
+    "game_mode": "WvWRoaming",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/mesmer/confusion-virtuoso/",
+    "chat_code": "[&DQctNhgtQhXbGgAA3BoAAGgBAABlAQAAmgEAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 45,
+        "traits": [
+          675,
+          673,
+          1687
+        ]
+      },
+      "line2": {
+        "spec_id": 24,
+        "traits": [
+          721,
+          1690,
+          2035
+        ]
+      },
+      "line3": {
+        "spec_id": 66,
+        "traits": [
+          2212,
+          2215,
+          2211
+        ]
+      }
+    },
+    "skills": {
+      "heal": 62522,
+      "utilities": [
+        43343,
+        10207,
+        10200
+      ],
+      "elite": 10245
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100934,
+      "food_id": 91713,
+      "utility_id": 81079,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 85128,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": [
+            43253
+          ]
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 84918,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": [
+            43253
+          ]
+        },
+        {
+          "slot": "Chest",
+          "item_id": 85333,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": [
+            43253
+          ]
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85070,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": [
+            43253
+          ]
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 85362,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": [
+            43253
+          ]
+        },
+        {
+          "slot": "Boots",
+          "item_id": 80815,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": [
+            43253
+          ]
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 91619,
+          "stat_id": 1052,
+          "upgrade_id": 67340,
+          "infusions": [],
+          "upgrade2_id": 43253
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 91675,
+          "stat_id": 1052,
+          "upgrade_id": 24865,
+          "infusions": [],
+          "upgrade2_id": 43253
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 91622,
+          "stat_id": 1052,
+          "upgrade_id": 67340,
+          "infusions": [],
+          "upgrade2_id": 43253
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 91633,
+          "stat_id": 1052,
+          "upgrade_id": 24607,
+          "infusions": [],
+          "upgrade2_id": 43253
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 49365,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 43253,
+          "infusions": [
+            43253
+          ]
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 79745,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 43253,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 92706,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 43253,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 92215,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79710,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 43253,
+          "infusions": [
+            43253,
+            43253
+          ]
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 90238,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 43253,
+          "infusions": [
+            43253,
+            43253
+          ]
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-mesmer-booster-chronomancer",
+    "name": "Booster Chronomancer",
+    "profession": "Mesmer",
+    "elite_spec": "Chronomancer",
+    "build_type": "Power",
+    "game_mode": "OpenWorld",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/mesmer/booster-chronomancer/",
+    "chat_code": "[&DQctPRg/KC4jDwAAgQEAAIMBAABlAQAAmgEAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 45,
+        "traits": [
+          670,
+          669,
+          1687
+        ]
+      },
+      "line2": {
+        "spec_id": 24,
+        "traits": [
+          691,
+          1690,
+          753
+        ]
+      },
+      "line3": {
+        "spec_id": 40,
+        "traits": [
+          1995,
+          1978,
+          2022
+        ]
+      }
+    },
+    "skills": {
+      "heal": 21750,
+      "utilities": [
+        10232,
+        10234,
+        10200
+      ],
+      "elite": 10245
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100432,
+      "food_id": 91876,
+      "utility_id": 43449,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 85128,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 24806,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 84918,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 24806,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 85333,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 24806,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85070,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 24806,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 85362,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 24806,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 80815,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 24806,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 91674,
+          "stat_id": 1052,
+          "upgrade_id": 44944,
+          "infusions": [],
+          "upgrade2_id": 24560
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 91619,
+          "stat_id": 1052,
+          "upgrade_id": 44944,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 91653,
+          "stat_id": 1052,
+          "upgrade_id": 24560,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 49365,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 79745,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 92706,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 92215,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79710,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 90238,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-mesmer-booster-virtuoso",
+    "name": "Booster Virtuoso",
+    "profession": "Mesmer",
+    "elite_spec": "Virtuoso",
+    "build_type": "Power",
+    "game_mode": "OpenWorld",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/mesmer/booster-virtuoso/",
+    "chat_code": "[&DQcYGQEdQjcjDwAAgwEAAN8aAACBAQAA5hoAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 24,
+        "traits": [
+          721,
+          729,
+          733
+        ]
+      },
+      "line2": {
+        "spec_id": 1,
+        "traits": [
+          701,
+          708,
+          692
+        ]
+      },
+      "line3": {
+        "spec_id": 66,
+        "traits": [
+          2202,
+          2215,
+          2223
+        ]
+      }
+    },
+    "skills": {
+      "heal": 21750,
+      "utilities": [
+        10234,
+        62573,
+        10232
+      ],
+      "elite": 24755
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100849,
+      "food_id": 12485,
+      "utility_id": 48917,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 85128,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 24776,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 84918,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 24776,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 85333,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 24776,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85070,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 24776,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 85362,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 24776,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 80815,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 24776,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 91636,
+          "stat_id": 1052,
+          "upgrade_id": 24865,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 91649,
+          "stat_id": 1052,
+          "upgrade_id": 24612,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 91636,
+          "stat_id": 1052,
+          "upgrade_id": 24865,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 91657,
+          "stat_id": 1052,
+          "upgrade_id": 24612,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 49365,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 79745,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 92706,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 92215,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79710,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 90238,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-mesmer-booster-mirage",
+    "name": "Booster Mirage",
+    "profession": "Mesmer",
+    "elite_spec": "Mirage",
+    "build_type": "Power",
+    "game_mode": "OpenWorld",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/mesmer/booster-mirage/",
+    "chat_code": "[&DQcBJS09OxruFQAAgwEAAIoWAACBAQAARhcAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 1,
+        "traits": [
+          701,
+          1889,
+          1950
+        ]
+      },
+      "line2": {
+        "spec_id": 45,
+        "traits": [
+          670,
+          669,
+          1687
+        ]
+      },
+      "line3": {
+        "spec_id": 59,
+        "traits": [
+          2082,
+          2174,
+          2070
+        ]
+      }
+    },
+    "skills": {
+      "heal": 40200,
+      "utilities": [
+        10234,
+        45046,
+        10232
+      ],
+      "elite": 45449
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100432,
+      "food_id": 91848,
+      "utility_id": 77567,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 85128,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 84918,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 85333,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85070,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 85362,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 80815,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 91674,
+          "stat_id": 1052,
+          "upgrade_id": 24607,
+          "infusions": [],
+          "upgrade2_id": 44950
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 91674,
+          "stat_id": 1052,
+          "upgrade_id": 24607,
+          "infusions": [],
+          "upgrade2_id": 44950
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 49365,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 79745,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 92706,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 92215,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79710,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 90238,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-mesmer-side-mirage",
+    "name": "Side Mirage",
+    "profession": "Mesmer",
+    "elite_spec": "Mirage",
+    "build_type": "Power",
+    "game_mode": "Unknown",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/mesmer/side-mirage/",
+    "chat_code": "[&DQctPQE7OxruFQAAZQEAAIoWAAAYAQAARhcAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 45,
+        "traits": [
+          670,
+          669,
+          1687
+        ]
+      },
+      "line2": {
+        "spec_id": 1,
+        "traits": [
+          700,
+          1960,
+          704
+        ]
+      },
+      "line3": {
+        "spec_id": 59,
+        "traits": [
+          2082,
+          2174,
+          2070
+        ]
+      }
+    },
+    "skills": {
+      "heal": 40200,
+      "utilities": [
+        10200,
+        45046,
+        10185
+      ],
+      "elite": 45449
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 0,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": []
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-mesmer-power-shatter-mesmer",
+    "name": "Power Shatter Mesmer",
+    "profession": "Mesmer",
+    "elite_spec": "",
+    "build_type": "Power",
+    "game_mode": "Unknown",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/mesmer/power-shatter/",
+    "chat_code": "[&DQcBHQoVLScPAQAAaQEAAIMBAABlAQAAmgEAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 1,
+        "traits": [
+          701,
+          708,
+          692
+        ]
+      },
+      "line2": {
+        "spec_id": 10,
+        "traits": [
+          686,
+          693,
+          681
+        ]
+      },
+      "line3": {
+        "spec_id": 45,
+        "traits": [
+          677,
+          673,
+          674
+        ]
+      }
+    },
+    "skills": {
+      "heal": 10177,
+      "utilities": [
+        10211,
+        10234,
+        10200
+      ],
+      "elite": 10245
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 0,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": []
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-mesmer-sidenode-virtuoso",
+    "name": "Sidenode Virtuoso",
+    "profession": "Mesmer",
+    "elite_spec": "Virtuoso",
+    "build_type": "Power",
+    "game_mode": "Unknown",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/mesmer/virtuoso/",
+    "chat_code": "[&DQcYLy0+QhUjDwAAZQEAANwaAACCAQAA7RIAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 24,
+        "traits": [
+          691,
+          1690,
+          2035
+        ]
+      },
+      "line2": {
+        "spec_id": 45,
+        "traits": [
+          675,
+          669,
+          1687
+        ]
+      },
+      "line3": {
+        "spec_id": 66,
+        "traits": [
+          2212,
+          2215,
+          2211
+        ]
+      }
+    },
+    "skills": {
+      "heal": 21750,
+      "utilities": [
+        10200,
+        43343,
+        10247
+      ],
+      "elite": 29519
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 0,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": []
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-mesmer-power-chrono",
+    "name": "Power Chrono",
+    "profession": "Mesmer",
+    "elite_spec": "Chronomancer",
+    "build_type": "Power",
+    "game_mode": "Unknown",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/mesmer/power-chrono/",
+    "chat_code": "[&DQcKNRgpKCUjDwAAZQEAAGcBAACCAQAAsxIAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 10,
+        "traits": [
+          686,
+          693,
+          1688
+        ]
+      },
+      "line2": {
+        "spec_id": 24,
+        "traits": [
+          721,
+          729,
+          2035
+        ]
+      },
+      "line3": {
+        "spec_id": 40,
+        "traits": [
+          1838,
+          2009,
+          2022
+        ]
+      }
+    },
+    "skills": {
+      "heal": 21750,
+      "utilities": [
+        10200,
+        10204,
+        10247
+      ],
+      "elite": 30359
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 0,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": []
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-mesmer-power-mirage",
+    "name": "Power Mirage",
+    "profession": "Mesmer",
+    "elite_spec": "Mirage",
+    "build_type": "Power",
+    "game_mode": "Unknown",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/mesmer/power-mirage/",
+    "chat_code": "[&DQcBHgo/Oz0jDwAAZQEAAGcBAACyFgAARhcAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 1,
+        "traits": [
+          705,
+          708,
+          692
+        ]
+      },
+      "line2": {
+        "spec_id": 10,
+        "traits": [
+          687,
+          712,
+          1688
+        ]
+      },
+      "line3": {
+        "spec_id": 59,
+        "traits": [
+          2141,
+          2098,
+          2169
+        ]
+      }
+    },
+    "skills": {
+      "heal": 21750,
+      "utilities": [
+        10200,
+        10204,
+        42851
+      ],
+      "elite": 45449
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 0,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": []
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  }
+]

@@ -2,7 +2,7 @@
 #pragma once
 #include <stddef.h>
 
-static const int hs_builds_version = 2;
+static const int hs_builds_version = 4;
 
 static const unsigned char hs_builds_json[] = {
   0x5b, 0x7b, 0x22, 0x69, 0x64, 0x22, 0x3a, 0x22, 0x68, 0x73, 0x2d, 0x67,

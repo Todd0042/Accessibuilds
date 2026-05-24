@@ -1,0 +1,1775 @@
+[
+  {
+    "id": "hs-thief-heal-alacrity-specter",
+    "name": "Heal Alacrity Specter",
+    "profession": "Thief",
+    "elite_spec": "Specter",
+    "build_type": "Alacrity",
+    "game_mode": "GroupPvE",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/thief/heal-alacrity-specter/",
+    "chat_code": "[&DQUUFSwnRz0VGwAAVwEAAAcbAAAIGwAAERsAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 20,
+        "traits": [
+          1160,
+          1297,
+          1134
+        ]
+      },
+      "line2": {
+        "spec_id": 44,
+        "traits": [
+          1163,
+          1277,
+          1158
+        ]
+      },
+      "line3": {
+        "spec_id": 71,
+        "traits": [
+          2284,
+          2285,
+          2289
+        ]
+      }
+    },
+    "skills": {
+      "heal": 63292,
+      "utilities": [
+        13062,
+        63230,
+        63323
+      ],
+      "elite": 63275
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 101268,
+      "food_id": 91690,
+      "utility_id": 81157,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 84862,
+          "stat_id": 1559,
+          "stat_name": "",
+          "upgrade_id": 24839,
+          "infusions": [
+            37125
+          ]
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 85182,
+          "stat_id": 1559,
+          "stat_name": "",
+          "upgrade_id": 24839,
+          "infusions": [
+            37125
+          ]
+        },
+        {
+          "slot": "Chest",
+          "item_id": 84977,
+          "stat_id": 1559,
+          "stat_name": "",
+          "upgrade_id": 24839,
+          "infusions": [
+            37125
+          ]
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85169,
+          "stat_id": 1559,
+          "stat_name": "",
+          "upgrade_id": 24839,
+          "infusions": [
+            37125
+          ]
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 85264,
+          "stat_id": 1559,
+          "stat_name": "",
+          "upgrade_id": 24839,
+          "infusions": [
+            37125
+          ]
+        },
+        {
+          "slot": "Boots",
+          "item_id": 80836,
+          "stat_id": 1559,
+          "stat_name": "",
+          "upgrade_id": 24839,
+          "infusions": [
+            37125
+          ]
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 91619,
+          "stat_id": 1559,
+          "upgrade_id": 72339,
+          "infusions": [],
+          "upgrade2_id": 37125
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 91675,
+          "stat_id": 1559,
+          "upgrade_id": 24639,
+          "infusions": [],
+          "upgrade2_id": 37125
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 91649,
+          "stat_id": 1559,
+          "upgrade_id": 72339,
+          "infusions": [],
+          "upgrade2_id": 37125
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 49365,
+          "stat_id": 1559,
+          "stat_name": "",
+          "upgrade_id": 37125,
+          "infusions": [
+            37125
+          ]
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 79745,
+          "stat_id": 1559,
+          "stat_name": "",
+          "upgrade_id": 37125,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 92706,
+          "stat_id": 1559,
+          "stat_name": "",
+          "upgrade_id": 37125,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 92215,
+          "stat_id": 1559,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79710,
+          "stat_id": 1559,
+          "stat_name": "",
+          "upgrade_id": 37125,
+          "infusions": [
+            37125,
+            37125
+          ]
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 90238,
+          "stat_id": 1559,
+          "stat_name": "",
+          "upgrade_id": 37125,
+          "infusions": [
+            37125,
+            37125
+          ]
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-thief-condition-specter",
+    "name": "Condition Specter",
+    "profession": "Thief",
+    "elite_spec": "Specter",
+    "build_type": "Condi",
+    "game_mode": "Unknown",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/thief/condition-specter-2/",
+    "chat_code": "[&DQUsJxwbRy4KAQAAWAAAAAgbAAALAQAAERsAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 44,
+        "traits": [
+          1163,
+          1277,
+          1158
+        ]
+      },
+      "line2": {
+        "spec_id": 28,
+        "traits": [
+          1164,
+          1292,
+          1291
+        ]
+      },
+      "line3": {
+        "spec_id": 71,
+        "traits": [
+          2299,
+          2285,
+          2300
+        ]
+      }
+    },
+    "skills": {
+      "heal": 13021,
+      "utilities": [
+        13002,
+        63323,
+        13026
+      ],
+      "elite": 63275
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 0,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": []
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-thief-condition-alacrity-specter",
+    "name": "Condition Alacrity Specter",
+    "profession": "Thief",
+    "elite_spec": "Specter",
+    "build_type": "Condi",
+    "game_mode": "GroupPvE",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/thief/condition-alacrity-specter/",
+    "chat_code": "[&DQUcGywXRzUVGwAALwEAAD4BAAALAQAADgEAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 28,
+        "traits": [
+          1164,
+          1292,
+          1291
+        ]
+      },
+      "line2": {
+        "spec_id": 44,
+        "traits": [
+          1163,
+          1277,
+          1187
+        ]
+      },
+      "line3": {
+        "spec_id": 71,
+        "traits": [
+          2284,
+          2290,
+          2289
+        ]
+      }
+    },
+    "skills": {
+      "heal": 63292,
+      "utilities": [
+        13037,
+        13055,
+        13026
+      ],
+      "elite": 13132
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100153,
+      "food_id": 96578,
+      "utility_id": 81079,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 97440,
+          "stat_id": 1686,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 97862,
+          "stat_id": 1686,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 97154,
+          "stat_id": 1686,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 96795,
+          "stat_id": 1686,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 95714,
+          "stat_id": 1686,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 97395,
+          "stat_id": 1686,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 97272,
+          "stat_id": 1686,
+          "upgrade_id": 24583,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 96821,
+          "stat_id": 1686,
+          "upgrade_id": 24609,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 97508,
+          "stat_id": 1686,
+          "upgrade_id": 24639,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 74155,
+          "stat_id": 1686,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 98322,
+          "stat_id": 1686,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 98322,
+          "stat_id": 1686,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 98299,
+          "stat_id": 1686,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 98303,
+          "stat_id": 1686,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 98303,
+          "stat_id": 1686,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-thief-power-daredevil",
+    "name": "Power Daredevil",
+    "profession": "Thief",
+    "elite_spec": "Daredevil",
+    "build_type": "Power",
+    "game_mode": "Unknown",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/thief/power-daredevil-pvp/",
+    "chat_code": "[&DQUUKywnBykKAQAAWAAAACkTAABXAQAAnwEAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 20,
+        "traits": [
+          1284,
+          1130,
+          1135
+        ]
+      },
+      "line2": {
+        "spec_id": 44,
+        "traits": [
+          1163,
+          1277,
+          1158
+        ]
+      },
+      "line3": {
+        "spec_id": 7,
+        "traits": [
+          1933,
+          1893,
+          1964
+        ]
+      }
+    },
+    "skills": {
+      "heal": 13021,
+      "utilities": [
+        13002,
+        30369,
+        13062
+      ],
+      "elite": 13085
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 0,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": []
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-thief-condition-daredevil",
+    "name": "Condition Daredevil",
+    "profession": "Thief",
+    "elite_spec": "Daredevil",
+    "build_type": "Condi",
+    "game_mode": "GroupPvE",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/thief/condition-daredevil/",
+    "chat_code": "[&DQUcGyw1BxmUEgAALwEAAA0BAAALAQAAKAAAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 28,
+        "traits": [
+          1164,
+          1292,
+          1291
+        ]
+      },
+      "line2": {
+        "spec_id": 44,
+        "traits": [
+          1159,
+          1277,
+          1706
+        ]
+      },
+      "line3": {
+        "spec_id": 7,
+        "traits": [
+          1933,
+          1893,
+          1833
+        ]
+      }
+    },
+    "skills": {
+      "heal": 30400,
+      "utilities": [
+        13037,
+        13028,
+        13026
+      ],
+      "elite": 13082
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100153,
+      "food_id": 96578,
+      "utility_id": 48917,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 84862,
+          "stat_id": 1153,
+          "stat_name": "",
+          "upgrade_id": 24762,
+          "infusions": [
+            37130
+          ]
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 85182,
+          "stat_id": 1153,
+          "stat_name": "",
+          "upgrade_id": 24762,
+          "infusions": [
+            37130
+          ]
+        },
+        {
+          "slot": "Chest",
+          "item_id": 84977,
+          "stat_id": 1153,
+          "stat_name": "",
+          "upgrade_id": 24762,
+          "infusions": [
+            37130
+          ]
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85169,
+          "stat_id": 1153,
+          "stat_name": "",
+          "upgrade_id": 24762,
+          "infusions": [
+            37130
+          ]
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 85264,
+          "stat_id": 1153,
+          "stat_name": "",
+          "upgrade_id": 24762,
+          "infusions": [
+            37130
+          ]
+        },
+        {
+          "slot": "Boots",
+          "item_id": 80836,
+          "stat_id": 1153,
+          "stat_name": "",
+          "upgrade_id": 24762,
+          "infusions": [
+            37130
+          ]
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 91636,
+          "stat_id": 1153,
+          "upgrade_id": 24612,
+          "infusions": [],
+          "upgrade2_id": 37130
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 91636,
+          "stat_id": 1153,
+          "upgrade_id": 24609,
+          "infusions": [],
+          "upgrade2_id": 37130
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 49365,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 37130,
+          "infusions": [
+            37130
+          ]
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 79745,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 37130,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 92706,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 37130,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 92215,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79710,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 37130,
+          "infusions": [
+            37130,
+            37130
+          ]
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 90238,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 37130,
+          "infusions": [
+            37130,
+            37130
+          ]
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-thief-power-deadeye",
+    "name": "Power Deadeye",
+    "profession": "Thief",
+    "elite_spec": "Deadeye",
+    "build_type": "Power",
+    "game_mode": "GroupPvE",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/thief/power-deadeye-2/",
+    "chat_code": "[&DQUcPSMbOh0MAQAAMwEAAFcBAACsFgAAKAAAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 28,
+        "traits": [
+          1245,
+          1704,
+          1269
+        ]
+      },
+      "line2": {
+        "spec_id": 35,
+        "traits": [
+          1268,
+          1272,
+          1904
+        ]
+      },
+      "line3": {
+        "spec_id": 58,
+        "traits": [
+          2145,
+          2160,
+          2111
+        ]
+      }
+    },
+    "skills": {
+      "heal": 13027,
+      "utilities": [
+        13046,
+        13062,
+        41158
+      ],
+      "elite": 13082
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 0,
+      "food_id": 91805,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 84862,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 85182,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Chest",
+          "item_id": 84977,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85169,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 85264,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Boots",
+          "item_id": 80836,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 91636,
+          "stat_id": 161,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 43254
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 91636,
+          "stat_id": 161,
+          "upgrade_id": 24868,
+          "infusions": [],
+          "upgrade2_id": 43254
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 91637,
+          "stat_id": 161,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 43254
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 49365,
+          "stat_id": 584,
+          "stat_name": "",
+          "upgrade_id": 43254,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 79745,
+          "stat_id": 584,
+          "stat_name": "",
+          "upgrade_id": 43254,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 92706,
+          "stat_id": 584,
+          "stat_name": "",
+          "upgrade_id": 43254,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 92215,
+          "stat_id": 584,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79710,
+          "stat_id": 584,
+          "stat_name": "",
+          "upgrade_id": 43254,
+          "infusions": [
+            43254,
+            43254
+          ]
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 90238,
+          "stat_id": 584,
+          "stat_name": "",
+          "upgrade_id": 43254,
+          "infusions": [
+            43254,
+            43254
+          ]
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-thief-qadim-kite-deadeye",
+    "name": "Qadim Kite Deadeye",
+    "profession": "Thief",
+    "elite_spec": "Deadeye",
+    "build_type": "Power",
+    "game_mode": "GroupPvE",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/thief/pylon-kite-rifle-deadeye/",
+    "chat_code": "[&DQUjGxw+Oh0MAQAAMwEAAB8WAAAbAQAAPRYAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 35,
+        "traits": [
+          1268,
+          1272,
+          1904
+        ]
+      },
+      "line2": {
+        "spec_id": 28,
+        "traits": [
+          1276,
+          1704,
+          1269
+        ]
+      },
+      "line3": {
+        "spec_id": 58,
+        "traits": [
+          2145,
+          2160,
+          2111
+        ]
+      }
+    },
+    "skills": {
+      "heal": 13027,
+      "utilities": [
+        13046,
+        46335,
+        13038
+      ],
+      "elite": 45508
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 0,
+      "food_id": 91805,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 84862,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 85182,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 84977,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85169,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 85264,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 80836,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 91637,
+          "stat_id": 161,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 24868
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 91636,
+          "stat_id": 161,
+          "upgrade_id": 24615,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 91636,
+          "stat_id": 161,
+          "upgrade_id": 24868,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 49365,
+          "stat_id": 584,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 79745,
+          "stat_id": 584,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 92706,
+          "stat_id": 584,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 92215,
+          "stat_id": 1128,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79710,
+          "stat_id": 584,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 90238,
+          "stat_id": 584,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-thief-booster-deadeye",
+    "name": "Booster Deadeye",
+    "profession": "Thief",
+    "elite_spec": "Deadeye",
+    "build_type": "Power",
+    "game_mode": "OpenWorld",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/thief/booster-deadeye/",
+    "chat_code": "[&DQUcPiMfOimFAAAAWwEAAB8WAAAzAQAAPRYAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 28,
+        "traits": [
+          1276,
+          1704,
+          1269
+        ]
+      },
+      "line2": {
+        "spec_id": 35,
+        "traits": [
+          1268,
+          1299,
+          1904
+        ]
+      },
+      "line3": {
+        "spec_id": 58,
+        "traits": [
+          2145,
+          2078,
+          2093
+        ]
+      }
+    },
+    "skills": {
+      "heal": 13050,
+      "utilities": [
+        13066,
+        46335,
+        13046
+      ],
+      "elite": 45508
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100916,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 84862,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 24815,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 85182,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 24815,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 84977,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 24815,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85169,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 24815,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 85264,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 24815,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 80836,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 24815,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 91637,
+          "stat_id": 1052,
+          "upgrade_id": 24618,
+          "infusions": [],
+          "upgrade2_id": 24615
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 91675,
+          "stat_id": 1052,
+          "upgrade_id": 24618,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 91675,
+          "stat_id": 1052,
+          "upgrade_id": 24615,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 49365,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 79745,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 92706,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 92215,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79710,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 90238,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-thief-booster-daredevil",
+    "name": "Booster Daredevil",
+    "profession": "Thief",
+    "elite_spec": "Daredevil",
+    "build_type": "Power",
+    "game_mode": "OpenWorld",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/thief/booster-daredevil/",
+    "chat_code": "[&DQUcGywXBxkMAQAALwEAAD4BAAANAQAAKAAAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 28,
+        "traits": [
+          1164,
+          1292,
+          1291
+        ]
+      },
+      "line2": {
+        "spec_id": 44,
+        "traits": [
+          1163,
+          1277,
+          1187
+        ]
+      },
+      "line3": {
+        "spec_id": 7,
+        "traits": [
+          1933,
+          1893,
+          1833
+        ]
+      }
+    },
+    "skills": {
+      "heal": 13027,
+      "utilities": [
+        13037,
+        13055,
+        13028
+      ],
+      "elite": 13082
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100153,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 84862,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 24762,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 85182,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 24762,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 84977,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 24762,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85169,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 24762,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 85264,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 24762,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 80836,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 24762,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 91636,
+          "stat_id": 1052,
+          "upgrade_id": 24612,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 91636,
+          "stat_id": 1052,
+          "upgrade_id": 24609,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 91636,
+          "stat_id": 1052,
+          "upgrade_id": 24612,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 49365,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 79745,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 92706,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 92215,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79710,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 90238,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-thief-booster-specter",
+    "name": "Booster Specter",
+    "profession": "Thief",
+    "elite_spec": "Specter",
+    "build_type": "Power",
+    "game_mode": "OpenWorld",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/thief/booster-specter/",
+    "chat_code": "[&DQUcGywXRz0VGwAABxsAAAgbAAAGGwAAERsAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 28,
+        "traits": [
+          1164,
+          1292,
+          1291
+        ]
+      },
+      "line2": {
+        "spec_id": 44,
+        "traits": [
+          1163,
+          1277,
+          1187
+        ]
+      },
+      "line3": {
+        "spec_id": 71,
+        "traits": [
+          2284,
+          2285,
+          2289
+        ]
+      }
+    },
+    "skills": {
+      "heal": 63292,
+      "utilities": [
+        63230,
+        63323,
+        63276
+      ],
+      "elite": 63275
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100450,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 84862,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 24691,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 85182,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 24691,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 84977,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 24691,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85169,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 24691,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 85264,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 24691,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 80836,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 24691,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 91619,
+          "stat_id": 1052,
+          "upgrade_id": 24583,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 91636,
+          "stat_id": 1052,
+          "upgrade_id": 72339,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 91619,
+          "stat_id": 1052,
+          "upgrade_id": 24583,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 91675,
+          "stat_id": 1052,
+          "upgrade_id": 24639,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 49365,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 79745,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 92706,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 92215,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79710,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 90238,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-thief-mercy-deadeye",
+    "name": "Mercy Deadeye",
+    "profession": "Thief",
+    "elite_spec": "Deadeye",
+    "build_type": "Power",
+    "game_mode": "Unknown",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/thief/mercy-deadeye/",
+    "chat_code": "[&DQUULywnOicKAQAAWAAAACAXAAAfFgAAPRYAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 20,
+        "traits": [
+          1284,
+          1300,
+          1135
+        ]
+      },
+      "line2": {
+        "spec_id": 44,
+        "traits": [
+          1163,
+          1277,
+          1158
+        ]
+      },
+      "line3": {
+        "spec_id": 58,
+        "traits": [
+          2136,
+          2118,
+          2093
+        ]
+      }
+    },
+    "skills": {
+      "heal": 13021,
+      "utilities": [
+        13002,
+        41372,
+        46335
+      ],
+      "elite": 45508
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 0,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": []
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  }
+]

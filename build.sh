@@ -57,35 +57,42 @@ lines.append("")
 lines.append("static const int sc_builds_version = %d;" % version)
 lines.append("")
 
+BUILD_DIR = root / "full-builds"
+
 # Main builds (may be empty)
-if os.path.exists("sc_builds_full.json"):
-    main_raw = embed_file("sc_builds_full.json", "sc_builds_json")
+main_src = BUILD_DIR / "sc_builds_full.json"
+if main_src.exists():
+    main_raw = embed_file(str(main_src), "sc_builds_json")
     lines.append(main_raw)
-    print("  Main data: %d bytes" % len(main_raw))
+    with open(main_src) as f:
+        count = len(json.load(f))
+    print("  Main data: %d builds" % count)
 else:
     lines.append("static const unsigned char sc_builds_json[] = {0x5b, 0x5d}; /* [] */")
     lines.append("static const size_t sc_builds_json_len = 2;")
     print("  Main data: no file, embedded empty array")
 
 # Accessibility builds
-if os.path.exists("sc_builds_accessibility.json"):
-    acc_raw = embed_file("sc_builds_accessibility.json", "sc_builds_accessibility_json")
+acc_src = BUILD_DIR / "sc_builds_accessibility.json"
+if acc_src.exists():
+    acc_raw = embed_file(str(acc_src), "sc_builds_accessibility_json")
     lines.append(acc_raw)
-    with open("sc_builds_accessibility.json") as f:
+    with open(acc_src) as f:
         count = len(json.load(f))
-    print("  Accessibility: %d builds, %d bytes" % (count, len(acc_raw)))
+    print("  Accessibility: %d builds" % count)
 else:
     lines.append("static const unsigned char sc_builds_accessibility_json[] = {0x5b, 0x5d}; /* [] */")
     lines.append("static const size_t sc_builds_accessibility_json_len = 2;")
     print("  Accessibility: no file, embedded empty array")
 
 # Rotation data
-if os.path.exists("sc_rotations_accessibility.json"):
-    rot_raw = embed_file("sc_rotations_accessibility.json", "sc_rotations_accessibility_json")
+rot_src = BUILD_DIR / "sc_rotations_accessibility.json"
+if rot_src.exists():
+    rot_raw = embed_file(str(rot_src), "sc_rotations_accessibility_json")
     lines.append(rot_raw)
-    with open("sc_rotations_accessibility.json") as f:
+    with open(rot_src) as f:
         count = len(json.load(f))
-    print("  Rotations: %d builds, %d bytes" % (count, len(rot_raw)))
+    print("  Rotations: %d builds" % count)
 else:
     lines.append("static const unsigned char sc_rotations_accessibility_json[] = {0x7b, 0x7d}; /* {} */")
     lines.append("static const size_t sc_rotations_accessibility_json_len = 2;")
@@ -104,7 +111,7 @@ PYEOF
 import subprocess, re, sys, os, json, pathlib
 
 root = pathlib.Path(".")
-hs_src = root / "hs-builds" / "hs_builds_full.json"
+hs_src = root / "full-builds" / "hs_builds_full.json"
 
 hs_version_file = root / "hs_builds_version.txt"
 if hs_version_file.exists():
@@ -115,7 +122,7 @@ hs_version += 1
 hs_version_file.write_text(str(hs_version))
 
 if not hs_src.exists():
-    print("  No hs-builds/hs_builds_full.json found — writing empty header.")
+    print("  No full-builds/hs_builds_full.json found — writing empty header.")
     header = [
         "/* Auto-generated — do not edit. Regenerate with ./build.sh --regen */",
         "#pragma once",

@@ -62,7 +62,7 @@ except ImportError:
 BASE_URL        = "https://hardstuck.gg"
 SITEMAP_PATTERN = BASE_URL + "/wp-sitemap-posts-gw2_builds-%d.xml"
 SCRIPT_DIR      = Path(__file__).parent
-DEFAULT_OUT_DIR = SCRIPT_DIR / ".." / "hs-builds"
+DEFAULT_OUT_DIR = SCRIPT_DIR / ".." / "full-builds"
 CACHE_DIR       = SCRIPT_DIR / ".hs_cache"
 
 HEADERS = {

@@ -1,0 +1,2243 @@
+[
+  {
+    "id": "hs-ranger-power-quickness-untamed",
+    "name": "Power Quickness Untamed",
+    "profession": "Ranger",
+    "elite_spec": "Untamed",
+    "build_type": "Quickness",
+    "game_mode": "GroupPvE",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/ranger/power-quickness-untamed/",
+    "chat_code": "[&DQQZGR45SB8UGwAApQEAALYAAACsAQAAlwEAACw/AAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 25,
+        "traits": [
+          1062,
+          965,
+          1038
+        ]
+      },
+      "line2": {
+        "spec_id": 30,
+        "traits": [
+          1069,
+          1700,
+          1888
+        ]
+      },
+      "line3": {
+        "spec_id": 72,
+        "traits": [
+          2301,
+          2278,
+          2271
+        ]
+      }
+    },
+    "skills": {
+      "heal": 63319,
+      "utilities": [
+        12633,
+        12493,
+        12491
+      ],
+      "elite": 12569
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      44,
+      63
+    ],
+    "gear": {
+      "relic_id": 103574,
+      "food_id": 91805,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 84862,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 89999,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 85182,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 89999,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Chest",
+          "item_id": 84977,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 89999,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85169,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 89999,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 85264,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 89999,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Boots",
+          "item_id": 80836,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 89999,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 91652,
+          "stat_id": 161,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 43254
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 91649,
+          "stat_id": 161,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 43254
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 91671,
+          "stat_id": 161,
+          "upgrade_id": 24868,
+          "infusions": [],
+          "upgrade2_id": 43254
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 49365,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 43254,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 79745,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 43254,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 92706,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 43254,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 92215,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79710,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 43254,
+          "infusions": [
+            43254,
+            43254
+          ]
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 90238,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 43254,
+          "infusions": [
+            43254,
+            43254
+          ]
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-ranger-heal-alacrity-druid",
+    "name": "Heal Alacrity Druid",
+    "profession": "Ranger",
+    "elite_spec": "Druid",
+    "build_type": "Alacrity",
+    "game_mode": "GroupPvE",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/ranger/heal-alacrity-druid/",
+    "chat_code": "[&DQQIHxk6BRoJEwAAvQAAALkAAADmEgAAtBIAADs/AAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 8,
+        "traits": [
+          986,
+          1070,
+          996
+        ]
+      },
+      "line2": {
+        "spec_id": 25,
+        "traits": [
+          978,
+          965,
+          1697
+        ]
+      },
+      "line3": {
+        "spec_id": 5,
+        "traits": [
+          2016,
+          2001,
+          2057
+        ]
+      }
+    },
+    "skills": {
+      "heal": 31407,
+      "utilities": [
+        12498,
+        12495,
+        31746
+      ],
+      "elite": 31677
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      59,
+      63
+    ],
+    "gear": {
+      "relic_id": 101268,
+      "food_id": 91690,
+      "utility_id": 67528,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 84862,
+          "stat_id": 1345,
+          "stat_name": "",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 85182,
+          "stat_id": 1345,
+          "stat_name": "",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 84977,
+          "stat_id": 1345,
+          "stat_name": "",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85169,
+          "stat_id": 1345,
+          "stat_name": "",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 85264,
+          "stat_id": 1345,
+          "stat_name": "",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 80836,
+          "stat_id": 1345,
+          "stat_name": "",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 91674,
+          "stat_id": 1345,
+          "upgrade_id": 74326,
+          "infusions": [],
+          "upgrade2_id": 24639
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 91671,
+          "stat_id": 1345,
+          "upgrade_id": 74326,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 91676,
+          "stat_id": 1345,
+          "upgrade_id": 24639,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 49365,
+          "stat_id": 1345,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 79745,
+          "stat_id": 1345,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 92706,
+          "stat_id": 1345,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 92215,
+          "stat_id": 1345,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79710,
+          "stat_id": 1345,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 90238,
+          "stat_id": 1345,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-ranger-power-soulbeast",
+    "name": "Power Soulbeast",
+    "profession": "Ranger",
+    "elite_spec": "Soulbeast",
+    "build_type": "Power",
+    "game_mode": "GroupPvE",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/ranger/power-soulbeast/",
+    "chat_code": "[&DQQgPx45Nzp5AAAArAEAAKUBAAC1AAAALhYAACcAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 32,
+        "traits": [
+          1606,
+          970,
+          1066
+        ]
+      },
+      "line2": {
+        "spec_id": 30,
+        "traits": [
+          1069,
+          1700,
+          1888
+        ]
+      },
+      "line3": {
+        "spec_id": 55,
+        "traits": [
+          2071,
+          2085,
+          2143
+        ]
+      }
+    },
+    "skills": {
+      "heal": 31914,
+      "utilities": [
+        12491,
+        12633,
+        12492
+      ],
+      "elite": 45717
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      39,
+      39
+    ],
+    "gear": {
+      "relic_id": 100947,
+      "food_id": 91805,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 84862,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 85182,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Chest",
+          "item_id": 84977,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85169,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 85264,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Boots",
+          "item_id": 80836,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 91652,
+          "stat_id": 161,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 43254
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 91622,
+          "stat_id": 161,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 43254
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 91622,
+          "stat_id": 161,
+          "upgrade_id": 24868,
+          "infusions": [],
+          "upgrade2_id": 43254
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 49365,
+          "stat_id": 584,
+          "stat_name": "",
+          "upgrade_id": 43254,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 79745,
+          "stat_id": 584,
+          "stat_name": "",
+          "upgrade_id": 43254,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 92706,
+          "stat_id": 584,
+          "stat_name": "",
+          "upgrade_id": 43254,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 92215,
+          "stat_id": 584,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79710,
+          "stat_id": 584,
+          "stat_name": "",
+          "upgrade_id": 43254,
+          "infusions": [
+            43254,
+            43254
+          ]
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 90238,
+          "stat_id": 584,
+          "stat_name": "",
+          "upgrade_id": 43254,
+          "infusions": [
+            43254,
+            43254
+          ]
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-ranger-condition-soulbeast",
+    "name": "Condition Soulbeast",
+    "profession": "Ranger",
+    "elite_spec": "Soulbeast",
+    "build_type": "Condi",
+    "game_mode": "GroupPvE",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/ranger/condition-soulbeast/",
+    "chat_code": "[&DQQeLSE3Ny55AAAAvwAAABsAAADpFgAALhYAAAMAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 30,
+        "traits": [
+          1069,
+          1846,
+          1912
+        ]
+      },
+      "line2": {
+        "spec_id": 33,
+        "traits": [
+          1099,
+          1101,
+          1701
+        ]
+      },
+      "line3": {
+        "spec_id": 55,
+        "traits": [
+          2071,
+          2161,
+          2128
+        ]
+      }
+    },
+    "skills": {
+      "heal": 31914,
+      "utilities": [
+        12537,
+        12476,
+        40498
+      ],
+      "elite": 45717
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      3,
+      3
+    ],
+    "gear": {
+      "relic_id": 100153,
+      "food_id": 91876,
+      "utility_id": 48917,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 84862,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 24687,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 85182,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 24687,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 84977,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 24687,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85169,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 24687,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 85264,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 24687,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 80836,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 24687,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 91628,
+          "stat_id": 1153,
+          "upgrade_id": 24560,
+          "infusions": [],
+          "upgrade2_id": 44950
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 91636,
+          "stat_id": 1130,
+          "upgrade_id": 44944,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 91636,
+          "stat_id": 1130,
+          "upgrade_id": 44950,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 49365,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 79745,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 92706,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 92215,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79710,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 90238,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-ranger-handkite-soulbeast",
+    "name": "Handkite Soulbeast",
+    "profession": "Ranger",
+    "elite_spec": "Soulbeast",
+    "build_type": "Power",
+    "game_mode": "GroupPvE",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/ranger/handkite-soulbeast/",
+    "chat_code": "[&DQQhGhk+Nxp5AAAANBYAAMIAAAD6FgAAwAAAABcFAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 33,
+        "traits": [
+          1086,
+          2032,
+          1094
+        ]
+      },
+      "line2": {
+        "spec_id": 25,
+        "traits": [
+          978,
+          964,
+          1697
+        ]
+      },
+      "line3": {
+        "spec_id": 55,
+        "traits": [
+          2071,
+          2085,
+          2155
+        ]
+      }
+    },
+    "skills": {
+      "heal": 31914,
+      "utilities": [
+        45970,
+        12502,
+        45789
+      ],
+      "elite": 12580
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      23,
+      5
+    ],
+    "gear": {
+      "relic_id": 100455,
+      "food_id": 91690,
+      "utility_id": 67528,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 84862,
+          "stat_id": 1363,
+          "stat_name": "",
+          "upgrade_id": 24842,
+          "infusions": [
+            37125
+          ]
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 85182,
+          "stat_id": 1363,
+          "stat_name": "",
+          "upgrade_id": 24842,
+          "infusions": [
+            37125
+          ]
+        },
+        {
+          "slot": "Chest",
+          "item_id": 84977,
+          "stat_id": 1363,
+          "stat_name": "",
+          "upgrade_id": 24842,
+          "infusions": [
+            37125
+          ]
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85169,
+          "stat_id": 1363,
+          "stat_name": "",
+          "upgrade_id": 24842,
+          "infusions": [
+            37125
+          ]
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 85264,
+          "stat_id": 1363,
+          "stat_name": "",
+          "upgrade_id": 24842,
+          "infusions": [
+            37125
+          ]
+        },
+        {
+          "slot": "Boots",
+          "item_id": 80836,
+          "stat_id": 1363,
+          "stat_name": "",
+          "upgrade_id": 24842,
+          "infusions": [
+            37125
+          ]
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 91646,
+          "stat_id": 1363,
+          "upgrade_id": 72339,
+          "infusions": [],
+          "upgrade2_id": 37125
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 91674,
+          "stat_id": 1363,
+          "upgrade_id": 72339,
+          "infusions": [],
+          "upgrade2_id": 37125
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 49365,
+          "stat_id": 1037,
+          "stat_name": "",
+          "upgrade_id": 37125,
+          "infusions": [
+            37125
+          ]
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 79745,
+          "stat_id": 1345,
+          "stat_name": "",
+          "upgrade_id": 37125,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 92706,
+          "stat_id": 1345,
+          "stat_name": "",
+          "upgrade_id": 37125,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 92215,
+          "stat_id": 1345,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79710,
+          "stat_id": 1037,
+          "stat_name": "",
+          "upgrade_id": 37125,
+          "infusions": [
+            37125,
+            37125
+          ]
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 90238,
+          "stat_id": 1345,
+          "stat_name": "",
+          "upgrade_id": 37125,
+          "infusions": [
+            37125,
+            37125
+          ]
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-ranger-support-druid",
+    "name": "Support Druid",
+    "profession": "Ranger",
+    "elite_spec": "Druid",
+    "build_type": "Support",
+    "game_mode": "WvWZerg",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/ranger/support-druid/",
+    "chat_code": "[&DQQeFxkeBSWhAAAAvAAAANUSAAC7AAAAtBIAAAVCAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 30,
+        "traits": [
+          1075,
+          1016,
+          1064
+        ]
+      },
+      "line2": {
+        "spec_id": 25,
+        "traits": [
+          978,
+          964,
+          1038
+        ]
+      },
+      "line3": {
+        "spec_id": 5,
+        "traits": [
+          1868,
+          2053,
+          2058
+        ]
+      }
+    },
+    "skills": {
+      "heal": 12489,
+      "utilities": [
+        12497,
+        31322,
+        12631
+      ],
+      "elite": 31677
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      5,
+      66
+    ],
+    "gear": {
+      "relic_id": 101268,
+      "food_id": 91690,
+      "utility_id": 67528,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 84862,
+          "stat_id": 1123,
+          "stat_name": "",
+          "upgrade_id": 24842,
+          "infusions": [
+            43250
+          ]
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 85182,
+          "stat_id": 1123,
+          "stat_name": "",
+          "upgrade_id": 24842,
+          "infusions": [
+            43250
+          ]
+        },
+        {
+          "slot": "Chest",
+          "item_id": 84977,
+          "stat_id": 1123,
+          "stat_name": "",
+          "upgrade_id": 24842,
+          "infusions": [
+            43250
+          ]
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85169,
+          "stat_id": 1123,
+          "stat_name": "",
+          "upgrade_id": 24842,
+          "infusions": [
+            43250
+          ]
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 85264,
+          "stat_id": 1123,
+          "stat_name": "",
+          "upgrade_id": 24842,
+          "infusions": [
+            43250
+          ]
+        },
+        {
+          "slot": "Boots",
+          "item_id": 80836,
+          "stat_id": 1123,
+          "stat_name": "",
+          "upgrade_id": 24842,
+          "infusions": [
+            43250
+          ]
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 91674,
+          "stat_id": 1123,
+          "upgrade_id": 24584,
+          "infusions": [],
+          "upgrade2_id": 43250
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 91671,
+          "stat_id": 1123,
+          "upgrade_id": 24607,
+          "infusions": [],
+          "upgrade2_id": 43250
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 91676,
+          "stat_id": 1123,
+          "upgrade_id": 74326,
+          "infusions": [],
+          "upgrade2_id": 43250
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 49365,
+          "stat_id": 1123,
+          "stat_name": "",
+          "upgrade_id": 43250,
+          "infusions": [
+            43250
+          ]
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 79745,
+          "stat_id": 1123,
+          "stat_name": "",
+          "upgrade_id": 43250,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 92706,
+          "stat_id": 1123,
+          "stat_name": "",
+          "upgrade_id": 43250,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 92215,
+          "stat_id": 1123,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79710,
+          "stat_id": 1123,
+          "stat_name": "",
+          "upgrade_id": 43250,
+          "infusions": [
+            43250,
+            43250
+          ]
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 90238,
+          "stat_id": 1123,
+          "stat_name": "",
+          "upgrade_id": 43250,
+          "infusions": [
+            43250,
+            43250
+          ]
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-ranger-booster-soulbeast",
+    "name": "Booster Soulbeast",
+    "profession": "Ranger",
+    "elite_spec": "Soulbeast",
+    "build_type": "Power",
+    "game_mode": "OpenWorld",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/ranger/booster-soulbeast/",
+    "chat_code": "[&DQQeLSE3Ny55AAAAGwAAAL8AAADpFgAALhYAAAMAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 30,
+        "traits": [
+          1069,
+          1846,
+          1912
+        ]
+      },
+      "line2": {
+        "spec_id": 33,
+        "traits": [
+          1099,
+          1101,
+          1701
+        ]
+      },
+      "line3": {
+        "spec_id": 55,
+        "traits": [
+          2071,
+          2161,
+          2128
+        ]
+      }
+    },
+    "skills": {
+      "heal": 31914,
+      "utilities": [
+        12476,
+        12537,
+        40498
+      ],
+      "elite": 45717
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      3,
+      0
+    ],
+    "gear": {
+      "relic_id": 100153,
+      "food_id": 91848,
+      "utility_id": 77567,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 84862,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 24687,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 85182,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 24687,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 84977,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 24687,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85169,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 24687,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 85264,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 24687,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 80836,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 24687,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 91628,
+          "stat_id": 1052,
+          "upgrade_id": 24560,
+          "infusions": [],
+          "upgrade2_id": 44950
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 91636,
+          "stat_id": 1052,
+          "upgrade_id": 44944,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 91636,
+          "stat_id": 1052,
+          "upgrade_id": 44950,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 49365,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 79745,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 92706,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 92215,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79710,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 90238,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-ranger-booster-damage-druid",
+    "name": "Booster Damage Druid",
+    "profession": "Ranger",
+    "elite_spec": "Druid",
+    "build_type": "Power",
+    "game_mode": "OpenWorld",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/ranger/booster-damage-druid/",
+    "chat_code": "[&DQQePSE3BR95AAAAGwAAAL8AAACWAQAAwAAAADkAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 30,
+        "traits": [
+          1069,
+          1846,
+          1888
+        ]
+      },
+      "line2": {
+        "spec_id": 33,
+        "traits": [
+          1099,
+          1101,
+          1701
+        ]
+      },
+      "line3": {
+        "spec_id": 5,
+        "traits": [
+          1935,
+          2056,
+          2057
+        ]
+      }
+    },
+    "skills": {
+      "heal": 31914,
+      "utilities": [
+        12476,
+        12537,
+        12550
+      ],
+      "elite": 12580
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      57,
+      57
+    ],
+    "gear": {
+      "relic_id": 101489,
+      "food_id": 91848,
+      "utility_id": 77567,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 84862,
+          "stat_id": 559,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 85182,
+          "stat_id": 559,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 84977,
+          "stat_id": 559,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85169,
+          "stat_id": 559,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 85264,
+          "stat_id": 559,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 80836,
+          "stat_id": 559,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 91622,
+          "stat_id": 559,
+          "upgrade_id": 24612,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 91636,
+          "stat_id": 559,
+          "upgrade_id": 24605,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 91653,
+          "stat_id": 559,
+          "upgrade_id": 24560,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 49365,
+          "stat_id": 588,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 79745,
+          "stat_id": 588,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 92706,
+          "stat_id": 588,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 92215,
+          "stat_id": 588,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79710,
+          "stat_id": 588,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 90238,
+          "stat_id": 588,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-ranger-booster-untamed",
+    "name": "Booster Untamed",
+    "profession": "Ranger",
+    "elite_spec": "Untamed",
+    "build_type": "Power",
+    "game_mode": "OpenWorld",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/ranger/booster-untamed/",
+    "chat_code": "[&DQQeHRkZSBsUGwAAARsAAL0AAAATGwAADxsAAD0DAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 30,
+        "traits": [
+          1069,
+          1846,
+          1064
+        ]
+      },
+      "line2": {
+        "spec_id": 25,
+        "traits": [
+          1062,
+          965,
+          1038
+        ]
+      },
+      "line3": {
+        "spec_id": 72,
+        "traits": [
+          2301,
+          2287,
+          2271
+        ]
+      }
+    },
+    "skills": {
+      "heal": 63319,
+      "utilities": [
+        63157,
+        12498,
+        63195
+      ],
+      "elite": 63163
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      61,
+      3
+    ],
+    "gear": {
+      "relic_id": 100849,
+      "food_id": 91848,
+      "utility_id": 48917,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 84862,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 24687,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 85182,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 24687,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 84977,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 24687,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85169,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 24687,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 85264,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 24687,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 80836,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 24687,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 91622,
+          "stat_id": 1052,
+          "upgrade_id": 24560,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 91676,
+          "stat_id": 1052,
+          "upgrade_id": 24612,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 91622,
+          "stat_id": 1052,
+          "upgrade_id": 24560,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 91653,
+          "stat_id": 1052,
+          "upgrade_id": 24612,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 49365,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 79745,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 92706,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 92215,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79710,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 90238,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-ranger-booster-heal-druid",
+    "name": "Booster Heal Druid",
+    "profession": "Ranger",
+    "elite_spec": "Druid",
+    "build_type": "Heal",
+    "game_mode": "OpenWorld",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/ranger/booster-heal-druid/",
+    "chat_code": "[&DQQePRk6BRqhAAAAuQAAAL0AAAC4EgAAwAAAADk9AAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 30,
+        "traits": [
+          1069,
+          1846,
+          1888
+        ]
+      },
+      "line2": {
+        "spec_id": 25,
+        "traits": [
+          978,
+          965,
+          1697
+        ]
+      },
+      "line3": {
+        "spec_id": 5,
+        "traits": [
+          2016,
+          2001,
+          2057
+        ]
+      }
+    },
+    "skills": {
+      "heal": 12489,
+      "utilities": [
+        12495,
+        12498,
+        31582
+      ],
+      "elite": 12580
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      57,
+      61
+    ],
+    "gear": {
+      "relic_id": 101630,
+      "food_id": 91690,
+      "utility_id": 67528,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 84862,
+          "stat_id": 559,
+          "stat_name": "",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 85182,
+          "stat_id": 559,
+          "stat_name": "",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 84977,
+          "stat_id": 559,
+          "stat_name": "",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85169,
+          "stat_id": 559,
+          "stat_name": "",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 85264,
+          "stat_id": 559,
+          "stat_name": "",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 80836,
+          "stat_id": 559,
+          "stat_name": "",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 91674,
+          "stat_id": 559,
+          "upgrade_id": 74326,
+          "infusions": [],
+          "upgrade2_id": 72339
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 91622,
+          "stat_id": 559,
+          "upgrade_id": 24612,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 91676,
+          "stat_id": 559,
+          "upgrade_id": 72339,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 49365,
+          "stat_id": 588,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 79745,
+          "stat_id": 588,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 92706,
+          "stat_id": 588,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 92215,
+          "stat_id": 588,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79710,
+          "stat_id": 588,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 90238,
+          "stat_id": 588,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-ranger-core-ranger",
+    "name": "Core Ranger",
+    "profession": "Ranger",
+    "elite_spec": "",
+    "build_type": "Power",
+    "game_mode": "Unknown",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/ranger/core-ranger-pvp/",
+    "chat_code": "[&DQQhKSArCC94AAAAuwAAAJYBAAC4AAAAwAAAAC4TAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 33,
+        "traits": [
+          1098,
+          2032,
+          1699
+        ]
+      },
+      "line2": {
+        "spec_id": 32,
+        "traits": [
+          1606,
+          1047,
+          968
+        ]
+      },
+      "line3": {
+        "spec_id": 8,
+        "traits": [
+          986,
+          1070,
+          1015
+        ]
+      }
+    },
+    "skills": {
+      "heal": 12483,
+      "utilities": [
+        12631,
+        12550,
+        12494
+      ],
+      "elite": 12580
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      46,
+      19
+    ],
+    "gear": {
+      "relic_id": 0,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": []
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-ranger-longbow-untamed",
+    "name": "Longbow Untamed",
+    "profession": "Ranger",
+    "elite_spec": "Untamed",
+    "build_type": "Power",
+    "game_mode": "Unknown",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/ranger/longbow-untamed/",
+    "chat_code": "[&DQQILyArSBt5AAAAuwAAALYAAAAZGwAADxsAAC4LAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 8,
+        "traits": [
+          986,
+          1070,
+          1015
+        ]
+      },
+      "line2": {
+        "spec_id": 32,
+        "traits": [
+          1606,
+          1047,
+          968
+        ]
+      },
+      "line3": {
+        "spec_id": 72,
+        "traits": [
+          2301,
+          2287,
+          2271
+        ]
+      }
+    },
+    "skills": {
+      "heal": 31914,
+      "utilities": [
+        12631,
+        12493,
+        63256
+      ],
+      "elite": 63163
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      46,
+      11
+    ],
+    "gear": {
+      "relic_id": 0,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": []
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-ranger-hammer-untamed",
+    "name": "Hammer Untamed",
+    "profession": "Ranger",
+    "elite_spec": "Untamed",
+    "build_type": "Power",
+    "game_mode": "Unknown",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/ranger/hammer-untamed/",
+    "chat_code": "[&DQQhKR46SBsUGwAAExsAABkbAAC7AAAADxsAAC4dAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 33,
+        "traits": [
+          1098,
+          2032,
+          1699
+        ]
+      },
+      "line2": {
+        "spec_id": 30,
+        "traits": [
+          1067,
+          1700,
+          1888
+        ]
+      },
+      "line3": {
+        "spec_id": 72,
+        "traits": [
+          2301,
+          2287,
+          2271
+        ]
+      }
+    },
+    "skills": {
+      "heal": 63319,
+      "utilities": [
+        63195,
+        63256,
+        12631
+      ],
+      "elite": 63163
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      46,
+      29
+    ],
+    "gear": {
+      "relic_id": 0,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": []
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-ranger-condition-druid",
+    "name": "Condition Druid",
+    "profession": "Ranger",
+    "elite_spec": "Druid",
+    "build_type": "Condi",
+    "game_mode": "Unknown",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/ranger/condition-druid/",
+    "chat_code": "[&DQQhNxk2BT+hAAAAuwAAAKsBAADmEgAAtBIAAEJFAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 33,
+        "traits": [
+          1099,
+          1101,
+          1701
+        ]
+      },
+      "line2": {
+        "spec_id": 25,
+        "traits": [
+          978,
+          1054,
+          1697
+        ]
+      },
+      "line3": {
+        "spec_id": 5,
+        "traits": [
+          1935,
+          2056,
+          2055
+        ]
+      }
+    },
+    "skills": {
+      "heal": 12489,
+      "utilities": [
+        12631,
+        12500,
+        31746
+      ],
+      "elite": 31677
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      66,
+      69
+    ],
+    "gear": {
+      "relic_id": 0,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": []
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  }
+]

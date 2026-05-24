@@ -1,12 +1,14 @@
 #!/usr/bin/env bash
-# update_builds.sh — Re-scrape Snow Crows and rebuild the DLL after a patch.
+# update_builds.sh — Re-scrape Snow Crows + Hardstuck and rebuild the DLL.
 #
 # Usage:
-#   ./update_builds.sh                      # scrape + regen + build
-#   ./update_builds.sh --install=<path>     # also copy DLL + JSON to GW2 addons dir
-#   ./update_builds.sh --prof guardian      # one profession only (quick test)
+#   ./update_builds.sh                      # scrape all + regen + build
+#   ./update_builds.sh --install=<path>     # also copy DLL to GW2 addons dir
+#   ./update_builds.sh --sc-only            # Snow Crows only
+#   ./update_builds.sh --hs-only            # Hardstuck only
+#   ./update_builds.sh --prof guardian      # one profession only (both scrapers)
 #   ./update_builds.sh --force              # clear scraper cache (full re-fetch)
-#   ./update_builds.sh --delay 2.0          # slower scraping (be kind to SC servers)
+#   ./update_builds.sh --delay 2.0          # slower scraping (be kind to servers)
 #
 # Requirements (first time only):
 #   pip install requests beautifulsoup4 lxml playwright
@@ -19,6 +21,8 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 SCRAPER_ARGS=()
 BUILD_ARGS=("--regen")
 INSTALL_PATH=""
+RUN_SC=1
+RUN_HS=1
 
 for arg in "$@"; do
     case "$arg" in
@@ -30,32 +34,49 @@ for arg in "$@"; do
         --prof=*)    SCRAPER_ARGS+=("--prof" "${arg#--prof=}") ;;
         --prof)      shift; SCRAPER_ARGS+=("--prof" "$1") ;;
         --limit=*)   SCRAPER_ARGS+=("--limit" "${arg#--limit=}") ;;
+        --sc-only)   RUN_HS=0 ;;
+        --hs-only)   RUN_SC=0 ;;
         -h|--help)
-            sed -n '2,14p' "$0" | sed 's/^# //'
+            sed -n '2,17p' "$0" | sed 's/^# //'
             exit 0 ;;
         *) echo "Unknown argument: $arg" >&2; exit 1 ;;
     esac
 done
 
-echo "=============================="
-echo " BuildCoach — Update SC Builds"
-echo "=============================="
+TOTAL_STEPS=$(( 2 + RUN_SC + RUN_HS ))
+STEP=0
+
+echo "================================="
+echo " BuildCoach — Update All Builds"
+echo "================================="
 echo
 
-# --- Step 1: Scrape Snow Crows ----------------------------------------------
-echo "Step 1/3  Scraping Snow Crows..."
-python3 "$SCRIPT_DIR/scraper/scrape_snowcrows.py" "${SCRAPER_ARGS[@]+"${SCRAPER_ARGS[@]}"}"
+# --- Scrape Snow Crows -------------------------------------------------------
+if [[ $RUN_SC -eq 1 ]]; then
+    STEP=$(( STEP + 1 ))
+    echo "Step $STEP/$TOTAL_STEPS  Scraping Snow Crows..."
+    python3 "$SCRIPT_DIR/scraper/scrape_snowcrows.py" "${SCRAPER_ARGS[@]+"${SCRAPER_ARGS[@]}"}"
+    echo
+fi
 
-echo
+# --- Scrape Hardstuck --------------------------------------------------------
+if [[ $RUN_HS -eq 1 ]]; then
+    STEP=$(( STEP + 1 ))
+    echo "Step $STEP/$TOTAL_STEPS  Scraping Hardstuck..."
+    python3 "$SCRIPT_DIR/scraper/scrape_hardstuck.py" "${SCRAPER_ARGS[@]+"${SCRAPER_ARGS[@]}"}"
+    echo
+fi
 
-# --- Step 2: Regenerate embedded header + rebuild DLL -----------------------
-echo "Step 2/3  Regenerating embedded header..."
-echo "Step 3/3  Building DLL..."
+# --- Regenerate embedded headers + rebuild DLL -------------------------------
+STEP=$(( STEP + 1 ))
+echo "Step $STEP/$TOTAL_STEPS  Regenerating embedded headers..."
+STEP=$(( STEP + 1 ))
+echo "Step $STEP/$TOTAL_STEPS  Building DLL..."
 bash "$SCRIPT_DIR/build.sh" "${BUILD_ARGS[@]}"
 
 echo
-echo "Done!  Builds in: $SCRIPT_DIR/sc_builds_full.json"
-echo "       DLL at:    $SCRIPT_DIR/build/BuildCoach.dll"
+echo "Done!  Build data in: $SCRIPT_DIR/full-builds/"
+echo "       DLL at:        $SCRIPT_DIR/build/BuildCoach.dll"
 
 if [[ -n "$INSTALL_PATH" ]]; then
     echo "       Installed to: $INSTALL_PATH"

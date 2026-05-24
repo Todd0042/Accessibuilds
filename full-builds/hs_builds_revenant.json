@@ -1,0 +1,2218 @@
+[
+  {
+    "id": "hs-revenant-heal-quickness-herald",
+    "name": "Heal Quickness Herald",
+    "profession": "Revenant",
+    "elite_spec": "Herald",
+    "build_type": "Quickness",
+    "game_mode": "GroupPvE",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/revenant/heal-quickness-herald/",
+    "chat_code": "[&DQkDJwwZNBXcEQAABhIAANQRAAArEgAAyhEAAAIFAADUEQYSKxIAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 3,
+        "traits": [
+          1784,
+          1774,
+          1791
+        ]
+      },
+      "line2": {
+        "spec_id": 12,
+        "traits": [
+          1823,
+          1817,
+          1815
+        ]
+      },
+      "line3": {
+        "spec_id": 52,
+        "traits": [
+          1813,
+          1738,
+          1746
+        ]
+      }
+    },
+    "skills": {
+      "heal": 27220,
+      "utilities": [
+        28379,
+        26644,
+        27014
+      ],
+      "elite": 27760
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 99965,
+      "food_id": 91690,
+      "utility_id": 67528,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 85193,
+          "stat_id": 1345,
+          "stat_name": "",
+          "upgrade_id": 24842,
+          "infusions": [
+            37125
+          ]
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 84875,
+          "stat_id": 1345,
+          "stat_name": "",
+          "upgrade_id": 24842,
+          "infusions": [
+            37125
+          ]
+        },
+        {
+          "slot": "Chest",
+          "item_id": 85084,
+          "stat_id": 1345,
+          "stat_name": "",
+          "upgrade_id": 24842,
+          "infusions": [
+            37125
+          ]
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85140,
+          "stat_id": 1345,
+          "stat_name": "",
+          "upgrade_id": 24842,
+          "infusions": [
+            37125
+          ]
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 84887,
+          "stat_id": 1345,
+          "stat_name": "",
+          "upgrade_id": 24842,
+          "infusions": [
+            37125
+          ]
+        },
+        {
+          "slot": "Boots",
+          "item_id": 85055,
+          "stat_id": 1345,
+          "stat_name": "",
+          "upgrade_id": 24842,
+          "infusions": [
+            37125
+          ]
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 91619,
+          "stat_id": 1345,
+          "upgrade_id": 74326,
+          "infusions": [],
+          "upgrade2_id": 37125
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 91633,
+          "stat_id": 1345,
+          "upgrade_id": 24551,
+          "infusions": [],
+          "upgrade2_id": 37125
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 91674,
+          "stat_id": 1345,
+          "upgrade_id": 74326,
+          "infusions": [],
+          "upgrade2_id": 37125
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 49365,
+          "stat_id": 1345,
+          "stat_name": "",
+          "upgrade_id": 37125,
+          "infusions": [
+            37125
+          ]
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 79745,
+          "stat_id": 1345,
+          "stat_name": "",
+          "upgrade_id": 37125,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 92706,
+          "stat_id": 1345,
+          "stat_name": "",
+          "upgrade_id": 37125,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 92215,
+          "stat_id": 1345,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79710,
+          "stat_id": 1345,
+          "stat_name": "",
+          "upgrade_id": 37125,
+          "infusions": [
+            37125,
+            37125
+          ]
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 90238,
+          "stat_id": 1345,
+          "stat_name": "",
+          "upgrade_id": 37125,
+          "infusions": [
+            37125,
+            37125
+          ]
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-revenant-condition-quickness-herald",
+    "name": "Condition Quickness Herald",
+    "profession": "Revenant",
+    "elite_spec": "Herald",
+    "build_type": "Quickness",
+    "game_mode": "GroupPvE",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/revenant/condition-quickness-herald/",
+    "chat_code": "[&DQkOHQMWNBbcEQAABhIAANQRAAArEgAAyhEAAAIDAAArEtQRBhIAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 14,
+        "traits": [
+          1793,
+          1714,
+          1795
+        ]
+      },
+      "line2": {
+        "spec_id": 3,
+        "traits": [
+          1761,
+          1774,
+          1749
+        ]
+      },
+      "line3": {
+        "spec_id": 52,
+        "traits": [
+          1806,
+          1738,
+          1746
+        ]
+      }
+    },
+    "skills": {
+      "heal": 27220,
+      "utilities": [
+        28379,
+        26644,
+        27014
+      ],
+      "elite": 27760
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100153,
+      "food_id": 91876,
+      "utility_id": 77567,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 85193,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 84875,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 85084,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85140,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 84887,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 85055,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 91628,
+          "stat_id": 1130,
+          "upgrade_id": 24605,
+          "infusions": [],
+          "upgrade2_id": 24609
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 91671,
+          "stat_id": 1130,
+          "upgrade_id": 24560,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 91622,
+          "stat_id": 1130,
+          "upgrade_id": 48911,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 49365,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 79745,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 92706,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 92215,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79710,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 90238,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-revenant-power-quickness-herald",
+    "name": "Power Quickness Herald",
+    "profession": "Revenant",
+    "elite_spec": "Herald",
+    "build_type": "Quickness",
+    "game_mode": "GroupPvE",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/revenant/power-quickness-herald/",
+    "chat_code": "[&DQkPKgM2NBbcEQAABhIAANQRAAArEgAAyhEAAAIBAAArEtQRBhIAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 15,
+        "traits": [
+          1767,
+          1765,
+          1800
+        ]
+      },
+      "line2": {
+        "spec_id": 3,
+        "traits": [
+          1761,
+          1774,
+          1719
+        ]
+      },
+      "line3": {
+        "spec_id": 52,
+        "traits": [
+          1806,
+          1738,
+          1746
+        ]
+      }
+    },
+    "skills": {
+      "heal": 27220,
+      "utilities": [
+        28379,
+        26644,
+        27014
+      ],
+      "elite": 27760
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100916,
+      "food_id": 91805,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 85193,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 84875,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 85084,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85140,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 84887,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 85055,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 74978,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 91649,
+          "stat_id": 161,
+          "upgrade_id": 24615,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 91649,
+          "stat_id": 161,
+          "upgrade_id": 24868,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 91674,
+          "stat_id": 161,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 24868
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 49365,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 79745,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 92706,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 92215,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79710,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 90238,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-revenant-handkite-herald",
+    "name": "Handkite Herald",
+    "profession": "Revenant",
+    "elite_spec": "Herald",
+    "build_type": "Power",
+    "game_mode": "GroupPvE",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/revenant/handkite-herald/",
+    "chat_code": "[&DQkMKQ4qNBncEQAABhIAANQRAAArEgAAyhEAAAIFAAArEtQRBhIAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 12,
+        "traits": [
+          1823,
+          1817,
+          1825
+        ]
+      },
+      "line2": {
+        "spec_id": 14,
+        "traits": [
+          1789,
+          1726,
+          1720
+        ]
+      },
+      "line3": {
+        "spec_id": 52,
+        "traits": [
+          1813,
+          1743,
+          1746
+        ]
+      }
+    },
+    "skills": {
+      "heal": 27220,
+      "utilities": [
+        28379,
+        26644,
+        27014
+      ],
+      "elite": 27760
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100934,
+      "food_id": 91737,
+      "utility_id": 77632,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 85193,
+          "stat_id": 156,
+          "stat_name": "",
+          "upgrade_id": 24857,
+          "infusions": [
+            37125
+          ]
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 84875,
+          "stat_id": 156,
+          "stat_name": "",
+          "upgrade_id": 24857,
+          "infusions": [
+            37125
+          ]
+        },
+        {
+          "slot": "Chest",
+          "item_id": 85084,
+          "stat_id": 156,
+          "stat_name": "",
+          "upgrade_id": 24857,
+          "infusions": [
+            37125
+          ]
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85140,
+          "stat_id": 156,
+          "stat_name": "",
+          "upgrade_id": 24857,
+          "infusions": [
+            37125
+          ]
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 84887,
+          "stat_id": 156,
+          "stat_name": "",
+          "upgrade_id": 24857,
+          "infusions": [
+            37125
+          ]
+        },
+        {
+          "slot": "Boots",
+          "item_id": 85055,
+          "stat_id": 156,
+          "stat_name": "",
+          "upgrade_id": 24857,
+          "infusions": [
+            37125
+          ]
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 91649,
+          "stat_id": 1345,
+          "upgrade_id": 74326,
+          "infusions": [],
+          "upgrade2_id": 37125
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 91633,
+          "stat_id": 1345,
+          "upgrade_id": 44947,
+          "infusions": [],
+          "upgrade2_id": 37125
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 91674,
+          "stat_id": 1345,
+          "upgrade_id": 74326,
+          "infusions": [],
+          "upgrade2_id": 37125
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 49365,
+          "stat_id": 1345,
+          "stat_name": "",
+          "upgrade_id": 37125,
+          "infusions": [
+            37125
+          ]
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 79745,
+          "stat_id": 1345,
+          "stat_name": "",
+          "upgrade_id": 37125,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 92706,
+          "stat_id": 1345,
+          "stat_name": "",
+          "upgrade_id": 37125,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 92215,
+          "stat_id": 1345,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79710,
+          "stat_id": 1345,
+          "stat_name": "",
+          "upgrade_id": 37125,
+          "infusions": [
+            37125,
+            37125
+          ]
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 90238,
+          "stat_id": 1345,
+          "stat_name": "",
+          "upgrade_id": 37125,
+          "infusions": [
+            37125,
+            37125
+          ]
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-revenant-condition-renegade",
+    "name": "Condition Renegade",
+    "profession": "Revenant",
+    "elite_spec": "Renegade",
+    "build_type": "Condi",
+    "game_mode": "GroupPvE",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/revenant/condition-renegade/",
+    "chat_code": "[&DQkOHQMmPyrcEQAABhIAACsSAADUEQAAyhEAAAYDAAArEtQRBhIAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 14,
+        "traits": [
+          1793,
+          1714,
+          1795
+        ]
+      },
+      "line2": {
+        "spec_id": 3,
+        "traits": [
+          1761,
+          1774,
+          1791
+        ]
+      },
+      "line3": {
+        "spec_id": 63,
+        "traits": [
+          2079,
+          2092,
+          2100
+        ]
+      }
+    },
+    "skills": {
+      "heal": 45686,
+      "utilities": [
+        42949,
+        40485,
+        41220
+      ],
+      "elite": 45773
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100153,
+      "food_id": 91878,
+      "utility_id": 48917,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 85193,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 84875,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 85084,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85140,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 84887,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 85055,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 91671,
+          "stat_id": 1130,
+          "upgrade_id": 24609,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 91622,
+          "stat_id": 1130,
+          "upgrade_id": 24560,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 91628,
+          "stat_id": 1130,
+          "upgrade_id": 24605,
+          "infusions": [],
+          "upgrade2_id": 48911
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 49365,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 79745,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 92706,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 92215,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79710,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 90238,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-revenant-condition-alacrity-renegade",
+    "name": "Condition Alacrity Renegade",
+    "profession": "Revenant",
+    "elite_spec": "Renegade",
+    "build_type": "Condi",
+    "game_mode": "GroupPvE",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/revenant/condition-alacrity-renegade/",
+    "chat_code": "[&DQkOHQMmPzrcEQAABhIAACsSAADUEQAAyhEAAAYDAAArEtQRBhIAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 14,
+        "traits": [
+          1793,
+          1714,
+          1795
+        ]
+      },
+      "line2": {
+        "spec_id": 3,
+        "traits": [
+          1761,
+          1774,
+          1791
+        ]
+      },
+      "line3": {
+        "spec_id": 63,
+        "traits": [
+          2079,
+          2092,
+          2182
+        ]
+      }
+    },
+    "skills": {
+      "heal": 45686,
+      "utilities": [
+        42949,
+        40485,
+        41220
+      ],
+      "elite": 45773
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100153,
+      "food_id": 91878,
+      "utility_id": 81079,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 96711,
+          "stat_id": 1686,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 96114,
+          "stat_id": 1686,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 96278,
+          "stat_id": 1686,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 96967,
+          "stat_id": 1686,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 97710,
+          "stat_id": 1686,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 96932,
+          "stat_id": 1686,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 96044,
+          "stat_id": 1686,
+          "upgrade_id": 24609,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 95781,
+          "stat_id": 1686,
+          "upgrade_id": 24560,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 96528,
+          "stat_id": 1686,
+          "upgrade_id": 24605,
+          "infusions": [],
+          "upgrade2_id": 48911
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 74155,
+          "stat_id": 1686,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 98322,
+          "stat_id": 1686,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 98322,
+          "stat_id": 1686,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 98299,
+          "stat_id": 1686,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 98303,
+          "stat_id": 1686,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 98303,
+          "stat_id": 1686,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-revenant-power-vindicator",
+    "name": "Power Vindicator",
+    "profession": "Revenant",
+    "elite_spec": "Vindicator",
+    "build_type": "Power",
+    "game_mode": "Unknown",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/revenant/power-vindicator/",
+    "chat_code": "[&DQkPLQMZRRncEQAABhIAACsSAADUEQAAyhEAAAEHAAAGEisS1BEAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 15,
+        "traits": [
+          1776,
+          1802,
+          1800
+        ]
+      },
+      "line2": {
+        "spec_id": 3,
+        "traits": [
+          1732,
+          1760,
+          1749
+        ]
+      },
+      "line3": {
+        "spec_id": 69,
+        "traits": [
+          2258,
+          2243,
+          2257
+        ]
+      }
+    },
+    "skills": {
+      "heal": 26937,
+      "utilities": [
+        29209,
+        28231,
+        27107
+      ],
+      "elite": 28406
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 0,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": []
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-revenant-power-boonstrip-alacrity-renegade",
+    "name": "Power Boonstrip Alacrity Renegade",
+    "profession": "Revenant",
+    "elite_spec": "Renegade",
+    "build_type": "Alacrity",
+    "game_mode": "WvWZerg",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/revenant/powert-boonstrip-alacrity-renegade/",
+    "chat_code": "[&DQkDJg8WPzXcEQAAKxIAANQRAAAGEgAAyhEAAAMEAAArEgYS1BEAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 3,
+        "traits": [
+          1761,
+          1774,
+          1791
+        ]
+      },
+      "line2": {
+        "spec_id": 15,
+        "traits": [
+          1767,
+          1786,
+          1715
+        ]
+      },
+      "line3": {
+        "spec_id": 63,
+        "traits": [
+          2166,
+          2133,
+          2182
+        ]
+      }
+    },
+    "skills": {
+      "heal": 28219,
+      "utilities": [
+        27505,
+        27917,
+        27322
+      ],
+      "elite": 28287
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100219,
+      "food_id": 91734,
+      "utility_id": 89203,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 85193,
+          "stat_id": 1263,
+          "stat_name": "",
+          "upgrade_id": 89999,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 84875,
+          "stat_id": 1263,
+          "stat_name": "",
+          "upgrade_id": 89999,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Chest",
+          "item_id": 85084,
+          "stat_id": 1263,
+          "stat_name": "",
+          "upgrade_id": 89999,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85140,
+          "stat_id": 1263,
+          "stat_name": "",
+          "upgrade_id": 89999,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 84887,
+          "stat_id": 1263,
+          "stat_name": "",
+          "upgrade_id": 89999,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Boots",
+          "item_id": 85055,
+          "stat_id": 1263,
+          "stat_name": "",
+          "upgrade_id": 89999,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 90226,
+          "stat_id": 1566,
+          "upgrade_id": 24572,
+          "infusions": [],
+          "upgrade2_id": 43254
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 91671,
+          "stat_id": 1566,
+          "upgrade_id": 24575,
+          "infusions": [],
+          "upgrade2_id": 43254
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 91649,
+          "stat_id": 1566,
+          "upgrade_id": 24548,
+          "infusions": [],
+          "upgrade2_id": 43254
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 49365,
+          "stat_id": 1566,
+          "stat_name": "",
+          "upgrade_id": 43254,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 79745,
+          "stat_id": 1566,
+          "stat_name": "",
+          "upgrade_id": 43254,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 92706,
+          "stat_id": 1263,
+          "stat_name": "",
+          "upgrade_id": 43254,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 92215,
+          "stat_id": 1566,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79710,
+          "stat_id": 1566,
+          "stat_name": "",
+          "upgrade_id": 43254,
+          "infusions": [
+            43254,
+            43254
+          ]
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 90238,
+          "stat_id": 1566,
+          "stat_name": "",
+          "upgrade_id": 43254,
+          "infusions": [
+            43254,
+            43254
+          ]
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-revenant-support-vindicator",
+    "name": "Support Vindicator",
+    "profession": "Revenant",
+    "elite_spec": "Vindicator",
+    "build_type": "Support",
+    "game_mode": "Unknown",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/revenant/support-vindicator-2/",
+    "chat_code": "[&DQkDGQwfRTrcEQAABhIAACsSAADUEQAAyhEAAAcFAAAGEisS1BEAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 3,
+        "traits": [
+          1732,
+          1760,
+          1749
+        ]
+      },
+      "line2": {
+        "spec_id": 12,
+        "traits": [
+          1822,
+          1818,
+          1815
+        ]
+      },
+      "line3": {
+        "spec_id": 69,
+        "traits": [
+          2248,
+          2243,
+          2238
+        ]
+      }
+    },
+    "skills": {
+      "heal": 62719,
+      "utilities": [
+        62832,
+        62962,
+        62878
+      ],
+      "elite": 62942
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 0,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": []
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-revenant-booster-vindicator",
+    "name": "Booster Vindicator",
+    "profession": "Revenant",
+    "elite_spec": "Vindicator",
+    "build_type": "Power",
+    "game_mode": "OpenWorld",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/revenant/booster-vindicator/",
+    "chat_code": "[&DQkDNg8qRRXcEQAABhIAANQRAAArEgAAyhEAAAQBAAAGEtQRKxIAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 3,
+        "traits": [
+          1761,
+          1774,
+          1719
+        ]
+      },
+      "line2": {
+        "spec_id": 15,
+        "traits": [
+          1767,
+          1765,
+          1800
+        ]
+      },
+      "line3": {
+        "spec_id": 69,
+        "traits": [
+          2258,
+          2259,
+          2257
+        ]
+      }
+    },
+    "skills": {
+      "heal": 27372,
+      "utilities": [
+        28516,
+        26557,
+        26679
+      ],
+      "elite": 27975
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100916,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 85193,
+          "stat_id": 559,
+          "stat_name": "",
+          "upgrade_id": 24723,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 84875,
+          "stat_id": 559,
+          "stat_name": "",
+          "upgrade_id": 24723,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 85084,
+          "stat_id": 559,
+          "stat_name": "",
+          "upgrade_id": 24723,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85140,
+          "stat_id": 559,
+          "stat_name": "",
+          "upgrade_id": 24723,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 84887,
+          "stat_id": 559,
+          "stat_name": "",
+          "upgrade_id": 24723,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 85055,
+          "stat_id": 559,
+          "stat_name": "",
+          "upgrade_id": 24723,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 91646,
+          "stat_id": 161,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 24618
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 91674,
+          "stat_id": 559,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 24618
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 49365,
+          "stat_id": 559,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 79745,
+          "stat_id": 559,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 92706,
+          "stat_id": 559,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 92215,
+          "stat_id": 559,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79710,
+          "stat_id": 559,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 90238,
+          "stat_id": 559,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-revenant-booster-herald",
+    "name": "Booster Herald",
+    "profession": "Revenant",
+    "elite_spec": "Herald",
+    "build_type": "Power",
+    "game_mode": "OpenWorld",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/revenant/booster-herald/",
+    "chat_code": "[&DQkOKQwrNBXcEQAABhIAANQRAAArEgAAyhEAAAIDAAAGEtQRKxIAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 14,
+        "traits": [
+          1793,
+          1726,
+          1720
+        ]
+      },
+      "line2": {
+        "spec_id": 12,
+        "traits": [
+          1822,
+          1817,
+          1825
+        ]
+      },
+      "line3": {
+        "spec_id": 52,
+        "traits": [
+          1813,
+          1738,
+          1746
+        ]
+      }
+    },
+    "skills": {
+      "heal": 27220,
+      "utilities": [
+        28379,
+        26644,
+        27014
+      ],
+      "elite": 27760
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100219,
+      "food_id": 91848,
+      "utility_id": 77567,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 85193,
+          "stat_id": 559,
+          "stat_name": "",
+          "upgrade_id": 76166,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 84875,
+          "stat_id": 559,
+          "stat_name": "",
+          "upgrade_id": 76166,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 85084,
+          "stat_id": 559,
+          "stat_name": "",
+          "upgrade_id": 76166,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85140,
+          "stat_id": 559,
+          "stat_name": "",
+          "upgrade_id": 76166,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 84887,
+          "stat_id": 559,
+          "stat_name": "",
+          "upgrade_id": 76166,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 85055,
+          "stat_id": 559,
+          "stat_name": "",
+          "upgrade_id": 76166,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 91671,
+          "stat_id": 559,
+          "upgrade_id": 24560,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 91622,
+          "stat_id": 559,
+          "upgrade_id": 48911,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 91674,
+          "stat_id": 559,
+          "upgrade_id": 24609,
+          "infusions": [],
+          "upgrade2_id": 24605
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 49365,
+          "stat_id": 559,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 79745,
+          "stat_id": 559,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 92706,
+          "stat_id": 559,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 92215,
+          "stat_id": 559,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79710,
+          "stat_id": 559,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 90238,
+          "stat_id": 559,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-revenant-booster-renegade",
+    "name": "Booster Renegade",
+    "profession": "Revenant",
+    "elite_spec": "Renegade",
+    "build_type": "Power",
+    "game_mode": "OpenWorld",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/revenant/booster-renegade/",
+    "chat_code": "[&DQkOKQwrPz7cEQAA1BEAACsSAAAGEgAAyhEAAAYDAAAGEtQRKxIAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 14,
+        "traits": [
+          1793,
+          1726,
+          1720
+        ]
+      },
+      "line2": {
+        "spec_id": 12,
+        "traits": [
+          1822,
+          1817,
+          1825
+        ]
+      },
+      "line3": {
+        "spec_id": 63,
+        "traits": [
+          2079,
+          2108,
+          2182
+        ]
+      }
+    },
+    "skills": {
+      "heal": 45686,
+      "utilities": [
+        41220,
+        40485,
+        42949
+      ],
+      "elite": 45773
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100219,
+      "food_id": 91848,
+      "utility_id": 48917,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 85193,
+          "stat_id": 559,
+          "stat_name": "",
+          "upgrade_id": 76166,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 84875,
+          "stat_id": 559,
+          "stat_name": "",
+          "upgrade_id": 76166,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 85084,
+          "stat_id": 559,
+          "stat_name": "",
+          "upgrade_id": 76166,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85140,
+          "stat_id": 559,
+          "stat_name": "",
+          "upgrade_id": 76166,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 84887,
+          "stat_id": 559,
+          "stat_name": "",
+          "upgrade_id": 76166,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 85055,
+          "stat_id": 559,
+          "stat_name": "",
+          "upgrade_id": 76166,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 91671,
+          "stat_id": 559,
+          "upgrade_id": 24560,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 91622,
+          "stat_id": 559,
+          "upgrade_id": 48911,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 91628,
+          "stat_id": 559,
+          "upgrade_id": 24609,
+          "infusions": [],
+          "upgrade2_id": 24605
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 49365,
+          "stat_id": 559,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 79745,
+          "stat_id": 559,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 92706,
+          "stat_id": 559,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 92215,
+          "stat_id": 559,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79710,
+          "stat_id": 559,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 90238,
+          "stat_id": 559,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-revenant-power-herald",
+    "name": "Power Herald",
+    "profession": "Revenant",
+    "elite_spec": "Herald",
+    "build_type": "Power",
+    "game_mode": "Unknown",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/revenant/power-herald/",
+    "chat_code": "[&DQkPKQMZNCfcEQAABhIAACsSAADUEQAAyhEAAAECAAAGEisS1BEAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 15,
+        "traits": [
+          1776,
+          1765,
+          1800
+        ]
+      },
+      "line2": {
+        "spec_id": 3,
+        "traits": [
+          1732,
+          1760,
+          1749
+        ]
+      },
+      "line3": {
+        "spec_id": 52,
+        "traits": [
+          1716,
+          1738,
+          1772
+        ]
+      }
+    },
+    "skills": {
+      "heal": 26937,
+      "utilities": [
+        29209,
+        28231,
+        27107
+      ],
+      "elite": 28406
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 0,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": []
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-revenant-condition-herald",
+    "name": "Condition Herald",
+    "profession": "Revenant",
+    "elite_spec": "Herald",
+    "build_type": "Condi",
+    "game_mode": "Unknown",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/revenant/condition-herald-2/",
+    "chat_code": "[&DQkOFQMbNC/cEQAABhIAACsSAADUEQAAyhEAAAMCAAAGEisS1BEAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 14,
+        "traits": [
+          1793,
+          1727,
+          1795
+        ]
+      },
+      "line2": {
+        "spec_id": 3,
+        "traits": [
+          1784,
+          1760,
+          1749
+        ]
+      },
+      "line3": {
+        "spec_id": 52,
+        "traits": [
+          1716,
+          1730,
+          1772
+        ]
+      }
+    },
+    "skills": {
+      "heal": 28219,
+      "utilities": [
+        27322,
+        27505,
+        27917
+      ],
+      "elite": 28287
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 0,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": []
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  }
+]

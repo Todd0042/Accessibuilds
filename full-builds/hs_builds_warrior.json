@@ -1,0 +1,2611 @@
+[
+  {
+    "id": "hs-warrior-heal-quickness-berserker",
+    "name": "Heal Quickness Berserker",
+    "profession": "Warrior",
+    "elite_spec": "Berserker",
+    "build_type": "Quickness",
+    "game_mode": "GroupPvE",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/warrior/heal-quickness-berserker/",
+    "chat_code": "[&DQILLjM3EjnyEgAA1xIAAKgAAACwAAAAwhIAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 11,
+        "traits": [
+          1474,
+          1482,
+          1470
+        ]
+      },
+      "line2": {
+        "spec_id": 51,
+        "traits": [
+          1381,
+          1484,
+          1657
+        ]
+      },
+      "line3": {
+        "spec_id": 18,
+        "traits": [
+          2049,
+          2042,
+          2307
+        ]
+      }
+    },
+    "skills": {
+      "heal": 30189,
+      "utilities": [
+        30258,
+        14403,
+        14408
+      ],
+      "elite": 30343
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 101268,
+      "food_id": 91690,
+      "utility_id": 67528,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 85193,
+          "stat_id": 1363,
+          "stat_name": "",
+          "upgrade_id": 24839,
+          "infusions": [
+            37125
+          ]
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 84875,
+          "stat_id": 1363,
+          "stat_name": "",
+          "upgrade_id": 24839,
+          "infusions": [
+            37125
+          ]
+        },
+        {
+          "slot": "Chest",
+          "item_id": 85084,
+          "stat_id": 1363,
+          "stat_name": "",
+          "upgrade_id": 24839,
+          "infusions": [
+            37125
+          ]
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85140,
+          "stat_id": 1363,
+          "stat_name": "",
+          "upgrade_id": 24839,
+          "infusions": [
+            37125
+          ]
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 84887,
+          "stat_id": 1363,
+          "stat_name": "",
+          "upgrade_id": 24839,
+          "infusions": [
+            37125
+          ]
+        },
+        {
+          "slot": "Boots",
+          "item_id": 85055,
+          "stat_id": 1363,
+          "stat_name": "",
+          "upgrade_id": 24839,
+          "infusions": [
+            37125
+          ]
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 91671,
+          "stat_id": 1363,
+          "upgrade_id": 44947,
+          "infusions": [],
+          "upgrade2_id": 37125
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 91676,
+          "stat_id": 1363,
+          "upgrade_id": 72339,
+          "infusions": [],
+          "upgrade2_id": 37125
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 91674,
+          "stat_id": 1363,
+          "upgrade_id": 72339,
+          "infusions": [],
+          "upgrade2_id": 37125
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 49365,
+          "stat_id": 1345,
+          "stat_name": "",
+          "upgrade_id": 37125,
+          "infusions": [
+            37125
+          ]
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 79745,
+          "stat_id": 1345,
+          "stat_name": "",
+          "upgrade_id": 37125,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 92706,
+          "stat_id": 1345,
+          "stat_name": "",
+          "upgrade_id": 37125,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 92215,
+          "stat_id": 1345,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79710,
+          "stat_id": 1345,
+          "stat_name": "",
+          "upgrade_id": 37125,
+          "infusions": [
+            37125,
+            37125
+          ]
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 90238,
+          "stat_id": 1345,
+          "stat_name": "",
+          "upgrade_id": 37125,
+          "infusions": [
+            37125,
+            37125
+          ]
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-warrior-power-quickness-berserker",
+    "name": "Power Quickness Berserker",
+    "profession": "Warrior",
+    "elite_spec": "Berserker",
+    "build_type": "Quickness",
+    "game_mode": "GroupPvE",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/warrior/power-quickness-berserker/",
+    "chat_code": "[&DQIEHzMeEhnyEgAA1xIAAK8AAACpAAAAwhIAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 4,
+        "traits": [
+          1444,
+          1449,
+          1437
+        ]
+      },
+      "line2": {
+        "spec_id": 51,
+        "traits": [
+          1413,
+          1709,
+          1369
+        ]
+      },
+      "line3": {
+        "spec_id": 18,
+        "traits": [
+          2049,
+          2042,
+          1928
+        ]
+      }
+    },
+    "skills": {
+      "heal": 30189,
+      "utilities": [
+        30258,
+        14410,
+        14404
+      ],
+      "elite": 30343
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100916,
+      "food_id": 91805,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 85193,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 84875,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Chest",
+          "item_id": 85084,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85140,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 84887,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Boots",
+          "item_id": 85055,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 91622,
+          "stat_id": 161,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 43254
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 91622,
+          "stat_id": 161,
+          "upgrade_id": 24554,
+          "infusions": [],
+          "upgrade2_id": 43254
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 91646,
+          "stat_id": 161,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 43254
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 49365,
+          "stat_id": 584,
+          "stat_name": "",
+          "upgrade_id": 43254,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 79745,
+          "stat_id": 584,
+          "stat_name": "",
+          "upgrade_id": 43254,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 92706,
+          "stat_id": 584,
+          "stat_name": "",
+          "upgrade_id": 43254,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 92215,
+          "stat_id": 584,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79710,
+          "stat_id": 584,
+          "stat_name": "",
+          "upgrade_id": 43254,
+          "infusions": [
+            43254,
+            43254
+          ]
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 90238,
+          "stat_id": 584,
+          "stat_name": "",
+          "upgrade_id": 43254,
+          "infusions": [
+            43254,
+            43254
+          ]
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-warrior-power-berserker",
+    "name": "Power Berserker",
+    "profession": "Warrior",
+    "elite_spec": "Berserker",
+    "build_type": "Power",
+    "game_mode": "GroupPvE",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/warrior/power-berserker-2/",
+    "chat_code": "[&DQIEHzMeEhXyEgAA1xIAAK8AAACpAAAAwhIAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 4,
+        "traits": [
+          1444,
+          1449,
+          1437
+        ]
+      },
+      "line2": {
+        "spec_id": 51,
+        "traits": [
+          1413,
+          1709,
+          1369
+        ]
+      },
+      "line3": {
+        "spec_id": 18,
+        "traits": [
+          2049,
+          2011,
+          1928
+        ]
+      }
+    },
+    "skills": {
+      "heal": 30189,
+      "utilities": [
+        30258,
+        14410,
+        14404
+      ],
+      "elite": 30343
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 103574,
+      "food_id": 91805,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 85193,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 84875,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Chest",
+          "item_id": 85084,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85140,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 84887,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Boots",
+          "item_id": 85055,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 91622,
+          "stat_id": 161,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 43254
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 91622,
+          "stat_id": 161,
+          "upgrade_id": 24554,
+          "infusions": [],
+          "upgrade2_id": 43254
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 90226,
+          "stat_id": 161,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 101199
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 49365,
+          "stat_id": 584,
+          "stat_name": "",
+          "upgrade_id": 43254,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 79745,
+          "stat_id": 584,
+          "stat_name": "",
+          "upgrade_id": 43254,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 92706,
+          "stat_id": 584,
+          "stat_name": "",
+          "upgrade_id": 43254,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 92215,
+          "stat_id": 584,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79710,
+          "stat_id": 584,
+          "stat_name": "",
+          "upgrade_id": 43254,
+          "infusions": [
+            43254,
+            43254
+          ]
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 90238,
+          "stat_id": 584,
+          "stat_name": "",
+          "upgrade_id": 43254,
+          "infusions": [
+            43254,
+            43254
+          ]
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-warrior-condition-berserker",
+    "name": "Condition Berserker",
+    "profession": "Warrior",
+    "elite_spec": "Berserker",
+    "build_type": "Condi",
+    "game_mode": "GroupPvE",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/warrior/condition-berserker/",
+    "chat_code": "[&DQIkJTMeEibyEgAA1xIAANwSAAChEgAAwhIAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 36,
+        "traits": [
+          1455,
+          1315,
+          1346
+        ]
+      },
+      "line2": {
+        "spec_id": 51,
+        "traits": [
+          1413,
+          1709,
+          1369
+        ]
+      },
+      "line3": {
+        "spec_id": 18,
+        "traits": [
+          2039,
+          2011,
+          2038
+        ]
+      }
+    },
+    "skills": {
+      "heal": 30189,
+      "utilities": [
+        30258,
+        30074,
+        29613
+      ],
+      "elite": 30343
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 101489,
+      "food_id": 91878,
+      "utility_id": 48917,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 85193,
+          "stat_id": 1153,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": [
+            85971
+          ]
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 84875,
+          "stat_id": 1153,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": [
+            39619
+          ]
+        },
+        {
+          "slot": "Chest",
+          "item_id": 85084,
+          "stat_id": 1153,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": [
+            39619
+          ]
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85140,
+          "stat_id": 1067,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": [
+            39619
+          ]
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 84887,
+          "stat_id": 1153,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": [
+            39619
+          ]
+        },
+        {
+          "slot": "Boots",
+          "item_id": 85055,
+          "stat_id": 1067,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": [
+            39619
+          ]
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 91632,
+          "stat_id": 1153,
+          "upgrade_id": 24609,
+          "infusions": [],
+          "upgrade2_id": 39619
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 91649,
+          "stat_id": 1153,
+          "upgrade_id": 24605,
+          "infusions": [],
+          "upgrade2_id": 39619
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 91653,
+          "stat_id": 1153,
+          "upgrade_id": 48911,
+          "infusions": [],
+          "upgrade2_id": 39619
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 49365,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 39619,
+          "infusions": [
+            39619
+          ]
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 79745,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 39619,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 92706,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 39619,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 92215,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79710,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 39619,
+          "infusions": [
+            39619,
+            39619
+          ]
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 90238,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 39619,
+          "infusions": [
+            39619,
+            39619
+          ]
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-warrior-condition-quickness-berserker",
+    "name": "Condition Quickness Berserker",
+    "profession": "Warrior",
+    "elite_spec": "Berserker",
+    "build_type": "Quickness",
+    "game_mode": "GroupPvE",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/warrior/condition-quickness-berserker/",
+    "chat_code": "[&DQIkLTM+EiryEgAA1xIAANwSAAChEgAAwhIAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 36,
+        "traits": [
+          1455,
+          1333,
+          1346
+        ]
+      },
+      "line2": {
+        "spec_id": 51,
+        "traits": [
+          1413,
+          1709,
+          1657
+        ]
+      },
+      "line3": {
+        "spec_id": 18,
+        "traits": [
+          2039,
+          2042,
+          2038
+        ]
+      }
+    },
+    "skills": {
+      "heal": 30189,
+      "utilities": [
+        30258,
+        30074,
+        29613
+      ],
+      "elite": 30343
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100153,
+      "food_id": 91876,
+      "utility_id": 77567,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 85193,
+          "stat_id": 1153,
+          "stat_name": "",
+          "upgrade_id": 83338,
+          "infusions": [
+            85971
+          ]
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 84875,
+          "stat_id": 1153,
+          "stat_name": "",
+          "upgrade_id": 83338,
+          "infusions": [
+            39619
+          ]
+        },
+        {
+          "slot": "Chest",
+          "item_id": 85084,
+          "stat_id": 1153,
+          "stat_name": "",
+          "upgrade_id": 83338,
+          "infusions": [
+            39619
+          ]
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85140,
+          "stat_id": 1153,
+          "stat_name": "",
+          "upgrade_id": 83338,
+          "infusions": [
+            39619
+          ]
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 84887,
+          "stat_id": 1153,
+          "stat_name": "",
+          "upgrade_id": 83338,
+          "infusions": [
+            39619
+          ]
+        },
+        {
+          "slot": "Boots",
+          "item_id": 85055,
+          "stat_id": 1153,
+          "stat_name": "",
+          "upgrade_id": 83338,
+          "infusions": [
+            39619
+          ]
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 91632,
+          "stat_id": 1153,
+          "upgrade_id": 24609,
+          "infusions": [],
+          "upgrade2_id": 39619
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 91649,
+          "stat_id": 1153,
+          "upgrade_id": 24605,
+          "infusions": [],
+          "upgrade2_id": 39619
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 91649,
+          "stat_id": 1153,
+          "upgrade_id": 44944,
+          "infusions": [],
+          "upgrade2_id": 39619
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 49365,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 39619,
+          "infusions": [
+            39619
+          ]
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 79745,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 39619,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 92706,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 39619,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 98299,
+          "stat_id": 1694,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79710,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 39619,
+          "infusions": [
+            39619,
+            39619
+          ]
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 90238,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 39619,
+          "infusions": [
+            39619,
+            39619
+          ]
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-warrior-power-spellbreaker",
+    "name": "Power Spellbreaker",
+    "profession": "Warrior",
+    "elite_spec": "Spellbreaker",
+    "build_type": "Power",
+    "game_mode": "GroupPvE",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/warrior/power-spellbreaker/",
+    "chat_code": "[&DQIEHxY/PT2nAAAAqQAAAK0AAACvAAAAnRYAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 4,
+        "traits": [
+          1444,
+          1449,
+          1437
+        ]
+      },
+      "line2": {
+        "spec_id": 22,
+        "traits": [
+          1372,
+          1367,
+          1708
+        ]
+      },
+      "line3": {
+        "spec_id": 61,
+        "traits": [
+          2107,
+          2095,
+          2060
+        ]
+      }
+    },
+    "skills": {
+      "heal": 14401,
+      "utilities": [
+        14404,
+        14516,
+        14410
+      ],
+      "elite": 45333
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 103574,
+      "food_id": 91805,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 85193,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 84875,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Chest",
+          "item_id": 85084,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85140,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 84887,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Boots",
+          "item_id": 85055,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 91636,
+          "stat_id": 161,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 43254
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 91622,
+          "stat_id": 161,
+          "upgrade_id": 24868,
+          "infusions": [],
+          "upgrade2_id": 43254
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 91652,
+          "stat_id": 161,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 43254
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 49365,
+          "stat_id": 584,
+          "stat_name": "",
+          "upgrade_id": 43254,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 79745,
+          "stat_id": 584,
+          "stat_name": "",
+          "upgrade_id": 43254,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 92706,
+          "stat_id": 584,
+          "stat_name": "",
+          "upgrade_id": 43254,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 92215,
+          "stat_id": 584,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79710,
+          "stat_id": 584,
+          "stat_name": "",
+          "upgrade_id": 43254,
+          "infusions": [
+            43254,
+            43254
+          ]
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 90238,
+          "stat_id": 584,
+          "stat_name": "",
+          "upgrade_id": 43254,
+          "infusions": [
+            43254,
+            43254
+          ]
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-warrior-power-alacrity-bladesworn",
+    "name": "Power Alacrity Bladesworn",
+    "profession": "Warrior",
+    "elite_spec": "Bladesworn",
+    "build_type": "Alacrity",
+    "game_mode": "GroupPvE",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/warrior/power-alacrity-bladesworn/",
+    "chat_code": "[&DQIEHwsVRDumAAAA8hoAAP0aAADwGgAA/BoAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 4,
+        "traits": [
+          1444,
+          1449,
+          1437
+        ]
+      },
+      "line2": {
+        "spec_id": 11,
+        "traits": [
+          1469,
+          1486,
+          1667
+        ]
+      },
+      "line3": {
+        "spec_id": 68,
+        "traits": [
+          2225,
+          2302,
+          2245
+        ]
+      }
+    },
+    "skills": {
+      "heal": 14402,
+      "utilities": [
+        62967,
+        68085,
+        62960
+      ],
+      "elite": 62901
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100177,
+      "food_id": 91805,
+      "utility_id": 67530,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 85193,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24703,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 84875,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24703,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Chest",
+          "item_id": 85084,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24703,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85140,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24703,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 84887,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24703,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Boots",
+          "item_id": 85055,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24703,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 91649,
+          "stat_id": 753,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 43254
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 91675,
+          "stat_id": 161,
+          "upgrade_id": 24618,
+          "infusions": [],
+          "upgrade2_id": 101199
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 49365,
+          "stat_id": 584,
+          "stat_name": "",
+          "upgrade_id": 43254,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 79745,
+          "stat_id": 584,
+          "stat_name": "",
+          "upgrade_id": 43254,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 92706,
+          "stat_id": 584,
+          "stat_name": "",
+          "upgrade_id": 43254,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 92215,
+          "stat_id": 584,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79710,
+          "stat_id": 584,
+          "stat_name": "",
+          "upgrade_id": 43254,
+          "infusions": [
+            43254,
+            43254
+          ]
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 90238,
+          "stat_id": 584,
+          "stat_name": "",
+          "upgrade_id": 43254,
+          "infusions": [
+            43254,
+            43254
+          ]
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-warrior-power-bladesworn",
+    "name": "Power Bladesworn",
+    "profession": "Warrior",
+    "elite_spec": "Bladesworn",
+    "build_type": "Power",
+    "game_mode": "GroupPvE",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/warrior/power-bladesworn/",
+    "chat_code": "[&DQIEHwsVRCunAAAA8hoAAP0aAADwGgAA/BoAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 4,
+        "traits": [
+          1444,
+          1449,
+          1437
+        ]
+      },
+      "line2": {
+        "spec_id": 11,
+        "traits": [
+          1469,
+          1486,
+          1667
+        ]
+      },
+      "line3": {
+        "spec_id": 68,
+        "traits": [
+          2225,
+          2302,
+          2239
+        ]
+      }
+    },
+    "skills": {
+      "heal": 14401,
+      "utilities": [
+        62967,
+        68085,
+        62960
+      ],
+      "elite": 62901
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100177,
+      "food_id": 91805,
+      "utility_id": 67530,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 85193,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24703,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 84875,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24703,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Chest",
+          "item_id": 85084,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24703,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85140,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24703,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 84887,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24703,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Boots",
+          "item_id": 85055,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24703,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 91649,
+          "stat_id": 753,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 43254
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 91675,
+          "stat_id": 161,
+          "upgrade_id": 24618,
+          "infusions": [],
+          "upgrade2_id": 101199
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 49365,
+          "stat_id": 584,
+          "stat_name": "",
+          "upgrade_id": 43254,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 79745,
+          "stat_id": 584,
+          "stat_name": "",
+          "upgrade_id": 43254,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 92706,
+          "stat_id": 584,
+          "stat_name": "",
+          "upgrade_id": 43254,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 92215,
+          "stat_id": 584,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79710,
+          "stat_id": 584,
+          "stat_name": "",
+          "upgrade_id": 43254,
+          "infusions": [
+            43254,
+            43254
+          ]
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 90238,
+          "stat_id": 584,
+          "stat_name": "",
+          "upgrade_id": 43254,
+          "infusions": [
+            43254,
+            43254
+          ]
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-warrior-spear-warrior",
+    "name": "Spear Warrior",
+    "profession": "Warrior",
+    "elite_spec": "",
+    "build_type": "Power",
+    "game_mode": "WvWZerg",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/warrior/spear-warrior/",
+    "chat_code": "[&DQIEHyQaMzqmAAAAsgAAAKkAAACvAAAAnAAAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 4,
+        "traits": [
+          1444,
+          1449,
+          1437
+        ]
+      },
+      "line2": {
+        "spec_id": 36,
+        "traits": [
+          1344,
+          1316,
+          1336
+        ]
+      },
+      "line3": {
+        "spec_id": 51,
+        "traits": [
+          1413,
+          1489,
+          1657
+        ]
+      }
+    },
+    "skills": {
+      "heal": 14402,
+      "utilities": [
+        14412,
+        14404,
+        14410
+      ],
+      "elite": 14355
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100916,
+      "food_id": 91734,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 95605,
+          "stat_id": 1697,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 96966,
+          "stat_id": 1697,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Chest",
+          "item_id": 97812,
+          "stat_id": 1697,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 97680,
+          "stat_id": 1697,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 97540,
+          "stat_id": 1697,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Boots",
+          "item_id": 95583,
+          "stat_id": 1697,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 90226,
+          "stat_id": 1077,
+          "upgrade_id": 24548,
+          "infusions": [],
+          "upgrade2_id": 43254
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 91646,
+          "stat_id": 1077,
+          "upgrade_id": 24575,
+          "infusions": [],
+          "upgrade2_id": 43254
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 49365,
+          "stat_id": 1077,
+          "stat_name": "",
+          "upgrade_id": 43254,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 79745,
+          "stat_id": 1077,
+          "stat_name": "",
+          "upgrade_id": 43254,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 92706,
+          "stat_id": 1077,
+          "stat_name": "",
+          "upgrade_id": 43254,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 92215,
+          "stat_id": 1077,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79710,
+          "stat_id": 1077,
+          "stat_name": "",
+          "upgrade_id": 43254,
+          "infusions": [
+            43254,
+            43254
+          ]
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 90238,
+          "stat_id": 1077,
+          "stat_name": "",
+          "upgrade_id": 43254,
+          "infusions": [
+            43254,
+            43254
+          ]
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-warrior-power-berserker-warrior",
+    "name": "Power Berserker Warrior",
+    "profession": "Warrior",
+    "elite_spec": "Berserker",
+    "build_type": "Power",
+    "game_mode": "WvWZerg",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/warrior/power-berserker-warrior/",
+    "chat_code": "[&DQIEHzM6EhXyEgAArwAAALIAAAChEgAA7gAAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 4,
+        "traits": [
+          1444,
+          1449,
+          1437
+        ]
+      },
+      "line2": {
+        "spec_id": 51,
+        "traits": [
+          1413,
+          1489,
+          1657
+        ]
+      },
+      "line3": {
+        "spec_id": 18,
+        "traits": [
+          2049,
+          2011,
+          1928
+        ]
+      }
+    },
+    "skills": {
+      "heal": 30189,
+      "utilities": [
+        14410,
+        14412,
+        29613
+      ],
+      "elite": 14419
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100916,
+      "food_id": 91734,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 85193,
+          "stat_id": 1111,
+          "stat_name": "",
+          "upgrade_id": 74978,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 84875,
+          "stat_id": 1111,
+          "stat_name": "",
+          "upgrade_id": 74978,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Chest",
+          "item_id": 85084,
+          "stat_id": 1111,
+          "stat_name": "",
+          "upgrade_id": 74978,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85140,
+          "stat_id": 1111,
+          "stat_name": "",
+          "upgrade_id": 74978,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 84887,
+          "stat_id": 1111,
+          "stat_name": "",
+          "upgrade_id": 74978,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Boots",
+          "item_id": 85055,
+          "stat_id": 1111,
+          "stat_name": "",
+          "upgrade_id": 74978,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 91636,
+          "stat_id": 1077,
+          "upgrade_id": 24548,
+          "infusions": [],
+          "upgrade2_id": 43254
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 91622,
+          "stat_id": 1077,
+          "upgrade_id": 24597,
+          "infusions": [],
+          "upgrade2_id": 43254
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 91646,
+          "stat_id": 1077,
+          "upgrade_id": 24607,
+          "infusions": [],
+          "upgrade2_id": 43254
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 49365,
+          "stat_id": 1077,
+          "stat_name": "",
+          "upgrade_id": 43254,
+          "infusions": [
+            43254
+          ]
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 79745,
+          "stat_id": 1128,
+          "stat_name": "",
+          "upgrade_id": 43254,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 92706,
+          "stat_id": 1128,
+          "stat_name": "",
+          "upgrade_id": 43254,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 92215,
+          "stat_id": 1077,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79710,
+          "stat_id": 1077,
+          "stat_name": "",
+          "upgrade_id": 43254,
+          "infusions": [
+            43254,
+            43254
+          ]
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 90238,
+          "stat_id": 1077,
+          "stat_name": "",
+          "upgrade_id": 43254,
+          "infusions": [
+            43254,
+            43254
+          ]
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-warrior-booster-berserker",
+    "name": "Booster Berserker",
+    "profession": "Warrior",
+    "elite_spec": "Berserker",
+    "build_type": "Power",
+    "game_mode": "OpenWorld",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/warrior/booster-berserker/",
+    "chat_code": "[&DQIkLTM+EiryEgAA3BIAANcSAACoAAAAwhIAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 36,
+        "traits": [
+          1455,
+          1333,
+          1346
+        ]
+      },
+      "line2": {
+        "spec_id": 51,
+        "traits": [
+          1413,
+          1709,
+          1657
+        ]
+      },
+      "line3": {
+        "spec_id": 18,
+        "traits": [
+          2039,
+          2042,
+          2038
+        ]
+      }
+    },
+    "skills": {
+      "heal": 30189,
+      "utilities": [
+        30074,
+        30258,
+        14403
+      ],
+      "elite": 30343
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100849,
+      "food_id": 91876,
+      "utility_id": 48916,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 85193,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 83338,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 84875,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 83338,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 85084,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 83338,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85140,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 83338,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 84887,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 83338,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 85055,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 83338,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 91649,
+          "stat_id": 1052,
+          "upgrade_id": 24605,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 91653,
+          "stat_id": 1052,
+          "upgrade_id": 44944,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 91632,
+          "stat_id": 1052,
+          "upgrade_id": 24609,
+          "infusions": [],
+          "upgrade2_id": 24560
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 49365,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 79745,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 92706,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 92215,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79710,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 90238,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-warrior-strength-bladesworn",
+    "name": "Strength Bladesworn",
+    "profession": "Warrior",
+    "elite_spec": "Bladesworn",
+    "build_type": "Power",
+    "game_mode": "Unknown",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/warrior/shoutsworn/",
+    "chat_code": "[&DQIWOQQuRCX/GgAAcQAAAKgAAABqAAAA/BoAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 22,
+        "traits": [
+          1376,
+          1379,
+          1708
+        ]
+      },
+      "line2": {
+        "spec_id": 4,
+        "traits": [
+          1451,
+          1449,
+          1454
+        ]
+      },
+      "line3": {
+        "spec_id": 68,
+        "traits": [
+          2237,
+          2253,
+          2239
+        ]
+      }
+    },
+    "skills": {
+      "heal": 62978,
+      "utilities": [
+        14392,
+        14403,
+        14372
+      ],
+      "elite": 62901
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 0,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": []
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-warrior-healbreaker",
+    "name": "Healbreaker",
+    "profession": "Warrior",
+    "elite_spec": "Spellbreaker",
+    "build_type": "Heal",
+    "game_mode": "Unknown",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/warrior/healbreaker/",
+    "chat_code": "[&DQIzPgsrPSumAAAAqAAAAGoAAADiAQAA7gAAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 51,
+        "traits": [
+          1413,
+          1709,
+          1657
+        ]
+      },
+      "line2": {
+        "spec_id": 11,
+        "traits": [
+          1471,
+          1479,
+          1470
+        ]
+      },
+      "line3": {
+        "spec_id": 61,
+        "traits": [
+          2140,
+          2097,
+          2168
+        ]
+      }
+    },
+    "skills": {
+      "heal": 14402,
+      "utilities": [
+        14403,
+        14372,
+        14575
+      ],
+      "elite": 14419
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 0,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": []
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-warrior-tactics-warrior",
+    "name": "Tactics Warrior",
+    "profession": "Warrior",
+    "elite_spec": "",
+    "build_type": "Power",
+    "game_mode": "Unknown",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/warrior/tactics-warrior/",
+    "chat_code": "[&DQIzPgsrBCunAAAAqAAAAGoAAACtAAAAfAEAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 51,
+        "traits": [
+          1413,
+          1709,
+          1657
+        ]
+      },
+      "line2": {
+        "spec_id": 11,
+        "traits": [
+          1471,
+          1479,
+          1470
+        ]
+      },
+      "line3": {
+        "spec_id": 4,
+        "traits": [
+          1444,
+          1338,
+          1454
+        ]
+      }
+    },
+    "skills": {
+      "heal": 14401,
+      "utilities": [
+        14403,
+        14372,
+        14516
+      ],
+      "elite": 14483
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 0,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": []
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-warrior-defense-spellbreaker",
+    "name": "Defense Spellbreaker",
+    "profession": "Warrior",
+    "elite_spec": "Spellbreaker",
+    "build_type": "Power",
+    "game_mode": "Unknown",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/warrior/defense-spellbreaker/",
+    "chat_code": "[&DQIWKTM+PTenAAAAsgAAAK0AAABqAAAAfAEAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 22,
+        "traits": [
+          1376,
+          1379,
+          1649
+        ]
+      },
+      "line2": {
+        "spec_id": 51,
+        "traits": [
+          1413,
+          1709,
+          1657
+        ]
+      },
+      "line3": {
+        "spec_id": 61,
+        "traits": [
+          2140,
+          2126,
+          2060
+        ]
+      }
+    },
+    "skills": {
+      "heal": 14401,
+      "utilities": [
+        14412,
+        14516,
+        14372
+      ],
+      "elite": 14483
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 0,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": []
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-warrior-condizerker",
+    "name": "Condizerker",
+    "profession": "Warrior",
+    "elite_spec": "Berserker",
+    "build_type": "Condi",
+    "game_mode": "Unknown",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/warrior/condizerker/",
+    "chat_code": "[&DQIWKzM+Ej+nAAAA3BIAAGoAAAChEgAAnAAAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 22,
+        "traits": [
+          1372,
+          1379,
+          1649
+        ]
+      },
+      "line2": {
+        "spec_id": 51,
+        "traits": [
+          1413,
+          1709,
+          1657
+        ]
+      },
+      "line3": {
+        "spec_id": 18,
+        "traits": [
+          1977,
+          2002,
+          2307
+        ]
+      }
+    },
+    "skills": {
+      "heal": 14401,
+      "utilities": [
+        30074,
+        14372,
+        29613
+      ],
+      "elite": 14355
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 0,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": []
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  }
+]

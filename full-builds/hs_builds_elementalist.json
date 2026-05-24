@@ -1,0 +1,2816 @@
+[
+  {
+    "id": "hs-elementalist-power-quickness-catalyst",
+    "name": "Power Quickness Catalyst",
+    "profession": "Elementalist",
+    "elite_spec": "Catalyst",
+    "build_type": "Quickness",
+    "game_mode": "GroupPvE",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/elementalist/power-quickness-catalyst/",
+    "chat_code": "[&DQYpHyU1Qz50AAAAvgEAAPgaAADuGgAAlwAAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 41,
+        "traits": [
+          232,
+          1502,
+          226
+        ]
+      },
+      "line2": {
+        "spec_id": 37,
+        "traits": [
+          253,
+          265,
+          1511
+        ]
+      },
+      "line3": {
+        "spec_id": 67,
+        "traits": [
+          2252,
+          2234,
+          2251
+        ]
+      }
+    },
+    "skills": {
+      "heal": 5503,
+      "utilities": [
+        5734,
+        62965,
+        62698
+      ],
+      "elite": 5516
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 103574,
+      "food_id": 91805,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 85128,
+          "stat_id": 1077,
+          "stat_name": "",
+          "upgrade_id": 74978,
+          "infusions": [
+            37131
+          ]
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 84918,
+          "stat_id": 1077,
+          "stat_name": "",
+          "upgrade_id": 74978,
+          "infusions": [
+            37131
+          ]
+        },
+        {
+          "slot": "Chest",
+          "item_id": 85333,
+          "stat_id": 1077,
+          "stat_name": "",
+          "upgrade_id": 74978,
+          "infusions": [
+            37131
+          ]
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85070,
+          "stat_id": 1077,
+          "stat_name": "",
+          "upgrade_id": 74978,
+          "infusions": [
+            37131
+          ]
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 85362,
+          "stat_id": 1077,
+          "stat_name": "",
+          "upgrade_id": 74978,
+          "infusions": [
+            37131
+          ]
+        },
+        {
+          "slot": "Boots",
+          "item_id": 80815,
+          "stat_id": 1077,
+          "stat_name": "",
+          "upgrade_id": 74978,
+          "infusions": [
+            37131
+          ]
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 91652,
+          "stat_id": 1077,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 37131
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 49365,
+          "stat_id": 1077,
+          "stat_name": "",
+          "upgrade_id": 37131,
+          "infusions": [
+            37131
+          ]
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 79745,
+          "stat_id": 1077,
+          "stat_name": "",
+          "upgrade_id": 37131,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 92706,
+          "stat_id": 1077,
+          "stat_name": "",
+          "upgrade_id": 37131,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 92215,
+          "stat_id": 1077,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79710,
+          "stat_id": 1077,
+          "stat_name": "",
+          "upgrade_id": 37131,
+          "infusions": [
+            37131,
+            37131
+          ]
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 90238,
+          "stat_id": 1077,
+          "stat_name": "",
+          "upgrade_id": 37131,
+          "infusions": [
+            37131,
+            37131
+          ]
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-elementalist-heal-quickness-catalyst",
+    "name": "Heal Quickness Catalyst",
+    "profession": "Elementalist",
+    "elite_spec": "Catalyst",
+    "build_type": "Quickness",
+    "game_mode": "GroupPvE",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/elementalist/heal-quickness-catalyst/",
+    "chat_code": "[&DQYROSUXQz4nDwAAHQEAAI8AAABOAQAAJgAAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 17,
+        "traits": [
+          348,
+          358,
+          2028
+        ]
+      },
+      "line2": {
+        "spec_id": 37,
+        "traits": [
+          1487,
+          265,
+          238
+        ]
+      },
+      "line3": {
+        "spec_id": 67,
+        "traits": [
+          2252,
+          2234,
+          2251
+        ]
+      }
+    },
+    "skills": {
+      "heal": 21656,
+      "utilities": [
+        5573,
+        5570,
+        5638
+      ],
+      "elite": 5666
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 101268,
+      "food_id": 91690,
+      "utility_id": 67528,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 85128,
+          "stat_id": 1377,
+          "stat_name": "",
+          "upgrade_id": 24842,
+          "infusions": [
+            37125
+          ]
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 84918,
+          "stat_id": 1377,
+          "stat_name": "",
+          "upgrade_id": 24842,
+          "infusions": [
+            37125
+          ]
+        },
+        {
+          "slot": "Chest",
+          "item_id": 85333,
+          "stat_id": 1377,
+          "stat_name": "",
+          "upgrade_id": 24842,
+          "infusions": [
+            37125
+          ]
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85070,
+          "stat_id": 1377,
+          "stat_name": "",
+          "upgrade_id": 24842,
+          "infusions": [
+            37125
+          ]
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 85362,
+          "stat_id": 1377,
+          "stat_name": "",
+          "upgrade_id": 24842,
+          "infusions": [
+            37125
+          ]
+        },
+        {
+          "slot": "Boots",
+          "item_id": 80815,
+          "stat_id": 1377,
+          "stat_name": "",
+          "upgrade_id": 24842,
+          "infusions": [
+            37125
+          ]
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 91674,
+          "stat_id": 1377,
+          "upgrade_id": 74326,
+          "infusions": [],
+          "upgrade2_id": 37125
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 49365,
+          "stat_id": 1377,
+          "stat_name": "",
+          "upgrade_id": 37125,
+          "infusions": [
+            37125
+          ]
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 79745,
+          "stat_id": 1377,
+          "stat_name": "",
+          "upgrade_id": 37125,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 92706,
+          "stat_id": 1377,
+          "stat_name": "",
+          "upgrade_id": 37125,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 92215,
+          "stat_id": 1377,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79710,
+          "stat_id": 1377,
+          "stat_name": "",
+          "upgrade_id": 37125,
+          "infusions": [
+            37125,
+            37125
+          ]
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 90238,
+          "stat_id": 1377,
+          "stat_name": "",
+          "upgrade_id": 37125,
+          "infusions": [
+            37125,
+            37125
+          ]
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-elementalist-fresh-air-power-alacrity-tempest",
+    "name": "Fresh Air Power Alacrity Tempest",
+    "profession": "Elementalist",
+    "elite_spec": "Tempest",
+    "build_type": "Alacrity",
+    "game_mode": "GroupPvE",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/elementalist/fresh-air-power-alacrity-tempest/",
+    "chat_code": "[&DQYpLyU3MCd0AAAAwxIAAL4BAADLAAAAJgAAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 41,
+        "traits": [
+          232,
+          1502,
+          1503
+        ]
+      },
+      "line2": {
+        "spec_id": 37,
+        "traits": [
+          1487,
+          265,
+          1511
+        ]
+      },
+      "line3": {
+        "spec_id": 48,
+        "traits": [
+          1886,
+          1891,
+          2033
+        ]
+      }
+    },
+    "skills": {
+      "heal": 5503,
+      "utilities": [
+        30662,
+        5734,
+        5542
+      ],
+      "elite": 5666
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100947,
+      "food_id": 91734,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 85128,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": [
+            37131
+          ]
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 84918,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": [
+            37131
+          ]
+        },
+        {
+          "slot": "Chest",
+          "item_id": 85333,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": [
+            37131
+          ]
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85070,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": [
+            37131
+          ]
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 85362,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": [
+            37131
+          ]
+        },
+        {
+          "slot": "Boots",
+          "item_id": 80815,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": [
+            37131
+          ]
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 91619,
+          "stat_id": 161,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 37131
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 91676,
+          "stat_id": 161,
+          "upgrade_id": 24618,
+          "infusions": [],
+          "upgrade2_id": 37131
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 49365,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 37131,
+          "infusions": [
+            37131
+          ]
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 79745,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 37131,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 92706,
+          "stat_id": 753,
+          "stat_name": "",
+          "upgrade_id": 37131,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 92215,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79710,
+          "stat_id": 753,
+          "stat_name": "",
+          "upgrade_id": 37131,
+          "infusions": [
+            37131,
+            37131
+          ]
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 90238,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 37131,
+          "infusions": [
+            37131,
+            37131
+          ]
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-elementalist-fresh-air-power-tempest",
+    "name": "Fresh Air Power Tempest",
+    "profession": "Elementalist",
+    "elite_spec": "Tempest",
+    "build_type": "Power",
+    "game_mode": "GroupPvE",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/elementalist/fresh-air-power-tempest/",
+    "chat_code": "[&DQYpLxE+MBd0AAAAwxIAAL4BAADLAAAAJgAAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 41,
+        "traits": [
+          232,
+          1502,
+          1503
+        ]
+      },
+      "line2": {
+        "spec_id": 17,
+        "traits": [
+          363,
+          349,
+          2028
+        ]
+      },
+      "line3": {
+        "spec_id": 48,
+        "traits": [
+          1886,
+          1891,
+          1839
+        ]
+      }
+    },
+    "skills": {
+      "heal": 5503,
+      "utilities": [
+        30662,
+        5734,
+        5542
+      ],
+      "elite": 5666
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100947,
+      "food_id": 91734,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 85128,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": [
+            37131
+          ]
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 84918,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": [
+            37131
+          ]
+        },
+        {
+          "slot": "Chest",
+          "item_id": 85333,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": [
+            37131
+          ]
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85070,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": [
+            37131
+          ]
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 85362,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": [
+            37131
+          ]
+        },
+        {
+          "slot": "Boots",
+          "item_id": 80815,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": [
+            37131
+          ]
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 91619,
+          "stat_id": 161,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 37131
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 91676,
+          "stat_id": 161,
+          "upgrade_id": 24618,
+          "infusions": [],
+          "upgrade2_id": 37131
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 49365,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 37131,
+          "infusions": [
+            37131
+          ]
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 79745,
+          "stat_id": 753,
+          "stat_name": "",
+          "upgrade_id": 37131,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 92706,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 37131,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 92215,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79710,
+          "stat_id": 753,
+          "stat_name": "",
+          "upgrade_id": 37131,
+          "infusions": [
+            37131,
+            37131
+          ]
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 90238,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 37131,
+          "infusions": [
+            37131,
+            37131
+          ]
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-elementalist-heal-alacrity-tempest",
+    "name": "Heal Alacrity Tempest",
+    "profession": "Elementalist",
+    "elite_spec": "Tempest",
+    "build_type": "Alacrity",
+    "game_mode": "GroupPvE",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/elementalist/heal-alacrity-tempest/",
+    "chat_code": "[&DQYROiUXMC7HEgAApRIAAHYSAAB0EgAAmRIAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 17,
+        "traits": [
+          363,
+          358,
+          2028
+        ]
+      },
+      "line2": {
+        "spec_id": 37,
+        "traits": [
+          1487,
+          265,
+          238
+        ]
+      },
+      "line3": {
+        "spec_id": 48,
+        "traits": [
+          1962,
+          2015,
+          2033
+        ]
+      }
+    },
+    "skills": {
+      "heal": 29535,
+      "utilities": [
+        29948,
+        30047,
+        30432
+      ],
+      "elite": 29968
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 101268,
+      "food_id": 91690,
+      "utility_id": 67528,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 85128,
+          "stat_id": 156,
+          "stat_name": "",
+          "upgrade_id": 24842,
+          "infusions": [
+            37125
+          ]
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 84918,
+          "stat_id": 1363,
+          "stat_name": "",
+          "upgrade_id": 24842,
+          "infusions": [
+            37125
+          ]
+        },
+        {
+          "slot": "Chest",
+          "item_id": 85333,
+          "stat_id": 1363,
+          "stat_name": "",
+          "upgrade_id": 24842,
+          "infusions": [
+            37125
+          ]
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85070,
+          "stat_id": 1363,
+          "stat_name": "",
+          "upgrade_id": 24842,
+          "infusions": [
+            37125
+          ]
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 85362,
+          "stat_id": 1363,
+          "stat_name": "",
+          "upgrade_id": 24842,
+          "infusions": [
+            37125
+          ]
+        },
+        {
+          "slot": "Boots",
+          "item_id": 80815,
+          "stat_id": 1363,
+          "stat_name": "",
+          "upgrade_id": 24842,
+          "infusions": [
+            37125
+          ]
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 91636,
+          "stat_id": 1363,
+          "upgrade_id": 72339,
+          "infusions": [],
+          "upgrade2_id": 37125
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 91676,
+          "stat_id": 1363,
+          "upgrade_id": 74326,
+          "infusions": [],
+          "upgrade2_id": 37125
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 49365,
+          "stat_id": 1037,
+          "stat_name": "",
+          "upgrade_id": 37125,
+          "infusions": [
+            37125
+          ]
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 79745,
+          "stat_id": 1345,
+          "stat_name": "",
+          "upgrade_id": 37125,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 92706,
+          "stat_id": 1345,
+          "stat_name": "",
+          "upgrade_id": 37125,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 92215,
+          "stat_id": 1345,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79710,
+          "stat_id": 1037,
+          "stat_name": "",
+          "upgrade_id": 37125,
+          "infusions": [
+            37125,
+            37125
+          ]
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 90238,
+          "stat_id": 1037,
+          "stat_name": "",
+          "upgrade_id": 37125,
+          "infusions": [
+            37125,
+            37125
+          ]
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-elementalist-condition-alacrity-tempest",
+    "name": "Condition Alacrity Tempest",
+    "profession": "Elementalist",
+    "elite_spec": "Tempest",
+    "build_type": "Condi",
+    "game_mode": "GroupPvE",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/elementalist/condition-alacrity-tempest/",
+    "chat_code": "[&DQYfFRomMCfHEgAAcwAAAL4BAADLAAAAJgAAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 31,
+        "traits": [
+          296,
+          325,
+          1510
+        ]
+      },
+      "line2": {
+        "spec_id": 26,
+        "traits": [
+          1507,
+          275,
+          287
+        ]
+      },
+      "line3": {
+        "spec_id": 48,
+        "traits": [
+          1886,
+          1891,
+          2033
+        ]
+      }
+    },
+    "skills": {
+      "heal": 29535,
+      "utilities": [
+        5506,
+        5734,
+        5542
+      ],
+      "elite": 5666
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100153,
+      "food_id": 91876,
+      "utility_id": 43449,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 96005,
+          "stat_id": 1717,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": [
+            37130
+          ]
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 97313,
+          "stat_id": 1717,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": [
+            37130
+          ]
+        },
+        {
+          "slot": "Chest",
+          "item_id": 96962,
+          "stat_id": 1717,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": [
+            37130
+          ]
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 96140,
+          "stat_id": 1717,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": [
+            37130
+          ]
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 97476,
+          "stat_id": 1717,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": [
+            37130
+          ]
+        },
+        {
+          "slot": "Boots",
+          "item_id": 96739,
+          "stat_id": 1717,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": [
+            37130
+          ]
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 91636,
+          "stat_id": 1130,
+          "upgrade_id": 44944,
+          "infusions": [],
+          "upgrade2_id": 37130
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 91676,
+          "stat_id": 1130,
+          "upgrade_id": 44950,
+          "infusions": [],
+          "upgrade2_id": 37130
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 49365,
+          "stat_id": 1329,
+          "stat_name": "",
+          "upgrade_id": 37130,
+          "infusions": [
+            37130
+          ]
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 98322,
+          "stat_id": 1717,
+          "stat_name": "",
+          "upgrade_id": 37130,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 98322,
+          "stat_id": 1717,
+          "stat_name": "",
+          "upgrade_id": 37130,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 92215,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 98303,
+          "stat_id": 1717,
+          "stat_name": "",
+          "upgrade_id": 37130,
+          "infusions": [
+            37130,
+            37130
+          ]
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 90238,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 37130,
+          "infusions": [
+            37130,
+            37130
+          ]
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-elementalist-power-weaver",
+    "name": "Power Weaver",
+    "profession": "Elementalist",
+    "elite_spec": "Weaver",
+    "build_type": "Power",
+    "game_mode": "GroupPvE",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/elementalist/power-weaver/",
+    "chat_code": "[&DQYfHSkfOBl0AAAAUAEAADUXAAC+AQAAEhcAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 31,
+        "traits": [
+          296,
+          334,
+          1510
+        ]
+      },
+      "line2": {
+        "spec_id": 41,
+        "traits": [
+          232,
+          1502,
+          226
+        ]
+      },
+      "line3": {
+        "spec_id": 56,
+        "traits": [
+          2177,
+          2061,
+          2131
+        ]
+      }
+    },
+    "skills": {
+      "heal": 5503,
+      "utilities": [
+        5539,
+        40183,
+        5734
+      ],
+      "elite": 43638
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100947,
+      "food_id": 91805,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 85128,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": [
+            37131
+          ]
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 84918,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": [
+            37131
+          ]
+        },
+        {
+          "slot": "Chest",
+          "item_id": 85333,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": [
+            37131
+          ]
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85070,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": [
+            37131
+          ]
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 85362,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": [
+            37131
+          ]
+        },
+        {
+          "slot": "Boots",
+          "item_id": 80815,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 24836,
+          "infusions": [
+            37131
+          ]
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 91649,
+          "stat_id": 161,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 37131
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 91676,
+          "stat_id": 161,
+          "upgrade_id": 24868,
+          "infusions": [],
+          "upgrade2_id": 37131
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 49365,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 37131,
+          "infusions": [
+            37131
+          ]
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 79745,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 37131,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 92706,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 37131,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 92215,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79710,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 37131,
+          "infusions": [
+            37131,
+            37131
+          ]
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 90238,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 37131,
+          "infusions": [
+            37131,
+            37131
+          ]
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-elementalist-condition-weaver",
+    "name": "Condition Weaver",
+    "profession": "Elementalist",
+    "elite_spec": "Weaver",
+    "build_type": "Condi",
+    "game_mode": "GroupPvE",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/elementalist/condition-weaver/",
+    "chat_code": "[&DQYfFRomOBV0AAAAcwAAADUXAADLAAAAEhcAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 31,
+        "traits": [
+          296,
+          325,
+          1510
+        ]
+      },
+      "line2": {
+        "spec_id": 26,
+        "traits": [
+          1507,
+          275,
+          287
+        ]
+      },
+      "line3": {
+        "spec_id": 56,
+        "traits": [
+          2177,
+          2180,
+          2131
+        ]
+      }
+    },
+    "skills": {
+      "heal": 5503,
+      "utilities": [
+        34736,
+        40183,
+        5542
+      ],
+      "elite": 43638
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100153,
+      "food_id": 91878,
+      "utility_id": 48917,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 85128,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": [
+            37130
+          ]
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 84918,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": [
+            37130
+          ]
+        },
+        {
+          "slot": "Chest",
+          "item_id": 85333,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": [
+            37130
+          ]
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85070,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": [
+            37130
+          ]
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 85362,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": [
+            37130
+          ]
+        },
+        {
+          "slot": "Boots",
+          "item_id": 80815,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": [
+            37130
+          ]
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 91619,
+          "stat_id": 1130,
+          "upgrade_id": 24560,
+          "infusions": [],
+          "upgrade2_id": 37130
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 91676,
+          "stat_id": 1130,
+          "upgrade_id": 48911,
+          "infusions": [],
+          "upgrade2_id": 37130
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 49365,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 37130,
+          "infusions": [
+            37130
+          ]
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 79745,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 37130,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 92706,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 37130,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 92215,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79710,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 37130,
+          "infusions": [
+            37130,
+            37130
+          ]
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 90238,
+          "stat_id": 1130,
+          "stat_name": "",
+          "upgrade_id": 37130,
+          "infusions": [
+            37130,
+            37130
+          ]
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-elementalist-power-catalyst",
+    "name": "Power Catalyst",
+    "profession": "Elementalist",
+    "elite_spec": "Catalyst",
+    "build_type": "Power",
+    "game_mode": "GroupPvE",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/elementalist/power-catalyst/",
+    "chat_code": "[&DQYfHSkfQyZ0AAAA+BoAAFABAAC+AQAA9xoAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 31,
+        "traits": [
+          296,
+          334,
+          1510
+        ]
+      },
+      "line2": {
+        "spec_id": 41,
+        "traits": [
+          232,
+          1502,
+          226
+        ]
+      },
+      "line3": {
+        "spec_id": 67,
+        "traits": [
+          2252,
+          2247,
+          2241
+        ]
+      }
+    },
+    "skills": {
+      "heal": 5503,
+      "utilities": [
+        62965,
+        5539,
+        5734
+      ],
+      "elite": 62725
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100947,
+      "food_id": 91805,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 85128,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 74978,
+          "infusions": [
+            37131
+          ]
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 84918,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 74978,
+          "infusions": [
+            37131
+          ]
+        },
+        {
+          "slot": "Chest",
+          "item_id": 85333,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 74978,
+          "infusions": [
+            37131
+          ]
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85070,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 74978,
+          "infusions": [
+            37131
+          ]
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 85362,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 74978,
+          "infusions": [
+            37131
+          ]
+        },
+        {
+          "slot": "Boots",
+          "item_id": 80815,
+          "stat_id": 161,
+          "stat_name": "",
+          "upgrade_id": 74978,
+          "infusions": [
+            37131
+          ]
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 91649,
+          "stat_id": 161,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 37131
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 91676,
+          "stat_id": 161,
+          "upgrade_id": 24868,
+          "infusions": [],
+          "upgrade2_id": 37131
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 49365,
+          "stat_id": 584,
+          "stat_name": "",
+          "upgrade_id": 37131,
+          "infusions": [
+            37131
+          ]
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 79745,
+          "stat_id": 584,
+          "stat_name": "",
+          "upgrade_id": 37131,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 92706,
+          "stat_id": 584,
+          "stat_name": "",
+          "upgrade_id": 37131,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 92215,
+          "stat_id": 584,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79710,
+          "stat_id": 584,
+          "stat_name": "",
+          "upgrade_id": 37131,
+          "infusions": [
+            37131,
+            37131
+          ]
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 90238,
+          "stat_id": 584,
+          "stat_name": "",
+          "upgrade_id": 37131,
+          "infusions": [
+            37131,
+            37131
+          ]
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-elementalist-support-tempest",
+    "name": "Support Tempest",
+    "profession": "Elementalist",
+    "elite_spec": "Tempest",
+    "build_type": "Support",
+    "game_mode": "Unknown",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/elementalist/support-tempest/",
+    "chat_code": "[&DQYaPxEbMD7HEgAAwxIAAB0BAACQAAAAmRIAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 26,
+        "traits": [
+          289,
+          277,
+          1674
+        ]
+      },
+      "line2": {
+        "spec_id": 17,
+        "traits": [
+          360,
+          358,
+          362
+        ]
+      },
+      "line3": {
+        "spec_id": 48,
+        "traits": [
+          1962,
+          2015,
+          1986
+        ]
+      }
+    },
+    "skills": {
+      "heal": 29535,
+      "utilities": [
+        30662,
+        5573,
+        5536
+      ],
+      "elite": 29968
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 0,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": []
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-elementalist-condition-signet-catalyst",
+    "name": "Condition Signet Catalyst",
+    "profession": "Elementalist",
+    "elite_spec": "Catalyst",
+    "build_type": "Condi",
+    "game_mode": "WvWRoaming",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/elementalist/condition-signet-catalyst/",
+    "chat_code": "[&DQYfKRovQx90AAAAkQAAAI8AAAAcAQAA9xoAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 31,
+        "traits": [
+          296,
+          340,
+          294
+        ]
+      },
+      "line2": {
+        "spec_id": 26,
+        "traits": [
+          289,
+          277,
+          287
+        ]
+      },
+      "line3": {
+        "spec_id": 67,
+        "traits": [
+          2224,
+          2234,
+          2233
+        ]
+      }
+    },
+    "skills": {
+      "heal": 5503,
+      "utilities": [
+        5571,
+        5570,
+        5572
+      ],
+      "elite": 62725
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100388,
+      "food_id": 12488,
+      "utility_id": 42428,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 85128,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 70600,
+          "infusions": [
+            86986
+          ]
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 84918,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 70600,
+          "infusions": [
+            86986
+          ]
+        },
+        {
+          "slot": "Chest",
+          "item_id": 85333,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 70600,
+          "infusions": [
+            86986
+          ]
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85070,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 70600,
+          "infusions": [
+            86986
+          ]
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 85362,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 70600,
+          "infusions": [
+            86986
+          ]
+        },
+        {
+          "slot": "Boots",
+          "item_id": 80815,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 70600,
+          "infusions": [
+            86986
+          ]
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 91619,
+          "stat_id": 1052,
+          "upgrade_id": 24605,
+          "infusions": [],
+          "upgrade2_id": 86986
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 91636,
+          "stat_id": 1052,
+          "upgrade_id": 24609,
+          "infusions": [],
+          "upgrade2_id": 86986
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 49365,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 86986,
+          "infusions": [
+            86986
+          ]
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 79745,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 86986,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 92706,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 86986,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 92215,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79710,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 86986,
+          "infusions": [
+            86986,
+            86986
+          ]
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 90238,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 86986,
+          "infusions": [
+            86986,
+            86986
+          ]
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-elementalist-booster-weaver",
+    "name": "Booster Weaver",
+    "profession": "Elementalist",
+    "elite_spec": "Weaver",
+    "build_type": "Power",
+    "game_mode": "OpenWorld",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/elementalist/booster-weaver/",
+    "chat_code": "[&DQYfFRomOBV0AAAAcgAAADUXAADLAAAAEhcAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 31,
+        "traits": [
+          296,
+          325,
+          1510
+        ]
+      },
+      "line2": {
+        "spec_id": 26,
+        "traits": [
+          1507,
+          275,
+          287
+        ]
+      },
+      "line3": {
+        "spec_id": 56,
+        "traits": [
+          2177,
+          2180,
+          2131
+        ]
+      }
+    },
+    "skills": {
+      "heal": 5503,
+      "utilities": [
+        5502,
+        40183,
+        5542
+      ],
+      "elite": 43638
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100849,
+      "food_id": 91848,
+      "utility_id": 77567,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 85128,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 84918,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 85333,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85070,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 85362,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 80815,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 91619,
+          "stat_id": 1052,
+          "upgrade_id": 24560,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 91657,
+          "stat_id": 1052,
+          "upgrade_id": 24567,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 49365,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 79745,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 92706,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 92215,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79710,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 90238,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-elementalist-booster-tempest",
+    "name": "Booster Tempest",
+    "profession": "Elementalist",
+    "elite_spec": "Tempest",
+    "build_type": "Power",
+    "game_mode": "OpenWorld",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/elementalist/booster-tempest/",
+    "chat_code": "[&DQYaFh8VMCfHEgAAwxIAAHQSAAB2EgAAJgAAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 26,
+        "traits": [
+          1507,
+          275,
+          1508
+        ]
+      },
+      "line2": {
+        "spec_id": 31,
+        "traits": [
+          296,
+          325,
+          1510
+        ]
+      },
+      "line3": {
+        "spec_id": 48,
+        "traits": [
+          1886,
+          1891,
+          2033
+        ]
+      }
+    },
+    "skills": {
+      "heal": 29535,
+      "utilities": [
+        30662,
+        30432,
+        30047
+      ],
+      "elite": 5666
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100849,
+      "food_id": 91848,
+      "utility_id": 48917,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 85128,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 24691,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 84918,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 24691,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 85333,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 24691,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85070,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 24691,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 85362,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 24691,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 80815,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 24691,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 91619,
+          "stat_id": 1052,
+          "upgrade_id": 24624,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 91676,
+          "stat_id": 1052,
+          "upgrade_id": 72339,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 49365,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 79745,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 92706,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 92215,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79710,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 90238,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-elementalist-booster-catalyst",
+    "name": "Booster Catalyst",
+    "profession": "Elementalist",
+    "elite_spec": "Catalyst",
+    "build_type": "Power",
+    "game_mode": "OpenWorld",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/elementalist/booster-catalyst/",
+    "chat_code": "[&DQYfFRomQz90AAAAywAAAJEAAABPAQAAJgAAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 31,
+        "traits": [
+          296,
+          325,
+          1510
+        ]
+      },
+      "line2": {
+        "spec_id": 26,
+        "traits": [
+          1507,
+          275,
+          287
+        ]
+      },
+      "line3": {
+        "spec_id": 67,
+        "traits": [
+          2224,
+          2234,
+          2251
+        ]
+      }
+    },
+    "skills": {
+      "heal": 5503,
+      "utilities": [
+        5542,
+        5571,
+        5639
+      ],
+      "elite": 25488
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100849,
+      "food_id": 91878,
+      "utility_id": 77567,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 85128,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 24800,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 84918,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 24800,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 85333,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 24800,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85070,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 24800,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 85362,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 24800,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 80815,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 24800,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 91652,
+          "stat_id": 1052,
+          "upgrade_id": 24624,
+          "infusions": [],
+          "upgrade2_id": 72339
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 49365,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 79745,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 92706,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 92215,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79710,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 90238,
+          "stat_id": 1052,
+          "stat_name": "",
+          "upgrade_id": 0,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-elementalist-fire-weaver",
+    "name": "Fire Weaver",
+    "profession": "Elementalist",
+    "elite_spec": "Weaver",
+    "build_type": "Power",
+    "game_mode": "Unknown",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/elementalist/fire-weaver/",
+    "chat_code": "[&DQYfKSUbOD90AAAANRcAAPUVAADbFgAAEhcAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 31,
+        "traits": [
+          296,
+          340,
+          294
+        ]
+      },
+      "line2": {
+        "spec_id": 37,
+        "traits": [
+          1487,
+          1673,
+          238
+        ]
+      },
+      "line3": {
+        "spec_id": 56,
+        "traits": [
+          2115,
+          2170,
+          2138
+        ]
+      }
+    },
+    "skills": {
+      "heal": 5503,
+      "utilities": [
+        40183,
+        45746,
+        44926
+      ],
+      "elite": 43638
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 0,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": []
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-elementalist-hammer-catalyst",
+    "name": "Hammer Catalyst",
+    "profession": "Elementalist",
+    "elite_spec": "Catalyst",
+    "build_type": "Power",
+    "game_mode": "Unknown",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/elementalist/hammer-catalyst/",
+    "chat_code": "[&DQYfKiUfQxt0AAAA7xoAAE8BAADmAAAA9xoAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 31,
+        "traits": [
+          328,
+          340,
+          294
+        ]
+      },
+      "line2": {
+        "spec_id": 37,
+        "traits": [
+          1487,
+          257,
+          238
+        ]
+      },
+      "line3": {
+        "spec_id": 67,
+        "traits": [
+          2224,
+          2249,
+          2233
+        ]
+      }
+    },
+    "skills": {
+      "heal": 5503,
+      "utilities": [
+        62826,
+        5639,
+        5546
+      ],
+      "elite": 62725
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 0,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": []
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "hs-elementalist-fresh-air-catalyst",
+    "name": "Fresh Air Catalyst",
+    "profession": "Elementalist",
+    "elite_spec": "Catalyst",
+    "build_type": "Power",
+    "game_mode": "Unknown",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "",
+    "source": "hardstuck",
+    "source_url": "https://hardstuck.gg/gw2/builds/elementalist/fresh-air-catalyst/",
+    "chat_code": "[&DQYpKiUfQxt0AAAA7xoAAE8BAAAAAAAA9xoAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 41,
+        "traits": [
+          224,
+          214,
+          1503
+        ]
+      },
+      "line2": {
+        "spec_id": 37,
+        "traits": [
+          1487,
+          257,
+          238
+        ]
+      },
+      "line3": {
+        "spec_id": 67,
+        "traits": [
+          2224,
+          2249,
+          2233
+        ]
+      }
+    },
+    "skills": {
+      "heal": 5503,
+      "utilities": [
+        62826,
+        5639,
+        22572
+      ],
+      "elite": 62725
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 0,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": []
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  }
+]
