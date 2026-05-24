@@ -22,8 +22,9 @@ Features
     Compares your equipped gear, traits, and skills against any reference build
     Highlights mismatches in stats, upgrades, relics, food, and utility items
     Shows the correct pets (Ranger) and legends (Revenant) for each build
-    Rotation guide viewer — fetches and displays skill priority / rotation sections from Hardstuck, MetaBattle, GuildJen, and Snow Crows; cached locally after first load
+    Rotation guide viewer — fetches and displays skill priority / rotation sections from Hardstuck, MetaBattle, GuildJen, and Snow Crows; skill icons shown inline where available; cached locally after first load
     Import additional builds from community sites by pasting a URL into the Build Editor
+    Imported builds are automatically tagged by source so the filter works for your personal builds too
     Supports Snow Crows, Hardstuck, GuildJen, MetaBattle, and gw2skills.net
     Supports all 9 professions and their elite specs
     Export and share builds via compact AB: share codes
