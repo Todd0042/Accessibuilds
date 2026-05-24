@@ -58,7 +58,8 @@ static char   s_name_buf [128] = {};
 static char   s_notes_buf[512] = {};
 static int    s_prof_idx  = 0;
 static int    s_spec_idx  = 0;
-static int    s_type_idx  = 0;
+static int    s_type_idx      = 0;
+static int    s_game_mode_idx = 0;
 static int    s_prev_spec_idx = 0;
 static double s_benchmark_dps = 0.0;
 static bool   s_is_legacy = false;
@@ -373,6 +374,14 @@ static const char* TYPE_NAMES[] = {
     "Unknown","Power","Condi","Support","Heal","Quickness","Alacrity"
 };
 
+static const char* GAME_MODE_NAMES[] = {
+    "—", "Group PvE", "Raid", "Open World", "WvW Zerg", "WvW Roaming"
+};
+static const char* GAME_MODE_VALUES[] = {
+    "", "GroupPvE", "Raid", "OpenWorld", "WvWZerg", "WvWRoaming"
+};
+static constexpr int NUM_GAME_MODES = 6;
+
 static const char* WEAPON_TYPE_NAMES[] = {
     "—","Sword","Greatsword","Hammer","Mace","Axe","Dagger",
     "Scepter","Staff","Torch","Focus","Shield","Warhorn",
@@ -535,7 +544,7 @@ static void ClearForm()
 {
     memset(s_name_buf,            0, sizeof(s_name_buf));
     memset(s_notes_buf,           0, sizeof(s_notes_buf));
-    s_prof_idx = 0; s_spec_idx = 0; s_type_idx = 0; s_prev_spec_idx = 0; s_benchmark_dps = 0.0;
+    s_prof_idx = 0; s_spec_idx = 0; s_type_idx = 0; s_game_mode_idx = 0; s_prev_spec_idx = 0; s_benchmark_dps = 0.0;
     s_is_legacy = false;
     s_is_accessibility = false;
     s_source_url.clear();
@@ -1245,6 +1254,9 @@ static void BuildToForm(const GW2::SCBuild& b)
     for (int i = 0; i < NUM_SPECS; i++) if (SPECS[i].spec == b.elite_spec) { s_spec_idx = i; break; }
     s_prev_spec_idx = s_spec_idx;
     s_type_idx = (int)b.build_type;
+    s_game_mode_idx = 0;
+    for (int i = 1; i < NUM_GAME_MODES; i++)
+        if (b.game_mode == GAME_MODE_VALUES[i]) { s_game_mode_idx = i; break; }
     s_benchmark_dps = b.benchmark_dps;
     s_is_legacy = b.is_legacy;
     s_is_accessibility = b.is_accessibility;
@@ -1546,6 +1558,7 @@ static GW2::SCBuild FormToBuild()
     b.profession = (GW2::Profession)s_prof_idx;
     b.elite_spec = SPECS[s_spec_idx].spec;
     b.build_type = (GW2::BuildType)s_type_idx;
+    b.game_mode  = GAME_MODE_VALUES[s_game_mode_idx];
     b.benchmark_dps = s_benchmark_dps;
     b.is_legacy  = s_is_legacy;
     b.source_url = s_source_url;
@@ -1773,6 +1786,14 @@ void Render()
     ImGui::SetNextItemWidth(S(95));
     if (ImGui::BeginCombo("##type", TYPE_NAMES[s_type_idx])) {
         for (int i = 0; i < 7; i++) if (ImGui::Selectable(TYPE_NAMES[i], s_type_idx == i)) s_type_idx = i;
+        ImGui::EndCombo();
+    }
+    ImGui::SameLine();
+    ImGui::Text("Mode:"); ImGui::SameLine();
+    ImGui::SetNextItemWidth(S(110));
+    if (ImGui::BeginCombo("##game_mode", GAME_MODE_NAMES[s_game_mode_idx])) {
+        for (int i = 0; i < NUM_GAME_MODES; i++)
+            if (ImGui::Selectable(GAME_MODE_NAMES[i], s_game_mode_idx == i)) s_game_mode_idx = i;
         ImGui::EndCombo();
     }
     ImGui::SameLine(0, S(16));

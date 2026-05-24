@@ -790,6 +790,30 @@ bool ParseBuildPage(const std::string& url, GW2::SCBuild& out)
         }
     }
 
+    /* ── Game mode from wgCategories JSON embedded in page ── */
+    {
+        /* MetaBattle embeds mw.config.set({...,"wgCategories":[...],...}) in the page.
+           We look for known category strings to infer game mode. */
+        struct { const char* kw; const char* mode; } MAP[] = {
+            { "\"raid builds\"",        "Raid"       },
+            { "\"raid_builds\"",        "Raid"       },
+            { "\"wvw zerg builds\"",    "WvWZerg"    },
+            { "\"wvw_zerg_builds\"",    "WvWZerg"    },
+            { "\"wvw roaming builds\"", "WvWRoaming" },
+            { "\"wvw_roaming_builds\"", "WvWRoaming" },
+            { "\"open world builds\"",  "OpenWorld"  },
+            { "\"open_world_builds\"",  "OpenWorld"  },
+            { "\"openworld_builds\"",   "OpenWorld"  },
+        };
+        for (auto& m : MAP) {
+            if (low.find(m.kw) != std::string::npos) {
+                out.game_mode = m.mode;
+                break;
+            }
+        }
+    }
+
+    out.source     = "metabattle";
     out.source_url = url;
     return !out.name.empty() || out.profession != GW2::Profession::None;
 }

@@ -717,6 +717,24 @@ bool ParseBuildPage(const std::string& url, GW2::SCBuild& out)
         }
     }
 
+    /* ── Game mode from gw2gametype-* CSS class ── */
+    {
+        struct { const char* cls; const char* mode; } MAP[] = {
+            { "gw2gametype-group-pve",  "GroupPvE"   },
+            { "gw2gametype-raid",       "Raid"        },
+            { "gw2gametype-open-world", "OpenWorld"   },
+            { "gw2gametype-wvw-zerg",   "WvWZerg"     },
+            { "gw2gametype-wvw-roaming","WvWRoaming"  },
+        };
+        for (auto& m : MAP) {
+            if (low.find(m.cls) != std::string::npos) {
+                out.game_mode = m.mode;
+                break;
+            }
+        }
+    }
+
+    out.source     = "hardstuck";
     out.source_url = url;
     return !out.name.empty() || out.profession != GW2::Profession::None;
 }

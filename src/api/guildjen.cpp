@@ -698,11 +698,48 @@ bool ParseBuildPage(const std::string& url, GW2::SCBuild& out, std::string& out_
         }
     }
 
+    /* ── Game mode from URL keywords ── */
+    {
+        std::string url_low = url;
+        std::transform(url_low.begin(), url_low.end(), url_low.begin(), ::tolower);
+        /* GuildJen build URLs don't carry explicit game mode, but page body may have keywords */
+        struct { const char* kw; const char* mode; } MAP[] = {
+            { "wvw-zerg",   "WvWZerg"    },
+            { "wvw_zerg",   "WvWZerg"    },
+            { "wvwzerg",    "WvWZerg"    },
+            { "wvw-roam",   "WvWRoaming" },
+            { "wvw_roam",   "WvWRoaming" },
+            { "roaming",    "WvWRoaming" },
+            { "open-world", "OpenWorld"  },
+            { "open_world", "OpenWorld"  },
+            { "openworld",  "OpenWorld"  },
+            { "raid",       "Raid"       },
+        };
+        for (auto& m : MAP) {
+            if (url_low.find(m.kw) != std::string::npos) {
+                out.game_mode = m.mode;
+                break;
+            }
+        }
+        /* Check page body if URL gave nothing */
+        if (out.game_mode.empty()) {
+            std::string body_low = html;
+            std::transform(body_low.begin(), body_low.end(), body_low.begin(), ::tolower);
+            for (auto& m : MAP) {
+                if (body_low.find(m.kw) != std::string::npos) {
+                    out.game_mode = m.mode;
+                    break;
+                }
+            }
+        }
+    }
+
     /* ── Metadata ── */
     out.name       = name.empty() ? "From GuildJen" : name;
     out.profession = profession;
     out.elite_spec = elite_spec;
     out.build_type = build_type;
+    out.source     = "guildjen";
     out.source_url = url;
     out.id = out.name;
     for (char& c : out.id) c = (c == ' ') ? '-' : (char)tolower((unsigned char)c);
