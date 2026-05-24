@@ -1549,6 +1549,16 @@ static GW2::SCBuild FormToBuild()
     b.benchmark_dps = s_benchmark_dps;
     b.is_legacy  = s_is_legacy;
     b.source_url = s_source_url;
+    /* Infer source tag from URL so filter and display work correctly */
+    if (!b.source_url.empty()) {
+        if      (b.source_url.find("snowcrows.com")  != std::string::npos) b.source = "snowcrows";
+        else if (b.source_url.find("hardstuck.gg")   != std::string::npos) b.source = "hardstuck";
+        else if (b.source_url.find("metabattle.com") != std::string::npos) b.source = "metabattle";
+        else if (b.source_url.find("guildjen.com")   != std::string::npos) b.source = "guildjen";
+        else                                                                 b.source = "user";
+    } else {
+        b.source = "user";
+    }
     b.id = b.name;
     for (char& c : b.id) c = (c == ' ') ? '-' : (char)tolower((unsigned char)c);
 

@@ -48,10 +48,10 @@ static const char* TYPE_FILTER_NAMES[] = {
     "All","Power","Condi","Support","Heal","Quickness","Alacrity"
 };
 static const char* SOURCE_FILTER_NAMES[] = {
-    "All Sources", "Snow Crows", "Hardstuck", "MetaBattle"
+    "All Sources", "Snow Crows", "Hardstuck", "MetaBattle", "GuildJen"
 };
 static const char* SOURCE_VALUES[] = {
-    "", "snowcrows", "hardstuck", "metabattle"
+    "", "snowcrows", "hardstuck", "metabattle", "guildjen"
 };
 static const char* GAME_MODE_FILTER_NAMES[] = {
     "All Modes", "Group PvE", "Raid", "Open World", "WvW Zerg", "WvW Roaming"
@@ -407,8 +407,17 @@ static void RenderBuildDropdown()
     if (s_filter_source > 0 || s_filter_game_mode > 0) {
         std::vector<const GW2::SCBuild*> filtered2;
         for (const auto* b : filtered) {
-            if (s_filter_source > 0 && b->source != SOURCE_VALUES[s_filter_source])
-                continue;
+            if (s_filter_source > 0) {
+                /* For builds saved before source tagging, infer from source_url */
+                std::string src = b->source;
+                if (src.empty() && !b->source_url.empty()) {
+                    if      (b->source_url.find("snowcrows.com")  != std::string::npos) src = "snowcrows";
+                    else if (b->source_url.find("hardstuck.gg")   != std::string::npos) src = "hardstuck";
+                    else if (b->source_url.find("metabattle.com") != std::string::npos) src = "metabattle";
+                    else if (b->source_url.find("guildjen.com")   != std::string::npos) src = "guildjen";
+                }
+                if (src != SOURCE_VALUES[s_filter_source]) continue;
+            }
             if (s_filter_game_mode > 0 && !b->game_mode.empty() &&
                 b->game_mode != GAME_MODE_VALUES[s_filter_game_mode])
                 continue;
