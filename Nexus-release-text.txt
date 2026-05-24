@@ -1,0 +1,56 @@
+AI Notice
+
+This addon includes AI-generated content and/or AI-assisted code.
+
+AI may have been used during development for tasks such as code generation, suggestions, documentation, or content creation. While efforts are made to review and validate all AI-generated output, it may not always be fully accurate, optimal, or free of unintended behavior.
+
+Users should be aware that:
+
+AI-generated components may contain errors or inconsistencies or may be unstable,
+behavior may change as the addon evolves or is updated,
+the developer remains responsible for ensuring compliance with the game's Terms of Service.
+
+
+BuildCoach
+
+A Guild Wars 2 addon for the Nexus addon loader that compares your current build against community reference builds and highlights differences.
+
+Features
+
+    573 reference builds bundled — Hardstuck and MetaBattle included out of the box
+    Filter builds by source (Hardstuck, MetaBattle, Snow Crows) and game mode (Raid, Open World, WvW Zerg, WvW Roaming, Group PvE)
+    Compares your equipped gear, traits, and skills against any reference build
+    Highlights mismatches in stats, upgrades, relics, food, and utility items
+    Shows the correct pets (Ranger) and legends (Revenant) for each build
+    Rotation guide viewer — fetches and displays skill priority / rotation sections from Hardstuck, MetaBattle, GuildJen, and Snow Crows; cached locally after first load
+    Import additional builds from community sites by pasting a URL into the Build Editor
+    Supports Snow Crows, Hardstuck, GuildJen, MetaBattle, and gw2skills.net
+    Supports all 9 professions and their elite specs
+    Export and share builds via compact AB: share codes
+
+Installation
+
+    Download BuildCoach.dll from the latest release
+    Place it in \addons\BuildCoach.dll
+    Launch the game and enable the addon in the Nexus addon manager
+
+Bundled Builds (v1.2.2)
+
+573 builds are included and ready to use immediately:
+
+    Hardstuck — 111 builds (Group PvE, Open World, WvW Zerg, WvW Roaming)
+    MetaBattle — 462 builds (Raid, Open World, WvW Zerg, WvW Roaming)
+
+Use the Source and Game Mode filter rows in the main window to narrow the list.
+
+Adding More Builds
+
+Import additional builds via the Build Editor:
+
+    Open the Build Editor panel from the toolbar
+    Paste a build page URL from any supported site into the Import URL field
+    Click the button for that site — traits, skills, gear, and consumables are loaded automatically
+    Give the build a name and click Save
+    The build now appears in the main window dropdown for comparison
+
+Supported import sources: Snow Crows, Hardstuck, GuildJen, MetaBattle, gw2skills.net
