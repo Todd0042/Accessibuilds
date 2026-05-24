@@ -454,21 +454,20 @@ __declspec(dllexport) void AddonUnload()
      * spinning, so in-flight HTTP calls exit quickly after Http::Shutdown(). */
     g_AddonShutdown = true;
 
+    /* Deregister all callbacks before anything else so no event or render
+     * callback fires against partially-torn-down state. */
     APIDefs->GUI_Deregister(OnRender);
     APIDefs->GUI_Deregister(OnOptions);
+    APIDefs->Events_Unsubscribe(EV_MUMBLE_IDENTITY_UPDATED, OnMumbleIdentityUpdated);
+    APIDefs->Events_Unsubscribe(EV_CHAT_MESSAGE, OnChatMessage);
+    APIDefs->InputBinds_Deregister(KB_TOGGLE);
 
     BuildEditor::Shutdown();
     MainWindow::Shutdown();
     CoachWindow::Shutdown();
     GW2Names::Shutdown();
-    ArcDPS::Shutdown();
+    ArcDPS::Shutdown();  /* unsubscribes arcdps combat events internally */
     Http::Shutdown();
-
-    APIDefs->Events_Unsubscribe(EV_MUMBLE_IDENTITY_UPDATED, OnMumbleIdentityUpdated);
-    APIDefs->Events_Unsubscribe(EV_CHAT_MESSAGE, OnChatMessage);
-    /* ArcDPS combat events are unsubscribed inside ArcDPS::Shutdown() */
-
-    APIDefs->InputBinds_Deregister(KB_TOGGLE);
 
     APIDefs->QuickAccess_Remove(QA_IDENTIFIER);
 
@@ -479,7 +478,7 @@ __declspec(dllexport) void AddonUnload()
 
 __declspec(dllexport) AddonDefinition_t* GetAddonDef()
 {
-    static AddonVersion_t version = {1, 2, 7, 0};
+    static AddonVersion_t version = {1, 2, 8, 0};
     static AddonDefinition_t def  = {
         ADDON_SIGNATURE,
         NEXUS_API_VERSION,
