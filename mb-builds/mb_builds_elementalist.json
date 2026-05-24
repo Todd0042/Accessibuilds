@@ -5494,5 +5494,5597 @@
       "opener": [],
       "loop": []
     }
+  },
+  {
+    "id": "mb-elementalist-catalyst-d-d-dps",
+    "name": "Catalyst - D/D DPS",
+    "profession": "Elementalist",
+    "elite_spec": "Catalyst",
+    "build_type": "Power",
+    "game_mode": "WvWZerg",
+    "tier": "Good",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "WvW Zerg build for Catalyst in GW2 that focuses on Strike damage, Utility and Crowd control. This build is rated good.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Catalyst_-_D/D_DPS",
+    "gw2skills_url": "",
+    "chat_code": "[&DQYfHSkbQyonDwAAkAAAAPgaAAD2AAAA9xoAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 31,
+        "traits": [
+          296,
+          334,
+          1510
+        ]
+      },
+      "line2": {
+        "spec_id": 41,
+        "traits": [
+          232,
+          214,
+          226
+        ]
+      },
+      "line3": {
+        "spec_id": 67,
+        "traits": [
+          2252,
+          2247,
+          2241
+        ]
+      }
+    },
+    "skills": {
+      "heal": 15718,
+      "utilities": [
+        5496,
+        5644,
+        5691
+      ],
+      "elite": 5557
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 104501,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 75940,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 96731,
+          "stat_id": 0,
+          "stat_name": "Dragon",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 95626,
+          "stat_id": 0,
+          "stat_name": "Dragon",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 74518,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 75183,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 72251,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 81908,
+          "stat_id": 1697,
+          "stat_name": "Dragon",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79745,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 70889,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79124,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 79712,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 73343,
+          "stat_id": 0,
+          "upgrade_id": 24615,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 73343,
+          "stat_id": 0,
+          "upgrade_id": 24548,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 73343,
+          "stat_id": 0,
+          "upgrade_id": 24575,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 73343,
+          "stat_id": 0,
+          "upgrade_id": 24615,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-elementalist-catalyst-spear-backline",
+    "name": "Catalyst - Spear Backline",
+    "profession": "Elementalist",
+    "elite_spec": "Catalyst",
+    "build_type": "Power",
+    "game_mode": "WvWZerg",
+    "tier": "Good",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "WvW Zerg build for Catalyst in GW2 that focuses on Strike damage, Utility and Crowd control. This build is rated good.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Catalyst_-_Spear_Backline",
+    "gw2skills_url": "",
+    "chat_code": "[&DQYfHykbQyb+GgAAkAAAAL4BAAD4GgAA9xoAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 31,
+        "traits": [
+          296,
+          334,
+          1510
+        ]
+      },
+      "line2": {
+        "spec_id": 41,
+        "traits": [
+          232,
+          214,
+          226
+        ]
+      },
+      "line3": {
+        "spec_id": 67,
+        "traits": [
+          2252,
+          2249,
+          2241
+        ]
+      }
+    },
+    "skills": {
+      "heal": 73088,
+      "utilities": [
+        73080,
+        73137,
+        72988
+      ],
+      "elite": 73054
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100916,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 75940,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 96731,
+          "stat_id": 0,
+          "stat_name": "Dragon",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 95626,
+          "stat_id": 0,
+          "stat_name": "Dragon",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 74518,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 75183,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 72251,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 81908,
+          "stat_id": 1697,
+          "stat_name": "Dragon",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79745,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 70889,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79124,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 79712,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 71698,
+          "stat_id": 0,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 24607
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 71698,
+          "stat_id": 0,
+          "upgrade_id": 24575,
+          "infusions": [],
+          "upgrade2_id": 24607
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-elementalist-catalyst-staff-backline",
+    "name": "Catalyst - Staff Backline",
+    "profession": "Elementalist",
+    "elite_spec": "Catalyst",
+    "build_type": "Power",
+    "game_mode": "WvWZerg",
+    "tier": "Meta",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "WvW Zerg build for Catalyst in GW2 that focuses on Strike damage, Utility and Crowd control. This is an archived build.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Catalyst_-_Staff_Backline",
+    "gw2skills_url": "",
+    "chat_code": "[&DQYfHykbQyb+GgAAkAAAAL4BAAD4GgAA9xoAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 31,
+        "traits": [
+          335,
+          334,
+          1510
+        ]
+      },
+      "line2": {
+        "spec_id": 41,
+        "traits": [
+          232,
+          214,
+          226
+        ]
+      },
+      "line3": {
+        "spec_id": 67,
+        "traits": [
+          2252,
+          2247,
+          2241
+        ]
+      }
+    },
+    "skills": {
+      "heal": 5491,
+      "utilities": [
+        5548,
+        5679,
+        5680
+      ],
+      "elite": 5501
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100947,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 75940,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 96731,
+          "stat_id": 0,
+          "stat_name": "Dragon",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 95626,
+          "stat_id": 0,
+          "stat_name": "Dragon",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 74518,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 75183,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 72251,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 81908,
+          "stat_id": 1697,
+          "stat_name": "Dragon",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79745,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 70889,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79124,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 79712,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 76889,
+          "stat_id": 0,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 24607
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 76889,
+          "stat_id": 0,
+          "upgrade_id": 24575,
+          "infusions": [],
+          "upgrade2_id": 24607
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-elementalist-catalyst-support-catalyst",
+    "name": "Catalyst - Support Catalyst",
+    "profession": "Elementalist",
+    "elite_spec": "Catalyst",
+    "build_type": "Support",
+    "game_mode": "WvWZerg",
+    "tier": "Good",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "WvW Zerg build for Catalyst in GW2 that focuses on Control, Support and Condition cleanse. This build is rated good.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Catalyst_-_Support_Catalyst",
+    "gw2skills_url": "",
+    "chat_code": "[&DQYaGxEpQz8nDwAAAAAAAI8AAAAdAQAA9xoAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 26,
+        "traits": [
+          289,
+          281,
+          1508
+        ]
+      },
+      "line2": {
+        "spec_id": 17,
+        "traits": [
+          348,
+          358,
+          361
+        ]
+      },
+      "line3": {
+        "spec_id": 67,
+        "traits": [
+          2252,
+          2234,
+          2251
+        ]
+      }
+    },
+    "skills": {
+      "heal": 5491,
+      "utilities": [
+        5548,
+        5679,
+        5680
+      ],
+      "elite": 5501
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 101268,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 73970,
+          "stat_id": 0,
+          "stat_name": "Minstrel",
+          "upgrade_id": 24839,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 73670,
+          "stat_id": 0,
+          "stat_name": "Minstrel",
+          "upgrade_id": 24839,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 74448,
+          "stat_id": 0,
+          "stat_name": "Minstrel",
+          "upgrade_id": 24839,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 75866,
+          "stat_id": 0,
+          "stat_name": "Minstrel",
+          "upgrade_id": 24839,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 70414,
+          "stat_id": 0,
+          "stat_name": "Minstrel",
+          "upgrade_id": 24839,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 75349,
+          "stat_id": 0,
+          "stat_name": "Minstrel",
+          "upgrade_id": 24839,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 1134,
+          "stat_name": "Minstrel",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79444,
+          "stat_id": 1134,
+          "stat_name": "Minstrel",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79745,
+          "stat_id": 1134,
+          "stat_name": "Minstrel",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 80241,
+          "stat_id": 1134,
+          "stat_name": "Minstrel",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79124,
+          "stat_id": 1134,
+          "stat_name": "Minstrel",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 79712,
+          "stat_id": 1134,
+          "stat_name": "Minstrel",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 75200,
+          "stat_id": 0,
+          "upgrade_id": 72339,
+          "infusions": [],
+          "upgrade2_id": 74326
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 75200,
+          "stat_id": 0,
+          "upgrade_id": 72339,
+          "infusions": [],
+          "upgrade2_id": 24584
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-elementalist-elementalist-staff-dps",
+    "name": "Elementalist - Staff DPS",
+    "profession": "Elementalist",
+    "elite_spec": "",
+    "build_type": "Power",
+    "game_mode": "WvWZerg",
+    "tier": "Meta",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "A backline DPS build for Elementalist in WvW Zergs that provides damage, CC and field support. Requires a precise usage of skills and positioning to survive.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Elementalist_-_Staff_DPS",
+    "gw2skills_url": "",
+    "chat_code": "[&DQYfLykbJS51AAAAkAAAAE4BAADrAAAAlwAAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 31,
+        "traits": [
+          335,
+          334,
+          294
+        ]
+      },
+      "line2": {
+        "spec_id": 41,
+        "traits": [
+          232,
+          214,
+          226
+        ]
+      },
+      "line3": {
+        "spec_id": 37,
+        "traits": [
+          266,
+          257,
+          263
+        ]
+      }
+    },
+    "skills": {
+      "heal": 5491,
+      "utilities": [
+        5548,
+        5679,
+        5680
+      ],
+      "elite": 5501
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 0,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 75940,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24714,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 76671,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24714,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 71968,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24714,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 74518,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24714,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 75183,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24714,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 72251,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24714,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79444,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79745,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 70889,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79124,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 79712,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 76889,
+          "stat_id": 0,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 24607
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 76889,
+          "stat_id": 0,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 24575
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-elementalist-evoker-spear-backline",
+    "name": "Evoker - Spear Backline",
+    "profession": "Elementalist",
+    "elite_spec": "Evoker",
+    "build_type": "Power",
+    "game_mode": "WvWZerg",
+    "tier": "Great",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "WvW Zerg build for Evoker in GW2 that focuses on Strike damage, Utility and Crowd control. This is a meta build.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Evoker_-_Spear_Backline",
+    "gw2skills_url": "",
+    "chat_code": "[&DQYfHSkbUBViHQAAcR0AAL4BAABNAQAAah0AAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 31,
+        "traits": [
+          296,
+          334,
+          1510
+        ]
+      },
+      "line2": {
+        "spec_id": 41,
+        "traits": [
+          232,
+          214,
+          226
+        ]
+      },
+      "line3": {
+        "spec_id": 80,
+        "traits": [
+          2391,
+          2342,
+          2335
+        ]
+      }
+    },
+    "skills": {
+      "heal": 73088,
+      "utilities": [
+        73080,
+        73137,
+        72988
+      ],
+      "elite": 73054
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100916,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 75940,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 76671,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 71968,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 74518,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 75183,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 72251,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79444,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79745,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 70889,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79124,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 79712,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 71698,
+          "stat_id": 0,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 24607
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 71698,
+          "stat_id": 0,
+          "upgrade_id": 24575,
+          "infusions": [],
+          "upgrade2_id": 24607
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-elementalist-evoker-specialized-water",
+    "name": "Evoker - Specialized Water",
+    "profession": "Elementalist",
+    "elite_spec": "Evoker",
+    "build_type": "Power",
+    "game_mode": "WvWZerg",
+    "tier": "",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "WvW Zerg build for Evoker in GW2 that focuses on Support, Healing and Condition cleanse. This is a basic build.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Evoker_-_Specialized_Water",
+    "gw2skills_url": "",
+    "chat_code": "[&DQYaHxEbUDZiHQAAix0AAI8AAAAdAQAAah0AAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 26,
+        "traits": [
+          289,
+          277,
+          1508
+        ]
+      },
+      "line2": {
+        "spec_id": 17,
+        "traits": [
+          360,
+          358,
+          362
+        ]
+      },
+      "line3": {
+        "spec_id": 80,
+        "traits": [
+          2415,
+          2342,
+          2437
+        ]
+      }
+    },
+    "skills": {
+      "heal": 5491,
+      "utilities": [
+        5548,
+        5679,
+        5680
+      ],
+      "elite": 5501
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 101268,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 73970,
+          "stat_id": 0,
+          "stat_name": "Minstrel",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 73670,
+          "stat_id": 0,
+          "stat_name": "Minstrel",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 74448,
+          "stat_id": 0,
+          "stat_name": "Minstrel",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 75866,
+          "stat_id": 0,
+          "stat_name": "Minstrel",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 70414,
+          "stat_id": 0,
+          "stat_name": "Minstrel",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 75349,
+          "stat_id": 0,
+          "stat_name": "Minstrel",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 1134,
+          "stat_name": "Minstrel",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79444,
+          "stat_id": 1134,
+          "stat_name": "Minstrel",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79745,
+          "stat_id": 1134,
+          "stat_name": "Minstrel",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 80241,
+          "stat_id": 1134,
+          "stat_name": "Minstrel",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79124,
+          "stat_id": 1134,
+          "stat_name": "Minstrel",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 79712,
+          "stat_id": 1134,
+          "stat_name": "Minstrel",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 75200,
+          "stat_id": 0,
+          "upgrade_id": 24582,
+          "infusions": [],
+          "upgrade2_id": 74326
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 75200,
+          "stat_id": 0,
+          "upgrade_id": 24607,
+          "infusions": [],
+          "upgrade2_id": 74326
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-elementalist-tempest-aurashare",
+    "name": "Tempest - Aurashare",
+    "profession": "Elementalist",
+    "elite_spec": "Tempest",
+    "build_type": "Power",
+    "game_mode": "WvWZerg",
+    "tier": "Meta",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "WvW Zerg build for Tempest in GW2 that focuses on Control, Support, Healing and Condition cleanse. This is an archived build.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Tempest_-_Aurashare",
+    "gw2skills_url": "",
+    "chat_code": "[&DQYfKxErMD/HEgAApRIAAHQSAAAdAQAAmRIAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 31,
+        "traits": [
+          335,
+          340,
+          294
+        ]
+      },
+      "line2": {
+        "spec_id": 17,
+        "traits": [
+          360,
+          358,
+          361
+        ]
+      },
+      "line3": {
+        "spec_id": 48,
+        "traits": [
+          1886,
+          2015,
+          1986
+        ]
+      }
+    },
+    "skills": {
+      "heal": 15718,
+      "utilities": [
+        5496,
+        5644,
+        5497
+      ],
+      "elite": 5678
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100411,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 73970,
+          "stat_id": 0,
+          "stat_name": "Minstrel",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 73670,
+          "stat_id": 0,
+          "stat_name": "Minstrel",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 74448,
+          "stat_id": 0,
+          "stat_name": "Minstrel",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 75866,
+          "stat_id": 0,
+          "stat_name": "Minstrel",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 70414,
+          "stat_id": 0,
+          "stat_name": "Minstrel",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 75349,
+          "stat_id": 0,
+          "stat_name": "Minstrel",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 1134,
+          "stat_name": "Minstrel",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79444,
+          "stat_id": 1134,
+          "stat_name": "Minstrel",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79745,
+          "stat_id": 1134,
+          "stat_name": "Minstrel",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 80241,
+          "stat_id": 1134,
+          "stat_name": "Minstrel",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79124,
+          "stat_id": 1134,
+          "stat_name": "Minstrel",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 79712,
+          "stat_id": 1134,
+          "stat_name": "Minstrel",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 75388,
+          "stat_id": 0,
+          "upgrade_id": 24584,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 72188,
+          "stat_id": 0,
+          "upgrade_id": 74326,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 75388,
+          "stat_id": 0,
+          "upgrade_id": 24607,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 72188,
+          "stat_id": 0,
+          "upgrade_id": 74326,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-elementalist-tempest-d-d-aurashare",
+    "name": "Tempest - D/D Aurashare",
+    "profession": "Elementalist",
+    "elite_spec": "Tempest",
+    "build_type": "Power",
+    "game_mode": "WvWZerg",
+    "tier": "",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "WvW Zerg build for Tempest in GW2 that focuses on Control, Support, Healing and Condition cleanse. This is a basic build.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Tempest_-_D/D_Aurashare",
+    "gw2skills_url": "",
+    "chat_code": "[&DQYfKxErMD/HEgAApRIAAHQSAAAdAQAAmRIAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 31,
+        "traits": [
+          335,
+          340,
+          294
+        ]
+      },
+      "line2": {
+        "spec_id": 17,
+        "traits": [
+          348,
+          358,
+          361
+        ]
+      },
+      "line3": {
+        "spec_id": 48,
+        "traits": [
+          1886,
+          2015,
+          1986
+        ]
+      }
+    },
+    "skills": {
+      "heal": 15718,
+      "utilities": [
+        5496,
+        5644,
+        5691
+      ],
+      "elite": 5557
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 101268,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 73970,
+          "stat_id": 0,
+          "stat_name": "Minstrel",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 73670,
+          "stat_id": 0,
+          "stat_name": "Minstrel",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 74448,
+          "stat_id": 0,
+          "stat_name": "Minstrel",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 75866,
+          "stat_id": 0,
+          "stat_name": "Minstrel",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 70414,
+          "stat_id": 0,
+          "stat_name": "Minstrel",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 75349,
+          "stat_id": 0,
+          "stat_name": "Minstrel",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 1134,
+          "stat_name": "Minstrel",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79444,
+          "stat_id": 1134,
+          "stat_name": "Minstrel",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79745,
+          "stat_id": 1134,
+          "stat_name": "Minstrel",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 80241,
+          "stat_id": 1134,
+          "stat_name": "Minstrel",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79124,
+          "stat_id": 1134,
+          "stat_name": "Minstrel",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 79712,
+          "stat_id": 1134,
+          "stat_name": "Minstrel",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 75388,
+          "stat_id": 0,
+          "upgrade_id": 24584,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 75388,
+          "stat_id": 0,
+          "upgrade_id": 74326,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 75388,
+          "stat_id": 0,
+          "upgrade_id": 24607,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 75388,
+          "stat_id": 0,
+          "upgrade_id": 74326,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-elementalist-tempest-dps-tempest",
+    "name": "Tempest - DPS Tempest",
+    "profession": "Elementalist",
+    "elite_spec": "Tempest",
+    "build_type": "Power",
+    "game_mode": "WvWZerg",
+    "tier": "Great",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "WvW Zerg build for Tempest in GW2 that focuses on Strike damage. This build is rated great.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Tempest_-_DPS_Tempest",
+    "gw2skills_url": "",
+    "chat_code": "[&DQYfHSkrMBcnDwAAdhIAAL4BAABNAQAAlwAAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 31,
+        "traits": [
+          296,
+          334,
+          1510
+        ]
+      },
+      "line2": {
+        "spec_id": 41,
+        "traits": [
+          232,
+          214,
+          1503
+        ]
+      },
+      "line3": {
+        "spec_id": 48,
+        "traits": [
+          1886,
+          1891,
+          1839
+        ]
+      }
+    },
+    "skills": {
+      "heal": 5508,
+      "utilities": [
+        5692,
+        5675,
+        29548
+      ],
+      "elite": 29533
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100916,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 75940,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 76671,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 71968,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 74518,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 75183,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 72251,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79444,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79745,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 70889,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79124,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 79712,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 75269,
+          "stat_id": 0,
+          "upgrade_id": 24607,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 75201,
+          "stat_id": 0,
+          "upgrade_id": 24615,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 75201,
+          "stat_id": 0,
+          "upgrade_id": 24575,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-elementalist-tempest-frontline-aurashare",
+    "name": "Tempest - Frontline Aurashare",
+    "profession": "Elementalist",
+    "elite_spec": "Tempest",
+    "build_type": "Power",
+    "game_mode": "WvWZerg",
+    "tier": "Meta",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "WvW Zerg build for Tempest in GW2 that focuses on Control, Support, Healing and Condition cleanse. This is an archived build.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Tempest_-_Frontline_Aurashare",
+    "gw2skills_url": "",
+    "chat_code": "[&DQYfKxErMD/HEgAApRIAAHQSAAAdAQAAmRIAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 31,
+        "traits": [
+          335,
+          340,
+          294
+        ]
+      },
+      "line2": {
+        "spec_id": 17,
+        "traits": [
+          360,
+          358,
+          361
+        ]
+      },
+      "line3": {
+        "spec_id": 48,
+        "traits": [
+          1886,
+          2015,
+          1986
+        ]
+      }
+    },
+    "skills": {
+      "heal": 15718,
+      "utilities": [
+        5496,
+        5644,
+        5497
+      ],
+      "elite": 5678
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 0,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 73970,
+          "stat_id": 0,
+          "stat_name": "Minstrel",
+          "upgrade_id": 24827,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 73670,
+          "stat_id": 0,
+          "stat_name": "Minstrel",
+          "upgrade_id": 24827,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 74448,
+          "stat_id": 0,
+          "stat_name": "Minstrel",
+          "upgrade_id": 24827,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 75866,
+          "stat_id": 0,
+          "stat_name": "Minstrel",
+          "upgrade_id": 24827,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 70414,
+          "stat_id": 0,
+          "stat_name": "Minstrel",
+          "upgrade_id": 24827,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 75349,
+          "stat_id": 0,
+          "stat_name": "Minstrel",
+          "upgrade_id": 24827,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 1134,
+          "stat_name": "Minstrel",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79444,
+          "stat_id": 1134,
+          "stat_name": "Minstrel",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79745,
+          "stat_id": 1134,
+          "stat_name": "Minstrel",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 80241,
+          "stat_id": 1134,
+          "stat_name": "Minstrel",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79124,
+          "stat_id": 1134,
+          "stat_name": "Minstrel",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 79712,
+          "stat_id": 1134,
+          "stat_name": "Minstrel",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 75388,
+          "stat_id": 0,
+          "upgrade_id": 24584,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 72188,
+          "stat_id": 0,
+          "upgrade_id": 74326,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 75388,
+          "stat_id": 0,
+          "upgrade_id": 24607,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 72188,
+          "stat_id": 0,
+          "upgrade_id": 74326,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-elementalist-tempest-hammer-tempest",
+    "name": "Tempest - Hammer Tempest",
+    "profession": "Elementalist",
+    "elite_spec": "Tempest",
+    "build_type": "Power",
+    "game_mode": "WvWZerg",
+    "tier": "Meta",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "WvW Zerg build for Tempest in GW2 that focuses on Strike damage. This is an archived build.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Tempest_-_Hammer_Tempest",
+    "gw2skills_url": "",
+    "chat_code": "[&DQYfHSkrMBcXAQAAHAEAAL4BAADDEgAAlwAAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 31,
+        "traits": [
+          296,
+          334,
+          1510
+        ]
+      },
+      "line2": {
+        "spec_id": 41,
+        "traits": [
+          232,
+          214,
+          1503
+        ]
+      },
+      "line3": {
+        "spec_id": 48,
+        "traits": [
+          1962,
+          1891,
+          2033
+        ]
+      }
+    },
+    "skills": {
+      "heal": 62925,
+      "utilities": [
+        62884,
+        62758,
+        62807
+      ],
+      "elite": 62910
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100916,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 97161,
+          "stat_id": 0,
+          "stat_name": "Dragon",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 76671,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 95626,
+          "stat_id": 0,
+          "stat_name": "Dragon",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 74518,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 75183,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 96062,
+          "stat_id": 0,
+          "stat_name": "Dragon",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 96008,
+          "stat_id": 1697,
+          "stat_name": "Dragon",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 81908,
+          "stat_id": 1697,
+          "stat_name": "Dragon",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79745,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 70889,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79124,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 79712,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 75897,
+          "stat_id": 0,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 24607
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 75897,
+          "stat_id": 0,
+          "upgrade_id": 24575,
+          "infusions": [],
+          "upgrade2_id": 24615
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-elementalist-tempest-staff-support",
+    "name": "Tempest - Staff Support",
+    "profession": "Elementalist",
+    "elite_spec": "Tempest",
+    "build_type": "Support",
+    "game_mode": "WvWZerg",
+    "tier": "Good",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "WvW Zerg build for Tempest in GW2 that focuses on Control, Support, Healing and Condition cleanse. This build is rated good.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Tempest_-_Staff_Support",
+    "gw2skills_url": "",
+    "chat_code": "[&DQYfKxEpMD/HEgAAdBIAAKUSAAAdAQAAmRIAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 26,
+        "traits": [
+          289,
+          281,
+          1508
+        ]
+      },
+      "line2": {
+        "spec_id": 17,
+        "traits": [
+          348,
+          358,
+          361
+        ]
+      },
+      "line3": {
+        "spec_id": 48,
+        "traits": [
+          1886,
+          2015,
+          1986
+        ]
+      }
+    },
+    "skills": {
+      "heal": 5491,
+      "utilities": [
+        5548,
+        5679,
+        5680
+      ],
+      "elite": 5501
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 101268,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 73970,
+          "stat_id": 0,
+          "stat_name": "Minstrel",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 73670,
+          "stat_id": 0,
+          "stat_name": "Minstrel",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 74448,
+          "stat_id": 0,
+          "stat_name": "Minstrel",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 75866,
+          "stat_id": 0,
+          "stat_name": "Minstrel",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 70414,
+          "stat_id": 0,
+          "stat_name": "Minstrel",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 75349,
+          "stat_id": 0,
+          "stat_name": "Minstrel",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 1134,
+          "stat_name": "Minstrel",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79444,
+          "stat_id": 1134,
+          "stat_name": "Minstrel",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79745,
+          "stat_id": 1134,
+          "stat_name": "Minstrel",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 80241,
+          "stat_id": 1134,
+          "stat_name": "Minstrel",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79124,
+          "stat_id": 1134,
+          "stat_name": "Minstrel",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 79712,
+          "stat_id": 1134,
+          "stat_name": "Minstrel",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 75200,
+          "stat_id": 0,
+          "upgrade_id": 24584,
+          "infusions": [],
+          "upgrade2_id": 74326
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 75200,
+          "stat_id": 0,
+          "upgrade_id": 24607,
+          "infusions": [],
+          "upgrade2_id": 74326
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-elementalist-weaver-staff-backline",
+    "name": "Weaver - Staff Backline",
+    "profession": "Elementalist",
+    "elite_spec": "Weaver",
+    "build_type": "Power",
+    "game_mode": "WvWZerg",
+    "tier": "",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "WvW Zerg build for Weaver in GW2 that focuses on Strike damage, Utility and Crowd control. This is a basic build.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Weaver_-_Staff_Backline",
+    "gw2skills_url": "",
+    "chat_code": "[&DQYfHikbOBt1AAAAkAAAAPUVAAC+AQAAlwAAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 31,
+        "traits": [
+          328,
+          334,
+          1510
+        ]
+      },
+      "line2": {
+        "spec_id": 41,
+        "traits": [
+          232,
+          214,
+          226
+        ]
+      },
+      "line3": {
+        "spec_id": 56,
+        "traits": [
+          2115,
+          2061,
+          2131
+        ]
+      }
+    },
+    "skills": {
+      "heal": 5491,
+      "utilities": [
+        5548,
+        5679,
+        5680
+      ],
+      "elite": 5501
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100947,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 75940,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 76671,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 71968,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 74518,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 75183,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 72251,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79444,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79745,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 70889,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79124,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 79712,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 76889,
+          "stat_id": 0,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 24607
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 76889,
+          "stat_id": 0,
+          "upgrade_id": 24575,
+          "infusions": [],
+          "upgrade2_id": 24607
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-elementalist-catalyst-celestial-d-d-roamer",
+    "name": "Catalyst - Celestial D/D Roamer",
+    "profession": "Elementalist",
+    "elite_spec": "Catalyst",
+    "build_type": "Power",
+    "game_mode": "WvWRoaming",
+    "tier": "Great",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "WvW Roaming build for Catalyst in GW2 that focuses on Control, Mobility and Hybrid damage. This build is rated great.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Catalyst_-_Celestial_D/D_Roamer",
+    "gw2skills_url": "",
+    "chat_code": "[&DQYfKSUeQx90AHUAHAFPAZAAkADvGusA9xoAAAAAAAAAAAAAAAAAAAAAAAACLwAzAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 31,
+        "traits": [
+          296,
+          340,
+          294
+        ]
+      },
+      "line2": {
+        "spec_id": 37,
+        "traits": [
+          266,
+          257,
+          238
+        ]
+      },
+      "line3": {
+        "spec_id": 67,
+        "traits": [
+          2224,
+          2234,
+          2233
+        ]
+      }
+    },
+    "skills": {
+      "heal": 15718,
+      "utilities": [
+        5496,
+        5644,
+        5691
+      ],
+      "elite": 5557
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 99997,
+      "food_id": 91713,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 47937,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 24702,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 47939,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 24702,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 47935,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 24702,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 47936,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 24702,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 47938,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 24702,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 47934,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 24702,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 588,
+          "stat_name": "Celestial",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 39243,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 39242,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 39282,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 37088,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 37078,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 47007,
+          "stat_id": 0,
+          "upgrade_id": 24605,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 47007,
+          "stat_id": 0,
+          "upgrade_id": 24609,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 47007,
+          "stat_id": 0,
+          "upgrade_id": 86170,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-elementalist-catalyst-celestial-hammer-roamer",
+    "name": "Catalyst - Celestial Hammer Roamer",
+    "profession": "Elementalist",
+    "elite_spec": "Catalyst",
+    "build_type": "Power",
+    "game_mode": "WvWRoaming",
+    "tier": "Good",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "WvW Roaming build for Catalyst in GW2 that focuses on Hybrid damage and Sustain. This build is rated good.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Catalyst_-_Celestial_Hammer_Roamer",
+    "gw2skills_url": "",
+    "chat_code": "[&DQYfKyUeQx90AHQAHAHvGpAA6wDvGo4A9xr3GgAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 31,
+        "traits": [
+          335,
+          340,
+          294
+        ]
+      },
+      "line2": {
+        "spec_id": 37,
+        "traits": [
+          266,
+          257,
+          238
+        ]
+      },
+      "line3": {
+        "spec_id": 67,
+        "traits": [
+          2224,
+          2234,
+          2233
+        ]
+      }
+    },
+    "skills": {
+      "heal": 62925,
+      "utilities": [
+        62884,
+        62758,
+        62807
+      ],
+      "elite": 62910
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 99997,
+      "food_id": 91713,
+      "utility_id": 78305,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 47937,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 24702,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 47939,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 24702,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 47935,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 24702,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 47936,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 24702,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 47938,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 24702,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 47934,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 24702,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 588,
+          "stat_name": "Celestial",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 39243,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 39242,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 39282,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 37088,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 37078,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 47010,
+          "stat_id": 0,
+          "upgrade_id": 24609,
+          "infusions": [],
+          "upgrade2_id": 24605
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-elementalist-catalyst-celestial-s-d-signet-cata-roamer",
+    "name": "Catalyst - Celestial S/D Signet Cata Roamer",
+    "profession": "Elementalist",
+    "elite_spec": "Catalyst",
+    "build_type": "Power",
+    "game_mode": "WvWRoaming",
+    "tier": "Great",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "WvW Roaming build for Catalyst in GW2 that focuses on Hybrid damage and Mobility. This build is rated great.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Catalyst_-_Celestial_S/D_Signet_Cata_Roamer",
+    "gw2skills_url": "",
+    "chat_code": "[&DQYfKRovQx90AHQAjwDrAJEAkAAcAY4A9xqWAAAAAAAAAAAAAAAAAAAAAAACWgAvAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 31,
+        "traits": [
+          296,
+          340,
+          294
+        ]
+      },
+      "line2": {
+        "spec_id": 26,
+        "traits": [
+          289,
+          277,
+          287
+        ]
+      },
+      "line3": {
+        "spec_id": 67,
+        "traits": [
+          2224,
+          2234,
+          2233
+        ]
+      }
+    },
+    "skills": {
+      "heal": 5508,
+      "utilities": [
+        5692,
+        5675,
+        5691
+      ],
+      "elite": 5557
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 103015,
+      "food_id": 12488,
+      "utility_id": 81079,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 47937,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 24765,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 47939,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 24765,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 47935,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 24765,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 47936,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 24765,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 47938,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 24765,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 47934,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 24765,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 588,
+          "stat_name": "Celestial",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 39243,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 39242,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 39282,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 37088,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 37078,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 47016,
+          "stat_id": 0,
+          "upgrade_id": 24605,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 47007,
+          "stat_id": 0,
+          "upgrade_id": 24609,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-elementalist-catalyst-celestial-s-f-roamer",
+    "name": "Catalyst - Celestial S/F Roamer",
+    "profession": "Elementalist",
+    "elite_spec": "Catalyst",
+    "build_type": "Power",
+    "game_mode": "WvWRoaming",
+    "tier": "Meta",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "WvW Roaming build for Catalyst in GW2 that focuses on Hybrid damage and Mobility. This is an archived build.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Catalyst_-_Celestial_S/F_Roamer",
+    "gw2skills_url": "",
+    "chat_code": "[&DQYfKSUZQx90AHUA7xpPAZAAkAAcAesA9xqWAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 31,
+        "traits": [
+          296,
+          340,
+          294
+        ]
+      },
+      "line2": {
+        "spec_id": 37,
+        "traits": [
+          253,
+          1673,
+          238
+        ]
+      },
+      "line3": {
+        "spec_id": 67,
+        "traits": [
+          2224,
+          2234,
+          2233
+        ]
+      }
+    },
+    "skills": {
+      "heal": 5508,
+      "utilities": [
+        5692,
+        5675,
+        5497
+      ],
+      "elite": 5678
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 0,
+      "food_id": 91713,
+      "utility_id": 77567,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 47937,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 24765,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 47939,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 24765,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 47935,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 24765,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 47936,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 24765,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 47938,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 24765,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 47934,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 24765,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 588,
+          "stat_name": "Celestial",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 39243,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 39242,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 39282,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 37088,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 37078,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 47016,
+          "stat_id": 0,
+          "upgrade_id": 24609,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 47008,
+          "stat_id": 0,
+          "upgrade_id": 24607,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-elementalist-catalyst-fresh-air-cata-roamer",
+    "name": "Catalyst - Fresh Air Cata Roamer",
+    "profession": "Elementalist",
+    "elite_spec": "Catalyst",
+    "build_type": "Power",
+    "game_mode": "WvWRoaming",
+    "tier": "Great",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "WvW Roaming build for Catalyst in GW2 that focuses on Strike damage, Mobility and Control. This build is rated great.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Catalyst_-_Fresh_Air_Cata_Roamer",
+    "gw2skills_url": "",
+    "chat_code": "[&DQYpKiU+Qz/+GnUATwFPAZAAkADvGusA9xoAAAAAAAAAAAAAAAAAAAAAAAADVgAxAAkBAA==]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 41,
+        "traits": [
+          224,
+          214,
+          1503
+        ]
+      },
+      "line2": {
+        "spec_id": 37,
+        "traits": [
+          266,
+          257,
+          238
+        ]
+      },
+      "line3": {
+        "spec_id": 67,
+        "traits": [
+          2224,
+          2234,
+          2251
+        ]
+      }
+    },
+    "skills": {
+      "heal": 5508,
+      "utilities": [
+        5692,
+        5675,
+        5497
+      ],
+      "elite": 5678
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100947,
+      "food_id": 91734,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 75940,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 76671,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 71968,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 74518,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 75183,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 72251,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79444,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79745,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 70889,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79124,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 79712,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 75269,
+          "stat_id": 0,
+          "upgrade_id": 67340,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 74516,
+          "stat_id": 0,
+          "upgrade_id": 24607,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 74516,
+          "stat_id": 0,
+          "upgrade_id": 24575,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-elementalist-catalyst-lr-catalyst-roamer",
+    "name": "Catalyst - LR Catalyst Roamer",
+    "profession": "Elementalist",
+    "elite_spec": "Catalyst",
+    "build_type": "Power",
+    "game_mode": "WvWRoaming",
+    "tier": "Viable",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "WvW Roaming build for Catalyst in GW2 that focuses on Control, Mobility and Direct damage. This is a basic build.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Catalyst_-_LR_Catalyst_Roamer",
+    "gw2skills_url": "",
+    "chat_code": "[&DQYpOiUaQx50AHUAHAFPAZAAkADmAOsA9xoAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 41,
+        "traits": [
+          224,
+          214,
+          1672
+        ]
+      },
+      "line2": {
+        "spec_id": 37,
+        "traits": [
+          266,
+          1673,
+          238
+        ]
+      },
+      "line3": {
+        "spec_id": 67,
+        "traits": [
+          2252,
+          2234,
+          2233
+        ]
+      }
+    },
+    "skills": {
+      "heal": 15718,
+      "utilities": [
+        5496,
+        5644,
+        5691
+      ],
+      "elite": 5557
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 0,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 75940,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24702,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 76671,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24702,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 71968,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24702,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 74518,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24702,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 75183,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24702,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 72251,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24702,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79444,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79745,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 70889,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79124,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 79712,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 73343,
+          "stat_id": 0,
+          "upgrade_id": 67340,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 73343,
+          "stat_id": 0,
+          "upgrade_id": 24607,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 73343,
+          "stat_id": 0,
+          "upgrade_id": 24575,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-elementalist-catalyst-power-d-d-earth-cata-roamer",
+    "name": "Catalyst - Power D/D Earth Cata Roamer",
+    "profession": "Elementalist",
+    "elite_spec": "Catalyst",
+    "build_type": "Power",
+    "game_mode": "WvWRoaming",
+    "tier": "Viable",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "WvW Roaming build for Catalyst in GW2 that focuses on Control, Mobility and Strike damage. This is a test build.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Catalyst_-_Power_D/D_Earth_Cata_Roamer",
+    "gw2skills_url": "",
+    "chat_code": "[&DQYaLyUeQxV0AHUAcwBPAZAAkQCRABwB9xqWAAAAAAAAAAAAAAAAAAAAAAAEWgAvAFYAMQAA]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 26,
+        "traits": [
+          289,
+          277,
+          287
+        ]
+      },
+      "line2": {
+        "spec_id": 37,
+        "traits": [
+          266,
+          257,
+          238
+        ]
+      },
+      "line3": {
+        "spec_id": 67,
+        "traits": [
+          2230,
+          2247,
+          2233
+        ]
+      }
+    },
+    "skills": {
+      "heal": 15718,
+      "utilities": [
+        5496,
+        5644,
+        5691
+      ],
+      "elite": 5557
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 103901,
+      "food_id": 43451,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48081,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48083,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48079,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48080,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48082,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48078,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 89999,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 37009,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 39233,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 39232,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 39273,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 37075,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 37086,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46760,
+          "stat_id": 0,
+          "upgrade_id": 67340,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 46760,
+          "stat_id": 0,
+          "upgrade_id": 24607,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 46760,
+          "stat_id": 0,
+          "upgrade_id": 24575,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-elementalist-elementalist-s-f-fresh-air-roamer",
+    "name": "Elementalist - S/F Fresh Air Roamer",
+    "profession": "Elementalist",
+    "elite_spec": "",
+    "build_type": "Power",
+    "game_mode": "WvWRoaming",
+    "tier": "Good",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "WvW Roaming build for Elementalist in GW2 that focuses on Strike damage, Mobility and Control. This build is rated good.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Elementalist_-_S/F_Fresh_Air_Roamer",
+    "gw2skills_url": "",
+    "chat_code": "[&DQYfKykqJT50AHUATwH2AJAA6wAcAY4AlgCWAAAAAAAAAAAAAAAAAAAAAAADVgAxAAkBAA==]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 31,
+        "traits": [
+          335,
+          340,
+          294
+        ]
+      },
+      "line2": {
+        "spec_id": 41,
+        "traits": [
+          224,
+          214,
+          1503
+        ]
+      },
+      "line3": {
+        "spec_id": 37,
+        "traits": [
+          266,
+          257,
+          1511
+        ]
+      }
+    },
+    "skills": {
+      "heal": 5508,
+      "utilities": [
+        5692,
+        5675,
+        5497
+      ],
+      "elite": 5678
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100947,
+      "food_id": 91805,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 75940,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 76671,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 71968,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 74518,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 75183,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 72251,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79444,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79745,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 70889,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79124,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 79712,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 75269,
+          "stat_id": 0,
+          "upgrade_id": 67340,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 74516,
+          "stat_id": 0,
+          "upgrade_id": 24607,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 74516,
+          "stat_id": 0,
+          "upgrade_id": 24575,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-elementalist-evoker-celestial-d-d-toad-roamer",
+    "name": "Evoker - Celestial D/D Toad Roamer",
+    "profession": "Elementalist",
+    "elite_spec": "Evoker",
+    "build_type": "Power",
+    "game_mode": "WvWRoaming",
+    "tier": "Great",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "WvW Roaming build for Evoker in GW2 that focuses on Hybrid damage, Control, Sustain and Mobility. This build is rated great.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Evoker_-_Celestial_D/D_Toad_Roamer",
+    "gw2skills_url": "",
+    "chat_code": "[&DQYaOiU7UB51AGIdTwFPAZAA9gByHXIdah2WAAAAAAAAAAAAAAAAAAAAAAADCQFWAC8AAA==]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 26,
+        "traits": [
+          1507,
+          281,
+          1674
+        ]
+      },
+      "line2": {
+        "spec_id": 37,
+        "traits": [
+          1487,
+          1673,
+          1511
+        ]
+      },
+      "line3": {
+        "spec_id": 80,
+        "traits": [
+          2415,
+          2438,
+          2335
+        ]
+      }
+    },
+    "skills": {
+      "heal": 15718,
+      "utilities": [
+        5496,
+        5644,
+        5691
+      ],
+      "elite": 5557
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 101166,
+      "food_id": 91713,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 47937,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 24765,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 47939,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 24765,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 47935,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 24765,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 47936,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 24765,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 47938,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 24765,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 47934,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 24765,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 588,
+          "stat_name": "Celestial",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 39243,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 39242,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 39282,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 37088,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 37078,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 47007,
+          "stat_id": 0,
+          "upgrade_id": 70825,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 47007,
+          "stat_id": 0,
+          "upgrade_id": 67340,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 47007,
+          "stat_id": 0,
+          "upgrade_id": 86170,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-elementalist-evoker-scepter-harevoker-roamer",
+    "name": "Evoker - Scepter Harevoker Roamer",
+    "profession": "Elementalist",
+    "elite_spec": "Evoker",
+    "build_type": "Power",
+    "game_mode": "WvWRoaming",
+    "tier": "Great",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "WvW Roaming build for Evoker in GW2 that focuses on Strike damage and Control. This is a meta build.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Evoker_-_Scepter_Harevoker_Roamer",
+    "gw2skills_url": "",
+    "chat_code": "[&DQYpKiU+UBZiHXUATwFPAZAAkABxHesAah0AAAAAAAAAAAAAAAAAAAAAAAADVgAxAAkBAA==]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 41,
+        "traits": [
+          224,
+          214,
+          1503
+        ]
+      },
+      "line2": {
+        "spec_id": 37,
+        "traits": [
+          266,
+          257,
+          1511
+        ]
+      },
+      "line3": {
+        "spec_id": 80,
+        "traits": [
+          2415,
+          2342,
+          2335
+        ]
+      }
+    },
+    "skills": {
+      "heal": 5508,
+      "utilities": [
+        5692,
+        5675,
+        5497
+      ],
+      "elite": 5678
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 104733,
+      "food_id": 91734,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 75940,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 76671,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 71968,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 74518,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 75183,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 72251,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79444,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79745,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 70889,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79124,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 79712,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 75269,
+          "stat_id": 0,
+          "upgrade_id": 67340,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 74516,
+          "stat_id": 0,
+          "upgrade_id": 24607,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 74516,
+          "stat_id": 0,
+          "upgrade_id": 24575,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-elementalist-evoker-spear-harevoker-roamer",
+    "name": "Evoker - Spear Harevoker Roamer",
+    "profession": "Elementalist",
+    "elite_spec": "Evoker",
+    "build_type": "Power",
+    "game_mode": "WvWRoaming",
+    "tier": "Great",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "WvW Roaming build for Evoker in GW2 that focuses on Strike damage and Control. This build is rated great.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Evoker_-_Spear_Harevoker_Roamer",
+    "gw2skills_url": "",
+    "chat_code": "[&DQYpNiU6UBV1AHUATwFPAU4BkABxHesAah0AAAAAAAAAAAAAAAAAAAAAAAADCQFWAC8AAA==]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 41,
+        "traits": [
+          224,
+          229,
+          1672
+        ]
+      },
+      "line2": {
+        "spec_id": 37,
+        "traits": [
+          266,
+          1673,
+          1511
+        ]
+      },
+      "line3": {
+        "spec_id": 80,
+        "traits": [
+          2415,
+          2342,
+          2335
+        ]
+      }
+    },
+    "skills": {
+      "heal": 73088,
+      "utilities": [
+        73080,
+        73137,
+        72988
+      ],
+      "elite": 73054
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100947,
+      "food_id": 91734,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 75940,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 76671,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 71968,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 74518,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 75183,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 72251,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79444,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79745,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 70889,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79124,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 79712,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 71698,
+          "stat_id": 0,
+          "upgrade_id": 67340,
+          "infusions": [],
+          "upgrade2_id": 24607
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 74516,
+          "stat_id": 0,
+          "upgrade_id": 24575,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-elementalist-tempest-condition-auroamancer",
+    "name": "Tempest - Condition Auroamancer",
+    "profession": "Elementalist",
+    "elite_spec": "Tempest",
+    "build_type": "Condi",
+    "game_mode": "WvWRoaming",
+    "tier": "Good",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "WvW Roaming build for Tempest in GW2 that focuses on Sustain, Support and Condition damage. This is a test build.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Tempest_-_Condition_Auroamancer",
+    "gw2skills_url": "",
+    "chat_code": "[&DQYfKRonMD90AAAAkQAAAHQSAAAcAQAAJgAAAAAAAAAAAAAAAAAAAAAAAAADVgAvADEAAA==]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 31,
+        "traits": [
+          296,
+          340,
+          294
+        ]
+      },
+      "line2": {
+        "spec_id": 26,
+        "traits": [
+          289,
+          275,
+          287
+        ]
+      },
+      "line3": {
+        "spec_id": 48,
+        "traits": [
+          1886,
+          2015,
+          1986
+        ]
+      }
+    },
+    "skills": {
+      "heal": 5508,
+      "utilities": [
+        5692,
+        5675,
+        5691
+      ],
+      "elite": 5557
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100158,
+      "food_id": 76415,
+      "utility_id": 86287,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 76834,
+          "stat_id": 0,
+          "stat_name": "Trailblazer",
+          "upgrade_id": 24765,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 76406,
+          "stat_id": 0,
+          "stat_name": "Trailblazer",
+          "upgrade_id": 24765,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 74524,
+          "stat_id": 0,
+          "stat_name": "Trailblazer",
+          "upgrade_id": 24765,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 70993,
+          "stat_id": 0,
+          "stat_name": "Trailblazer",
+          "upgrade_id": 24765,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 73392,
+          "stat_id": 0,
+          "stat_name": "Trailblazer",
+          "upgrade_id": 24765,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 72816,
+          "stat_id": 0,
+          "stat_name": "Trailblazer",
+          "upgrade_id": 24765,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 42425,
+          "stat_id": 0,
+          "stat_name": "Apothecary",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 39559,
+          "stat_id": 0,
+          "stat_name": "Apothecary",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 39558,
+          "stat_id": 0,
+          "stat_name": "Apothecary",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 80241,
+          "stat_id": 1097,
+          "stat_name": "Shaman",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79124,
+          "stat_id": 1097,
+          "stat_name": "Shaman",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 39609,
+          "stat_id": 0,
+          "stat_name": "Apothecary",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 73287,
+          "stat_id": 0,
+          "upgrade_id": 24605,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 75422,
+          "stat_id": 0,
+          "upgrade_id": 24609,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-elementalist-tempest-lightning-overload-roamer",
+    "name": "Tempest - Lightning Overload Roamer",
+    "profession": "Elementalist",
+    "elite_spec": "Tempest",
+    "build_type": "Power",
+    "game_mode": "WvWRoaming",
+    "tier": "Meta",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "WvW Roaming build for Tempest in GW2 that focuses on Direct damage, Mobility and Control. This is an archived build.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Tempest_-_Lightning_Overload_Roamer",
+    "gw2skills_url": "",
+    "chat_code": "[&DQYpKREVMBt1AAAA6wAAAJAAAAB0EgAAlgAAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 41,
+        "traits": [
+          227,
+          214,
+          1503
+        ]
+      },
+      "line2": {
+        "spec_id": 17,
+        "traits": [
+          348,
+          364,
+          362
+        ]
+      },
+      "line3": {
+        "spec_id": 48,
+        "traits": [
+          1886,
+          1902,
+          1839
+        ]
+      }
+    },
+    "skills": {
+      "heal": 15718,
+      "utilities": [
+        5496,
+        5644,
+        29548
+      ],
+      "elite": 29533
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 0,
+      "food_id": 91734,
+      "utility_id": 78305,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 75940,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 73653,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 76671,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 73653,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 71968,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 73653,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 74518,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 73653,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 75183,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 73653,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 72251,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 73653,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 657,
+          "stat_name": "Knight",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79444,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79745,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 39587,
+          "stat_id": 0,
+          "stat_name": "Knight",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 39600,
+          "stat_id": 0,
+          "stat_name": "Knight",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 79712,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 73343,
+          "stat_id": 0,
+          "upgrade_id": 72872,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 74516,
+          "stat_id": 0,
+          "upgrade_id": 67340,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-elementalist-weaver-fresh-air-roamer",
+    "name": "Weaver - Fresh Air Roamer",
+    "profession": "Elementalist",
+    "elite_spec": "Weaver",
+    "build_type": "Power",
+    "game_mode": "WvWRoaming",
+    "tier": "Good",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "WvW Roaming build for Weaver in GW2 that focuses on Strike damage, Mobility and Control. This build is rated good.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Weaver_-_Fresh_Air_Roamer",
+    "gw2skills_url": "",
+    "chat_code": "[&DQYpKiUvOBkXAXQA9gAAAJAAAABQAQAAlwAAAAAAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 41,
+        "traits": [
+          224,
+          214,
+          1503
+        ]
+      },
+      "line2": {
+        "spec_id": 37,
+        "traits": [
+          1487,
+          257,
+          263
+        ]
+      },
+      "line3": {
+        "spec_id": 56,
+        "traits": [
+          2177,
+          2061,
+          2131
+        ]
+      }
+    },
+    "skills": {
+      "heal": 5508,
+      "utilities": [
+        5692,
+        5675,
+        5497
+      ],
+      "elite": 5678
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100947,
+      "food_id": 91805,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 75940,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24723,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 76671,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24723,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 71968,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24723,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 74518,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24723,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 75183,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24723,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 72251,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24723,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 81908,
+          "stat_id": 1697,
+          "stat_name": "Dragon",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 96199,
+          "stat_id": 1697,
+          "stat_name": "Dragon",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 95996,
+          "stat_id": 0,
+          "stat_name": "Dragon",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 91234,
+          "stat_id": 1697,
+          "stat_name": "Dragon",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 96167,
+          "stat_id": 1697,
+          "stat_name": "Dragon",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 75269,
+          "stat_id": 0,
+          "upgrade_id": 67340,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 74516,
+          "stat_id": 0,
+          "upgrade_id": 24607,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 74516,
+          "stat_id": 0,
+          "upgrade_id": 24575,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-elementalist-weaver-lightning-rod-roamer",
+    "name": "Weaver - Lightning Rod Roamer",
+    "profession": "Elementalist",
+    "elite_spec": "Weaver",
+    "build_type": "Power",
+    "game_mode": "WvWRoaming",
+    "tier": "Good",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "WvW Roaming build for Weaver in GW2 that focuses on Strike damage, Mobility and Control. This build is rated good.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Weaver_-_Lightning_Rod_Roamer",
+    "gw2skills_url": "",
+    "chat_code": "[&DQYpOiUeODl0AHQAHAEAAJAAAADmAAAAlgAAAAAAAAAAAAAAAAAAAAAAAAACLwAxAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 41,
+        "traits": [
+          224,
+          214,
+          1672
+        ]
+      },
+      "line2": {
+        "spec_id": 37,
+        "traits": [
+          266,
+          257,
+          238
+        ]
+      },
+      "line3": {
+        "spec_id": 56,
+        "traits": [
+          2177,
+          2061,
+          2138
+        ]
+      }
+    },
+    "skills": {
+      "heal": 15718,
+      "utilities": [
+        5496,
+        5644,
+        5497
+      ],
+      "elite": 5678
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100947,
+      "food_id": 91734,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 75940,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 73653,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 76671,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 73653,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 71968,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 73653,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 74518,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 73653,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 75183,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 73653,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 72251,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 73653,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 39229,
+          "stat_id": 0,
+          "stat_name": "Cavalier",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79745,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 70889,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 37079,
+          "stat_id": 0,
+          "stat_name": "Cavalier",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 37090,
+          "stat_id": 0,
+          "stat_name": "Cavalier",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 73343,
+          "stat_id": 0,
+          "upgrade_id": 72872,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 74516,
+          "stat_id": 0,
+          "upgrade_id": 67340,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-elementalist-weaver-starfire-roamer",
+    "name": "Weaver - Starfire Roamer",
+    "profession": "Elementalist",
+    "elite_spec": "Weaver",
+    "build_type": "Power",
+    "game_mode": "WvWRoaming",
+    "tier": "Great",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "WvW Roaming build for Weaver in GW2 that focuses on Hybrid damage, Mobility and Sustain. This build is rated great.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Weaver_-_Starfire_Roamer",
+    "gw2skills_url": "",
+    "chat_code": "[&DQYfKSUfODV0AHQAHAEAAJAAAAA1FwAAEhcAAAAAAAAAAAAAAAAAAAAAAAACVgAxAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 31,
+        "traits": [
+          296,
+          340,
+          294
+        ]
+      },
+      "line2": {
+        "spec_id": 37,
+        "traits": [
+          1487,
+          257,
+          238
+        ]
+      },
+      "line3": {
+        "spec_id": 56,
+        "traits": [
+          2177,
+          2180,
+          2138
+        ]
+      }
+    },
+    "skills": {
+      "heal": 39964,
+      "utilities": [
+        45313,
+        44451,
+        5497
+      ],
+      "elite": 5678
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 103015,
+      "food_id": 91713,
+      "utility_id": 81079,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 47937,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 24765,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 47939,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 24765,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 47935,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 24765,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 47936,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 24765,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 47938,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 24765,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 47934,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 24765,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 588,
+          "stat_name": "Celestial",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 39243,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 39242,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 39282,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 37088,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 37078,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 47021,
+          "stat_id": 0,
+          "upgrade_id": 24609,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 47008,
+          "stat_id": 0,
+          "upgrade_id": 24605,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
   }
 ]

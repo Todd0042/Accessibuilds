@@ -3980,5 +3980,4357 @@
       "opener": [],
       "loop": []
     }
+  },
+  {
+    "id": "mb-ranger-druid-support-druid",
+    "name": "Druid - Support Druid",
+    "profession": "Ranger",
+    "elite_spec": "Druid",
+    "build_type": "Support",
+    "game_mode": "WvWZerg",
+    "tier": "Great",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "WvW Zerg build for Druid in GW2 that focuses on Healing, Condition Cleanse and Boon Support. This is a meta build.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Druid_-_Support_Druid",
+    "gw2skills_url": "",
+    "chat_code": "[&DQQeFxkeBSWhAAAAuwAAANUSAAC8AAAAtBIAAEIFAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 30,
+        "traits": [
+          1075,
+          1016,
+          1064
+        ]
+      },
+      "line2": {
+        "spec_id": 25,
+        "traits": [
+          978,
+          964,
+          1038
+        ]
+      },
+      "line3": {
+        "spec_id": 5,
+        "traits": [
+          1868,
+          2053,
+          2058
+        ]
+      }
+    },
+    "skills": {
+      "heal": 31710,
+      "utilities": [
+        31889,
+        31535,
+        31700
+      ],
+      "elite": 31496
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 101268,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 75022,
+          "stat_id": 0,
+          "stat_name": "Minstrel",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 76658,
+          "stat_id": 0,
+          "stat_name": "Minstrel",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 70834,
+          "stat_id": 0,
+          "stat_name": "Minstrel",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 76729,
+          "stat_id": 0,
+          "stat_name": "Minstrel",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 75340,
+          "stat_id": 0,
+          "stat_name": "Minstrel",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 77204,
+          "stat_id": 0,
+          "stat_name": "Minstrel",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 1134,
+          "stat_name": "Minstrel",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79444,
+          "stat_id": 1134,
+          "stat_name": "Minstrel",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79745,
+          "stat_id": 1134,
+          "stat_name": "Minstrel",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 80241,
+          "stat_id": 1134,
+          "stat_name": "Minstrel",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79124,
+          "stat_id": 1134,
+          "stat_name": "Minstrel",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 79712,
+          "stat_id": 1134,
+          "stat_name": "Minstrel",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 75200,
+          "stat_id": 0,
+          "upgrade_id": 74326,
+          "infusions": [],
+          "upgrade2_id": 24607
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 71457,
+          "stat_id": 0,
+          "upgrade_id": 24582,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 71116,
+          "stat_id": 0,
+          "upgrade_id": 24607,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-ranger-soulbeast-dps-soulbeast",
+    "name": "Soulbeast - DPS Soulbeast",
+    "profession": "Ranger",
+    "elite_spec": "Soulbeast",
+    "build_type": "Power",
+    "game_mode": "WvWZerg",
+    "tier": "",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "WvW Zerg build for Soulbeast in GW2 that focuses on Direct damage and Crowd control. This is a basic build.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Soulbeast_-_DPS_Soulbeast",
+    "gw2skills_url": "",
+    "chat_code": "[&DQQeOiA2NzouFwAA+hYAALYAAAC1AAAAwAAAADsAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 30,
+        "traits": [
+          1067,
+          1700,
+          1888
+        ]
+      },
+      "line2": {
+        "spec_id": 32,
+        "traits": [
+          1072,
+          975,
+          1066
+        ]
+      },
+      "line3": {
+        "spec_id": 55,
+        "traits": [
+          2071,
+          2085,
+          2143
+        ]
+      }
+    },
+    "skills": {
+      "heal": 63118,
+      "utilities": [
+        63366,
+        63075,
+        63073
+      ],
+      "elite": 63330
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100916,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 77057,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 75589,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 73339,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 75718,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 70848,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 74737,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 81908,
+          "stat_id": 1697,
+          "stat_name": "Dragon",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79745,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 70889,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 91234,
+          "stat_id": 1697,
+          "stat_name": "Dragon",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 79712,
+          "stat_id": 1827,
+          "stat_name": "Demolisher",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 75897,
+          "stat_id": 0,
+          "upgrade_id": 24575,
+          "infusions": [],
+          "upgrade2_id": 24607
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 75559,
+          "stat_id": 0,
+          "upgrade_id": 24597,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 75559,
+          "stat_id": 0,
+          "upgrade_id": 24607,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-ranger-soulbeast-immobeast",
+    "name": "Soulbeast - Immobeast",
+    "profession": "Ranger",
+    "elite_spec": "Soulbeast",
+    "build_type": "Power",
+    "game_mode": "WvWZerg",
+    "tier": "Meta",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "WvW Zerg build for Soulbeast in GW2 that focuses on Direct damage and Crowd control. This is an archived build.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Soulbeast_-_Immobeast",
+    "gw2skills_url": "",
+    "chat_code": "[&DQQeNiA6NyouFwAA+hYAAKwBAADBAAAAwAAAABwAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 30,
+        "traits": [
+          1067,
+          1016,
+          1888
+        ]
+      },
+      "line2": {
+        "spec_id": 32,
+        "traits": [
+          1072,
+          1047,
+          1066
+        ]
+      },
+      "line3": {
+        "spec_id": 55,
+        "traits": [
+          2071,
+          2085,
+          2128
+        ]
+      }
+    },
+    "skills": {
+      "heal": 12474,
+      "utilities": [
+        12525,
+        12521,
+        12522
+      ],
+      "elite": 12475
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 0,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 75940,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 76671,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 71968,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 74518,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 75183,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 72251,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 81908,
+          "stat_id": 1697,
+          "stat_name": "Dragon",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79745,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 70889,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 91234,
+          "stat_id": 1697,
+          "stat_name": "Dragon",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 79712,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 73514,
+          "stat_id": 0,
+          "upgrade_id": 24575,
+          "infusions": [],
+          "upgrade2_id": 24607
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 72882,
+          "stat_id": 0,
+          "upgrade_id": 24615,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 72882,
+          "stat_id": 0,
+          "upgrade_id": 24607,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-ranger-soulbeast-siegekiller-barrage-ranger",
+    "name": "Soulbeast - Siegekiller Barrage Ranger",
+    "profession": "Ranger",
+    "elite_spec": "Soulbeast",
+    "build_type": "Power",
+    "game_mode": "WvWZerg",
+    "tier": "Good",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "WvW Zerg build for Soulbeast in GW2 that focuses on Direct damage. This is a basic build.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Soulbeast_-_Siegekiller_Barrage_Ranger",
+    "gw2skills_url": "",
+    "chat_code": "[&DQQIOh4ZNzouFwAA+hYAAKwBAAClAQAALhYAAEQAAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 30,
+        "traits": [
+          1069,
+          1700,
+          1064
+        ]
+      },
+      "line2": {
+        "spec_id": 8,
+        "traits": [
+          1014,
+          1000,
+          1698
+        ]
+      },
+      "line3": {
+        "spec_id": 55,
+        "traits": [
+          2071,
+          2085,
+          2143
+        ]
+      }
+    },
+    "skills": {
+      "heal": 12510,
+      "utilities": [
+        12509,
+        12573,
+        12511
+      ],
+      "elite": 12469
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100916,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48087,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48089,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48085,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48086,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48088,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48084,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 37009,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 39233,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 39232,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 39273,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 37075,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 37086,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46765,
+          "stat_id": 0,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 24548
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 46765,
+          "stat_id": 0,
+          "upgrade_id": 24615,
+          "infusions": [],
+          "upgrade2_id": 24548
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-ranger-untamed-dps-untamed",
+    "name": "Untamed - DPS Untamed",
+    "profession": "Ranger",
+    "elite_spec": "Untamed",
+    "build_type": "Power",
+    "game_mode": "WvWZerg",
+    "tier": "Great",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "WvW Zerg build for Untamed in GW2 that focuses on Direct damage, Boon removal and Crowd control. This is a meta build.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Untamed_-_DPS_Untamed",
+    "gw2skills_url": "",
+    "chat_code": "",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 30,
+        "traits": [
+          1067,
+          1700,
+          1888
+        ]
+      },
+      "line2": {
+        "spec_id": 8,
+        "traits": [
+          1021,
+          1000,
+          996
+        ]
+      },
+      "line3": {
+        "spec_id": 72,
+        "traits": [
+          2301,
+          2278,
+          2271
+        ]
+      }
+    },
+    "skills": {
+      "heal": 63118,
+      "utilities": [
+        63366,
+        63075,
+        63073
+      ],
+      "elite": 63330
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100916,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 77057,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 75589,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 73339,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 75718,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 70848,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 74737,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24836,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79444,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79745,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 70889,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79124,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 79712,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 71698,
+          "stat_id": 0,
+          "upgrade_id": 24575,
+          "infusions": [],
+          "upgrade2_id": 24607
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 75897,
+          "stat_id": 0,
+          "upgrade_id": 24597,
+          "infusions": [],
+          "upgrade2_id": 24607
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-ranger-untamed-maxarrow",
+    "name": "Untamed - MaxArrow",
+    "profession": "Ranger",
+    "elite_spec": "Untamed",
+    "build_type": "Power",
+    "game_mode": "WvWZerg",
+    "tier": "Meta",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "WvW Zerg build for Untamed in GW2 that focuses on . This is an archived build.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Untamed_-_MaxArrow",
+    "gw2skills_url": "",
+    "chat_code": "",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 8,
+        "traits": [
+          1021,
+          1000,
+          1698
+        ]
+      },
+      "line2": {
+        "spec_id": 30,
+        "traits": [
+          1067,
+          1016,
+          1064
+        ]
+      },
+      "line3": {
+        "spec_id": 72,
+        "traits": [
+          2277,
+          2287,
+          2271
+        ]
+      }
+    },
+    "skills": {
+      "heal": 12510,
+      "utilities": [
+        12509,
+        12573,
+        12511
+      ],
+      "elite": 12469
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 0,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 77057,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24717,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 75589,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24717,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 73339,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24717,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 75718,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24717,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 70848,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24717,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 74737,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24717,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 81908,
+          "stat_id": 1697,
+          "stat_name": "Dragon",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79745,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 70889,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 91234,
+          "stat_id": 1697,
+          "stat_name": "Dragon",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 79712,
+          "stat_id": 1128,
+          "stat_name": "Assassin",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 75747,
+          "stat_id": 0,
+          "upgrade_id": 24618,
+          "infusions": [],
+          "upgrade2_id": 82876
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 75747,
+          "stat_id": 0,
+          "upgrade_id": 82876,
+          "infusions": [],
+          "upgrade2_id": 24618
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-ranger-untamed-support-untamed",
+    "name": "Untamed - Support Untamed",
+    "profession": "Ranger",
+    "elite_spec": "Untamed",
+    "build_type": "Support",
+    "game_mode": "WvWZerg",
+    "tier": "Good",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "WvW Zerg build for Untamed in GW2 that focuses on Healing, Condition Cleanse and Boon Support. This build is rated good.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Untamed_-_Support_Untamed",
+    "gw2skills_url": "",
+    "chat_code": "",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 32,
+        "traits": [
+          1861,
+          975,
+          1945
+        ]
+      },
+      "line2": {
+        "spec_id": 25,
+        "traits": [
+          978,
+          964,
+          1038
+        ]
+      },
+      "line3": {
+        "spec_id": 72,
+        "traits": [
+          2301,
+          2278,
+          2271
+        ]
+      }
+    },
+    "skills": {
+      "heal": 31710,
+      "utilities": [
+        31889,
+        31535,
+        31700
+      ],
+      "elite": 31496
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 101268,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 75022,
+          "stat_id": 0,
+          "stat_name": "Minstrel",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 76658,
+          "stat_id": 0,
+          "stat_name": "Minstrel",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 70834,
+          "stat_id": 0,
+          "stat_name": "Minstrel",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 76729,
+          "stat_id": 0,
+          "stat_name": "Minstrel",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 75340,
+          "stat_id": 0,
+          "stat_name": "Minstrel",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 77204,
+          "stat_id": 0,
+          "stat_name": "Minstrel",
+          "upgrade_id": 24842,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 1134,
+          "stat_name": "Minstrel",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79444,
+          "stat_id": 1134,
+          "stat_name": "Minstrel",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79745,
+          "stat_id": 1134,
+          "stat_name": "Minstrel",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 80241,
+          "stat_id": 1134,
+          "stat_name": "Minstrel",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79124,
+          "stat_id": 1134,
+          "stat_name": "Minstrel",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 79712,
+          "stat_id": 1134,
+          "stat_name": "Minstrel",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 75200,
+          "stat_id": 0,
+          "upgrade_id": 74326,
+          "infusions": [],
+          "upgrade2_id": 24607
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 71457,
+          "stat_id": 0,
+          "upgrade_id": 24582,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 71116,
+          "stat_id": 0,
+          "upgrade_id": 24607,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-ranger-druid-celestial-eclipse-roamer",
+    "name": "Druid - Celestial Eclipse Roamer",
+    "profession": "Ranger",
+    "elite_spec": "Druid",
+    "build_type": "Power",
+    "game_mode": "WvWRoaming",
+    "tier": "Great",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "WvW Roaming build for Druid in GW2 that focuses on Condition damage, Mobility and Control. This build is rated great.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Druid_-_Celestial_Eclipse_Roamer",
+    "gw2skills_url": "",
+    "chat_code": "[&DQQeHiE2BTehAHgAqwGrARsAvgC7ABsAwADtAC49AQsAAAAAAAAAAAAAAAAEWgBnAAUALwAA]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 30,
+        "traits": [
+          1067,
+          1846,
+          1064
+        ]
+      },
+      "line2": {
+        "spec_id": 33,
+        "traits": [
+          1086,
+          1101,
+          1701
+        ]
+      },
+      "line3": {
+        "spec_id": 5,
+        "traits": [
+          1935,
+          2053,
+          2055
+        ]
+      }
+    },
+    "skills": {
+      "heal": 12466,
+      "utilities": [
+        12480,
+        12490,
+        12478
+      ],
+      "elite": 12477
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 103015,
+      "food_id": 91713,
+      "utility_id": 81079,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 47943,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 70600,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 47945,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 70600,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 47941,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 70600,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 47942,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 70600,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 47944,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 70600,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 47940,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 70600,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 588,
+          "stat_name": "Celestial",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 39243,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 39242,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 39282,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 37088,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 37078,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 47006,
+          "stat_id": 0,
+          "upgrade_id": 24605,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 47007,
+          "stat_id": 0,
+          "upgrade_id": 24609,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 47021,
+          "stat_id": 0,
+          "upgrade_id": 67340,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 47024,
+          "stat_id": 0,
+          "upgrade_id": 24607,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-ranger-druid-power-daze-druid-roamer",
+    "name": "Druid - Power Daze Druid Roamer",
+    "profession": "Ranger",
+    "elite_spec": "Druid",
+    "build_type": "Power",
+    "game_mode": "WvWRoaming",
+    "tier": "Good",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "WvW Roaming build for Druid in GW2 that focuses on Strike damage and Mobility. This build is rated good.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Druid_-_Power_Daze_Druid_Roamer",
+    "gw2skills_url": "",
+    "chat_code": "[&DQQILyArBTd5AHkAwgC7AOYSqwG7ALgAtBLtADsuKhUAAAAAAAAAAAAAAAACMgAzAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 8,
+        "traits": [
+          986,
+          1070,
+          1015
+        ]
+      },
+      "line2": {
+        "spec_id": 32,
+        "traits": [
+          1606,
+          1047,
+          968
+        ]
+      },
+      "line3": {
+        "spec_id": 5,
+        "traits": [
+          1935,
+          2053,
+          2055
+        ]
+      }
+    },
+    "skills": {
+      "heal": 63118,
+      "utilities": [
+        63366,
+        63075,
+        63073
+      ],
+      "elite": 63330
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100148,
+      "food_id": 87367,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 96832,
+          "stat_id": 0,
+          "stat_name": "Dragon",
+          "upgrade_id": 24803,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 96236,
+          "stat_id": 0,
+          "stat_name": "Dragon",
+          "upgrade_id": 24803,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 96431,
+          "stat_id": 0,
+          "stat_name": "Dragon",
+          "upgrade_id": 24803,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 97663,
+          "stat_id": 0,
+          "stat_name": "Dragon",
+          "upgrade_id": 24803,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 96230,
+          "stat_id": 0,
+          "stat_name": "Dragon",
+          "upgrade_id": 24803,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 96780,
+          "stat_id": 0,
+          "stat_name": "Dragon",
+          "upgrade_id": 24803,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 96008,
+          "stat_id": 1697,
+          "stat_name": "Dragon",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 81908,
+          "stat_id": 1697,
+          "stat_name": "Dragon",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 96199,
+          "stat_id": 1697,
+          "stat_name": "Dragon",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 95996,
+          "stat_id": 0,
+          "stat_name": "Dragon",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 91234,
+          "stat_id": 1697,
+          "stat_name": "Dragon",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 96167,
+          "stat_id": 1697,
+          "stat_name": "Dragon",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 97156,
+          "stat_id": 0,
+          "upgrade_id": 67340,
+          "infusions": [],
+          "upgrade2_id": 24865
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 97260,
+          "stat_id": 0,
+          "upgrade_id": 67340,
+          "infusions": [],
+          "upgrade2_id": 24607
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-ranger-druid-stealth-trapper",
+    "name": "Druid - Stealth Trapper",
+    "profession": "Ranger",
+    "elite_spec": "Druid",
+    "build_type": "Power",
+    "game_mode": "WvWRoaming",
+    "tier": "Meta",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "WvW Roaming build for Druid in GW2 that focuses on Condition damage and Mobility. This is an archived build.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Druid_-_Stealth_Trapper",
+    "gw2skills_url": "",
+    "chat_code": "[&DQQeHyElBTehAHgAuACrARsAvgC+ABsAwADtAC45AQsAAAAAAAAAAAAAAAADBQAvAGsAAA==]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 30,
+        "traits": [
+          1075,
+          1846,
+          1064
+        ]
+      },
+      "line2": {
+        "spec_id": 33,
+        "traits": [
+          1098,
+          1101,
+          1699
+        ]
+      },
+      "line3": {
+        "spec_id": 5,
+        "traits": [
+          1935,
+          2053,
+          2055
+        ]
+      }
+    },
+    "skills": {
+      "heal": 12466,
+      "utilities": [
+        12480,
+        12490,
+        12478
+      ],
+      "elite": 12477
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 0,
+      "food_id": 91848,
+      "utility_id": 81079,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 75285,
+          "stat_id": 0,
+          "stat_name": "Trailblazer",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 75572,
+          "stat_id": 0,
+          "stat_name": "Trailblazer",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 72341,
+          "stat_id": 0,
+          "stat_name": "Trailblazer",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 72456,
+          "stat_id": 0,
+          "stat_name": "Trailblazer",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 73395,
+          "stat_id": 0,
+          "stat_name": "Trailblazer",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 75248,
+          "stat_id": 0,
+          "stat_name": "Trailblazer",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 42425,
+          "stat_id": 0,
+          "stat_name": "Apothecary",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 39559,
+          "stat_id": 0,
+          "stat_name": "Apothecary",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 39558,
+          "stat_id": 0,
+          "stat_name": "Apothecary",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 39578,
+          "stat_id": 0,
+          "stat_name": "Apothecary",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 39608,
+          "stat_id": 0,
+          "stat_name": "Apothecary",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 39609,
+          "stat_id": 0,
+          "stat_name": "Apothecary",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 71361,
+          "stat_id": 0,
+          "upgrade_id": 67340,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 75422,
+          "stat_id": 0,
+          "upgrade_id": 24607,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 76256,
+          "stat_id": 0,
+          "upgrade_id": 24605,
+          "infusions": [],
+          "upgrade2_id": 24609
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-ranger-druid-wilderness-daze-druid-roamer",
+    "name": "Druid - Wilderness Daze Druid Roamer",
+    "profession": "Ranger",
+    "elite_spec": "Druid",
+    "build_type": "Power",
+    "game_mode": "WvWRoaming",
+    "tier": "Viable",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "WvW Roaming build for Druid in GW2 that focuses on Strike damage, Control and Sustain. This is a test build.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Druid_-_Wilderness_Daze_Druid_Roamer",
+    "gw2skills_url": "",
+    "chat_code": "[&DQQILyEaBTehAHkAqwG7ALsAqwHmErgAtBLtAEQuKhUAAAAAAAAAAAAAAAADNQBaAGcAAA==]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 8,
+        "traits": [
+          986,
+          1070,
+          1015
+        ]
+      },
+      "line2": {
+        "spec_id": 33,
+        "traits": [
+          1086,
+          2032,
+          1094
+        ]
+      },
+      "line3": {
+        "spec_id": 5,
+        "traits": [
+          1935,
+          2053,
+          2055
+        ]
+      }
+    },
+    "skills": {
+      "heal": 72088,
+      "utilities": [
+        71999,
+        71963,
+        71903
+      ],
+      "elite": 71841
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 101139,
+      "food_id": 91713,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 84862,
+          "stat_id": 0,
+          "stat_name": "Demolisher",
+          "upgrade_id": 76813,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 85182,
+          "stat_id": 0,
+          "stat_name": "Demolisher",
+          "upgrade_id": 76813,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 84977,
+          "stat_id": 0,
+          "stat_name": "Demolisher",
+          "upgrade_id": 76813,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85169,
+          "stat_id": 0,
+          "stat_name": "Demolisher",
+          "upgrade_id": 76813,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 85264,
+          "stat_id": 0,
+          "stat_name": "Demolisher",
+          "upgrade_id": 76813,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 85148,
+          "stat_id": 0,
+          "stat_name": "Demolisher",
+          "upgrade_id": 76813,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 37009,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 39233,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 39232,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 39273,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 37075,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 37086,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 85267,
+          "stat_id": 0,
+          "upgrade_id": 24561,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 85267,
+          "stat_id": 0,
+          "upgrade_id": 24597,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 85250,
+          "stat_id": 0,
+          "upgrade_id": 67340,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 85307,
+          "stat_id": 0,
+          "upgrade_id": 24607,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-ranger-galeshot-galeburst-roamer",
+    "name": "Galeshot - Galeburst Roamer",
+    "profession": "Ranger",
+    "elite_spec": "Galeshot",
+    "build_type": "Power",
+    "game_mode": "WvWRoaming",
+    "tier": "Great",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "WvW Roaming build for Galeshot in GW2 that focuses on Strike damage. This build is rated great.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Galeshot_-_Galeburst_Roamer",
+    "gw2skills_url": "",
+    "chat_code": "[&DQQIKx46ThlUHQAAqwEAALsAAAB1HQAAWx0AAAsuAAAAAAAAAAAAAAAAAAADCQFaADUAAA==]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 30,
+        "traits": [
+          1067,
+          1700,
+          1888
+        ]
+      },
+      "line2": {
+        "spec_id": 8,
+        "traits": [
+          986,
+          1000,
+          1015
+        ]
+      },
+      "line3": {
+        "spec_id": 78,
+        "traits": [
+          2402,
+          2413,
+          2425
+        ]
+      }
+    },
+    "skills": {
+      "heal": 72922,
+      "utilities": [
+        73110,
+        72928,
+        73020
+      ],
+      "elite": 73008
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100659,
+      "food_id": 91734,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 84862,
+          "stat_id": 0,
+          "stat_name": "Demolisher",
+          "upgrade_id": 24756,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 85182,
+          "stat_id": 0,
+          "stat_name": "Demolisher",
+          "upgrade_id": 24756,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 84977,
+          "stat_id": 0,
+          "stat_name": "Demolisher",
+          "upgrade_id": 24756,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85169,
+          "stat_id": 0,
+          "stat_name": "Demolisher",
+          "upgrade_id": 24756,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 85264,
+          "stat_id": 0,
+          "stat_name": "Demolisher",
+          "upgrade_id": 24756,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 85148,
+          "stat_id": 0,
+          "stat_name": "Demolisher",
+          "upgrade_id": 24756,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79444,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79745,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 70889,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79124,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 79712,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46764,
+          "stat_id": 0,
+          "upgrade_id": 24554,
+          "infusions": [],
+          "upgrade2_id": 24570
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 46774,
+          "stat_id": 0,
+          "upgrade_id": 67340,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 46766,
+          "stat_id": 0,
+          "upgrade_id": 24607,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-ranger-ranger-core-longbow-roamer",
+    "name": "Ranger - Core Longbow Roamer",
+    "profession": "Ranger",
+    "elite_spec": "",
+    "build_type": "Power",
+    "game_mode": "WvWRoaming",
+    "tier": "Good",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "WvW Roaming build for Ranger in GW2 that focuses on Strike damage and Sustain. This build is rated good.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Ranger_-_Core_Longbow_Roamer",
+    "gw2skills_url": "",
+    "chat_code": "[&DQQILyEtICt4AHgAuwAAAJYBAAC4AAAA7QAAAC47AAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 8,
+        "traits": [
+          986,
+          1070,
+          1015
+        ]
+      },
+      "line2": {
+        "spec_id": 33,
+        "traits": [
+          1098,
+          1100,
+          1699
+        ]
+      },
+      "line3": {
+        "spec_id": 32,
+        "traits": [
+          1606,
+          1047,
+          968
+        ]
+      }
+    },
+    "skills": {
+      "heal": 12510,
+      "utilities": [
+        12509,
+        12573,
+        12511
+      ],
+      "elite": 12469
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100916,
+      "food_id": 91734,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 77057,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24833,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 75589,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24833,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 73339,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24833,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 75718,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24833,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 70848,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24833,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 74737,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24833,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 37009,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 39233,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 39232,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 39273,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 37075,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 37086,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46765,
+          "stat_id": 0,
+          "upgrade_id": 24554,
+          "infusions": [],
+          "upgrade2_id": 24865
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 46762,
+          "stat_id": 0,
+          "upgrade_id": 67340,
+          "infusions": [],
+          "upgrade2_id": 24607
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-ranger-soulbeast-boonbeast-roamer",
+    "name": "Soulbeast - Boonbeast Roamer",
+    "profession": "Ranger",
+    "elite_spec": "Soulbeast",
+    "build_type": "Power",
+    "game_mode": "WvWRoaming",
+    "tier": "Meta",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "WvW Roaming build for Soulbeast in GW2 that focuses on Direct damage, Mobility and Sustain. This is an archived build.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Soulbeast_-_Boonbeast_Roamer",
+    "gw2skills_url": "",
+    "chat_code": "[&DQQZLiEpNyV4AHgA+hYAADQWAACWAQAA7QAAAC4eAAAAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 33,
+        "traits": [
+          1086,
+          2032,
+          1699
+        ]
+      },
+      "line2": {
+        "spec_id": 25,
+        "traits": [
+          978,
+          964,
+          1988
+        ]
+      },
+      "line3": {
+        "spec_id": 55,
+        "traits": [
+          2134,
+          2119,
+          2128
+        ]
+      }
+    },
+    "skills": {
+      "heal": 12466,
+      "utilities": [
+        12480,
+        12490,
+        12620
+      ],
+      "elite": 12621
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 0,
+      "food_id": 91713,
+      "utility_id": 78305,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 77057,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 73653,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 75589,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 73653,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 73339,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 73653,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 75718,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 73653,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 70848,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 73653,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 74737,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 73653,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 1163,
+          "stat_name": "Zealot",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79444,
+          "stat_id": 1163,
+          "stat_name": "Zealot",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79745,
+          "stat_id": 1163,
+          "stat_name": "Zealot",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 39282,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 37088,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 37078,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 72882,
+          "stat_id": 0,
+          "upgrade_id": 67340,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 75201,
+          "stat_id": 0,
+          "upgrade_id": 24607,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 73514,
+          "stat_id": 0,
+          "upgrade_id": 24600,
+          "infusions": [],
+          "upgrade2_id": 67340
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-ranger-soulbeast-condition-stancebeast-roamer",
+    "name": "Soulbeast - Condition Stancebeast Roamer",
+    "profession": "Ranger",
+    "elite_spec": "Soulbeast",
+    "build_type": "Condi",
+    "game_mode": "WvWRoaming",
+    "tier": "Meta",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "WvW Roaming build for Soulbeast in GW2 that focuses on Condition damage, Mobility and Sustain. This is an archived build.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Soulbeast_-_Condition_Stancebeast_Roamer",
+    "gw2skills_url": "",
+    "chat_code": "[&DQQhNh4eNy8uF3gA+hb6FrsAuwABFwEXwADtACwdLxMAAAAAAAAAAAAAAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 30,
+        "traits": [
+          1067,
+          1846,
+          1064
+        ]
+      },
+      "line2": {
+        "spec_id": 33,
+        "traits": [
+          1086,
+          1101,
+          1701
+        ]
+      },
+      "line3": {
+        "spec_id": 55,
+        "traits": [
+          2072,
+          2161,
+          2128
+        ]
+      }
+    },
+    "skills": {
+      "heal": 45426,
+      "utilities": [
+        43536,
+        46123,
+        12478
+      ],
+      "elite": 12477
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 0,
+      "food_id": 91713,
+      "utility_id": 81079,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 75285,
+          "stat_id": 0,
+          "stat_name": "Trailblazer",
+          "upgrade_id": 72912,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 75572,
+          "stat_id": 0,
+          "stat_name": "Trailblazer",
+          "upgrade_id": 72912,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 72341,
+          "stat_id": 0,
+          "stat_name": "Trailblazer",
+          "upgrade_id": 72912,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 72456,
+          "stat_id": 0,
+          "stat_name": "Trailblazer",
+          "upgrade_id": 72912,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 73395,
+          "stat_id": 0,
+          "stat_name": "Trailblazer",
+          "upgrade_id": 72912,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 75248,
+          "stat_id": 0,
+          "stat_name": "Trailblazer",
+          "upgrade_id": 72912,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 1115,
+          "stat_name": "Trailblazer",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79444,
+          "stat_id": 1115,
+          "stat_name": "Trailblazer",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79745,
+          "stat_id": 1115,
+          "stat_name": "Trailblazer",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 80241,
+          "stat_id": 1115,
+          "stat_name": "Trailblazer",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79124,
+          "stat_id": 1115,
+          "stat_name": "Trailblazer",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 79712,
+          "stat_id": 1115,
+          "stat_name": "Trailblazer",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 75422,
+          "stat_id": 0,
+          "upgrade_id": 67340,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 75422,
+          "stat_id": 0,
+          "upgrade_id": 24607,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 76256,
+          "stat_id": 0,
+          "upgrade_id": 67340,
+          "infusions": [],
+          "upgrade2_id": 24607
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-ranger-soulbeast-condition-trapper-sb-roamer",
+    "name": "Soulbeast - Condition Trapper SB Roamer",
+    "profession": "Ranger",
+    "elite_spec": "Soulbeast",
+    "build_type": "Condi",
+    "game_mode": "WvWRoaming",
+    "tier": "Meta",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "WvW Roaming build for Soulbeast in GW2 that focuses on Condition damage and Mobility. This is an archived build.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Soulbeast_-_Condition_Trapper_SB_Roamer",
+    "gw2skills_url": "",
+    "chat_code": "[&DQQhNhk2Nx+hAHgA+harARsAvgC4ABsAwADtACwIAQsAAAAAAAAAAAAAAAADawAFAC8AAA==]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 25,
+        "traits": [
+          978,
+          1054,
+          1697
+        ]
+      },
+      "line2": {
+        "spec_id": 33,
+        "traits": [
+          1086,
+          1101,
+          1701
+        ]
+      },
+      "line3": {
+        "spec_id": 55,
+        "traits": [
+          2072,
+          2161,
+          2155
+        ]
+      }
+    },
+    "skills": {
+      "heal": 12466,
+      "utilities": [
+        12480,
+        12490,
+        12478
+      ],
+      "elite": 12477
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 101166,
+      "food_id": 91713,
+      "utility_id": 81079,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 75285,
+          "stat_id": 0,
+          "stat_name": "Trailblazer",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 75572,
+          "stat_id": 0,
+          "stat_name": "Trailblazer",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 72341,
+          "stat_id": 0,
+          "stat_name": "Trailblazer",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 72456,
+          "stat_id": 0,
+          "stat_name": "Trailblazer",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 73395,
+          "stat_id": 0,
+          "stat_name": "Trailblazer",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 75248,
+          "stat_id": 0,
+          "stat_name": "Trailblazer",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 1115,
+          "stat_name": "Trailblazer",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 39559,
+          "stat_id": 0,
+          "stat_name": "Apothecary",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 39558,
+          "stat_id": 0,
+          "stat_name": "Apothecary",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 39578,
+          "stat_id": 0,
+          "stat_name": "Apothecary",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 39608,
+          "stat_id": 0,
+          "stat_name": "Apothecary",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 39609,
+          "stat_id": 0,
+          "stat_name": "Apothecary",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 71361,
+          "stat_id": 0,
+          "upgrade_id": 67340,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 75422,
+          "stat_id": 0,
+          "upgrade_id": 24607,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 76256,
+          "stat_id": 0,
+          "upgrade_id": 24605,
+          "infusions": [],
+          "upgrade2_id": 24609
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-ranger-soulbeast-poisonbeast-roamer",
+    "name": "Soulbeast - Poisonbeast Roamer",
+    "profession": "Ranger",
+    "elite_spec": "Soulbeast",
+    "build_type": "Power",
+    "game_mode": "WvWRoaming",
+    "tier": "Great",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "WvW Roaming build for Soulbeast in GW2 that focuses on Condition damage and Mobility. This build is rated great.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Soulbeast_-_Poisonbeast_Roamer",
+    "gw2skills_url": "",
+    "chat_code": "[&DQQhNiAVNx8uFy4X+harAbsAwgABF7gA7QDtAEcIAQsAAAAAAAAAAAAAAAACawAvAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 32,
+        "traits": [
+          1861,
+          975,
+          1945
+        ]
+      },
+      "line2": {
+        "spec_id": 33,
+        "traits": [
+          1086,
+          1101,
+          1701
+        ]
+      },
+      "line3": {
+        "spec_id": 55,
+        "traits": [
+          2072,
+          2161,
+          2155
+        ]
+      }
+    },
+    "skills": {
+      "heal": 45426,
+      "utilities": [
+        43536,
+        46123,
+        12478
+      ],
+      "elite": 12477
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 102199,
+      "food_id": 91713,
+      "utility_id": 81079,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 75285,
+          "stat_id": 0,
+          "stat_name": "Trailblazer",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 75572,
+          "stat_id": 0,
+          "stat_name": "Trailblazer",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 72341,
+          "stat_id": 0,
+          "stat_name": "Trailblazer",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 72456,
+          "stat_id": 0,
+          "stat_name": "Trailblazer",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 73395,
+          "stat_id": 0,
+          "stat_name": "Trailblazer",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 75248,
+          "stat_id": 0,
+          "stat_name": "Trailblazer",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 1115,
+          "stat_name": "Trailblazer",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 39559,
+          "stat_id": 0,
+          "stat_name": "Apothecary",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 39558,
+          "stat_id": 0,
+          "stat_name": "Apothecary",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 39578,
+          "stat_id": 0,
+          "stat_name": "Apothecary",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 39608,
+          "stat_id": 0,
+          "stat_name": "Apothecary",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 39609,
+          "stat_id": 0,
+          "stat_name": "Apothecary",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 75422,
+          "stat_id": 0,
+          "upgrade_id": 67340,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 75422,
+          "stat_id": 0,
+          "upgrade_id": 24607,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 76256,
+          "stat_id": 0,
+          "upgrade_id": 24605,
+          "infusions": [],
+          "upgrade2_id": 24609
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-ranger-soulbeast-power-melee-stancebeast-roamer",
+    "name": "Soulbeast - Power Melee Stancebeast Roamer",
+    "profession": "Ranger",
+    "elite_spec": "Soulbeast",
+    "build_type": "Power",
+    "game_mode": "WvWRoaming",
+    "tier": "",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "WvW Roaming build for Soulbeast in GW2 that focuses on Strike damage and Control. This is a test build.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Soulbeast_-_Power_Melee_Stancebeast_Roamer",
+    "gw2skills_url": "",
+    "chat_code": "[&DQQeOiAtNxouFwAA+hYAALsAAAABFwAALhYAABkuAAAAAAAAAAAAAAAAAAADWgBnADUAAA==]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 30,
+        "traits": [
+          1067,
+          1700,
+          1888
+        ]
+      },
+      "line2": {
+        "spec_id": 32,
+        "traits": [
+          1861,
+          970,
+          968
+        ]
+      },
+      "line3": {
+        "spec_id": 55,
+        "traits": [
+          2071,
+          2085,
+          2155
+        ]
+      }
+    },
+    "skills": {
+      "heal": 12471,
+      "utilities": [
+        69203,
+        12482,
+        12620
+      ],
+      "elite": 12621
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100947,
+      "food_id": 91713,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 84862,
+          "stat_id": 0,
+          "stat_name": "Demolisher",
+          "upgrade_id": 82791,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 85182,
+          "stat_id": 0,
+          "stat_name": "Demolisher",
+          "upgrade_id": 82791,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 84977,
+          "stat_id": 0,
+          "stat_name": "Demolisher",
+          "upgrade_id": 82791,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 85169,
+          "stat_id": 0,
+          "stat_name": "Demolisher",
+          "upgrade_id": 82791,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 85264,
+          "stat_id": 0,
+          "stat_name": "Demolisher",
+          "upgrade_id": 82791,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 85148,
+          "stat_id": 0,
+          "stat_name": "Demolisher",
+          "upgrade_id": 82791,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79444,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79745,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 70889,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79124,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 79712,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 85267,
+          "stat_id": 0,
+          "upgrade_id": 67340,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 85267,
+          "stat_id": 0,
+          "upgrade_id": 24607,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 85250,
+          "stat_id": 0,
+          "upgrade_id": 24597,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 85307,
+          "stat_id": 0,
+          "upgrade_id": 24554,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-ranger-soulbeast-sic-em-roamer",
+    "name": "Soulbeast - Sic 'Em Roamer",
+    "profession": "Ranger",
+    "elite_spec": "Soulbeast",
+    "build_type": "Power",
+    "game_mode": "WvWRoaming",
+    "tier": "Good",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "WvW Roaming build for Soulbeast in GW2 that focuses on Strike damage and Mobility. This build is rated good.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Soulbeast_-_Sic_'Em_Roamer",
+    "gw2skills_url": "",
+    "chat_code": "[&DQQgLx46NxouFwAA+hYAAKUBAAC7AAAALhYAAAIuAAAAAAAAAAAAAAAAAAADWgBnACMAAA==]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 32,
+        "traits": [
+          1861,
+          970,
+          968
+        ]
+      },
+      "line2": {
+        "spec_id": 30,
+        "traits": [
+          1067,
+          1700,
+          1888
+        ]
+      },
+      "line3": {
+        "spec_id": 55,
+        "traits": [
+          2071,
+          2085,
+          2155
+        ]
+      }
+    },
+    "skills": {
+      "heal": 12510,
+      "utilities": [
+        12509,
+        12573,
+        12511
+      ],
+      "elite": 12469
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100947,
+      "food_id": 91734,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 77057,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 82791,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 75589,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 82791,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 73339,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 82791,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 75718,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 82791,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 70848,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 82791,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 74737,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 82791,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 37009,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 39233,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 39232,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 39273,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 37075,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 37086,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 75747,
+          "stat_id": 0,
+          "upgrade_id": 67340,
+          "infusions": [],
+          "upgrade2_id": 24865
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 76985,
+          "stat_id": 0,
+          "upgrade_id": 67340,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 75201,
+          "stat_id": 0,
+          "upgrade_id": 24607,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-ranger-soulbeast-staff-stancebeast-roamer",
+    "name": "Soulbeast - Staff Stancebeast Roamer",
+    "profession": "Ranger",
+    "elite_spec": "Soulbeast",
+    "build_type": "Power",
+    "game_mode": "WvWRoaming",
+    "tier": "Good",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "WvW Roaming build for Soulbeast in GW2 that focuses on Strike damage and Mobility. This build is rated good.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Soulbeast_-_Staff_Stancebeast_Roamer",
+    "gw2skills_url": "",
+    "chat_code": "[&DQQeOiAqNykuF3kAlgGaAKUBwgD6FrgALhbtAC47AQsAAAAAAAAAAAAAAAACIwAyAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 30,
+        "traits": [
+          1067,
+          1700,
+          1888
+        ]
+      },
+      "line2": {
+        "spec_id": 32,
+        "traits": [
+          1072,
+          1047,
+          1066
+        ]
+      },
+      "line3": {
+        "spec_id": 55,
+        "traits": [
+          2134,
+          2085,
+          2128
+        ]
+      }
+    },
+    "skills": {
+      "heal": 31710,
+      "utilities": [
+        31889,
+        31535,
+        31700
+      ],
+      "elite": 31496
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100194,
+      "food_id": 91805,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 77057,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24723,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 75589,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24723,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 73339,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24723,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 75718,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24723,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 70848,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24723,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 74737,
+          "stat_id": 0,
+          "stat_name": "Marauder",
+          "upgrade_id": 24723,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 37009,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 39233,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 39232,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 39273,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 37075,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 37086,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 47058,
+          "stat_id": 0,
+          "upgrade_id": 24554,
+          "infusions": [],
+          "upgrade2_id": 24561
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 47059,
+          "stat_id": 0,
+          "upgrade_id": 67340,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 47062,
+          "stat_id": 0,
+          "upgrade_id": 24607,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-ranger-untamed-celestial-brilliance-roamer",
+    "name": "Untamed - Celestial Brilliance Roamer",
+    "profession": "Ranger",
+    "elite_spec": "Untamed",
+    "build_type": "Power",
+    "game_mode": "WvWRoaming",
+    "tier": "Meta",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "WvW Roaming build for Untamed in GW2 that focuses on Hybrid Damage and Sustain. This is an archived build.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Untamed_-_Celestial_Brilliance_Roamer",
+    "gw2skills_url": "",
+    "chat_code": "[&DQQZNiE2SBoUGwAAGRsAALsAAACrAQAADxsAADsuAAAAAAAAAAAAAAAAAAADWgBnAFkAAA==]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 25,
+        "traits": [
+          978,
+          1054,
+          1697
+        ]
+      },
+      "line2": {
+        "spec_id": 33,
+        "traits": [
+          1086,
+          1101,
+          1701
+        ]
+      },
+      "line3": {
+        "spec_id": 72,
+        "traits": [
+          2277,
+          2287,
+          2271
+        ]
+      }
+    },
+    "skills": {
+      "heal": 31710,
+      "utilities": [
+        31889,
+        31535,
+        31700
+      ],
+      "elite": 31496
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 101166,
+      "food_id": 0,
+      "utility_id": 0,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 47943,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 47945,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 47941,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 47942,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 47944,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 47940,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 588,
+          "stat_name": "Celestial",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 39243,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 39242,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 39282,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 37088,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 37078,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 47020,
+          "stat_id": 0,
+          "upgrade_id": 67340,
+          "infusions": [],
+          "upgrade2_id": 24607
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 47007,
+          "stat_id": 0,
+          "upgrade_id": 67340,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 47007,
+          "stat_id": 0,
+          "upgrade_id": 24607,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-ranger-untamed-power-longbow-roamer",
+    "name": "Untamed - Power Longbow Roamer",
+    "profession": "Ranger",
+    "elite_spec": "Untamed",
+    "build_type": "Power",
+    "game_mode": "WvWRoaming",
+    "tier": "Great",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "WvW Roaming build for Untamed in GW2 that focuses on Strike damage, Mobility and Control. This build is rated great.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Untamed_-_Power_Longbow_Roamer",
+    "gw2skills_url": "",
+    "chat_code": "[&DQQILyArSBt5AHgAGRurAbsAvgCaABsADxvtAC4TAQsAAAAAAAAAAAAAAAACawAvAAA=]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 8,
+        "traits": [
+          986,
+          1070,
+          1015
+        ]
+      },
+      "line2": {
+        "spec_id": 32,
+        "traits": [
+          1606,
+          1047,
+          968
+        ]
+      },
+      "line3": {
+        "spec_id": 72,
+        "traits": [
+          2301,
+          2287,
+          2271
+        ]
+      }
+    },
+    "skills": {
+      "heal": 12510,
+      "utilities": [
+        12509,
+        12573,
+        12511
+      ],
+      "elite": 12469
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100148,
+      "food_id": 91734,
+      "utility_id": 43451,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48087,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24702,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48089,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24702,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48085,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24702,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48086,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24702,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48088,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24702,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48084,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 24702,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 37009,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 39233,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 39232,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 39273,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79124,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 79712,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46765,
+          "stat_id": 0,
+          "upgrade_id": 67340,
+          "infusions": [],
+          "upgrade2_id": 24865
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 46762,
+          "stat_id": 0,
+          "upgrade_id": 24600,
+          "infusions": [],
+          "upgrade2_id": 24607
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-ranger-untamed-power-unspeared-roamer",
+    "name": "Untamed - Power Unspeared Roamer",
+    "profession": "Ranger",
+    "elite_spec": "Untamed",
+    "build_type": "Power",
+    "game_mode": "WvWRoaming",
+    "tier": "Great",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "WvW Roaming build for Untamed in GW2 that focuses on Strike damage and Mobility. This is a test build.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Untamed_-_Power_Unspeared_Roamer",
+    "gw2skills_url": "",
+    "chat_code": "[&DQQeOggrSBt4AHkAqwG7ALsAqwEZG7gADxvtAAsuKhUAAAAAAAAAAAAAAAADWgA1AAkBAA==]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 30,
+        "traits": [
+          1067,
+          1700,
+          1888
+        ]
+      },
+      "line2": {
+        "spec_id": 8,
+        "traits": [
+          986,
+          1000,
+          1015
+        ]
+      },
+      "line3": {
+        "spec_id": 72,
+        "traits": [
+          2301,
+          2287,
+          2271
+        ]
+      }
+    },
+    "skills": {
+      "heal": 72922,
+      "utilities": [
+        73110,
+        72928,
+        73020
+      ],
+      "elite": 73008
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100455,
+      "food_id": 91734,
+      "utility_id": 78305,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 48087,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 82791,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 48089,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 82791,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 48085,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 82791,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 48086,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 82791,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 48088,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 82791,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 48084,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 82791,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 37009,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 39233,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 39232,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 39273,
+          "stat_id": 0,
+          "stat_name": "Berserker",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79124,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 79712,
+          "stat_id": 1145,
+          "stat_name": "Marauder",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 46764,
+          "stat_id": 0,
+          "upgrade_id": 67340,
+          "infusions": [],
+          "upgrade2_id": 24607
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 46760,
+          "stat_id": 0,
+          "upgrade_id": 67340,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 46766,
+          "stat_id": 0,
+          "upgrade_id": 24607,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
   }
 ]

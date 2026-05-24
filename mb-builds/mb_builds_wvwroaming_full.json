@@ -1,0 +1,564 @@
+[
+  {
+    "id": "mb-engineer-amalgam-celestial-amalgam-roamer",
+    "name": "Amalgam - Celestial Amalgam Roamer",
+    "profession": "Engineer",
+    "elite_spec": "Amalgam",
+    "build_type": "Power",
+    "game_mode": "WvWRoaming",
+    "tier": "Great",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "WvW Roaming build for Amalgam in GW2 that focuses on Hybrid damage, Mobility and Sustain. This build is rated great.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Amalgam_-_Celestial_Amalgam_Roamer",
+    "gw2skills_url": "",
+    "chat_code": "[&DQMGLSY+SzWAHQAAWB0AAIYAAACCHQAAex0AAAAAAAAAAAAAAAAAAAAAAAADCQE2AFcAAA==]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 38,
+        "traits": [
+          1930,
+          1923,
+          433
+        ]
+      },
+      "line2": {
+        "spec_id": 6,
+        "traits": [
+          514,
+          1944,
+          505
+        ]
+      },
+      "line3": {
+        "spec_id": 75,
+        "traits": [
+          2366,
+          2383,
+          2334
+        ]
+      }
+    },
+    "skills": {
+      "heal": 72944,
+      "utilities": [
+        73122,
+        73002,
+        72977
+      ],
+      "elite": 72974
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 106206,
+      "food_id": 12488,
+      "utility_id": 48916,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 47943,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 24702,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 47945,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 24702,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 97154,
+          "stat_id": 0,
+          "stat_name": "Ritualist",
+          "upgrade_id": 24702,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 47942,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 24702,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 95714,
+          "stat_id": 0,
+          "stat_name": "Ritualist",
+          "upgrade_id": 24702,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 47940,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 24702,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 588,
+          "stat_name": "Celestial",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 39243,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 39242,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 80241,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79124,
+          "stat_id": 1130,
+          "stat_name": "Viper",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 37078,
+          "stat_id": 0,
+          "stat_name": "Celestial",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 47011,
+          "stat_id": 0,
+          "upgrade_id": 67340,
+          "infusions": [],
+          "upgrade2_id": 24607
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-thief-antiquary-lucky-shot-roamer",
+    "name": "Antiquary - Lucky Shot Roamer",
+    "profession": "Thief",
+    "elite_spec": "Antiquary",
+    "build_type": "Power",
+    "game_mode": "WvWRoaming",
+    "tier": "Great",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "WvW Roaming build for Antiquary in GW2 that focuses on Condition Damage and Control. This is a test build.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Antiquary_-_Lucky_Shot_Roamer",
+    "gw2skills_url": "",
+    "chat_code": "[&DQU2FywvTRcKAW8daB0zAWAdYB1YABkBnwEoAAAAAAAAAAAAAAAAAAAAAAADVgA2AGsAAA==]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 54,
+        "traits": [
+          1237,
+          1241,
+          1238
+        ]
+      },
+      "line2": {
+        "spec_id": 44,
+        "traits": [
+          1163,
+          1190,
+          1158
+        ]
+      },
+      "line3": {
+        "spec_id": 77,
+        "traits": [
+          2346,
+          2400,
+          2409
+        ]
+      }
+    },
+    "skills": {
+      "heal": 63066,
+      "utilities": [
+        63351,
+        63267,
+        13012
+      ],
+      "elite": 13113
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 104849,
+      "food_id": 91848,
+      "utility_id": 81079,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 47997,
+          "stat_id": 0,
+          "stat_name": "Dire",
+          "upgrade_id": 24860,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 47999,
+          "stat_id": 0,
+          "stat_name": "Dire",
+          "upgrade_id": 24860,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 47995,
+          "stat_id": 0,
+          "stat_name": "Dire",
+          "upgrade_id": 24860,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 47996,
+          "stat_id": 0,
+          "stat_name": "Dire",
+          "upgrade_id": 24860,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 47998,
+          "stat_id": 0,
+          "stat_name": "Dire",
+          "upgrade_id": 24860,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 47994,
+          "stat_id": 0,
+          "stat_name": "Dire",
+          "upgrade_id": 24860,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 1114,
+          "stat_name": "Dire",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79444,
+          "stat_id": 1114,
+          "stat_name": "Dire",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79745,
+          "stat_id": 1114,
+          "stat_name": "Dire",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 80241,
+          "stat_id": 1114,
+          "stat_name": "Dire",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79124,
+          "stat_id": 1114,
+          "stat_name": "Dire",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 79712,
+          "stat_id": 1114,
+          "stat_name": "Dire",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 47073,
+          "stat_id": 0,
+          "upgrade_id": 71130,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 47071,
+          "stat_id": 0,
+          "upgrade_id": 70825,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 47075,
+          "stat_id": 0,
+          "upgrade_id": 71130,
+          "infusions": [],
+          "upgrade2_id": 70825
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  },
+  {
+    "id": "mb-warrior-berserker-burnzerker-roamer",
+    "name": "Berserker - Burnzerker Roamer",
+    "profession": "Warrior",
+    "elite_spec": "Berserker",
+    "build_type": "Power",
+    "game_mode": "WvWRoaming",
+    "tier": "Great",
+    "patch_version": "",
+    "benchmark_dps": 0.0,
+    "notes": "WvW Roaming build for Berserker in GW2 that focuses on Condition damage. This is a test build.",
+    "source": "metabattle",
+    "source_url": "https://metabattle.com/wiki/Build:Berserker_-_Burnzerker_Roamer",
+    "gw2skills_url": "",
+    "chat_code": "[&DQIWKTM+Ei+nAKcAagBqAKESrQDcEqgAnADuAAAAAAAAAAAAAAAAAAAAAAADNQBaAGYAAA==]",
+    "is_legacy": false,
+    "accessibility": false,
+    "traits": {
+      "line1": {
+        "spec_id": 22,
+        "traits": [
+          1372,
+          1379,
+          1649
+        ]
+      },
+      "line2": {
+        "spec_id": 51,
+        "traits": [
+          1413,
+          1709,
+          1657
+        ]
+      },
+      "line3": {
+        "spec_id": 18,
+        "traits": [
+          1977,
+          2002,
+          2038
+        ]
+      }
+    },
+    "skills": {
+      "heal": 14364,
+      "utilities": [
+        14366,
+        14497,
+        29845
+      ],
+      "elite": 29940
+    },
+    "legends": [
+      0,
+      0
+    ],
+    "pets": [
+      0,
+      0
+    ],
+    "gear": {
+      "relic_id": 100432,
+      "food_id": 91848,
+      "utility_id": 81079,
+      "items": [
+        {
+          "slot": "Helm",
+          "item_id": 70924,
+          "stat_id": 0,
+          "stat_name": "Trailblazer",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Shoulders",
+          "item_id": 70630,
+          "stat_id": 0,
+          "stat_name": "Trailblazer",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Chest",
+          "item_id": 76908,
+          "stat_id": 0,
+          "stat_name": "Trailblazer",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Gloves",
+          "item_id": 73697,
+          "stat_id": 0,
+          "stat_name": "Trailblazer",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Leggings",
+          "item_id": 71735,
+          "stat_id": 0,
+          "stat_name": "Trailblazer",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "Boots",
+          "item_id": 76263,
+          "stat_id": 0,
+          "stat_name": "Trailblazer",
+          "upgrade_id": 67339,
+          "infusions": []
+        },
+        {
+          "slot": "BackItem",
+          "item_id": 79830,
+          "stat_id": 1115,
+          "stat_name": "Trailblazer",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory1",
+          "item_id": 79444,
+          "stat_id": 1115,
+          "stat_name": "Trailblazer",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Accessory2",
+          "item_id": 79745,
+          "stat_id": 1115,
+          "stat_name": "Trailblazer",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Amulet",
+          "item_id": 80241,
+          "stat_id": 1115,
+          "stat_name": "Trailblazer",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring1",
+          "item_id": 79124,
+          "stat_id": 1115,
+          "stat_name": "Trailblazer",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "Ring2",
+          "item_id": 79712,
+          "stat_id": 1115,
+          "stat_name": "Trailblazer",
+          "upgrade_id": 0,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA1",
+          "item_id": 73984,
+          "stat_id": 0,
+          "upgrade_id": 67340,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponA2",
+          "item_id": 72256,
+          "stat_id": 0,
+          "upgrade_id": 24607,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB1",
+          "item_id": 71472,
+          "stat_id": 0,
+          "upgrade_id": 24605,
+          "infusions": []
+        },
+        {
+          "slot": "WeaponB2",
+          "item_id": 73984,
+          "stat_id": 0,
+          "upgrade_id": 24609,
+          "infusions": []
+        }
+      ]
+    },
+    "rotation": {
+      "opener": [],
+      "loop": []
+    }
+  }
+]

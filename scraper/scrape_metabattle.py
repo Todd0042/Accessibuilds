@@ -75,14 +75,15 @@ HEADERS = {
     "Accept-Language": "en-US,en;q=0.9",
 }
 
-# Game mode → MetaBattle category name candidates (tried in order until one returns builds)
+# Game mode → MetaBattle category name candidates (tried in order until one returns builds).
+# Keys must match the game_mode values expected by the addon filter UI:
+#   "Raid", "OpenWorld", "WvWZerg", "WvWRoaming"
+# (WvW_builds is a meta-category of sub-categories, not a build list itself.)
 GAME_MODE_CATEGORIES: dict[str, list[str]] = {
-    "Raid":      ["Raid_builds",           "Raid builds"],
-    "Fractal":   ["Fractal_builds",        "Fractal builds"],
-    "WvW":       ["WvW_builds",            "World_vs_World_builds",     "WvW builds"],
-    "PvP":       ["PvP_builds",            "Player_vs_Player_builds",   "PvP builds"],
-    "OpenWorld": ["Open_World_builds",     "Open World builds",         "Openworld_builds"],
-    "Strike":    ["Strike_Mission_builds", "Strike_builds"],
+    "Raid":       ["Raid_builds",                   "Raid builds"],
+    "OpenWorld":  ["Open_World_builds",             "Open World builds",           "Openworld_builds"],
+    "WvWZerg":    ["WvW_Zerg_builds",               "World_vs_World_Zerg_builds",  "WvW Zerg builds"],
+    "WvWRoaming": ["WvW_Roaming_builds",            "World_vs_World_Roaming_builds","WvW Roaming builds"],
 }
 
 PROFESSIONS = [
@@ -827,14 +828,14 @@ def main() -> None:
         description="MetaBattle build scraper for BuildCoach",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
-game modes:  Raid  Fractal  WvW  PvP  OpenWorld  Strike
+game modes:  Raid  OpenWorld  WvWZerg  WvWRoaming
 
 examples:
-  python3 scrape_metabattle.py                          # all game modes
-  python3 scrape_metabattle.py --mode Raid              # one mode
-  python3 scrape_metabattle.py --mode WvW --limit 5    # test run
+  python3 scrape_metabattle.py                               # all game modes
+  python3 scrape_metabattle.py --mode Raid                   # one mode
+  python3 scrape_metabattle.py --mode WvWZerg --limit 5     # test run
   python3 scrape_metabattle.py --url "https://metabattle.com/wiki/Build:Guardian_-_Power_Dragonhunter"
-  python3 scrape_metabattle.py --force                  # ignore cache
+  python3 scrape_metabattle.py --force                       # ignore cache
 
 Do not distribute the scraped data in the addon before getting MetaBattle's
 written permission (their content is CC BY-SA licensed).
@@ -916,7 +917,7 @@ written permission (their content is CC BY-SA licensed).
     print("Notes:")
     print("  - Builds with empty specs/skills may need inspect if MB restructured the page.")
     print("  - chat_code is extracted directly from MetaBattle's build-template-code div.")
-    print("  - game_mode and tier are MetaBattle-specific — addon needs new filter UI.")
+    print("  - game_mode values match the addon filter: Raid, OpenWorld, WvWZerg, WvWRoaming.")
     print("  - Do not distribute without MetaBattle's written permission (CC BY-SA).")
 
 

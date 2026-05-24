@@ -23,109 +23,25 @@ void SetCacheDir(const std::string& addon_dir)
     s_SettingsPath = addon_dir + "\\settings.json";
     CreateDirectoryA(s_CacheDir.c_str(), nullptr);
 
-    /* Deploy bundled SC builds when the DLL carries a newer database version */
-    std::string sc_path  = s_CacheDir + "sc_builds_full.json";
-    std::string ver_path = s_CacheDir + "sc_builds_version.txt";
+    auto deploy = [](const std::string& path, const unsigned char* data, size_t len) {
+        std::ofstream f(path, std::ios::binary);
+        if (f.is_open()) f.write(reinterpret_cast<const char*>(data), (std::streamsize)len);
+    };
 
-    int cached_version = 0;
-    {
-        std::ifstream vf(ver_path);
-        if (vf.is_open()) vf >> cached_version;
-    }
+    /* SC main builds — skip if embedded payload is empty (no SC permission yet),
+     * so any live-fetched data already in cache is preserved. */
+    if (sc_builds_json_len > 3)
+        deploy(s_CacheDir + "sc_builds_full.json", sc_builds_json, sc_builds_json_len);
 
-    bool deploy = (sc_builds_version > cached_version);
+    deploy(s_CacheDir + "sc_builds_accessibility.json",
+           sc_builds_accessibility_json, sc_builds_accessibility_json_len);
+    deploy(s_CacheDir + "sc_rotations_accessibility.json",
+           sc_rotations_accessibility_json, sc_rotations_accessibility_json_len);
 
-    if (deploy) {
-        bool deploy_full = true;
-        if (sc_builds_json_len <= 3 && std::ifstream(sc_path).is_open()) {
-            /* The embedded full-build payload is empty; preserve an existing
-             * external cache file instead of overwriting it with an empty file. */
-            deploy_full = false;
-        }
-        if (deploy_full) {
-            std::ofstream f(sc_path, std::ios::binary);
-            if (f.is_open()) {
-                f.write(reinterpret_cast<const char*>(sc_builds_json),
-                        (std::streamsize)sc_builds_json_len);
-                f.close();
-            }
-        }
-    }
+    deploy(s_CacheDir + "hs_builds_full.json", hs_builds_json, hs_builds_json_len);
+    deploy(s_CacheDir + "mb_builds_full.json", mb_builds_json, mb_builds_json_len);
 
-    /* Deploy accessibility builds (always overwrite on version bump) */
-    std::string acc_path = s_CacheDir + "sc_builds_accessibility.json";
-    if (deploy || !std::ifstream(acc_path).is_open()) {
-        std::ofstream f(acc_path, std::ios::binary);
-        if (f.is_open()) {
-            f.write(reinterpret_cast<const char*>(sc_builds_accessibility_json),
-                    (std::streamsize)sc_builds_accessibility_json_len);
-            f.close();
-        }
-    }
-
-    /* Deploy rotation guide data */
-    std::string rot_path = s_CacheDir + "sc_rotations_accessibility.json";
-    if (deploy || !std::ifstream(rot_path).is_open()) {
-        std::ofstream f(rot_path, std::ios::binary);
-        if (f.is_open()) {
-            f.write(reinterpret_cast<const char*>(sc_rotations_accessibility_json),
-                    (std::streamsize)sc_rotations_accessibility_json_len);
-            f.close();
-        }
-    }
-
-    if (deploy) {
-        std::ofstream vf(ver_path);
-        if (vf.is_open()) vf << sc_builds_version;
-        Log(LOGL_INFO, ("BuildCache: updated SC builds database to v"
-                        + std::to_string(sc_builds_version)).c_str());
-    }
-
-    /* Deploy bundled Hardstuck builds when the DLL carries a newer version */
-    std::string hs_path     = s_CacheDir + "hs_builds_full.json";
-    std::string hs_ver_path = s_CacheDir + "hs_builds_version.txt";
-
-    int hs_cached_version = 0;
-    {
-        std::ifstream vf(hs_ver_path);
-        if (vf.is_open()) vf >> hs_cached_version;
-    }
-
-    if (hs_builds_version > hs_cached_version) {
-        std::ofstream f(hs_path, std::ios::binary);
-        if (f.is_open()) {
-            f.write(reinterpret_cast<const char*>(hs_builds_json),
-                    (std::streamsize)hs_builds_json_len);
-            f.close();
-        }
-        std::ofstream vf(hs_ver_path);
-        if (vf.is_open()) vf << hs_builds_version;
-        Log(LOGL_INFO, ("BuildCache: deployed Hardstuck builds database v"
-                        + std::to_string(hs_builds_version)).c_str());
-    }
-
-    /* Deploy bundled MetaBattle builds when the DLL carries a newer version */
-    std::string mb_path     = s_CacheDir + "mb_builds_full.json";
-    std::string mb_ver_path = s_CacheDir + "mb_builds_version.txt";
-
-    int mb_cached_version = 0;
-    {
-        std::ifstream vf(mb_ver_path);
-        if (vf.is_open()) vf >> mb_cached_version;
-    }
-
-    if (mb_builds_version > mb_cached_version) {
-        std::ofstream f(mb_path, std::ios::binary);
-        if (f.is_open()) {
-            f.write(reinterpret_cast<const char*>(mb_builds_json),
-                    (std::streamsize)mb_builds_json_len);
-            f.close();
-        }
-        std::ofstream vf(mb_ver_path);
-        if (vf.is_open()) vf << mb_builds_version;
-        Log(LOGL_INFO, ("BuildCache: deployed MetaBattle builds database v"
-                        + std::to_string(mb_builds_version)).c_str());
-    }
+    Log(LOGL_INFO, "BuildCache: reference builds deployed to cache");
 }
 
 /* ── SC builds ───────────────────────────────────────────────────────────── */

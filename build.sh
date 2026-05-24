@@ -35,13 +35,6 @@ if [[ $REGEN -eq 1 ]]; then
 import subprocess, re, sys, os, json, pathlib
 
 root = pathlib.Path(".")
-version_file = root / "sc_builds_version.txt"
-if version_file.exists():
-    version = int(version_file.read_text().strip())
-else:
-    version = 1
-version += 1
-version_file.write_text(str(version))
 
 def embed_file(src: str, var_name: str) -> str:
     raw = subprocess.check_output(["xxd", "-i", src]).decode()
@@ -53,8 +46,6 @@ lines = []
 lines.append("/* Auto-generated — do not edit. Regenerate with ./build.sh --regen */")
 lines.append("#pragma once")
 lines.append("#include <stddef.h>")
-lines.append("")
-lines.append("static const int sc_builds_version = %d;" % version)
 lines.append("")
 
 SC_DIR = root / "sc-builds"
@@ -113,14 +104,6 @@ import subprocess, re, sys, os, json, pathlib, tempfile
 root   = pathlib.Path(".")
 mb_src = root / "mb-builds" / "mb_builds_full.json"
 
-mb_version_file = root / "mb_builds_version.txt"
-if mb_version_file.exists():
-    mb_version = int(mb_version_file.read_text().strip())
-else:
-    mb_version = 1
-mb_version += 1
-mb_version_file.write_text(str(mb_version))
-
 def embed_bytes(src_path: str, var_name: str) -> str:
     raw = subprocess.check_output(["xxd", "-i", src_path]).decode()
     raw = re.sub(r'unsigned char \S+\[\]', f'static const unsigned char {var_name}[]', raw)
@@ -133,8 +116,6 @@ if not mb_src.exists():
         "/* Auto-generated — do not edit. Regenerate with ./build.sh --regen */",
         "#pragma once",
         "#include <stddef.h>",
-        "",
-        "static const int mb_builds_version = %d;" % mb_version,
         "",
         "static const unsigned char mb_builds_json[] = {0x5b, 0x5d}; /* [] */",
         "static const size_t mb_builds_json_len = 2;",
@@ -160,8 +141,6 @@ header = [
     "#pragma once",
     "#include <stddef.h>",
     "",
-    "static const int mb_builds_version = %d;" % mb_version,
-    "",
     raw,
 ]
 with open("src/mb_builds_embedded.h", "w") as f:
@@ -172,18 +151,10 @@ PYEOF
 
     echo "Regenerating src/hs_builds_embedded.h ..."
     python3 - << 'PYEOF'
-import subprocess, re, sys, os, json, pathlib
+import subprocess, re, sys, os, json, pathlib, tempfile
 
 root = pathlib.Path(".")
 hs_src = root / "full-builds" / "hs_builds_full.json"
-
-hs_version_file = root / "hs_builds_version.txt"
-if hs_version_file.exists():
-    hs_version = int(hs_version_file.read_text().strip())
-else:
-    hs_version = 1
-hs_version += 1
-hs_version_file.write_text(str(hs_version))
 
 if not hs_src.exists():
     print("  No full-builds/hs_builds_full.json found — writing empty header.")
@@ -191,8 +162,6 @@ if not hs_src.exists():
         "/* Auto-generated — do not edit. Regenerate with ./build.sh --regen */",
         "#pragma once",
         "#include <stddef.h>",
-        "",
-        "static const int hs_builds_version = %d;" % hs_version,
         "",
         "static const unsigned char hs_builds_json[] = {0x5b, 0x5d}; /* [] */",
         "static const size_t hs_builds_json_len = 2;",
@@ -209,7 +178,6 @@ filtered = [b for b in all_builds if b.get("game_mode", "Unknown") != "Unknown"]
 print("  Filtering: %d / %d builds (excluded %d PvP/Unknown)" %
       (len(filtered), len(all_builds), len(all_builds) - len(filtered)))
 
-import tempfile
 with tempfile.NamedTemporaryFile(mode="w", suffix=".json", delete=False, encoding="utf-8") as tmp:
     json.dump(filtered, tmp, separators=(",", ":"), ensure_ascii=False)
     tmp_path = tmp.name
@@ -223,8 +191,6 @@ header = [
     "/* Auto-generated — do not edit. Regenerate with ./build.sh --regen */",
     "#pragma once",
     "#include <stddef.h>",
-    "",
-    "static const int hs_builds_version = %d;" % hs_version,
     "",
     raw,
 ]
