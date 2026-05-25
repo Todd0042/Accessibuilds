@@ -43,3 +43,9 @@ hs-builds/
 # OS
 .DS_Store
 Thumbs.db
+
+# Local data
+memory/
+snowcrows/
+
+Lessons_Learned.md
